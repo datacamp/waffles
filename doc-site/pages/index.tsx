@@ -31,24 +31,6 @@ export default function Home() {
           name="description"
           content="Evolution of Waffles design system."
         />
-        <link href="/favicon.ico" rel="icon" />
-        <link href="/icon.svg" rel="icon" type="image/svg+xml" />
-        <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
-        <link href="/manifest.webmanifest" rel="manifest" />
-        <link
-          as="font"
-          crossOrigin="anonymous"
-          href="/fonts/StudioFeixenSansRegular-english.woff2"
-          rel="preload"
-          type="font/woff2"
-        />
-        <link
-          as="font"
-          crossOrigin="anonymous"
-          href="/fonts/StudioFeixenSansBold-english.woff2"
-          rel="preload"
-          type="font/woff2"
-        />
       </Head>
       <main>
         <h1 css={headingStyle}>Welcome to Waffles 2.0</h1>
