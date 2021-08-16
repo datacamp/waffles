@@ -19,3 +19,7 @@ function terminalLog(violations: Result[]) {
 Cypress.Commands.add('a11yCheck', () => {
   cy.checkA11y('main', undefined, terminalLog);
 });
+
+Cypress.Commands.add('loadStory', (storyName: string) => {
+  cy.visit(`stories/${storyName}`);
+});
