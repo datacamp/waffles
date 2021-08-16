@@ -2,10 +2,6 @@
 
 All **Waffles** components and their tests exist in the `src` directory, and their official documentation is in the `doc-site` folder. All npm scripts are run from the root – no need to navigate to subsequent directories.
 
-To make the versioning and release process easier we use [Semantic Versioning](https://semver.org/). On each commit, code is automatically formatted, and the commit message is verified whether it adheres to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
-
-The whole release process is fully automated. That's why proper commits messages are important.
-
 ## 🏆 Core Principles
 
 1. 100% automatic library release process (publishing to npm, version bumps, changelog generation)
@@ -80,3 +76,11 @@ Stories are the Waffle's _integration_ and _visual regression_ tests. Similar to
 It is also possible to test for various **a11y violations** against [WCAG 2.1 AA guidelines](https://www.w3.org/TR/WCAG21/) by using `cy.a11yCheck()`.
 
 Under the hood **Workbench** is used to run those stories.
+
+## 📦 Releases
+
+To make the versioning and release process easier we use [Semantic Versioning](https://semver.org/). On each commit, code is automatically formatted, and the commit message is verified whether it adheres to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
+
+The whole release process is _fully automated_. That's why proper commits messages are important.
+
+ℹ️ If you were only tweaking documentation or internal scripts in your PR be free to skip release by adding **[skip ci]** to the body of the last commit.
