@@ -1,25 +1,27 @@
 import Head from 'next/head';
 import { css } from '@emotion/react';
 
+import { tokens } from '@datacamp/waffles/tokens';
 import { Button } from '@datacamp/waffles/button';
 
 const containerStyle = css`
-  padding: 24px;
+  padding: ${tokens.spacing.large};
 `;
 
 const headingStyle = css`
-  font-family: Studio-Feixen-Sans, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.25;
+  font-family: ${tokens.fontFamilies.sansSerif};
+  font-weight: ${tokens.fontWeights.bold};
+  font-size: ${tokens.fontSizes.xxlarge};
+  line-height: ${tokens.lineHeights.default};
   margin-top: 0;
+  color: ${tokens.colors.navy};
 `;
 
 const paragraphStyle = css`
-  font-family: Studio-Feixen-Sans, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
+  font-family: ${tokens.fontFamilies.sansSerif};
+  font-weight: ${tokens.fontWeights.regular};
+  font-size: ${tokens.fontSizes.medium};
+  line-height: ${tokens.lineHeights.relaxed};
 `;
 
 export default function Home() {
