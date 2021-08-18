@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tokens preserves correct data structure 1`] = `
+exports[`tokens preserve correct data structure 1`] = `
 Object {
   "borderRadius": Object {
     "circle": "50%",
