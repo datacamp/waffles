@@ -2,8 +2,8 @@
 
 exports[`Button renders correctly 1`] = `
 .emotion-0 {
-  color: #05192d;
-  background-color: #03ef62;
+  color: #05192D;
+  background-color: #03EF62;
   height: 36px;
   min-width: 110px;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
@@ -17,7 +17,7 @@ exports[`Button renders correctly 1`] = `
 }
 
 .emotion-0:hover {
-  background-color: #65ff8f;
+  background-color: #65FF8F;
 }
 
 .emotion-0:active {
