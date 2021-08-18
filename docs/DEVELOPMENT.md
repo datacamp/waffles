@@ -81,6 +81,6 @@ Under the hood **Workbench** is used to run those stories.
 
 To make the versioning and release process easier we use [Semantic Versioning](https://semver.org/). On each commit, code is automatically formatted, and the commit message is verified whether it adheres to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
 
-The whole release process is _fully automated_. That's why proper commits messages are important.
+The whole release process is _fully automated_. That's why proper commits messages are important. Often used commit types: `feat:`, `fix:`, `chore:`, `docs:`, `perf:`, `test:`. It is also possible to add scope to commit message, e.g. `feat(button):`.
 
 ℹ️ If you were only tweaking documentation or internal scripts in your PR be free to skip release by adding **[skip ci]** to the body of the last commit.
