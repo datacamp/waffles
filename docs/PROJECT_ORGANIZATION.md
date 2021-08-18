@@ -12,17 +12,17 @@ For troubleshooting purposes, all scripts could be run locally.
 | doc:dev            | Start _NextJS_ documentation in dev mode                                                                                                             |            |
 | test-unit          | Run _Jest_ unit tests in watch mode                                                                                                                  |            |
 | test-stories       | Run _Cypress_ **Stories** aka components e2e tests and a11y checks                                                                                   |            |
-| lint               | Check codebase for common errors with _ESLint_                                                                                                       | ☑️         |
-| lint-commits       | Verify commits messages if they stick to _Conventional Commit_ spec                                                                                  | ☑️         |
+| lint               | Check codebase for common errors with _ESLint_                                                                                                       | ✔️         |
+| lint-commits       | Verify commits messages if they stick to _Conventional Commit_ spec                                                                                  | ✔️         |
 | format             | Format whole codebase with _Prettier_                                                                                                                |            |
-| build              | Build CommonJS and modern ES Modules library into `/dist` folder                                                                                     | ☑️         |
-| build:copy-files   | Copy package.json and readme to `/dist` to be a part of npm package<br >ℹ️ To start it locally run `build` first                                     | ☑️         |
-| build:package-json | Put package.json in each CommonJS component directory created during build step to support tree shaking<br >ℹ️ To start it locally run `build` first | ☑️         |
-| doc:build          | Build optimized production version of documentation into `/build` directory<br >ℹ️ To start it locally run `build` first                             | ☑️         |
-| test-unit:ci       | Run unit tests and generate code coverage report                                                                                                     | ☑️         |
-| test-stories:ci    | Run e2e tests in headless browser<br >ℹ️ To start it locally run `build` first                                                                       | ☑️         |
-| format:check       | Check if the codebase is properly formatted with _Prettier_                                                                                          | ☑️         |
-| release            | Automatically release a library to npm, bump package version based on commit messages, and generate changelog                                        | ☑️         |
+| build              | Build CommonJS and modern ES Modules library into `/dist` folder                                                                                     | ✔️         |
+| build:copy-files   | Copy package.json and readme to `/dist` to be a part of npm package<br >ℹ️ To start it locally run `build` first                                     | ✔️         |
+| build:package-json | Put package.json in each CommonJS component directory created during build step to support tree shaking<br >ℹ️ To start it locally run `build` first | ✔️         |
+| doc:build          | Build optimized production version of documentation into `/build` directory<br >ℹ️ To start it locally run `build` first                             | ✔️         |
+| test-unit:ci       | Run unit tests and generate code coverage report                                                                                                     | ✔️         |
+| test-stories:ci    | Run e2e tests in headless browser<br >ℹ️ To start it locally run `build` first                                                                       | ✔️         |
+| format:check       | Check if the codebase is properly formatted with _Prettier_                                                                                          | ✔️         |
+| release            | Automatically release a library to npm, bump package version based on commit messages, and generate changelog                                        | ✔️         |
 | prepare            | Set up git hooks with _Husky_                                                                                                                        |            |
 
 ## 📦 Directories
@@ -46,10 +46,10 @@ tools/                                // Internal tools used during build proces
 .husky/                               // Git hooks configuration
 cypress/                              // Cypress custom commands and plugins configuration
 cypress.json                          // Cypress e2e test runner configuration
-release-it.js                         // Auto release configuration with _release-it_
+release-it.js                         // Auto release configuration with release-it
 jest.config.js                        // Jest test runner configuration
 test-setup.ts                         // Additional Jest tests setup
-tsconfig.json                         // Global _typescript_ configuration
+tsconfig.json                         // Global typescript configuration
 tsconfig.cjs.json                     // Typescript compiler config for releasing CommonJS modules
 tsconfig.esm.json                     // Typescript compiler config for releasing modern ES Modules
 ```
