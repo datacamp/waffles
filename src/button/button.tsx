@@ -1,22 +1,24 @@
-import { css } from '@emotion/react';
 import React from 'react';
+import { css } from '@emotion/react';
+
+import { tokens } from '../tokens';
 
 const buttonStyle = css`
-  color: #05192d;
-  background-color: #03ef62;
-  height: 36px;
+  color: ${tokens.colors.navy};
+  background-color: ${tokens.colors.green};
+  height: ${tokens.sizing.medium};
   min-width: 110px;
-  font-family: Studio-Feixen-Sans, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
+  font-family: ${tokens.fontFamilies.sansSerif};
+  font-weight: ${tokens.fontWeights.bold};
+  font-size: ${tokens.fontSizes.medium};
+  line-height: ${tokens.lineHeights.tight};
   outline: 0;
-  border-radius: 4px;
+  border-radius: ${tokens.borderRadius.medium};
   border: 0;
   cursor: pointer;
 
   &:hover {
-    background-color: #65ff8f;
+    background-color: ${tokens.colors.greenLight};
   }
 
   &:active {
