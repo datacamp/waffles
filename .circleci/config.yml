@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  slack: circleci/slack@4.4.2
+
 jobs:
   build_and_test:
     docker:
@@ -62,6 +65,44 @@ jobs:
       - run:
           name: Release npm package
           command: yarn release
+      - run:
+          name: Get package version
+          command: echo export VERSION_TAG=$(eval node -p "require\(\'./package.json\'\).version") >> $BASH_ENV
+      - slack/notify:
+          event: pass
+          custom: |
+            {
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": ":tada: New version of Waffles has been released!",
+                    "emoji": true
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "Version: *$VERSION_TAG*\n\nWhen: *$(date +'%d/%m/%Y')*"
+                  }
+                },
+                {
+                  "type": "actions",
+                  "elements": [
+                    {
+                      "type": "button",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "Check Release Notes"
+                      },
+                      "url": "https://github.com/datacamp/waffles/releases/tag/v$VERSION_TAG"
+                    }
+                  ]
+                }
+              ]
+            }
 
 workflows:
   version: 2
