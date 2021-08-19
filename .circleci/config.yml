@@ -70,7 +70,7 @@ jobs:
           command: echo export VERSION_TAG=$(eval node -p "require\(\'./package.json\'\).version") >> $BASH_ENV
       - slack/notify:
           event: pass
-          channel: 'D01S0LL7UTC'
+          channel: 'CHT1GJV0E'
           custom: |
             {
               "blocks": [
