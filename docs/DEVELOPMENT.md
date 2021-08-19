@@ -82,7 +82,7 @@ Under the hood **Workbench** is used to run those stories.
 Both design tokens and icons are meant to be generated from source files with appropriate `generate` npm scripts:
 
 - **design tokens** are generated based on `src/tokens/tokens.json` file, which contains definitions compatible with [Figma Tokens](https://www.figma.com/community/plugin/843461159747178978/Figma-Tokens) plugin, by running `generate:design-tokens` command
-- **icons** are generated based on SVG files from `src/icon` directory via `generate:icons` command
+- **icons** are generated based on SVG files from `src/icon/raw` directory via `generate:icons` command
 
 The output is:
 
