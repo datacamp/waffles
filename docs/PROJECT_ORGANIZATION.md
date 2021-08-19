@@ -41,6 +41,7 @@ doc-site/                             // Official Waffles documentation, NextJS 
 docs/                                 // Internal documentation
 tools/                                // Internal tools used during build process
   |--prepare-workbench-stories.js     // Copy stories from each component to Workbench to run e2e tests
+  |--generate-design-tokens.js        // Generate design tokens based on tokens.json compatible with Figma
   |--add-package-json-files.js        // Put package.json with treeshaking hint in each CommonJS component directory
 .circleci/                            // CircleCI configuration
 .husky/                               // Git hooks configuration
