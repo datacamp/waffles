@@ -77,6 +77,20 @@ It is also possible to test for various **a11y violations** against [WCAG 2.1 AA
 
 Under the hood **Workbench** is used to run those stories.
 
+## 🖼️ Design Tokens and Icons
+
+Both design tokens and icons are meant to be generated from source files with appropriate `generate` npm scripts:
+
+- **design tokens** are generated based on `src/tokens/tokens.json` file, which contains definitions compatible with [Figma Tokens](https://www.figma.com/community/plugin/843461159747178978/Figma-Tokens) plugin, by running `generate:design-tokens` command
+- **icons** are generated based on SVG files from `src/icon` directory via `generate:icons` command
+
+The output is:
+
+- for **design tokens** `src/tokens/tokens.ts` file
+- for **icons** new React components in `src/icon` folder and updated `src/icon/index.ts` file.
+
+ℹ️ After adding new icons or design tokens, it is a good idea to run an appropriate `generate` script to build updated ones. Afterward **commit** resulting files. That way they can be consumed easily internally.
+
 ## 📦 Releases
 
 To make the versioning and release process easier we use [Semantic Versioning](https://semver.org/). On each commit, code is automatically formatted, and the commit message is verified whether it adheres to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
