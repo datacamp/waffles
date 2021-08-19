@@ -98,7 +98,8 @@ jobs:
                         "type": "plain_text",
                         "text": "Check Release Notes"
                       },
-                      "url": "https://github.com/datacamp/waffles/releases/tag/v$VERSION_TAG"
+                      "url": "https://github.com/datacamp/waffles/releases/tag/v$VERSION_TAG",
+                      "action_id": "link"
                     }
                   ]
                 }
