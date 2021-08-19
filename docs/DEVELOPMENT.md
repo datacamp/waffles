@@ -4,11 +4,11 @@ All **Waffles** components and their tests exist in the `src` directory, and the
 
 ## 🏆 Core Principles
 
-1. 100% automatic library release process (publishing to npm, version bumps, changelog generation)
-2. Lightweight isolated components development environment (Workbench)
-3. Official documentation consumes the same modules later published to npm
-4. All tests collocated with components (both unit and e2e stories)
-5. Nearly identical local development and production CI environments (all commands could be run locally)
+1. Release process is fully **automatic**, including publishing to npm, version bumps, and changelog generation
+2. Has lightweight isolated **components development environment** – Workbench
+3. Official documentation and Workbench consumes the **same modules** later published to npm
+4. All tests are **collocated** with components, both unit and e2e stories
+5. Local development and production environments are **identical** – you can execute all commands locally
 
 ## 💻 Before You Start
 
