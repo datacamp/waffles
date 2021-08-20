@@ -1,12 +1,12 @@
 # Waffles 2.0
 
-**Waffles** is DataCamp Design System and React components library.
+DataCamp's Design System and React component library.
 
 ## Using React Components
 
 ### Installation
 
-Run the following command to install the components library:
+Run the following command to install the component library:
 
 ```bash
 # with yarn
@@ -16,7 +16,7 @@ yarn add @datacamp/waffles
 npm install @datacamp/waffles
 ```
 
-Install peer dependencies, if you haven't already:
+Install peer dependencies (if you haven't already):
 
 ```bash
 # with yarn
@@ -28,12 +28,16 @@ npm install react react-dom @emotion/react
 
 ### Usage
 
-In your React project just import appropriate component directly:
+Simply import the appropriate components directly in your React project:
 
 ```js
 import { Button } from '@datacamp/waffles/button';
 ```
 
-## Developing New Components
+## Project Organization
 
-Learn how to develop new **Waffles** components locally in the [Developement](https://github.com/datacamp/waffles/blob/master/docs/DEVELOPMENT.md) guide, and more about the whole project structure and all available commands in [Project Organization](https://github.com/datacamp/waffles/blob/master/docs/PROJECT_ORGANIZATION.md) overview.
+Learn more about the project structure and available commands in the [Project Organization](https://github.com/datacamp/waffles/blob/master/docs/PROJECT_ORGANIZATION.md) overview.
+
+## Developing Components
+
+Learn how to develop **Waffles** components locally in the [Development](https://github.com/datacamp/waffles/blob/master/docs/DEVELOPMENT.md) guide.

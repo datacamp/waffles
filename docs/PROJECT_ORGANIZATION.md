@@ -2,13 +2,13 @@
 
 ## 💻 Available Commands
 
-List of all relevant npm scripts in the project with a short description. Starting the scripts most important for _local development_.
+A list of all relevant scripts in the project with a short description. Starting with the scripts most important for _local development_.
 
-For troubleshooting purposes, all scripts could be run locally.
+For troubleshooting purposes, all scripts can be run locally as `yarn <script-name>`.
 
 | Script                 | What it does?                                                                                                                                        | Runs on CI |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| workbench              | Start **Workbench**, isolated components development environment                                                                                     |            |
+| workbench              | Start **Workbench**, an isolated component development environment (see [guide](https://github.com/datacamp/waffles/blob/master/docs/DEVELOPMENT.md)) |            |
 | doc:dev                | Start _NextJS_ documentation in dev mode                                                                                                             |            |
 | test:unit              | Run _Jest_ unit tests in watch mode                                                                                                                  |            |
 | test:stories           | Run _Cypress_ **Stories** aka components e2e tests and a11y checks                                                                                   |            |
@@ -29,17 +29,17 @@ For troubleshooting purposes, all scripts could be run locally.
 
 ## 📦 Directories
 
-Overview of most important directories and files in the project:
+An overview of the most important directories and files in the project:
 
 ```
-src/                                  // Most important directory, all core componets live here
+src/                                  // Most important directory, all core components live here
   |--component/                       // Example of component folder structure
-  |  |--__tests__/                    // Containsunit tests, stories and Cypress e2e tests suite
+  |  |--__tests__/                    // Contains unit tests, stories and Cypress e2e tests suite
   |  |  |--component.story.tsx
   |  |  |--component.spec.tsx
   |  |  |--component.e2e.ts
-workbench/                            // Components dev environment, also used to run e2e tests, NextJS app
-doc-site/                             // Official Waffles documentation, NextJS app
+workbench/                            // Component dev environment, also used to run e2e tests (NextJS app)
+doc-site/                             // Official Waffles documentation (NextJS app)
 docs/                                 // Internal documentation
 tools/                                // Internal tools used during build process
   |--prepare-workbench-stories.js     // Copy stories from each component to Workbench to run e2e tests
