@@ -11,6 +11,7 @@
     "build:package-json": "node ./tools/add-package-json-files.js",
     "prebuild": "rimraf dist && yarn generate:design-tokens",
     "generate:design-tokens": "rimraf src/tokens/tokens.ts && node ./tools/generate-design-tokens.js",
+    "generate:icons": "node ./tools/generate-icons.js",
     "workbench": "yarn prebuild && concurrently --kill-others -c \"bgBlue.bold,bgMagenta.bold\" \"yarn build:cjs --watch\" \"next dev workbench --port 4040\"",
     "preworkbench": "rimraf workbench/pages/stories",
     "doc:dev": "yarn prebuild && yarn build:cjs && next dev doc-site",
