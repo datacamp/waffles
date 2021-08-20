@@ -5,6 +5,8 @@ const path = require('path');
 const glob = require('glob');
 const prettier = require('prettier');
 
+const prettierConfig = prettier.resolveConfig.sync(__dirname);
+
 // Return full path to main component e.g. src/button, based on provided path to story
 function componentDirectoryName(storyPath) {
   return storyPath.match(/^src\/([\w-]+)\//)[1];
@@ -64,7 +66,7 @@ function prepareWorkbenchStories() {
     const wrapWithMain = contentWrappedWithMain(updatedImports);
     const formattedContent = prettier.format(wrapWithMain, {
       parser: 'typescript',
-      singleQuote: true,
+      ...prettierConfig,
     });
 
     fs.writeFileSync(
