@@ -57,7 +57,7 @@ function prepareWorkbenchStories() {
     const componentDir = componentDirectoryName(storyPath);
     const fileName = newFileName(storyPath);
 
-    const storyContent = fs.readFileSync(storyPath).toString();
+    const storyContent = fs.readFileSync(storyPath, { encoding: 'utf-8' });
 
     const updatedImports = contentWithUpdatedImports(
       storyContent,
