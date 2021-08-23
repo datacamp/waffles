@@ -1,11 +1,11 @@
 import Icon from './icon-base';
 
-type LinkedinSquareBrandProps = Omit<
+type LinkedInSquareBrandProps = Omit<
   React.ComponentProps<typeof Icon>,
   'children'
 >;
 
-function LinkedinSquareBrand({ size, ...restProps }: LinkedinSquareBrandProps) {
+function LinkedInSquareBrand({ size, ...restProps }: LinkedInSquareBrandProps) {
   return (
     <Icon viewBox="0 0 18 18" size={size} {...restProps}>
       <path
@@ -16,4 +16,4 @@ function LinkedinSquareBrand({ size, ...restProps }: LinkedinSquareBrandProps) {
   );
 }
 
-export default LinkedinSquareBrand;
+export default LinkedInSquareBrand;

@@ -1,8 +1,8 @@
 import Icon from './icon-base';
 
-type LinkedinBrandProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
+type LinkedInBrandProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
 
-function LinkedinBrand({ size, ...restProps }: LinkedinBrandProps) {
+function LinkedInBrand({ size, ...restProps }: LinkedInBrandProps) {
   return (
     <Icon viewBox="0 0 18 18" size={size} {...restProps}>
       <path
@@ -13,4 +13,4 @@ function LinkedinBrand({ size, ...restProps }: LinkedinBrandProps) {
   );
 }
 
-export default LinkedinBrand;
+export default LinkedInBrand;
