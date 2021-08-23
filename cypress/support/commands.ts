@@ -1,3 +1,4 @@
+import '@testing-library/cypress/add-commands';
 import type { Result } from 'axe-core';
 
 function terminalLog(violations: Result[]) {
