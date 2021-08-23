@@ -7,4 +7,3 @@ build
 dist
 CHANGELOG.md
 cypress/fixtures
-src/icon

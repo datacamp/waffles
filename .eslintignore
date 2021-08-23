@@ -5,4 +5,3 @@ workbench/pages/stories
 build
 dist
 cypress/fixtures
-src/icon
