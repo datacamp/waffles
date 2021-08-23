@@ -43,13 +43,13 @@ jobs:
           command: yarn format:check
       - run:
           name: Lint commits
-          command: yarn lint-commits
+          command: yarn lint:commits
       - run:
           name: Run unit tests
-          command: yarn test-unit:ci
+          command: yarn test:unit:ci
       - run:
           name: Run e2e stories tests
-          command: yarn test-stories:ci
+          command: yarn test:stories:ci
   release:
     docker:
       - image: cimg/node:14.17.0
