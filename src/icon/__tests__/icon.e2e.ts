@@ -1,5 +1,5 @@
 describe('Icon', () => {
-  it('render all availbable icons in different', () => {
+  it('render all availbable icons in different sizes and has no detectable a11y violations', () => {
     cy.loadStory('icon-sizes');
     cy.injectAxe();
 
