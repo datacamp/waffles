@@ -7,11 +7,11 @@ const sizesMap = {
 };
 
 type IconBaseProps = {
-  size: 'medium' | 'small' | 'xsmall';
+  size?: 'medium' | 'small' | 'xsmall';
   children: React.ReactNode;
 } & React.SVGAttributes<SVGElement>;
 
-function IconBase({ size, children, ...restProps }: IconBaseProps) {
+function IconBase({ size = 'medium', children, ...restProps }: IconBaseProps) {
   const numericSize = sizesMap[size];
 
   return (

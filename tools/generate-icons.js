@@ -55,7 +55,7 @@ function componentFromSvg(componentName, svgIcon) {
 
   type ${componentName}Props = Omit<React.ComponentProps<typeof Icon>, 'children'>;
 
-  function ${componentName}({ size = 'medium', ...restProps }: ${componentName}Props) {
+  function ${componentName}({ size, ...restProps }: ${componentName}Props) {
     return <Icon
         viewBox="${iconViewBox(svgIcon)}"
         size={size}
