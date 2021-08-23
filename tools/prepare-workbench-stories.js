@@ -17,27 +17,11 @@ function newFileName(storyPath) {
   return `${storyPath.match(/([\w-]+)\.story.tsx$/)[1]}.tsx`;
 }
 
-// Return updated paths to import prebuilt modules
-// Add import to Main wrapper
-// Update if more complex imports would be added to stories
+// Update paths to point to prebuilt modules
 function contentWithUpdatedImports(storyContent, componentDirectoryName) {
-  return storyContent.replace(
-    '../index',
-    `@datacamp/waffles/${componentDirectoryName}';\nimport Main from '../../components/main`,
-  );
-}
-
-// Wrap story component(s) with Main
-function contentWrappedWithMain(storyContent) {
-  const mainContent = storyContent.match(/return ([^;]*)/)[1];
-  const noFragmentOrParenthesis = mainContent.replace(/<>|<\/>|^\(|\)$/g, '');
-
-  const wrappedWithMain = storyContent.replace(
-    /return ([^;]*)/,
-    `return (<Main>${noFragmentOrParenthesis}</Main>)`,
-  );
-
-  return wrappedWithMain;
+  return storyContent
+    .replace(/..\/..\/([^'])/g, '@datacamp/waffles/$1')
+    .replace('../index', `@datacamp/waffles/${componentDirectoryName}`);
 }
 
 // Copy and enchance all stories found within src to workbench/pages/stories to run cypress tests agains them
@@ -63,8 +47,7 @@ function prepareWorkbenchStories() {
       storyContent,
       componentDir,
     );
-    const wrapWithMain = contentWrappedWithMain(updatedImports);
-    const formattedContent = prettier.format(wrapWithMain, {
+    const formattedContent = prettier.format(updatedImports, {
       parser: 'typescript',
       ...prettierConfig,
     });
