@@ -23,6 +23,7 @@ For troubleshooting purposes, all scripts could be run locally.
 | test-stories:ci        | Run e2e tests in headless browser<br >ℹ️ To start it locally run `build` first                                                                       | ✅         |
 | format:check           | Check if the codebase is properly formatted with _Prettier_                                                                                          | ✅         |
 | generate:design-tokens | Build design tokens based on definitions compatible with _Figma Tokens_ plugin                                                                       | ✅         |
+| generate:icons         | Build optimized React icon components based on regular SVG icons                                                                                     | ✅         |
 | release                | Automatically release a library to npm, bump package version based on commit messages, and generate changelog                                        | ✅         |
 | prepare                | Set up git hooks with _Husky_                                                                                                                        |            |
 
@@ -43,6 +44,7 @@ docs/                                 // Internal documentation
 tools/                                // Internal tools used during build process
   |--prepare-workbench-stories.js     // Copy stories from each component to Workbench to run e2e tests
   |--generate-design-tokens.js        // Generate design tokens based on tokens.json compatible with Figma
+  |--generate-icons.js                // Generate optimized React icon components based on raw SVG files
   |--add-package-json-files.js        // Put package.json with treeshaking hint in each CommonJS component directory
 .circleci/                            // CircleCI configuration
 .husky/                               // Git hooks configuration
