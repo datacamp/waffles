@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 const prettier = require('prettier');
+const { optimize } = require('svgo');
 
 const prettierConfig = prettier.resolveConfig.sync(__dirname);
 const iconsDirPath = path.resolve(__dirname, '../src/icon');
@@ -27,6 +28,23 @@ function svgWithCurrentColorFill(filename, svgIcon) {
   }
 
   return svgIcon;
+}
+
+function optimizedSvgIcon(svgIcon) {
+  return optimize(svgIcon, {
+    multipass: true,
+    floatPrecision: 3,
+    plugins: [
+      {
+        name: 'preset-default',
+        params: {
+          overrides: {
+            removeViewBox: false,
+          },
+        },
+      },
+    ],
+  }).data;
 }
 
 // Extracts viewBox from SVG icon
@@ -90,10 +108,11 @@ function generateIcons() {
     );
 
     const svgWithUpdatedFillColor = svgWithCurrentColorFill(filename, svgIcon);
+    const optimizedSvg = optimizedSvgIcon(svgWithUpdatedFillColor);
 
     // Generate and format new React component content
     const formattedContent = prettier.format(
-      componentFromSvg(componentName, svgWithUpdatedFillColor),
+      componentFromSvg(componentName, optimizedSvg),
       {
         parser: 'typescript',
         ...prettierConfig,
