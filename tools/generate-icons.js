@@ -51,12 +51,21 @@ function componentInnerContent(svgIcon) {
 
 // Generate React component based on provided SVG content
 function componentFromSvg(componentName, svgIcon) {
-  return `function ${componentName}() { return <svg
-    viewBox="${iconViewBox(svgIcon)}"
-    width="18"
-    height="18">
-    ${componentInnerContent(svgIcon)}</svg> }\n
-    export default ${componentName}`;
+  return `import Icon from './icon-base';
+
+  type ${componentName}Props = Omit<React.ComponentProps<typeof Icon>, 'children'>;
+
+  function ${componentName}({ size = 'medium', ...restProps }: ${componentName}Props) {
+    return <Icon
+        viewBox="${iconViewBox(svgIcon)}"
+        size={size}
+        {...restProps}
+      >
+        ${componentInnerContent(svgIcon)}
+      </Icon>;
+  }
+
+  export default ${componentName}`;
 }
 
 function generateIcons() {
