@@ -6,7 +6,7 @@ import GridBackground from './grid-background';
 const mainStyle = css`
   background: 50px 50px repeat url(${GridBackground});
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 50px;
 `;
 

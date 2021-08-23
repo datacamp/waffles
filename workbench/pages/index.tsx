@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
 import Workbench from '../workbench';
-import Main from '../components/main';
 
 export default function Home() {
   return (
@@ -13,9 +12,7 @@ export default function Home() {
           content="Interactive playground to develop and polish Waffles components."
         />
       </Head>
-      <Main>
-        <Workbench />
-      </Main>
+      <Workbench />
     </>
   );
 }
