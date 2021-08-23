@@ -107,7 +107,7 @@ function generateIcons() {
   });
 
   // Write export statements for all icon components to index.ts file
-  fs.writeFileSync(iconsExportPath, iconsExports.join('\n'));
+  fs.writeFileSync(iconsExportPath, `${iconsExports.join('\n')}\n`);
 }
 
 generateIcons();

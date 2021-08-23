@@ -9,7 +9,7 @@
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:copy-files": "concurrently \"copyfiles README.md dist\" \"copyfiles package.json dist\"",
     "build:package-json": "node ./tools/add-package-json-files.js",
-    "prebuild": "rimraf dist && yarn generate:design-tokens",
+    "prebuild": "rimraf dist && yarn generate:design-tokens && yarn generate:icons",
     "generate:design-tokens": "rimraf src/tokens/tokens.ts && node ./tools/generate-design-tokens.js",
     "generate:icons": "rimraf \"src/icon/!(raw|icon-base.tsx)\" && node ./tools/generate-icons.js",
     "workbench": "yarn prebuild && concurrently --kill-others -c \"bgBlue.bold,bgMagenta.bold\" \"yarn build:cjs --watch\" \"next dev workbench --port 4040\"",
