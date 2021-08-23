@@ -19,6 +19,16 @@ function formattedComponentName(filename) {
     .join('');
 }
 
+// If the SVG is not marked as colored version (filename doesn't contain 'colored')
+// Replace any fill color with 'currentColor'
+function svgWithCurrentColorFill(filename, svgIcon) {
+  if (!filename.includes('colored')) {
+    return svgIcon.replace(/fill="#[^"]+"/g, 'fill="currentColor"');
+  }
+
+  return svgIcon;
+}
+
 // Extracts viewBox from SVG icon
 function iconViewBox(svgIcon) {
   return svgIcon.match(/viewBox="([^"]+)"/)[1];
@@ -26,7 +36,7 @@ function iconViewBox(svgIcon) {
 
 // Grab pretty much everything between SVG tags
 // Transofrm some attributes to ones compatible with React
-function svgIconPaths(svgIcon) {
+function componentInnerContent(svgIcon) {
   return svgIcon
     .replace(/<!--.*-->\n/gm, '')
     .replace(/<\/?svg[^>]*>/gm, '')
@@ -45,7 +55,7 @@ function componentFromSvg(componentName, svgIcon) {
     viewBox="${iconViewBox(svgIcon)}"
     width="18"
     height="18">
-    ${svgIconPaths(svgIcon)}</svg> }\n
+    ${componentInnerContent(svgIcon)}</svg> }\n
     export default ${componentName}`;
 }
 
@@ -70,9 +80,11 @@ function generateIcons() {
       { encoding: 'utf-8' },
     );
 
+    const svgWithUpdatedFillColor = svgWithCurrentColorFill(filename, svgIcon);
+
     // Generate and format new React component content
     const formattedContent = prettier.format(
-      componentFromSvg(componentName, svgIcon),
+      componentFromSvg(componentName, svgWithUpdatedFillColor),
       {
         parser: 'typescript',
         ...prettierConfig,
