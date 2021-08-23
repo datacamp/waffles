@@ -30,6 +30,7 @@ function svgWithCurrentColorFill(filename, svgIcon) {
   return svgIcon;
 }
 
+// Optimize SVG icon with svgo
 function optimizedSvgIcon(svgIcon) {
   return optimize(svgIcon, {
     multipass: true,
