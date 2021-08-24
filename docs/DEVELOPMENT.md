@@ -70,7 +70,7 @@ Regular unit tests are placed in a `__tests__` sub-directory of each component a
 
 ### Stories
 
-To test stories use `yarn test:stories` command. Cypress test runner should open shortly, where, if you wish, you can inspect each story one by one.
+To test stories use `yarn test:stories` command. Cypress test runner should open shortly, and each story could be inspected one by one.
 
 Stories are Waffle's _integration_ and _visual regression_ tests. Similar to unit tests, they are placed with each component in a `__tests__` sub-directory. Each **story** lives in a separate `.story.tsx` file and should be added to the component's e2e test suite in the appropriate `.e2e.ts` file. We are using [Cypress](https://docs.cypress.io/) to run these tests. For example, to load the story placed in `basic-button.story.tsx` file just run `cy.loadStory('basic-button')`.
 
@@ -88,7 +88,7 @@ Both design tokens and icons are generated from source files using matching `gen
 The output is:
 
 - **design tokens**: a `src/tokens/tokens.ts` file
-- **icons**: new React components in the `src/icon` folder and an updated `src/icon/index.ts` file.
+- **icons**: new React components in the `src/icon` folder and an updated `src/icon/index.ts` file
 
 ℹ️ After adding new design tokens or icons, please run the appropriate `generate` script(s). After this **commit** the resulting files. That way they can be easily consumed internally.
 
