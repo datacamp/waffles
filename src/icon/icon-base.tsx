@@ -1,6 +1,6 @@
 import React from 'react';
 
-const sizesMap = {
+const sizeMap = {
   medium: 16,
   small: 14,
   xsmall: 12,
@@ -12,7 +12,7 @@ type IconBaseProps = {
 } & React.SVGAttributes<SVGElement>;
 
 function IconBase({ size = 'medium', children, ...restProps }: IconBaseProps) {
-  const numericSize = sizesMap[size];
+  const numericSize = sizeMap[size];
 
   return (
     <svg
