@@ -1,6 +1,6 @@
 # Waffles 2.0 Local Development Guide
 
-All **Waffles** components and their tests exist in the `src` directory with matching official documentation in the `doc-site` folder. All npm scripts are run from the root –- there is no need to navigate to sub-directories.
+All **Waffles** components and their tests exist in the `src` directory with matching official documentation in the `doc-site` folder. All npm scripts are run from the root — there is no need to navigate to sub-directories.
 
 ## 🏆 Core Principles
 
@@ -12,8 +12,8 @@ All **Waffles** components and their tests exist in the `src` directory with mat
 
 ## 💻 Before You Start
 
-- Make sure you have a compatible version of **node** installed: 14+
-- Install the latest version of **yarn** package manager: 1.22+
+- Make sure you have a compatible version of **node** installed: **14+**
+- Install the latest version of **yarn** package manager: **1.22+**
 - Run **yarn** in the root directory to install all dependencies
 
 ## 🔧 Workbench
@@ -90,7 +90,7 @@ The output is:
 - **design tokens**: a `src/tokens/tokens.ts` file
 - **icons**: new React components in the `src/icon` folder and an updated `src/icon/index.ts` file.
 
-ℹ️ After adding new design tokens or icons, please run the appropriate `generate` script(s). After this  **commit** the resulting files. That way they can be easily consumed internally.
+ℹ️ After adding new design tokens or icons, please run the appropriate `generate` script(s). After this **commit** the resulting files. That way they can be easily consumed internally.
 
 ## 📦 Releases
 
