@@ -3,7 +3,7 @@ describe('Icon', () => {
     cy.loadStory('icon-sizes');
     cy.injectAxe();
 
-    cy.findAllByTestId('icon-row').should('have.length', 193);
+    cy.findAllByTestId('icon-row').should('have.length', 190);
     cy.a11yCheck();
   });
 });
