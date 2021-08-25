@@ -29,7 +29,7 @@ const fontFamiliesMap = {
   'Studio Feixen Sans': 'Studio-Feixen-Sans, Arial, sans-serif',
 };
 
-// Transformations for colors, boxShadow, fontWeights, fontFamilies, and lineHeights
+// Transformations for colors, boxShadow, fontWeights, fontFamilies, lineHeights, and opacity
 
 function transformedColors(baseColors) {
   return Object.entries(baseColors).reduce((flattenedColors, currentEntry) => {
@@ -69,13 +69,14 @@ function transformedFontFamilies(baseFontFamilies) {
   );
 }
 
-function transformedLineHeights(baseLineHeights) {
+function transformedPercentages(basePercentages) {
   return Object.fromEntries(
-    Object.entries(baseLineHeights).map((entry) => {
-      const [key, baseLineHeight] = entry;
-      // Because percanteges are really quirky in CSS, convert them to unitless
-      const regularLineHeight = parseFloat(baseLineHeight) / 100;
-      return [key, regularLineHeight];
+    Object.entries(basePercentages).map((entry) => {
+      const [key, basePercantege] = entry;
+      // Convert percentages to unitless
+      // Useful for line heights and opacity
+      const unitless = parseFloat(basePercantege) / 100;
+      return [key, unitless];
     }),
   );
 }
@@ -97,7 +98,10 @@ function transformedBaseTokens(tokens) {
       ...transformedFontWeights(tokens.fontWeights),
     },
     lineHeights: {
-      ...transformedLineHeights(tokens.lineHeights),
+      ...transformedPercentages(tokens.lineHeights),
+    },
+    opacity: {
+      ...transformedPercentages(tokens.opacity),
     },
   };
 
