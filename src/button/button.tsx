@@ -50,6 +50,7 @@ const buttonStyle = css`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  vertical-align: middle;
   font-family: ${tokens.fontFamilies.sansSerif};
   font-weight: ${tokens.fontWeights.bold};
   font-size: ${tokens.fontSizes.medium};
@@ -63,17 +64,45 @@ const buttonStyle = css`
   transition: background-color 125ms ease-out;
 `;
 
+const wrapperStyle = css`
+  padding-left: ${tokens.spacing.small};
+  padding-right: ${tokens.spacing.small};
+`;
+
+type IconProps = {
+  size?: 'medium' | 'small' | 'xsmall';
+};
+
+type ButtonIconOnlyProps = {
+  children?: never;
+  icon: React.ComponentType<IconProps>;
+  iconLeft?: never;
+  iconRight?: never;
+  'aria-label': string;
+};
+
+type ButtonRegularProps = {
+  children: React.ReactNode;
+  icon?: never;
+  iconLeft?: React.ComponentType<IconProps>;
+  iconRight?: React.ComponentType<IconProps>;
+  'aria-label'?: string;
+};
+
 type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'plain' | 'destructive';
   size?: 'small' | 'medium' | 'large';
   fullWidth?: boolean;
-  children: React.ReactNode;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+} & (ButtonIconOnlyProps | ButtonRegularProps) &
+  React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 function Button({
   variant = 'primary',
   size = 'medium',
   fullWidth = false,
+  icon: Icon,
+  iconLeft: IconLeft,
+  iconRight: IconRight,
   children,
   ...restProps
 }: ButtonProps) {
@@ -84,8 +113,8 @@ function Button({
         height: ${sizeMap[size].sizing};
         min-width: ${sizeMap[size].sizing};
         width: ${fullWidth ? '100%' : 'auto'};
-        padding-left: ${sizeMap[size].spacing};
-        padding-right: ${sizeMap[size].spacing};
+        padding-left: ${!Icon && sizeMap[size].spacing};
+        padding-right: ${!Icon && sizeMap[size].spacing};
         color: ${variantMap[variant].color};
         background-color: ${variantMap[variant].backgroundColor};
         border-color: ${variantMap[variant].borderColor};
@@ -100,7 +129,10 @@ function Button({
       `}
       {...restProps}
     >
-      {children}
+      {Icon && <Icon size="medium" />}
+      {IconLeft && <IconLeft size="medium" />}
+      {children && <span css={wrapperStyle}>{children}</span>}
+      {IconRight && <IconRight size="medium" />}
     </button>
   );
 }
