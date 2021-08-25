@@ -47,6 +47,9 @@ const variantMap = {
 };
 
 const buttonStyle = css`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: ${tokens.fontFamilies.sansSerif};
   font-weight: ${tokens.fontWeights.bold};
   font-size: ${tokens.fontSizes.medium};
@@ -63,12 +66,14 @@ const buttonStyle = css`
 type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'plain' | 'destructive';
   size?: 'small' | 'medium' | 'large';
+  fullWidth?: boolean;
   children: React.ReactNode;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 function Button({
   variant = 'primary',
   size = 'medium',
+  fullWidth = false,
   children,
   ...restProps
 }: ButtonProps) {
@@ -78,6 +83,7 @@ function Button({
         ${buttonStyle}
         height: ${sizeMap[size].sizing};
         min-width: ${sizeMap[size].sizing};
+        width: ${fullWidth ? '100%' : 'auto'};
         padding-left: ${sizeMap[size].spacing};
         padding-right: ${sizeMap[size].spacing};
         color: ${variantMap[variant].color};
