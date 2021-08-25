@@ -5,9 +5,18 @@ import { transparentize } from 'polished';
 import { tokens } from '../tokens';
 
 const sizeMap = {
-  small: tokens.sizing.small,
-  medium: tokens.sizing.medium,
-  large: tokens.sizing.large,
+  small: {
+    sizing: tokens.sizing.small,
+    spacing: tokens.spacing.small,
+  },
+  medium: {
+    sizing: tokens.sizing.medium,
+    spacing: tokens.spacing.medium,
+  },
+  large: {
+    sizing: tokens.sizing.large,
+    spacing: tokens.spacing.medium,
+  },
 };
 
 const variantMap = {
@@ -42,6 +51,8 @@ const buttonStyle = css`
   font-weight: ${tokens.fontWeights.bold};
   font-size: ${tokens.fontSizes.medium};
   line-height: ${tokens.lineHeights.tight};
+  margin: 0;
+  padding: 0;
   outline: 0;
   border-radius: ${tokens.borderRadius.medium};
   border-width: ${tokens.borderWidth.medium};
@@ -65,7 +76,10 @@ function Button({
     <button
       css={css`
         ${buttonStyle}
-        height: ${sizeMap[size]};
+        height: ${sizeMap[size].sizing};
+        min-width: ${sizeMap[size].sizing};
+        padding-left: ${sizeMap[size].spacing};
+        padding-right: ${sizeMap[size].spacing};
         color: ${variantMap[variant].color};
         background-color: ${variantMap[variant].backgroundColor};
         border-color: ${variantMap[variant].borderColor};
