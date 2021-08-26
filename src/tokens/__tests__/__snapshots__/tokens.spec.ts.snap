@@ -99,9 +99,9 @@ Object {
     "tight": 1,
   },
   "opacity": Object {
-    "high": "60%",
-    "low": "15%",
-    "medium": "40%",
+    "high": 0.6,
+    "low": 0.15,
+    "medium": 0.4,
   },
   "sizing": Object {
     "large": "48px",

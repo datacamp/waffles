@@ -2,34 +2,15 @@
 
 exports[`Button renders correctly 1`] = `
 .emotion-0 {
-  color: #05192D;
-  background-color: #03EF62;
-  height: 36px;
-  min-width: 110px;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  outline: 0;
-  border-radius: 4px;
-  border: 0;
-  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.emotion-0:hover {
-  background-color: #65FF8F;
-}
-
-.emotion-0:active {
-  -webkit-transform: scale(0.975);
-  -moz-transform: scale(0.975);
-  -ms-transform: scale(0.975);
-  transform: scale(0.975);
-}
-
-<button
+<span
   class="emotion-0"
 >
   Amazing Label
-</button>
+</span>
 `;
