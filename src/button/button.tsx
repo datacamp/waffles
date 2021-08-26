@@ -78,8 +78,8 @@ const buttonStyle = css`
   border-style: solid;
   border-radius: ${tokens.borderRadius.medium};
   border-width: ${tokens.borderWidth.medium};
-  cursor: pointer;
   transition: background-color 125ms ease-out;
+  cursor: pointer;
 `;
 
 type IconProps = {
@@ -136,12 +136,17 @@ function Button({
         background-color: ${variantMap[variant].backgroundColor};
         border-color: ${variantMap[variant].borderColor};
 
-        &:hover {
+        &:hover:not(:disabled) {
           background-color: ${variantMap[variant].hoverColor};
         }
 
-        &:active {
+        &:active:not(:disabled) {
           background-color: ${variantMap[variant].backgroundColor};
+        }
+
+        &:disabled {
+          opacity: ${tokens.opacity.medium};
+          cursor: default;
         }
       `}
       {...restProps}
