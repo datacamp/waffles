@@ -64,11 +64,6 @@ const buttonStyle = css`
   transition: background-color 125ms ease-out;
 `;
 
-const wrapperStyle = css`
-  padding-left: ${tokens.spacing.small};
-  padding-right: ${tokens.spacing.small};
-`;
-
 type IconProps = {
   size?: 'medium' | 'small' | 'xsmall';
 };
@@ -131,7 +126,16 @@ function Button({
     >
       {Icon && <Icon size="medium" />}
       {IconLeft && <IconLeft size="medium" />}
-      {children && <span css={wrapperStyle}>{children}</span>}
+      {children && (
+        <span
+          css={css`
+            ${IconLeft && `padding-left: ${tokens.spacing.small};`}
+            ${IconRight && `padding-right: ${tokens.spacing.small};`}
+          `}
+        >
+          {children}
+        </span>
+      )}
       {IconRight && <IconRight size="medium" />}
     </button>
   );
