@@ -87,8 +87,5 @@
   "peerDependencies": {
     "react": ">= 17.0.0 < 18",
     "react-dom": ">= 17.0.0 < 18"
-  },
-  "dependencies": {
-    "polished": "^4.1.3"
   }
 }
