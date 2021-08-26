@@ -19,7 +19,7 @@ const sizeMap = {
   },
 };
 
-const variantMap = {
+const regularVariantMap = {
   primary: {
     color: tokens.colors.navy,
     backgroundColor: tokens.colors.green,
@@ -46,6 +46,22 @@ const variantMap = {
   },
 };
 
+const invertedVariantMap = {
+  ...regularVariantMap,
+  secondary: {
+    color: tokens.colors.white,
+    backgroundColor: 'transparent',
+    hoverColor: transparentize(1 - tokens.opacity.low, tokens.colors.white),
+    borderColor: transparentize(1 - tokens.opacity.medium, tokens.colors.white),
+  },
+  plain: {
+    color: tokens.colors.blueDark,
+    backgroundColor: 'transparent',
+    hoverColor: transparentize(1 - tokens.opacity.low, tokens.colors.white),
+    borderColor: 'transparent',
+  },
+};
+
 const buttonStyle = css`
   display: inline-flex;
   align-items: center;
@@ -58,6 +74,7 @@ const buttonStyle = css`
   margin: 0;
   padding: 0;
   outline: 0;
+  border-style: solid;
   border-radius: ${tokens.borderRadius.medium};
   border-width: ${tokens.borderWidth.medium};
   cursor: pointer;
@@ -88,6 +105,7 @@ type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'plain' | 'destructive';
   size?: 'small' | 'medium' | 'large';
   fullWidth?: boolean;
+  inverted?: boolean;
 } & (ButtonIconOnlyProps | ButtonRegularProps) &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -95,12 +113,15 @@ function Button({
   variant = 'primary',
   size = 'medium',
   fullWidth = false,
+  inverted = false,
   icon: Icon,
   iconLeft: IconLeft,
   iconRight: IconRight,
   children,
   ...restProps
 }: ButtonProps) {
+  const variantMap = inverted ? invertedVariantMap : regularVariantMap;
+
   return (
     <button
       css={css`
