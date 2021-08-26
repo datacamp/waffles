@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
+import { useFocusRing } from '@react-aria/focus';
 
 import { tokens } from '../tokens';
 import { hexToRgba } from '../utils';
@@ -80,6 +81,19 @@ const buttonStyle = css`
   border-width: ${tokens.borderWidth.medium};
   transition: background-color 125ms ease-out;
   cursor: pointer;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: -4px;
+    border-radius: 6px;
+    transition: box-shadow 125ms ease-out;
+  }
 `;
 
 type IconProps = {
@@ -121,6 +135,7 @@ function Button({
   children,
   ...restProps
 }: ButtonProps) {
+  const { focusProps, isFocusVisible } = useFocusRing();
   const variantMap = inverted ? invertedVariantMap : regularVariantMap;
 
   return (
@@ -148,8 +163,20 @@ function Button({
           opacity: ${tokens.opacity.medium};
           cursor: default;
         }
+
+        ${isFocusVisible &&
+        css`
+          &::after {
+            box-shadow: 0 0 0 2px ${tokens.colors.blueDark};
+          }
+
+          &:active:focus {
+            background-color: ${variantMap[variant].hoverColor};
+          }
+        `}
       `}
       {...restProps}
+      {...focusProps}
     >
       {Icon && <Icon size="medium" />}
       {IconLeft && <IconLeft size="medium" />}

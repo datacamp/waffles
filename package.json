@@ -87,5 +87,8 @@
   "peerDependencies": {
     "react": ">= 17.0.0 < 18",
     "react-dom": ">= 17.0.0 < 18"
+  },
+  "dependencies": {
+    "@react-aria/focus": "^3.4.1"
   }
 }
