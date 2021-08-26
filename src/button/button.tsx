@@ -1,8 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { transparentize } from 'polished';
 
 import { tokens } from '../tokens';
+import { hexToRgba } from '../utils';
 
 const sizeMap = {
   small: {
@@ -29,13 +29,13 @@ const regularVariantMap = {
   secondary: {
     color: tokens.colors.navy,
     backgroundColor: 'transparent',
-    hoverColor: transparentize(1 - tokens.opacity.low, tokens.colors.navy),
+    hoverColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
     borderColor: tokens.colors.navy,
   },
   plain: {
     color: tokens.colors.blueDarkText,
     backgroundColor: 'transparent',
-    hoverColor: transparentize(1 - tokens.opacity.low, tokens.colors.navy),
+    hoverColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
     borderColor: 'transparent',
   },
   destructive: {
@@ -51,18 +51,19 @@ const invertedVariantMap = {
   secondary: {
     color: tokens.colors.white,
     backgroundColor: 'transparent',
-    hoverColor: transparentize(1 - tokens.opacity.low, tokens.colors.white),
-    borderColor: transparentize(1 - tokens.opacity.medium, tokens.colors.white),
+    hoverColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
+    borderColor: hexToRgba(tokens.colors.white, tokens.opacity.medium),
   },
   plain: {
     color: tokens.colors.blueDark,
     backgroundColor: 'transparent',
-    hoverColor: transparentize(1 - tokens.opacity.low, tokens.colors.white),
+    hoverColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
     borderColor: 'transparent',
   },
 };
 
 const buttonStyle = css`
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -86,16 +87,16 @@ type IconProps = {
 };
 
 type ButtonIconOnlyProps = {
-  children?: never;
   icon: React.ComponentType<IconProps>;
+  children?: never;
   iconLeft?: never;
   iconRight?: never;
   'aria-label': string;
 };
 
 type ButtonRegularProps = {
-  children: React.ReactNode;
   icon?: never;
+  children: React.ReactNode;
   iconLeft?: React.ComponentType<IconProps>;
   iconRight?: React.ComponentType<IconProps>;
   'aria-label'?: string;
@@ -150,6 +151,7 @@ function Button({
       {children && (
         <span
           css={css`
+            user-select: none;
             ${IconLeft && `padding-left: ${tokens.spacing.small};`}
             ${IconRight && `padding-right: ${tokens.spacing.small};`}
           `}
