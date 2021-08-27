@@ -29,7 +29,7 @@ export const regularVariantMap = {
     color: tokens.colors.navy,
     backgroundColor: 'transparent',
     hoverColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
-    borderColor: tokens.colors.navy,
+    borderColor: hexToRgba(tokens.colors.navy, tokens.opacity.high),
   },
   plain: {
     color: tokens.colors.blueDarkText,
@@ -51,7 +51,7 @@ export const invertedVariantMap = {
     color: tokens.colors.white,
     backgroundColor: 'transparent',
     hoverColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
-    borderColor: hexToRgba(tokens.colors.white, tokens.opacity.medium),
+    borderColor: hexToRgba(tokens.colors.white, tokens.opacity.high),
   },
   plain: {
     color: tokens.colors.blueDark,

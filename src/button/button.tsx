@@ -102,7 +102,7 @@ function Button({
         }
 
         &:disabled {
-          opacity: ${tokens.opacity.medium};
+          opacity: ${tokens.opacity.high};
           cursor: default;
         }
 
