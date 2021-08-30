@@ -38,8 +38,20 @@ const buttonBaseStyle = css`
   }
 `;
 
+type MergeElementProps<
+  T extends React.ElementType,
+  P extends Record<string, unknown>,
+> = Omit<React.ComponentPropsWithoutRef<T>, keyof P> & P;
+
 type IconProps = {
   size?: 'medium' | 'small' | 'xsmall';
+};
+
+type ButtonBaseProps = {
+  variant?: 'primary' | 'secondary' | 'plain' | 'destructive';
+  size?: 'small' | 'medium' | 'large';
+  fullWidth?: boolean;
+  inverted?: boolean;
 };
 
 type ButtonIconOnlyProps = {
@@ -48,25 +60,22 @@ type ButtonIconOnlyProps = {
   iconLeft?: never;
   iconRight?: never;
   'aria-label': string;
-};
+} & ButtonBaseProps;
 
-type ButtonRegularProps = {
+type ButtonNoIconProps = {
   icon?: never;
   children: React.ReactNode;
   iconLeft?: React.ComponentType<IconProps>;
   iconRight?: React.ComponentType<IconProps>;
   'aria-label'?: string;
-};
+} & ButtonBaseProps;
 
-type ButtonProps = {
-  variant?: 'primary' | 'secondary' | 'plain' | 'destructive';
-  size?: 'small' | 'medium' | 'large';
-  fullWidth?: boolean;
-  inverted?: boolean;
-} & (ButtonIconOnlyProps | ButtonRegularProps) &
-  React.ButtonHTMLAttributes<HTMLButtonElement>;
+type ButtonProps<P extends React.ElementType = 'button'> = {
+  as?: P;
+} & MergeElementProps<P, ButtonNoIconProps | ButtonIconOnlyProps>;
 
-function Button({
+function Button<T extends React.ElementType = 'button'>({
+  as,
   variant = 'primary',
   size = 'medium',
   fullWidth = false,
@@ -76,12 +85,14 @@ function Button({
   iconRight: IconRight,
   children,
   ...restProps
-}: ButtonProps) {
+}: ButtonProps<T>) {
+  const Element = as || 'button';
+
   const { focusProps, isFocusVisible } = useFocusRing();
   const variantMap = inverted ? invertedVariantMap : regularVariantMap;
 
   return (
-    <button
+    <Element
       css={css`
         ${buttonBaseStyle}
         height: ${sizeMap[size].sizing};
@@ -134,7 +145,7 @@ function Button({
         </span>
       )}
       {IconRight && <IconRight size="medium" />}
-    </button>
+    </Element>
   );
 }
 
