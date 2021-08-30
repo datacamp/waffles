@@ -12,7 +12,7 @@
     "prebuild": "rimraf dist && yarn generate:design-tokens && yarn generate:icons",
     "generate:design-tokens": "rimraf src/tokens/tokens.ts && node ./tools/generate-design-tokens.js",
     "generate:icons": "rimraf \"src/icon/!(raw|icon-base.tsx|__tests__)\" && node ./tools/generate-icons.js",
-    "workbench": "yarn prebuild && concurrently --kill-others -c \"bgBlue.bold,bgMagenta.bold\" \"yarn build:cjs --watch\" \"next dev workbench --port 4040\"",
+    "workbench": "yarn prebuild && yarn build:cjs && concurrently --kill-others -c \"bgBlue.bold,bgMagenta.bold\" \"yarn build:cjs --watch\" \"next dev workbench --port 4040\"",
     "preworkbench": "rimraf workbench/pages/stories",
     "doc:dev": "yarn prebuild && yarn build:cjs && next dev doc-site",
     "doc:build": "next build doc-site && next export doc-site -o build",
