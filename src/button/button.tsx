@@ -11,6 +11,7 @@ const buttonBaseStyle = css`
   align-items: center;
   justify-content: center;
   vertical-align: middle;
+  text-decoration: none;
   font-family: ${tokens.fontFamilies.sansSerif};
   font-weight: ${tokens.fontWeights.bold};
   font-size: ${tokens.fontSizes.medium};
@@ -21,6 +22,7 @@ const buttonBaseStyle = css`
   border-style: solid;
   border-radius: ${tokens.borderRadius.medium};
   border-width: ${tokens.borderWidth.medium};
+  user-select: none;
   transition: background-color 125ms ease-out;
   cursor: pointer;
 
@@ -38,14 +40,14 @@ const buttonBaseStyle = css`
   }
 `;
 
+type IconProps = {
+  size?: 'medium' | 'small' | 'xsmall';
+};
+
 type MergeElementProps<
   T extends React.ElementType,
   P extends Record<string, unknown>,
 > = Omit<React.ComponentPropsWithoutRef<T>, keyof P> & P;
-
-type IconProps = {
-  size?: 'medium' | 'small' | 'xsmall';
-};
 
 type ButtonBaseProps = {
   variant?: 'primary' | 'secondary' | 'plain' | 'destructive';
@@ -136,7 +138,6 @@ function Button<T extends React.ElementType = 'button'>({
       {children && (
         <span
           css={css`
-            user-select: none;
             ${IconLeft && `padding-left: ${tokens.spacing.small};`}
             ${IconRight && `padding-right: ${tokens.spacing.small};`}
           `}
