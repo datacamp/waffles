@@ -72,6 +72,7 @@ const buttonBaseStyle = css`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   vertical-align: middle;
   text-decoration: none;
   font-family: ${tokens.fontFamilies.sansSerif};

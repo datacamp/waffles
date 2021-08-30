@@ -54,6 +54,7 @@ function Button<T extends React.ElementType = 'button'>({
   const Element = as || 'button';
 
   const { focusProps, isFocusVisible } = useFocusRing();
+
   return (
     <Element
       css={buttonStyle({
