@@ -46,7 +46,7 @@ describe('Button', () => {
     cy.loadStory('button-with-icons');
     cy.injectAxe();
 
-    cy.get('button').should('have.length', 48);
+    cy.get('button').should('have.length', 51);
     cy.a11yCheck();
   });
 });

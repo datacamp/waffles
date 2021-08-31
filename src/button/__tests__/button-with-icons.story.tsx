@@ -13,11 +13,12 @@ const wrapperStyle = css`
 
 const variants = ['primary', 'secondary', 'plain', 'destructive'] as const;
 const sizes = ['small', 'medium', 'large'] as const;
+const iconSizes = ['xsmall', 'small', 'medium'] as const;
 
 function Story() {
   return (
     <>
-      {/* Regular */}
+      {/* Icon only */}
       <div>
         {variants.map((variant) => {
           return (
@@ -26,7 +27,7 @@ function Story() {
                 return (
                   <Button
                     key={`only-icon-${variant}-${size}`}
-                    icon={AddCircle}
+                    icon={<AddCircle />}
                     variant={variant}
                     size={size}
                     aria-label="Only icon"
@@ -37,6 +38,7 @@ function Story() {
           );
         })}
       </div>
+      {/* Icon left */}
       <div>
         {variants.map((variant) => {
           return (
@@ -45,7 +47,7 @@ function Story() {
                 return (
                   <Button
                     key={`icon-left-${variant}-${size}`}
-                    iconLeft={ChevronLeft}
+                    iconLeft={<ChevronLeft />}
                     variant={variant}
                     size={size}
                   >
@@ -57,6 +59,7 @@ function Story() {
           );
         })}
       </div>
+      {/* Icon right */}
       <div>
         {variants.map((variant) => {
           return (
@@ -65,7 +68,7 @@ function Story() {
                 return (
                   <Button
                     key={`icon-right-${variant}-${size}`}
-                    iconRight={ChevronRight}
+                    iconRight={<ChevronRight />}
                     variant={variant}
                     size={size}
                   >
@@ -77,6 +80,7 @@ function Story() {
           );
         })}
       </div>
+      {/* Both icon left and right */}
       <div>
         {variants.map((variant) => {
           return (
@@ -85,8 +89,8 @@ function Story() {
                 return (
                   <Button
                     key={`icon-left-and-right-${variant}-${size}`}
-                    iconRight={AddCircle}
-                    iconLeft={ChevronLeft}
+                    iconRight={<AddCircle />}
+                    iconLeft={<ChevronLeft />}
                     variant={variant}
                     size={size}
                   >
@@ -95,6 +99,19 @@ function Story() {
                 );
               })}
             </div>
+          );
+        })}
+      </div>
+      {/* Custom icon size */}
+      <div css={wrapperStyle}>
+        {iconSizes.map((iconSize) => {
+          return (
+            <Button
+              key={`custom-icon-${iconSize}`}
+              iconLeft={<AddCircle size={iconSize} />}
+            >
+              Custom Icon Size
+            </Button>
           );
         })}
       </div>

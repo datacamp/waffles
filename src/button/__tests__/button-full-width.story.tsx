@@ -29,7 +29,7 @@ function Story() {
         {variants.map((variant) => {
           return (
             <Button
-              iconLeft={AddCircle}
+              iconLeft={<AddCircle />}
               key={`${variant}`}
               variant={variant}
               fullWidth
