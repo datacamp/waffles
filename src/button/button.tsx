@@ -3,10 +3,6 @@ import { useFocusRing } from '@react-aria/focus';
 
 import { buttonStyle, innerContentStyle } from './styles';
 
-type IconProps = {
-  size?: 'medium' | 'small' | 'xsmall';
-};
-
 type MergeElementProps<
   T extends React.ElementType,
   P extends Record<string, unknown>,
@@ -20,7 +16,7 @@ type ButtonBaseProps = {
 };
 
 type ButtonIconOnlyProps = {
-  icon: React.ComponentType<IconProps>;
+  icon: React.ReactNode;
   children?: never;
   iconLeft?: never;
   iconRight?: never;
@@ -30,8 +26,8 @@ type ButtonIconOnlyProps = {
 type ButtonNoIconProps = {
   icon?: never;
   children: React.ReactNode;
-  iconLeft?: React.ComponentType<IconProps>;
-  iconRight?: React.ComponentType<IconProps>;
+  iconLeft?: React.ReactNode;
+  iconRight?: React.ReactNode;
   'aria-label'?: string;
 } & ButtonBaseProps;
 
@@ -45,9 +41,9 @@ function Button<T extends React.ElementType = 'button'>({
   size = 'medium',
   fullWidth = false,
   inverted = false,
-  icon: Icon,
-  iconLeft: IconLeft,
-  iconRight: IconRight,
+  icon,
+  iconLeft,
+  iconRight,
   children,
   ...restProps
 }: ButtonProps<T>) {
@@ -62,25 +58,25 @@ function Button<T extends React.ElementType = 'button'>({
         variant,
         inverted,
         fullWidth,
-        hasIcon: !!Icon,
+        hasIcon: !!icon,
         isFocusVisible,
       })}
       {...restProps}
       {...focusProps}
     >
-      {Icon && <Icon size="medium" />}
-      {IconLeft && <IconLeft size="medium" />}
+      {icon}
+      {iconLeft}
       {children && (
         <span
           css={innerContentStyle({
-            hasLeftIcon: !!IconLeft,
-            hasRightIcon: !!IconRight,
+            hasLeftIcon: !!iconLeft,
+            hasRightIcon: !!iconRight,
           })}
         >
           {children}
         </span>
       )}
-      {IconRight && <IconRight size="medium" />}
+      {iconRight}
     </Element>
   );
 }
