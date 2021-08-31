@@ -88,9 +88,9 @@ describe('Button', () => {
     expect(link).toHaveAttribute('href', 'https://fanpage.com');
   });
 
-  it('renders only icon button with required aria-label', () => {
+  it('renders button with default size icon only and required aria-label', () => {
     const { container, getByLabelText } = render(
-      <Button icon={AddCircle} aria-label="Accessible button" />,
+      <Button icon={<AddCircle />} aria-label="Accessible button" />,
     );
 
     const button = getByLabelText('Accessible button');
@@ -98,11 +98,30 @@ describe('Button', () => {
 
     expect(button).toBeInTheDocument();
     expect(button).toContainElement(icon);
+    expect(icon).toHaveAttribute('width', '16');
+    expect(icon).toHaveAttribute('height', '16');
+  });
+
+  it('renders icon of custom size', () => {
+    const { container, getByLabelText } = render(
+      <Button
+        icon={<AddCircle size="xsmall" />}
+        aria-label="Accessible button"
+      />,
+    );
+
+    const button = getByLabelText('Accessible button');
+    const icon = container.querySelector('svg');
+
+    expect(button).toBeInTheDocument();
+    expect(button).toContainElement(icon);
+    expect(icon).toHaveAttribute('width', '12');
+    expect(icon).toHaveAttribute('height', '12');
   });
 
   it('renders left icon', () => {
     const { container, getByText } = render(
-      <Button iconLeft={AddCircle}>Add to Fanpage</Button>,
+      <Button iconLeft={<AddCircle />}>Add to Fanpage</Button>,
     );
 
     const button = getByText('Add to Fanpage').closest('button');
@@ -114,7 +133,7 @@ describe('Button', () => {
 
   it('renders right icon', () => {
     const { container, getByText } = render(
-      <Button iconRight={ChevronRight}>Fanpage</Button>,
+      <Button iconRight={<ChevronRight />}>Fanpage</Button>,
     );
 
     const button = getByText('Fanpage').closest('button');
@@ -126,7 +145,7 @@ describe('Button', () => {
 
   it('renders both left and right icons', () => {
     const { container, getByText } = render(
-      <Button iconLeft={AddCircle} iconRight={ChevronRight}>
+      <Button iconLeft={<AddCircle />} iconRight={<ChevronRight />}>
         Add to Fanpage
       </Button>,
     );
