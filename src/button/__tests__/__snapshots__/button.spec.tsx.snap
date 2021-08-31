@@ -1,16 +1,2507 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button renders correctly 1`] = `
+exports[`Button renders snapshot of disabled medium variant destructive 1`] = `
 .emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #FF5400;
+  border-color: transparent;
 }
 
-<span
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FF782D;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #FF5400;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of disabled medium variant plain 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of disabled medium variant primary 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #65FF8F;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of disabled medium variant secondary 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: transparent;
+  border-color: rgba(5, 25, 45, 0.6);
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of focused state 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #65FF8F;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-0::after {
+  box-shadow: 0 0 0 2px #009BD8;
+}
+
+.emotion-0:active:focus {
+  background-color: #65FF8F;
+}
+
+<button
   class="emotion-0"
 >
-  Amazing Label
-</span>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant destructive and size large 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #FF5400;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FF782D;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #FF5400;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant destructive and size medium 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #FF5400;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FF782D;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #FF5400;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant destructive and size small 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #05192D;
+  background-color: #FF5400;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FF782D;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #FF5400;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant plain and size large 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #009BD8;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant plain and size medium 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #009BD8;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant plain and size small 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #009BD8;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant primary and size large 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #65FF8F;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant primary and size medium 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #65FF8F;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant primary and size small 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #65FF8F;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant secondary and size large 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant secondary and size medium 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of inverted variant secondary and size small 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant destructive and size large 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #FF5400;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FF782D;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #FF5400;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant destructive and size medium 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #FF5400;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FF782D;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #FF5400;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant destructive and size small 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #05192D;
+  background-color: #FF5400;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FF782D;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #FF5400;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant plain and size large 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant plain and size medium 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant plain and size small 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant primary and size large 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #65FF8F;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant primary and size medium 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #65FF8F;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant primary and size small 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #65FF8F;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant secondary and size large 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: transparent;
+  border-color: rgba(5, 25, 45, 0.6);
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant secondary and size medium 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: transparent;
+  border-color: rgba(5, 25, 45, 0.6);
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of variant secondary and size small 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #05192D;
+  background-color: transparent;
+  border-color: rgba(5, 25, 45, 0.6);
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.15);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<button
+  class="emotion-0"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</button>
 `;
