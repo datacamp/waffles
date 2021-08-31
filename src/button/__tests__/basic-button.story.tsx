@@ -1,7 +1,7 @@
 import { Button } from '../index';
 
 function Story() {
-  return <Button>Greetings!</Button>;
+  return <Button>Basic Button</Button>;
 }
 
 export default Story;
