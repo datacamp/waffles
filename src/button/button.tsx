@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFocusRing } from '@react-aria/focus';
 
-import { buttonStyle, innerContentStyle } from './style';
+import { buttonStyle, innerContentStyle } from './styles';
 
 type IconProps = {
   size?: 'medium' | 'small' | 'xsmall';
