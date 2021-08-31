@@ -26,19 +26,19 @@ describe('Button', () => {
     cy.a11yCheck();
   });
 
-  it('render all varaints and sizes, when disabled and inverted', () => {
-    cy.loadStory('button-variants-and-sizes');
-    cy.injectAxe();
-
-    cy.get('button').should('have.length', 48);
-    cy.a11yCheck();
-  });
-
   it('render full width buttons', () => {
     cy.loadStory('button-full-width');
     cy.injectAxe();
 
     cy.get('button').should('have.length', 8);
+    cy.a11yCheck();
+  });
+
+  it('render all varaints and sizes, when disabled and inverted', () => {
+    cy.loadStory('button-variants-and-sizes');
+    cy.injectAxe();
+
+    cy.get('button').should('have.length', 48);
     cy.a11yCheck();
   });
 

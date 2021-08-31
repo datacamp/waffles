@@ -17,77 +17,95 @@ function Story() {
   return (
     <>
       {/* Regular */}
-      <div css={wrapperStyle}>
+      <div>
         {variants.map((variant) => {
-          return sizes.map((size) => {
-            return (
-              <Button key={`${variant}-${size}`} variant={variant} size={size}>
-                Regular
-              </Button>
-            );
-          });
+          return (
+            <div css={wrapperStyle} key={variant}>
+              {sizes.map((size) => {
+                return (
+                  <Button
+                    key={`${variant}-${size}`}
+                    variant={variant}
+                    size={size}
+                  >
+                    Regular
+                  </Button>
+                );
+              })}
+            </div>
+          );
         })}
       </div>
       {/* Regular disabled */}
-      <div css={wrapperStyle}>
+      <div>
         {variants.map((variant) => {
-          return sizes.map((size) => {
-            return (
-              <Button
-                disabled
-                key={`disabled-${variant}-${size}`}
-                variant={variant}
-                size={size}
-              >
-                Disabled
-              </Button>
-            );
-          });
+          return (
+            <div css={wrapperStyle} key={variant}>
+              {sizes.map((size) => {
+                return (
+                  <Button
+                    disabled
+                    key={`disabled-${variant}-${size}`}
+                    variant={variant}
+                    size={size}
+                  >
+                    Disabled
+                  </Button>
+                );
+              })}
+            </div>
+          );
         })}
       </div>
       {/* Inverted */}
       <div
         css={css`
-          ${wrapperStyle}
           background-color: ${tokens.colors.navy};
         `}
       >
         {variants.map((variant) => {
-          return sizes.map((size) => {
-            return (
-              <Button
-                inverted
-                key={`inverted-${variant}-${size}`}
-                variant={variant}
-                size={size}
-              >
-                Inverted
-              </Button>
-            );
-          });
+          return (
+            <div css={wrapperStyle} key={variant}>
+              {sizes.map((size) => {
+                return (
+                  <Button
+                    inverted
+                    key={`inverted-${variant}-${size}`}
+                    variant={variant}
+                    size={size}
+                  >
+                    Inverted
+                  </Button>
+                );
+              })}
+            </div>
+          );
         })}
       </div>
       {/* Inverted disabled */}
       <div
         css={css`
-          ${wrapperStyle}
           background-color: ${tokens.colors.navy};
         `}
       >
         {variants.map((variant) => {
-          return sizes.map((size) => {
-            return (
-              <Button
-                inverted
-                disabled
-                key={`inverted-disabled-${variant}-${size}`}
-                variant={variant}
-                size={size}
-              >
-                Inverted Disabled
-              </Button>
-            );
-          });
+          return (
+            <div css={wrapperStyle} key={variant}>
+              {sizes.map((size) => {
+                return (
+                  <Button
+                    inverted
+                    disabled
+                    key={`inverted-disabled-${variant}-${size}`}
+                    variant={variant}
+                    size={size}
+                  >
+                    Inverted Disabled
+                  </Button>
+                );
+              })}
+            </div>
+          );
         })}
       </div>
     </>

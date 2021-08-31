@@ -18,68 +18,84 @@ function Story() {
   return (
     <>
       {/* Regular */}
-      <div css={wrapperStyle}>
+      <div>
         {variants.map((variant) => {
-          return sizes.map((size) => {
-            return (
-              <Button
-                key={`only-icon-${variant}-${size}`}
-                icon={AddCircle}
-                variant={variant}
-                size={size}
-                aria-label="Only icon"
-              />
-            );
-          });
+          return (
+            <div css={wrapperStyle} key={variant}>
+              {sizes.map((size) => {
+                return (
+                  <Button
+                    key={`only-icon-${variant}-${size}`}
+                    icon={AddCircle}
+                    variant={variant}
+                    size={size}
+                    aria-label="Only icon"
+                  />
+                );
+              })}
+            </div>
+          );
         })}
       </div>
-      <div css={wrapperStyle}>
+      <div>
         {variants.map((variant) => {
-          return sizes.map((size) => {
-            return (
-              <Button
-                key={`icon-left-${variant}-${size}`}
-                iconLeft={ChevronLeft}
-                variant={variant}
-                size={size}
-              >
-                Icon Left
-              </Button>
-            );
-          });
+          return (
+            <div css={wrapperStyle} key={variant}>
+              {sizes.map((size) => {
+                return (
+                  <Button
+                    key={`icon-left-${variant}-${size}`}
+                    iconLeft={ChevronLeft}
+                    variant={variant}
+                    size={size}
+                  >
+                    Icon Left
+                  </Button>
+                );
+              })}
+            </div>
+          );
         })}
       </div>
-      <div css={wrapperStyle}>
+      <div>
         {variants.map((variant) => {
-          return sizes.map((size) => {
-            return (
-              <Button
-                key={`icon-right-${variant}-${size}`}
-                iconRight={ChevronRight}
-                variant={variant}
-                size={size}
-              >
-                Icon Right
-              </Button>
-            );
-          });
+          return (
+            <div css={wrapperStyle} key={variant}>
+              {sizes.map((size) => {
+                return (
+                  <Button
+                    key={`icon-right-${variant}-${size}`}
+                    iconRight={ChevronRight}
+                    variant={variant}
+                    size={size}
+                  >
+                    Icon Right
+                  </Button>
+                );
+              })}
+            </div>
+          );
         })}
       </div>
-      <div css={wrapperStyle}>
+      <div>
         {variants.map((variant) => {
-          return sizes.map((size) => {
-            return (
-              <Button
-                key={`icon-left-and-right-${variant}-${size}`}
-                iconRight={AddCircle}
-                iconLeft={ChevronLeft}
-                variant={variant}
-                size={size}
-              >
-                Icon Left and Right
-              </Button>
-            );
-          });
+          return (
+            <div css={wrapperStyle} key={variant}>
+              {sizes.map((size) => {
+                return (
+                  <Button
+                    key={`icon-left-and-right-${variant}-${size}`}
+                    iconRight={AddCircle}
+                    iconLeft={ChevronLeft}
+                    variant={variant}
+                    size={size}
+                  >
+                    Icon Left and Right
+                  </Button>
+                );
+              })}
+            </div>
+          );
         })}
       </div>
     </>
