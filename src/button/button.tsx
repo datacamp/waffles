@@ -1,12 +1,17 @@
-import React from 'react';
+/* eslint-disable react/display-name */
+import React, { forwardRef } from 'react';
 import { useFocusRing } from '@react-aria/focus';
 
 import { buttonStyle, innerContentStyle } from './styles';
 
-type MergeElementProps<
+type ElementRef<T extends React.ElementType> =
+  React.ComponentPropsWithRef<T>['ref'];
+
+type MergeElementPropsWithRef<
   T extends React.ElementType,
   P extends Record<string, unknown>,
-> = Omit<React.ComponentPropsWithoutRef<T>, keyof P> & P;
+> = Omit<React.ComponentPropsWithoutRef<T>, keyof P> &
+  P & { ref?: ElementRef<T> };
 
 type ButtonBaseProps = {
   variant?: 'primary' | 'secondary' | 'plain' | 'destructive';
@@ -31,28 +36,36 @@ type ButtonNoIconProps = {
   'aria-label'?: string;
 } & ButtonBaseProps;
 
-type ButtonProps<P extends React.ElementType = 'button'> = {
-  as?: P;
-} & MergeElementProps<P, ButtonNoIconProps | ButtonIconOnlyProps>;
+type ButtonProps<T extends React.ElementType = 'button'> = {
+  as?: T;
+} & MergeElementPropsWithRef<T, ButtonNoIconProps | ButtonIconOnlyProps>;
 
-function Button<T extends React.ElementType = 'button'>({
-  as,
-  variant = 'primary',
-  size = 'medium',
-  fullWidth = false,
-  inverted = false,
-  icon,
-  iconLeft,
-  iconRight,
-  children,
-  ...restProps
-}: ButtonProps<T>) {
+type ButtonComponent = <T extends React.ElementType = 'button'>(
+  props: ButtonProps<T>,
+) => JSX.Element | null;
+
+function ButtonBase<T extends React.ElementType = 'button'>(
+  {
+    as,
+    variant = 'primary',
+    size = 'medium',
+    fullWidth = false,
+    inverted = false,
+    icon,
+    iconLeft,
+    iconRight,
+    children,
+    ...restProps
+  }: ButtonProps<T>,
+  ref?: ElementRef<T>,
+) {
   const Element = as || 'button';
 
   const { focusProps, isFocusVisible } = useFocusRing();
 
   return (
     <Element
+      ref={ref}
       css={buttonStyle({
         size,
         variant,
@@ -80,5 +93,7 @@ function Button<T extends React.ElementType = 'button'>({
     </Element>
   );
 }
+
+const Button = forwardRef(ButtonBase) as ButtonComponent;
 
 export default Button;
