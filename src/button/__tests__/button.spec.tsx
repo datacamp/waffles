@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
 import { AddCircle, ChevronRight } from '../../icon';
 import { Button } from '../index';
+
+const variants = ['primary', 'secondary', 'plain', 'destructive'] as const;
+const sizes = ['small', 'medium', 'large'] as const;
 
 type TestComponentProps = {
   to: string;
@@ -14,6 +17,16 @@ function TestComponent({ children, to, ...restProps }: TestComponentProps) {
       {children}
     </a>
   );
+}
+
+function TestRefButton() {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    buttonRef.current?.focus();
+  }, []);
+
+  return <Button ref={buttonRef}>Focused With Ref</Button>;
 }
 
 describe('Button', () => {
@@ -56,7 +69,7 @@ describe('Button', () => {
     expect(button).toBeInTheDocument();
   });
 
-  it('sets the araia-label on the button', () => {
+  it('sets the aria-label on the button', () => {
     const { getByLabelText } = render(
       <Button aria-label="Accessible button">Follow Taylor Swift</Button>,
     );
@@ -190,10 +203,15 @@ describe('Button', () => {
     expect(button).toMatchSnapshot();
   });
 
-  describe('renders snapshot of', () => {
-    const variants = ['primary', 'secondary', 'plain', 'destructive'] as const;
-    const sizes = ['small', 'medium', 'large'] as const;
+  it('accepts ref and could be focused programmatically', () => {
+    const { container } = render(<TestRefButton />);
 
+    const button = container.querySelector('button');
+
+    expect(button).toHaveFocus();
+  });
+
+  describe('renders snapshot of', () => {
     variants.forEach((variant) => {
       sizes.forEach((size) => {
         it(`variant ${variant} and size ${size}`, () => {
@@ -211,9 +229,6 @@ describe('Button', () => {
   });
 
   describe('renders snapshot of inverted', () => {
-    const variants = ['primary', 'secondary', 'plain', 'destructive'] as const;
-    const sizes = ['small', 'medium', 'large'] as const;
-
     variants.forEach((variant) => {
       sizes.forEach((size) => {
         it(`variant ${variant} and size ${size}`, () => {
@@ -231,8 +246,6 @@ describe('Button', () => {
   });
 
   describe('renders snapshot of disabled medium', () => {
-    const variants = ['primary', 'secondary', 'plain', 'destructive'] as const;
-
     variants.forEach((variant) => {
       it(`variant ${variant}`, () => {
         const { container } = render(
