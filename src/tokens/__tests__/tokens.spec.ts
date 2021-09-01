@@ -1,7 +1,7 @@
 import { tokens } from '../index';
 
 describe('tokens', () => {
-  it('preserve correct data structure', () => {
+  it('expose tokens generated based on JSON file compatible with Figma Tokens plugin', () => {
     expect(tokens).toMatchSnapshot();
   });
 });
