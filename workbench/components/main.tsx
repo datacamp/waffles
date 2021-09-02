@@ -7,7 +7,6 @@ const mainStyle = css`
   background: 50px 50px repeat url(${GridBackground});
   width: 100%;
   min-height: 100vh;
-  padding: 50px;
 `;
 
 type MainProps = {
