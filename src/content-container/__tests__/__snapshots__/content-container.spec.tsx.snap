@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentContainer renders correctly 1`] = `
+.emotion-0 {
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1480px) {
+  .emotion-0 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .emotion-0 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+<div
+  class="emotion-0"
+  data-testid="container"
+>
+  Unofficial Fanpage of Taylor Swift
+</div>
+`;
+
+exports[`ContentContainer renders correctly when noSidebar flag is passed 1`] = `
+.emotion-0 {
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 1000px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1480px) {
+  .emotion-0 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .emotion-0 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+<div
+  class="emotion-0"
+  role="main"
+>
+  Unofficial Fanpage of Taylor Swift
+</div>
+`;
