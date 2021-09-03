@@ -1,6 +1,6 @@
 describe('Button', () => {
   it('renders as a basic button by default', () => {
-    cy.loadStory('basic-button');
+    cy.loadStory('button-basic');
     cy.injectAxe();
 
     cy.get('button').should('have.length', 1);
@@ -8,7 +8,7 @@ describe('Button', () => {
   });
 
   it('renders proper focus state', () => {
-    cy.loadStory('basic-button');
+    cy.loadStory('button-basic');
     cy.injectAxe();
 
     cy.get('button').focus();
