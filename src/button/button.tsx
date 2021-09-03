@@ -94,6 +94,6 @@ function ButtonBase<T extends React.ElementType = 'button'>(
   );
 }
 
-const Button = forwardRef(ButtonBase) as ButtonComponent;
+const Button: ButtonComponent = forwardRef(ButtonBase);
 
 export default Button;
