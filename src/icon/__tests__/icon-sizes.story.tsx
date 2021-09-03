@@ -5,6 +5,7 @@ import * as icons from '../index';
 
 const wrapperStyle = css`
   width: 400px;
+  padding: ${tokens.spacing.medium};
 `;
 
 const iconRowStyle = css`
