@@ -7,7 +7,7 @@ function Pause({ size, ...restProps }: PauseProps) {
     <Icon viewBox="0 0 18 18" size={size} {...restProps}>
       <path
         fill="currentColor"
-        d="M5.5 2a1 1 0 0 1 1 1v12a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm7 0a1 1 0 0 1 1 1v12a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1z"
+        d="M5.5 2a1 1 0 0 1 1 1v12a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1Zm7 0a1 1 0 0 1 1 1v12a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1Z"
       />
     </Icon>
   );

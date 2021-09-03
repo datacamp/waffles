@@ -10,7 +10,7 @@ function ExerciseInverted({ size, ...restProps }: ExerciseInvertedProps) {
     <Icon viewBox="0 0 18 18" size={size} {...restProps}>
       <path
         fill="currentColor"
-        d="M4 0h10a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3zm2 6a1 1 0 1 0 0 2h6a1 1 0 0 0 0-2H6zm0 4a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2H6z"
+        d="M4 0h10a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3Zm2 6a1 1 0 1 0 0 2h6a1 1 0 0 0 0-2H6Zm0 4a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2H6Z"
       />
     </Icon>
   );

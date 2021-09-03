@@ -8,7 +8,7 @@ function Desktop({ size, ...restProps }: DesktopProps) {
       <path
         fill="currentColor"
         fillRule="evenodd"
-        d="M12 14a1 1 0 0 1 0 2H6a1 1 0 0 1 0-2h6zm5-12a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16zm-1 2H2v7h14V4z"
+        d="M12 14a1 1 0 0 1 0 2H6a1 1 0 0 1 0-2h6Zm5-12a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16Zm-1 2H2v7h14V4Z"
       />
     </Icon>
   );

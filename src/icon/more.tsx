@@ -7,7 +7,7 @@ function More({ size, ...restProps }: MoreProps) {
     <Icon viewBox="0 0 18 18" size={size} {...restProps}>
       <path
         fill="currentColor"
-        d="M2 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+        d="M2 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"
       />
     </Icon>
   );
