@@ -1,17 +1,8 @@
-/* eslint-disable react/display-name */
 import React, { forwardRef } from 'react';
 import { useFocusRing } from '@react-aria/focus';
 
+import type { PolymorphicRef, PolymorphicComponentProps } from '../utils';
 import { buttonStyle, innerContentStyle } from './styles';
-
-type ElementRef<T extends React.ElementType> =
-  React.ComponentPropsWithRef<T>['ref'];
-
-type MergeElementPropsWithRef<
-  T extends React.ElementType,
-  P extends Record<string, unknown>,
-> = Omit<React.ComponentPropsWithoutRef<T>, keyof P> &
-  P & { ref?: ElementRef<T> };
 
 type ButtonBaseProps = {
   variant?: 'primary' | 'secondary' | 'plain' | 'destructive';
@@ -36,9 +27,8 @@ type ButtonNoIconProps = {
   'aria-label'?: string;
 } & ButtonBaseProps;
 
-type ButtonProps<T extends React.ElementType = 'button'> = {
-  as?: T;
-} & MergeElementPropsWithRef<T, ButtonNoIconProps | ButtonIconOnlyProps>;
+type ButtonProps<T extends React.ElementType = 'button'> =
+  PolymorphicComponentProps<T, ButtonNoIconProps | ButtonIconOnlyProps>;
 
 type ButtonComponent = <T extends React.ElementType = 'button'>(
   props: ButtonProps<T>,
@@ -57,7 +47,7 @@ function ButtonBase<T extends React.ElementType = 'button'>(
     children,
     ...restProps
   }: ButtonProps<T>,
-  ref?: ElementRef<T>,
+  ref?: PolymorphicRef<T>,
 ) {
   const Element = as || 'button';
 
