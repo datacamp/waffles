@@ -5,7 +5,7 @@ import { contentContainerStyle } from './styles';
 type ContentContainerProps = {
   children: React.ReactNode;
   noSidebar?: boolean;
-} & React.ComponentPropsWithoutRef<'div'>;
+} & React.HTMLAttributes<HTMLDivElement>;
 
 function ContentContainer({
   children,
