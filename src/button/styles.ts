@@ -20,7 +20,7 @@ const sizeMap = {
     sizing: tokens.sizing.large,
     spacing: tokens.spacing.medium,
   },
-};
+} as const;
 
 const regularVariantMap = {
   primary: {
