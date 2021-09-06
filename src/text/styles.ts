@@ -4,6 +4,7 @@ import { tokens } from '../tokens';
 
 export function textStyle() {
   return css`
+    color: ${tokens.colors.navy};
     font-family: ${tokens.fontFamilies.sansSerif};
     font-size: ${tokens.fontSizes.medium};
     font-weight: ${tokens.fontWeights.regular};
