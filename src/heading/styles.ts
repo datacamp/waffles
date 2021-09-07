@@ -35,6 +35,7 @@ export function headingStyle({ size }: SizeOptions) {
     font-weight: ${tokens.fontWeights.bold};
     font-size: ${sizeMap[size].fontSize};
     margin-bottom: ${tokens.spacing.small};
+    line-height: ${tokens.lineHeights.default};
   `;
 }
 
