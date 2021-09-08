@@ -33,8 +33,8 @@ function Story() {
           );
         })}
       </div>
+      {/* Inverted */}
       <div>
-        {/* Inverted */}
         {variants.map((variant) => {
           return (
             <div
