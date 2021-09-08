@@ -3,6 +3,8 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import Paragraph from './paragraph';
 
+// Mapping between paragraph size and text color
+
 const regularVariantMap = {
   primary: {
     color: tokens.colors.navy,
@@ -20,6 +22,8 @@ const invertedVariantMap = {
     color: tokens.colors.navySubtleTextOnDark,
   },
 };
+
+// Generate paragraph style based on provided variant
 
 type ParagraphStyleOptions = {
   variant: NonNullable<React.ComponentProps<typeof Paragraph>['variant']>;
