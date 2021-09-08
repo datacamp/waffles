@@ -30,4 +30,12 @@ describe('Link', () => {
     cy.findByText('Go to DataCamp website').should('exist');
     cy.a11yCheck();
   });
+
+  it('render regular and inverted with various icons', () => {
+    cy.loadStory('link-with-icons');
+    cy.injectAxe();
+
+    cy.get('a').should('have.length', 9);
+    cy.a11yCheck();
+  });
 });
