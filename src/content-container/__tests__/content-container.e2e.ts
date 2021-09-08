@@ -12,10 +12,7 @@ describe('ContentContainer', () => {
       it(`renders correctly on ${size} screen device`, () => {
         cy.viewport(width, height);
         cy.loadStory('content-container-no-sidebar');
-        cy.injectAxe();
-
         cy.findAllByTestId('container').should('have.length', 1);
-        cy.a11yCheck();
       });
     });
   });
@@ -27,10 +24,7 @@ describe('ContentContainer', () => {
       it(`renders correctly on ${size} screen device`, () => {
         cy.viewport(width, height);
         cy.loadStory('content-container-short-content');
-        cy.injectAxe();
-
         cy.findAllByTestId('container').should('have.length', 1);
-        cy.a11yCheck();
       });
     });
   });
@@ -45,10 +39,7 @@ describe('ContentContainer', () => {
       it(`renders correctly on ${size} screen device`, () => {
         cy.viewport(width, height);
         cy.loadStory('content-container-with-sidebar');
-        cy.injectAxe();
-
         cy.findAllByTestId('container').should('have.length', 1);
-        cy.a11yCheck();
       });
     });
   });

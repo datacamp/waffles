@@ -23,4 +23,5 @@ Cypress.Commands.add('a11yCheck', () => {
 
 Cypress.Commands.add('loadStory', (storyName: string) => {
   cy.visit(`stories/${storyName}`);
+  cy.injectAxe();
 });
