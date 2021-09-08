@@ -7,6 +7,14 @@ describe('Button', () => {
     cy.a11yCheck();
   });
 
+  it('renders button with custom styles applied', () => {
+    cy.loadStory('button-styled');
+    cy.injectAxe();
+
+    cy.findByText('Button with Custom Styles');
+    cy.a11yCheck();
+  });
+
   it('renders proper focus state', () => {
     cy.loadStory('button-basic');
     cy.injectAxe();
