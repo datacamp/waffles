@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+.emotion-0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.5;
+  outline: 0;
+  border-radius: 4px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+  color: #0075AD;
+}
+
+.emotion-0:hover:not(:focus) {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<a
+  class="emotion-0"
+  href="https://taylor-swift-fanclub.com"
+>
+  <span
+    class="emotion-1"
+  >
+    Join Taylor Swift Fanclub
+  </span>
+</a>
+`;
+
+exports[` 2`] = `
+.emotion-0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.5;
+  outline: 0;
+  border-radius: 4px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+  color: #009BD8;
+}
+
+.emotion-0:hover:not(:focus) {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<a
+  class="emotion-0"
+  href="https://taylor-swift-fanclub.com"
+>
+  <span
+    class="emotion-1"
+  >
+    Join Taylor Swift Fanclub
+  </span>
+</a>
+`;
+
+exports[`Link renders snapshot of focused state 1`] = `
+.emotion-0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.5;
+  outline: 0;
+  border-radius: 4px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+  color: #0075AD;
+  box-shadow: 0 0 0 2px #009BD8;
+}
+
+.emotion-0:hover:not(:focus) {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<a
+  class="emotion-0"
+  href="https://datacamp.com"
+>
+  <span
+    class="emotion-1"
+  >
+    Test
+  </span>
+</a>
+`;
