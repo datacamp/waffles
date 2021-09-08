@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders snapshot of size large 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+<h3
+  class="emotion-0"
+>
+  Test
+</h3>
+`;
+
+exports[`Heading renders snapshot of size medium 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+<h4
+  class="emotion-0"
+>
+  Test
+</h4>
+`;
+
+exports[`Heading renders snapshot of size xlarge 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+<h2
+  class="emotion-0"
+>
+  Test
+</h2>
+`;
+
+exports[`Heading renders snapshot of size xxlarge 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+<h1
+  class="emotion-0"
+>
+  Test
+</h1>
+`;
