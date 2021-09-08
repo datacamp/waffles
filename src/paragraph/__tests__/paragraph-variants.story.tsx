@@ -5,6 +5,10 @@ import { Paragraph } from '../index';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};
+
+  &:not(:first-of-type) {
+    padding-top: 0;
+  }
 `;
 
 const variants = ['primary', 'secondary'] as const;
@@ -19,45 +23,34 @@ function Story() {
   return (
     <>
       {/* Regular */}
-      <div css={wrapperStyle}>
-        {variants.map((variant, index) => {
+      <div>
+        {variants.map((variant) => {
           return (
-            <>
-              <Paragraph key={`variant-${index}`} variant={variant}>
-                {testText1}
-              </Paragraph>
-              <Paragraph key={`variant-${index}`} variant={variant}>
-                {testText2}
-              </Paragraph>
-            </>
+            <div key={variant} css={wrapperStyle}>
+              <Paragraph variant={variant}>{testText1}</Paragraph>
+              <Paragraph variant={variant}>{testText2}</Paragraph>
+            </div>
           );
         })}
       </div>
-      {/* Inverted */}
-      <div
-        css={css`
-          ${wrapperStyle}
-          background-color: ${tokens.colors.navy};
-        `}
-      >
-        {variants.map((variant, index) => {
+      <div>
+        {/* Inverted */}
+        {variants.map((variant) => {
           return (
-            <>
-              <Paragraph
-                key={`inverted-variant-${index}`}
-                variant={variant}
-                inverted
-              >
+            <div
+              key={`inverted-${variant}`}
+              css={css`
+                ${wrapperStyle}
+                background-color: ${tokens.colors.navy};
+              `}
+            >
+              <Paragraph variant={variant} inverted>
                 {testText1}
               </Paragraph>
-              <Paragraph
-                key={`inverted-variant-${index}`}
-                variant={variant}
-                inverted
-              >
+              <Paragraph variant={variant} inverted>
                 {testText2}
               </Paragraph>
-            </>
+            </div>
           );
         })}
       </div>
