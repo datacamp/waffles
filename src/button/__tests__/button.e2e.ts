@@ -11,7 +11,7 @@ describe('Button', () => {
     cy.loadStory('button-styled');
     cy.injectAxe();
 
-    cy.findByText('Button with Custom Styles');
+    cy.findByText('Button with Custom Styles').should('exist');
     cy.a11yCheck();
   });
 

@@ -3,7 +3,7 @@ describe('Text', () => {
     cy.loadStory('text-basic');
     cy.injectAxe();
 
-    cy.findByText('Basic short text content');
+    cy.findByText('Basic short text content').should('exist');
     cy.a11yCheck();
   });
 

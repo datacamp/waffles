@@ -3,7 +3,7 @@ describe('Display', () => {
     cy.loadStory('display-basic');
     cy.injectAxe();
 
-    cy.findByText('Big and short non-semantic message');
+    cy.findByText('Big and short non-semantic message').should('exist');
     cy.a11yCheck();
   });
 
