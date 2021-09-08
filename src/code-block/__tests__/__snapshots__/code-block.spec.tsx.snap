@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Code renders snapshot of focused state 1`] = `
+.emotion-0 {
+  font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: 4px;
+  margin: 0 2px;
+  padding: 2px 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #05192D;
+  background-color: #EFEBE4;
+  padding: 8px;
+  margin: 0;
+  tab-size: 4;
+  white-space: pre;
+  overflow-x: auto;
+  outline: 0;
+  box-shadow: 0 0 0 2px #009BD8;
+}
+
+<pre
+  class="emotion-0"
+  data-testid="code-block-element"
+  tabindex="0"
+>
+  <code>
+    test
+  </code>
+</pre>
+`;
+
+exports[`Code renders snapshot of inverted size large 1`] = `
+.emotion-0 {
+  font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: 4px;
+  margin: 0 2px;
+  padding: 2px 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 8px;
+  margin: 0;
+  tab-size: 4;
+  white-space: pre;
+  overflow-x: auto;
+  outline: 0;
+}
+
+<pre
+  class="emotion-0"
+  tabindex="0"
+>
+  <code>
+    test
+  </code>
+</pre>
+`;
+
+exports[`Code renders snapshot of inverted size medium 1`] = `
+.emotion-0 {
+  font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: 4px;
+  margin: 0 2px;
+  padding: 2px 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 8px;
+  margin: 0;
+  tab-size: 4;
+  white-space: pre;
+  overflow-x: auto;
+  outline: 0;
+}
+
+<pre
+  class="emotion-0"
+  tabindex="0"
+>
+  <code>
+    test
+  </code>
+</pre>
+`;
+
+exports[`Code renders snapshot of size large 1`] = `
+.emotion-0 {
+  font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: 4px;
+  margin: 0 2px;
+  padding: 2px 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #05192D;
+  background-color: #EFEBE4;
+  padding: 8px;
+  margin: 0;
+  tab-size: 4;
+  white-space: pre;
+  overflow-x: auto;
+  outline: 0;
+}
+
+<pre
+  class="emotion-0"
+  tabindex="0"
+>
+  <code>
+    test
+  </code>
+</pre>
+`;
+
+exports[`Code renders snapshot of size medium 1`] = `
+.emotion-0 {
+  font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: 4px;
+  margin: 0 2px;
+  padding: 2px 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #05192D;
+  background-color: #EFEBE4;
+  padding: 8px;
+  margin: 0;
+  tab-size: 4;
+  white-space: pre;
+  overflow-x: auto;
+  outline: 0;
+}
+
+<pre
+  class="emotion-0"
+  tabindex="0"
+>
+  <code>
+    test
+  </code>
+</pre>
+`;
