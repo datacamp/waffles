@@ -33,5 +33,9 @@ export function paragraphStyle({ variant, inverted }: ParagraphStyleOptions) {
     line-height: ${tokens.lineHeights.relaxed};
     margin-bottom: ${tokens.spacing.small};
     color: ${variantMap[variant].color};
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   `;
 }
