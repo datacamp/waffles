@@ -19,7 +19,7 @@ function Story() {
       <div css={wrapperStyle}>
         {variants.map((variant) => {
           return (
-            <Button key={`${variant}`} variant={variant} fullWidth>
+            <Button key={variant} variant={variant} fullWidth>
               Full Width
             </Button>
           );
@@ -30,7 +30,7 @@ function Story() {
           return (
             <Button
               iconLeft={<AddCircle />}
-              key={`${variant}`}
+              key={variant}
               variant={variant}
               fullWidth
             >

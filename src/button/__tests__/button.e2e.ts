@@ -7,19 +7,19 @@ describe('Button', () => {
     cy.a11yCheck();
   });
 
-  it('renders with custom styles applied', () => {
-    cy.loadStory('button-styled');
-    cy.injectAxe();
-
-    cy.findByText('Button with Custom Styles').should('exist');
-    cy.a11yCheck();
-  });
-
   it('renders proper focus state', () => {
     cy.loadStory('button-basic');
     cy.injectAxe();
 
     cy.get('button').focus();
+    cy.a11yCheck();
+  });
+
+  it('renders with custom styles applied', () => {
+    cy.loadStory('button-styled');
+    cy.injectAxe();
+
+    cy.findByText('Button with Custom Styles').should('exist');
     cy.a11yCheck();
   });
 
