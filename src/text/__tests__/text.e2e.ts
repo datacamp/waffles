@@ -7,7 +7,7 @@ describe('Text', () => {
     cy.a11yCheck();
   });
 
-  it('renders text with custom styles applied', () => {
+  it('renders with custom styles applied', () => {
     cy.loadStory('text-styled');
     cy.injectAxe();
 

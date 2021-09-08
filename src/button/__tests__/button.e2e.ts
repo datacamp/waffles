@@ -7,7 +7,7 @@ describe('Button', () => {
     cy.a11yCheck();
   });
 
-  it('renders button with custom styles applied', () => {
+  it('renders with custom styles applied', () => {
     cy.loadStory('button-styled');
     cy.injectAxe();
 
