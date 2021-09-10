@@ -70,6 +70,8 @@ Object {
   "Feed": [Function],
   "Filter": [Function],
   "Flag": [Function],
+  "Flash": [Function],
+  "FlashInverted": [Function],
   "Flashcard": [Function],
   "Float": [Function],
   "Folder": [Function],
