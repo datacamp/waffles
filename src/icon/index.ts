@@ -66,6 +66,8 @@ export { default as FacebookBrand } from './facebook-brand';
 export { default as Feed } from './feed';
 export { default as Filter } from './filter';
 export { default as Flag } from './flag';
+export { default as FlashInverted } from './flash-inverted';
+export { default as Flash } from './flash';
 export { default as Flashcard } from './flashcard';
 export { default as Float } from './float';
 export { default as Folder } from './folder';
