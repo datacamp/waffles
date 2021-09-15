@@ -9,12 +9,9 @@ const linkBaseStyle = css`
   font-size: ${tokens.fontSizes.medium};
   line-height: ${tokens.lineHeights.relaxed};
   outline: 0;
-  border-radius: ${tokens.borderRadius.medium};
-  transition: box-shadow 125ms ease-out;
-
-  &:hover:not(:focus) {
-    text-decoration: underline;
-  }
+  border-bottom: ${tokens.borderWidth.thin} solid transparent;
+  border-radius: 0;
+  transition: all 125ms ease-out;
 `;
 
 type LinkStyleOptions = {
@@ -23,14 +20,24 @@ type LinkStyleOptions = {
 };
 
 export function linkStyle({ inverted, isFocusVisible }: LinkStyleOptions) {
+  const mainColor = inverted
+    ? tokens.colors.blueDark
+    : tokens.colors.blueDarkText;
+
   return css`
     ${linkBaseStyle}
-    color: ${inverted ? tokens.colors.blueDark : tokens.colors.blueDarkText};
+    color: ${mainColor};
 
-    ${isFocusVisible &&
-    css`
-      box-shadow: 0 0 0 2px ${tokens.colors.blueDark};
-    `}
+    ${isFocusVisible
+      ? css`
+          border-radius: ${tokens.borderRadius.medium};
+          box-shadow: 0 0 0 2px ${tokens.colors.blueDark};
+        `
+      : css`
+          &:hover {
+            border-bottom-color: ${mainColor};
+          }
+        `}
   `;
 }
 
