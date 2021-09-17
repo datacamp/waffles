@@ -91,6 +91,7 @@
     "react-dom": ">= 17.0.0 < 18"
   },
   "dependencies": {
-    "@react-aria/focus": "^3.5.0"
+    "@react-aria/focus": "^3.5.0",
+    "@react-aria/utils": "^3.9.0"
   }
 }

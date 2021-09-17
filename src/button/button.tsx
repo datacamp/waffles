@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import { useFocusRing } from '@react-aria/focus';
+import { mergeProps } from '@react-aria/utils';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../utils';
 import { buttonStyle, innerContentStyle } from './styles';
@@ -55,6 +56,7 @@ function ButtonBase<T extends React.ElementType = 'button'>(
 
   return (
     <Element
+      {...mergeProps(focusProps, restProps)}
       ref={ref}
       css={buttonStyle({
         size,
@@ -64,8 +66,6 @@ function ButtonBase<T extends React.ElementType = 'button'>(
         hasIcon: !!icon,
         isFocusVisible,
       })}
-      {...restProps}
-      {...focusProps}
     >
       {icon}
       {iconLeft}

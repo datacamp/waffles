@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import { useFocusRing } from '@react-aria/focus';
+import { mergeProps } from '@react-aria/utils';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../utils';
 import { linkStyle, innerContentStyle } from './styles';
@@ -37,13 +38,12 @@ function LinkBase<T extends React.ElementType = 'a'>(
 
   return (
     <Element
+      {...mergeProps(focusProps, restProps)}
       ref={ref}
       css={linkStyle({
         inverted,
         isFocusVisible,
       })}
-      {...restProps}
-      {...focusProps}
     >
       {iconLeft}
       {
