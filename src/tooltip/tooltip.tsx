@@ -1,6 +1,5 @@
 import React, {
   useRef,
-  useEffect,
   Children,
   cloneElement,
   isValidElement,
@@ -11,6 +10,7 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { Text } from '../text';
 import { Portal } from '../portal';
+import useElementMeasurements from './useElementMeasurements';
 
 const tooltipStyle = css`
   background-color: ${tokens.colors.navy};
@@ -30,28 +30,8 @@ type Tooltip = {
 function Tooltip({ children, content }: Tooltip) {
   const [isVisible, setIsVisible] = useState(false);
   const triggerRef = useRef<HTMLElement>(null);
-  const trigger = Children.toArray(children)[0] as React.ReactElement;
-  const [triggerViewportMeasurments, setTriggerViewportMeasurments] =
-    useState<DOMRect | null>(null);
-
-  useEffect(() => {
-    function viewportMeasurments() {
-      if (!triggerRef.current) {
-        return;
-      }
-      setTriggerViewportMeasurments(triggerRef.current.getBoundingClientRect());
-    }
-
-    viewportMeasurments();
-
-    window.addEventListener('scroll', viewportMeasurments);
-    window.addEventListener('resize', viewportMeasurments);
-
-    return () => {
-      window.removeEventListener('scroll', viewportMeasurments);
-      window.removeEventListener('resize', viewportMeasurments);
-    };
-  }, []);
+  const trigger = Children.toArray(children)[0] as React.ReactElement; // It's safe to get single trigger component, because only 1 child is allowed
+  const triggerMeasurements = useElementMeasurements(triggerRef);
 
   function handleMouseEnter() {
     if (trigger.props.onMouseEnter) {
@@ -100,12 +80,12 @@ function Tooltip({ children, content }: Tooltip) {
               as="div"
               css={css`
                 ${tooltipStyle}
-                ${triggerViewportMeasurments &&
+                ${triggerMeasurements &&
                 css`
-                  left: ${(triggerViewportMeasurments.left +
-                    triggerViewportMeasurments.right) /
+                  left: ${(triggerMeasurements.left +
+                    triggerMeasurements.right) /
                   2}px;
-                  top: ${triggerViewportMeasurments.bottom}px;
+                  top: ${triggerMeasurements.bottom}px;
                   transform: translate(-50%, 0);
                 `};
               `}
