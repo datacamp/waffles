@@ -5,29 +5,33 @@ import React, {
   isValidElement,
   useState,
 } from 'react';
-import { css } from '@emotion/react';
 
-import { tokens } from '../tokens';
 import { Text } from '../text';
 import { Portal } from '../portal';
 import useElementMeasurements from './useElementMeasurements';
-
-const tooltipStyle = css`
-  background-color: ${tokens.colors.navy};
-  color: ${tokens.colors.white};
-  padding: ${tokens.spacing.small};
-  border-radius: ${tokens.borderRadius.medium};
-  position: absolute;
-  top: 0;
-  left: 0;
-`;
+import { tooltipStyle } from './styles';
 
 type Tooltip = {
   children: JSX.Element; // Allow only single child to be passed
   content: React.ReactNode;
+  placement?:
+    | 'bottom'
+    | 'top'
+    | 'right'
+    | 'left'
+    | 'bottomLeft'
+    | 'bottomRight'
+    | 'topLeft'
+    | 'topRight';
+  offset?: number;
 };
 
-function Tooltip({ children, content }: Tooltip) {
+function Tooltip({
+  children,
+  content,
+  placement = 'bottom',
+  offset = 8,
+}: Tooltip) {
   const [isVisible, setIsVisible] = useState(false);
   const triggerRef = useRef<HTMLElement>(null);
   const trigger = Children.toArray(children)[0] as React.ReactElement; // It's safe to get single trigger component, because only 1 child is allowed
@@ -78,17 +82,10 @@ function Tooltip({ children, content }: Tooltip) {
             <Text
               role="tooltip"
               as="div"
-              css={css`
-                ${tooltipStyle}
-                ${triggerMeasurements &&
-                css`
-                  left: ${(triggerMeasurements.left +
-                    triggerMeasurements.right) /
-                  2}px;
-                  top: ${triggerMeasurements.bottom}px;
-                  transform: translate(-50%, 0);
-                `};
-              `}
+              css={
+                triggerMeasurements &&
+                tooltipStyle({ triggerMeasurements, placement, offset })
+              }
             >
               {content}
             </Text>
