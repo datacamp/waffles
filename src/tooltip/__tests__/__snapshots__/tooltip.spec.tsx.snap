@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip renders snapshot of bottom placement 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  left: 0px;
+  top: calc(0px + 8px);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  background-color: #05192D;
+  color: #FFFFFF;
+}
+
+<div
+  class="emotion-0"
+  id="tooltip-123abC"
+  role="tooltip"
+>
+  Tooltip
+</div>
+`;
+
+exports[`Tooltip renders snapshot of bottomLeft placement 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  left: 0px;
+  top: calc(0px + 8px);
+  background-color: #05192D;
+  color: #FFFFFF;
+}
+
+<div
+  class="emotion-0"
+  id="tooltip-123abC"
+  role="tooltip"
+>
+  Tooltip
+</div>
+`;
+
+exports[`Tooltip renders snapshot of bottomRight placement 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  left: 0px;
+  top: calc(0px + 8px);
+  -webkit-transform: translate(-100%);
+  -moz-transform: translate(-100%);
+  -ms-transform: translate(-100%);
+  transform: translate(-100%);
+  background-color: #05192D;
+  color: #FFFFFF;
+}
+
+<div
+  class="emotion-0"
+  id="tooltip-123abC"
+  role="tooltip"
+>
+  Tooltip
+</div>
+`;
+
+exports[`Tooltip renders snapshot of inverted variant 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  left: 0px;
+  top: calc(0px + 8px);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  background-color: #FFFFFF;
+  color: #05192D;
+}
+
+<div
+  class="emotion-0"
+  id="tooltip-123abC"
+  role="tooltip"
+>
+  Tooltip
+</div>
+`;
+
+exports[`Tooltip renders snapshot of left placement 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  left: calc(0px - 8px);
+  top: 0px;
+  -webkit-transform: translate(-100%, -50%);
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+  background-color: #05192D;
+  color: #FFFFFF;
+}
+
+<div
+  class="emotion-0"
+  id="tooltip-123abC"
+  role="tooltip"
+>
+  Tooltip
+</div>
+`;
+
+exports[`Tooltip renders snapshot of right placement 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  left: calc(0px + 8px);
+  top: 0px;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  background-color: #05192D;
+  color: #FFFFFF;
+}
+
+<div
+  class="emotion-0"
+  id="tooltip-123abC"
+  role="tooltip"
+>
+  Tooltip
+</div>
+`;
+
+exports[`Tooltip renders snapshot of top placement 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  left: 0px;
+  top: calc(0px - 8px);
+  -webkit-transform: translate(-50%, -100%);
+  -moz-transform: translate(-50%, -100%);
+  -ms-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+  background-color: #05192D;
+  color: #FFFFFF;
+}
+
+<div
+  class="emotion-0"
+  id="tooltip-123abC"
+  role="tooltip"
+>
+  Tooltip
+</div>
+`;
+
+exports[`Tooltip renders snapshot of topLeft placement 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  left: 0px;
+  top: calc(0px - 8px);
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  background-color: #05192D;
+  color: #FFFFFF;
+}
+
+<div
+  class="emotion-0"
+  id="tooltip-123abC"
+  role="tooltip"
+>
+  Tooltip
+</div>
+`;
+
+exports[`Tooltip renders snapshot of topRight placement 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  left: 0px;
+  top: calc(0px - 8px);
+  -webkit-transform: translate(-100%, -100%);
+  -moz-transform: translate(-100%, -100%);
+  -ms-transform: translate(-100%, -100%);
+  transform: translate(-100%, -100%);
+  background-color: #05192D;
+  color: #FFFFFF;
+}
+
+<div
+  class="emotion-0"
+  id="tooltip-123abC"
+  role="tooltip"
+>
+  Tooltip
+</div>
+`;

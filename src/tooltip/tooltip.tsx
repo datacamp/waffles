@@ -54,10 +54,11 @@ function Tooltip({
   }, []);
 
   function handleMouseEnter() {
+    if (trigger.props.onMouseEnter) {
+      trigger.props.onMouseEnter();
+    }
+
     enterTimer.current = setTimeout(() => {
-      if (trigger.props.onMouseEnter) {
-        trigger.props.onMouseEnter();
-      }
       setIsVisible(true);
     }, REST_TIMER);
   }
@@ -72,10 +73,11 @@ function Tooltip({
   }
 
   function handleFocus() {
+    if (trigger.props.onFocus) {
+      trigger.props.onFocus();
+    }
+
     enterTimer.current = setTimeout(() => {
-      if (trigger.props.onFocus) {
-        trigger.props.onFocus();
-      }
       setIsVisible(true);
     }, REST_TIMER);
   }
