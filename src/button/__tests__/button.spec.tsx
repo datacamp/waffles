@@ -51,6 +51,18 @@ describe('Button', () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
+  it('handles focus event correctly', () => {
+    const handleFocus = jest.fn();
+    const { getByText } = render(
+      <Button onFocus={handleFocus}>Follow Taylor Swift</Button>,
+    );
+
+    const button = getByText('Follow Taylor Swift');
+    fireEvent.focus(button);
+
+    expect(handleFocus).toHaveBeenCalledTimes(1);
+  });
+
   it('sets the type on the button', () => {
     const { container } = render(<Button type="submit">Submit</Button>);
 

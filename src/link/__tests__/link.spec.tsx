@@ -55,6 +55,20 @@ describe('Link', () => {
     expect(link).toBeInTheDocument();
   });
 
+  it('handles focus event correctly', () => {
+    const handleFocus = jest.fn();
+    const { getByText } = render(
+      <Link onFocus={handleFocus} href="https://taylor-swift-fanclub.com">
+        Join Taylor Swift Fanclub
+      </Link>,
+    );
+
+    const link = getByText('Join Taylor Swift Fanclub');
+    fireEvent.focus(link);
+
+    expect(handleFocus).toHaveBeenCalledTimes(1);
+  });
+
   it('renders left icon', () => {
     const { container, getByText } = render(
       <Link iconLeft={<AddCircle />}>Go to Fanpage</Link>,

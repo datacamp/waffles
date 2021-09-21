@@ -120,6 +120,7 @@ Object {
     "dropdown": 7000,
     "modal": 9000,
     "overlay": 8000,
+    "popup": 5000,
     "sticky": 100,
     "toast": 10000,
   },
