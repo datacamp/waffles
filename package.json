@@ -92,6 +92,7 @@
   },
   "dependencies": {
     "@react-aria/focus": "^3.5.0",
-    "@react-aria/utils": "^3.9.0"
+    "@react-aria/utils": "^3.9.0",
+    "nanoid": "^3.1.25"
   }
 }

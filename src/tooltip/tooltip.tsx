@@ -9,8 +9,9 @@ import React, {
 import { tokens } from '../tokens';
 import { Text } from '../text';
 import { Portal } from '../portal';
-import useElementMeasurements from './useElementMeasurements';
 import { tooltipStyle } from './styles';
+import useElementMeasurements from './useElementMeasurements';
+import useId from './useId';
 
 type Tooltip = {
   children: JSX.Element; // Allow only single child to be passed
@@ -34,6 +35,7 @@ function Tooltip({
   offset = tokens.spacing.small,
 }: Tooltip) {
   const [isVisible, setIsVisible] = useState(false);
+  const tooltipId = useId('tooltip');
   const triggerRef = useRef<HTMLElement>(null);
   const trigger = Children.toArray(children)[0] as React.ReactElement; // It's safe to get single trigger component, because only 1 child is allowed
   const triggerMeasurements = useElementMeasurements(triggerRef);
@@ -73,6 +75,7 @@ function Tooltip({
       onMouseLeave: handleMouseLeave,
       onFocus: handleFocus,
       onBlur: handleBlur,
+      ...(isVisible && { 'aria-describedby': tooltipId }),
     });
 
     return (
@@ -81,6 +84,7 @@ function Tooltip({
         {isVisible && (
           <Portal>
             <Text
+              id={tooltipId}
               role="tooltip"
               as="div"
               css={
