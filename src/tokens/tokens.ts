@@ -83,6 +83,7 @@ const tokens = {
   zIndex: {
     default: 1,
     sticky: 100,
+    popup: 5000,
     dropdown: 7000,
     overlay: 8000,
     modal: 9000,
