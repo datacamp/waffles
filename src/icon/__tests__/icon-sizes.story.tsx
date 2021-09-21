@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../../tokens';
+import { Text } from '../../text';
 import * as icons from '../index';
 
 const wrapperStyle = css`
@@ -13,13 +14,11 @@ const iconRowStyle = css`
   align-items: center;
   color: ${tokens.colors.navy};
   gap: ${tokens.spacing.medium};
+  height: ${tokens.sizing.small};
 `;
 
 const labelStyle = css`
   width: 200px;
-  font-family: ${tokens.fontFamilies.sansSerif};
-  font-size: ${tokens.fontSizes.medium};
-  line-height: ${tokens.lineHeights.relaxed};
 `;
 
 const sizes = ['medium', 'small', 'xsmall'] as const;
@@ -32,7 +31,7 @@ function Story() {
 
         return (
           <div data-testid="icon-row" css={iconRowStyle} key={name}>
-            <span css={labelStyle}>{name}</span>
+            <Text css={labelStyle}>{name}</Text>
             {sizes.map((size) => {
               return <Icon key={`${name}-${size}`} size={size} />;
             })}
