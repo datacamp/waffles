@@ -4,8 +4,9 @@ import { tokens } from '../tokens';
 import Tooltip from './tooltip';
 
 const tooltipBaseStyle = css`
-  padding: ${tokens.spacing.small};
+  padding: ${tokens.spacing.small} 12px;
   border-radius: ${tokens.borderRadius.medium};
+  line-height: ${tokens.lineHeights.default};
   max-width: 300px;
   position: absolute;
   top: 0;

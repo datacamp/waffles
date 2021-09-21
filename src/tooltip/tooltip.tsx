@@ -30,7 +30,7 @@ type Tooltip = {
     | 'topRight';
   offset?: string;
   inverted?: boolean;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
 function Tooltip({
   children,
@@ -38,6 +38,7 @@ function Tooltip({
   placement = 'bottom',
   offset = tokens.spacing.small,
   inverted = false,
+  ...restProps
 }: Tooltip) {
   const [isVisible, setIsVisible] = useState(false);
   const tooltipId = useId('tooltip');
@@ -110,6 +111,7 @@ function Tooltip({
               id={tooltipId}
               role="tooltip"
               as="div"
+              {...restProps}
               css={
                 triggerMeasurements &&
                 tooltipStyle({
