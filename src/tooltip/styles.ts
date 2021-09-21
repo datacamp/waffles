@@ -4,8 +4,6 @@ import { tokens } from '../tokens';
 import Tooltip from './tooltip';
 
 const tooltipBaseStyle = css`
-  background-color: ${tokens.colors.navy};
-  color: ${tokens.colors.white};
   padding: ${tokens.spacing.small};
   border-radius: ${tokens.borderRadius.medium};
   max-width: 300px;
@@ -21,6 +19,7 @@ type TooltipStyleOptions = {
   triggerMeasurements: DOMRect;
   placement: Placement;
   offset: string;
+  inverted: boolean;
 };
 
 type PositionMap = {
@@ -31,6 +30,7 @@ export function tooltipStyle({
   triggerMeasurements,
   placement,
   offset,
+  inverted,
 }: TooltipStyleOptions) {
   const { left, right, top, bottom, width, height } = triggerMeasurements;
 
@@ -79,5 +79,7 @@ export function tooltipStyle({
   return css`
     ${tooltipBaseStyle}
     ${positionMap[placement]}
+    background-color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+    color: ${inverted ? tokens.colors.navy : tokens.colors.white};
   `;
 }

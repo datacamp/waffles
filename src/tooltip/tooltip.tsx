@@ -29,6 +29,7 @@ type Tooltip = {
     | 'topLeft'
     | 'topRight';
   offset?: string;
+  inverted?: boolean;
 };
 
 function Tooltip({
@@ -36,6 +37,7 @@ function Tooltip({
   content,
   placement = 'bottom',
   offset = tokens.spacing.small,
+  inverted = false,
 }: Tooltip) {
   const [isVisible, setIsVisible] = useState(false);
   const tooltipId = useId('tooltip');
@@ -108,7 +110,12 @@ function Tooltip({
               as="div"
               css={
                 triggerMeasurements &&
-                tooltipStyle({ triggerMeasurements, placement, offset })
+                tooltipStyle({
+                  triggerMeasurements,
+                  placement,
+                  offset,
+                  inverted,
+                })
               }
             >
               {content}
