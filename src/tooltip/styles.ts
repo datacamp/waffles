@@ -8,9 +8,11 @@ const tooltipBaseStyle = css`
   color: ${tokens.colors.white};
   padding: ${tokens.spacing.small};
   border-radius: ${tokens.borderRadius.medium};
+  max-width: 300px;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: ${tokens.zIndex.popup};
 `;
 
 type Placement = NonNullable<React.ComponentProps<typeof Tooltip>['placement']>;

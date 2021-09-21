@@ -4,6 +4,7 @@ import React, {
   cloneElement,
   isValidElement,
   useState,
+  useEffect,
 } from 'react';
 
 import { tokens } from '../tokens';
@@ -12,6 +13,8 @@ import { Portal } from '../portal';
 import { tooltipStyle } from './styles';
 import useElementMeasurements from './useElementMeasurements';
 import useId from './useId';
+
+const REST_TIMER = 125;
 
 type Tooltip = {
   children: JSX.Element; // Allow only single child to be passed
@@ -40,14 +43,26 @@ function Tooltip({
   const trigger = Children.toArray(children)[0] as React.ReactElement; // It's safe to get single trigger component, because only 1 child is allowed
   const triggerMeasurements = useElementMeasurements(triggerRef);
 
+  const enterTimer = useRef<ReturnType<typeof setTimeout>>();
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(Number(enterTimer.current));
+    };
+  }, []);
+
   function handleMouseEnter() {
-    if (trigger.props.onMouseEnter) {
-      trigger.props.onMouseEnter();
-    }
-    setIsVisible(true);
+    enterTimer.current = setTimeout(() => {
+      if (trigger.props.onMouseEnter) {
+        trigger.props.onMouseEnter();
+      }
+      setIsVisible(true);
+    }, REST_TIMER);
   }
 
   function handleMouseLeave() {
+    clearTimeout(Number(enterTimer.current));
+
     if (trigger.props.onMouseLeave) {
       trigger.props.onMouseLeave();
     }
@@ -55,13 +70,17 @@ function Tooltip({
   }
 
   function handleFocus() {
-    if (trigger.props.onFocus) {
-      trigger.props.onFocus();
-    }
-    setIsVisible(true);
+    enterTimer.current = setTimeout(() => {
+      if (trigger.props.onFocus) {
+        trigger.props.onFocus();
+      }
+      setIsVisible(true);
+    }, REST_TIMER);
   }
 
   function handleBlur() {
+    clearTimeout(Number(enterTimer.current));
+
     if (trigger.props.onBlur) {
       trigger.props.onBlur();
     }
