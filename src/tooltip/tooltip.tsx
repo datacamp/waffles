@@ -6,6 +6,7 @@ import React, {
   useState,
 } from 'react';
 
+import { tokens } from '../tokens';
 import { Text } from '../text';
 import { Portal } from '../portal';
 import useElementMeasurements from './useElementMeasurements';
@@ -23,14 +24,14 @@ type Tooltip = {
     | 'bottomRight'
     | 'topLeft'
     | 'topRight';
-  offset?: number;
+  offset?: string;
 };
 
 function Tooltip({
   children,
   content,
   placement = 'bottom',
-  offset = 8,
+  offset = tokens.spacing.small,
 }: Tooltip) {
   const [isVisible, setIsVisible] = useState(false);
   const triggerRef = useRef<HTMLElement>(null);

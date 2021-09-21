@@ -18,7 +18,7 @@ type Placement = NonNullable<React.ComponentProps<typeof Tooltip>['placement']>;
 type TooltipStyleOptions = {
   triggerMeasurements: DOMRect;
   placement: Placement;
-  offset: number;
+  offset: string;
 };
 
 type PositionMap = {
@@ -35,41 +35,41 @@ export function tooltipStyle({
   const positionMap: PositionMap = {
     bottom: css`
       left: ${(left + right) / 2}px;
-      top: ${bottom + offset}px;
+      top: calc(${bottom}px + ${offset});
       transform: translate(-50%, 0);
     `,
     bottomLeft: css`
       left: ${left}px;
-      top: ${bottom + offset}px;
+      top: calc(${bottom}px + ${offset});
     `,
     bottomRight: css`
       left: ${left + width}px;
-      top: ${bottom + offset}px;
+      top: calc(${bottom}px + ${offset});
       transform: translate(-100%);
     `,
     left: css`
-      left: ${left - offset}px;
+      left: calc(${left}px - ${offset});
       top: ${top + height / 2}px;
       transform: translate(-100%, -50%);
     `,
     right: css`
-      left: ${right + offset}px;
+      left: calc(${right}px + ${offset});
       top: ${top + height / 2}px;
       transform: translate(0, -50%);
     `,
     top: css`
       left: ${(left + right) / 2}px;
-      top: ${top - offset}px;
+      top: calc(${top}px - ${offset});
       transform: translate(-50%, -100%);
     `,
     topLeft: css`
       left: ${left}px;
-      top: ${top - offset}px;
+      top: calc(${top}px - ${offset});
       transform: translate(0, -100%);
     `,
     topRight: css`
       left: ${left + width}px;
-      top: ${top - offset}px;
+      top: calc(${top}px - ${offset});
       transform: translate(-100%, -100%);
     `,
   };
