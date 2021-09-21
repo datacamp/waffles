@@ -92,6 +92,24 @@ describe('Tooltip', () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
+  it('sets the data attribute on the tooltip', async () => {
+    const { getByText, getByTestId } = render(
+      <Tooltip content="Follow Taylor Swift" data-testid="test-tooltip">
+        <button>Show Swift Tooltip</button>
+      </Tooltip>,
+    );
+
+    const button = getByText('Show Swift Tooltip');
+    fireEvent.mouseEnter(button);
+
+    let tooltip;
+    await waitFor(() => {
+      tooltip = getByTestId('test-tooltip');
+    });
+
+    expect(tooltip).toBeInTheDocument();
+  });
+
   it('focusing trigger is handled properly', () => {
     const handleFocus = jest.fn();
     const { getByText } = render(

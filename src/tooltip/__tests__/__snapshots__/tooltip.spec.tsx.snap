@@ -9,8 +9,9 @@ exports[`Tooltip renders snapshot of bottom placement 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: 4px;
+  line-height: 1.25;
   max-width: 300px;
   position: absolute;
   top: 0;
@@ -44,8 +45,9 @@ exports[`Tooltip renders snapshot of bottomLeft placement 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: 4px;
+  line-height: 1.25;
   max-width: 300px;
   position: absolute;
   top: 0;
@@ -75,8 +77,9 @@ exports[`Tooltip renders snapshot of bottomRight placement 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: 4px;
+  line-height: 1.25;
   max-width: 300px;
   position: absolute;
   top: 0;
@@ -110,8 +113,9 @@ exports[`Tooltip renders snapshot of inverted variant 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: 4px;
+  line-height: 1.25;
   max-width: 300px;
   position: absolute;
   top: 0;
@@ -145,8 +149,9 @@ exports[`Tooltip renders snapshot of left placement 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: 4px;
+  line-height: 1.25;
   max-width: 300px;
   position: absolute;
   top: 0;
@@ -180,8 +185,9 @@ exports[`Tooltip renders snapshot of right placement 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: 4px;
+  line-height: 1.25;
   max-width: 300px;
   position: absolute;
   top: 0;
@@ -215,8 +221,9 @@ exports[`Tooltip renders snapshot of top placement 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: 4px;
+  line-height: 1.25;
   max-width: 300px;
   position: absolute;
   top: 0;
@@ -250,8 +257,9 @@ exports[`Tooltip renders snapshot of topLeft placement 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: 4px;
+  line-height: 1.25;
   max-width: 300px;
   position: absolute;
   top: 0;
@@ -285,8 +293,9 @@ exports[`Tooltip renders snapshot of topRight placement 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: 4px;
+  line-height: 1.25;
   max-width: 300px;
   position: absolute;
   top: 0;
