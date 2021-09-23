@@ -1,5 +1,10 @@
 @import url('sanitize.css');
 
+::selection {
+  background: rgba(151, 77, 255, 0.4);
+  color: inherit;
+}
+
 @font-face {
   font-family: 'Studio-Feixen-Sans';
   src: url('/fonts/StudioFeixenSansRegular-latin.woff2') format('woff2'),
