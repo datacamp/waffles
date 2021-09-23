@@ -6,13 +6,14 @@ import { Button } from '@datacamp/waffles/button';
 import { Text } from '@datacamp/waffles/text';
 import { GithubBrand } from '@datacamp/waffles/icon';
 import { version } from '../../package.json';
+import { HEADER_HEIGHT } from './constants';
 import Logo from './logo';
 
 const headerStyle = css`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 54px;
+  height: ${HEADER_HEIGHT};
   background-color: ${tokens.colors.white};
   box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.medium};
   padding-left: ${tokens.spacing.small};
