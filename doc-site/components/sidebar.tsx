@@ -4,15 +4,14 @@ import { tokens } from '@datacamp/waffles/tokens';
 
 import { Text } from '@datacamp/waffles/text';
 import { hexToRgba } from '@datacamp/waffles/utils';
-import { SIDEBAR_WIDTH, HEADER_HEIGHT } from './constants';
+import { SIDEBAR_WIDTH } from './constants';
 
 const sidebarStyle = css`
   display: grid;
   grid-template-rows: 1fr auto;
   width: ${SIDEBAR_WIDTH};
-  height: 100%;
+  min-width: ${SIDEBAR_WIDTH};
   background-color: ${tokens.colors.navy};
-  min-height: calc(100vh - ${HEADER_HEIGHT});
 `;
 
 const copyrightStyle = css`

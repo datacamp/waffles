@@ -1,7 +1,7 @@
 @import url('sanitize.css');
 
 ::selection {
-  background: rgba(151, 77, 255, 0.4);
+  background: rgba(151, 77, 255, 0.15);
   color: inherit;
 }
 

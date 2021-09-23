@@ -18,6 +18,8 @@ const headerStyle = css`
   box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.medium};
   padding-left: ${tokens.spacing.small};
   padding-right: ${tokens.spacing.small};
+  position: fixed;
+  z-index: ${tokens.zIndex.default};
 `;
 
 const logoStyle = css`
