@@ -1,5 +1,13 @@
 @import url('sanitize.css');
 
+body {
+  overflow-y: scroll;
+}
+
+svg {
+  width: 100%;
+}
+
 ::selection {
   background: rgba(151, 77, 255, 0.15);
   color: inherit;

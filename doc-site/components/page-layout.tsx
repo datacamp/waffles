@@ -10,7 +10,6 @@ const wrapperStyle = css`
   display: flex;
   padding-top: ${HEADER_HEIGHT};
   min-height: 100vh;
-  overflow: hidden;
 `;
 
 const mainStyle = css`

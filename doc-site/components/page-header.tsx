@@ -22,7 +22,7 @@ const headerStyle = css`
   z-index: ${tokens.zIndex.default};
 `;
 
-const logoStyle = css`
+const logoLinkStyle = css`
   width: 110px;
   padding-left: ${tokens.spacing.xsmall};
   padding-right: ${tokens.spacing.xsmall};
@@ -43,7 +43,7 @@ function PageHeader() {
           variant="plain"
           icon={<Logo />}
           aria-label="Waffles, DataCamp Design System"
-          css={logoStyle}
+          css={logoLinkStyle}
         />
       </Link>
       <Text css={versionStyle}>{`v${version}`}</Text>
