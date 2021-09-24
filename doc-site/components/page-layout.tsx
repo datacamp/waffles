@@ -5,6 +5,7 @@ import { ContentContainer } from '@datacamp/waffles/content-container';
 import { HEADER_HEIGHT } from './constants';
 import Header from './page-header';
 import Sidebar from './sidebar';
+import Navigation from './navigation';
 
 const wrapperStyle = css`
   display: flex;
@@ -27,7 +28,7 @@ function PageLayout({ children }: PageLayoutProps) {
       <Header />
       <div css={wrapperStyle}>
         <Sidebar>
-          <nav></nav>
+          <Navigation />
         </Sidebar>
         <main css={mainStyle}>
           <ContentContainer>{children}</ContentContainer>
