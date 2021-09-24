@@ -17,7 +17,6 @@ const sidebarStyle = css`
 const copyrightStyle = css`
   color: ${hexToRgba(tokens.colors.navySubtleTextOnDark, tokens.opacity.high)};
   font-size: ${tokens.fontSizes.small};
-  text-align: center;
   padding: ${tokens.spacing.medium};
   padding-top: ${tokens.spacing.large};
   user-select: none;
