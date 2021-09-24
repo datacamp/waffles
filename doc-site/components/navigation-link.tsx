@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useFocusRing } from '@react-aria/focus';
 import { css } from '@emotion/react';
+import { useRouter } from 'next/router';
 
 import { tokens } from '@datacamp/waffles/tokens';
 import { hexToRgba } from '@datacamp/waffles/utils';
@@ -40,6 +41,9 @@ type NavigationLinkProps = {
 } & React.HTMLProps<HTMLAnchorElement>;
 
 function NavigationLink({ href, children, ...restProps }: NavigationLinkProps) {
+  const { pathname } = useRouter();
+  const isActive = pathname === href;
+
   const { focusProps, isFocusVisible } = useFocusRing();
 
   return (
@@ -53,6 +57,10 @@ function NavigationLink({ href, children, ...restProps }: NavigationLinkProps) {
             ${isFocusVisible &&
             css`
               box-shadow: inset 0 0 0 2px ${tokens.colors.blueDark};
+            `}
+            ${isActive &&
+            css`
+              color: ${tokens.colors.white};
             `}
           `}
         >
