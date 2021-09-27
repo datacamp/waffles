@@ -9,15 +9,20 @@ exports[` 1`] = `
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
-  border-bottom: 1px solid transparent;
-  border-radius: 0;
-  -webkit-transition: all 125ms ease-out;
-  transition: all 125ms ease-out;
+  border-radius: 4px;
+  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
+  transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
   color: #0075AD;
 }
 
 .emotion-0:hover {
-  border-bottom-color: #0075AD;
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  box-shadow: 0 0 0 2px rgba(5, 25, 45, 0.1);
 }
 
 <a
@@ -41,15 +46,20 @@ exports[` 2`] = `
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
-  border-bottom: 1px solid transparent;
-  border-radius: 0;
-  -webkit-transition: all 125ms ease-out;
-  transition: all 125ms ease-out;
+  border-radius: 4px;
+  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
+  transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
   color: #009BD8;
 }
 
 .emotion-0:hover {
-  border-bottom-color: #009BD8;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
 }
 
 <a
@@ -73,13 +83,15 @@ exports[`Link renders snapshot of focused state 1`] = `
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
-  border-bottom: 1px solid transparent;
-  border-radius: 0;
-  -webkit-transition: all 125ms ease-out;
-  transition: all 125ms ease-out;
-  color: #0075AD;
   border-radius: 4px;
+  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
+  transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
+  color: #0075AD;
   box-shadow: 0 0 0 2px #009BD8;
+}
+
+.emotion-0:hover {
+  background-color: rgba(5, 25, 45, 0.1);
 }
 
 <a

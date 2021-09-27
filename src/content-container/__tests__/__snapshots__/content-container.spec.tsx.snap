@@ -2,8 +2,7 @@
 
 exports[`ContentContainer renders correctly 1`] = `
 .emotion-0 {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 16px;
   max-width: 1000px;
   overflow: hidden;
 }
@@ -18,8 +17,7 @@ exports[`ContentContainer renders correctly 1`] = `
 
 @media screen and (min-width: 820px) {
   .emotion-0 {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 32px;
   }
 }
 
@@ -33,8 +31,7 @@ exports[`ContentContainer renders correctly 1`] = `
 
 exports[`ContentContainer renders correctly when noSidebar flag is passed 1`] = `
 .emotion-0 {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 16px;
   max-width: 1000px;
   overflow: hidden;
   margin-left: auto;
@@ -51,8 +48,7 @@ exports[`ContentContainer renders correctly when noSidebar flag is passed 1`] = 
 
 @media screen and (min-width: 820px) {
   .emotion-0 {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 32px;
   }
 }
 

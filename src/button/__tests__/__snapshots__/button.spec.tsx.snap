@@ -150,7 +150,7 @@ exports[`Button renders snapshot of disabled medium variant plain 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.15);
+  background-color: rgba(5, 25, 45, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -237,7 +237,7 @@ exports[`Button renders snapshot of disabled medium variant primary 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #65FF8F;
+  background-color: #03da5d;
 }
 
 .emotion-0:active:not(:disabled) {
@@ -324,7 +324,7 @@ exports[`Button renders snapshot of disabled medium variant secondary 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.15);
+  background-color: rgba(5, 25, 45, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -411,7 +411,7 @@ exports[`Button renders snapshot of focused state 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #65FF8F;
+  background-color: #03da5d;
 }
 
 .emotion-0:active:not(:disabled) {
@@ -428,7 +428,7 @@ exports[`Button renders snapshot of focused state 1`] = `
 }
 
 .emotion-0:active:focus {
-  background-color: #65FF8F;
+  background-color: #03da5d;
 }
 
 <button
@@ -763,7 +763,7 @@ exports[`Button renders snapshot of inverted variant plain and size large 1`] = 
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -849,7 +849,7 @@ exports[`Button renders snapshot of inverted variant plain and size medium 1`] =
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -935,7 +935,7 @@ exports[`Button renders snapshot of inverted variant plain and size small 1`] = 
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -1021,7 +1021,7 @@ exports[`Button renders snapshot of inverted variant primary and size large 1`] 
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #65FF8F;
+  background-color: #03da5d;
 }
 
 .emotion-0:active:not(:disabled) {
@@ -1107,7 +1107,7 @@ exports[`Button renders snapshot of inverted variant primary and size medium 1`]
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #65FF8F;
+  background-color: #03da5d;
 }
 
 .emotion-0:active:not(:disabled) {
@@ -1193,7 +1193,7 @@ exports[`Button renders snapshot of inverted variant primary and size small 1`] 
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #65FF8F;
+  background-color: #03da5d;
 }
 
 .emotion-0:active:not(:disabled) {
@@ -1279,7 +1279,7 @@ exports[`Button renders snapshot of inverted variant secondary and size large 1`
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -1365,7 +1365,7 @@ exports[`Button renders snapshot of inverted variant secondary and size medium 1
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -1451,7 +1451,7 @@ exports[`Button renders snapshot of inverted variant secondary and size small 1`
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -1795,7 +1795,7 @@ exports[`Button renders snapshot of variant plain and size large 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.15);
+  background-color: rgba(5, 25, 45, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -1881,7 +1881,7 @@ exports[`Button renders snapshot of variant plain and size medium 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.15);
+  background-color: rgba(5, 25, 45, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -1967,7 +1967,7 @@ exports[`Button renders snapshot of variant plain and size small 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.15);
+  background-color: rgba(5, 25, 45, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -2053,7 +2053,7 @@ exports[`Button renders snapshot of variant primary and size large 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #65FF8F;
+  background-color: #03da5d;
 }
 
 .emotion-0:active:not(:disabled) {
@@ -2139,7 +2139,7 @@ exports[`Button renders snapshot of variant primary and size medium 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #65FF8F;
+  background-color: #03da5d;
 }
 
 .emotion-0:active:not(:disabled) {
@@ -2225,7 +2225,7 @@ exports[`Button renders snapshot of variant primary and size small 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #65FF8F;
+  background-color: #03da5d;
 }
 
 .emotion-0:active:not(:disabled) {
@@ -2311,7 +2311,7 @@ exports[`Button renders snapshot of variant secondary and size large 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.15);
+  background-color: rgba(5, 25, 45, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -2397,7 +2397,7 @@ exports[`Button renders snapshot of variant secondary and size medium 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.15);
+  background-color: rgba(5, 25, 45, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
@@ -2483,7 +2483,7 @@ exports[`Button renders snapshot of variant secondary and size small 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.15);
+  background-color: rgba(5, 25, 45, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {

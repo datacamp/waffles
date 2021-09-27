@@ -100,7 +100,7 @@ Object {
   },
   "opacity": Object {
     "high": 0.6,
-    "low": 0.15,
+    "low": 0.1,
     "medium": 0.4,
   },
   "sizing": Object {
