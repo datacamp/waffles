@@ -7,6 +7,8 @@ import Button from './button';
 
 // Mappings between button's sizes and variants, and design tokens
 
+const PRIMARY_HOVER_COLOR = '#03da5d';
+
 const sizeMap = {
   small: {
     sizing: tokens.sizing.small,
@@ -26,7 +28,7 @@ const regularVariantMap = {
   primary: {
     color: tokens.colors.navy,
     backgroundColor: tokens.colors.green,
-    hoverColor: tokens.colors.greenLight,
+    hoverColor: PRIMARY_HOVER_COLOR,
     borderColor: 'transparent',
   },
   secondary: {
