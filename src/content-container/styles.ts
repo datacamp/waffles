@@ -4,8 +4,7 @@ import { tokens } from '../tokens';
 import { mediaQuery } from '../media-query';
 
 const wrapperStyle = css`
-  padding-left: ${tokens.spacing.medium};
-  padding-right: ${tokens.spacing.medium};
+  padding: ${tokens.spacing.medium};
   max-width: 1000px;
   overflow: hidden;
 
@@ -16,8 +15,7 @@ const wrapperStyle = css`
   }
 
   ${mediaQuery.medium} {
-    padding-left: ${tokens.spacing.xlarge};
-    padding-right: ${tokens.spacing.xlarge};
+    padding: ${tokens.spacing.xlarge};
   }
 `;
 
