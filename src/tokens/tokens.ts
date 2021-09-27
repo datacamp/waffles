@@ -79,7 +79,7 @@ const tokens = {
   },
   letterSpacing: { tight: '-0.5px', default: '0px', relaxed: '1.5px' },
   lineHeights: { tight: 1, default: 1.25, relaxed: 1.5 },
-  opacity: { low: 0.15, medium: 0.4, high: 0.6 },
+  opacity: { low: 0.1, medium: 0.4, high: 0.6 },
   zIndex: {
     default: 1,
     sticky: 100,
