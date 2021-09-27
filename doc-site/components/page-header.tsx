@@ -5,7 +5,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Button } from '@datacamp/waffles/button';
 import { Text } from '@datacamp/waffles/text';
 import { GithubBrand } from '@datacamp/waffles/icon';
-import { version } from '../../package.json';
+import metadata from '../../package.json';
 import { HEADER_HEIGHT } from './constants';
 import Logo from './logo';
 
@@ -46,7 +46,7 @@ function PageHeader() {
           css={logoLinkStyle}
         />
       </Link>
-      <Text css={versionStyle}>{`v${version}`}</Text>
+      <Text css={versionStyle}>{`v${metadata.version}`}</Text>
       <Button
         as="a"
         variant="plain"
