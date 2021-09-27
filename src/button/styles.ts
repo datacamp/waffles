@@ -7,8 +7,8 @@ import Button from './button';
 
 // Mappings between button's sizes and variants, and design tokens
 
-const PRIMARY_HOVER_COLOR = '#03da5d';
-const DESTRUCTIVE_HOVER_COLOR = '#e64e04';
+const PRIMARY_HOVER_COLOR = '#03DA5D';
+const DESTRUCTIVE_HOVER_COLOR = '#E64E04';
 
 const sizeMap = {
   small: {
@@ -53,7 +53,10 @@ const regularVariantMap = {
 };
 
 const invertedVariantMap = {
-  ...regularVariantMap,
+  primary: {
+    ...regularVariantMap.primary,
+    hoverColor: tokens.colors.greenLight,
+  },
   secondary: {
     color: tokens.colors.white,
     backgroundColor: 'transparent',
@@ -65,6 +68,10 @@ const invertedVariantMap = {
     backgroundColor: 'transparent',
     hoverColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
     borderColor: 'transparent',
+  },
+  destructive: {
+    ...regularVariantMap.destructive,
+    hoverColor: tokens.colors.redLight,
   },
 };
 
