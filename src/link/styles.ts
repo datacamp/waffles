@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
+import { hexToRgba } from '../utils';
 
 const linkBaseStyle = css`
   text-decoration: none;
@@ -9,9 +10,8 @@ const linkBaseStyle = css`
   font-size: ${tokens.fontSizes.medium};
   line-height: ${tokens.lineHeights.relaxed};
   outline: 0;
-  border-bottom: ${tokens.borderWidth.thin} solid transparent;
-  border-radius: 0;
-  transition: all 125ms ease-out;
+  border-radius: ${tokens.borderRadius.medium};
+  transition: box-shadow 125ms ease-out, background-color 125ms ease-out;
 `;
 
 type LinkStyleOptions = {
@@ -24,18 +24,24 @@ export function linkStyle({ inverted, isFocusVisible }: LinkStyleOptions) {
     ? tokens.colors.blueDark
     : tokens.colors.blueDarkText;
 
+  const highlightColor = hexToRgba(
+    inverted ? tokens.colors.white : tokens.colors.navy,
+    tokens.opacity.low,
+  );
+
   return css`
     ${linkBaseStyle}
     color: ${mainColor};
 
     ${isFocusVisible
       ? css`
-          border-radius: ${tokens.borderRadius.medium};
           box-shadow: 0 0 0 2px ${tokens.colors.blueDark};
         `
       : css`
           &:hover {
-            border-bottom-color: ${mainColor};
+            text-decoration: underline;
+            background-color: ${highlightColor};
+            box-shadow: 0 0 0 2px ${highlightColor};
           }
         `}
   `;
