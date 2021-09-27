@@ -33,6 +33,10 @@ export function linkStyle({ inverted, isFocusVisible }: LinkStyleOptions) {
     ${linkBaseStyle}
     color: ${mainColor};
 
+    &:hover {
+      background-color: ${highlightColor};
+    }
+
     ${isFocusVisible
       ? css`
           box-shadow: 0 0 0 2px ${tokens.colors.blueDark};
@@ -40,7 +44,6 @@ export function linkStyle({ inverted, isFocusVisible }: LinkStyleOptions) {
       : css`
           &:hover {
             text-decoration: underline;
-            background-color: ${highlightColor};
             box-shadow: 0 0 0 2px ${highlightColor};
           }
         `}
