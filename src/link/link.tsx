@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import { useFocusRing } from '@react-aria/focus';
 import { mergeProps } from '@react-aria/utils';
 
-import type { PolymorphicRef, PolymorphicComponentProps } from '../utils';
+import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 import { linkStyle, innerContentStyle } from './styles';
 
 type LinkBaseProps = {

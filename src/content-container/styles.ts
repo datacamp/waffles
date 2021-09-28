@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
-import { mediaQuery } from '../media-query';
+import { mediaQuery } from '../helpers';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};

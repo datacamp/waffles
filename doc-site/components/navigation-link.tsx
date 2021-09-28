@@ -5,7 +5,7 @@ import { css } from '@emotion/react';
 import { useRouter } from 'next/router';
 
 import { tokens } from '@datacamp/waffles/tokens';
-import { hexToRgba } from '@datacamp/waffles/utils';
+import { hexToRgba } from '@datacamp/waffles/helpers';
 
 const linkStyle = css`
   display: flex;

@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import React from 'react';
 
 import { tokens } from '../tokens';
-import { hexToRgba } from '../utils';
+import { hexToRgba } from '../helpers';
 import Button from './button';
 
 // Mappings between button's sizes and variants, and design tokens

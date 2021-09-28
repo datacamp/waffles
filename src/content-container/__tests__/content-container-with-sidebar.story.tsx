@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../../tokens';
-import { hexToRgba } from '../../utils';
+import { hexToRgba } from '../../helpers';
 import { Paragraph } from '../../paragraph';
 import { Text } from '../../text';
 import { ContentContainer } from '../index';

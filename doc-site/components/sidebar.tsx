@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 
 import { Text } from '@datacamp/waffles/text';
-import { hexToRgba } from '@datacamp/waffles/utils';
+import { hexToRgba } from '@datacamp/waffles/helpers';
 import { SIDEBAR_WIDTH } from './constants';
 
 const sidebarStyle = css`
@@ -18,7 +18,7 @@ const copyrightStyle = css`
   color: ${hexToRgba(tokens.colors.navySubtleTextOnDark, tokens.opacity.high)};
   font-size: ${tokens.fontSizes.small};
   padding: ${tokens.spacing.medium};
-  padding-top: ${tokens.spacing.large};
+  padding-top: ${tokens.spacing.xlarge};
   user-select: none;
 `;
 

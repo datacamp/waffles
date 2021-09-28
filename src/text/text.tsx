@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import type { PolymorphicRef, PolymorphicComponentProps } from '../utils';
+import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 import { textStyle } from './styles';
 
 type TextBaseProps = {
