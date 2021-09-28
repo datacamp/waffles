@@ -21,7 +21,7 @@ const linkStyle = css`
   text-decoration: none;
   outline: 0;
   width: 100%;
-  transition: background-color 75ms ease-out, color 125ms ease-out,
+  transition: background-color 75ms ease-out, color 75ms ease-out,
     box-shadow 125ms ease-out;
   cursor: pointer;
   user-select: none;
@@ -35,12 +35,29 @@ const linkStyle = css`
   }
 `;
 
+const subLinkStyle = css`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 12px;
+  padding-left: ${tokens.spacing.medium};
+  border-left: ${tokens.borderWidth.thin} solid
+    ${hexToRgba(tokens.colors.navySubtleTextOnDark, tokens.opacity.high)};
+  transition: border-color 75ms ease-out;
+`;
+
 type NavigationLinkProps = {
   href: string;
   children: React.ReactNode;
+  isSubLink?: boolean;
 } & React.HTMLProps<HTMLAnchorElement>;
 
-function NavigationLink({ href, children, ...restProps }: NavigationLinkProps) {
+function NavigationLink({
+  href,
+  children,
+  isSubLink = false,
+  ...restProps
+}: NavigationLinkProps) {
   const { pathname } = useRouter();
   const isActive = pathname === href;
 
@@ -64,7 +81,21 @@ function NavigationLink({ href, children, ...restProps }: NavigationLinkProps) {
             `}
           `}
         >
-          {children}
+          {isSubLink ? (
+            <span
+              css={css`
+                ${subLinkStyle}
+                ${isActive &&
+                css`
+                  border-left-color: ${tokens.colors.white};
+                `}
+              `}
+            >
+              {children}
+            </span>
+          ) : (
+            children
+          )}
         </a>
       </Link>
     </li>
