@@ -32,6 +32,10 @@ const linkStyle = css`
       tokens.colors.navySubtleTextOnDark,
       tokens.opacity.low,
     )};
+
+    span {
+      border-left-color: ${hexToRgba(tokens.colors.white, tokens.opacity.high)};
+    }
   }
 `;
 
