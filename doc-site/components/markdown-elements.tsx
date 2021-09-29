@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head';
 
 import { Code } from '@datacamp/waffles/code';
 import { CodeBlock } from '@datacamp/waffles/code-block';
@@ -6,14 +7,21 @@ import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
 
-// Use custom Waffles components inside markdown
+// Use custom Waffles components in markdown
 
 type TextProps = {
   children: React.ReactNode;
 };
 
 function H1({ children }: TextProps) {
-  return <Heading size="xxlarge">{children}</Heading>;
+  return (
+    <>
+      <Head>
+        <title key="title">Waffles - {children}</title>
+      </Head>
+      <Heading size="xxlarge">{children}</Heading>
+    </>
+  );
 }
 
 function H2({ children }: TextProps) {
