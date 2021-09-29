@@ -18,7 +18,7 @@ const copyrightStyle = css`
   color: ${hexToRgba(tokens.colors.navySubtleTextOnDark, tokens.opacity.high)};
   font-size: ${tokens.fontSizes.small};
   padding: ${tokens.spacing.medium};
-  padding-top: ${tokens.spacing.xlarge};
+  padding-top: 48px;
   user-select: none;
 `;
 

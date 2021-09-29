@@ -1,7 +1,11 @@
 @import url('sanitize.css');
 
+html {
+  scroll-padding-top: 60px; /* Acommodate for fixed header height when scrolling to bookmark */
+}
+
 body {
-  overflow-y: scroll;
+  overflow-y: scroll; /* Always show scrollbar to prevent content jumps with open modals */
 }
 
 ::selection {

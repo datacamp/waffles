@@ -80,6 +80,7 @@
     "release-it": "^14.11.3",
     "rimraf": "^3.0.2",
     "sanitize.css": "^13.0.0",
+    "slugify": "^1.6.0",
     "start-server-and-test": "^1.14.0",
     "svgo": "^2.7.0",
     "ts-jest": "^27.0.5",

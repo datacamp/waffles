@@ -1,11 +1,16 @@
+import { css } from '@emotion/react';
 import Link from 'next/link';
 import Head from 'next/head';
+import slugify from 'slugify';
 
 import { Code } from '@datacamp/waffles/code';
 import { CodeBlock } from '@datacamp/waffles/code-block';
 import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
+
+import textFromChildren from '../helpers/text-from-children';
+import Bookmark from './bookmark';
 
 // Use custom Waffles components in markdown
 
@@ -24,8 +29,16 @@ function H1({ children }: TextProps) {
   );
 }
 
+// Allow secondary heading to be bookmarked
 function H2({ children }: TextProps) {
-  return <Heading size="xlarge">{children}</Heading>;
+  const headingId = slugify(textFromChildren(children), { lower: true });
+
+  return (
+    <Heading size="xlarge" id={headingId}>
+      {children}
+      <Bookmark targetId={headingId} />
+    </Heading>
+  );
 }
 
 function H3({ children }: TextProps) {
