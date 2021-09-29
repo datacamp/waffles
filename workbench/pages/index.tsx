@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Waffles 2.0 Workbench</title>
+        <title>Waffles - Workbench</title>
         <meta
           name="description"
           content="Interactive playground to develop and polish Waffles components."
