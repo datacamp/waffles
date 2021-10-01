@@ -45,7 +45,7 @@ const subLinkStyle = css`
   height: 100%;
   margin-left: 12px;
   padding-left: ${tokens.spacing.medium};
-  border-left: ${tokens.borderWidth.thin} solid
+  border-left: ${tokens.borderWidth.medium} solid
     ${hexToRgba(tokens.colors.navySubtleTextOnDark, tokens.opacity.high)};
   transition: border-color 75ms ease-out;
 `;
@@ -82,6 +82,10 @@ function NavigationLink({
             ${isActive &&
             css`
               color: ${tokens.colors.white};
+
+              &:hover span {
+                border-left-color: ${tokens.colors.white};
+              }
             `}
           `}
         >
