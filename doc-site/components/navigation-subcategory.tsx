@@ -4,13 +4,17 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 
-const labelStyle = css`
+const wrapperStyle = css`
   display: flex;
   align-items: center;
   padding-left: ${tokens.spacing.medium};
-  color: ${tokens.colors.navySubtleTextOnDark};
   height: ${tokens.sizing.medium};
+  color: ${tokens.colors.navySubtleTextOnDark};
   user-select: none;
+`;
+
+const labelStyle = css`
+  color: ${tokens.colors.navySubtleTextOnDark};
 `;
 
 const listStyle = css`
@@ -22,9 +26,14 @@ const listStyle = css`
 type NavigationCategoryProps = {
   label: string;
   children: React.ReactNode;
+  icon?: React.ReactNode;
 };
 
-function NavigationCategory({ label, children }: NavigationCategoryProps) {
+function NavigationCategory({
+  label,
+  icon,
+  children,
+}: NavigationCategoryProps) {
   // Inject isSubLink prop to every child
   function renderChildren() {
     return Children.map(children, (child) => {
@@ -40,7 +49,20 @@ function NavigationCategory({ label, children }: NavigationCategoryProps) {
 
   return (
     <li>
-      <Text css={labelStyle}>{label}</Text>
+      <span css={wrapperStyle}>
+        {icon}
+        <Text
+          css={css`
+            ${labelStyle}
+            ${icon &&
+            css`
+              padding-left: ${tokens.spacing.small};
+            `}
+          `}
+        >
+          {label}
+        </Text>
+      </span>
       <ul css={listStyle}>{renderChildren()}</ul>
     </li>
   );

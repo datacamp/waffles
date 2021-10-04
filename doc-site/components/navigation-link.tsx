@@ -43,10 +43,10 @@ const subLinkStyle = css`
   display: flex;
   align-items: center;
   height: 100%;
-  margin-left: 12px;
+  margin-left: 7px;
   padding-left: ${tokens.spacing.medium};
   border-left: ${tokens.borderWidth.medium} solid
-    ${hexToRgba(tokens.colors.navySubtleTextOnDark, tokens.opacity.high)};
+    ${hexToRgba(tokens.colors.navySubtleTextOnDark, tokens.opacity.medium)};
   transition: border-color 75ms ease-out;
 `;
 
