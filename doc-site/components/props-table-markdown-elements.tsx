@@ -16,7 +16,9 @@ function Paragraph({ children }: ParagraphProps) {
   return <ParagraphBase css={paragraphStyle}>{children}</ParagraphBase>;
 }
 
-export default {
+const propsTableMarkdownElements = {
   ...markdownElements,
   p: Paragraph,
 };
+
+export default propsTableMarkdownElements;

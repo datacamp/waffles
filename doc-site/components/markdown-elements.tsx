@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import Link from 'next/link';
 import Head from 'next/head';
 import slugify from 'slugify';
@@ -64,7 +63,7 @@ function RegularLink({ children, href }: RegularLinkProps) {
   );
 }
 
-export default {
+const markdownElements = {
   h1: H1,
   h2: H2,
   h3: H3,
@@ -74,3 +73,5 @@ export default {
   code: CodeBlock,
   inlineCode: Code,
 };
+
+export default markdownElements;
