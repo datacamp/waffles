@@ -4,6 +4,8 @@ import { Compiler, Error, useView } from 'react-view';
 import presetTypescript from '@babel/preset-typescript';
 
 import { tokens } from '@datacamp/waffles/tokens';
+import { Button } from '@datacamp/waffles/button';
+import { Back } from '@datacamp/waffles/icon';
 import type { PlaygroundConfig } from '../types';
 import CodePreview from './code-preview';
 import Editor from './editor';
@@ -25,8 +27,6 @@ const errorStyle = css`
   color: ${tokens.colors.greyLight};
   font-family: ${tokens.fontFamilies.mono};
   font-size: ${tokens.fontSizes.small};
-  border-bottom-left-radius: ${tokens.borderRadius.medium};
-  border-bottom-right-radius: ${tokens.borderRadius.medium};
   white-space: pre;
   overflow: hidden;
 `;
@@ -40,7 +40,19 @@ const liveLabelStyle = css`
   font-size: ${tokens.fontSizes.small};
   text-transform: uppercase;
   user-select: none;
-  padding: ${tokens.spacing.small} 12px;
+  padding: ${tokens.spacing.small} 20px;
+`;
+
+const controlsStyle = css`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: ${tokens.spacing.small};
+  background-color: ${tokens.colors.white};
+  border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
+  border-top: 0;
+  border-bottom-left-radius: ${tokens.borderRadius.medium};
+  border-bottom-right-radius: ${tokens.borderRadius.medium};
 `;
 
 type PlaygroundProps = {
@@ -48,14 +60,13 @@ type PlaygroundProps = {
 } & PlaygroundConfig;
 
 function Playground({ initialCode, scope, minHeight }: PlaygroundProps) {
-  const { compilerProps, editorProps, errorProps } = useView({
+  const { actions, compilerProps, editorProps, errorProps } = useView({
     initialCode: initialCode.trim(),
     scope,
   });
+  const { reset } = actions;
 
   const [isEditorFocused, setIsEditorFocused] = useState(false);
-
-  const hasError = !!errorProps.msg;
 
   return (
     <>
@@ -72,14 +83,7 @@ function Playground({ initialCode, scope, minHeight }: PlaygroundProps) {
       />
       <CodePreview
         css={css`
-          border-top-left-radius: 0;
-          border-top-right-radius: 0;
-          border-bottom-left-radius: ${hasError
-            ? 0
-            : tokens.borderRadius.medium};
-          border-bottom-right-radius: ${hasError
-            ? 0
-            : tokens.borderRadius.medium};
+          border-radius: 0;
           border-left-color: ${isEditorFocused
             ? tokens.colors.green
             : tokens.colors.purple};
@@ -96,6 +100,16 @@ function Playground({ initialCode, scope, minHeight }: PlaygroundProps) {
         </span>
       </CodePreview>
       <Error {...errorProps} css={errorStyle} />
+      <div css={controlsStyle}>
+        <Button
+          variant="plain"
+          size="small"
+          iconLeft={<Back />}
+          onClick={reset}
+        >
+          Reset
+        </Button>
+      </div>
     </>
   );
 }
