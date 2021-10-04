@@ -2,10 +2,10 @@ import '../styles/globals.css';
 
 import type { AppProps } from 'next/app';
 
-import MarkdownElements from '../components/markdown-elements';
+import markdownElements from '../components/markdown-elements';
 
 function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} components={MarkdownElements} />;
+  return <Component {...pageProps} components={markdownElements} />;
 }
 
 export default App;

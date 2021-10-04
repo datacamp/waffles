@@ -1,7 +1,9 @@
 import { css } from '@emotion/react';
+import ReactMarkdown from 'react-markdown';
 
 import { tokens } from '@datacamp/waffles/tokens';
 import convertedProps from '../helpers/converted-props';
+import markdownElements from '../components/props-table-markdown-elements';
 import Table from './table';
 
 const descriptionStyle = css`
@@ -51,7 +53,13 @@ function PropsTable({ metadata }: PropsTableProps) {
               </Table.Cell>
               <Table.Cell>{singleProp.type}</Table.Cell>
               <Table.Cell>
-                {singleProp.description ? singleProp.description : '—'}
+                {singleProp.description ? (
+                  <ReactMarkdown components={markdownElements}>
+                    {singleProp.description}
+                  </ReactMarkdown>
+                ) : (
+                  '—'
+                )}
               </Table.Cell>
             </tr>
           );

@@ -51,14 +51,16 @@ function H4({ children }: TextProps) {
 
 type RegularLinkProps = {
   children: React.ReactNode;
-  href: string;
+  href?: string;
 };
 
 function RegularLink({ children, href }: RegularLinkProps) {
-  return (
+  return href ? (
     <Link href={href} passHref>
       <LinkBase>{children}</LinkBase>
     </Link>
+  ) : (
+    <LinkBase>{children}</LinkBase>
   );
 }
 
