@@ -21,6 +21,7 @@ function Navigation() {
         </Category>
         <Category label="Foundation">
           <Link href="/foundation/design-tokens">Design Tokens</Link>
+          <Link href="/foundation/accessibility">Accessibility</Link>
         </Category>
         <Category label="Components">
           <Subcategory label="Action">
