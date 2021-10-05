@@ -1,7 +1,10 @@
+import React from 'react';
+import { css } from '@emotion/react';
 import Link from 'next/link';
 import Head from 'next/head';
 import slugify from 'slugify';
 
+import { tokens } from '@datacamp/waffles/tokens';
 import { Code } from '@datacamp/waffles/code';
 import { CodeBlock } from '@datacamp/waffles/code-block';
 import { Heading } from '@datacamp/waffles/heading';
@@ -28,12 +31,16 @@ function H1({ children }: TextProps) {
   );
 }
 
+const secondaryHeadingStyle = css`
+  margin-top: ${tokens.spacing.large};
+`;
+
 // Allow secondary heading to be bookmarked
 function H2({ children }: TextProps) {
   const headingId = slugify(textFromChildren(children), { lower: true });
 
   return (
-    <Heading size="xlarge" id={headingId}>
+    <Heading size="xlarge" id={headingId} css={secondaryHeadingStyle}>
       {children}
       <Bookmark targetId={headingId} />
     </Heading>

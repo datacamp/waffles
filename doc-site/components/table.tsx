@@ -5,11 +5,6 @@ import { tokens } from '@datacamp/waffles/tokens';
 
 const wrapperStyle = css`
   margin-top: ${tokens.spacing.small};
-  margin-bottom: ${tokens.spacing.large};
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 `;
 
 const tableStyle = css`
