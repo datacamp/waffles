@@ -13,6 +13,7 @@ import { Link as LinkBase } from '@datacamp/waffles/link';
 
 import textFromChildren from '../helpers/text-from-children';
 import Bookmark from './bookmark';
+import List from './list';
 
 // Use custom Waffles components in markdown
 
@@ -79,6 +80,8 @@ const markdownElements = {
   a: RegularLink,
   code: CodeBlock,
   inlineCode: Code,
+  ul: List,
+  li: List.Item,
 };
 
 export default markdownElements;
