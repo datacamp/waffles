@@ -14,10 +14,6 @@ exports[`Paragraph renders snapshot of inverted variant primary 1`] = `
   color: #FFFFFF;
 }
 
-.emotion-0:last-of-type {
-  margin-bottom: 0;
-}
-
 <p
   class="emotion-0"
 >
@@ -37,10 +33,6 @@ exports[`Paragraph renders snapshot of inverted variant secondary 1`] = `
   line-height: 1.5;
   margin-bottom: 8px;
   color: #9BA3AB;
-}
-
-.emotion-0:last-of-type {
-  margin-bottom: 0;
 }
 
 <p
@@ -64,10 +56,6 @@ exports[`Paragraph renders snapshot of variant primary 1`] = `
   color: #05192D;
 }
 
-.emotion-0:last-of-type {
-  margin-bottom: 0;
-}
-
 <p
   class="emotion-0"
 >
@@ -87,10 +75,6 @@ exports[`Paragraph renders snapshot of variant secondary 1`] = `
   line-height: 1.5;
   margin-bottom: 8px;
   color: #65707C;
-}
-
-.emotion-0:last-of-type {
-  margin-bottom: 0;
 }
 
 <p
