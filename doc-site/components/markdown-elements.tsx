@@ -8,7 +8,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Code } from '@datacamp/waffles/code';
 import { CodeBlock } from '@datacamp/waffles/code-block';
 import { Heading } from '@datacamp/waffles/heading';
-import { Paragraph } from '@datacamp/waffles/paragraph';
+import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
 
 import textFromChildren from '../helpers/text-from-children';
@@ -54,6 +54,16 @@ function H3({ children }: TextProps) {
 
 function H4({ children }: TextProps) {
   return <Heading size="medium">{children}</Heading>;
+}
+
+const paragraphStyle = css`
+  h1 + & {
+    font-size: ${tokens.fontSizes.large};
+  }
+`;
+
+function Paragraph({ children }: TextProps) {
+  return <ParagraphBase css={paragraphStyle}>{children}</ParagraphBase>;
 }
 
 type RegularLinkProps = {
