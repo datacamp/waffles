@@ -7,10 +7,10 @@ const wrapperStyle = css`
   position: relative;
   padding: ${tokens.spacing.medium};
   background-color: #151d28;
-  border-radius: ${tokens.borderRadius.medium};
   border-left: 8px solid ${tokens.colors.purple};
   overflow: hidden;
   transition: border-color 125ms ease-out;
+  cursor: text;
 `;
 
 type CodePreviewProps = React.HTMLAttributes<HTMLDivElement>;

@@ -8,6 +8,7 @@ import { Button } from '@datacamp/waffles/button';
 import { Back } from '@datacamp/waffles/icon';
 import type { PlaygroundConfig } from '../types';
 import CodePreview from './code-preview';
+import CodePreviewControls from './code-preview-controls';
 import Editor from './editor';
 
 const compilerStyle = css`
@@ -43,18 +44,6 @@ const liveLabelStyle = css`
   padding: ${tokens.spacing.small} 20px;
 `;
 
-const controlsStyle = css`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: ${tokens.spacing.small};
-  background-color: ${tokens.colors.white};
-  border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
-  border-top: 0;
-  border-bottom-left-radius: ${tokens.borderRadius.medium};
-  border-bottom-right-radius: ${tokens.borderRadius.medium};
-`;
-
 type PlaygroundProps = {
   minHeight?: number;
 } & PlaygroundConfig;
@@ -83,7 +72,6 @@ function Playground({ initialCode, scope, minHeight }: PlaygroundProps) {
       />
       <CodePreview
         css={css`
-          border-radius: 0;
           border-left-color: ${isEditorFocused
             ? tokens.colors.green
             : tokens.colors.purple};
@@ -100,7 +88,7 @@ function Playground({ initialCode, scope, minHeight }: PlaygroundProps) {
         </span>
       </CodePreview>
       <Error {...errorProps} css={errorStyle} />
-      <div css={controlsStyle}>
+      <CodePreviewControls>
         <Button
           variant="plain"
           size="small"
@@ -109,7 +97,7 @@ function Playground({ initialCode, scope, minHeight }: PlaygroundProps) {
         >
           Reset
         </Button>
-      </div>
+      </CodePreviewControls>
     </>
   );
 }
