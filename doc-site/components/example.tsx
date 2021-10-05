@@ -6,6 +6,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Button } from '@datacamp/waffles/button';
 import { Heading } from '@datacamp/waffles/heading';
 import { Code } from '@datacamp/waffles/icon';
+import { hexToRgba } from '@datacamp/waffles/helpers';
 import basicTheme from './editor-theme';
 import Highlight from './editor-highlight';
 import CodePreview from './code-preview';
@@ -21,6 +22,10 @@ const wrapperStyle = css`
   background-color: ${tokens.colors.white};
   margin-top: ${tokens.spacing.small};
   border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
+  border-bottom-color: ${hexToRgba(
+    tokens.colors.beigeMedium,
+    tokens.opacity.high,
+  )};
   border-top-right-radius: ${tokens.borderRadius.medium};
   border-top-left-radius: ${tokens.borderRadius.medium};
 `;
