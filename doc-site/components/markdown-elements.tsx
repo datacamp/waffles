@@ -6,7 +6,6 @@ import slugify from 'slugify';
 
 import { tokens } from '@datacamp/waffles/tokens';
 import { Code } from '@datacamp/waffles/code';
-import { CodeBlock } from '@datacamp/waffles/code-block';
 import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
@@ -88,8 +87,7 @@ const markdownElements = {
   h4: H4,
   p: Paragraph,
   a: RegularLink,
-  code: CodeBlock,
-  inlineCode: Code,
+  code: Code,
   ul: List,
   li: List.Item,
 };
