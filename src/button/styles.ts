@@ -2,13 +2,10 @@ import { css } from '@emotion/react';
 import React from 'react';
 
 import { tokens } from '../tokens';
-import { hexToRgba } from '../helpers';
+import { hexToRgba, hexColorShade } from '../helpers';
 import Button from './button';
 
 // Mappings between button's sizes and variants, and design tokens
-
-const PRIMARY_HOVER_COLOR = '#03DA5D';
-const DESTRUCTIVE_HOVER_COLOR = '#E64E04';
 
 const sizeMap = {
   small: {
@@ -29,7 +26,7 @@ const regularVariantMap = {
   primary: {
     color: tokens.colors.navy,
     backgroundColor: tokens.colors.green,
-    hoverColor: PRIMARY_HOVER_COLOR,
+    hoverColor: hexColorShade(tokens.colors.green, -tokens.opacity.low),
     borderColor: 'transparent',
   },
   secondary: {
@@ -47,7 +44,7 @@ const regularVariantMap = {
   destructive: {
     color: tokens.colors.navy,
     backgroundColor: tokens.colors.red,
-    hoverColor: DESTRUCTIVE_HOVER_COLOR,
+    hoverColor: hexColorShade(tokens.colors.red, -tokens.opacity.low),
     borderColor: 'transparent',
   },
 };
@@ -55,7 +52,7 @@ const regularVariantMap = {
 const invertedVariantMap = {
   primary: {
     ...regularVariantMap.primary,
-    hoverColor: tokens.colors.greenLight,
+    hoverColor: hexColorShade(tokens.colors.green, tokens.opacity.low),
   },
   secondary: {
     color: tokens.colors.white,
@@ -71,7 +68,7 @@ const invertedVariantMap = {
   },
   destructive: {
     ...regularVariantMap.destructive,
-    hoverColor: tokens.colors.redLight,
+    hoverColor: hexColorShade(tokens.colors.red, tokens.opacity.low),
   },
 };
 
