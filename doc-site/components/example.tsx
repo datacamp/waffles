@@ -19,9 +19,9 @@ const sectionStyle = css`
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};
   padding-bottom: ${tokens.spacing.xlarge};
-  background-color: ${tokens.colors.white};
   margin-top: ${tokens.spacing.small};
-  border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
+  border-width: ${tokens.borderWidth.thin};
+  border-style: solid;
   border-bottom-color: ${hexToRgba(
     tokens.colors.beigeMedium,
     tokens.opacity.high,
@@ -35,19 +35,26 @@ type ExampleProps = {
   path: string;
   title: string;
   minHeight?: number;
+  darkPreview?: boolean;
 };
 
-function Example({ children, minHeight, path, title }: ExampleProps) {
+function Example({
+  children,
+  minHeight,
+  path,
+  title,
+  darkPreview = false,
+}: ExampleProps) {
   const [code, setCode] = useState('');
   const [isCodePreviewVisible, setCodePreviewVisibility] = useState(false);
 
-  function toggleCodePreviewVisibility(): void {
+  function toggleCodePreviewVisibility() {
     setCodePreviewVisibility(!isCodePreviewVisible);
   }
 
   useEffect(() => {
     // Load raw content of code example
-    async function importExampleCode(): Promise<void> {
+    async function importExampleCode() {
       const rawCode = await import(`!!raw-loader!../examples/${path}.tsx`);
       setCode(rawCode.default);
     }
@@ -60,14 +67,16 @@ function Example({ children, minHeight, path, title }: ExampleProps) {
       <div
         css={css`
           ${wrapperStyle};
-          ${isCodePreviewVisible &&
-          css`
-            border-bottom: 0;
-          `}
           ${minHeight &&
           css`
             min-height: ${minHeight}px;
           `}
+          background-color: ${darkPreview
+            ? tokens.colors.navy
+            : tokens.colors.white};
+          border-color: ${darkPreview
+            ? tokens.colors.navy
+            : tokens.colors.beigeMedium};
         `}
       >
         {children}
