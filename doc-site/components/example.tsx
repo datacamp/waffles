@@ -22,10 +22,6 @@ const wrapperStyle = css`
   margin-top: ${tokens.spacing.small};
   border-width: ${tokens.borderWidth.thin};
   border-style: solid;
-  border-bottom-color: ${hexToRgba(
-    tokens.colors.beigeMedium,
-    tokens.opacity.high,
-  )};
   border-top-right-radius: ${tokens.borderRadius.medium};
   border-top-left-radius: ${tokens.borderRadius.medium};
 `;
@@ -77,6 +73,9 @@ function Example({
           border-color: ${darkPreview
             ? tokens.colors.navy
             : tokens.colors.beigeMedium};
+          border-bottom-color: ${darkPreview
+            ? hexToRgba(tokens.colors.white, tokens.opacity.low)
+            : hexToRgba(tokens.colors.beigeMedium, tokens.opacity.high)};
         `}
       >
         {children}
