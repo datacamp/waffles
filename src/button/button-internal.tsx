@@ -28,7 +28,7 @@ type ButtonNoIconProps = {
   'aria-label'?: string;
 } & ButtonBaseProps;
 
-type ButtonProps<T extends React.ElementType = 'button'> =
+export type ButtonProps<T extends React.ElementType = 'button'> =
   PolymorphicComponentProps<T, ButtonNoIconProps | ButtonIconOnlyProps>;
 
 function ButtonInternal<T extends React.ElementType = 'button'>(
