@@ -5,7 +5,7 @@ import Head from 'next/head';
 import slugify from 'slugify';
 
 import { tokens } from '@datacamp/waffles/tokens';
-import { Code } from '@datacamp/waffles/code';
+import { Code as CodeBase } from '@datacamp/waffles/code';
 import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
@@ -80,6 +80,10 @@ function RegularLink({ children, href }: RegularLinkProps) {
   );
 }
 
+function Code({ children }: TextProps) {
+  return <CodeBase>{children}</CodeBase>;
+}
+
 const markdownElements = {
   h1: H1,
   h2: H2,
@@ -88,6 +92,7 @@ const markdownElements = {
   p: Paragraph,
   a: RegularLink,
   code: Code,
+  inlineCode: Code,
   ul: List,
   li: List.Item,
 };
