@@ -71,19 +71,24 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
         isFocusVisible,
       })}
     >
-      {icon}
-      {iconLeft}
-      {children && (
-        <span
-          css={innerContentStyle({
-            hasLeftIcon: !!iconLeft,
-            hasRightIcon: !!iconRight,
-          })}
-        >
-          {children}
-        </span>
+      {icon ? (
+        icon
+      ) : (
+        <>
+          {iconLeft}
+          {children && (
+            <span
+              css={innerContentStyle({
+                hasLeftIcon: !!iconLeft,
+                hasRightIcon: !!iconRight,
+              })}
+            >
+              {children}
+            </span>
+          )}
+          {iconRight}
+        </>
       )}
-      {iconRight}
     </Element>
   );
 }
