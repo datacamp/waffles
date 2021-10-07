@@ -50,7 +50,8 @@ function H2({ children }: TextProps) {
 const headingStyle = css`
   margin-top: ${tokens.spacing.medium};
 
-  &:first-of-type {
+  h2 + &,
+  h3 + & {
     margin-top: ${tokens.spacing.small};
   }
 `;
