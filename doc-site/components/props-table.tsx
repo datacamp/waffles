@@ -6,6 +6,14 @@ import convertedProps from '../helpers/converted-props';
 import markdownElements from '../components/props-table-markdown-elements';
 import Table from './table';
 
+const POLYMORPHIC_METADATA = {
+  name: 'as',
+  description:
+    'The element used to render this component, e.g. `a`, or react router `Link`.',
+  type: 'React.ElementType',
+  isOptional: true,
+};
+
 const descriptionStyle = css`
   width: 50%;
 `;
@@ -27,10 +35,15 @@ const requiredMarkerStyle = css`
 
 type PropsTableProps = {
   metadata: Record<string, unknown>;
+  isPolymorphic: boolean;
 };
 
-function PropsTable({ metadata }: PropsTableProps) {
+function PropsTable({ metadata, isPolymorphic = false }: PropsTableProps) {
   const propsMetadata = convertedProps(metadata);
+
+  if (isPolymorphic) {
+    propsMetadata.unshift(POLYMORPHIC_METADATA);
+  }
 
   return (
     <Table>
