@@ -1,7 +1,142 @@
+import * as ButtonExports from '@datacamp/waffles/button';
+
 import Layout from '../../components/page-layout';
+import Playground from '../../components/playground';
+import Example from '../../components/example';
+import BestPractices from '../../components/best-practices';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/button/playground-config';
+import BasicUsage from '../../examples/button/basic-usage';
+import Variants from '../../examples/button/variants';
+import Sizes from '../../examples/button/sizes';
+import States from '../../examples/button/states';
+import WithIcons from '../../examples/button/with-icons';
+import FullWidth from '../../examples/button/full-width';
+import AsALink from '../../examples/button/as-a-link';
+import Inverted from '../../examples/button/inverted';
 
 export default Layout;
 
 # Button
 
-🚧 **WIP** Button content
+A button triggers an event or action. It lets users know what will happen next. Use actionable copy, don’t be vague.
+
+## Best Practices
+
+### General
+
+The button comes in four different variants: `primary`, `secondary`, `plain`, and `destructive`.
+
+**Primary** button ideally is used only once on a page to display the most important action we want the user to take. Usually, the `medium` size is sufficient, but to draw more attention `large` size can be used. Use `small` size sparingly, in the tight spaces of more complex user interfaces.
+
+**Secondary** button can be used multiple times on a page, in a combination with primary or plain buttons to create the actions hierarchy.
+
+**Plain** button should be used for supportive, less important actions.
+
+**Destructive** button expresses the actions user can't take back.
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - a label should be short, clear, and actionable, such as _Get Certified Now_
+    - a label should lead with a strong verb that encourages action
+    - for common actions such as _Done_ or _Close_ it is enough to provide verb only
+    - capitalize the first letter of all words in a label
+    - when a long explanation is needed, add it above or below the button as a text
+    - in general use default `medium` size, and other sizes as an exception
+    - use `inverted` button on a dark background
+    - separate multiple buttons placed next to each other by `spacing.small` form [design tokens](/foundation/design-tokens)
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use a lot of buttons&ndash;too many calls to action cause user's confusion
+    - provide long explanations as a button label
+    - use unnecessary words, such as _a_, _an_, _the_ in a label
+    - use multiple `primary` buttons when you have many actions at once
+    - use `primary` button to manipulate user
+    - use `destructive` button to open additional modals&ndash;should be only used to trigger the last action in the flow
+
+  </BestPractices.Discouraged>
+</BestPractices>
+
+### Button with Icon
+
+Icons add additional context and make buttons easier to scan. They also draw more attention.
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - it's great idea to use an icon, when button needs to draw more attention to the action
+    - most of the time default `medium` size [icon](/components/icon) from Waffles is preffered, regardless of the button
+    size
+    - always provide `aria-label` with icon-only button to make sure it's accessible
+    - usually `rightIcon` shoud be directional, such as `ChevronRight` Waffles [icon](/components/icon)
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - overuse button with icon
+    - provide both `leftIcon` and `rightIcon` at once&ndash;only allowed in rare circumstances
+
+  </BestPractices.Discouraged>
+</BestPractices>
+
+### Button vs Link
+
+For navigational actions that appear within or directly following a sentence, use the [Link](/components/link) component.
+
+For standalone navigational actions, it is fine to use button&ndash;just set component type to `a` via `as` prop. Custom components, such as react router `Link` could be passed that way as well.
+
+## Examples
+
+<Example title="Basic Usage" path="button/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Variants" path="button/variants">
+  <Variants />
+</Example>
+
+<Example title="Sizes" path="button/sizes">
+  <Sizes />
+</Example>
+
+<Example title="States" path="button/states">
+  <States />
+</Example>
+
+<Example title="With Icons" path="button/with-icons">
+  <WithIcons />
+</Example>
+
+<Example title="Full Width" path="button/full-width">
+  <FullWidth />
+</Example>
+
+<Example title="As a Link" path="button/as-a-link">
+  <AsALink />
+</Example>
+
+<Example title="Inverted" path="button/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+In addition to all custom props listed below, `Button` accepts all props regular `HTMLButton` would, such as: `onClick`, `disabled`, `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/button/button-internal')}
+  isPolymorphic
+/>
+
+## Imports
+
+<Imports module={ButtonExports} path="@datacamp/waffles/button" />
