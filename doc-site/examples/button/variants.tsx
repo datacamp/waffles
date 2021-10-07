@@ -9,6 +9,7 @@ function Example() {
       css={css`
         display: flex;
         gap: ${tokens.spacing.small};
+        flex-wrap: wrap;
       `}
     >
       <Button variant="primary">Primary Variant</Button>
