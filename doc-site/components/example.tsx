@@ -24,6 +24,7 @@ const wrapperStyle = css`
   border-style: solid;
   border-top-right-radius: ${tokens.borderRadius.medium};
   border-top-left-radius: ${tokens.borderRadius.medium};
+  overflow: hidden;
 `;
 
 type ExampleProps = {

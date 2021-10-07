@@ -47,12 +47,28 @@ function H2({ children }: TextProps) {
   );
 }
 
+const headingStyle = css`
+  margin-top: ${tokens.spacing.medium};
+
+  &:first-of-type {
+    margin-top: ${tokens.spacing.small};
+  }
+`;
+
 function H3({ children }: TextProps) {
-  return <Heading size="large">{children}</Heading>;
+  return (
+    <Heading size="large" css={headingStyle}>
+      {children}
+    </Heading>
+  );
 }
 
 function H4({ children }: TextProps) {
-  return <Heading size="medium">{children}</Heading>;
+  return (
+    <Heading size="medium" css={headingStyle}>
+      {children}
+    </Heading>
+  );
 }
 
 const paragraphStyle = css`
