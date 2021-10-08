@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-
 import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
@@ -20,6 +18,8 @@ const textStyle = css`
   height: ${tokens.sizing.small};
   align-items: center;
   padding-left: 10px;
+  color: ${tokens.colors.navySubtleTextOnLight};
+  user-select: none;
 `;
 
 const markerStyle = css`
@@ -64,51 +64,30 @@ function UnavailableStatus() {
   );
 }
 
-type ReactComponentStatus =
-  | {
-      reactStatus: 'available';
-      reactComponentLink: string;
-    }
-  | {
-      reactStatus: 'unavailable';
-      reactComponentLink?: never;
-    };
-
-type FigmaComponentStatus =
-  | {
-      figmaStatus: 'available';
-      figmaComponentLink: string;
-    }
-  | {
-      figmaStatus: 'unavailable';
-      figmaComponentLink?: never;
-    };
-
 type ComponentStatusProps = {
   name: string;
-} & ReactComponentStatus &
-  FigmaComponentStatus;
+  reactComponentUrl?: string;
+  figmaComponentUrl?: string;
+};
 
 function ComponentStatus({
   name,
-  reactStatus,
-  reactComponentLink,
-  figmaStatus,
-  figmaComponentLink,
+  reactComponentUrl,
+  figmaComponentUrl,
 }: ComponentStatusProps) {
   return (
     <tr>
       <Table.Cell css={nameCellStyle}>{name}</Table.Cell>
       <Table.Cell css={tableCellStyle}>
-        {reactStatus === 'available' ? (
-          <AvailableStatus href={reactComponentLink!} />
+        {reactComponentUrl ? (
+          <AvailableStatus href={reactComponentUrl} />
         ) : (
           <UnavailableStatus />
         )}
       </Table.Cell>
       <Table.Cell css={tableCellStyle}>
-        {figmaStatus === 'available' ? (
-          <AvailableStatus href={figmaComponentLink!} />
+        {figmaComponentUrl ? (
+          <AvailableStatus href={figmaComponentUrl} />
         ) : (
           <UnavailableStatus />
         )}
