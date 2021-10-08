@@ -10,7 +10,7 @@ import { hexToRgba } from '@datacamp/waffles/helpers';
 import basicTheme from './editor-theme';
 import Highlight from './editor-highlight';
 import CodePreview from './code-preview';
-import CodePreviewControls from './code-preview-controls';
+import PreviewControls from './preview-controls';
 
 const sectionStyle = css`
   margin-top: ${tokens.spacing.medium};
@@ -86,7 +86,7 @@ function Example({
           <Highlight theme={basicTheme}>{code.trim()}</Highlight>
         </CodePreview>
       )}
-      <CodePreviewControls>
+      <PreviewControls>
         <Button
           variant="plain"
           size="small"
@@ -96,7 +96,7 @@ function Example({
         >
           {isCodePreviewVisible ? 'Hide' : 'Show'} Code
         </Button>
-      </CodePreviewControls>
+      </PreviewControls>
     </section>
   );
 }

@@ -6,7 +6,7 @@ import * as allIcons from '@datacamp/waffles/icon';
 import { Text } from '@datacamp/waffles/text';
 import { Button } from '@datacamp/waffles/button';
 import groupedIcons from '../helpers/grouped-icons';
-import CodePreviewControls from './code-preview-controls';
+import PreviewControls from './preview-controls';
 
 const { Visible, Hidden } = allIcons;
 
@@ -107,7 +107,7 @@ function AllIconsGrid() {
           );
         })}
       </div>
-      <CodePreviewControls>
+      <PreviewControls>
         <Button
           variant="plain"
           size="small"
@@ -116,7 +116,7 @@ function AllIconsGrid() {
         >
           {allLabelsVisible ? 'Hide' : 'Show'} Labels
         </Button>
-      </CodePreviewControls>
+      </PreviewControls>
     </section>
   );
 }

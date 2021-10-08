@@ -8,7 +8,7 @@ import { Button } from '@datacamp/waffles/button';
 import { Back } from '@datacamp/waffles/icon';
 import type { PlaygroundConfig } from '../types';
 import CodePreview from './code-preview';
-import CodePreviewControls from './code-preview-controls';
+import PreviewControls from './preview-controls';
 import Editor from './editor';
 
 const compilerStyle = css`
@@ -88,7 +88,7 @@ function Playground({ initialCode, scope, minHeight }: PlaygroundProps) {
         </span>
       </CodePreview>
       <Error {...errorProps} css={errorStyle} />
-      <CodePreviewControls>
+      <PreviewControls>
         <Button
           variant="plain"
           size="small"
@@ -97,7 +97,7 @@ function Playground({ initialCode, scope, minHeight }: PlaygroundProps) {
         >
           Reset
         </Button>
-      </CodePreviewControls>
+      </PreviewControls>
     </>
   );
 }
