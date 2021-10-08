@@ -59,4 +59,19 @@ describe('Heading', () => {
       });
     });
   });
+
+  describe('renders snapshot of inverted', () => {
+    sizes.forEach((size) => {
+      it(`size ${size}`, () => {
+        const { getByText } = render(
+          <Heading key={size} size={size} inverted>
+            Test
+          </Heading>,
+        );
+
+        const heading = getByText('Test');
+        expect(heading).toMatchSnapshot();
+      });
+    });
+  });
 });
