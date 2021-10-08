@@ -12,6 +12,7 @@ const wrapperStyle = css`
 `;
 
 const variants = ['primary', 'secondary'] as const;
+const sizes = ['small', 'medium', 'large'] as const;
 
 const testText1 =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
@@ -25,33 +26,41 @@ function Story() {
       {/* Regular */}
       <div>
         {variants.map((variant) => {
-          return (
-            <div key={variant} css={wrapperStyle}>
-              <Paragraph variant={variant}>{testText1}</Paragraph>
-              <Paragraph variant={variant}>{testText2}</Paragraph>
-            </div>
-          );
+          return sizes.map((size) => {
+            return (
+              <div key={variant} css={wrapperStyle}>
+                <Paragraph variant={variant} size={size}>
+                  {testText1}
+                </Paragraph>
+                <Paragraph variant={variant} size={size}>
+                  {testText2}
+                </Paragraph>
+              </div>
+            );
+          });
         })}
       </div>
       {/* Inverted */}
       <div>
         {variants.map((variant) => {
-          return (
-            <div
-              key={`inverted-${variant}`}
-              css={css`
-                ${wrapperStyle}
-                background-color: ${tokens.colors.navy};
-              `}
-            >
-              <Paragraph variant={variant} inverted>
-                {testText1}
-              </Paragraph>
-              <Paragraph variant={variant} inverted>
-                {testText2}
-              </Paragraph>
-            </div>
-          );
+          return sizes.map((size) => {
+            return (
+              <div
+                key={`inverted-${variant}`}
+                css={css`
+                  ${wrapperStyle}
+                  background-color: ${tokens.colors.navy};
+                `}
+              >
+                <Paragraph variant={variant} size={size} inverted>
+                  {testText1}
+                </Paragraph>
+                <Paragraph variant={variant} size={size} inverted>
+                  {testText2}
+                </Paragraph>
+              </div>
+            );
+          });
         })}
       </div>
     </>

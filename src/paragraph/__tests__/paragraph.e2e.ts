@@ -1,7 +1,7 @@
 describe('Paragraph', () => {
-  it('render all varaints', () => {
-    cy.loadStory('paragraph-variants');
-    cy.get('main').find('p').should('have.length', 8);
+  it('render all varaints and sizes', () => {
+    cy.loadStory('paragraph-variants-and-sizes');
+    cy.get('main').find('p').should('have.length', 24);
   });
 
   it('renders with custom styles applied', () => {
