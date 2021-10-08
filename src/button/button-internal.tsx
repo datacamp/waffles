@@ -44,8 +44,8 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
     as,
     variant = 'primary',
     size = 'medium',
-    fullWidth = false,
     inverted = false,
+    fullWidth = false,
     icon,
     iconLeft,
     iconRight,
@@ -63,8 +63,8 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
       {...mergeProps(focusProps, restProps)}
       ref={ref}
       css={buttonStyle({
-        size,
         variant,
+        size,
         inverted,
         fullWidth,
         hasIcon: !!icon,
