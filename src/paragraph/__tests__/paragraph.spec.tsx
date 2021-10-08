@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import { Paragraph } from '../index';
 
 const variants = ['primary', 'secondary'] as const;
+const sizes = ['small', 'medium', 'large'] as const;
 
 describe('Paragraph', () => {
   it('renders a paragraph containing the text', () => {
@@ -30,13 +31,17 @@ describe('Paragraph', () => {
 
   describe('renders snapshot of', () => {
     variants.forEach((variant) => {
-      it(`variant ${variant}`, () => {
-        const { container } = render(
-          <Paragraph variant={variant}>Test</Paragraph>,
-        );
+      sizes.forEach((size) => {
+        it(`variant ${variant} and size ${size}`, () => {
+          const { container } = render(
+            <Paragraph variant={variant} size={size}>
+              Test
+            </Paragraph>,
+          );
 
-        const paragraph = container.querySelector('p');
-        expect(paragraph).toMatchSnapshot();
+          const paragraph = container.querySelector('p');
+          expect(paragraph).toMatchSnapshot();
+        });
       });
     });
   });

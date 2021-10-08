@@ -12,6 +12,7 @@ exports[`Paragraph renders snapshot of inverted variant primary 1`] = `
   line-height: 1.5;
   margin-bottom: 8px;
   color: #FFFFFF;
+  font-size: 14px;
 }
 
 <p
@@ -33,6 +34,7 @@ exports[`Paragraph renders snapshot of inverted variant secondary 1`] = `
   line-height: 1.5;
   margin-bottom: 8px;
   color: #9BA3AB;
+  font-size: 14px;
 }
 
 <p
@@ -42,7 +44,7 @@ exports[`Paragraph renders snapshot of inverted variant secondary 1`] = `
 </p>
 `;
 
-exports[`Paragraph renders snapshot of variant primary 1`] = `
+exports[`Paragraph renders snapshot of variant primary and size large 1`] = `
 .emotion-0 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
@@ -54,6 +56,7 @@ exports[`Paragraph renders snapshot of variant primary 1`] = `
   line-height: 1.5;
   margin-bottom: 8px;
   color: #05192D;
+  font-size: 16px;
 }
 
 <p
@@ -63,7 +66,51 @@ exports[`Paragraph renders snapshot of variant primary 1`] = `
 </p>
 `;
 
-exports[`Paragraph renders snapshot of variant secondary 1`] = `
+exports[`Paragraph renders snapshot of variant primary and size medium 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #05192D;
+  font-size: 14px;
+}
+
+<p
+  class="emotion-0"
+>
+  Test
+</p>
+`;
+
+exports[`Paragraph renders snapshot of variant primary and size small 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #05192D;
+  font-size: 12px;
+}
+
+<p
+  class="emotion-0"
+>
+  Test
+</p>
+`;
+
+exports[`Paragraph renders snapshot of variant secondary and size large 1`] = `
 .emotion-0 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
@@ -75,6 +122,51 @@ exports[`Paragraph renders snapshot of variant secondary 1`] = `
   line-height: 1.5;
   margin-bottom: 8px;
   color: #65707C;
+  font-size: 16px;
+}
+
+<p
+  class="emotion-0"
+>
+  Test
+</p>
+`;
+
+exports[`Paragraph renders snapshot of variant secondary and size medium 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #65707C;
+  font-size: 14px;
+}
+
+<p
+  class="emotion-0"
+>
+  Test
+</p>
+`;
+
+exports[`Paragraph renders snapshot of variant secondary and size small 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #65707C;
+  font-size: 12px;
 }
 
 <p
