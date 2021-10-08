@@ -9,6 +9,31 @@ exports[`Chapeau renders snapshot 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
+  color: #05192D;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+<p
+  class="emotion-0"
+>
+  Test
+</p>
+`;
+
+exports[`Chapeau renders snapshot of inverted variant 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #FF6EA9;
   font-size: 12px;
   font-weight: 800;
   line-height: 1.25;

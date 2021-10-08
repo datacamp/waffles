@@ -20,4 +20,13 @@ describe('Chapeau', () => {
     expect(chapeau).toBeInTheDocument();
     expect(chapeau).toMatchSnapshot();
   });
+
+  it('renders snapshot of inverted variant', () => {
+    const { getByText } = render(<Chapeau inverted>Test</Chapeau>);
+
+    const chapeau = getByText('Test');
+
+    expect(chapeau).toBeInTheDocument();
+    expect(chapeau).toMatchSnapshot();
+  });
 });
