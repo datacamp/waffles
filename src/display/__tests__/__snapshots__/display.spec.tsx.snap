@@ -9,6 +9,30 @@ exports[`Display renders snapshot 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
+  color: #05192D;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+<p
+  class="emotion-0"
+>
+  Test
+</p>
+`;
+
+exports[`Display renders snapshot of inverted variant 1`] = `
+.emotion-0 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
   font-size: 28px;
   font-weight: 800;
   line-height: 1.25;

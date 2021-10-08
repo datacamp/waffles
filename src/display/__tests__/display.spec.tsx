@@ -20,4 +20,13 @@ describe('Display', () => {
     expect(displayParagraph).toBeInTheDocument();
     expect(displayParagraph).toMatchSnapshot();
   });
+
+  it('renders snapshot of inverted variant', () => {
+    const { getByText } = render(<Display inverted>Test</Display>);
+
+    const displayParagraph = getByText('Test');
+
+    expect(displayParagraph).toBeInTheDocument();
+    expect(displayParagraph).toMatchSnapshot();
+  });
 });
