@@ -1,5 +1,5 @@
 describe('Chapeau', () => {
-  it('renders a basic text', () => {
+  it('renders a basic text and inverted variant', () => {
     cy.loadStory('chapeau-basic');
     cy.findByText('Short title above heading').should('exist');
   });
