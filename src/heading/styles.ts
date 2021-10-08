@@ -30,8 +30,13 @@ type SizeOptions = {
   size: NonNullable<React.ComponentProps<typeof Heading>['size']>;
 };
 
-export function headingStyle({ size }: SizeOptions) {
+type HeadingStyleOptions = {
+  inverted: boolean;
+} & SizeOptions;
+
+export function headingStyle({ size, inverted }: HeadingStyleOptions) {
   return css`
+    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     font-weight: ${tokens.fontWeights.bold};
     font-size: ${sizeMap[size].fontSize};
     margin-bottom: ${tokens.spacing.small};
