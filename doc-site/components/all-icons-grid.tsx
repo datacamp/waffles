@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
 import * as allIcons from '@datacamp/waffles/icon';
 import { Text } from '@datacamp/waffles/text';
+import { Button } from '@datacamp/waffles/button';
 import groupedIcons from '../helpers/grouped-icons';
+import CodePreviewControls from './code-preview-controls';
+
+const { Visible, Hidden } = allIcons;
 
 const wraperStyle = css`
   display: flex;
@@ -29,15 +33,12 @@ const invertedIconsPreview = css`
   background-color: ${tokens.colors.navy};
   border: ${tokens.borderWidth.thin} solid transparent;
   border-top: 0;
-  border-bottom-left-radius: ${tokens.borderRadius.medium};
-  border-bottom-right-radius: ${tokens.borderRadius.medium};
 `;
 
 const iconWrapperStyle = css`
   display: flex;
   align-items: center;
   padding: ${tokens.spacing.small};
-  width: 220px;
 `;
 
 const labelStyle = css`
@@ -48,19 +49,26 @@ const labelStyle = css`
 type IconPreviewType = {
   name: string;
   icon: React.ReactNode;
+  isLabelVisible?: boolean;
   inverted?: boolean;
 };
 
-function IconPreview({ name, icon, inverted = false }: IconPreviewType) {
+function IconPreview({
+  name,
+  icon,
+  isLabelVisible = true,
+  inverted = false,
+}: IconPreviewType) {
   return (
     <div
       css={css`
         ${iconWrapperStyle}
         color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+        width: ${isLabelVisible ? '220px' : 'auto'};
       `}
     >
       {icon}
-      <Text css={labelStyle}>{name}</Text>
+      {isLabelVisible && <Text css={labelStyle}>{name}</Text>}
     </div>
   );
 }
@@ -68,22 +76,47 @@ function IconPreview({ name, icon, inverted = false }: IconPreviewType) {
 function AllIconsGrid() {
   const { regular, inverted } = groupedIcons(allIcons);
 
+  const [allLabelsVisible, setLabelsVisiblity] = useState(true);
+
   return (
     <section css={wraperStyle}>
       <div css={regularIconsPreview}>
         {Object.entries(regular).map((iconData) => {
           const [name, Icon] = iconData;
-          return <IconPreview key={name} name={name} icon={<Icon />} />;
+          return (
+            <IconPreview
+              key={name}
+              name={name}
+              icon={<Icon />}
+              isLabelVisible={allLabelsVisible}
+            />
+          );
         })}
       </div>
       <div css={invertedIconsPreview}>
         {Object.entries(inverted).map((iconData) => {
           const [name, Icon] = iconData;
           return (
-            <IconPreview key={name} name={name} icon={<Icon />} inverted />
+            <IconPreview
+              key={name}
+              name={name}
+              icon={<Icon />}
+              isLabelVisible={allLabelsVisible}
+              inverted
+            />
           );
         })}
       </div>
+      <CodePreviewControls>
+        <Button
+          variant="plain"
+          size="small"
+          iconLeft={allLabelsVisible ? <Hidden /> : <Visible />}
+          onClick={() => setLabelsVisiblity(!allLabelsVisible)}
+        >
+          {allLabelsVisible ? 'Hide' : 'Show'} Labels
+        </Button>
+      </CodePreviewControls>
     </section>
   );
 }
