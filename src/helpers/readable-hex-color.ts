@@ -7,8 +7,8 @@ import isHexColor from './is-hex-color';
  * It is possible to specify custom colors.
  *
  * @param hexColor HEX color code, starts with hash followed by either 3 or 6 digits
- * @param [returnIfLight] Color returned if provided color is ligth
- * @param [returnIfDark] Color returned if provided color is dark
+ * @param returnIfLight Optional color returned if provided color is ligth
+ * @param returnIfDark Optional color returned if provided color is dark
  * @returns White or navy from design tokens, or one of optional passed HEX colors
  */
 function readableHexColor(
