@@ -1,4 +1,4 @@
-import hexColorLuminance from '../hex-color-luminance';
+import { hexColorLuminance } from '../index';
 
 describe('hexColorLuminance', () => {
   it('converts HEX color value to RGB counterpart when opacity is not provided', () => {
