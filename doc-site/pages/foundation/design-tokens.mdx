@@ -2,7 +2,11 @@ import * as TokensExports from '@datacamp/waffles/tokens';
 
 import Layout from '../../components/page-layout';
 import DesignTokensTable from '../../components/design-tokens-table';
+import Example from '../../components/example';
 import Imports from '../../components/imports';
+
+import CustomButton from '../../examples/design-tokens/custom-button';
+import CustomCard from '../../examples/design-tokens/custom-card';
 
 export default Layout;
 
@@ -10,9 +14,11 @@ export default Layout;
 
 Design tokens are the smallest design system atoms. They are named entities that store visual design attributes and are crucial to keeping designs consistent. They are used in place of hardcoded values, such as HEX color codes for color or pixel values for spacing.
 
+## All Available Tokens
+
 This is the complete set of official DataCamp design tokens. Ideally, these are the only values you would need to use in the DataCamp project, when creating custom components.
 
-## Colors
+### Colors
 
 Functionally use color to show intent. It's great to have the content not only beautiful but also usable.
 
@@ -28,83 +34,93 @@ There are [a few helpers](/components/helpers) available in Waffles for advanced
 
 <DesignTokensTable tokensGroup="colors" />
 
-## Sizing
+### Sizing
 
 Use for both width and height of the action elements, such as buttons.
 
 <DesignTokensTable tokensGroup="sizing" />
 
-## Spacing
+### Spacing
 
 Use for padding, margins, and position coordinates. Use `small` between buttons in group.
 
 <DesignTokensTable tokensGroup="spacing" />
 
-## Border Width
+### Border Width
 
 Use to define element border thickness.
 
 <DesignTokensTable tokensGroup="borderWidth" />
 
-## Border Radius
+### Border Radius
 
 Use to define element corner roundness.
 
 <DesignTokensTable tokensGroup="borderRadius" />
 
-## Box Shadow
+### Box Shadow
 
 Use to show drop shadow beneath element.
 
 <DesignTokensTable tokensGroup="boxShadow" />
 
-## Font Families
+### Font Families
 
 For regular text use `sansSerif`, and for code samples `mono`.
 
 <DesignTokensTable tokensGroup="fontFamilies" />
 
-## Font Sizes
+### Font Sizes
 
 Use to define font size. For regular text use `medium`.
 
 <DesignTokensTable tokensGroup="fontSizes" />
 
-## Font Weights
+### Font Weights
 
 Use to change how thin or heavy the weight of the font is.
 
 <DesignTokensTable tokensGroup="fontWeights" />
 
-## Letter Spacing
+### Letter Spacing
 
 Use to adjust the distance between text characters.
 
 <DesignTokensTable tokensGroup="letterSpacing" />
 
-## Line Heights
+### Line Heights
 
 Use to set the distance between lines of text. For long blocks of text use `relaxed`. For short paragraphs be free to use `default`. For one-liners, such as labels, use `tight`.
 
 <DesignTokensTable tokensGroup="lineHeights" />
 
-## Opacity
+### Opacity
 
-Use to change element transparency. For muted colors rather use predefined color tokens, over setting opacity.
+Use to change element transparency. For muted colors rather use predefined color tokens, over setting opacity. For disabled elements use `high` opacity.
 
 <DesignTokensTable tokensGroup="opacity" />
 
-## Z-index
+### Z-index
 
 Use to set the layering order of the common elements.
 
 <DesignTokensTable tokensGroup="zIndex" />
 
-## Breakpoints
+### Breakpoints
 
 Breakpoints for various device sizes. For **media queries** use [mediaQuery](/components/helpers) helper.
 
 <DesignTokensTable tokensGroup="breakpoints" />
+
+## Examples
+
+<Example title="Custom Button" path="design-tokens/custom-button">
+  <CustomButton />
+</Example>
+
+<Example title="Custom Card" path="design-tokens/custom-card">
+  <CustomCard />
+</Example>
 
 ## Imports
 
