@@ -1,7 +1,111 @@
+import * as TokensExports from '@datacamp/waffles/tokens';
+
 import Layout from '../../components/page-layout';
+import DesignTokensTable from '../../components/design-tokens-table';
+import Imports from '../../components/imports';
 
 export default Layout;
 
 # Design Tokens
 
-🚧 This page is **under construction**.
+Design tokens are the smallest design system atoms. They are named entities that store visual design attributes and are crucial to keeping designs consistent. They are used in place of hardcoded values, such as HEX color codes for color or pixel values for spacing.
+
+This is the complete set of official DataCamp design tokens. Ideally, these are the only values you would need to use in the DataCamp project, when creating custom components.
+
+## Colors
+
+Functionally use color to show intent. It's great to have the content not only beautiful but also usable.
+
+For **text** usually use `navy` color to achieve the best contrast against light backgrounds or `white` for dark backgrounds. There are also a few special colors defined to be used for text only, e.g. `redDarkText`. It is always a good idea to test text and background color contrast to meet [WCAG 2.1 level AA accessibility requirements](https://www.w3.org/TR/WCAG21/#contrast-minimum). There are various [tools](https://contrast-grid.eightshapes.com/) to perform such checks.
+
+For **background** mainly use `white`, `beigeSubtle`, and on rare occasions `navy`.
+
+For **accessibility** hints, such as focus style, use `navyDark`.
+
+For **social media** related content be free to use one of the `brand` colors, e.g. `brandLinkedIn`.
+
+There are [a few helpers](/components/helpers) available in Waffles for advanced colors adjustments, such as changing color opacity or darkening it.
+
+<DesignTokensTable tokensGroup="colors" />
+
+## Sizing
+
+Use for both width and height of the action elements, such as buttons.
+
+<DesignTokensTable tokensGroup="sizing" />
+
+## Spacing
+
+Use for padding, margins, and position coordinates. Use `small` between buttons in group.
+
+<DesignTokensTable tokensGroup="spacing" />
+
+## Border Width
+
+Use to define element border thickness.
+
+<DesignTokensTable tokensGroup="borderWidth" />
+
+## Border Radius
+
+Use to define element corner roundness.
+
+<DesignTokensTable tokensGroup="borderRadius" />
+
+## Box Shadow
+
+Use to show drop shadow beneath element.
+
+<DesignTokensTable tokensGroup="boxShadow" />
+
+## Font Families
+
+For regular text use `sansSerif`, and for code samples `mono`.
+
+<DesignTokensTable tokensGroup="fontFamilies" />
+
+## Font Sizes
+
+Use to define font size. For regular text use `medium`.
+
+<DesignTokensTable tokensGroup="fontSizes" />
+
+## Font Weights
+
+Use to change how thin or heavy the weight of the font is.
+
+<DesignTokensTable tokensGroup="fontWeights" />
+
+## Letter Spacing
+
+Use to adjust the distance between text characters.
+
+<DesignTokensTable tokensGroup="letterSpacing" />
+
+## Line Heights
+
+Use to set the distance between lines of text. For long blocks of text use `relaxed`. For short paragraphs be free to use `default`. For one-liners, such as labels, use `tight`.
+
+<DesignTokensTable tokensGroup="lineHeights" />
+
+## Opacity
+
+Use to change element transparency. For muted colors rather use predefined color tokens, over setting opacity.
+
+<DesignTokensTable tokensGroup="opacity" />
+
+## Z-index
+
+Use to set the layering order of the common elements.
+
+<DesignTokensTable tokensGroup="zIndex" />
+
+## Breakpoints
+
+Breakpoints for various device sizes. For **media queries** use [mediaQuery](/components/helpers) helper.
+
+<DesignTokensTable tokensGroup="breakpoints" />
+
+## Imports
+
+<Imports module={TokensExports} path="@datacamp/waffles/tokens" />
