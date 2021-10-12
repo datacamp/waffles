@@ -12,7 +12,7 @@ export default Layout;
 
 # Design Tokens
 
-Design tokens are the smallest design system atoms. They are named entities that store visual design attributes and are crucial to keeping designs consistent. They are used in place of hardcoded values, such as HEX color codes for color or pixel values for spacing.
+Design tokens are the smallest design system atoms. They are named entities that store visual design attributes, and are crucial to keeping designs consistent. They are used in place of hardcoded values, such as HEX color codes for color or pixel values for spacing.
 
 ## All Available Tokens
 
@@ -22,15 +22,15 @@ This is the complete set of official DataCamp design tokens. Ideally, these are 
 
 Functionally use color to show intent. It's great to have the content not only beautiful but also usable.
 
-For **text** usually use `navy` color to achieve the best contrast against light backgrounds or `white` for dark backgrounds. There are also a few special colors defined to be used for text only, e.g. `redDarkText`. It is always a good idea to test text and background color contrast to meet [WCAG 2.1 level AA accessibility requirements](https://www.w3.org/TR/WCAG21/#contrast-minimum). There are various [tools](https://contrast-grid.eightshapes.com/) to perform such checks.
+For **text** usually use `navy` color to achieve the best contrast against light backgrounds or `white` for dark backgrounds. There are also a few special colors defined to be used for text only, e.g. `redDarkText`. Always take accessibility into account and test text and background color contrast to meet [WCAG 2.1 level AA accessibility requirements](https://www.w3.org/TR/WCAG21/#contrast-minimum). There are various [tools](https://contrast-grid.eightshapes.com/) available to do so. Waffles also offers [readableHexColor](/components/helpers) helper, which automatically picks the right readable color.
 
-For **background** mainly use `white`, `beigeSubtle`, and on rare occasions `navy`.
+For **backgrounds** mainly use `white`, `beigeSubtle`, and on rare occasions `navy`.
 
 For **accessibility** hints, such as focus style, use `navyDark`.
 
 For **social media** related content be free to use one of the `brand` colors, e.g. `brandLinkedIn`.
 
-There are [a few helpers](/components/helpers) available in Waffles for advanced colors adjustments, such as changing color opacity or darkening it.
+There are [a few helpers](/components/helpers) available in Waffles for advanced colors adjustments. They are very useful for defining **mouse over styles**, where opacity or lightness of color must be tweaked.
 
 <DesignTokensTable tokensGroup="colors" />
 
@@ -42,7 +42,21 @@ Use for both width and height of the action elements, such as buttons.
 
 ### Spacing
 
-Use for padding, margins, and position coordinates. Use `small` between buttons in group.
+Use for padding, margins, and position coordinates.
+
+For closely related elements in the same component, such as title and tab line, use `xsmall`.
+
+For linked elements within the same components use `small`, e.g icon and the label. Should be used as main spacing between buttons.
+
+The most common spacig is `medium`, which is used for:
+
+- horizontal and vertical spacing between different cards
+- padding inside a card
+- space between distinct elements in the same component, e.g. title and progress bar
+
+For components where `medium` is too dense use `large`. Should _never_ be used as a spacing between sections.
+
+For spacing between sections or between components that are _not_ directly linked use `xlarge`.
 
 <DesignTokensTable tokensGroup="spacing" />
 
@@ -90,13 +104,15 @@ Use to adjust the distance between text characters.
 
 ### Line Heights
 
-Use to set the distance between lines of text. For long blocks of text use `relaxed`. For short paragraphs be free to use `default`. For one-liners, such as labels, use `tight`.
+Use to set the distance between lines of text.
+
+For long blocks of text use `relaxed`. For short paragraphs be free to use `default`. For one-liners, such as labels, use `tight`.
 
 <DesignTokensTable tokensGroup="lineHeights" />
 
 ### Opacity
 
-Use to change element transparency. For muted colors rather use predefined color tokens, over setting opacity. For disabled elements use `high` opacity.
+Use to change element transparency. For muted colors prefer to use predefined color tokens, over setting the opacity. For disabled elements use `high` opacity.
 
 <DesignTokensTable tokensGroup="opacity" />
 
