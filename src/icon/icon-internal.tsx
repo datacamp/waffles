@@ -6,14 +6,18 @@ const sizeMap = {
   xsmall: 12,
 };
 
-type IconBaseProps = {
+type IconInternalProps = {
   /* Defines the size of the icon. In general use default `medium` size. */
   size?: 'medium' | 'small' | 'xsmall';
   /* [skip docs] */
   children: React.ReactNode;
 } & React.SVGAttributes<SVGElement>;
 
-function IconBase({ size = 'medium', children, ...restProps }: IconBaseProps) {
+function IconInternal({
+  size = 'medium',
+  children,
+  ...restProps
+}: IconInternalProps) {
   const numericSize = sizeMap[size];
 
   return (
@@ -28,4 +32,4 @@ function IconBase({ size = 'medium', children, ...restProps }: IconBaseProps) {
   );
 }
 
-export default IconBase;
+export default IconInternal;

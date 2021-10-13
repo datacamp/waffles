@@ -70,7 +70,7 @@ function componentInnerContent(svgIcon) {
 
 // Generate React component based on provided SVG content
 function componentFromSvg(componentName, svgIcon) {
-  return `import Icon from './icon-base';
+  return `import Icon from './icon-internal';
 
   type ${componentName}Props = Omit<React.ComponentProps<typeof Icon>, 'children'>;
 

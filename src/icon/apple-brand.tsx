@@ -1,4 +1,4 @@
-import Icon from './icon-base';
+import Icon from './icon-internal';
 
 type AppleBrandProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
 

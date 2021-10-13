@@ -1,4 +1,4 @@
-import Icon from './icon-base';
+import Icon from './icon-internal';
 
 type AssignmentInvertedProps = Omit<
   React.ComponentProps<typeof Icon>,

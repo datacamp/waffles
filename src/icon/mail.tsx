@@ -1,4 +1,4 @@
-import Icon from './icon-base';
+import Icon from './icon-internal';
 
 type MailProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
 
