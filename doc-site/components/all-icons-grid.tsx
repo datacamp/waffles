@@ -76,7 +76,7 @@ function IconPreview({
 function AllIconsGrid() {
   const { regular, inverted } = groupedIcons(allIcons);
 
-  const [allLabelsVisible, setLabelsVisiblity] = useState(true);
+  const [allLabelsVisible, setLabelsVisiblity] = useState(false);
 
   return (
     <section css={wraperStyle}>
@@ -114,7 +114,7 @@ function AllIconsGrid() {
           iconLeft={allLabelsVisible ? <Hidden /> : <Visible />}
           onClick={() => setLabelsVisiblity(!allLabelsVisible)}
         >
-          {allLabelsVisible ? 'Hide' : 'Show'} Labels
+          {allLabelsVisible ? 'Hide' : 'Show'} Names
         </Button>
       </PreviewControls>
     </section>
