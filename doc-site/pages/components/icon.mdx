@@ -1,11 +1,62 @@
 import Layout from '../../components/page-layout';
+import BestPractices from '../../components/best-practices';
 import AllIconsGrid from '../../components/all-icons-grid';
+import PropsTable from '../../components/props-table';
 
 export default Layout;
 
 # Icon
 
-🚧 This page is **under construction**.
+An icon visually indicates available actions or options. Icons help the user more easily understand common interaction patterns.
+
+## Best Practices
+
+### General
+
+The main purpose of an icon is to clarify the content by providing a visual cue and improve the scannability of the user interface. The icon should _never_ be used to replace a name of a product or feature. Very often icon helps enhance the button's message.
+
+Icons can also help save screen real-estate in tight user interfaces.
+
+Icons are available in three different sizes: `medium`, `small`, and `xsmall`. In general default, `medium` size should be used. Use other icon sizes together with smaller text sizes.
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - in general, an icon should be placed near a label or title
+    - give the icon a text equivalent if its purpose isn’t conveyed in any other way
+    - the label should be short and match the meaning of the icon
+    - use an icon to draw attention to important action or section of an app
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - overuse icons&ndash;they draw a lot of attention, which quickly results in a user interface that is visually overwhelming and distracting
+
+  </BestPractices.Discouraged>
+</BestPractices>
+
+### Icon is not a Button
+
+An icon is an image only, therefore by default it doesn't have any label or title, and is hidden from assistive technologies, such as screen readers. If for some reason a description for assistive technologies must be provided explicitly use the `aria-label` attribute.
+
+An icon usally is used together with a button. In that case use [Button](/components/button) component and provided icon via `icon`, `iconLeft` or `iconRight` props. Similarly, it could enhance [Link](/components/link), to indicate it's external.
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use the icon-only button for universally understood actions, like a `Trash` icon representing deletion
+    - for icon-only Waffles button provide icon via `icon` prop and specify the accessible description with `aria-label` attribute
+    - to enhance Waffles button or link with an icon provide it via `iconLeft` or `iconRight` prop
+    - use default `medium` icon size with a button
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use icons commonly associated with actions, such as `AddCircle` or `Cross`, in places where the user can't interact with them, which can lead to frustration when nothing happens
+    - directly provide event handlers such as `onClick`&ndash;use button with icon
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## All Available Icons
 
