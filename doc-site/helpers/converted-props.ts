@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 
+const SKIP_DOCS_FLAG = '[skip docs]';
+
 type PropMetadata = {
   name: string;
   type: string;
@@ -138,18 +140,21 @@ function formattedDescription(
   return comments[0].value.replace(/\n/g, ' ').trim();
 }
 
-// Simplify props structure
+// Simplify props structure and skip marked props
 function transformedRawProps(propsMetadata: PropRawMetadata[]): PropMetadata[] {
   return propsMetadata.reduce<PropMetadata[]>((props, metadata) => {
-    // Omit props such as aria-label
-    if (metadata.key.name.includes('-')) {
+    const description =
+      metadata.leadingComments &&
+      formattedDescription(metadata.leadingComments);
+    // Omit props marked with [skip docs]
+    if (description && description.includes(SKIP_DOCS_FLAG)) {
       return props;
     }
 
     return props.concat({
       name: metadata.key.name,
-      ...(metadata.leadingComments && {
-        description: formattedDescription(metadata.leadingComments),
+      ...(description && {
+        description,
       }),
       type: formattedType(metadata),
       isOptional: metadata.optional,

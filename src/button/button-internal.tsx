@@ -12,7 +12,7 @@ type ButtonBaseProps = {
   size?: 'small' | 'medium' | 'large';
   /* Allows button to grow to the width of its container. */
   fullWidth?: boolean;
-  /* Sets the style of the button suitable for dark backrounds. */
+  /* Sets the style of the button suitable for dark backgrounds. */
   inverted?: boolean;
 };
 
@@ -33,6 +33,7 @@ type ButtonNoIconProps = {
   iconLeft?: React.ReactNode;
   /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles of default `medium` size, or custom component. */
   iconRight?: React.ReactNode;
+  /* [skip docs] */
   'aria-label'?: string;
 } & ButtonBaseProps;
 

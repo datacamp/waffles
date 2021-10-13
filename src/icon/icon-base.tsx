@@ -7,7 +7,9 @@ const sizeMap = {
 };
 
 type IconBaseProps = {
+  /* Defines the size of the icon. In general use default `medium` size. */
   size?: 'medium' | 'small' | 'xsmall';
+  /* [skip docs] */
   children: React.ReactNode;
 } & React.SVGAttributes<SVGElement>;
 
