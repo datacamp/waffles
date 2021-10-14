@@ -6,3 +6,37 @@ export default Layout;
 # Setup
 
 🚧 This page is **under construction**.
+
+## For Engineers
+
+Waffles aims to bring order and consistency to all DataCamp products. Waffles comes with React web component library which is available on npm as [@datacamp/waffles](https://www.npmjs.com/package/@datacamp/waffles). It ships with [typescript](https://www.typescriptlang.org/) support out of the box. No additional type definitions must be installed. For styling it uses [emotion](https://emotion.sh/docs/introduction) component-oriented CSS-in-JS solution.
+
+### Installation
+
+Run the following command to install the component library:
+
+```bash
+# with yarn
+yarn add @datacamp/waffles
+
+# with npm
+npm install @datacamp/waffles
+```
+
+Install peer dependencies, if you haven't already:
+
+```bash
+# with yarn
+yarn add react react-dom @emotion/react
+
+# with npm
+npm install react react-dom @emotion/react
+```
+
+### Usage
+
+Simply import the appropriate component directly in your React project:
+
+```js
+import { Button } from '@datacamp/waffles/button';
+```
