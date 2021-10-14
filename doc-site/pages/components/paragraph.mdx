@@ -1,7 +1,50 @@
+import * as ParagraphExports from '@datacamp/waffles/paragraph';
+
 import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/paragraph/playground-config';
+import Variants from '../../examples/paragraph/variants';
+import Sizes from '../../examples/paragraph/sizes';
+import Inverted from '../../examples/paragraph/inverted';
 
 export default Layout;
 
 # Paragraph
 
 🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Variants" path="paragraph/variants">
+  <Variants />
+</Example>
+
+<Example title="Inverted" path="paragraph/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+<Example title="Sizes" path="paragraph/sizes">
+  <Sizes />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+In addition to all custom props listed below, `Paragraph` accepts all props regular `HTMLParagrap` would, such as `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/paragraph/paragraph')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={ParagraphExports} path="@datacamp/waffles/paragraph" />
