@@ -1,8 +1,8 @@
 function formattedModuleExports(
-  module: Record<string, unknown>,
+  module: Record<string, unknown> | string[],
   path: string,
 ): string {
-  const moduleExports = Object.keys(module);
+  const moduleExports = Array.isArray(module) ? module : Object.keys(module);
   const numberOfExports = moduleExports.length;
 
   // Depending on number of exports fit everything into single line or format into multiline code sample

@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
-import { Paragraph } from '@datacamp/waffles/paragraph';
 import formattedModuleExports from '../helpers/formatted-module-exports';
 import CodePreview from './code-preview';
 import basicTheme from './editor-theme';
@@ -12,22 +11,20 @@ const previewStyle = css`
 `;
 
 type ImportsProps = {
-  module: Record<string, unknown>;
+  module: Record<string, unknown> | string[];
   path: string;
 };
 
+// Create import list based on an input provided via module prop
+// For auto generated imports provide all exports from a module
+// For manually specified imports provide the array of names
 function Imports({ module, path }: ImportsProps) {
   return (
-    <>
-      <Paragraph>
-        You can import following components or utilities from this module:
-      </Paragraph>
-      <CodePreview css={previewStyle}>
-        <Highlight theme={basicTheme}>
-          {formattedModuleExports(module, path)}
-        </Highlight>
-      </CodePreview>
-    </>
+    <CodePreview css={previewStyle}>
+      <Highlight theme={basicTheme}>
+        {formattedModuleExports(module, path)}
+      </Highlight>
+    </CodePreview>
   );
 }
 

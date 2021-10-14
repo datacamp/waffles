@@ -3,6 +3,7 @@ import BestPractices from '../../components/best-practices';
 import AllIconsGrid from '../../components/all-icons-grid';
 import Example from '../../components/example';
 import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
 
 import Sizes from '../../examples/icon/sizes';
 import InAButton from '../../examples/icon/in-a-button';
@@ -49,7 +50,7 @@ An icon usally is used together with a button. In that case use [Button](/compon
 <BestPractices>
   <BestPractices.Recommended>
 
-    - use the icon-only button for universally understood actions, like a `Trash` icon representing deletion
+    - be free to use the icon-only button for universally understood actions, like a `Trash` icon representing deletion
     - for icon-only Waffles button provide icon via `icon` prop and specify the accessible description with `aria-label` attribute
     - to enhance Waffles button or link with an icon provide it via `iconLeft` or `iconRight` prop
     - use default `medium` icon size with a button
@@ -88,3 +89,9 @@ In addition to `size` prop listed below, icons accept all props regular `SVGElem
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/icon/icon-internal')}
 />
+
+## Imports
+
+You can import any existing icon as a separate component. For example to import `AddCircle` icon use:
+
+<Imports module={['AddCircle']} path="@datacamp/waffles/icon" />
