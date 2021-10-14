@@ -6,6 +6,7 @@ import slugify from 'slugify';
 
 import { tokens } from '@datacamp/waffles/tokens';
 import { Code as CodeBase } from '@datacamp/waffles/code';
+import { CodeBlock as CodeBlockBase } from '@datacamp/waffles/code-block';
 import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
@@ -101,6 +102,20 @@ function Code({ children }: TextProps) {
   return <CodeBase>{children}</CodeBase>;
 }
 
+const codeBlockStyle = css`
+  margin-bottom: ${tokens.spacing.small};
+
+  & code {
+    white-space: pre;
+    margin: 0;
+    padding: 0;
+  }
+`;
+
+function CodeBlock({ children }: TextProps) {
+  return <CodeBlockBase css={codeBlockStyle}>{children}</CodeBlockBase>;
+}
+
 const markdownElements = {
   h1: H1,
   h2: H2,
@@ -109,7 +124,7 @@ const markdownElements = {
   p: Paragraph,
   a: RegularLink,
   code: Code,
-  inlineCode: Code,
+  pre: CodeBlock,
   ul: List,
   li: List.Item,
 };
