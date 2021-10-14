@@ -23,6 +23,7 @@ const wrapperStyle = css`
 const mainStyle = css`
   background-color: ${tokens.colors.beigeSubtle};
   flex-grow: 1;
+  overflow: hidden;
 `;
 
 const footerStyle = css`
