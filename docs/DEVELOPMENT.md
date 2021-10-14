@@ -4,7 +4,7 @@ All **Waffles** components and their tests exist in the `src` directory with mat
 
 ## 🏆 Core Principles
 
-1. Release process is fully **automatic**, including publishing to npm, version bumps, and changelog generation
+1. Release process is fully **automated**, including publishing to npm, version bumps, and changelog generation
 2. Has a lightweight isolated **component development environment** — Workbench
 3. Official documentation and Workbench consumes the **same modules** that are later published to npm
 4. All tests are **co-located** with components, both unit and e2e stories
@@ -55,6 +55,21 @@ To update the official **Waffles** documentation run `yarn doc:dev` then navigat
 All documentation is built using the [NextJS](https://nextjs.org/docs) framework. Pages are placed in `doc-site/pages` directory. For writing component documentation we use [mdx](https://mdxjs.com/), a flavor of markdown, which is accessible for technical and non-technical people.
 
 Components used internally by the documentation can be found in the `doc-site/components` folder.
+
+### Component Props
+
+Each prop of each component should be documented by putting appropriate comment above it. Afterwards preview of available props (via `PropsTable`) could be auto-generated.
+
+```ts
+type ButtonProps = {
+  /* Defines the size of the button. In most cases default `medium` size should be used. */
+  size?: 'small' | 'medium' | 'large';
+  /* [skip docs] */
+  children: React.ReactNode;
+};
+```
+
+In the comments regular markdown can be used. If for whatever reason you don't want a prop to appear in auto-generated preview put **[skip docs]** above it.
 
 ## 🧪 Tests
 
