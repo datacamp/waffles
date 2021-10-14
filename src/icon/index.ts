@@ -98,6 +98,7 @@ export { default as InfoCircle } from './info-circle';
 export { default as InstagramBrand } from './instagram-brand';
 export { default as Interface } from './interface';
 export { default as Introduction } from './introduction';
+export { default as KaggleBrand } from './kaggle-brand';
 export { default as Lab } from './lab';
 export { default as LeanpubBrand } from './leanpub-brand';
 export { default as Learn } from './learn';
