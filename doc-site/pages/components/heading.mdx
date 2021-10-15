@@ -1,7 +1,45 @@
+import * as HeadingExports from '@datacamp/waffles/heading';
+
 import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/heading/playground-config';
+import Sizes from '../../examples/heading/sizes';
+import Inverted from '../../examples/heading/inverted';
 
 export default Layout;
 
 # Heading
 
 🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Sizes" path="heading/sizes">
+  <Sizes />
+</Example>
+
+<Example title="Inverted" path="heading/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+In addition to all custom props listed below, `Heading` accepts all props regular `HTMLHeading` would, such as `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/heading/heading')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={HeadingExports} path="@datacamp/waffles/heading" />
