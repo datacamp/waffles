@@ -4,17 +4,23 @@ import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
 const linkBaseStyle = css`
+  display: inline-flex;
+  align-items: baseline;
+  vertical-align: bottom;
   text-decoration: none;
+  font-size: inherit;
   font-family: ${tokens.fontFamilies.sansSerif};
   font-weight: ${tokens.fontWeights.bold};
-  font-size: ${tokens.fontSizes.medium};
   line-height: ${tokens.lineHeights.relaxed};
+  padding-left: 2px;
+  padding-right: 2px;
   outline: 0;
   border-radius: ${tokens.borderRadius.medium};
   transition: box-shadow 125ms ease-out, background-color 125ms ease-out;
 
   & svg {
-    vertical-align: text-top;
+    align-self: center;
+    margin-top: -1px;
   }
 `;
 
