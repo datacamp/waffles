@@ -12,8 +12,6 @@ const linkBaseStyle = css`
   font-family: ${tokens.fontFamilies.sansSerif};
   font-weight: ${tokens.fontWeights.bold};
   line-height: ${tokens.lineHeights.relaxed};
-  padding-left: 2px;
-  padding-right: 2px;
   outline: 0;
   border-radius: ${tokens.borderRadius.medium};
   transition: box-shadow 125ms ease-out, background-color 125ms ease-out;
