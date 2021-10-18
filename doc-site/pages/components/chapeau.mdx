@@ -1,7 +1,45 @@
+import * as ChapeauExports from '@datacamp/waffles/chapeau';
+
 import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/chapeau/playground-config';
+import BasicUsage from '../../examples/chapeau/basic-usage';
+import Inverted from '../../examples/chapeau/inverted';
 
 export default Layout;
 
 # Chapeau
 
 🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="chapeau/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Inverted" path="chapeau/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+In addition to all custom props listed below, `Chapeau` accepts all props regular `HTMLParagraph` would, such as `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/chapeau/chapeau')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={ChapeauExports} path="@datacamp/waffles/chapeau" />
