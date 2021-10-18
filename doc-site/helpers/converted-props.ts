@@ -165,7 +165,7 @@ function transformedRawProps(propsMetadata: PropRawMetadata[]): PropMetadata[] {
 // List required props first, sort all props by name
 function sortByPropName(propsMetadata: PropMetadata[]): PropMetadata[] {
   return propsMetadata.sort((prop1, prop2) => {
-    return prop1.name > prop2.name ? 1 : prop1.name > prop2.name ? -1 : 0;
+    return prop1.name > prop2.name ? 1 : prop1.name < prop2.name ? -1 : 0;
   });
 }
 
