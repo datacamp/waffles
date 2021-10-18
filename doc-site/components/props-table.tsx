@@ -9,7 +9,7 @@ import Table from './table';
 const POLYMORPHIC_METADATA = {
   name: 'as',
   description:
-    'The element used to render this component, e.g. `a`, or react router `Link`.',
+    'The element used to render this component, e.g. `a` or react router `Link`.',
   type: 'React.ElementType',
   isOptional: true,
 };

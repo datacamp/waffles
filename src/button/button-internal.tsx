@@ -17,7 +17,7 @@ type ButtonBaseProps = {
 };
 
 type ButtonIconOnlyProps = {
-  /* An icon displayed as the only content of the button. Because of that `aria-label` attribute must be specified. Could be any [icon](/components/icon) from Waffles of default `medium` size, or custom component. */
+  /* An icon displayed as the only content of the button. Because of that `aria-label` attribute must be specified. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
   icon: React.ReactNode;
   children?: never;
   iconLeft?: never;
@@ -29,9 +29,9 @@ type ButtonNoIconProps = {
   icon?: never;
   /* The content inside the button. Most of the time should be a plain text. */
   children: React.ReactNode;
-  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles of default `medium` size, or custom component. */
+  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
   iconLeft?: React.ReactNode;
-  /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles of default `medium` size, or custom component. */
+  /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
   iconRight?: React.ReactNode;
   /* [skip docs] */
   'aria-label'?: string;
