@@ -2,17 +2,35 @@
 
 exports[` 1`] = `
 .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  vertical-align: bottom;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-size: inherit;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1.5;
+  padding-left: 2px;
+  padding-right: 2px;
   outline: 0;
   border-radius: 4px;
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
   color: #0075AD;
+}
+
+.emotion-0 svg {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-top: -1px;
 }
 
 .emotion-0:hover {
@@ -39,17 +57,35 @@ exports[` 1`] = `
 
 exports[` 2`] = `
 .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  vertical-align: bottom;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-size: inherit;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1.5;
+  padding-left: 2px;
+  padding-right: 2px;
   outline: 0;
   border-radius: 4px;
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
   color: #009BD8;
+}
+
+.emotion-0 svg {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-top: -1px;
 }
 
 .emotion-0:hover {
@@ -76,18 +112,36 @@ exports[` 2`] = `
 
 exports[`Link renders snapshot of focused state 1`] = `
 .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  vertical-align: bottom;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-size: inherit;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1.5;
+  padding-left: 2px;
+  padding-right: 2px;
   outline: 0;
   border-radius: 4px;
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
   color: #0075AD;
   box-shadow: 0 0 0 2px #009BD8;
+}
+
+.emotion-0 svg {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-top: -1px;
 }
 
 .emotion-0:hover {
