@@ -12,6 +12,10 @@ const linkBaseStyle = css`
   outline: 0;
   border-radius: ${tokens.borderRadius.medium};
   transition: box-shadow 125ms ease-out, background-color 125ms ease-out;
+
+  & svg {
+    vertical-align: text-top;
+  }
 `;
 
 type LinkStyleOptions = {
