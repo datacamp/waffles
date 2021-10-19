@@ -1,7 +1,45 @@
+import * as CodeExports from '@datacamp/waffles/code';
+
 import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/code/playground-config';
+import Sizes from '../../examples/code/sizes';
+import Inverted from '../../examples/code/inverted';
 
 export default Layout;
 
 # Code
 
 🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Sizes" path="code/sizes">
+  <Sizes />
+</Example>
+
+<Example title="Inverted" path="code/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+In addition to all custom props listed below, `Code` accepts all props regular `HTMLPre` would, such as `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/code/code')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={CodeExports} path="@datacamp/waffles/code" />
