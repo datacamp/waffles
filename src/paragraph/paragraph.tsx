@@ -6,7 +6,7 @@ type ParagraphProps = {
   children: React.ReactNode;
   /* Defines the variant of the paragraph. */
   variant?: 'primary' | 'secondary';
-  /* Defines the size of the paragraph. In general default `medium` size should be used. */
+  /* Defines the font size of the paragraph. In general default `medium` size should be used. */
   size?: 'small' | 'medium' | 'large';
   /* Sets the style of the paragraph suitable for dark backgrounds. */
   inverted?: boolean;
