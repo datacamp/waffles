@@ -17,8 +17,6 @@ exports[` 1`] = `
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
   line-height: 1.5;
-  padding-left: 2px;
-  padding-right: 2px;
   outline: 0;
   border-radius: 4px;
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
@@ -72,8 +70,6 @@ exports[` 2`] = `
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
   line-height: 1.5;
-  padding-left: 2px;
-  padding-right: 2px;
   outline: 0;
   border-radius: 4px;
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
@@ -127,8 +123,6 @@ exports[`Link renders snapshot of focused state 1`] = `
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
   line-height: 1.5;
-  padding-left: 2px;
-  padding-right: 2px;
   outline: 0;
   border-radius: 4px;
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
