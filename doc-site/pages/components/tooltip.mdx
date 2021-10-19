@@ -8,6 +8,8 @@ import Imports from '../../components/imports';
 
 import playgroundConfig from '../../examples/tooltip/playground-config';
 import BasicUsage from '../../examples/tooltip/basic-usage';
+import WithComplexContent from '../../examples/tooltip/with-complex-content';
+import WithinInlineText from '../../examples/tooltip/within-inline-text';
 import Inverted from '../../examples/tooltip/inverted';
 
 export default Layout;
@@ -20,6 +22,18 @@ export default Layout;
 
 <Example title="Basic Usage" path="tooltip/basic-usage">
   <BasicUsage />
+</Example>
+
+<Example
+  title="With Complex Content"
+  path="tooltip/with-complex-content"
+  minHeight={128}
+>
+  <WithComplexContent />
+</Example>
+
+<Example title="Within Inline Text" path="tooltip/within-inline-text">
+  <WithinInlineText />
 </Example>
 
 <Example title="Inverted" path="tooltip/inverted" darkPreview>
