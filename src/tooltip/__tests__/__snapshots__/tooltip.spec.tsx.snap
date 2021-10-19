@@ -18,7 +18,7 @@ exports[`Tooltip renders snapshot of bottom placement 1`] = `
   left: 0;
   z-index: 5000;
   left: 0px;
-  top: calc(0px + 8px);
+  top: calc(0px + 0px + 8px);
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
@@ -54,7 +54,7 @@ exports[`Tooltip renders snapshot of bottomLeft placement 1`] = `
   left: 0;
   z-index: 5000;
   left: 0px;
-  top: calc(0px + 8px);
+  top: calc(0px + 0px + 8px);
   background-color: #05192D;
   color: #FFFFFF;
 }
@@ -86,7 +86,7 @@ exports[`Tooltip renders snapshot of bottomRight placement 1`] = `
   left: 0;
   z-index: 5000;
   left: 0px;
-  top: calc(0px + 8px);
+  top: calc(0px + 0px + 8px);
   -webkit-transform: translate(-100%);
   -moz-transform: translate(-100%);
   -ms-transform: translate(-100%);
@@ -122,7 +122,7 @@ exports[`Tooltip renders snapshot of inverted variant 1`] = `
   left: 0;
   z-index: 5000;
   left: 0px;
-  top: calc(0px + 8px);
+  top: calc(0px + 0px + 8px);
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
@@ -230,7 +230,7 @@ exports[`Tooltip renders snapshot of top placement 1`] = `
   left: 0;
   z-index: 5000;
   left: 0px;
-  top: calc(0px - 8px);
+  top: calc(0px + 0px - 8px);
   -webkit-transform: translate(-50%, -100%);
   -moz-transform: translate(-50%, -100%);
   -ms-transform: translate(-50%, -100%);
@@ -266,7 +266,7 @@ exports[`Tooltip renders snapshot of topLeft placement 1`] = `
   left: 0;
   z-index: 5000;
   left: 0px;
-  top: calc(0px - 8px);
+  top: calc(0px + 0px - 8px);
   -webkit-transform: translate(0, -100%);
   -moz-transform: translate(0, -100%);
   -ms-transform: translate(0, -100%);
@@ -302,7 +302,7 @@ exports[`Tooltip renders snapshot of topRight placement 1`] = `
   left: 0;
   z-index: 5000;
   left: 0px;
-  top: calc(0px - 8px);
+  top: calc(0px + 0px - 8px);
   -webkit-transform: translate(-100%, -100%);
   -moz-transform: translate(-100%, -100%);
   -ms-transform: translate(-100%, -100%);
