@@ -1,7 +1,41 @@
+import * as TextExports from '@datacamp/waffles/text';
+
 import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/text/playground-config';
+import BasicUsage from '../../examples/text/basic-usage';
 
 export default Layout;
 
 # Text
 
 🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="text/basic-usage">
+  <BasicUsage />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+In addition to all custom props listed below, `Text` accepts all props regular `HTMLSpan` would, such as `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/text/text-internal')}
+  isPolymorphic
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={TextExports} path="@datacamp/waffles/text" />
