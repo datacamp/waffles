@@ -17,8 +17,11 @@ import useId from './useId';
 const REST_TIMER = 125;
 
 type Tooltip = {
-  children: JSX.Element; // Allow only single child to be passed
+  /* The content that will trigger the tooltip. Must be single element. */
+  children: JSX.Element;
+  /* The content of the tooltip. */
   content: React.ReactNode;
+  /* Sets the tooltip's position relative to the trigger. */
   placement?:
     | 'bottom'
     | 'top'
@@ -28,7 +31,9 @@ type Tooltip = {
     | 'bottomRight'
     | 'topLeft'
     | 'topRight';
+  /* Sets the distance between tooltip and it's trigger. By default `tokens.spacing.small` [design token](/foundation/design-tokens/) is used. */
   offset?: string;
+  /* Sets the style of the tooltip suitable for dark backgrounds. */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
