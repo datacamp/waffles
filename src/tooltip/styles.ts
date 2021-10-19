@@ -35,44 +35,45 @@ export function tooltipStyle({
 }: TooltipStyleOptions) {
   const { left, right, top, bottom, width, height } = triggerMeasurements;
 
+  // Because Portal is used it's safe to use window scrollY property
   const positionMap: PositionMap = {
     bottom: css`
       left: ${(left + right) / 2}px;
-      top: calc(${bottom}px + ${offset});
+      top: calc(${bottom}px + ${window.scrollY}px + ${offset});
       transform: translate(-50%, 0);
     `,
     bottomLeft: css`
       left: ${left}px;
-      top: calc(${bottom}px + ${offset});
+      top: calc(${bottom}px + ${window.scrollY}px + ${offset});
     `,
     bottomRight: css`
       left: ${left + width}px;
-      top: calc(${bottom}px + ${offset});
+      top: calc(${bottom}px + ${window.scrollY}px + ${offset});
       transform: translate(-100%);
     `,
     left: css`
       left: calc(${left}px - ${offset});
-      top: ${top + height / 2}px;
+      top: ${top + height / 2 + window.scrollY}px;
       transform: translate(-100%, -50%);
     `,
     right: css`
       left: calc(${right}px + ${offset});
-      top: ${top + height / 2}px;
+      top: ${top + height / 2 + window.scrollY}px;
       transform: translate(0, -50%);
     `,
     top: css`
       left: ${(left + right) / 2}px;
-      top: calc(${top}px - ${offset});
+      top: calc(${top}px + ${window.scrollY}px - ${offset});
       transform: translate(-50%, -100%);
     `,
     topLeft: css`
       left: ${left}px;
-      top: calc(${top}px - ${offset});
+      top: calc(${top}px + ${window.scrollY}px - ${offset});
       transform: translate(0, -100%);
     `,
     topRight: css`
       left: ${left + width}px;
-      top: calc(${top}px - ${offset});
+      top: calc(${top}px + ${window.scrollY}px - ${offset});
       transform: translate(-100%, -100%);
     `,
   };
