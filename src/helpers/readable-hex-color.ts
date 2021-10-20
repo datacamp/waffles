@@ -3,7 +3,7 @@ import hexColorLuminance from './hex-color-luminance';
 import isHexColor from './is-hex-color';
 
 /**
- * For best contrast depending whether provided HEX color is dark or light return white or navy color from design colors.
+ * For the best contrast depending whether provided HEX color is dark or light return white or navy color from design tokens.
  * It is possible to specify custom colors.
  *
  * @param hexColor HEX color code, starts with hash followed by either 3 or 6 digits
