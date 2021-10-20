@@ -28,7 +28,7 @@ function Example() {
         <Portal>
           <div css={contentStyle}>
             <Heading>The Portal</Heading>
-            <Paragraph>This is the portal content.</Paragraph>
+            <Paragraph>Completely new dimension.</Paragraph>
             <Button onClick={() => setIsOpened(false)}>Close Portal</Button>
           </div>
         </Portal>
