@@ -1,4 +1,5 @@
 const { resolve } = require('path');
+const remarkGfm = require('remark-gfm');
 
 module.exports = {
   reactStrictMode: true,
@@ -16,7 +17,14 @@ module.exports = {
 
     config.module.rules.push({
       test: /\.mdx$/,
-      use: [{ loader: 'xdm/webpack.cjs', options: {} }],
+      use: [
+        {
+          loader: 'xdm/webpack.cjs',
+          options: {
+            remarkPlugins: [remarkGfm],
+          },
+        },
+      ],
     });
 
     return config;
