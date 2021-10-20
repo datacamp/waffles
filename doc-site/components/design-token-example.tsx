@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
-import { Text } from '@datacamp/waffles/text';
+import { Paragraph } from '@datacamp/waffles/paragraph';
 import Table from './table';
 
 const exampleCellStyle = css`
@@ -32,6 +32,10 @@ const surfaceStyle = css`
   background-color: ${tokens.colors.beige};
   transform: translateX(-30px) rotate(-45deg);
   position: absolute;
+`;
+
+const textStyle = css`
+  margin-bottom: 0;
 `;
 
 type ExampleProps = {
@@ -91,9 +95,9 @@ function TypographyExample({
 }: TypographyExampleProps) {
   return (
     <Table.Cell>
-      <Text {...restProps}>
+      <Paragraph css={textStyle} {...restProps}>
         The quick brown fox jumps {lineBreak && <br />}over the lazy dog.
-      </Text>
+      </Paragraph>
     </Table.Cell>
   );
 }
