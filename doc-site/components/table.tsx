@@ -82,12 +82,14 @@ function TableCell(props: TableCellProps) {
 
 type TableProps = {
   children: React.ReactNode;
-};
+} & React.HTMLAttributes<HTMLTableElement>;
 
-function Table({ children }: TableProps) {
+function Table({ children, ...restProps }: TableProps) {
   return (
     <div css={wrapperStyle}>
-      <table css={tableStyle}>{children}</table>
+      <table css={tableStyle} {...restProps}>
+        {children}
+      </table>
     </div>
   );
 }

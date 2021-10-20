@@ -12,16 +12,17 @@ import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
 
 import textFromChildren from '../helpers/text-from-children';
+import TableBase from './table';
 import Bookmark from './bookmark';
 import List from './list';
 
 // Use custom Waffles components in markdown
 
-type TextProps = {
+type ContentProps = {
   children: React.ReactNode;
 };
 
-function H1({ children }: TextProps) {
+function H1({ children }: ContentProps) {
   return (
     <>
       <Head>
@@ -37,7 +38,7 @@ const secondaryHeadingStyle = css`
 `;
 
 // Allow secondary heading to be bookmarked
-function H2({ children }: TextProps) {
+function H2({ children }: ContentProps) {
   const headingId = slugify(textFromChildren(children), { lower: true });
 
   return (
@@ -57,7 +58,7 @@ const headingStyle = css`
   }
 `;
 
-function H3({ children }: TextProps) {
+function H3({ children }: ContentProps) {
   return (
     <Heading size="large" css={headingStyle}>
       {children}
@@ -65,7 +66,7 @@ function H3({ children }: TextProps) {
   );
 }
 
-function H4({ children }: TextProps) {
+function H4({ children }: ContentProps) {
   return (
     <Heading size="medium" css={headingStyle}>
       {children}
@@ -79,7 +80,7 @@ const paragraphStyle = css`
   }
 `;
 
-function Paragraph({ children }: TextProps) {
+function Paragraph({ children }: ContentProps) {
   return <ParagraphBase css={paragraphStyle}>{children}</ParagraphBase>;
 }
 
@@ -98,7 +99,7 @@ function RegularLink({ children, href }: RegularLinkProps) {
   );
 }
 
-function Code({ children }: TextProps) {
+function Code({ children }: ContentProps) {
   return <CodeBase>{children}</CodeBase>;
 }
 
@@ -112,8 +113,16 @@ const codeBlockStyle = css`
   }
 `;
 
-function CodeBlock({ children }: TextProps) {
+function CodeBlock({ children }: ContentProps) {
   return <CodeBlockBase css={codeBlockStyle}>{children}</CodeBlockBase>;
+}
+
+const tableStyle = css`
+  width: auto;
+`;
+
+function Table({ children }: ContentProps) {
+  return <TableBase css={tableStyle}>{children}</TableBase>;
 }
 
 const markdownElements = {
@@ -127,6 +136,9 @@ const markdownElements = {
   pre: CodeBlock,
   ul: List,
   li: List.Item,
+  table: Table,
+  th: TableBase.HeadCell,
+  td: TableBase.Cell,
 };
 
 export default markdownElements;
