@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 
 type PortalProps = {
+  /* The content to render into the portal. */
   children: React.ReactNode;
 };
 
