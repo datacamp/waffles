@@ -1,7 +1,33 @@
+import * as PortalExports from '@datacamp/waffles/portal';
+
 import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import BasicUsage from '../../examples/portal/basic-usage';
 
 export default Layout;
 
 # Portal
 
 🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="portal/basic-usage">
+  <BasicUsage />
+</Example>
+
+## Props
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/portal/portal')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={PortalExports} path="@datacamp/waffles/portal" />
