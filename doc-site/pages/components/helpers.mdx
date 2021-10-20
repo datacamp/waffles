@@ -1,7 +1,67 @@
+import * as HelpersExports from '@datacamp/waffles/helpers';
+
 import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Imports from '../../components/imports';
+
+import MediaQueryBasicUsage from '../../examples/helpers/media-query-basic-usage';
+import HexToRgbaBasicUsage from '../../examples/helpers/hex-to-rgba-basic-usage';
+import ReadableHexColorBasicUsage from '../../examples/helpers/readable-hex-color-basic-usage';
+import ReadableHexColorCustomColors from '../../examples/helpers/readable-hex-color-custom-colors';
+import HexColorShadeBasicUsage from '../../examples/helpers/hex-color-shade-basic-usage';
 
 export default Layout;
 
 # Helpers
 
 🚧 This page is **under construction**.
+
+## mediaQuery
+
+Based on the **breakpoints** defined in [design tokens](/foundation/design-tokens) return media queries for various device viewport sizes: `small`, `medium`, and `large`. When using multiple media queries make sure to write them in correct order: put the `small` before `medium`, and `medium` before `large`.
+
+<Example title="Basic Usage" path="helpers/media-query-basic-usage">
+  <MediaQueryBasicUsage />
+</Example>
+
+## hexToRgba
+
+Converts **HEX** color to **RGBA** counterpart, with optional alpha setting. Mainly used to change opacity of the color.
+
+<Example title="Basic Usage" path="helpers/hex-to-rgba-basic-usage">
+  <HexToRgbaBasicUsage />
+</Example>
+
+## readableHexColor
+
+For the best contrast and readibility, depending whether provided **HEX** color is dark or light return `tokens.colors.white` or `tokens.colors.navy` from [design tokens](/foundation/design-tokens). It is also possible to specify custom colors.
+
+<Example title="Basic Usage" path="helpers/readable-hex-color-basic-usage">
+  <ReadableHexColorBasicUsage />
+</Example>
+
+<Example title="Custom Colors" path="helpers/readable-hex-color-custom-colors">
+  <ReadableHexColorCustomColors />
+</Example>
+
+## hexColorShade
+
+Makes **HEX** color darker or lighter without changing its opacity.
+
+<Example title="Basic Usage" path="helpers/hex-color-shade-basic-usage">
+  <HexColorShadeBasicUsage />
+</Example>
+
+## hexColorLuminance
+
+Calculates **HEX** color luminance. Useful for various accessibility color checks.
+
+## isHexColor
+
+Checks whether color is provided in **HEX** notation or not. Examples of **HEX** colors: `#05192D`, `#22E`. Examples of colors in _different_ notations: `rgb(245, 16, 0)`, `rgba(16, 8, 36, 0.4)`, `hsl(100 100% 50%)`.
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={HelpersExports} path="@datacamp/waffles/helpers" />
