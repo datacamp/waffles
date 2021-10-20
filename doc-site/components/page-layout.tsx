@@ -6,7 +6,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Button } from '@datacamp/waffles/button';
 import { ContentContainer } from '@datacamp/waffles/content-container';
 import { Edit } from '@datacamp/waffles/icon';
-import { HEADER_HEIGHT } from './constants';
+import { HEADER_HEIGHT, ARTICLE_CONTENT_WIDTH } from './constants';
 import Header from './page-header';
 import Sidebar from './sidebar';
 import Navigation from './navigation';
@@ -24,6 +24,10 @@ const mainStyle = css`
   background-color: ${tokens.colors.beigeSubtle};
   flex-grow: 1;
   overflow: hidden;
+`;
+
+const articleStyle = css`
+  max-width: ${ARTICLE_CONTENT_WIDTH};
 `;
 
 const footerStyle = css`
@@ -49,20 +53,22 @@ function PageLayout({ children }: PageLayoutProps) {
         </Sidebar>
         <main css={mainStyle}>
           <ContentContainer>
-            {children}
-            {isEditable && (
-              <footer css={footerStyle}>
-                <Button
-                  as="a"
-                  href={`${GITHUB_EDIT_URL}${pathname}.mdx`}
-                  variant="plain"
-                  size="small"
-                  iconLeft={<Edit />}
-                >
-                  Edit This Page
-                </Button>
-              </footer>
-            )}
+            <article css={articleStyle}>
+              {children}
+              {isEditable && (
+                <footer css={footerStyle}>
+                  <Button
+                    as="a"
+                    href={`${GITHUB_EDIT_URL}${pathname}.mdx`}
+                    variant="plain"
+                    size="small"
+                    iconLeft={<Edit />}
+                  >
+                    Edit This Page
+                  </Button>
+                </footer>
+              )}
+            </article>
           </ContentContainer>
         </main>
       </div>

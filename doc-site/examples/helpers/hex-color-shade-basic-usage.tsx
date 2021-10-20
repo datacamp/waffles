@@ -6,7 +6,7 @@ import { Text } from '@datacamp/waffles/text';
 
 const wrapperStyle = css`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: ${tokens.spacing.small};
 `;
 
@@ -40,12 +40,6 @@ function Example() {
   return (
     <div css={wrapperStyle}>
       <ColorCard backgroundColor={tokens.colors.green} />
-      <ColorCard
-        backgroundColor={hexColorShade(
-          tokens.colors.green,
-          tokens.opacity.medium,
-        )}
-      />
       <ColorCard
         backgroundColor={hexColorShade(tokens.colors.green, tokens.opacity.low)}
       />

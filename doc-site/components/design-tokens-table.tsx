@@ -5,7 +5,7 @@ import DesignTokenExample from './design-token-example';
 import Table from './table';
 
 const nameStyle = css`
-  width: 50%;
+  width: 40%;
 `;
 
 type DesignTokensTableProps = {
