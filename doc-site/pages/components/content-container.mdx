@@ -1,7 +1,35 @@
+import * as ContentContainerExports from '@datacamp/waffles/display';
+
 import Layout from '../../components/page-layout';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
 
 export default Layout;
 
 # Content Container
 
 🚧 This page is **under construction**.
+
+The content container aligns the main content on the page depending on the viewport size, based on `breakpoints` from [design tokens](/foundation/design-tokens):
+
+- for `small` and `medium` breakpoints, if there is side navigation, content is aligned to the left
+- for the `large` breakpoint, even if there is side navigation, content is centered
+- if there is no side navigation on the page, `noSidebar` prop should be passed, and content is always centered
+- for the `large` breakpoint padding around content is increased from `medium` to `xlarge`
+
+## Props
+
+In addition to all custom props listed below, `ContentContainer` accepts all props regular `HTMLDiv` would, such as `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/content-container/content-container')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports
+  module={ContentContainerExports}
+  path="@datacamp/waffles/content-container"
+/>
