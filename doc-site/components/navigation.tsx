@@ -16,9 +16,9 @@ function Navigation() {
       <ul css={listStyle}>
         <Category label="Overview">
           <Link href="/">Welcome</Link>
-          <Link href="/introduction/setup">Setup</Link>
-          <Link href="/introduction/roadmap">Roadmap</Link>
-          <Link href="/introduction/decision-log">Decision Log</Link>
+          <Link href="/overview/setup">Setup</Link>
+          <Link href="/overview/roadmap">Roadmap</Link>
+          <Link href="/overview/decision-log">Decision Log</Link>
         </Category>
         <Category label="Foundation">
           <Link href="/foundation/design-tokens">Design Tokens</Link>
