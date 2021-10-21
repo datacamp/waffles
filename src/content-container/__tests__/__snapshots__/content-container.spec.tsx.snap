@@ -7,17 +7,17 @@ exports[`ContentContainer renders correctly 1`] = `
   overflow: hidden;
 }
 
+@media screen and (min-width: 820px) {
+  .emotion-0 {
+    padding: 32px;
+  }
+}
+
 @media screen and (min-width: 1480px) {
   .emotion-0 {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-  }
-}
-
-@media screen and (min-width: 820px) {
-  .emotion-0 {
-    padding: 32px;
   }
 }
 
@@ -38,17 +38,17 @@ exports[`ContentContainer renders correctly when noSidebar flag is passed 1`] = 
   margin-right: auto;
 }
 
+@media screen and (min-width: 820px) {
+  .emotion-0 {
+    padding: 32px;
+  }
+}
+
 @media screen and (min-width: 1480px) {
   .emotion-0 {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-  }
-}
-
-@media screen and (min-width: 820px) {
-  .emotion-0 {
-    padding: 32px;
   }
 }
 
