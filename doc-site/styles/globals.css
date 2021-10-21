@@ -13,6 +13,10 @@ body {
   color: inherit;
 }
 
+strong {
+  font-weight: 800;
+}
+
 @font-face {
   font-family: 'Studio-Feixen-Sans';
   src: url('/fonts/StudioFeixenSansRegular-latin.woff2') format('woff2'),
