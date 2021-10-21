@@ -5,7 +5,7 @@ import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
 import markdownElements from '../components/markdown-elements';
 
 const paragraphStyle = css`
-  margin: 0;
+  margin-bottom: 0;
 `;
 
 type ParagraphProps = {
@@ -16,8 +16,11 @@ function Paragraph({ children }: ParagraphProps) {
   return <ParagraphBase css={paragraphStyle}>{children}</ParagraphBase>;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const { table, th, td, ...markdownElementsWithoutTable } = markdownElements;
+
 const propsTableMarkdownElements = {
-  ...markdownElements,
+  ...markdownElementsWithoutTable,
   p: Paragraph,
 };
 
