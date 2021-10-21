@@ -8,14 +8,14 @@ const wrapperStyle = css`
   max-width: 1000px;
   overflow: hidden;
 
+  ${mediaQuery.medium} {
+    padding: ${tokens.spacing.xlarge};
+  }
+
   ${mediaQuery.large} {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-  }
-
-  ${mediaQuery.medium} {
-    padding: ${tokens.spacing.xlarge};
   }
 `;
 
