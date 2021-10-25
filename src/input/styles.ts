@@ -9,7 +9,7 @@ export function labelStyle() {
   `;
 }
 
-export function textLabelStyle() {
+export function captionStyle() {
   return css`
     display: block;
     line-height: ${tokens.lineHeights.default};
@@ -17,7 +17,7 @@ export function textLabelStyle() {
   `;
 }
 
-export function textDescriptionStyle() {
+export function descriptionStyle() {
   return css`
     display: block;
     line-height: ${tokens.lineHeights.default};
@@ -25,7 +25,7 @@ export function textDescriptionStyle() {
   `;
 }
 
-export function wrapperStyle() {
+export function inputWrapperStyle() {
   return css`
     position: relative;
 
@@ -104,5 +104,27 @@ export function errorStyle() {
     left: 0;
     transform: translateY(20px);
     color: ${tokens.colors.redDarkText};
+  `;
+}
+
+export function requiredWrapperStyle() {
+  return css`
+    display: flex;
+  `;
+}
+
+export function requiredStyle() {
+  return css`
+    font-size: ${tokens.fontSizes.small};
+    color: ${tokens.colors.navySubtleTextOnLight};
+    flex-grow: 1;
+    text-align: right;
+  `;
+}
+
+export function requiredBulletStyle() {
+  return css`
+    font-size: ${tokens.fontSizes.medium};
+    color: ${tokens.colors.redDark};
   `;
 }

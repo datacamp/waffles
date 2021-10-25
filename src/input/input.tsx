@@ -1,14 +1,11 @@
 import React from 'react';
 
-import { Text } from '../text';
-import {
-  labelStyle,
-  textLabelStyle,
-  textDescriptionStyle,
-  wrapperStyle,
-  inputStyle,
-  errorStyle,
-} from './styles';
+import { inputWrapperStyle, inputStyle, requiredWrapperStyle } from './styles';
+import Label from './label';
+import Caption from './caption';
+import Required from './required';
+import Description from './description';
+import Error from './error';
 
 type InputProps = {
   label: string;
@@ -16,16 +13,33 @@ type InputProps = {
   error?: string;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
-function Input({ label, description, error, ...restProps }: InputProps) {
+function Input({
+  label,
+  description,
+  required,
+  error,
+  ...restProps
+}: InputProps) {
   return (
-    <label css={labelStyle()}>
-      <Text css={textLabelStyle()}>{label}</Text>
-      {description && <Text css={textDescriptionStyle()}>{description}</Text>}
-      <div css={wrapperStyle()}>
-        <input {...restProps} css={inputStyle({ hasError: !!error })} />
-        {error && <Text css={errorStyle()}>{error}</Text>}
+    <Label>
+      {required ? (
+        <div css={requiredWrapperStyle()}>
+          <Caption>{label}</Caption>
+          <Required />
+        </div>
+      ) : (
+        <Caption>{label}</Caption>
+      )}
+      {description && <Description>{description}</Description>}
+      <div css={inputWrapperStyle()}>
+        <input
+          required={required}
+          {...restProps}
+          css={inputStyle({ hasError: !!error })}
+        />
+        {error && <Error>{error}</Error>}
       </div>
-    </label>
+    </Label>
   );
 }
 
