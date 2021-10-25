@@ -5,8 +5,23 @@ import { tokens } from '../tokens';
 export function labelStyle() {
   return css`
     display: block;
-    font-weight: ${tokens.fontWeights.bold};
     width: 100%;
+  `;
+}
+
+export function textLabelStyle() {
+  return css`
+    display: block;
+    line-height: ${tokens.lineHeights.default};
+    font-weight: ${tokens.fontWeights.bold};
+  `;
+}
+
+export function textDescriptionStyle() {
+  return css`
+    display: block;
+    line-height: ${tokens.lineHeights.default};
+    margin-top: ${tokens.spacing.xsmall};
   `;
 }
 

@@ -1,22 +1,31 @@
 import React from 'react';
 
 import { Text } from '../text';
-import { labelStyle, wrapperStyle, inputStyle, errorStyle } from './styles';
+import {
+  labelStyle,
+  textLabelStyle,
+  textDescriptionStyle,
+  wrapperStyle,
+  inputStyle,
+  errorStyle,
+} from './styles';
 
 type InputProps = {
   label: string;
+  description?: string;
   error?: string;
-} & React.HTMLAttributes<HTMLInputElement>;
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
-function Input({ label, error, ...restProps }: InputProps) {
+function Input({ label, description, error, ...restProps }: InputProps) {
   return (
-    <Text as="label" css={labelStyle()}>
-      {label}
+    <label css={labelStyle()}>
+      <Text css={textLabelStyle()}>{label}</Text>
+      {description && <Text css={textDescriptionStyle()}>{description}</Text>}
       <div css={wrapperStyle()}>
         <input {...restProps} css={inputStyle({ hasError: !!error })} />
         {error && <Text css={errorStyle()}>{error}</Text>}
       </div>
-    </Text>
+    </label>
   );
 }
 
