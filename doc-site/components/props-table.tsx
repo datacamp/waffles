@@ -23,13 +23,7 @@ const nameStyle = css`
 `;
 
 const requiredMarkerStyle = css`
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: ${tokens.borderRadius.circle};
-  background-color: ${tokens.colors.red};
-  vertical-align: top;
-  margin-top: 2px;
+  color: ${tokens.colors.redDark};
   margin-left: 4px;
 `;
 
@@ -61,7 +55,9 @@ function PropsTable({ metadata, isPolymorphic = false }: PropsTableProps) {
               <Table.Cell css={nameStyle}>
                 {singleProp.name}
                 {!singleProp.isOptional && (
-                  <span aria-label="Is required" css={requiredMarkerStyle} />
+                  <span aria-label="Is required" css={requiredMarkerStyle}>
+                    &bull;
+                  </span>
                 )}
               </Table.Cell>
               <Table.Cell>{singleProp.type}</Table.Cell>
