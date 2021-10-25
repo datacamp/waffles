@@ -1,10 +1,14 @@
 import { Text } from '../text';
 import { requiredStyle, requiredBulletStyle } from './styles';
 
-function Required() {
+type RequiredProps = {
+  inverted: boolean;
+};
+
+function Required({ inverted }: RequiredProps) {
   return (
-    <Text css={requiredStyle()}>
-      <span css={requiredBulletStyle()}>&bull;</span> Required
+    <Text css={requiredStyle({ inverted })}>
+      <span css={requiredBulletStyle({ inverted })}>&bull;</span> Required
     </Text>
   );
 }

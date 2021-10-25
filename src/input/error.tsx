@@ -4,11 +4,12 @@ import { Text } from '../text';
 import { errorStyle } from './styles';
 
 type ErrorProps = {
+  inverted: boolean;
   children: React.ReactNode;
 };
 
-function Error({ children }: ErrorProps) {
-  return <Text css={errorStyle()}>{children}</Text>;
+function Error({ inverted, children }: ErrorProps) {
+  return <Text css={errorStyle({ inverted })}>{children}</Text>;
 }
 
 export default Error;

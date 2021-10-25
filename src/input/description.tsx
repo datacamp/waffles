@@ -4,11 +4,12 @@ import { Text } from '../text';
 import { descriptionStyle } from './styles';
 
 type DescriptionProps = {
+  inverted: boolean;
   children: React.ReactNode;
 };
 
-function Description({ children }: DescriptionProps) {
-  return <Text css={descriptionStyle()}>{children}</Text>;
+function Description({ inverted, children }: DescriptionProps) {
+  return <Text css={descriptionStyle({ inverted })}>{children}</Text>;
 }
 
 export default Description;

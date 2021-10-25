@@ -11,33 +11,39 @@ type InputProps = {
   label: string;
   description?: string;
   error?: string;
-} & React.InputHTMLAttributes<HTMLInputElement>;
+  size?: 'small' | 'medium' | 'large';
+  inverted?: boolean;
+} & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>;
 
 function Input({
   label,
   description,
   required,
   error,
+  size = 'medium',
+  inverted = false,
   ...restProps
 }: InputProps) {
   return (
     <Label>
       {required ? (
         <div css={requiredWrapperStyle()}>
-          <Caption>{label}</Caption>
-          <Required />
+          <Caption inverted={inverted}>{label}</Caption>
+          <Required inverted={inverted} />
         </div>
       ) : (
-        <Caption>{label}</Caption>
+        <Caption inverted={inverted}>{label}</Caption>
       )}
-      {description && <Description>{description}</Description>}
+      {description && (
+        <Description inverted={inverted}>{description}</Description>
+      )}
       <div css={inputWrapperStyle()}>
         <input
           required={required}
           {...restProps}
-          css={inputStyle({ hasError: !!error })}
+          css={inputStyle({ hasError: !!error, size, inverted })}
         />
-        {error && <Error>{error}</Error>}
+        {error && <Error inverted={inverted}>{error}</Error>}
       </div>
     </Label>
   );
