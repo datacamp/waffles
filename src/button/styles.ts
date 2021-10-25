@@ -100,12 +100,14 @@ const buttonBaseStyle = css`
     content: '';
     display: block;
     position: absolute;
+    z-index: ${tokens.zIndex.default};
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: -4px;
     border-radius: 6px;
+    pointer-events: none;
     transition: box-shadow 125ms ease-out;
   }
 `;
