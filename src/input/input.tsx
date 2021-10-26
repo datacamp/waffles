@@ -6,6 +6,8 @@ import Caption from './caption';
 import Required from './required';
 import Description from './description';
 import Error from './error';
+import IconLeft from './icon-left';
+import EnhancerRight from './enhancer-right';
 
 type InputProps = {
   label: string;
@@ -13,6 +15,8 @@ type InputProps = {
   error?: string;
   size?: 'small' | 'medium' | 'large';
   inverted?: boolean;
+  iconLeft?: React.ReactNode;
+  enhancerRight?: React.ReactNode;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>;
 
 function Input({
@@ -22,6 +26,8 @@ function Input({
   error,
   size = 'medium',
   inverted = false,
+  iconLeft,
+  enhancerRight,
   ...restProps
 }: InputProps) {
   return (
@@ -38,11 +44,27 @@ function Input({
         <Description inverted={inverted}>{description}</Description>
       )}
       <div css={inputWrapperStyle()}>
+        {iconLeft && (
+          <IconLeft size={size} inverted={inverted}>
+            {iconLeft}
+          </IconLeft>
+        )}
         <input
           required={required}
           {...restProps}
-          css={inputStyle({ hasError: !!error, size, inverted })}
+          css={inputStyle({
+            hasError: !!error,
+            size,
+            inverted,
+            hasIconLeft: !!iconLeft,
+            hasEnhancerRight: !!enhancerRight,
+          })}
         />
+        {enhancerRight && (
+          <EnhancerRight size={size} inverted={inverted}>
+            {enhancerRight}
+          </EnhancerRight>
+        )}
         {error && <Error inverted={inverted}>{error}</Error>}
       </div>
     </Label>

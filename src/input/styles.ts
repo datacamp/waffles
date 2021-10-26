@@ -3,20 +3,25 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import Input from './input';
 
+type InputSize = NonNullable<React.ComponentProps<typeof Input>['size']>;
+
 // Mapping between input's sizes and design tokens
 
 const sizeMap = {
   small: {
     sizing: tokens.sizing.small,
     spacing: '6px',
+    spacingWithEnhancer: '26px',
   },
   medium: {
     sizing: tokens.sizing.medium,
     spacing: '12px',
+    spacingWithEnhancer: '36px',
   },
   large: {
     sizing: tokens.sizing.large,
     spacing: '12px',
+    spacingWithEnhancer: '36px',
   },
 } as const;
 
@@ -26,6 +31,8 @@ export function labelStyle() {
     width: 100%;
   `;
 }
+
+// Various label styles
 
 type CaptionStyleOptions = {
   inverted: boolean;
@@ -52,6 +59,8 @@ export function descriptionStyle({ inverted }: DescriptionStyleOptions) {
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
   `;
 }
+
+// Main input styles
 
 export function inputWrapperStyle() {
   return css`
@@ -106,11 +115,19 @@ const inputBaseStyle = css`
 
 type InputStyleOptions = {
   hasError: boolean;
-  size: NonNullable<React.ComponentProps<typeof Input>['size']>;
+  size: InputSize;
   inverted: boolean;
+  hasIconLeft: boolean;
+  hasEnhancerRight: boolean;
 };
 
-export function inputStyle({ hasError, size, inverted }: InputStyleOptions) {
+export function inputStyle({
+  hasError,
+  size,
+  inverted,
+  hasIconLeft,
+  hasEnhancerRight,
+}: InputStyleOptions) {
   return css`
     ${inputBaseStyle}
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
@@ -118,8 +135,12 @@ export function inputStyle({ hasError, size, inverted }: InputStyleOptions) {
       ? tokens.colors.navyLight
       : tokens.colors.white};
     height: ${sizeMap[size].sizing};
-    padding-left: ${sizeMap[size].spacing};
-    padding-right: ${sizeMap[size].spacing};
+    padding-left: ${hasIconLeft
+      ? sizeMap[size].spacingWithEnhancer
+      : sizeMap[size].spacing};
+    padding-right: ${hasEnhancerRight
+      ? sizeMap[size].spacingWithEnhancer
+      : sizeMap[size].spacing};
 
     &::placeholder {
       color: ${inverted
@@ -134,6 +155,8 @@ export function inputStyle({ hasError, size, inverted }: InputStyleOptions) {
     `};
   `;
 }
+
+// Error and required styles
 
 type ErrorStyleOptions = {
   inverted: boolean;
@@ -179,5 +202,47 @@ export function requiredBulletStyle({ inverted }: RequiredBulletStyleOptions) {
   return css`
     font-size: ${tokens.fontSizes.medium};
     color: ${inverted ? tokens.colors.red : tokens.colors.redDark};
+  `;
+}
+
+// Enhancer styles
+
+const enhancerBaseStyle = css`
+  position: absolute;
+  z-index: ${tokens.zIndex.default};
+  display: flex;
+  height: 100%;
+  align-items: center;
+  pointer-events: none;
+`;
+
+type IconLeftStyleOptions = {
+  size: InputSize;
+  inverted: boolean;
+};
+
+export function iconLeftStyle({ size, inverted }: IconLeftStyleOptions) {
+  return css`
+    ${enhancerBaseStyle};
+    top: 0;
+    left: ${sizeMap[size].spacing};
+    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+  `;
+}
+
+type EnhancerRightStyleOptions = {
+  size: InputSize;
+  inverted: boolean;
+};
+
+export function enhancerRightStyle({
+  size,
+  inverted,
+}: EnhancerRightStyleOptions) {
+  return css`
+    ${enhancerBaseStyle};
+    top: 0;
+    right: ${sizeMap[size].spacing};
+    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
   `;
 }
