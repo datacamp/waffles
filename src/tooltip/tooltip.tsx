@@ -10,9 +10,9 @@ import React, {
 import { tokens } from '../tokens';
 import { Text } from '../text';
 import { Portal } from '../portal';
+import { useId } from '../hooks';
 import { tooltipStyle } from './styles';
-import useElementMeasurements from './useElementMeasurements';
-import useId from './useId';
+import useElementMeasurements from './use-element-measurements';
 
 const REST_TIMER = 125;
 
