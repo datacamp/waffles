@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { useId } from '../hooks';
 import { inputWrapperStyle, inputStyle, requiredWrapperStyle } from './styles';
 import Label from './label';
 import Caption from './caption';
@@ -36,6 +37,7 @@ function InputInternal(
   ref?: React.Ref<HTMLInputElement>,
 ) {
   const [isFocused, setIsFocused] = useState(false);
+  const errorId = useId('input-error');
 
   function handleFocus(event: React.FocusEvent<HTMLInputElement>) {
     if (onFocus) {
@@ -72,8 +74,14 @@ function InputInternal(
         )}
         <input
           {...restProps}
+          {...(error && {
+            'aria-errormessage': errorId,
+            'aria-describedby': errorId,
+            'aria-invalid': true,
+          })}
           ref={ref}
           required={required}
+          aria-required={required}
           onFocus={handleFocus}
           onBlur={handleBlur}
           css={inputStyle({
@@ -89,7 +97,11 @@ function InputInternal(
             {enhancerRight}
           </EnhancerRight>
         )}
-        {error && <Error inverted={inverted}>{error}</Error>}
+        {error && (
+          <Error id={errorId} inverted={inverted}>
+            {error}
+          </Error>
+        )}
       </div>
     </Label>
   );
