@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { inputWrapperStyle, inputStyle, requiredWrapperStyle } from './styles';
 import Label from './label';
@@ -8,6 +8,7 @@ import Description from './description';
 import Error from './error';
 import IconLeft from './icon-left';
 import EnhancerRight from './enhancer-right';
+import Enhancer from './enhancer';
 
 type InputProps = {
   label: string;
@@ -28,8 +29,26 @@ function Input({
   inverted = false,
   iconLeft,
   enhancerRight,
+  onFocus,
+  onBlur,
   ...restProps
 }: InputProps) {
+  const [isFocused, setIsFocused] = useState(false);
+
+  function handleFocus(event: React.FocusEvent<HTMLInputElement>) {
+    if (onFocus) {
+      onFocus(event);
+    }
+    setIsFocused(true);
+  }
+
+  function handleBlur(event: React.FocusEvent<HTMLInputElement>) {
+    if (onBlur) {
+      onBlur(event);
+    }
+    setIsFocused(false);
+  }
+
   return (
     <Label>
       {required ? (
@@ -43,7 +62,7 @@ function Input({
       {description && (
         <Description inverted={inverted}>{description}</Description>
       )}
-      <div css={inputWrapperStyle()}>
+      <div css={inputWrapperStyle({ isFocused })}>
         {iconLeft && (
           <IconLeft size={size} inverted={inverted}>
             {iconLeft}
@@ -51,6 +70,8 @@ function Input({
         )}
         <input
           required={required}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           {...restProps}
           css={inputStyle({
             hasError: !!error,
@@ -70,5 +91,7 @@ function Input({
     </Label>
   );
 }
+
+Input.Enhancer = Enhancer;
 
 export default Input;

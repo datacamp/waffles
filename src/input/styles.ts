@@ -62,7 +62,11 @@ export function descriptionStyle({ inverted }: DescriptionStyleOptions) {
 
 // Main input styles
 
-export function inputWrapperStyle() {
+type InputWrapperStyleOptions = {
+  isFocused: boolean;
+};
+
+export function inputWrapperStyle({ isFocused }: InputWrapperStyleOptions) {
   return css`
     position: relative;
 
@@ -81,11 +85,12 @@ export function inputWrapperStyle() {
       transition: box-shadow 125ms ease-out;
     }
 
-    &:focus-within {
+    ${isFocused &&
+    css`
       &::after {
         box-shadow: 0 0 0 2px ${tokens.colors.blueDark};
       }
-    }
+    `}
   `;
 }
 
@@ -244,5 +249,30 @@ export function enhancerRightStyle({
     top: 0;
     right: ${sizeMap[size].spacing};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+  `;
+}
+
+type EnhancerStyleOptions = {
+  isFocusVisible: boolean;
+};
+
+export function enhancerStyle({ isFocusVisible }: EnhancerStyleOptions) {
+  return css`
+    display: flex;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    border-radius: ${tokens.borderRadius.medium};
+    padding: 2px;
+    background-color: transparent;
+    color: inherit;
+    outline: 0;
+
+    ${isFocusVisible &&
+    css`
+      box-shadow: 0 0 0 2px ${tokens.colors.blueDark};
+    `}
   `;
 }
