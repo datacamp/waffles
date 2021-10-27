@@ -2,37 +2,28 @@ import React, { useState } from 'react';
 
 import { useId } from '../hooks';
 import { Search, Visible, Hidden } from '../icon';
-import { inputWrapperStyle, inputStyle, requiredWrapperStyle } from './styles';
-import Label from './label';
-import Caption from './caption';
-import Required from './required';
-import Description from './description';
+import { inputWrapperStyle, inputStyle } from './styles';
 import Error from './error';
 import IconLeft from './icon-left';
 import EnhancerRight from './enhancer-right';
 import Enhancer from './enhancer';
 
 type InputProps = {
-  label: string;
-  description?: string;
-  error?: string;
   size?: 'small' | 'medium' | 'large';
   inverted?: boolean;
   iconLeft?: React.ReactNode;
   enhancerRight?: React.ReactNode;
+  error?: string;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>;
 
 function InputInternal(
   {
-    label,
-    description,
     type,
-    required,
-    error,
     size = 'medium',
     inverted = false,
     iconLeft,
     enhancerRight,
+    error,
     onFocus,
     onBlur,
     ...restProps
@@ -91,53 +82,38 @@ function InputInternal(
   }
 
   return (
-    <Label>
-      {required ? (
-        <div css={requiredWrapperStyle()}>
-          <Caption inverted={inverted}>{label}</Caption>
-          <Required inverted={inverted} />
-        </div>
-      ) : (
-        <Caption inverted={inverted}>{label}</Caption>
+    <div css={inputWrapperStyle({ isFocused })}>
+      {renderIconLeft()}
+      <input
+        {...restProps}
+        {...(error && {
+          'aria-errormessage': errorId,
+          'aria-describedby': errorId,
+          'aria-invalid': true,
+        })}
+        {...(type === 'password' && {
+          autoComplete: 'new-password',
+          spellCheck: false,
+        })}
+        ref={ref}
+        type={isPasswordVisible ? 'text' : type}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        css={inputStyle({
+          hasError: !!error,
+          size,
+          inverted,
+          hasIconLeft: type === 'search' || !!iconLeft,
+          hasEnhancerRight: type === 'password' || !!enhancerRight,
+        })}
+      />
+      {renderEnhancerRight()}
+      {error && (
+        <Error id={errorId} inverted={inverted}>
+          {error}
+        </Error>
       )}
-      {description && (
-        <Description inverted={inverted}>{description}</Description>
-      )}
-      <div css={inputWrapperStyle({ isFocused })}>
-        {renderIconLeft()}
-        <input
-          {...restProps}
-          {...(error && {
-            'aria-errormessage': errorId,
-            'aria-describedby': errorId,
-            'aria-invalid': true,
-          })}
-          {...(type === 'password' && {
-            autoComplete: 'new-password',
-            spellCheck: false,
-          })}
-          ref={ref}
-          type={isPasswordVisible ? 'text' : type}
-          required={required}
-          aria-required={required}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          css={inputStyle({
-            hasError: !!error,
-            size,
-            inverted,
-            hasIconLeft: type === 'search' || !!iconLeft,
-            hasEnhancerRight: type === 'password' || !!enhancerRight,
-          })}
-        />
-        {renderEnhancerRight()}
-        {error && (
-          <Error id={errorId} inverted={inverted}>
-            {error}
-          </Error>
-        )}
-      </div>
-    </Label>
+    </div>
   );
 }
 

@@ -11,7 +11,7 @@ type ErrorProps = {
 
 function Error({ id, inverted, children }: ErrorProps) {
   return (
-    <Text id={id} css={errorStyle({ inverted })}>
+    <Text as="p" id={id} css={errorStyle({ inverted })}>
       {children}
     </Text>
   );

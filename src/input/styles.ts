@@ -25,41 +25,6 @@ const sizeMap = {
   },
 } as const;
 
-export function labelStyle() {
-  return css`
-    display: block;
-    width: 100%;
-  `;
-}
-
-// Various label styles
-
-type CaptionStyleOptions = {
-  inverted: boolean;
-};
-
-export function captionStyle({ inverted }: CaptionStyleOptions) {
-  return css`
-    display: block;
-    line-height: ${tokens.lineHeights.default};
-    font-weight: ${tokens.fontWeights.bold};
-    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
-  `;
-}
-
-type DescriptionStyleOptions = {
-  inverted: boolean;
-};
-
-export function descriptionStyle({ inverted }: DescriptionStyleOptions) {
-  return css`
-    display: block;
-    line-height: ${tokens.lineHeights.default};
-    margin-top: ${tokens.spacing.xsmall};
-    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
-  `;
-}
-
 // Main input styles
 
 type InputWrapperStyleOptions = {
@@ -69,6 +34,7 @@ type InputWrapperStyleOptions = {
 export function inputWrapperStyle({ isFocused }: InputWrapperStyleOptions) {
   return css`
     position: relative;
+    width: 100%;
 
     &::after {
       content: '';
@@ -103,7 +69,6 @@ const inputBaseStyle = css`
   line-height: ${tokens.lineHeights.relaxed};
   border: ${tokens.borderWidth.thin} solid ${tokens.colors.greyDark};
   border-radius: ${tokens.borderRadius.medium};
-  margin-top: ${tokens.spacing.small};
   outline: 0;
   appearance: none;
   cursor: text;
@@ -175,7 +140,7 @@ export function inputStyle({
   `;
 }
 
-// Error and required styles
+// Error style
 
 type ErrorStyleOptions = {
   inverted: boolean;
@@ -192,39 +157,7 @@ export function errorStyle({ inverted }: ErrorStyleOptions) {
   `;
 }
 
-export function requiredWrapperStyle() {
-  return css`
-    display: flex;
-  `;
-}
-
-type RequiredStyleOptions = {
-  inverted: boolean;
-};
-
-export function requiredStyle({ inverted }: RequiredStyleOptions) {
-  return css`
-    font-size: ${tokens.fontSizes.small};
-    color: ${inverted
-      ? tokens.colors.navySubtleTextOnDark
-      : tokens.colors.navySubtleTextOnLight};
-    flex-grow: 1;
-    text-align: right;
-  `;
-}
-
-type RequiredBulletStyleOptions = {
-  inverted: boolean;
-};
-
-export function requiredBulletStyle({ inverted }: RequiredBulletStyleOptions) {
-  return css`
-    font-size: ${tokens.fontSizes.medium};
-    color: ${inverted ? tokens.colors.red : tokens.colors.redDark};
-  `;
-}
-
-// Enhancer styles
+// Left icon and right enhancer styles
 
 const enhancerBaseStyle = css`
   position: absolute;
