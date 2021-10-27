@@ -108,13 +108,13 @@ const inputBaseStyle = css`
   appearance: none;
   cursor: text;
 
-  &:-webkit-autofill {
-    box-shadow: 0 0 0 ${tokens.sizing.medium} white inset;
-  }
-
   &:disabled {
     opacity: ${tokens.opacity.high};
     cursor: default;
+  }
+
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 ${tokens.sizing.medium} white inset;
   }
 `;
 
