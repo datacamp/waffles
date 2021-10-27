@@ -150,10 +150,11 @@ export function errorStyle({ inverted }: ErrorStyleOptions) {
   return css`
     position: absolute;
     z-index: ${tokens.zIndex.default};
-    bottom: 0;
+    bottom: -${tokens.spacing.small};
     left: 0;
-    transform: translateY(20px);
+    transform: translateY(100%);
     color: ${inverted ? tokens.colors.red : tokens.colors.redDarkText};
+    line-height: ${tokens.lineHeights.default};
   `;
 }
 
