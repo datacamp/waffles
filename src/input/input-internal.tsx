@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { useId } from '../hooks';
-import { Visible, Hidden } from '../icon';
+import { Search, Visible, Hidden } from '../icon';
 import { inputWrapperStyle, inputStyle, requiredWrapperStyle } from './styles';
 import Label from './label';
 import Caption from './caption';
@@ -57,10 +57,23 @@ function InputInternal(
     setIsFocused(false);
   }
 
+  function renderIconLeft() {
+    if (type === 'search') {
+      return (
+        <IconLeft {...{ size, inverted }}>
+          <Search />
+        </IconLeft>
+      );
+    } else if (iconLeft) {
+      return <IconLeft {...{ size, inverted }}>{iconLeft}</IconLeft>;
+    }
+    return null;
+  }
+
   function renderEnhancerRight() {
     if (type === 'password') {
       return (
-        <EnhancerRight size={size} inverted={inverted}>
+        <EnhancerRight {...{ size, inverted }}>
           <Enhancer
             aria-label={`${isPasswordVisible ? 'Show' : 'Hide'} password text`}
             onClick={() => setIsPasswordVisible(!isPasswordVisible)}
@@ -70,9 +83,9 @@ function InputInternal(
         </EnhancerRight>
       );
     } else if (enhancerRight) {
-      <EnhancerRight size={size} inverted={inverted}>
-        {enhancerRight}
-      </EnhancerRight>;
+      return (
+        <EnhancerRight {...{ size, inverted }}>{enhancerRight}</EnhancerRight>
+      );
     }
     return null;
   }
@@ -91,11 +104,7 @@ function InputInternal(
         <Description inverted={inverted}>{description}</Description>
       )}
       <div css={inputWrapperStyle({ isFocused })}>
-        {iconLeft && (
-          <IconLeft size={size} inverted={inverted}>
-            {iconLeft}
-          </IconLeft>
-        )}
+        {renderIconLeft()}
         <input
           {...restProps}
           {...(error && {
@@ -117,7 +126,7 @@ function InputInternal(
             hasError: !!error,
             size,
             inverted,
-            hasIconLeft: !!iconLeft,
+            hasIconLeft: type === 'search' || !!iconLeft,
             hasEnhancerRight: type === 'password' || !!enhancerRight,
           })}
         />

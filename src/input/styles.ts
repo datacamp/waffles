@@ -116,6 +116,20 @@ const inputBaseStyle = css`
   &:-webkit-autofill {
     box-shadow: 0 0 0 ${tokens.sizing.medium} white inset;
   }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 `;
 
 type InputStyleOptions = {
