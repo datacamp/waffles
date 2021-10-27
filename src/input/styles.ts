@@ -214,6 +214,7 @@ export function enhancerStyle({ isFocusVisible }: EnhancerStyleOptions) {
     border: 0;
     border-radius: ${tokens.borderRadius.medium};
     padding: 2px;
+    margin-right: -2px;
     background-color: transparent;
     color: inherit;
     outline: 0;
