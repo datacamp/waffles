@@ -36,7 +36,6 @@ const checkmarkBaseStyle = css`
   left: 0;
   height: 18px;
   width: 18px;
-  color: ${tokens.colors.white};
   border-radius: ${tokens.borderRadius.medium};
   transition: background-color 75ms ease-out, border-color 75ms ease-out;
 
@@ -56,32 +55,54 @@ const checkmarkBaseStyle = css`
   }
 `;
 
-export function contentStyle() {
+type ContentStyleOptions = {
+  inverted: boolean;
+};
+
+export function contentStyle({ inverted }: ContentStyleOptions) {
   return css`
     line-height: ${tokens.lineHeights.default};
     padding-top: 1px;
     padding-left: 26px;
     user-select: none;
+    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
   `;
 }
 
 type CheckmarkStyleOptions = {
+  inverted: boolean;
   checked: boolean;
   isFocusVisible: boolean;
   hasError: boolean;
 };
 
+function checkmarkBackgroundColor(inverted: boolean, checked: boolean) {
+  if (inverted) {
+    return checked ? tokens.colors.blue : tokens.colors.navyLight;
+  }
+  return checked ? tokens.colors.blueDark : tokens.colors.white;
+}
+
+function checkmarkBorderColor(inverted: boolean, checked: boolean) {
+  if (inverted) {
+    return checked ? tokens.colors.blue : tokens.colors.greyDark;
+  }
+  return checked ? tokens.colors.blueDark : tokens.colors.greyDark;
+}
+
 export function checkmarkStyle({
+  inverted,
   checked,
   isFocusVisible,
   hasError,
 }: CheckmarkStyleOptions) {
   return css`
     ${checkmarkBaseStyle}
-    background-color: ${checked ? tokens.colors.blueDark : tokens.colors.white};
+    color: ${inverted ? tokens.colors.navy : tokens.colors.white};
+    background-color: ${checkmarkBackgroundColor(inverted, checked)};
     border-width: ${tokens.borderWidth.thin};
     border-style: solid;
-    border-color: ${checked ? tokens.colors.blueDark : tokens.colors.greyDark};
+    border-color: ${checkmarkBorderColor(inverted, checked)};
 
     ${isFocusVisible &&
     css`

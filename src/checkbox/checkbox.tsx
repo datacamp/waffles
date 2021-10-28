@@ -8,10 +8,12 @@ import Checkmark from './checkmark';
 
 type CheckboxProps = {
   children: React.ReactNode;
+  inverted?: boolean;
   error?: boolean;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>;
 
 function Checkbox({
+  inverted = false,
   checked = false,
   disabled = false,
   error = false,
@@ -30,8 +32,8 @@ function Checkbox({
         css={inputStyle()}
         aria-invalid={error}
       />
-      <Checkmark {...{ checked, error, isFocusVisible }} />
-      <Text as="div" css={contentStyle()}>
+      <Checkmark {...{ inverted, checked, error, isFocusVisible }} />
+      <Text as="div" css={contentStyle({ inverted })}>
         {children}
       </Text>
     </label>
