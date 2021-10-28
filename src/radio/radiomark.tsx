@@ -1,15 +1,28 @@
 import { radiomarkStyle, radioIconStyle } from './styles';
 
 type RadiomarkProps = {
+  inverted: boolean;
   checked: boolean;
   error: boolean;
   isFocusVisible: boolean;
 };
 
-function Radiomark({ checked, error, isFocusVisible }: RadiomarkProps) {
+function Radiomark({
+  inverted,
+  checked,
+  error,
+  isFocusVisible,
+}: RadiomarkProps) {
   return (
-    <div css={radiomarkStyle({ checked, isFocusVisible, hasError: error })}>
-      {checked && <span css={radioIconStyle()} />}
+    <div
+      css={radiomarkStyle({
+        inverted,
+        checked,
+        isFocusVisible,
+        hasError: error,
+      })}
+    >
+      {checked && <span css={radioIconStyle({ inverted })} />}
     </div>
   );
 }

@@ -8,10 +8,12 @@ import Radiomark from './radiomark';
 
 type RadioProps = {
   children: React.ReactNode;
+  inverted?: boolean;
   error?: boolean;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>;
 
 function Radio({
+  inverted = false,
   checked = false,
   disabled = false,
   error = false,
@@ -30,8 +32,8 @@ function Radio({
         css={inputStyle()}
         aria-invalid={error}
       />
-      <Radiomark {...{ checked, error, isFocusVisible }} />
-      <Text as="div" css={contentStyle()}>
+      <Radiomark {...{ inverted, checked, error, isFocusVisible }} />
+      <Text as="div" css={contentStyle({ inverted })}>
         {children}
       </Text>
     </label>

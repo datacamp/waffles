@@ -27,6 +27,20 @@ export function labelStyle({ disabled }: LabelStyleOptions) {
   `;
 }
 
+type ContentStyleOptions = {
+  inverted: boolean;
+};
+
+export function contentStyle({ inverted }: ContentStyleOptions) {
+  return css`
+    line-height: ${tokens.lineHeights.default};
+    padding-top: 1px;
+    padding-left: 26px;
+    user-select: none;
+    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+  `;
+}
+
 const checkmarkBaseStyle = css`
   display: flex;
   align-items: center;
@@ -54,20 +68,6 @@ const checkmarkBaseStyle = css`
     transition: box-shadow 125ms ease-out;
   }
 `;
-
-type ContentStyleOptions = {
-  inverted: boolean;
-};
-
-export function contentStyle({ inverted }: ContentStyleOptions) {
-  return css`
-    line-height: ${tokens.lineHeights.default};
-    padding-top: 1px;
-    padding-left: 26px;
-    user-select: none;
-    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
-  `;
-}
 
 type CheckmarkStyleOptions = {
   inverted: boolean;

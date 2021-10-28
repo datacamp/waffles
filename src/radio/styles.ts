@@ -27,6 +27,20 @@ export function labelStyle({ disabled }: LabelStyleOptions) {
   `;
 }
 
+type ContentStyleOptions = {
+  inverted: boolean;
+};
+
+export function contentStyle({ inverted }: ContentStyleOptions) {
+  return css`
+    line-height: ${tokens.lineHeights.default};
+    padding-top: 1px;
+    padding-left: 26px;
+    user-select: none;
+    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+  `;
+}
+
 const radiomarkBaseStyle = css`
   display: flex;
   align-items: center;
@@ -36,7 +50,6 @@ const radiomarkBaseStyle = css`
   left: 0;
   height: 18px;
   width: 18px;
-  background-color: ${tokens.colors.white};
   border-radius: ${tokens.borderRadius.circle};
   transition: background-color 75ms ease-out, border-color 75ms ease-out;
 
@@ -56,31 +69,34 @@ const radiomarkBaseStyle = css`
   }
 `;
 
-export function contentStyle() {
-  return css`
-    line-height: ${tokens.lineHeights.default};
-    padding-top: 1px;
-    padding-left: 26px;
-    user-select: none;
-  `;
-}
-
 type RadiomarkStyleOptions = {
+  inverted: boolean;
   checked: boolean;
   isFocusVisible: boolean;
   hasError: boolean;
 };
 
+function radiomarkBorderColor(inverted: boolean, checked: boolean) {
+  if (inverted) {
+    return checked ? tokens.colors.white : tokens.colors.greyDark;
+  }
+  return checked ? tokens.colors.navy : tokens.colors.greyDark;
+}
+
 export function radiomarkStyle({
+  inverted,
   checked,
   isFocusVisible,
   hasError,
 }: RadiomarkStyleOptions) {
   return css`
     ${radiomarkBaseStyle}
+    background-color: ${inverted
+      ? tokens.colors.navyLight
+      : tokens.colors.white};
     border-width: ${tokens.borderWidth.thin};
     border-style: solid;
-    border-color: ${checked ? tokens.colors.navy : tokens.colors.greyDark};
+    border-color: ${radiomarkBorderColor(inverted, checked)};
 
     ${isFocusVisible &&
     css`
@@ -97,12 +113,16 @@ export function radiomarkStyle({
   `;
 }
 
-export function radioIconStyle() {
+type RadioIconStyleOptions = {
+  inverted: boolean;
+};
+
+export function radioIconStyle({ inverted }: RadioIconStyleOptions) {
   return css`
     display: block;
     width: 8px;
     height: 8px;
-    background-color: ${tokens.colors.blueDark};
+    background-color: ${inverted ? tokens.colors.blue : tokens.colors.blueDark};
     border-radius: ${tokens.borderRadius.circle};
   `;
 }
