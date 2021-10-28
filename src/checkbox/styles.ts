@@ -50,7 +50,7 @@ const checkmarkBaseStyle = css`
     right: 0;
     bottom: 0;
     margin: -2px;
-    border-radius: 4px;
+    border-radius: 5px;
     pointer-events: none;
     transition: box-shadow 125ms ease-out;
   }
@@ -68,11 +68,13 @@ export function contentStyle() {
 type CheckmarkStyleOptions = {
   checked: boolean;
   isFocusVisible: boolean;
+  hasError: boolean;
 };
 
 export function checkmarkStyle({
   checked,
   isFocusVisible,
+  hasError,
 }: CheckmarkStyleOptions) {
   return css`
     ${checkmarkBaseStyle}
@@ -87,5 +89,11 @@ export function checkmarkStyle({
         box-shadow: 0 0 0 2px ${tokens.colors.blueDark};
       }
     `}
+
+    ${hasError &&
+    css`
+      border-color: ${tokens.colors.redDark};
+      box-shadow: 0 0 0 1px ${tokens.colors.redDark};
+    `};
   `;
 }
