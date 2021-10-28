@@ -66,7 +66,7 @@ function InputInternal(
       return (
         <EnhancerRight {...{ size, inverted }}>
           <Enhancer
-            aria-label={`${isPasswordVisible ? 'Show' : 'Hide'} password text`}
+            aria-label={`${isPasswordVisible ? 'Hide' : 'Show'} password text`}
             onClick={() => setIsPasswordVisible(!isPasswordVisible)}
           >
             {isPasswordVisible ? <Hidden /> : <Visible />}

@@ -7,7 +7,7 @@ type RequiredProps = {
 
 function Required({ inverted }: RequiredProps) {
   return (
-    <Text css={requiredStyle({ inverted })}>
+    <Text css={requiredStyle({ inverted })} aria-hidden>
       <span css={requiredBulletStyle({ inverted })}>&bull;</span> Required
     </Text>
   );
