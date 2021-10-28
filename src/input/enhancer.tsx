@@ -6,7 +6,7 @@ import { enhancerStyle } from './styles';
 
 type EnhancerProps = {
   children: React.ReactNode;
-} & React.HTMLAttributes<HTMLButtonElement>;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 function Enhancer({ children, ...restProps }: EnhancerProps) {
   const { focusProps, isFocusVisible } = useFocusRing();

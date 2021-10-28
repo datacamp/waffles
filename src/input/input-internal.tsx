@@ -21,6 +21,7 @@ function InputInternal(
     type,
     size = 'medium',
     inverted = false,
+    disabled = false,
     iconLeft,
     enhancerRight,
     error,
@@ -68,6 +69,7 @@ function InputInternal(
           <Enhancer
             aria-label={`${isPasswordVisible ? 'Hide' : 'Show'} password text`}
             onClick={() => setIsPasswordVisible(!isPasswordVisible)}
+            disabled={disabled}
           >
             {isPasswordVisible ? <Hidden /> : <Visible />}
           </Enhancer>
@@ -82,7 +84,7 @@ function InputInternal(
   }
 
   return (
-    <div css={inputWrapperStyle({ isFocused })}>
+    <div css={inputWrapperStyle({ disabled, isFocused })}>
       {renderIconLeft()}
       <input
         {...restProps}
@@ -97,6 +99,7 @@ function InputInternal(
         })}
         ref={ref}
         type={isPasswordVisible ? 'text' : type}
+        disabled={disabled}
         onFocus={handleFocus}
         onBlur={handleBlur}
         css={inputStyle({

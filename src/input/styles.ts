@@ -28,13 +28,18 @@ const sizeMap = {
 // Main input styles
 
 type InputWrapperStyleOptions = {
+  disabled: boolean;
   isFocused: boolean;
 };
 
-export function inputWrapperStyle({ isFocused }: InputWrapperStyleOptions) {
+export function inputWrapperStyle({
+  disabled,
+  isFocused,
+}: InputWrapperStyleOptions) {
   return css`
     position: relative;
     width: 100%;
+    opacity: ${disabled ? tokens.opacity.high : 1};
 
     &::after {
       content: '';
@@ -74,7 +79,6 @@ const inputBaseStyle = css`
   cursor: text;
 
   &:disabled {
-    opacity: ${tokens.opacity.high};
     cursor: default;
   }
 
@@ -218,6 +222,10 @@ export function enhancerStyle({ isFocusVisible }: EnhancerStyleOptions) {
     background-color: transparent;
     color: inherit;
     outline: 0;
+
+    &:disabled {
+      cursor: inherit;
+    }
 
     ${isFocusVisible &&
     css`
