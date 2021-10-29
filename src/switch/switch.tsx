@@ -30,8 +30,10 @@ function Switch({
       <input
         {...mergeProps(focusProps, restProps)}
         type="checkbox"
+        role="switch"
         disabled={disabled}
         checked={checked}
+        aria-checked={checked}
         css={inputStyle()}
         aria-invalid={error}
       />
