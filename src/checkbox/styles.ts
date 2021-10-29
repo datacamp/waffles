@@ -62,8 +62,8 @@ const checkmarkBaseStyle = css`
     left: 0;
     right: 0;
     bottom: 0;
-    margin: -2px;
-    border-radius: 5px;
+    margin: -3px;
+    border-radius: 6px;
     pointer-events: none;
     transition: box-shadow 125ms ease-out;
   }

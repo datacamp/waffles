@@ -62,7 +62,7 @@ const radiomarkBaseStyle = css`
     left: 0;
     right: 0;
     bottom: 0;
-    margin: -2px;
+    margin: -3px;
     border-radius: ${tokens.borderRadius.circle};
     pointer-events: none;
     transition: box-shadow 125ms ease-out;
