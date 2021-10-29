@@ -76,19 +76,16 @@ type RadiomarkStyleOptions = {
   hasError: boolean;
 };
 
-function radiomarkBorderColor(inverted: boolean, checked: boolean) {
-  if (inverted) {
-    return checked ? tokens.colors.white : tokens.colors.greyDark;
-  }
-  return checked ? tokens.colors.navy : tokens.colors.greyDark;
-}
-
 export function radiomarkStyle({
   inverted,
   checked,
   isFocusVisible,
   hasError,
 }: RadiomarkStyleOptions) {
+  const invertedCheckedColor = inverted
+    ? tokens.colors.white
+    : tokens.colors.navy;
+
   return css`
     ${radiomarkBaseStyle}
     background-color: ${inverted
@@ -96,7 +93,7 @@ export function radiomarkStyle({
       : tokens.colors.white};
     border-width: ${tokens.borderWidth.thin};
     border-style: solid;
-    border-color: ${radiomarkBorderColor(inverted, checked)};
+    border-color: ${checked ? invertedCheckedColor : tokens.colors.greyDark};
 
     ${isFocusVisible &&
     css`

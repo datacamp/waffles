@@ -83,26 +83,23 @@ function checkmarkBackgroundColor(inverted: boolean, checked: boolean) {
   return checked ? tokens.colors.blueDark : tokens.colors.white;
 }
 
-function checkmarkBorderColor(inverted: boolean, checked: boolean) {
-  if (inverted) {
-    return checked ? tokens.colors.blue : tokens.colors.greyDark;
-  }
-  return checked ? tokens.colors.blueDark : tokens.colors.greyDark;
-}
-
 export function checkmarkStyle({
   inverted,
   checked,
   isFocusVisible,
   hasError,
 }: CheckmarkStyleOptions) {
+  const invertedCheckedColor = inverted
+    ? tokens.colors.blue
+    : tokens.colors.blueDark;
+
   return css`
     ${checkmarkBaseStyle}
     color: ${inverted ? tokens.colors.navy : tokens.colors.white};
     background-color: ${checkmarkBackgroundColor(inverted, checked)};
     border-width: ${tokens.borderWidth.thin};
     border-style: solid;
-    border-color: ${checkmarkBorderColor(inverted, checked)};
+    border-color: ${checked ? invertedCheckedColor : tokens.colors.greyDark};
 
     ${isFocusVisible &&
     css`
