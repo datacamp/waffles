@@ -21,7 +21,6 @@ type LabelStyleOptions = {
 export function labelStyle({ disabled }: LabelStyleOptions) {
   return css`
     display: flex;
-    position: relative;
     cursor: ${disabled ? 'default' : 'pointer'};
     opacity: ${disabled ? tokens.opacity.high : 1};
   `;
@@ -35,7 +34,8 @@ export function contentStyle({ inverted }: ContentStyleOptions) {
   return css`
     line-height: ${tokens.lineHeights.default};
     padding-top: 3px;
-    padding-right: 44px;
+    padding-right: ${tokens.spacing.small};
+    flex-grow: 1;
     user-select: none;
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
   `;
@@ -45,9 +45,8 @@ const toggleBaseStyle = css`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  position: absolute;
-  top: 0;
-  right: 0;
+  flex-shrink: 0;
+  position: relative;
   height: 22px;
   width: 36px;
   padding: 2px;

@@ -21,7 +21,6 @@ type LabelStyleOptions = {
 export function labelStyle({ disabled }: LabelStyleOptions) {
   return css`
     display: flex;
-    position: relative;
     cursor: ${disabled ? 'default' : 'pointer'};
     opacity: ${disabled ? tokens.opacity.high : 1};
   `;
@@ -35,7 +34,7 @@ export function contentStyle({ inverted }: ContentStyleOptions) {
   return css`
     line-height: ${tokens.lineHeights.default};
     padding-top: 1px;
-    padding-left: 26px;
+    padding-left: ${tokens.spacing.small};
     user-select: none;
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
   `;
@@ -45,9 +44,8 @@ const checkmarkBaseStyle = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  flex-shrink: 0;
+  position: relative;
   height: 18px;
   width: 18px;
   border-radius: ${tokens.borderRadius.medium};
