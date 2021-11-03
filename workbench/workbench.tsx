@@ -10,6 +10,7 @@ import { ScreenReaderOnly } from '@datacamp/waffles/screen-reader-only';
 import { Checkbox } from '@datacamp/waffles/checkbox';
 import { Radio } from '@datacamp/waffles/radio';
 import { Switch } from '@datacamp/waffles/switch';
+import { TextArea } from '@datacamp/waffles/text-area';
 
 function Workbench() {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -21,6 +22,7 @@ function Workbench() {
   const [isSwitched2, setIsSwitched2] = useState(false);
   const [isInvertedSwitched, setIsInvertedSwitched] = useState(false);
   const [isInvertedSwitched2, setIsInvertedSwitched2] = useState(false);
+  const [textAreaValue, setTextAreaValue] = useState('');
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -41,24 +43,31 @@ function Workbench() {
           `}
         >
           <Input
-            // type="search"
+            // type="password"
             placeholder="Placeholder"
             name="test"
-            // error="Some custom error."
+            error
             // disabled
             // required
             // pattern="[0-9]{3}"
             autoComplete="off"
-            size="small"
+            // size="large"
             // iconLeft={<AddCircle />}
-            // enhancerRight={<Input.Enhancer><CrossCircle /></Input.Enhancer>}
+            enhancerRight={
+              <Input.Enhancer>
+                <CrossCircle />
+              </Input.Enhancer>
+            }
           />
-          <Button type="submit" size="small">
+          <Button
+            type="submit"
+            // size="large"
+          >
             Hello!
           </Button>
         </form>
       </div>
-      {/* INVERTED INPUT */}
+      {/* INVERTED TEXT FIELD */}
       <div
         css={css`
           padding: 50px;
@@ -73,21 +82,24 @@ function Workbench() {
           `}
         >
           <TextField
-            type="password"
+            // type="password"
             label="Inverted Label"
             placeholder="Inverted Placeholder"
             name="invertedTest"
-            // description="Inverted. Additional description to explain input content. Additional description to explain input content."
-            // error="Some custom error."
-            disabled
-            required
-            pattern="[0-9]{3}"
+            description="Inverted. Additional description to explain input content. Additional description to explain input content."
+            error="Some custom error."
+            // disabled
+            // required
             autoComplete="off"
             inverted
             size="medium"
             iconLeft={<AddCircle />}
             // enhancerRight={<ChevronDown />}
-            // enhancerRight={<TextField.Enhancer disabled><CrossCircle /></TextField.Enhancer>}
+            enhancerRight={
+              <TextField.Enhancer>
+                <CrossCircle />
+              </TextField.Enhancer>
+            }
           />
           <Button type="submit" inverted size="medium">
             Hello!
@@ -274,6 +286,51 @@ function Workbench() {
             This is another inverted switch.
           </Switch>
         </div>
+      </div>
+      {/* TEXTAREA */}
+      <div
+        css={css`
+          padding: 50px;
+        `}
+      >
+        <form>
+          <TextArea
+            label="Text area example"
+            // placeholder="Placeholder example"
+            name="test"
+            // required
+            // error="Very serious error"
+            // disabled
+            // required
+            autoComplete="off"
+            rows={5}
+            value={textAreaValue}
+            onChange={(event) => setTextAreaValue(event.target.value)}
+          ></TextArea>
+        </form>
+      </div>
+      {/* TEXTAREA INVERTED */}
+      <div
+        css={css`
+          padding: 50px;
+          background-color: ${tokens.colors.navy};
+        `}
+      >
+        <form>
+          <TextArea
+            label="Inverted text area example"
+            inverted
+            // placeholder="Placeholder example"
+            name="test"
+            // error="Very serious error 2"
+            // disabled
+            // required
+            autoComplete="off"
+            rows={5}
+            value={textAreaValue}
+            onChange={(event) => setTextAreaValue(event.target.value)}
+          ></TextArea>
+        </form>
       </div>
     </>
   );
