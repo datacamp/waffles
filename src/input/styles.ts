@@ -144,24 +144,6 @@ export function inputStyle({
   `;
 }
 
-// Error style
-
-type ErrorStyleOptions = {
-  inverted: boolean;
-};
-
-export function errorStyle({ inverted }: ErrorStyleOptions) {
-  return css`
-    position: absolute;
-    z-index: ${tokens.zIndex.default};
-    bottom: -${tokens.spacing.small};
-    left: 0;
-    transform: translateY(100%);
-    color: ${inverted ? tokens.colors.red : tokens.colors.redDarkText};
-    line-height: ${tokens.lineHeights.default};
-  `;
-}
-
 // Left icon and right enhancer styles
 
 const enhancerBaseStyle = css`

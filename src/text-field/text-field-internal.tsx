@@ -1,16 +1,13 @@
 import React from 'react';
 
-import { useId } from '../hooks';
+import { FormControl } from '../form-control';
 import { Input } from '../input';
-import { wrapperStyle } from './styles';
-import Label from './label';
-import Description from './description';
-import Required from './required';
 
 type TextFieldProps = {
   label: string;
   description?: string;
   error?: string;
+  required?: boolean;
   size?: 'small' | 'medium' | 'large';
   inverted?: boolean;
   iconLeft?: React.ReactNode;
@@ -21,30 +18,22 @@ function TextFieldInternal(
   {
     label,
     description,
-    required,
+    error,
+    required = false,
     inverted = false,
     ...restProps
   }: TextFieldProps,
   ref?: React.Ref<HTMLInputElement>,
 ) {
-  const fieldId = useId('text-field');
-
   return (
-    <div css={wrapperStyle()}>
-      <Label htmlFor={fieldId} inverted={inverted}>
-        {label}
-        {required && <Required inverted={inverted} />}
-      </Label>
-      {description && (
-        <Description inverted={inverted}>{description}</Description>
-      )}
+    <FormControl {...{ label, description, error, required, inverted }}>
       <Input
         {...{ required, inverted }}
         {...restProps}
+        error={!!error}
         ref={ref}
-        id={fieldId}
       />
-    </div>
+    </FormControl>
   );
 }
 

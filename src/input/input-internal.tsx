@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
-import { useId } from '../hooks';
 import { Search, Visible, Hidden } from '../icon';
 import { inputWrapperStyle, inputStyle } from './styles';
-import Error from './error';
 import IconLeft from './icon-left';
 import EnhancerRight from './enhancer-right';
 import Enhancer from './enhancer';
@@ -11,9 +9,9 @@ import Enhancer from './enhancer';
 type InputProps = {
   size?: 'small' | 'medium' | 'large';
   inverted?: boolean;
+  error?: boolean;
   iconLeft?: React.ReactNode;
   enhancerRight?: React.ReactNode;
-  error?: string;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>;
 
 function InputInternal(
@@ -22,9 +20,9 @@ function InputInternal(
     size = 'medium',
     inverted = false,
     disabled = false,
+    error = false,
     iconLeft,
     enhancerRight,
-    error,
     onFocus,
     onBlur,
     ...restProps
@@ -33,7 +31,6 @@ function InputInternal(
 ) {
   const [isFocused, setIsFocused] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const errorId = useId('input-error');
 
   function handleFocus(event: React.FocusEvent<HTMLInputElement>) {
     if (onFocus) {
@@ -88,11 +85,6 @@ function InputInternal(
       {renderIconLeft()}
       <input
         {...restProps}
-        {...(error && {
-          'aria-errormessage': errorId,
-          'aria-describedby': errorId,
-          'aria-invalid': true,
-        })}
         {...(type === 'password' && {
           autoComplete: 'new-password',
           spellCheck: false,
@@ -103,7 +95,7 @@ function InputInternal(
         onFocus={handleFocus}
         onBlur={handleBlur}
         css={inputStyle({
-          hasError: !!error,
+          hasError: error,
           size,
           inverted,
           hasIconLeft: type === 'search' || !!iconLeft,
@@ -111,11 +103,6 @@ function InputInternal(
         })}
       />
       {renderEnhancerRight()}
-      {error && (
-        <Error id={errorId} inverted={inverted}>
-          {error}
-        </Error>
-      )}
     </div>
   );
 }

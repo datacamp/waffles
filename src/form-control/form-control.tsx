@@ -11,8 +11,8 @@ type FormControlProps = {
   label: string;
   description?: string;
   error?: string;
-  inverted?: boolean;
   required?: boolean;
+  inverted?: boolean;
   children: JSX.Element;
 };
 
@@ -20,8 +20,8 @@ function FormControl({
   label,
   description,
   error,
+  required = false,
   inverted = false,
-  required,
   children,
 }: FormControlProps) {
   const formElement = Children.toArray(children)[0] as React.ReactElement;
@@ -39,21 +39,23 @@ function FormControl({
       }),
     });
 
-    <div css={wrapperStyle()}>
-      <Label htmlFor={fieldId} inverted={inverted}>
-        {label}
-        {required && <Required inverted={inverted} />}
-      </Label>
-      {description && (
-        <Description inverted={inverted}>{description}</Description>
-      )}
-      {element}
-      {error && (
-        <Error id={errorId} inverted={inverted}>
-          {error}
-        </Error>
-      )}
-    </div>;
+    return (
+      <div css={wrapperStyle()}>
+        <Label htmlFor={fieldId} inverted={inverted}>
+          {label}
+          {required && <Required inverted={inverted} />}
+        </Label>
+        {description && (
+          <Description inverted={inverted}>{description}</Description>
+        )}
+        {element}
+        {error && (
+          <Error id={errorId} inverted={inverted}>
+            {error}
+          </Error>
+        )}
+      </div>
+    );
   }
 
   return null;
