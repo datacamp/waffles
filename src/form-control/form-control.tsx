@@ -1,4 +1,4 @@
-import { Children, isValidElement, cloneElement } from 'react';
+import React from 'react';
 
 import { useId } from '../hooks';
 import { wrapperStyle } from './styles';
@@ -7,13 +7,21 @@ import Description from './description';
 import Required from './required';
 import Error from './error';
 
+type FormControlPropsRenderProps = {
+  id: string;
+  error?: boolean;
+  'aria-errormessage'?: string;
+  'aria-describedby'?: string;
+  'aria-invalid'?: boolean;
+};
+
 type FormControlProps = {
   label: string;
   description?: string;
   error?: string;
   required?: boolean;
   inverted?: boolean;
-  children: JSX.Element;
+  children: (props: FormControlPropsRenderProps) => React.ReactNode;
 };
 
 function FormControl({
@@ -24,41 +32,36 @@ function FormControl({
   inverted = false,
   children,
 }: FormControlProps) {
-  const formElement = Children.toArray(children)[0] as React.ReactElement;
   const fieldId = useId('form-control');
   const errorId = useId('form-control-error');
 
-  if (isValidElement(formElement)) {
-    const element = cloneElement(formElement as React.ReactElement, {
-      id: fieldId,
-      error: !!error,
-      ...(error && {
-        'aria-errormessage': errorId,
-        'aria-describedby': errorId,
-        'aria-invalid': true,
-      }),
-    });
+  const elementProps = {
+    id: fieldId,
+    error: !!error,
+    ...(error && {
+      'aria-errormessage': errorId,
+      'aria-describedby': errorId,
+      'aria-invalid': true,
+    }),
+  };
 
-    return (
-      <div css={wrapperStyle()}>
-        <Label htmlFor={fieldId} inverted={inverted}>
-          {label}
-          {required && <Required inverted={inverted} />}
-        </Label>
-        {description && (
-          <Description inverted={inverted}>{description}</Description>
-        )}
-        {element}
-        {error && (
-          <Error id={errorId} inverted={inverted}>
-            {error}
-          </Error>
-        )}
-      </div>
-    );
-  }
-
-  return null;
+  return (
+    <div css={wrapperStyle()}>
+      <Label htmlFor={fieldId} inverted={inverted}>
+        {label}
+        {required && <Required inverted={inverted} />}
+      </Label>
+      {description && (
+        <Description inverted={inverted}>{description}</Description>
+      )}
+      {children({ ...elementProps })}
+      {error && (
+        <Error id={errorId} inverted={inverted}>
+          {error}
+        </Error>
+      )}
+    </div>
+  );
 }
 
 export default FormControl;

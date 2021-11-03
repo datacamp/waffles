@@ -27,12 +27,17 @@ function TextFieldInternal(
 ) {
   return (
     <FormControl {...{ label, description, error, required, inverted }}>
-      <Input
-        {...{ required, inverted }}
-        {...restProps}
-        error={!!error}
-        ref={ref}
-      />
+      {(formControlProps) => {
+        return (
+          <Input
+            {...{ required, inverted }}
+            {...formControlProps}
+            {...restProps}
+            error={!!error}
+            ref={ref}
+          />
+        );
+      }}
     </FormControl>
   );
 }
