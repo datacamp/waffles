@@ -4,10 +4,12 @@ import { tokens } from '../tokens';
 
 type TextAreaWrapperStyleOptions = {
   isFocused: boolean;
+  autoGrow: boolean;
 };
 
-export function textAreaWrapperStyle({
+export function textAreaWrapper({
   isFocused,
+  autoGrow,
 }: TextAreaWrapperStyleOptions) {
   return css`
     position: relative;
@@ -33,12 +35,18 @@ export function textAreaWrapperStyle({
         box-shadow: 0 0 0 2px ${tokens.colors.blueDark};
       }
     `}
+
+    ${autoGrow &&
+    css`
+      grid-area: 1 / 1 / 2 / 2;
+    `}
   `;
 }
 
 const textAreaBaseStyle = css`
   display: block;
   width: 100%;
+  height: 100%;
   resize: none;
   padding: ${tokens.spacing.small} 12px;
   color: ${tokens.colors.navy};
@@ -81,5 +89,20 @@ export function textAreaStyle({ hasError, inverted }: TextAreaStyleOptions) {
       border-color: ${tokens.colors.redDark};
       box-shadow: 0 0 0 1px ${tokens.colors.redDark};
     `};
+  `;
+}
+
+export function growWrapperStyle() {
+  return css`
+    display: grid;
+  `;
+}
+
+export function fauxGrowElementStyle() {
+  return css`
+    ${textAreaBaseStyle}
+    grid-area: 1 / 1 / 2 / 2;
+    visibility: hidden;
+    white-space: pre-wrap;
   `;
 }

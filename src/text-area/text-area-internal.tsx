@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 import { FormControl } from '../form-control';
-import { textAreaWrapperStyle, textAreaStyle } from './styles';
+import { textAreaWrapper, textAreaStyle } from './styles';
+import AutoGrow from './auto-grow';
 
 type TextAreaProps = {
   label: string;
@@ -17,8 +18,10 @@ function TextAreaInternal(
     label,
     description,
     error,
+    value,
     required = false,
     inverted = false,
+    autoGrow = false,
     onFocus,
     onBlur,
     ...restProps
@@ -45,16 +48,19 @@ function TextAreaInternal(
     <FormControl {...{ label, description, error, required, inverted }}>
       {(formControlProps) => {
         return (
-          <div css={textAreaWrapperStyle({ isFocused })}>
-            <textarea
-              {...formControlProps}
-              {...restProps}
-              ref={ref}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-              css={textAreaStyle({ hasError: !!error, inverted })}
-            />
-          </div>
+          <AutoGrow {...{ value, autoGrow }}>
+            <div css={textAreaWrapper({ isFocused, autoGrow })}>
+              <textarea
+                {...formControlProps}
+                {...restProps}
+                ref={ref}
+                value={value}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+                css={textAreaStyle({ hasError: !!error, inverted })}
+              />
+            </div>
+          </AutoGrow>
         );
       }}
     </FormControl>
