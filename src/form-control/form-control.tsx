@@ -9,7 +9,6 @@ import Error from './error';
 
 type FormControlPropsRenderProps = {
   id: string;
-  error?: boolean;
   'aria-errormessage'?: string;
   'aria-describedby'?: string;
   'aria-invalid'?: boolean;
@@ -37,7 +36,6 @@ function FormControl({
 
   const elementProps = {
     id: fieldId,
-    error: !!error,
     ...(error && {
       'aria-errormessage': errorId,
       'aria-describedby': errorId,
