@@ -98,7 +98,7 @@ export function selectStyle({ hasError, size, inverted }: SelectStyleOptions) {
     padding-left: ${sizeMap[size].spacing};
     padding-right: ${sizeMap[size].spacingWithIcon};
 
-    &::placeholder {
+    &:invalid {
       color: ${inverted
         ? tokens.colors.navySubtleTextOnDark
         : tokens.colors.navySubtleTextOnLight};
