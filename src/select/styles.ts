@@ -83,11 +83,17 @@ const selectBaseStyle = css`
 
 type SelectStyleOptions = {
   hasError: boolean;
+  withPlaceholder: boolean;
   size: SelectSize;
   inverted: boolean;
 };
 
-export function selectStyle({ hasError, size, inverted }: SelectStyleOptions) {
+export function selectStyle({
+  hasError,
+  withPlaceholder,
+  size,
+  inverted,
+}: SelectStyleOptions) {
   return css`
     ${selectBaseStyle}
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
@@ -98,11 +104,12 @@ export function selectStyle({ hasError, size, inverted }: SelectStyleOptions) {
     padding-left: ${sizeMap[size].spacing};
     padding-right: ${sizeMap[size].spacingWithIcon};
 
-    &:invalid {
+    ${withPlaceholder &&
+    css`
       color: ${inverted
         ? tokens.colors.navySubtleTextOnDark
         : tokens.colors.navySubtleTextOnLight};
-    }
+    `};
 
     ${hasError &&
     css`
