@@ -50,7 +50,7 @@ function InputInternal(
     if (type === 'search') {
       return (
         <IconLeft {...{ size, inverted }}>
-          <Search />
+          <Search data-testid="search-icon" />
         </IconLeft>
       );
     } else if (iconLeft) {
