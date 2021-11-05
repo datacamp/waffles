@@ -52,12 +52,14 @@ exports[`Button renders snapshot of disabled medium variant destructive 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -139,12 +141,14 @@ exports[`Button renders snapshot of disabled medium variant plain 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -226,12 +230,14 @@ exports[`Button renders snapshot of disabled medium variant primary 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -313,12 +319,14 @@ exports[`Button renders snapshot of disabled medium variant secondary 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -400,12 +408,14 @@ exports[`Button renders snapshot of focused state 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -494,12 +504,14 @@ exports[`Button renders snapshot of inverted variant destructive and size large 
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -580,12 +592,14 @@ exports[`Button renders snapshot of inverted variant destructive and size medium
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -666,12 +680,14 @@ exports[`Button renders snapshot of inverted variant destructive and size small 
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -752,12 +768,14 @@ exports[`Button renders snapshot of inverted variant plain and size large 1`] = 
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -838,12 +856,14 @@ exports[`Button renders snapshot of inverted variant plain and size medium 1`] =
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -924,12 +944,14 @@ exports[`Button renders snapshot of inverted variant plain and size small 1`] = 
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1010,12 +1032,14 @@ exports[`Button renders snapshot of inverted variant primary and size large 1`] 
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1096,12 +1120,14 @@ exports[`Button renders snapshot of inverted variant primary and size medium 1`]
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1182,12 +1208,14 @@ exports[`Button renders snapshot of inverted variant primary and size small 1`] 
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1268,12 +1296,14 @@ exports[`Button renders snapshot of inverted variant secondary and size large 1`
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1354,12 +1384,14 @@ exports[`Button renders snapshot of inverted variant secondary and size medium 1
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1440,12 +1472,14 @@ exports[`Button renders snapshot of inverted variant secondary and size small 1`
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1526,12 +1560,14 @@ exports[`Button renders snapshot of variant destructive and size large 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1612,12 +1648,14 @@ exports[`Button renders snapshot of variant destructive and size medium 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1698,12 +1736,14 @@ exports[`Button renders snapshot of variant destructive and size small 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1784,12 +1824,14 @@ exports[`Button renders snapshot of variant plain and size large 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1870,12 +1912,14 @@ exports[`Button renders snapshot of variant plain and size medium 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -1956,12 +2000,14 @@ exports[`Button renders snapshot of variant plain and size small 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -2042,12 +2088,14 @@ exports[`Button renders snapshot of variant primary and size large 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -2128,12 +2176,14 @@ exports[`Button renders snapshot of variant primary and size medium 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -2214,12 +2264,14 @@ exports[`Button renders snapshot of variant primary and size small 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -2300,12 +2352,14 @@ exports[`Button renders snapshot of variant secondary and size large 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -2386,12 +2440,14 @@ exports[`Button renders snapshot of variant secondary and size medium 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
@@ -2472,12 +2528,14 @@ exports[`Button renders snapshot of variant secondary and size small 1`] = `
   content: '';
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -4px;
   border-radius: 6px;
+  pointer-events: none;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
 }
