@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { ChevronDown } from '../icon';
 import { FormControl } from '../form-control';
@@ -26,17 +26,11 @@ function SelectInternal(
     value,
     onFocus,
     onBlur,
-    onChange,
     ...restProps
   }: SelectProps,
   ref?: React.Ref<HTMLSelectElement>,
 ) {
   const [isFocused, setIsFocused] = useState(false);
-  const [withPlaceholder, setWithPlaceholder] = useState(false);
-
-  useEffect(() => {
-    setWithPlaceholder(value === '' || value === 'placeholder');
-  }, [value]);
 
   function handleFocus(event: React.FocusEvent<HTMLSelectElement>) {
     if (onFocus) {
@@ -52,13 +46,6 @@ function SelectInternal(
     setIsFocused(false);
   }
 
-  function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
-    if (onChange) {
-      onChange(event);
-    }
-    setWithPlaceholder(value === '' || value === 'placeholder');
-  }
-
   return (
     <FormControl {...{ label, description, error, required, inverted }}>
       {(formControlProps) => {
@@ -71,10 +58,9 @@ function SelectInternal(
               ref={ref}
               onFocus={handleFocus}
               onBlur={handleBlur}
-              onChange={handleChange}
               css={selectStyle({
                 hasError: !!error,
-                withPlaceholder,
+                withPlaceholder: value === '' || value === 'placeholder',
                 size,
                 inverted,
               })}
