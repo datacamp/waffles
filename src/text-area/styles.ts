@@ -79,6 +79,7 @@ export function textAreaStyle({ hasError, inverted }: TextAreaStyleOptions) {
       : tokens.colors.white};
 
     &::placeholder {
+      opacity: 1;
       color: ${inverted
         ? tokens.colors.navySubtleTextOnDark
         : tokens.colors.navySubtleTextOnLight};

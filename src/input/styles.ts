@@ -131,6 +131,7 @@ export function inputStyle({
       : sizeMap[size].spacing};
 
     &::placeholder {
+      opacity: 1;
       color: ${inverted
         ? tokens.colors.navySubtleTextOnDark
         : tokens.colors.navySubtleTextOnLight};
