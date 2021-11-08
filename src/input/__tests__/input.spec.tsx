@@ -255,6 +255,13 @@ describe('Input', () => {
     const input = container.firstChild;
     expect(input).toMatchSnapshot();
   });
+
+  it('renders snapshot with error', () => {
+    const { container } = render(<Input error />);
+
+    const input = container.firstChild;
+    expect(input).toMatchSnapshot();
+  });
 });
 
 describe('Input.Enhancer', () => {

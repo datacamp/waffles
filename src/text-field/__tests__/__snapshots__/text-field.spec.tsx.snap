@@ -354,6 +354,204 @@ exports[`TextField renders snapshot of password type 1`] = `
 </div>
 `;
 
+exports[`TextField renders snapshot of required with error 1`] = `
+.emotion-0 {
+  position: relative;
+  width: 100%;
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #05192D;
+  margin-bottom: 8px;
+}
+
+.emotion-2 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #65707C;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: right;
+}
+
+.emotion-3 {
+  font-size: 14px;
+  color: #DD3400;
+}
+
+.emotion-4 {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+}
+
+.emotion-4::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid #848C92;
+  border-radius: 4px;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  cursor: text;
+  color: #05192D;
+  background-color: #FFFFFF;
+  height: 36px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-color: #DD3400;
+  box-shadow: 0 0 0 1px #DD3400;
+}
+
+.emotion-5:disabled {
+  cursor: default;
+}
+
+.emotion-5:-webkit-autofill {
+  box-shadow: 0 0 0 36px white inset;
+}
+
+.emotion-5::-webkit-search-decoration,
+.emotion-5::-webkit-search-cancel-button,
+.emotion-5::-webkit-search-results-button,
+.emotion-5::-webkit-search-results-decoration {
+  display: none;
+}
+
+.emotion-5::-ms-clear,
+.emotion-5::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.emotion-5::-webkit-input-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-5::-moz-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-5:-ms-input-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-5::placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-6 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -8px;
+  left: 0;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  color: #C01100;
+  line-height: 1.25;
+}
+
+<div
+  class="emotion-0"
+>
+  <label
+    class="emotion-1"
+    for="form-control-123abC"
+  >
+    Favorite singer
+    <span
+      aria-hidden="true"
+      class="emotion-2"
+    >
+      <span
+        class="emotion-3"
+      >
+        •
+      </span>
+       Required
+    </span>
+  </label>
+  <div
+    class="emotion-4"
+  >
+    <input
+      aria-describedby="form-control-error-123abC"
+      aria-errormessage="form-control-error-123abC"
+      aria-invalid="true"
+      class="emotion-5"
+      id="form-control-123abC"
+      required=""
+    />
+  </div>
+  <p
+    class="emotion-6"
+    id="form-control-error-123abC"
+  >
+    Enter correct singer name.
+  </p>
+</div>
+`;
+
 exports[`TextField renders snapshot of search type 1`] = `
 .emotion-0 {
   position: relative;

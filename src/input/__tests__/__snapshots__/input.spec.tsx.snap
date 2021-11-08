@@ -1069,6 +1069,107 @@ exports[`Input renders snapshot of size small 1`] = `
 </div>
 `;
 
+exports[`Input renders snapshot with error 1`] = `
+.emotion-0 {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid #848C92;
+  border-radius: 4px;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  cursor: text;
+  color: #05192D;
+  background-color: #FFFFFF;
+  height: 36px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-color: #DD3400;
+  box-shadow: 0 0 0 1px #DD3400;
+}
+
+.emotion-1:disabled {
+  cursor: default;
+}
+
+.emotion-1:-webkit-autofill {
+  box-shadow: 0 0 0 36px white inset;
+}
+
+.emotion-1::-webkit-search-decoration,
+.emotion-1::-webkit-search-cancel-button,
+.emotion-1::-webkit-search-results-button,
+.emotion-1::-webkit-search-results-decoration {
+  display: none;
+}
+
+.emotion-1::-ms-clear,
+.emotion-1::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-1::-moz-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-1:-ms-input-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-1::placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+<div
+  class="emotion-0"
+>
+  <input
+    class="emotion-1"
+  />
+</div>
+`;
+
 exports[`Input renders snapshot with left icon 1`] = `
 .emotion-0 {
   position: relative;

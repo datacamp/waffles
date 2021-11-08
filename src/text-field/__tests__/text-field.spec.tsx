@@ -57,6 +57,26 @@ describe('TextField', () => {
     expect(description).toBeInTheDocument();
   });
 
+  it('renders additional message when text field is required', () => {
+    const { getByText } = render(
+      <TextField label="Favorite singer" required />,
+    );
+
+    const message = getByText(/required/i);
+
+    expect(message).toBeInTheDocument();
+  });
+
+  it('renders error message', () => {
+    const { getByText } = render(
+      <TextField label="Favorite singer" error="Enter correct singer name." />,
+    );
+
+    const error = getByText('Enter correct singer name.');
+
+    expect(error).toBeInTheDocument();
+  });
+
   it('input and label are associated by the same ID', () => {
     const { container } = render(<TextField label="Favorite singer" />);
 
@@ -65,6 +85,21 @@ describe('TextField', () => {
 
     expect(label).toHaveAttribute('for', `form-control-${MOCKED_ID}`);
     expect(input).toHaveAttribute('id', `form-control-${MOCKED_ID}`);
+  });
+
+  it('input and error are associated by the same ID', () => {
+    const { container, getByText } = render(
+      <TextField label="Favorite singer" error="Enter correct singer name." />,
+    );
+
+    const input = container.querySelector('input');
+    const error = getByText('Enter correct singer name.');
+
+    expect(input).toHaveAttribute(
+      'aria-errormessage',
+      `form-control-error-${MOCKED_ID}`,
+    );
+    expect(error).toHaveAttribute('id', `form-control-error-${MOCKED_ID}`);
   });
 
   it('sets the data attribute on the input', () => {
@@ -133,6 +168,19 @@ describe('TextField', () => {
         label="Favorite singer"
         description="Additional description"
         placeholder="Taylor Swift"
+      />,
+    );
+
+    const textField = container.firstChild;
+    expect(textField).toMatchSnapshot();
+  });
+
+  it('renders snapshot of required with error', () => {
+    const { container } = render(
+      <TextField
+        label="Favorite singer"
+        error="Enter correct singer name."
+        required
       />,
     );
 
