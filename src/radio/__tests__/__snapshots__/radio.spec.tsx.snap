@@ -1,0 +1,627 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio renders basic snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.emotion-1 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #848C92;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 1px;
+  padding-left: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+}
+
+<label
+  class="emotion-0"
+>
+  <input
+    aria-invalid="false"
+    class="emotion-1"
+    type="radio"
+  />
+  <div
+    class="emotion-2"
+  />
+  <div
+    class="emotion-3"
+  >
+    Taylor Swift
+  </div>
+</label>
+`;
+
+exports[`Radio renders snapshot of checked 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.emotion-1 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #05192D;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-3 {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #009BD8;
+  border-radius: 50%;
+}
+
+.emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 1px;
+  padding-left: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+}
+
+<label
+  class="emotion-0"
+>
+  <input
+    aria-invalid="false"
+    checked=""
+    class="emotion-1"
+    type="radio"
+  />
+  <div
+    class="emotion-2"
+  >
+    <span
+      class="emotion-3"
+    />
+  </div>
+  <div
+    class="emotion-4"
+  >
+    Taylor Swift
+  </div>
+</label>
+`;
+
+exports[`Radio renders snapshot of disabled state 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  opacity: 0.6;
+}
+
+.emotion-1 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #848C92;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 1px;
+  padding-left: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+}
+
+<label
+  class="emotion-0"
+>
+  <input
+    aria-invalid="false"
+    class="emotion-1"
+    disabled=""
+    type="radio"
+  />
+  <div
+    class="emotion-2"
+  />
+  <div
+    class="emotion-3"
+  >
+    Taylor Swift
+  </div>
+</label>
+`;
+
+exports[`Radio renders snapshot of focused state 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.emotion-1 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #848C92;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-2::after {
+  box-shadow: 0 0 0 2px #009BD8;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 1px;
+  padding-left: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+}
+
+<label
+  class="emotion-0"
+>
+  <input
+    aria-invalid="false"
+    class="emotion-1"
+    type="radio"
+  />
+  <div
+    class="emotion-2"
+  />
+  <div
+    class="emotion-3"
+  >
+    Taylor Swift
+  </div>
+</label>
+`;
+
+exports[`Radio renders snapshot of inverted 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.emotion-1 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  background-color: #213147;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #848C92;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 1px;
+  padding-left: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #FFFFFF;
+}
+
+<label
+  class="emotion-0"
+>
+  <input
+    aria-invalid="false"
+    class="emotion-1"
+    type="radio"
+  />
+  <div
+    class="emotion-2"
+  />
+  <div
+    class="emotion-3"
+  >
+    Taylor Swift
+  </div>
+</label>
+`;
+
+exports[`Radio renders snapshot with error 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.emotion-1 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #848C92;
+  border-color: #DD3400;
+  box-shadow: 0 0 0 1px #DD3400;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 1px;
+  padding-left: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+}
+
+<label
+  class="emotion-0"
+>
+  <input
+    aria-invalid="true"
+    class="emotion-1"
+    type="radio"
+  />
+  <div
+    class="emotion-2"
+  />
+  <div
+    class="emotion-3"
+  >
+    Taylor Swift
+  </div>
+</label>
+`;
