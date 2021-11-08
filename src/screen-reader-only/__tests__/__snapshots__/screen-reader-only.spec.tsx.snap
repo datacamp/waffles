@@ -15,7 +15,8 @@ exports[`ScreenReaderOnly renders snapshot 1`] = `
 }
 
 <p>
-  Some regular visible text 
+  Some regular visible text
+   
   <span
     class="emotion-0"
   >
