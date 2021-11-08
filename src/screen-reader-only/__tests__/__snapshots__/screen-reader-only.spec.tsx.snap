@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScreenReaderOnly renders snapshot 1`] = `
+.emotion-0 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+<p>
+  Some regular visible text 
+  <span
+    class="emotion-0"
+  >
+    and visually hidden part visible only for screen readers
+  </span>
+</p>
+`;
