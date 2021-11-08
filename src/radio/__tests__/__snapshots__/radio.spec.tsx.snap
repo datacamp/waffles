@@ -101,7 +101,7 @@ exports[`Radio renders basic snapshot 1`] = `
 </label>
 `;
 
-exports[`Radio renders snapshot of checked 1`] = `
+exports[`Radio renders snapshot of checked state 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;

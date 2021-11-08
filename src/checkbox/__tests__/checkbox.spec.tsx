@@ -18,14 +18,28 @@ function TestRefCheckbox() {
 }
 
 describe('Checkbox', () => {
-  it('renders a basic checkbox', () => {
-    const { getByLabelText } = render(
+  it('renders label and input', () => {
+    const { getByLabelText, getByText } = render(
       <Checkbox onChange={jest.fn()}>Taylor Swift</Checkbox>,
     );
 
-    const checkbox = getByLabelText('Taylor Swift', { selector: 'input' });
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
+    const label = getByText('Taylor Swift');
 
-    expect(checkbox).toBeInTheDocument();
+    expect(input).toBeInTheDocument();
+    expect(label).toBeInTheDocument();
+  });
+
+  it('handles click event correctly', () => {
+    const handleClick = jest.fn();
+    const { getByText } = render(
+      <Checkbox onChange={handleClick}>Taylor Swift</Checkbox>,
+    );
+
+    const label = getByText('Taylor Swift');
+    fireEvent.click(label);
+
+    expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
   it('handles focus event correctly', () => {
@@ -36,8 +50,8 @@ describe('Checkbox', () => {
       </Checkbox>,
     );
 
-    const checkbox = getByLabelText('Taylor Swift', { selector: 'input' });
-    fireEvent.focus(checkbox);
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
+    fireEvent.focus(input);
 
     expect(handleFocus).toHaveBeenCalledTimes(1);
   });
@@ -49,9 +63,21 @@ describe('Checkbox', () => {
       </Checkbox>,
     );
 
-    const checkbox = getByTestId('taylors-checkbox');
+    const input = getByTestId('taylors-checkbox');
 
-    expect(checkbox).toBeInTheDocument();
+    expect(input).toBeInTheDocument();
+  });
+
+  it('sets correct aria attributes when has error', () => {
+    const { getByLabelText } = render(
+      <Checkbox error onChange={jest.fn()}>
+        Taylor Swift
+      </Checkbox>,
+    );
+
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
+
+    expect(input).toHaveAttribute('aria-invalid', 'true');
   });
 
   it('renders the disabled checkbox', () => {
@@ -61,9 +87,9 @@ describe('Checkbox', () => {
       </Checkbox>,
     );
 
-    const checkbox = getByLabelText('Taylor Swift', { selector: 'input' });
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
 
-    expect(checkbox).toBeDisabled();
+    expect(input).toBeDisabled();
   });
 
   it('accepts ref and could be focused programmatically', () => {
@@ -84,7 +110,7 @@ describe('Checkbox', () => {
     expect(checkbox).toMatchSnapshot();
   });
 
-  it('renders snapshot of checked', () => {
+  it('renders snapshot of checked state', () => {
     const { container } = render(
       <Checkbox checked onChange={jest.fn()}>
         Taylor Swift

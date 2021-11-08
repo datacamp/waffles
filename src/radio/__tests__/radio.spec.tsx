@@ -18,14 +18,28 @@ function TestRefRadio() {
 }
 
 describe('Radio', () => {
-  it('renders a basic radio', () => {
-    const { getByLabelText } = render(
+  it('renders label and input', () => {
+    const { getByLabelText, getByText } = render(
       <Radio onChange={jest.fn()}>Taylor Swift</Radio>,
     );
 
-    const radio = getByLabelText('Taylor Swift', { selector: 'input' });
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
+    const label = getByText('Taylor Swift');
 
-    expect(radio).toBeInTheDocument();
+    expect(input).toBeInTheDocument();
+    expect(label).toBeInTheDocument();
+  });
+
+  it('handles click event correctly', () => {
+    const handleClick = jest.fn();
+    const { getByText } = render(
+      <Radio onChange={handleClick}>Taylor Swift</Radio>,
+    );
+
+    const label = getByText('Taylor Swift');
+    fireEvent.click(label);
+
+    expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
   it('handles focus event correctly', () => {
@@ -36,8 +50,8 @@ describe('Radio', () => {
       </Radio>,
     );
 
-    const radio = getByLabelText('Taylor Swift', { selector: 'input' });
-    fireEvent.focus(radio);
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
+    fireEvent.focus(input);
 
     expect(handleFocus).toHaveBeenCalledTimes(1);
   });
@@ -49,9 +63,21 @@ describe('Radio', () => {
       </Radio>,
     );
 
-    const radio = getByTestId('taylors-radio');
+    const input = getByTestId('taylors-radio');
 
-    expect(radio).toBeInTheDocument();
+    expect(input).toBeInTheDocument();
+  });
+
+  it('sets correct aria attributes when has error', () => {
+    const { getByLabelText } = render(
+      <Radio error onChange={jest.fn()}>
+        Taylor Swift
+      </Radio>,
+    );
+
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
+
+    expect(input).toHaveAttribute('aria-invalid', 'true');
   });
 
   it('renders the disabled radio', () => {
@@ -61,9 +87,9 @@ describe('Radio', () => {
       </Radio>,
     );
 
-    const radio = getByLabelText('Taylor Swift', { selector: 'input' });
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
 
-    expect(radio).toBeDisabled();
+    expect(input).toBeDisabled();
   });
 
   it('accepts ref and could be focused programmatically', () => {
@@ -84,7 +110,7 @@ describe('Radio', () => {
     expect(radio).toMatchSnapshot();
   });
 
-  it('renders snapshot of checked', () => {
+  it('renders snapshot of checked state', () => {
     const { container } = render(
       <Radio checked onChange={jest.fn()}>
         Taylor Swift

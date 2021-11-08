@@ -102,7 +102,7 @@ exports[`Checkbox renders basic snapshot 1`] = `
 </label>
 `;
 
-exports[`Checkbox renders snapshot of checked 1`] = `
+exports[`Checkbox renders snapshot of checked state 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
