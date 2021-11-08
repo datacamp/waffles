@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { AddCircle, ChevronRight } from '../../icon';
 import { TextField } from '../index';
@@ -57,6 +58,22 @@ describe('TextField', () => {
     expect(description).toBeInTheDocument();
   });
 
+  it('after clicking on label input got focused', () => {
+    const handleFocus = jest.fn();
+    const { getByText } = render(
+      <TextField
+        label="Favorite singer"
+        placeholder="Taylor Swift"
+        onFocus={handleFocus}
+      />,
+    );
+
+    const label = getByText('Favorite singer');
+    userEvent.click(label);
+
+    expect(handleFocus).toHaveBeenCalledTimes(1);
+  });
+
   it('renders additional message when text field is required', () => {
     const { getByText } = render(
       <TextField label="Favorite singer" required />,
@@ -75,6 +92,20 @@ describe('TextField', () => {
     const error = getByText('Enter correct singer name.');
 
     expect(error).toBeInTheDocument();
+  });
+
+  it('sets correct aria attributes when has error', () => {
+    const { getByPlaceholderText } = render(
+      <TextField
+        error="Enter correct singer name."
+        label="Favorite singer"
+        placeholder="Taylor Swift"
+      />,
+    );
+
+    const input = getByPlaceholderText('Taylor Swift');
+
+    expect(input).toHaveAttribute('aria-invalid', 'true');
   });
 
   it('input and label are associated by the same ID', () => {

@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { render, fireEvent } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { AddCircle, ChevronRight } from '../../icon';
 import { Input } from '../index';
@@ -43,7 +44,19 @@ describe('Input', () => {
     expect(input).toBeInTheDocument();
   });
 
-  it('handles focus event correctly', () => {
+  it('handles typing correctly', () => {
+    const onChange = jest.fn();
+    const { getByPlaceholderText } = render(
+      <Input onChange={onChange} placeholder="Taylor Swift" />,
+    );
+
+    const input = getByPlaceholderText('Taylor Swift');
+    userEvent.type(input, 'test');
+
+    expect(onChange).toHaveBeenCalledTimes(4);
+  });
+
+  it('handles focus correctly', () => {
     const handleFocus = jest.fn();
     const { getByPlaceholderText } = render(
       <Input onFocus={handleFocus} placeholder="Taylor Swift" />,

@@ -42,7 +42,7 @@ describe('Radio', () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  it('handles focus event correctly', () => {
+  it('handles focus correctly', () => {
     const handleFocus = jest.fn();
     const { getByLabelText } = render(
       <Radio onFocus={handleFocus} onChange={jest.fn()}>

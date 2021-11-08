@@ -56,7 +56,7 @@ describe('Switch', () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  it('handles focus event correctly', () => {
+  it('handles focus correctly', () => {
     const handleFocus = jest.fn();
     const { getByLabelText } = render(
       <Switch onFocus={handleFocus} onChange={jest.fn()}>
@@ -124,7 +124,7 @@ describe('Switch', () => {
     expect(switchComponent).toMatchSnapshot();
   });
 
-  it('renders snapshot of checked state', () => {
+  it('renders snapshot of toggled state', () => {
     const { container } = render(
       <Switch checked onChange={jest.fn()}>
         Dark mode

@@ -51,7 +51,7 @@ describe('Button', () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  it('handles focus event correctly', () => {
+  it('handles focus correctly', () => {
     const handleFocus = jest.fn();
     const { getByText } = render(
       <Button onFocus={handleFocus}>Follow Taylor Swift</Button>,

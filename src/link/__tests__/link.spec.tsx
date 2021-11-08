@@ -55,7 +55,7 @@ describe('Link', () => {
     expect(link).toBeInTheDocument();
   });
 
-  it('handles focus event correctly', () => {
+  it('handles focus correctly', () => {
     const handleFocus = jest.fn();
     const { getByText } = render(
       <Link onFocus={handleFocus} href="https://taylor-swift-fanclub.com">
