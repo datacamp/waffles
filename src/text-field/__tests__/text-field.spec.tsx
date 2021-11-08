@@ -12,7 +12,7 @@ jest.mock('nanoid', () => {
   };
 });
 
-// Most of the functionalities are identical to what Input component offers
+// A lot of features are already tested in Input component tests
 
 function TestRefTextField() {
   const inputRef = useRef<HTMLInputElement>(null);
