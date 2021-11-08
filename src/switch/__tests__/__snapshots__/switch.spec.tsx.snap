@@ -1,0 +1,830 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch renders basic snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 3px;
+  padding-right: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+}
+
+.emotion-2 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 22px;
+  width: 36px;
+  padding: 2px;
+  border-radius: 12px;
+  -webkit-transition: background-color 75ms ease-out;
+  transition: background-color 75ms ease-out;
+  background-color: #848C92;
+}
+
+.emotion-3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 14px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #009BD8;
+  background-color: #FFFFFF;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: -webkit-transform 75ms ease-out;
+  transition: transform 75ms ease-out;
+}
+
+<label
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    Dark mode
+  </div>
+  <input
+    aria-checked="false"
+    aria-invalid="false"
+    class="emotion-2"
+    role="switch"
+    type="checkbox"
+  />
+  <div
+    class="emotion-3"
+  >
+    <span
+      class="emotion-4"
+    />
+  </div>
+</label>
+`;
+
+exports[`Switch renders snapshot of checked 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 3px;
+  padding-right: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+}
+
+.emotion-2 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 22px;
+  width: 36px;
+  padding: 2px;
+  border-radius: 12px;
+  -webkit-transition: background-color 75ms ease-out;
+  transition: background-color 75ms ease-out;
+  background-color: #009BD8;
+}
+
+.emotion-3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 14px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #009BD8;
+  background-color: #FFFFFF;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transform: translateX(14px);
+  -moz-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
+  -webkit-transition: -webkit-transform 75ms ease-out;
+  transition: transform 75ms ease-out;
+}
+
+<label
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    Dark mode
+  </div>
+  <input
+    aria-checked="true"
+    aria-invalid="false"
+    checked=""
+    class="emotion-2"
+    role="switch"
+    type="checkbox"
+  />
+  <div
+    class="emotion-3"
+  >
+    <span
+      class="emotion-4"
+    >
+      <svg
+        aria-hidden="true"
+        height="14"
+        viewBox="0 0 18 18"
+        width="14"
+      >
+        <path
+          d="M13.746 4.337a1.015 1.015 0 0 1 1.409-.099c.417.354.462.97.101 1.378l-7.13 8.047a1.015 1.015 0 0 1-1.483.03L2.771 9.67a.961.961 0 0 1 .044-1.38 1.015 1.015 0 0 1 1.412.041l3.113 3.235 6.406-7.229Z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+  </div>
+</label>
+`;
+
+exports[`Switch renders snapshot of disabled state 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  opacity: 0.6;
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 3px;
+  padding-right: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+}
+
+.emotion-2 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 22px;
+  width: 36px;
+  padding: 2px;
+  border-radius: 12px;
+  -webkit-transition: background-color 75ms ease-out;
+  transition: background-color 75ms ease-out;
+  background-color: #848C92;
+}
+
+.emotion-3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 14px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #009BD8;
+  background-color: #FFFFFF;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: -webkit-transform 75ms ease-out;
+  transition: transform 75ms ease-out;
+}
+
+<label
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    Dark mode
+  </div>
+  <input
+    aria-checked="false"
+    aria-invalid="false"
+    class="emotion-2"
+    disabled=""
+    role="switch"
+    type="checkbox"
+  />
+  <div
+    class="emotion-3"
+  >
+    <span
+      class="emotion-4"
+    />
+  </div>
+</label>
+`;
+
+exports[`Switch renders snapshot of focused state 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 3px;
+  padding-right: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+}
+
+.emotion-2 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 22px;
+  width: 36px;
+  padding: 2px;
+  border-radius: 12px;
+  -webkit-transition: background-color 75ms ease-out;
+  transition: background-color 75ms ease-out;
+  background-color: #848C92;
+}
+
+.emotion-3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 14px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-3::after {
+  box-shadow: 0 0 0 2px #009BD8;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #009BD8;
+  background-color: #FFFFFF;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: -webkit-transform 75ms ease-out;
+  transition: transform 75ms ease-out;
+}
+
+<label
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    Dark mode
+  </div>
+  <input
+    aria-checked="false"
+    aria-invalid="false"
+    class="emotion-2"
+    role="switch"
+    type="checkbox"
+  />
+  <div
+    class="emotion-3"
+  >
+    <span
+      class="emotion-4"
+    />
+  </div>
+</label>
+`;
+
+exports[`Switch renders snapshot of inverted 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 3px;
+  padding-right: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #FFFFFF;
+}
+
+.emotion-2 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 22px;
+  width: 36px;
+  padding: 2px;
+  border-radius: 12px;
+  -webkit-transition: background-color 75ms ease-out;
+  transition: background-color 75ms ease-out;
+  background-color: #848C92;
+}
+
+.emotion-3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 14px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #06BDFC;
+  background-color: #05192D;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: -webkit-transform 75ms ease-out;
+  transition: transform 75ms ease-out;
+}
+
+<label
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    Dark mode
+  </div>
+  <input
+    aria-checked="false"
+    aria-invalid="false"
+    class="emotion-2"
+    role="switch"
+    type="checkbox"
+  />
+  <div
+    class="emotion-3"
+  >
+    <span
+      class="emotion-4"
+    />
+  </div>
+</label>
+`;
+
+exports[`Switch renders snapshot with error 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 3px;
+  padding-right: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+}
+
+.emotion-2 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 22px;
+  width: 36px;
+  padding: 2px;
+  border-radius: 12px;
+  -webkit-transition: background-color 75ms ease-out;
+  transition: background-color 75ms ease-out;
+  background-color: #848C92;
+  background-color: #DD3400;
+}
+
+.emotion-3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 14px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #009BD8;
+  background-color: #FFFFFF;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: -webkit-transform 75ms ease-out;
+  transition: transform 75ms ease-out;
+}
+
+<label
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    Dark mode
+  </div>
+  <input
+    aria-checked="false"
+    aria-invalid="true"
+    class="emotion-2"
+    role="switch"
+    type="checkbox"
+  />
+  <div
+    class="emotion-3"
+  >
+    <span
+      class="emotion-4"
+    />
+  </div>
+</label>
+`;
