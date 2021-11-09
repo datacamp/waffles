@@ -148,6 +148,136 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
 </div>
 `;
 
+exports[`TextArea renders snapshot of disabled 1`] = `
+.emotion-0 {
+  position: relative;
+  width: 100%;
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #05192D;
+  margin-bottom: 8px;
+}
+
+.emotion-2 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #05192D;
+  font-size: 14px;
+  line-height: 1.25;
+  margin-top: -4px;
+}
+
+.emotion-3 {
+  position: relative;
+}
+
+.emotion-3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-4 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 8px 12px;
+  color: #05192D;
+  background-color: #FFFFFF;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid #848C92;
+  border-radius: 4px;
+  outline: 0;
+  color: #05192D;
+  background-color: #FFFFFF;
+}
+
+.emotion-4:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-4::-moz-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-4:-ms-input-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-4::placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+<div
+  class="emotion-0"
+>
+  <label
+    class="emotion-1"
+    for="form-control-123abC"
+  >
+    How do you feel?
+  </label>
+  <p
+    class="emotion-2"
+  >
+    Additional description
+  </p>
+  <div
+    class="emotion-3"
+  >
+    <textarea
+      class="emotion-4"
+      disabled=""
+      id="form-control-123abC"
+    />
+  </div>
+</div>
+`;
+
 exports[`TextArea renders snapshot of inverted 1`] = `
 .emotion-0 {
   position: relative;

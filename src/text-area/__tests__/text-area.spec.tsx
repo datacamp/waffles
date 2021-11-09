@@ -50,10 +50,10 @@ describe('TextArea', () => {
   });
 
   it('handles typing correctly', () => {
-    const onChange = jest.fn();
+    const handleChange = jest.fn();
     const { getByPlaceholderText } = render(
       <TextArea
-        onChange={onChange}
+        onChange={handleChange}
         label="How do you feel?"
         placeholder="Leave a comment here"
       />,
@@ -62,7 +62,7 @@ describe('TextArea', () => {
     const textarea = getByPlaceholderText('Leave a comment here');
     userEvent.type(textarea, 'test');
 
-    expect(onChange).toHaveBeenCalledTimes(4);
+    expect(handleChange).toHaveBeenCalledTimes(4);
   });
 
   it('after clicking on label textarea got focused', () => {
@@ -198,6 +198,19 @@ describe('TextArea', () => {
     const { container } = render(
       <TextArea
         inverted
+        label="How do you feel?"
+        description="Additional description"
+      />,
+    );
+
+    const textarea = container.firstChild;
+    expect(textarea).toMatchSnapshot();
+  });
+
+  it('renders snapshot of disabled', () => {
+    const { container } = render(
+      <TextArea
+        disabled
         label="How do you feel?"
         description="Additional description"
       />,

@@ -202,15 +202,11 @@ describe('Input', () => {
     });
   });
 
-  describe('renders snapshot of inverted', () => {
-    sizes.forEach((size) => {
-      it(`size ${size}`, () => {
-        const { container } = render(<Input size={size} inverted />);
+  it('renders snapshot of inverted', () => {
+    const { container } = render(<Input inverted />);
 
-        const input = container.firstChild;
-        expect(input).toMatchSnapshot();
-      });
-    });
+    const input = container.firstChild;
+    expect(input).toMatchSnapshot();
   });
 
   it('renders snapshot of disabled state', () => {
