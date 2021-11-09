@@ -38,7 +38,7 @@
   ],
   "author": "DataCamp",
   "license": "MIT",
-  "homepage": "https://waffles.datacamp.com",
+  "homepage": "https://waffles-next.datacamp.com",
   "engines": {
     "node": ">=14.x"
   },
