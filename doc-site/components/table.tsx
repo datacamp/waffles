@@ -23,6 +23,7 @@ const tableCellStyle = css`
   padding-bottom: ${tokens.spacing.small};
   padding-left: 12px;
   padding-right: 12px;
+  overflow: hidden;
 `;
 
 const tableHeadCellStyle = css`
