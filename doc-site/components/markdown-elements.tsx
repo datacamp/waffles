@@ -2,7 +2,6 @@ import React from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
 import Head from 'next/head';
-import slugify from 'slugify';
 
 import { tokens } from '@datacamp/waffles/tokens';
 import { Code as CodeBase } from '@datacamp/waffles/code';
@@ -12,6 +11,7 @@ import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
 
 import textFromChildren from '../helpers/text-from-children';
+import slugify from '../helpers/slugify';
 import TableBase from './table';
 import Bookmark from './bookmark';
 import List from './list';
@@ -39,7 +39,7 @@ const secondaryHeadingStyle = css`
 
 // Allow secondary heading to be bookmarked
 function H2({ children }: ContentProps) {
-  const headingId = slugify(textFromChildren(children), { lower: true });
+  const headingId = slugify(textFromChildren(children));
 
   return (
     <Heading size="xlarge" id={headingId} css={secondaryHeadingStyle}>

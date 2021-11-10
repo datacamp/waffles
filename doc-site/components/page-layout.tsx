@@ -10,6 +10,7 @@ import { HEADER_HEIGHT, ARTICLE_CONTENT_WIDTH } from './constants';
 import Header from './page-header';
 import Sidebar from './sidebar';
 import Navigation from './navigation';
+import TableOfContents from './table-of-contents';
 
 const GITHUB_EDIT_URL =
   'https://github.com/datacamp/waffles/edit/master/doc-site/pages';
@@ -20,6 +21,10 @@ const wrapperStyle = css`
   min-height: 100vh;
 `;
 
+const containerStyle = css`
+  display: flex;
+`;
+
 const mainStyle = css`
   background-color: ${tokens.colors.beigeSubtle};
   flex-grow: 1;
@@ -28,6 +33,7 @@ const mainStyle = css`
 
 const articleStyle = css`
   max-width: ${ARTICLE_CONTENT_WIDTH};
+  flex-grow: 1;
 `;
 
 const footerStyle = css`
@@ -52,7 +58,7 @@ function PageLayout({ children }: PageLayoutProps) {
           <Navigation />
         </Sidebar>
         <main css={mainStyle}>
-          <ContentContainer>
+          <ContentContainer css={containerStyle}>
             <article css={articleStyle}>
               {children}
               {isEditable && (
@@ -69,6 +75,7 @@ function PageLayout({ children }: PageLayoutProps) {
                 </footer>
               )}
             </article>
+            <TableOfContents>{children}</TableOfContents>
           </ContentContainer>
         </main>
       </div>
