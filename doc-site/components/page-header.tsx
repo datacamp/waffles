@@ -19,7 +19,7 @@ const headerStyle = css`
   padding-left: ${tokens.spacing.small};
   padding-right: ${tokens.spacing.small};
   position: fixed;
-  z-index: ${tokens.zIndex.default};
+  z-index: ${tokens.zIndex.sticky};
 `;
 
 const logoLinkStyle = css`
