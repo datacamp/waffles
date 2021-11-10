@@ -46,6 +46,11 @@ const labelStyle = css`
   color: inherit;
 `;
 
+const buttonContentStyle = css`
+  width: 88px;
+  text-align: center;
+`;
+
 type IconPreviewType = {
   name: string;
   icon: React.ReactNode;
@@ -114,7 +119,9 @@ function AllIconsGrid() {
           iconLeft={allLabelsVisible ? <Hidden /> : <Visible />}
           onClick={() => setLabelsVisiblity(!allLabelsVisible)}
         >
-          {allLabelsVisible ? 'Hide' : 'Show'} Names
+          <div css={buttonContentStyle}>
+            {allLabelsVisible ? 'Hide' : 'Show'} Names
+          </div>
         </Button>
       </PreviewControls>
     </section>

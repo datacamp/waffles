@@ -27,6 +27,11 @@ const wrapperStyle = css`
   overflow: hidden;
 `;
 
+const buttonContentStyle = css`
+  width: 78px;
+  text-align: center;
+`;
+
 type ExampleProps = {
   children: React.ReactNode;
   path: string;
@@ -94,7 +99,9 @@ function Example({
           disabled={!code}
           onClick={toggleCodePreviewVisibility}
         >
-          {isCodePreviewVisible ? 'Hide' : 'Show'} Code
+          <div css={buttonContentStyle}>
+            {isCodePreviewVisible ? 'Hide' : 'Show'} Code
+          </div>
         </Button>
       </PreviewControls>
     </section>
