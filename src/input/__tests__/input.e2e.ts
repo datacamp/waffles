@@ -24,7 +24,7 @@ describe('Input', () => {
     cy.get('main').find('input').should('have.length', 12);
   });
 
-  it('render all variants and sizes with various enhancers', () => {
+  it('render all sizes with various enhancers', () => {
     cy.loadStory('input-with-enhancers');
     cy.get('main').find('input').should('have.length', 17);
     cy.get('main').find('button').should('have.length', 11);
