@@ -20,7 +20,7 @@ function newFileName(storyPath) {
 // Update paths to point to prebuilt modules
 function contentWithUpdatedImports(storyContent, componentDirectoryName) {
   return storyContent
-    .replace(/..\/..\/([^'])/g, '@datacamp/waffles/$1')
+    .replace(/from '..\/..\/(.+)'/g, "from '@datacamp/waffles/$1'")
     .replace('../index', `@datacamp/waffles/${componentDirectoryName}`);
 }
 
