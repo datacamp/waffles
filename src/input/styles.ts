@@ -39,6 +39,7 @@ export function inputWrapperStyle({
   return css`
     position: relative;
     width: 100%;
+    height: 100%;
     opacity: ${disabled ? tokens.opacity.high : 1};
 
     &::after {
