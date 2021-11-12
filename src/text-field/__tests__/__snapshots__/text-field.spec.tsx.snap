@@ -43,6 +43,7 @@ exports[`TextField renders snapshot of inverted 1`] = `
 .emotion-3 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -181,6 +182,7 @@ exports[`TextField renders snapshot of password type 1`] = `
 .emotion-2 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -403,6 +405,7 @@ exports[`TextField renders snapshot of required with error 1`] = `
 .emotion-4 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -579,6 +582,7 @@ exports[`TextField renders snapshot of search type 1`] = `
 .emotion-2 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -763,6 +767,7 @@ exports[`TextField renders snapshot with label and description 1`] = `
 .emotion-3 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 

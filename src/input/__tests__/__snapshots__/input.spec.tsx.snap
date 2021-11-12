@@ -4,6 +4,7 @@ exports[`Input renders snapshot of disabled state 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 0.6;
 }
 
@@ -179,6 +180,7 @@ exports[`Input renders snapshot of inverted 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -278,6 +280,7 @@ exports[`Input renders snapshot of password type 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -444,6 +447,7 @@ exports[`Input renders snapshot of search type 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -578,6 +582,7 @@ exports[`Input renders snapshot of size large 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -677,6 +682,7 @@ exports[`Input renders snapshot of size medium 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -776,6 +782,7 @@ exports[`Input renders snapshot of size small 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -875,6 +882,7 @@ exports[`Input renders snapshot with error 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -976,6 +984,7 @@ exports[`Input renders snapshot with left icon 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -1106,6 +1115,7 @@ exports[`Input renders snapshot with right enhancer 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
