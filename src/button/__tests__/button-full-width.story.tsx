@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../../tokens';
-import { AddCircle } from '../../icon';
+import { Cog } from '../../icon';
 import { Button } from '../index';
 
 const wrapperStyle = css`
@@ -29,7 +29,7 @@ function Story() {
         {variants.map((variant) => {
           return (
             <Button
-              iconLeft={<AddCircle />}
+              iconLeft={<Cog />}
               key={variant}
               variant={variant}
               fullWidth
