@@ -1,3 +1,5 @@
+// A lot of features are already covered by Input stories
+
 describe('TextField', () => {
   it('renders a basic text field', () => {
     cy.loadStory('text-field-basic');
@@ -15,7 +17,7 @@ describe('TextField', () => {
     cy.loadStory('text-field-error');
     cy.get('main')
       .findAllByText(/provide correct value/i)
-      .should('have.length', 2);
+      .should('have.length', 1);
   });
 
   it('render all sizes, with inverted and disabled', () => {

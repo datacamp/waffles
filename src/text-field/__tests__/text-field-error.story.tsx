@@ -11,30 +11,14 @@ const wrapperStyle = css`
 
 function Story() {
   return (
-    <>
-      <div css={wrapperStyle}>
-        <TextField
-          label="Text field with error"
-          value="Invalid value"
-          onChange={() => {}}
-          error="Provide correct value."
-        />
-      </div>
-      <div
-        css={css`
-          ${wrapperStyle}
-          background-color: ${tokens.colors.navy};
-        `}
-      >
-        <TextField
-          inverted
-          label="Inverted text field with error"
-          value="Invalid value"
-          onChange={() => {}}
-          error="Provide correct value."
-        />
-      </div>
-    </>
+    <div css={wrapperStyle}>
+      <TextField
+        label="Text field with error"
+        value="Invalid value"
+        onChange={() => {}}
+        error="Provide correct value."
+      />
+    </div>
   );
 }
 
