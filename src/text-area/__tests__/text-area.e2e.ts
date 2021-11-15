@@ -11,6 +11,11 @@ describe('TextArea', () => {
     cy.get('main').find('textarea').should('have.focus');
   });
 
+  it('renders with custom styles applied', () => {
+    cy.loadStory('text-area-styled');
+    cy.get('main').find('textarea').should('have.length', 1);
+  });
+
   it('renders with error', () => {
     cy.loadStory('text-area-error');
     cy.get('main')

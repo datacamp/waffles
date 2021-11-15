@@ -13,6 +13,11 @@ describe('TextField', () => {
     cy.get('main').find('input').should('have.focus');
   });
 
+  it('renders with custom styles applied', () => {
+    cy.loadStory('text-field-styled');
+    cy.get('main').find('input').should('have.length', 1);
+  });
+
   it('renders with error', () => {
     cy.loadStory('text-field-error');
     cy.get('main')
