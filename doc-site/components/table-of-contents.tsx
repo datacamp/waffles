@@ -55,7 +55,7 @@ type TableOfContentsProps = {
 // Return array of H2 elements text content
 function tableOfContentsEntries(content: JSX.Element[]) {
   return content.reduce<string[]>((entries, element) => {
-    if (element.type?.name.toLowerCase().includes('h2')) {
+    if (element.type?.name.includes('H2')) {
       return entries.concat(element.props.children);
     }
     return entries;
