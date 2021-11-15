@@ -5,9 +5,6 @@ import { tokens } from '../../tokens';
 import { Checkbox } from '../index';
 
 const wrapperStyle = css`
-  display: flex;
-  flex-direction: column;
-  gap: ${tokens.spacing.large};
   padding: ${tokens.spacing.medium};
 `;
 
@@ -19,9 +16,6 @@ function Story() {
         <Checkbox error checked={false} onChange={() => {}}>
           Regular checkbox with error
         </Checkbox>
-        <Checkbox error checked={true} onChange={() => {}}>
-          Regular ticked checkbox with error
-        </Checkbox>
       </div>
       {/* Inverted */}
       <div
@@ -32,9 +26,6 @@ function Story() {
       >
         <Checkbox error inverted checked={false} onChange={() => {}}>
           Inverted checkbox with error
-        </Checkbox>
-        <Checkbox error inverted checked={true} onChange={() => {}}>
-          Inverted ticked checkbox with error
         </Checkbox>
       </div>
     </>
