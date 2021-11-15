@@ -9,9 +9,9 @@ const linkBaseStyle = css`
   vertical-align: bottom;
   text-decoration: none;
   font-size: inherit;
+  line-height: inherit;
   font-family: ${tokens.fontFamilies.sansSerif};
   font-weight: ${tokens.fontWeights.bold};
-  line-height: ${tokens.lineHeights.relaxed};
   outline: 0;
   border-radius: ${tokens.borderRadius.medium};
   transition: box-shadow 125ms ease-out, background-color 125ms ease-out;
