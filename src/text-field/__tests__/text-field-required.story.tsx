@@ -11,7 +11,7 @@ function Story() {
   return (
     <>
       <div css={wrapperStyle}>
-        <TextField required label="Required text field" />
+        <TextField required label="Text field with required indicator" />
       </div>
       <div
         css={css`
@@ -22,8 +22,7 @@ function Story() {
         <TextField
           inverted
           required
-          label="Inverted required text field"
-          value="Invalid value"
+          label="Inverted text field with required indicator"
         />
       </div>
     </>

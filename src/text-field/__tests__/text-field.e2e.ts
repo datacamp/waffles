@@ -16,8 +16,13 @@ describe('TextField', () => {
   it('renders with error', () => {
     cy.loadStory('text-field-error');
     cy.get('main')
-      .findAllByText(/provide correct value/i)
-      .should('have.length', 1);
+      .findByText(/provide correct value/i)
+      .should('exist');
+  });
+
+  it('renders required indicator', () => {
+    cy.loadStory('text-field-required');
+    cy.get('main').findAllByText('Required').should('have.length', 2);
   });
 
   it('render all sizes, with inverted and disabled', () => {
