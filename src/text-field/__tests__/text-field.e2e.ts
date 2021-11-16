@@ -35,6 +35,12 @@ describe('TextField', () => {
     cy.get('main').find('input').should('have.length', 12);
   });
 
+  it('render all sizes with various enhancers', () => {
+    cy.loadStory('text-field-with-enhancers');
+    cy.get('main').find('input').should('have.length', 6);
+    cy.get('main').find('button').should('have.length', 6);
+  });
+
   it('render enhanced search and password types', () => {
     cy.loadStory('text-field-types');
     cy.get('main').find('input[type=search]').should('have.length', 2);
