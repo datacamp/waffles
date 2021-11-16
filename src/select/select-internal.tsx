@@ -50,7 +50,7 @@ function SelectInternal(
     <FormControl {...{ label, description, error, required, inverted }}>
       {(formControlProps) => {
         return (
-          <div css={selectWrapperStyle({ disabled, isFocused })}>
+          <div css={selectWrapperStyle({ size, disabled, isFocused })}>
             <select
               {...formControlProps}
               {...restProps}

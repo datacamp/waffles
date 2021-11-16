@@ -28,18 +28,20 @@ const sizeMap = {
 // Main input styles
 
 type InputWrapperStyleOptions = {
+  size: InputSize;
   disabled: boolean;
   isFocused: boolean;
 };
 
 export function inputWrapperStyle({
+  size,
   disabled,
   isFocused,
 }: InputWrapperStyleOptions) {
   return css`
     position: relative;
     width: 100%;
-    height: 100%;
+    height: ${sizeMap[size].sizing};
     opacity: ${disabled ? tokens.opacity.high : 1};
 
     &::after {
@@ -69,6 +71,7 @@ export function inputWrapperStyle({
 const inputBaseStyle = css`
   display: flex;
   width: 100%;
+  height: 100%;
   font-family: ${tokens.fontFamilies.sansSerif};
   font-size: ${tokens.fontSizes.medium};
   font-weight: ${tokens.fontWeights.regular};
@@ -123,7 +126,6 @@ export function inputStyle({
     background-color: ${inverted
       ? tokens.colors.navyLight
       : tokens.colors.white};
-    height: ${sizeMap[size].sizing};
     padding-left: ${hasIconLeft
       ? sizeMap[size].spacingWithEnhancer
       : sizeMap[size].spacing};

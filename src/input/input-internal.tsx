@@ -81,7 +81,7 @@ function InputInternal(
   }
 
   return (
-    <div css={inputWrapperStyle({ disabled, isFocused })}>
+    <div css={inputWrapperStyle({ size, disabled, isFocused })}>
       {renderIconLeft()}
       <input
         {...restProps}

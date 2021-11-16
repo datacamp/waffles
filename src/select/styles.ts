@@ -26,17 +26,20 @@ const sizeMap = {
 } as const;
 
 type SelectWrapperStyleOptions = {
+  size: SelectSize;
   disabled: boolean;
   isFocused: boolean;
 };
 
 export function selectWrapperStyle({
+  size,
   disabled,
   isFocused,
 }: SelectWrapperStyleOptions) {
   return css`
     position: relative;
     width: 100%;
+    height: ${sizeMap[size].sizing};
     opacity: ${disabled ? tokens.opacity.high : 1};
 
     &::after {
@@ -66,6 +69,7 @@ export function selectWrapperStyle({
 const selectBaseStyle = css`
   display: flex;
   width: 100%;
+  height: 100%;
   font-family: ${tokens.fontFamilies.sansSerif};
   font-size: ${tokens.fontSizes.medium};
   font-weight: ${tokens.fontWeights.regular};
@@ -100,7 +104,6 @@ export function selectStyle({
     background-color: ${inverted
       ? tokens.colors.navyLight
       : tokens.colors.white};
-    height: ${sizeMap[size].sizing};
     padding-left: ${sizeMap[size].spacing};
     padding-right: ${sizeMap[size].spacingWithIcon};
 
