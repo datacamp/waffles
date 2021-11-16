@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Children, cloneElement, isValidElement } from 'react';
 
 import { Search, Visible, Hidden } from '../icon';
 import { inputWrapperStyle, inputStyle } from './styles';
@@ -73,8 +73,19 @@ function InputInternal(
         </EnhancerRight>
       );
     } else if (enhancerRight) {
+      // Disable custom enhancer when whole input is disabled by passing disabled prop
       return (
-        <EnhancerRight {...{ size, inverted }}>{enhancerRight}</EnhancerRight>
+        <EnhancerRight {...{ size, inverted }}>
+          {Children.map(enhancerRight, (child) => {
+            if (isValidElement(child)) {
+              return cloneElement(child, {
+                disabled,
+              });
+            }
+
+            return null;
+          })}
+        </EnhancerRight>
       );
     }
     return null;
