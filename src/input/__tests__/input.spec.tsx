@@ -128,6 +128,26 @@ describe('Input', () => {
     expect(enhancer).toContainElement(icon);
   });
 
+  it('when whole input is disabled, right enhancer should be disabled too', () => {
+    const { getByPlaceholderText, getByTestId } = render(
+      <Input
+        disabled
+        placeholder="Taylor Swift"
+        enhancerRight={
+          <Input.Enhancer data-testid="right-enhancer">
+            <ChevronRight />
+          </Input.Enhancer>
+        }
+      />,
+    );
+
+    const input = getByPlaceholderText('Taylor Swift');
+    const enhancer = getByTestId('right-enhancer');
+
+    expect(input).toBeDisabled();
+    expect(enhancer).toBeDisabled();
+  });
+
   it('renders both left icon and right enhancer', () => {
     const { container, getByTestId } = render(
       <Input
@@ -174,6 +194,18 @@ describe('Input', () => {
       const enhancer = getByLabelText('Show password text');
 
       expect(enhancer).toBeInTheDocument();
+    });
+
+    it('when password input is disabled, right toggle enhancer should be disabled too', () => {
+      const { getByLabelText, getByPlaceholderText } = render(
+        <Input disabled type="password" placeholder="Password" />,
+      );
+
+      const input = getByPlaceholderText('Password');
+      const enhancer = getByLabelText('Show password text');
+
+      expect(input).toBeDisabled();
+      expect(enhancer).toBeDisabled();
     });
 
     it('after clicking password visibility toggle, input type changes to text, so the password is visible', () => {
