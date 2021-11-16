@@ -27,6 +27,7 @@ exports[`Select renders snapshot of disabled 1`] = `
 .emotion-2 {
   position: relative;
   width: 100%;
+  height: 36px;
   opacity: 0.6;
 }
 
@@ -52,6 +53,7 @@ exports[`Select renders snapshot of disabled 1`] = `
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100%;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -66,7 +68,6 @@ exports[`Select renders snapshot of disabled 1`] = `
   cursor: pointer;
   color: #05192D;
   background-color: #FFFFFF;
-  height: 36px;
   padding-left: 12px;
   padding-right: 36px;
 }
@@ -167,6 +168,7 @@ exports[`Select renders snapshot of inverted 1`] = `
 .emotion-2 {
   position: relative;
   width: 100%;
+  height: 36px;
   opacity: 1;
 }
 
@@ -192,6 +194,7 @@ exports[`Select renders snapshot of inverted 1`] = `
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100%;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -206,7 +209,6 @@ exports[`Select renders snapshot of inverted 1`] = `
   cursor: pointer;
   color: #FFFFFF;
   background-color: #213147;
-  height: 36px;
   padding-left: 12px;
   padding-right: 36px;
 }
@@ -306,6 +308,7 @@ exports[`Select renders snapshot of placeholder, when value is set to empty stri
 .emotion-2 {
   position: relative;
   width: 100%;
+  height: 36px;
   opacity: 1;
 }
 
@@ -331,6 +334,7 @@ exports[`Select renders snapshot of placeholder, when value is set to empty stri
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100%;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -345,7 +349,6 @@ exports[`Select renders snapshot of placeholder, when value is set to empty stri
   cursor: pointer;
   color: #05192D;
   background-color: #FFFFFF;
-  height: 36px;
   padding-left: 12px;
   padding-right: 36px;
   color: #65707C;
@@ -473,6 +476,7 @@ exports[`Select renders snapshot of required with error 1`] = `
 .emotion-4 {
   position: relative;
   width: 100%;
+  height: 36px;
   opacity: 1;
 }
 
@@ -498,6 +502,7 @@ exports[`Select renders snapshot of required with error 1`] = `
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100%;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -512,7 +517,6 @@ exports[`Select renders snapshot of required with error 1`] = `
   cursor: pointer;
   color: #05192D;
   background-color: #FFFFFF;
-  height: 36px;
   padding-left: 12px;
   padding-right: 36px;
   color: #65707C;
@@ -661,6 +665,7 @@ exports[`Select renders snapshot of size large 1`] = `
 .emotion-2 {
   position: relative;
   width: 100%;
+  height: 48px;
   opacity: 1;
 }
 
@@ -686,6 +691,7 @@ exports[`Select renders snapshot of size large 1`] = `
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100%;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -700,7 +706,6 @@ exports[`Select renders snapshot of size large 1`] = `
   cursor: pointer;
   color: #05192D;
   background-color: #FFFFFF;
-  height: 48px;
   padding-left: 12px;
   padding-right: 36px;
 }
@@ -800,6 +805,7 @@ exports[`Select renders snapshot of size medium 1`] = `
 .emotion-2 {
   position: relative;
   width: 100%;
+  height: 36px;
   opacity: 1;
 }
 
@@ -825,6 +831,7 @@ exports[`Select renders snapshot of size medium 1`] = `
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100%;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -839,7 +846,6 @@ exports[`Select renders snapshot of size medium 1`] = `
   cursor: pointer;
   color: #05192D;
   background-color: #FFFFFF;
-  height: 36px;
   padding-left: 12px;
   padding-right: 36px;
 }
@@ -939,6 +945,7 @@ exports[`Select renders snapshot of size small 1`] = `
 .emotion-2 {
   position: relative;
   width: 100%;
+  height: 24px;
   opacity: 1;
 }
 
@@ -964,6 +971,7 @@ exports[`Select renders snapshot of size small 1`] = `
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100%;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -978,7 +986,6 @@ exports[`Select renders snapshot of size small 1`] = `
   cursor: pointer;
   color: #05192D;
   background-color: #FFFFFF;
-  height: 24px;
   padding-left: 6px;
   padding-right: 26px;
 }
@@ -1094,6 +1101,7 @@ exports[`Select renders snapshot with label and description 1`] = `
 .emotion-3 {
   position: relative;
   width: 100%;
+  height: 36px;
   opacity: 1;
 }
 
@@ -1119,6 +1127,7 @@ exports[`Select renders snapshot with label and description 1`] = `
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100%;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -1133,7 +1142,6 @@ exports[`Select renders snapshot with label and description 1`] = `
   cursor: pointer;
   color: #05192D;
   background-color: #FFFFFF;
-  height: 36px;
   padding-left: 12px;
   padding-right: 36px;
 }

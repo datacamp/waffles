@@ -22,6 +22,7 @@ function Story() {
             <Select
               key={`select-${size}`}
               label={`Regular ${size} select`}
+              description="Description of regular text field"
               value="python"
               size={size}
               onChange={() => {}}
@@ -40,6 +41,7 @@ function Story() {
               disabled
               key={`select-${size}-disabled`}
               label={`Regular ${size} disabled select`}
+              description="Description of regular disabled text field"
               value="python"
               size={size}
               onChange={() => {}}
@@ -63,6 +65,7 @@ function Story() {
               inverted
               key={`select-${size}-inverted`}
               label={`Inverted ${size} select`}
+              description="Description of inverted text field"
               value="python"
               size={size}
               onChange={() => {}}
@@ -87,6 +90,7 @@ function Story() {
               disabled
               key={`select-${size}-inverted-disabled`}
               label={`Inverted ${size} disabled select`}
+              description="Description of inverted disabled text field"
               value="python"
               size={size}
               onChange={() => {}}
