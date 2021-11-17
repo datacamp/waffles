@@ -14,7 +14,7 @@ export default function Home() {
           content="Evolution of Waffles design system."
         />
       </Head>
-      <Layout>
+      <Layout hideEditLink>
         <Heading size="xxlarge">Welcome to Waffles 2.0</Heading>
         <Paragraph size="large">
           🚧 This page is <strong>under construction</strong>.

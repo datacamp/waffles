@@ -44,11 +44,11 @@ const footerStyle = css`
 
 type PageLayoutProps = {
   children: React.ReactNode;
+  hideEditLink?: boolean;
 };
 
-function PageLayout({ children }: PageLayoutProps) {
+function PageLayout({ children, hideEditLink = false }: PageLayoutProps) {
   const { pathname } = useRouter();
-  const isEditable = pathname !== '/';
 
   return (
     <>
@@ -61,7 +61,7 @@ function PageLayout({ children }: PageLayoutProps) {
           <ContentContainer css={containerStyle}>
             <article css={articleStyle}>
               {children}
-              {isEditable && (
+              {!hideEditLink && (
                 <footer css={footerStyle}>
                   <Button
                     as="a"
