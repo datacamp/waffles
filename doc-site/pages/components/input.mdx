@@ -1,0 +1,65 @@
+import * as InputExports from '@datacamp/waffles/input';
+
+import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/input/playground-config';
+import BasicUsage from '../../examples/input/basic-usage';
+import Sizes from '../../examples/input/sizes';
+import Types from '../../examples/input/types';
+import States from '../../examples/input/states';
+import WithEnhancers from '../../examples/input/with-enhancers';
+import Inverted from '../../examples/input/inverted';
+
+export default Layout;
+
+# Input
+
+🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="input/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Sizes" path="input/sizes">
+  <Sizes />
+</Example>
+
+<Example title="Types" path="input/types">
+  <Types />
+</Example>
+
+<Example title="States" path="input/states">
+  <States />
+</Example>
+
+<Example title="With Enhancers" path="input/with-enhancers">
+  <WithEnhancers />
+</Example>
+
+<Example title="Inverted" path="input/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+In addition to all custom props listed below, `Input` accepts all props regular `HTMLInput` would, such as `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/input/input-internal')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={InputExports} path="@datacamp/waffles/input" />
