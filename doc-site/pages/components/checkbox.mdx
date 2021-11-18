@@ -1,0 +1,50 @@
+import * as CheckboxExports from '@datacamp/waffles/checkbox';
+
+import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/checkbox/playground-config';
+import BasicUsage from '../../examples/checkbox/basic-usage';
+import States from '../../examples/checkbox/states';
+import Inverted from '../../examples/checkbox/inverted';
+
+export default Layout;
+
+# Checkbox
+
+🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="checkbox/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="States" path="checkbox/states">
+  <States />
+</Example>
+
+<Example title="Inverted" path="checkbox/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+In addition to all custom props listed below, `Checkbox` accepts all props regular `HTMLInput` would, such as `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/checkbox/checkbox-internal')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={CheckboxExports} path="@datacamp/waffles/checkbox" />
