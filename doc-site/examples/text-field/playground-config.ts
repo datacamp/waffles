@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Input } from '@datacamp/waffles/input';
+import { TextField } from '@datacamp/waffles/text-field';
 import { Branch, ChevronRight } from '@datacamp/waffles/icon';
 
 import type { PlaygroundConfig } from '../../types';
@@ -8,7 +8,7 @@ import type { PlaygroundConfig } from '../../types';
 const initialCode = `
 import React, { useState } from 'react';
 
-import { Input } from '@datacamp/waffles/input';
+import { TextField } from '@datacamp/waffles/text-field';
 import { Branch, ChevronRight } from '@datacamp/waffles/icon';
 
 function Playground() {
@@ -19,9 +19,10 @@ function Playground() {
   }
 
   return (
-    <Input
+    <TextField
+      label="Text field label"
+      description="Optional description"
       size="medium"
-      placeholder="Controlled Input"
       value={value}
       onChange={handleChange}
     />
@@ -33,7 +34,7 @@ const playgroundConfig: PlaygroundConfig = {
   initialCode,
   scope: {
     useState,
-    Input,
+    TextField,
     Branch,
     ChevronRight,
   },

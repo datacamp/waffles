@@ -8,7 +8,7 @@ function Example() {
     <Input
       value={value}
       onChange={(event) => setValue(event.target.value)}
-      placeholder="Controlled Input"
+      placeholder="Welcome"
     />
   );
 }

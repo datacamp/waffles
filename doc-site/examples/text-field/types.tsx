@@ -1,20 +1,20 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
-import { Input } from '@datacamp/waffles/input';
+import { TextField } from '@datacamp/waffles/text-field';
 
 function Example() {
   return (
-    <div
+    <form
       css={css`
         display: flex;
         flex-direction: column;
         gap: ${tokens.spacing.large};
       `}
     >
-      <Input disabled placeholder="Disabled" />
-      <Input error placeholder="Error" />
-    </div>
+      <TextField type="search" label="Search" />
+      <TextField type="password" label="Password" />
+    </form>
   );
 }
 
