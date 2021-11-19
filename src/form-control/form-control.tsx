@@ -16,6 +16,7 @@ type FormControlPropsRenderProps = {
 
 type FormControlProps = {
   label: string;
+  id?: string;
   description?: string;
   error?: string;
   required?: boolean;
@@ -25,13 +26,15 @@ type FormControlProps = {
 
 function FormControl({
   label,
+  id,
   description,
   error,
   required = false,
   inverted = false,
   children,
 }: FormControlProps) {
-  const fieldId = useId('form-control');
+  const generatedId = useId('form-control');
+  const fieldId = id || generatedId;
   const errorId = useId('form-control-error');
 
   const elementProps = {

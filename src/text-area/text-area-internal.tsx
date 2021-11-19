@@ -15,6 +15,7 @@ type TextAreaProps = {
 
 function TextAreaInternal(
   {
+    id,
     label,
     description,
     error,
@@ -45,7 +46,7 @@ function TextAreaInternal(
   }
 
   return (
-    <FormControl {...{ label, description, error, required, inverted }}>
+    <FormControl {...{ id, label, description, error, required, inverted }}>
       {(formControlProps) => {
         return (
           <AutoGrow {...{ value, autoGrow }}>

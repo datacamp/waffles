@@ -16,6 +16,7 @@ type TextFieldProps = {
 
 function TextFieldInternal(
   {
+    id,
     label,
     description,
     error,
@@ -26,7 +27,7 @@ function TextFieldInternal(
   ref?: React.Ref<HTMLInputElement>,
 ) {
   return (
-    <FormControl {...{ label, description, error, required, inverted }}>
+    <FormControl {...{ id, label, description, error, required, inverted }}>
       {(formControlProps) => {
         return (
           <Input

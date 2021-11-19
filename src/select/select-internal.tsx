@@ -15,6 +15,7 @@ type SelectProps = {
 
 function SelectInternal(
   {
+    id,
     label,
     description,
     error,
@@ -47,7 +48,7 @@ function SelectInternal(
   }
 
   return (
-    <FormControl {...{ label, description, error, required, inverted }}>
+    <FormControl {...{ id, label, description, error, required, inverted }}>
       {(formControlProps) => {
         return (
           <div css={selectWrapperStyle({ size, disabled, isFocused })}>
