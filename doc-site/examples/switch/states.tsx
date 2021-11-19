@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
@@ -13,8 +14,12 @@ function Example() {
         width: 300px;
       `}
     >
-      <Switch disabled>Disabled switch</Switch>
-      <Switch error>Switch in error state</Switch>
+      <Switch disabled checked={false} onChange={() => {}}>
+        Disabled switch
+      </Switch>
+      <Switch error checked={false} onChange={() => {}}>
+        Switch in error state
+      </Switch>
     </form>
   );
 }

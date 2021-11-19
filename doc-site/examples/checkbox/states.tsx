@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
@@ -12,8 +13,12 @@ function Example() {
         gap: ${tokens.spacing.large};
       `}
     >
-      <Checkbox disabled>Disabled checkbox</Checkbox>
-      <Checkbox error>Checkbox in error state</Checkbox>
+      <Checkbox disabled checked={false} onChange={() => {}}>
+        Disabled checkbox
+      </Checkbox>
+      <Checkbox error checked={false} onChange={() => {}}>
+        Checkbox in error state
+      </Checkbox>
     </div>
   );
 }
