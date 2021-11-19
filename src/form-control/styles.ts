@@ -42,6 +42,7 @@ export function requiredStyle({ inverted }: RequiredStyleOptions) {
       : tokens.colors.navySubtleTextOnLight};
     flex-grow: 1;
     text-align: right;
+    user-select: none;
   `;
 }
 
