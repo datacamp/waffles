@@ -446,6 +446,10 @@ exports[`TextArea renders snapshot of required with error 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .emotion-3 {
