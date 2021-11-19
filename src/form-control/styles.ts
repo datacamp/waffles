@@ -63,11 +63,7 @@ type ErrorStyleOptions = {
 
 export function errorStyle({ inverted }: ErrorStyleOptions) {
   return css`
-    position: absolute;
-    z-index: ${tokens.zIndex.default};
-    bottom: -${tokens.spacing.small};
-    left: 0;
-    transform: translateY(100%);
+    margin-top: ${tokens.spacing.small};
     color: ${inverted ? tokens.colors.red : tokens.colors.redDarkText};
     line-height: ${tokens.lineHeights.default};
   `;
