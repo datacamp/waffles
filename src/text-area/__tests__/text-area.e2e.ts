@@ -7,7 +7,7 @@ describe('TextArea', () => {
 
   it('renders proper focus state', () => {
     cy.loadStory('text-area-basic');
-    cy.get('main').findByText('Basic textarea').click();
+    cy.get('main').findByText('Basic text area').click();
     cy.get('main').find('textarea').should('have.focus');
   });
 
