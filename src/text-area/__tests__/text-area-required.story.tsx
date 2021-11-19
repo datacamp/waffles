@@ -11,7 +11,7 @@ function Story() {
   return (
     <>
       <div css={wrapperStyle}>
-        <TextArea required label="Textarea with required indicator" rows={3} />
+        <TextArea required label="Text area with required indicator" rows={3} />
       </div>
       <div
         css={css`
@@ -22,7 +22,7 @@ function Story() {
         <TextArea
           inverted
           required
-          label="Inverted textarea with required indicator"
+          label="Inverted text area with required indicator"
           value="Invalid value"
           rows={3}
         />

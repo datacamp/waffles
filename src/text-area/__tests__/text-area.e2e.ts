@@ -1,5 +1,5 @@
 describe('TextArea', () => {
-  it('renders a basic textarea', () => {
+  it('renders a basic text area', () => {
     cy.loadStory('text-area-basic');
     cy.get('main').find('textarea').should('have.length', 1);
     cy.get('main').find('label').should('have.length', 1);

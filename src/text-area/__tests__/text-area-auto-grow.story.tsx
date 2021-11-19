@@ -18,7 +18,7 @@ function Story() {
   return (
     <div css={wrapperStyle}>
       <TextArea
-        label="Basic textarea"
+        label="Auto-growing text area"
         autoGrow
         value={value}
         onChange={handleChange}

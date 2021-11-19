@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../../tokens';
-import { CrossCircle, Branch, ChevronRight } from '../../icon';
+import { CrossCircle, Branch } from '../../icon';
 import { TextField } from '../index';
 
 const wrapperStyle = css`

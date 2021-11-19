@@ -15,8 +15,8 @@ function Story() {
       {/* Regular */}
       <div css={wrapperStyle}>
         <TextArea
-          label="Regular textarea"
-          description="Description of regular textarea"
+          label="Regular text area"
+          description="Description of regular text area"
           placeholder="Type a message here"
         />
       </div>
@@ -24,7 +24,7 @@ function Story() {
       <div css={wrapperStyle}>
         <TextArea
           disabled
-          label="Disabled textarea"
+          label="Disabled text area"
           description="Description of disabled text field"
           placeholder="Type a message here"
         />
@@ -38,8 +38,8 @@ function Story() {
       >
         <TextArea
           inverted
-          label="Inverted textarea"
-          description="Description of inverted textarea"
+          label="Inverted text area"
+          description="Description of inverted text area"
           placeholder="Type a message here"
         />
       </div>
@@ -53,7 +53,7 @@ function Story() {
         <TextArea
           inverted
           disabled
-          label="Inverted disabled textarea"
+          label="Inverted disabled text area"
           description="Description of inverted disabled text field"
           placeholder="Type a message here"
         />

@@ -23,7 +23,7 @@ function TestRefTextArea() {
 }
 
 describe('TextArea', () => {
-  it('renders a basic textarea', () => {
+  it('renders a basic text area', () => {
     const { container } = render(<TextArea label="How do you feel?" />);
 
     const textarea = container.querySelector('textarea');
@@ -33,7 +33,7 @@ describe('TextArea', () => {
     expect(label).toHaveTextContent('How do you feel?');
   });
 
-  it('renders a textarea with description and placeholder', () => {
+  it('renders a text area with description and placeholder', () => {
     const { getByPlaceholderText, getByText } = render(
       <TextArea
         label="How do you feel?"
@@ -65,7 +65,7 @@ describe('TextArea', () => {
     expect(handleChange).toHaveBeenCalledTimes(4);
   });
 
-  it('after clicking on label textarea got focused', () => {
+  it('after clicking on label text area got focused', () => {
     const handleFocus = jest.fn();
     const { getByText } = render(
       <TextArea
@@ -81,7 +81,7 @@ describe('TextArea', () => {
     expect(handleFocus).toHaveBeenCalledTimes(1);
   });
 
-  it('renders additional message when textarea is required', () => {
+  it('renders additional message when text area is required', () => {
     const { getByText } = render(
       <TextArea label="How do you feel?" required />,
     );
@@ -115,7 +115,7 @@ describe('TextArea', () => {
     expect(textarea).toHaveAttribute('aria-invalid', 'true');
   });
 
-  it('textarea and label are associated by the same ID', () => {
+  it('text area and label are associated by the same ID', () => {
     const { container } = render(<TextArea label="How do you feel?" />);
 
     const textarea = container.querySelector('textarea');
@@ -125,7 +125,7 @@ describe('TextArea', () => {
     expect(textarea).toHaveAttribute('id', `form-control-${MOCKED_ID}`);
   });
 
-  it('textarea and error are associated by the same ID', () => {
+  it('text area and error are associated by the same ID', () => {
     const { container, getByText } = render(
       <TextArea label="How do you feel?" error="Comment is just too long." />,
     );
@@ -140,7 +140,7 @@ describe('TextArea', () => {
     expect(error).toHaveAttribute('id', `form-control-error-${MOCKED_ID}`);
   });
 
-  it('sets the data attribute on the textarea', () => {
+  it('sets the data attribute on the text area', () => {
     const { getByTestId } = render(
       <TextArea data-testid="mood-textarea" label="How do you feel?" />,
     );
@@ -150,7 +150,7 @@ describe('TextArea', () => {
     expect(input).toBeInTheDocument();
   });
 
-  it('renders the disabled textarea', () => {
+  it('renders the disabled text area', () => {
     const { container } = render(
       <TextArea disabled label="How do you feel?" />,
     );
