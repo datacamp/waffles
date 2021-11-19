@@ -118,6 +118,18 @@ describe('TextField', () => {
     expect(input).toHaveAttribute('id', `form-control-${MOCKED_ID}`);
   });
 
+  it('when user defined ID is passed, input and label are associated by it', () => {
+    const { container } = render(
+      <TextField label="Favorite singer" id="favorite-singer-text-field" />,
+    );
+
+    const input = container.querySelector('input');
+    const label = container.querySelector('label');
+
+    expect(label).toHaveAttribute('for', `favorite-singer-text-field`);
+    expect(input).toHaveAttribute('id', `favorite-singer-text-field`);
+  });
+
   it('input and error are associated by the same ID', () => {
     const { container, getByText } = render(
       <TextField label="Favorite singer" error="Enter correct singer name." />,

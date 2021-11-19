@@ -48,6 +48,22 @@ describe('FormControl', () => {
     expect(input).toHaveAttribute('id', `form-control-${MOCKED_ID}`);
   });
 
+  it('if ID is passed explicitly, label and child component are associated by it', () => {
+    const { container } = render(
+      <FormControl label="Form control label" id="user-defined-id">
+        {(formControlProps) => {
+          return <input {...formControlProps} />;
+        }}
+      </FormControl>,
+    );
+
+    const input = container.querySelector('input');
+    const label = container.querySelector('label');
+
+    expect(label).toHaveAttribute('for', `user-defined-id`);
+    expect(input).toHaveAttribute('id', `user-defined-id`);
+  });
+
   it('renders additional message when required', () => {
     const { getByText } = render(
       <FormControl label="Form control label" required>

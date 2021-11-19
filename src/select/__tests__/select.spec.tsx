@@ -178,7 +178,6 @@ describe('Select', () => {
   it('select and label are associated by the same ID', () => {
     const { container } = render(
       <Select
-        required
         label="Pick a technology"
         description="Additional description"
         value="python"
@@ -194,6 +193,27 @@ describe('Select', () => {
 
     expect(label).toHaveAttribute('for', `form-control-${MOCKED_ID}`);
     expect(select).toHaveAttribute('id', `form-control-${MOCKED_ID}`);
+  });
+
+  it('when user defined ID is passed, select and label are associated by it', () => {
+    const { container } = render(
+      <Select
+        id="technology-select"
+        label="Pick a technology"
+        description="Additional description"
+        value="python"
+        onChange={jest.fn()}
+      >
+        <option value="python">Python</option>
+        <option value="sql">SQL</option>
+      </Select>,
+    );
+
+    const select = container.querySelector('select');
+    const label = container.querySelector('label');
+
+    expect(label).toHaveAttribute('for', `technology-select`);
+    expect(select).toHaveAttribute('id', `technology-select`);
   });
 
   it('select and error are associated by the same ID', () => {

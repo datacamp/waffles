@@ -115,7 +115,7 @@ describe('TextArea', () => {
     expect(textarea).toHaveAttribute('aria-invalid', 'true');
   });
 
-  it('text area and label are associated by the same ID', () => {
+  it('textarea and label are associated by the same ID', () => {
     const { container } = render(<TextArea label="How do you feel?" />);
 
     const textarea = container.querySelector('textarea');
@@ -125,7 +125,19 @@ describe('TextArea', () => {
     expect(textarea).toHaveAttribute('id', `form-control-${MOCKED_ID}`);
   });
 
-  it('text area and error are associated by the same ID', () => {
+  it('when user defined ID is passed, textarea and label are associated by it', () => {
+    const { container } = render(
+      <TextArea label="How do you feel?" id="mood-textarea" />,
+    );
+
+    const textarea = container.querySelector('textarea');
+    const label = container.querySelector('label');
+
+    expect(label).toHaveAttribute('for', `mood-textarea`);
+    expect(textarea).toHaveAttribute('id', `mood-textarea`);
+  });
+
+  it('textarea and error are associated by the same ID', () => {
     const { container, getByText } = render(
       <TextArea label="How do you feel?" error="Comment is just too long." />,
     );
