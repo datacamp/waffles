@@ -12,7 +12,7 @@ import { Checkbox } from '@datacamp/waffles/checkbox';
 function Playground() {
   const [checked, setChecked] = useState(false);
 
-  function toggle(event: React.ChangeEvent<HTMLInputElement>) {
+  function toggle() {
     setChecked(!checked);
   }
 

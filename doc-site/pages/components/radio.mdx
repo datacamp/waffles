@@ -1,0 +1,50 @@
+import * as RadioExports from '@datacamp/waffles/radio';
+
+import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/radio/playground-config';
+import BasicUsage from '../../examples/radio/basic-usage';
+import States from '../../examples/radio/states';
+import Inverted from '../../examples/radio/inverted';
+
+export default Layout;
+
+# Radio
+
+🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="radio/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="States" path="radio/states">
+  <States />
+</Example>
+
+<Example title="Inverted" path="radio/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+In addition to all custom props listed below, `Radio` accepts all props regular `HTMLInput` would, such as `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/radio/radio-internal')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={RadioExports} path="@datacamp/waffles/radio" />

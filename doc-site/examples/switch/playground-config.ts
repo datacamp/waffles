@@ -12,15 +12,17 @@ import { Switch } from '@datacamp/waffles/switch';
 function Playground() {
   const [checked, setChecked] = useState(false);
 
-  function toggle(event: React.ChangeEvent<HTMLInputElement>) {
+  function toggle() {
     setChecked(!checked);
   }
 
   return (
-    <Switch
-      checked={checked}
-      onChange={toggle}
-    >Switch label</Switch>
+    <div style={{ width: '300px' }}>
+      <Switch
+        checked={checked}
+        onChange={toggle}
+      >Switch label</Switch>
+    </div>
   );
 }
 `;
