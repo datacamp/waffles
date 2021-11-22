@@ -5,6 +5,7 @@ import { mergeProps } from '@react-aria/utils';
 import { enhancerStyle } from './styles';
 
 type EnhancerProps = {
+  /* The content of the enhancer. In general, an [icon](/components/icon) from Waffles (of the default `medium` size) should be used.  */
   children: React.ReactNode;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
