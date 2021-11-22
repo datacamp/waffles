@@ -1,0 +1,41 @@
+import * as ScreenReaderOnlyExports from '@datacamp/waffles/screen-reader-only';
+
+import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/screen-reader-only/playground-config';
+import BasicUsage from '../../examples/screen-reader-only/basic-usage';
+
+export default Layout;
+
+# Screen Reader Only
+
+🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="screen-reader-only/basic-usage">
+  <BasicUsage />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/screen-reader-only/screen-reader-only')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports
+  module={ScreenReaderOnlyExports}
+  path="@datacamp/waffles/screen-reader-only"
+/>
