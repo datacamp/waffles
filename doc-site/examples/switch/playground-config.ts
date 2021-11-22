@@ -21,7 +21,7 @@ function Playground() {
       <Switch
         checked={checked}
         onChange={toggle}
-      >Switch label</Switch>
+      >Switch description</Switch>
     </div>
   );
 }
