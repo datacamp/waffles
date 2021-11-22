@@ -6,7 +6,7 @@ import { selectWrapperStyle, selectStyle, iconRightStyle } from './styles';
 
 type SelectProps = {
   label: string;
-  description?: string;
+  description?: React.ReactNode;
   error?: string;
   required?: boolean;
   size?: 'small' | 'medium' | 'large';

@@ -5,7 +5,7 @@ import { Input } from '../input';
 
 type TextFieldProps = {
   label: string;
-  description?: string;
+  description?: React.ReactNode;
   error?: string;
   required?: boolean;
   size?: 'small' | 'medium' | 'large';

@@ -17,7 +17,7 @@ type FormControlPropsRenderProps = {
 type FormControlProps = {
   label: string;
   id?: string;
-  description?: string;
+  description?: React.ReactNode;
   error?: string;
   required?: boolean;
   inverted?: boolean;

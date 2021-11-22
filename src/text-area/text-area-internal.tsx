@@ -6,7 +6,7 @@ import AutoGrow from './auto-grow';
 
 type TextAreaProps = {
   label: string;
-  description?: string;
+  description?: React.ReactNode;
   error?: string;
   required?: boolean;
   inverted?: boolean;
