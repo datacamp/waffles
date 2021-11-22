@@ -56,9 +56,13 @@ function Example({
 
   useEffect(() => {
     // Load raw content of code example
+    // Trim and remove comments
     async function importExampleCode() {
       const rawCode = await import(`!!raw-loader!../examples/${path}.tsx`);
-      setCode(rawCode.default);
+      const trimmedCode = rawCode.default
+        .replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, '')
+        .trim();
+      setCode(trimmedCode);
     }
     importExampleCode();
   }, [path]);
@@ -88,7 +92,7 @@ function Example({
       </div>
       {code && isCodePreviewVisible && (
         <CodePreview>
-          <Highlight theme={basicTheme}>{code.trim()}</Highlight>
+          <Highlight theme={basicTheme}>{code}</Highlight>
         </CodePreview>
       )}
       <PreviewControls>
