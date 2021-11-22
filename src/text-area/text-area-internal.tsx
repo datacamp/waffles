@@ -5,11 +5,17 @@ import { textAreaWrapper, textAreaStyle } from './styles';
 import AutoGrow from './auto-grow';
 
 type TextAreaProps = {
+  /* The label displayed above the text area. */
   label: string;
+  /* Optional description shown above the text area. */
   description?: React.ReactNode;
+  /* Error message displayed below the text area. Also sets appropriate error styling of the text area itself, and `aria-invalid` attribute. */
   error?: string;
+  /* Shows required indicator above the text area. */
   required?: boolean;
+  /* Sets the style of the text field suitable for dark backgrounds. */
   inverted?: boolean;
+  /* Allows height to expand as much as it needs to in order to contain the current value. */
   autoGrow?: boolean;
 } & Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'size'>;
 
