@@ -7,10 +7,15 @@ import EnhancerRight from './enhancer-right';
 import Enhancer from './enhancer';
 
 type InputProps = {
+  /* Defines the size of the input. In most cases default `medium` size should be used. */
   size?: 'small' | 'medium' | 'large';
+  /* Sets the style of the input suitable for dark backgrounds. */
   inverted?: boolean;
+  /* Sets appropriate error styling, and `aria-invalid` attribute. */
   error?: boolean;
+  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
   iconLeft?: React.ReactNode;
+  /* An enhancer displayed to the right. Could be `Input.Enhancer` or any [icon](/components/icon) from Waffles (use default `medium` size). */
   enhancerRight?: React.ReactNode;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>;
 
