@@ -7,8 +7,11 @@ import { labelStyle, inputStyle, contentStyle } from './styles';
 import Radiomark from './radiomark';
 
 type RadioProps = {
+  /* The description displayed next to the radio. */
   children: React.ReactNode;
+  /* Sets the style of the radio suitable for dark backgrounds. */
   inverted?: boolean;
+  /* Sets appropriate error styling, and `aria-invalid` attribute. */
   error?: boolean;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>;
 

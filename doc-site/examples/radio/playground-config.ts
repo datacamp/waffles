@@ -27,13 +27,13 @@ function Playground() {
         value="radio1"
         checked={value === 'radio1'}
         onChange={handleChange}
-      >First radio label</Radio>
+      >First radio description</Radio>
       <Radio
         name="radio-group"
         value="radio2"
         checked={value === 'radio2'}
         onChange={handleChange}
-      >Second radio label</Radio>
+      >Second radio description</Radio>
     </form>
   );
 }

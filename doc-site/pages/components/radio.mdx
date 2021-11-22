@@ -39,7 +39,7 @@ export default Layout;
 
 ### Radio
 
-In addition to all custom props listed below, `Radio` accepts all props regular `HTMLInput` would, such as `aria-` and `data-` attributes.
+In addition to all custom props listed below, `Radio` accepts all props regular `HTMLInput` would, such as `disabled`, `aria-` and `data-` attributes. To group radio buttons into a set in which only one could be selected at time provide `name` attribute. Keep in mind that when `checked` is specified `onChange` handler must be also provided.
 
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/radio/radio-internal')}
