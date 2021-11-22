@@ -8,7 +8,8 @@ function Example() {
   return (
     <Select
       label="Select with placeholder"
-      description="Provide an option with empty value which is at the same time disabled and hidden."
+      description="Provide an option with empty value which is
+        at the same time disabled and hidden."
       value={value}
       onChange={(event) => setValue(event.target.value)}
     >
