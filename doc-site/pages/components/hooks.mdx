@@ -1,0 +1,27 @@
+import * as HooksExports from '@datacamp/waffles/hooks';
+
+import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Imports from '../../components/imports';
+
+import UseIdBasicUsage from '../../examples/hooks/use-id-basic-usage';
+
+export default Layout;
+
+# Hooks
+
+🚧 This page is **under construction**.
+
+## useId
+
+A lot of accessibility-related features rely heavily on element IDs. Manually providing such IDs is both cumbersome and error-prone. To aid with that the hook autogenerates **random ID** with a prefix.
+
+<Example title="Basic Usage" path="hooks/use-id-basic-usage">
+  <UseIdBasicUsage />
+</Example>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={HooksExports} path="@datacamp/waffles/hooks" />
