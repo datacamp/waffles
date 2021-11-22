@@ -7,8 +7,11 @@ import { labelStyle, inputStyle, contentStyle } from './styles';
 import Checkmark from './checkmark';
 
 type CheckboxProps = {
+  /* The description displayed next to the checkbox. */
   children: React.ReactNode;
+  /* Sets the style of the checkbox suitable for dark backgrounds. */
   inverted?: boolean;
+  /* Sets appropriate error styling, and `aria-invalid` attribute. */
   error?: boolean;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>;
 

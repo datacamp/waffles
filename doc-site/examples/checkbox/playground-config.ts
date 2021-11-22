@@ -20,7 +20,7 @@ function Playground() {
     <Checkbox
       checked={checked}
       onChange={toggle}
-    >Checkbox label</Checkbox>
+    >Checkbox description</Checkbox>
   );
 }
 `;
