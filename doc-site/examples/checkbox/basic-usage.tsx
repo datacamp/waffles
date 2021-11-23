@@ -13,7 +13,8 @@ function Example() {
       placeholder="Welcome"
     >
       I accept{' '}
-      <Link href="https://www.datacamp.com/terms-of-use">Terms of Use</Link> and{' '}
+      <Link href="https://www.datacamp.com/terms-of-use">Terms of Use</Link> and
+      also{' '}
       <Link href="https://www.datacamp.com/privacy-policy">Privacy Policy</Link>
     </Checkbox>
   );

@@ -18,10 +18,10 @@ function Example() {
         <Code size="large">npm install @datacamp/waffles</Code> with npm or{' '}
         <Code size="large">yarn add @datacamp/waffles</Code> with yarn.
       </Paragraph>
-      <Paragraph size="medium">
+      <Paragraph>
         You can install Waffles components library by running{' '}
-        <Code size="medium">npm install @datacamp/waffles</Code> with npm or{' '}
-        <Code size="medium">yarn add @datacamp/waffles</Code> with yarn.
+        <Code>npm install @datacamp/waffles</Code> with npm or{' '}
+        <Code>yarn add @datacamp/waffles</Code> with yarn.
       </Paragraph>
     </div>
   );

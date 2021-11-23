@@ -60,7 +60,7 @@ function Example({
     async function importExampleCode() {
       const rawCode = await import(`!!raw-loader!../examples/${path}.tsx`);
       const trimmedCode = rawCode.default
-        .replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, '')
+        // .replace(/\/\*[\s\S]*?\*\/|\/\/.*/, '')
         .trim();
       setCode(trimmedCode);
     }
