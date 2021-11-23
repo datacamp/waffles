@@ -20,7 +20,7 @@
     "test:unit": "jest --watch",
     "test:unit:ci": "yarn jest --coverage --runInBand",
     "test:stories": "yarn prebuild && yarn build:cjs && start-server-and-test \"next dev workbench --port 8080\" 8080 \"cypress open\"",
-    "test:stories:ci": "yarn pretest:stories && start-server-and-test \"next dev workbench --port 8080\" 8080 \"cypress run\"",
+    "test:stories:ci": "yarn pretest:stories && start-server-and-test \"next dev workbench --port 8080\" 8080 \"cypress run --record --parallel\"",
     "pretest:stories": "yarn preworkbench && node ./tools/prepare-workbench-stories.js",
     "lint": "eslint ./ --fix --cache",
     "lint:commits": "commitlint --to HEAD --verbose",

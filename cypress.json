@@ -4,5 +4,6 @@
   "video": false,
   "screenshotOnRunFailure": false,
   "integrationFolder": "src",
-  "testFiles": "**/*.e2e.ts"
+  "testFiles": "**/*.e2e.ts",
+  "projectId": "krsb2b"
 }

@@ -8,6 +8,7 @@ jobs:
     docker:
       - image: cypress/base:14.17.3
     resource_class: large
+    parallelism: 4
     steps:
       - checkout
       - run:
