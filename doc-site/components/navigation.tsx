@@ -37,6 +37,15 @@ function Navigation() {
             <Link href="/components/code-block">Code Block</Link>
             <Link href="/components/text">Text</Link>
           </Subcategory>
+          <Subcategory label="Form">
+            <Link href="/components/input">Input</Link>
+            <Link href="/components/text-field">Text Field</Link>
+            <Link href="/components/text-area">Text Area</Link>
+            <Link href="/components/checkbox">Checkbox</Link>
+            <Link href="/components/switch">Switch</Link>
+            <Link href="/components/radio">Radio</Link>
+            <Link href="/components/select">Select</Link>
+          </Subcategory>
           <Subcategory label="Overlay">
             <Link href="/components/tooltip">Tooltip</Link>
           </Subcategory>
@@ -46,7 +55,11 @@ function Navigation() {
           </Subcategory>
           <Subcategory label="Utility">
             <Link href="/components/portal">Portal</Link>
+            <Link href="/components/screen-reader-only">
+              Screen Reader Only
+            </Link>
             <Link href="/components/helpers">Helpers</Link>
+            <Link href="/components/hooks">Hooks</Link>
           </Subcategory>
         </Category>
       </ul>
