@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { css } from '@emotion/react';
 
 import { tokens } from '../../tokens';
@@ -23,7 +24,6 @@ function Story() {
           inverted
           required
           label="Inverted text area with required indicator"
-          value="Invalid value"
           rows={3}
         />
       </div>
