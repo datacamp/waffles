@@ -5,7 +5,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Switch } from '@datacamp/waffles/switch';
 
 function Example() {
-  const [autosave, setAutosave] = useState(false);
+  const [autosave, setAutosave] = useState(true);
   const [notifications, setNotifications] = useState(false);
 
   return (
