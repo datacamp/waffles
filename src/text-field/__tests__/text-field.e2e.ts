@@ -21,8 +21,8 @@ describe('TextField', () => {
   it('renders with error', () => {
     cy.loadStory('text-field-error');
     cy.get('main')
-      .findByText(/provide correct value/i)
-      .should('exist');
+      .findAllByText(/provide correct value/i)
+      .should('have.length', 3);
   });
 
   it('renders required indicator', () => {

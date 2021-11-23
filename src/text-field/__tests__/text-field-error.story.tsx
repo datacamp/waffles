@@ -5,15 +5,29 @@ import { tokens } from '../../tokens';
 import { TextField } from '../index';
 
 const wrapperStyle = css`
+  display: flex;
+  flex-direction: column;
+  gap: ${tokens.spacing.medium};
   padding: ${tokens.spacing.medium};
-  padding-bottom: ${tokens.spacing.xlarge};
 `;
 
 function Story() {
   return (
     <div css={wrapperStyle}>
       <TextField
-        label="Text field with error"
+        label="First text field with error"
+        value="Invalid value"
+        onChange={() => {}}
+        error="Provide correct value."
+      />
+      <TextField
+        label="Second text field with error"
+        value="Invalid value"
+        onChange={() => {}}
+        error="Provide correct value."
+      />
+      <TextField
+        label="Third text field with error"
         value="Invalid value"
         onChange={() => {}}
         error="Provide correct value."
