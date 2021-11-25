@@ -1,9 +1,10 @@
-import React, { Children } from 'react';
 import Link from 'next/link';
 import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
 import { Link as LinkBase } from '@datacamp/waffles/link';
+
+import { useTableOfContentsEntries } from '../context/table-of-contents-context';
 import slugify from '../helpers/slugify';
 
 const linkStyle = css`
@@ -48,26 +49,10 @@ function Entry({ name }: EntryProps) {
   );
 }
 
-type TableOfContentsProps = {
-  children: React.ReactNode;
-};
+function TableOfContents() {
+  const entries = useTableOfContentsEntries();
 
-// Return array of H2 elements text content
-function tableOfContentsEntries(content: JSX.Element[]) {
-  return content.reduce<string[]>((entries, element) => {
-    if (element.type?.name.includes('H2')) {
-      return entries.concat(element.props.children);
-    }
-    return entries;
-  }, []);
-}
-
-function TableOfContents({ children }: TableOfContentsProps) {
-  const firstChild = Children.toArray(children)[0] as JSX.Element;
-  const content = firstChild.props.children as JSX.Element[];
-  const entries = Array.isArray(content) && tableOfContentsEntries(content);
-
-  if (entries && entries.length > 0) {
+  if (entries.length > 0) {
     return (
       <aside css={asideStyle}>
         <ul css={listStyle}>

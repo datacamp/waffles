@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -10,6 +10,7 @@ import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
 
+import { useAddTableOfContentsEntry } from '../context/table-of-contents-context';
 import textFromChildren from '../helpers/text-from-children';
 import slugify from '../helpers/slugify';
 import TableBase from './table';
@@ -37,9 +38,20 @@ const secondaryHeadingStyle = css`
   margin-top: ${tokens.spacing.large};
 `;
 
-// Allow secondary heading to be bookmarked
+// Allow secondary heading to be bookmarked and add them to table of contents
 function H2({ children }: ContentProps) {
-  const headingId = slugify(textFromChildren(children));
+  const textContent = textFromChildren(children);
+  const headingId = slugify(textContent);
+  const addEntry = useAddTableOfContentsEntry();
+
+  useEffect(() => {
+    addEntry((entries) => {
+      // If entry aleary exists don't add it
+      return entries.includes(textContent)
+        ? entries
+        : entries.concat(textContent);
+    });
+  }, [addEntry, textContent]);
 
   return (
     <Heading size="xlarge" id={headingId} css={secondaryHeadingStyle}>

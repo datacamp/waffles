@@ -6,6 +6,8 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Button } from '@datacamp/waffles/button';
 import { ContentContainer } from '@datacamp/waffles/content-container';
 import { Edit } from '@datacamp/waffles/icon';
+
+import { TableOfContentsProvider } from '../context/table-of-contents-context';
 import { HEADER_HEIGHT, ARTICLE_CONTENT_WIDTH } from './constants';
 import Header from './page-header';
 import Sidebar from './sidebar';
@@ -59,23 +61,25 @@ function PageLayout({ children, hideEditLink = false }: PageLayoutProps) {
         </Sidebar>
         <main css={mainStyle}>
           <ContentContainer css={containerStyle}>
-            <article css={articleStyle}>
-              {children}
-              {!hideEditLink && (
-                <footer css={footerStyle}>
-                  <Button
-                    as="a"
-                    href={`${GITHUB_EDIT_URL}${pathname}.mdx`}
-                    variant="plain"
-                    size="small"
-                    iconLeft={<Edit />}
-                  >
-                    Edit This Page
-                  </Button>
-                </footer>
-              )}
-            </article>
-            <TableOfContents>{children}</TableOfContents>
+            <TableOfContentsProvider>
+              <article css={articleStyle}>
+                {children}
+                {!hideEditLink && (
+                  <footer css={footerStyle}>
+                    <Button
+                      as="a"
+                      href={`${GITHUB_EDIT_URL}${pathname}.mdx`}
+                      variant="plain"
+                      size="small"
+                      iconLeft={<Edit />}
+                    >
+                      Edit This Page
+                    </Button>
+                  </footer>
+                )}
+              </article>
+              <TableOfContents />
+            </TableOfContentsProvider>
           </ContentContainer>
         </main>
       </div>
