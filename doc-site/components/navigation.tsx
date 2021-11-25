@@ -39,7 +39,7 @@ function Navigation() {
           </Subcategory>
           <Subcategory label="Form">
             <Link href="/components/input">Input</Link>
-            <Link href="/components/text-field">Text Field</Link>
+            <Link href="/components/input-field">Input Field</Link>
             <Link href="/components/text-area">Text Area</Link>
             <Link href="/components/checkbox">Checkbox</Link>
             <Link href="/components/switch">Switch</Link>
