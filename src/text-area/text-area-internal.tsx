@@ -13,7 +13,7 @@ type TextAreaProps = {
   error?: string;
   /* Shows required indicator above the text area. */
   required?: boolean;
-  /* Sets the style of the text field suitable for dark backgrounds. */
+  /* Sets the style of the text area suitable for dark backgrounds. */
   inverted?: boolean;
   /* Allows height to expand as much as it needs to in order to contain the current value. */
   autoGrow?: boolean;
