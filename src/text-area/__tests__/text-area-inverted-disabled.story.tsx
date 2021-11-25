@@ -25,7 +25,7 @@ function Story() {
         <TextArea
           disabled
           label="Disabled text area"
-          description="Description of disabled text field"
+          description="Description of disabled text area"
           placeholder="Type a message here"
         />
       </div>
@@ -54,7 +54,7 @@ function Story() {
           inverted
           disabled
           label="Inverted disabled text area"
-          description="Description of inverted disabled text field"
+          description="Description of inverted disabled text area"
           placeholder="Type a message here"
         />
       </div>

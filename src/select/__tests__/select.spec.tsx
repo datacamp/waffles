@@ -113,7 +113,7 @@ describe('Select', () => {
     expect(handleFocus).toHaveBeenCalledTimes(1);
   });
 
-  it('renders additional message when text field is required', () => {
+  it('renders additional message when select is required', () => {
     const { getByText } = render(
       <Select
         required
