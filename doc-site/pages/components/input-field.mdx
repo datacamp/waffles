@@ -1,0 +1,80 @@
+import * as InputFieldExports from '@datacamp/waffles/input-field';
+
+import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/input-field/playground-config';
+import BasicUsage from '../../examples/input-field/basic-usage';
+import Sizes from '../../examples/input-field/sizes';
+import Types from '../../examples/input-field/types';
+import States from '../../examples/input-field/states';
+import Required from '../../examples/input-field/required';
+import WithEnhancers from '../../examples/input-field/with-enhancers';
+import Inverted from '../../examples/input-field/inverted';
+
+export default Layout;
+
+# Input Field
+
+🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="input-field/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Sizes" path="input-field/sizes">
+  <Sizes />
+</Example>
+
+<Example title="Types" path="input-field/types">
+  <Types />
+</Example>
+
+<Example title="States" path="input-field/states">
+  <States />
+</Example>
+
+<Example title="Required" path="input-field/required">
+  <Required />
+</Example>
+
+<Example title="With Enhancers" path="input-field/with-enhancers">
+  <WithEnhancers />
+</Example>
+
+<Example title="Inverted" path="input-field/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### InputField
+
+In addition to all custom props listed below, `InputField` accepts all props regular `HTMLInput` would, such as `type`, `placeholder`, `disabled`, `autocomplete`, `aria-` and `data-` attributes. Keep in mind that when `value` is specified `onChange` handler must be also provided.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/input-field/input-field-internal')}
+/>
+
+### InputField.Enhancer
+
+In addition to `children` prop listed below, `InputField.Enhancer` accepts all props regular `HTMLButton` would, such as `onClick`, `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/input/enhancer')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={InputFieldExports} path="@datacamp/waffles/input-field" />
