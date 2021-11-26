@@ -1,8 +1,79 @@
 import Head from 'next/head';
+import { css } from '@emotion/react';
 
+import { tokens } from '@datacamp/waffles/tokens';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph } from '@datacamp/waffles/paragraph';
-import Layout from '../components/page-layout';
+import { Link } from '@datacamp/waffles/link';
+import { ContentContainer } from '@datacamp/waffles/content-container';
+
+import { HEADER_HEIGHT, ARTICLE_CONTENT_WIDTH } from '../components/constants';
+import Header from '../components/page-header';
+import Sidebar from '../components/sidebar';
+import Navigation from '../components/navigation';
+import LandingPageCard from 'components/landing-page-card';
+
+const wrapperStyle = css`
+  display: flex;
+  padding-top: ${HEADER_HEIGHT};
+  min-height: 100vh;
+`;
+
+const mainStyle = css`
+  background-color: ${tokens.colors.beigeSubtle};
+  flex-grow: 1;
+  overflow: hidden;
+`;
+
+const heroStyle = css`
+  ${mediaQuery.medium} {
+    height: 400px;
+  }
+
+  ${mediaQuery.large} {
+    height: 600px;
+  }
+
+  height: 300px;
+  width: 100%;
+  background: ${tokens.colors.yellowLight} url('/images/waffles-hero.svg')
+    no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  border-bottom: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
+`;
+
+const introStyle = css`
+  padding: ${tokens.spacing.medium};
+
+  ${mediaQuery.medium} {
+    padding: ${tokens.spacing.xlarge};
+  }
+
+  max-width: 500px;
+`;
+
+const mainHeadingStyle = css`
+  font-size: 40px;
+  letter-spacing: -1px;
+  line-height: ${tokens.lineHeights.tight};
+  margin-bottom: ${tokens.spacing.medium};
+`;
+
+const higlightStyle = css`
+  color: ${tokens.colors.purple};
+`;
+
+const articleStyle = css`
+  max-width: ${ARTICLE_CONTENT_WIDTH};
+`;
+
+const cardsLayoutStyle = css`
+  display: flex;
+  flex-direction: column;
+  gap: ${tokens.spacing.medium};
+`;
 
 export default function Home() {
   return (
@@ -14,12 +85,63 @@ export default function Home() {
           content="Evolution of Waffles design system."
         />
       </Head>
-      <Layout hideEditLink>
-        <Heading size="xxlarge">Welcome to Waffles 2.0</Heading>
-        <Paragraph size="large">
-          🚧 This page is <strong>under construction</strong>.
-        </Paragraph>
-      </Layout>
+      <Header />
+      <div css={wrapperStyle}>
+        <Sidebar>
+          <Navigation />
+        </Sidebar>
+        <main css={mainStyle}>
+          <section css={heroStyle}>
+            <div css={introStyle}>
+              <Heading css={mainHeadingStyle}>
+                <span css={higlightStyle}>Waffles</span> is DataCamp Design
+                System.
+              </Heading>
+              <Paragraph size="large">
+                It provides all the tools to build wonderful experiences that
+                look, feel, sound, and smell like DataCamp.
+              </Paragraph>
+            </div>
+          </section>
+          <ContentContainer>
+            <article css={articleStyle}>
+              <Heading size="xlarge">Core Principles</Heading>
+              <div css={cardsLayoutStyle}>
+                <LandingPageCard imageUrl="images/waffles-components-mini.svg">
+                  <Heading size="large">Component for Every Occassion</Heading>
+                  <Paragraph>
+                    Waffles offers a wide range of React and Figma components,
+                    to help developers and designers build DataCamp experiences
+                    together in a consistent way. Check a short{' '}
+                    <Link href="/overview/setup/">setup guide</Link> and get
+                    started—the best way to learn is just to start using the
+                    components!
+                  </Paragraph>
+                </LandingPageCard>
+                <LandingPageCard imageUrl="images/waffles-inclusive-mini.svg">
+                  <Heading size="large">Inclusive</Heading>
+                  <Paragraph>
+                    Accessibility is not an afterthought, but one of Waffles
+                    fundamental principles. A lot of effort is put into making
+                    sure components are accessible for all users, both with
+                    keyboard and screen reader. They are also tested in various
+                    browsers and devices.
+                  </Paragraph>
+                </LandingPageCard>
+                <LandingPageCard imageUrl="images/waffles-flexible-mini.svg">
+                  <Heading size="large">Flexible</Heading>
+                  <Paragraph>
+                    All React components come with sensible defaults out of the
+                    box. They are mimicking the behavior and API of native
+                    counterparts. In most cases, it is possible to customize
+                    their look with a little CSS.
+                  </Paragraph>
+                </LandingPageCard>
+              </div>
+            </article>
+          </ContentContainer>
+        </main>
+      </div>
     </>
   );
 }

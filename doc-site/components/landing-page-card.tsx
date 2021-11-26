@@ -34,12 +34,12 @@ type LandingPageCardProps = {
 
 function LandingPageCard({ imageUrl, children }: LandingPageCardProps) {
   return (
-    <div css={cardStyle}>
+    <section css={cardStyle}>
       <div css={imageWrapperStyle}>
         <img src={imageUrl} css={imageStyle} />
       </div>
       <div css={contentStyle}>{children}</div>
-    </div>
+    </section>
   );
 }
 
