@@ -3,6 +3,9 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { Button } from '@datacamp/waffles/button';
+import { ExternalLink } from '@datacamp/waffles/icon';
+import { ScreenReaderOnly } from '@datacamp/waffles/screen-reader-only';
+
 import Table from './table';
 
 const nameCellStyle = css`
@@ -39,9 +42,10 @@ const unavailableMarkerStyle = css`
 
 type AvailableStatusProps = {
   href: string;
+  external?: boolean;
 };
 
-function AvailableStatus({ href }: AvailableStatusProps) {
+function AvailableStatus({ href, external = false }: AvailableStatusProps) {
   return (
     <Button
       as="a"
@@ -49,8 +53,14 @@ function AvailableStatus({ href }: AvailableStatusProps) {
       variant="plain"
       size="small"
       iconLeft={<span css={[markerStyle, availableMarkerStyle]} />}
+      {...(external && {
+        iconRight: <ExternalLink />,
+        target: '_blank',
+        rel: 'noopener',
+      })}
     >
       Available
+      {external && <ScreenReaderOnly> (opens in a new tab)</ScreenReaderOnly>}
     </Button>
   );
 }
@@ -87,7 +97,7 @@ function ComponentStatus({
       </Table.Cell>
       <Table.Cell css={tableCellStyle}>
         {figmaComponentUrl ? (
-          <AvailableStatus href={figmaComponentUrl} />
+          <AvailableStatus href={figmaComponentUrl} external />
         ) : (
           <UnavailableStatus />
         )}
