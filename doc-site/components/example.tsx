@@ -56,11 +56,11 @@ function Example({
 
   useEffect(() => {
     // Load raw content of code example
-    // Trim and remove comments
+    // Trim and remove eslint flags
     async function importExampleCode() {
       const rawCode = await import(`!!raw-loader!../examples/${path}.tsx`);
       const trimmedCode = rawCode.default
-        // .replace(/\/\*[\s\S]*?\*\/|\/\/.*/, '')
+        .replace(/\/\* eslint-disable[^*].+\*\//, '')
         .trim();
       setCode(trimmedCode);
     }
