@@ -34,13 +34,6 @@ class CustomDocument extends Document {
             rel="preload"
             type="font/woff2"
           />
-          <link
-            as="font"
-            crossOrigin="anonymous"
-            href="/fonts/JetBrainsMono-english.woff2"
-            rel="preload"
-            type="font/woff2"
-          />
         </Head>
         <body>
           <Main />
