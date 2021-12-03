@@ -37,21 +37,56 @@ export function tabStyle({ isActive, isFocusVisible }: TabStyleOptions) {
     padding-top: ${tokens.spacing.xsmall};
     margin-bottom: -${tokens.borderWidth.medium};
     margin-right: ${tokens.spacing.large};
+    transition: border-color 125ms ease-out, box-shadow 125ms ease-out;
 
     &:last-of-type {
       margin-right: 0;
     }
 
-    ${isActive &&
-    css`
-      color: ${tokens.colors.navy};
-      font-weight: ${tokens.fontWeights.bold};
-      border-bottom-color: ${tokens.colors.navy};
-    `}
+    ${isActive
+      ? css`
+          color: ${tokens.colors.navy};
+          font-weight: ${tokens.fontWeights.bold};
+          border-bottom-color: ${tokens.colors.navy};
+        `
+      : css`
+          &:hover {
+            color: ${hexToRgba(tokens.colors.navy, 0.8)};
+            border-bottom-color: ${hexToRgba(
+              tokens.colors.navy,
+              tokens.opacity.medium,
+            )};
+          }
+        `}
 
     ${isFocusVisible &&
     css`
       box-shadow: 0 0 0 2px ${tokens.colors.blueDark};
     `}
+  `;
+}
+
+type InnerContentStyleOptions = {
+  content: string;
+};
+
+// Prevent content shifts caused by font weight change between active and regular state by adding :after pseudo element
+export function innerContentStyle({ content }: InnerContentStyleOptions) {
+  return css`
+    display: block;
+
+    &::after {
+      display: block;
+      content: '${content}';
+      font-weight: ${tokens.fontWeights.bold};
+      color: transparent;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      word-wrap: normal;
+    }
   `;
 }
