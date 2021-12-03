@@ -19,7 +19,9 @@ function Tab({ children, icon, isActive = false, ...restProps }: TabProps) {
       css={tabStyle({ isActive, isFocusVisible })}
     >
       {icon}
-      <span css={innerContentStyle({ content: children })}>{children}</span>
+      <span css={innerContentStyle({ hasIcon: !!icon, content: children })}>
+        {children}
+      </span>
     </button>
   );
 }

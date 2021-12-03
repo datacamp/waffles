@@ -22,9 +22,10 @@ export function tabStyle({ isActive, isFocusVisible }: TabStyleOptions) {
     display: flex;
     background-color: transparent;
     color: ${tokens.colors.navySubtleTextOnLight};
+    font-family: ${tokens.fontFamilies.sansSerif};
     font-size: ${tokens.fontSizes.small};
     font-weight: ${tokens.fontWeights.regular};
-    line-height: ${tokens.lineHeights.default};
+    line-height: ${tokens.lineHeights.tight};
     letter-spacing: ${tokens.letterSpacing.relaxed};
     text-transform: uppercase;
     cursor: pointer;
@@ -33,7 +34,7 @@ export function tabStyle({ isActive, isFocusVisible }: TabStyleOptions) {
     border-bottom: ${tokens.borderWidth.medium} solid transparent;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: ${tokens.spacing.small};
+    padding-bottom: 10px;
     padding-top: ${tokens.spacing.xsmall};
     margin-bottom: -${tokens.borderWidth.medium};
     margin-right: ${tokens.spacing.large};
@@ -67,11 +68,15 @@ export function tabStyle({ isActive, isFocusVisible }: TabStyleOptions) {
 }
 
 type InnerContentStyleOptions = {
+  hasIcon: boolean;
   content: string;
 };
 
 // Prevent content shifts caused by font weight change between active and regular state by adding :after pseudo element
-export function innerContentStyle({ content }: InnerContentStyleOptions) {
+export function innerContentStyle({
+  hasIcon,
+  content,
+}: InnerContentStyleOptions) {
   return css`
     display: block;
 
@@ -88,5 +93,10 @@ export function innerContentStyle({ content }: InnerContentStyleOptions) {
       white-space: nowrap;
       word-wrap: normal;
     }
+
+    ${hasIcon &&
+    css`
+      margin-left: ${tokens.spacing.small};
+    `}
   `;
 }
