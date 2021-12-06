@@ -44,6 +44,11 @@ export function tabStyle({ isActive, isFocusVisible }: TabStyleOptions) {
       margin-right: 0;
     }
 
+    &:disabled {
+      cursor: default;
+      opacity: ${tokens.opacity.high};
+    }
+
     ${isActive
       ? css`
           color: ${tokens.colors.navy};
@@ -51,7 +56,7 @@ export function tabStyle({ isActive, isFocusVisible }: TabStyleOptions) {
           border-bottom-color: ${tokens.colors.navy};
         `
       : css`
-          &:hover {
+          &:hover:not(:disabled) {
             color: ${hexToRgba(tokens.colors.navy, 0.8)};
             border-bottom-color: ${hexToRgba(
               tokens.colors.navy,
@@ -69,34 +74,32 @@ export function tabStyle({ isActive, isFocusVisible }: TabStyleOptions) {
 
 type InnerContentStyleOptions = {
   hasIcon: boolean;
-  content: string;
 };
 
-// Prevent content shifts caused by font weight change between active and regular state by adding :after pseudo element
-export function innerContentStyle({
-  hasIcon,
-  content,
-}: InnerContentStyleOptions) {
+export function tabInnerContentStyle({ hasIcon }: InnerContentStyleOptions) {
   return css`
     display: block;
-
-    &::after {
-      display: block;
-      content: '${content}';
-      font-weight: ${tokens.fontWeights.bold};
-      color: transparent;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      padding: 0;
-      border: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      word-wrap: normal;
-    }
+    margin-bottom: -1px;
 
     ${hasIcon &&
     css`
       margin-left: ${tokens.spacing.small};
     `}
+  `;
+}
+
+// Prevent content shifts caused by font weight change between active and regular state
+export function tabFauxContenStyle() {
+  return css`
+    display: block;
+    font-weight: ${tokens.fontWeights.bold};
+    color: transparent;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
   `;
 }
