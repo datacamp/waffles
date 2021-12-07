@@ -3,14 +3,47 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
-export function tabsStyle() {
+export function tabListStyle() {
   return css`
     display: flex;
     width: 100%;
     border-bottom: ${tokens.borderWidth.medium} solid
       ${hexToRgba(tokens.colors.navy, 0.15)};
+    margin-bottom: ${tokens.spacing.medium};
   `;
 }
+
+const tabBaseStyle = css`
+  display: flex;
+  background-color: transparent;
+  color: ${tokens.colors.navySubtleTextOnLight};
+  font-family: ${tokens.fontFamilies.sansSerif};
+  font-size: ${tokens.fontSizes.small};
+  font-weight: ${tokens.fontWeights.regular};
+  line-height: ${tokens.lineHeights.tight};
+  letter-spacing: ${tokens.letterSpacing.relaxed};
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  border-bottom: ${tokens.borderWidth.medium} solid transparent;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-top: ${tokens.spacing.xsmall};
+  margin-bottom: -${tokens.borderWidth.medium};
+  margin-right: ${tokens.spacing.large};
+  transition: border-color 125ms ease-out, box-shadow 125ms ease-out;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: ${tokens.opacity.high};
+  }
+`;
 
 type TabStyleOptions = {
   isActive: boolean;
@@ -19,41 +52,15 @@ type TabStyleOptions = {
 
 export function tabStyle({ isActive, isFocusVisible }: TabStyleOptions) {
   return css`
-    display: flex;
-    background-color: transparent;
-    color: ${tokens.colors.navySubtleTextOnLight};
-    font-family: ${tokens.fontFamilies.sansSerif};
-    font-size: ${tokens.fontSizes.small};
-    font-weight: ${tokens.fontWeights.regular};
-    line-height: ${tokens.lineHeights.tight};
-    letter-spacing: ${tokens.letterSpacing.relaxed};
-    text-transform: uppercase;
-    cursor: pointer;
-    outline: 0;
-    border: 0;
-    border-bottom: ${tokens.borderWidth.medium} solid transparent;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 10px;
-    padding-top: ${tokens.spacing.xsmall};
-    margin-bottom: -${tokens.borderWidth.medium};
-    margin-right: ${tokens.spacing.large};
-    transition: border-color 125ms ease-out, box-shadow 125ms ease-out;
-
-    &:last-of-type {
-      margin-right: 0;
-    }
-
-    &:disabled {
-      cursor: default;
-      opacity: ${tokens.opacity.high};
-    }
+    ${tabBaseStyle}
 
     ${isActive
       ? css`
-          color: ${tokens.colors.navy};
-          font-weight: ${tokens.fontWeights.bold};
-          border-bottom-color: ${tokens.colors.navy};
+          &:not(:disabled) {
+            color: ${tokens.colors.navy};
+            font-weight: ${tokens.fontWeights.bold};
+            border-bottom-color: ${tokens.colors.navy};
+          }
         `
       : css`
           &:hover:not(:disabled) {
