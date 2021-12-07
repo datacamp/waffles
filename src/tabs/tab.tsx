@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import { useFocusRing } from '@react-aria/focus';
+import { mergeProps } from '@react-aria/utils';
 
 import { tabStyle, tabInnerContentStyle, tabFauxContenStyle } from './styles';
 
@@ -18,10 +19,9 @@ function Tab(
 
   return (
     <button
-      role="tab"
+      {...mergeProps(focusProps, restProps)}
       ref={ref}
-      {...focusProps}
-      {...restProps}
+      role="tab"
       css={tabStyle({ isActive, isFocusVisible })}
     >
       {icon}
