@@ -1,17 +1,154 @@
-import React from 'react';
-import Tab from './tab';
+import React, {
+  Children,
+  isValidElement,
+  cloneElement,
+  createRef,
+} from 'react';
 
-import { tabsStyle } from './styles';
+import { useId } from '../hooks';
+import Tab from './tab';
+import { tabListStyle } from './styles';
 
 type TabsProps = {
+  activeTab: number;
+  onChange: (activeTab: number) => void;
   children: React.ReactNode;
 };
 
-function Tabs({ children }: TabsProps) {
+type InternalTabRef = {
+  index: number;
+  ref: React.RefObject<HTMLButtonElement>;
+};
+
+function Tabs({ activeTab, onChange, children }: TabsProps) {
+  const tabsId = useId('tabs');
+  // Keep refs to all non-disabled tabs, so it is possible to navigate between them with arrow keys
+  const tabRefs: InternalTabRef[] = [];
+
+  // Show horizontal tab bar with labelled tabs
+  // Enhance each tab with a11y attributes
+  // Populate list of tab refs
+  function renderTabs() {
+    return Children.map(children, (child, index) => {
+      if (isValidElement(child)) {
+        const isActive = index === activeTab;
+        const tabRef = createRef<HTMLButtonElement>();
+
+        // If a tab is not disabled, add it to list of refs
+        if (!child.props.disabled) {
+          tabRefs.push({
+            index,
+            ref: tabRef,
+          });
+        }
+
+        return cloneElement(child, {
+          id: `${tabsId}-tab-${index}`,
+          tabIndex: isActive ? 0 : -1,
+          onClick: () => handleClick(index),
+          onKeyDown: (event: React.KeyboardEvent<HTMLButtonElement>) =>
+            handleKeyDown(event, index),
+          isActive,
+          'aria-selected': isActive,
+          'aria-controls': `${tabsId}-tab-panel-${index}`,
+          ref: tabRef,
+        });
+      }
+
+      return null;
+    });
+  }
+
+  // Generate tab panels based on provided tabs content
+  // Only active tab content is shown
+  function renderTabPanels() {
+    return Children.map(children, (child, index) => {
+      const isActive = index === activeTab;
+
+      if (isValidElement(child)) {
+        return (
+          <div
+            role="tabpanel"
+            id={`${tabsId}-tab-panel-${index}`}
+            hidden={!isActive}
+            aria-labelledby={`${tabsId}-tab-${index}`}
+          >
+            {isActive && child.props.children}
+          </div>
+        );
+      }
+
+      return null;
+    });
+  }
+
+  function handleClick(index: number) {
+    onChange(index);
+  }
+
+  // Manage navigation between tabs with arrow keys
+  function handleKeyDown(
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    index: number,
+  ) {
+    // With only 1 tab no need to handle keyboard interactions
+    if (tabRefs.length <= 1) {
+      return;
+    }
+
+    const { key } = event; // Key code of the pressed key
+
+    if (
+      key === 'ArrowRight' ||
+      key === 'ArrowLeft' ||
+      key === 'Home' ||
+      key === 'End'
+    ) {
+      let nextTab;
+
+      // If there are disabled tabs, index and position of tab ref in an array could be different
+      const currentIndex = tabRefs.findIndex((ref) => {
+        return ref.index === index;
+      });
+
+      // After last tab move focus to the beginning of the list
+      if (key === 'ArrowRight') {
+        if (index < tabRefs[tabRefs.length - 1].index) {
+          nextTab = tabRefs[currentIndex + 1].ref.current;
+        } else {
+          nextTab = tabRefs[0].ref.current;
+        }
+      }
+
+      // After first tab move focus to the end of the list
+      if (key === 'ArrowLeft') {
+        if (index > tabRefs[0].index) {
+          nextTab = tabRefs[currentIndex - 1].ref.current;
+        } else {
+          nextTab = tabRefs[tabRefs.length - 1].ref.current;
+        }
+      }
+
+      if (key === 'Home') {
+        nextTab = tabRefs[0].ref.current;
+      }
+
+      if (key === 'End') {
+        nextTab = tabRefs[tabRefs.length - 1].ref.current;
+      }
+
+      nextTab?.focus();
+      nextTab?.click();
+    }
+  }
+
   return (
-    <div role="tablist" aria-orientation="horizontal" css={tabsStyle()}>
-      {children}
-    </div>
+    <>
+      <div role="tablist" aria-orientation="horizontal" css={tabListStyle()}>
+        {renderTabs()}
+      </div>
+      {renderTabPanels()}
+    </>
   );
 }
 
