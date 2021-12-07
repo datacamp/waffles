@@ -33,6 +33,7 @@ const tabBaseStyle = css`
   padding-top: ${tokens.spacing.xsmall};
   margin-bottom: -${tokens.borderWidth.medium};
   margin-right: ${tokens.spacing.large};
+  user-select: none;
   transition: border-color 125ms ease-out, box-shadow 125ms ease-out;
 
   &:last-of-type {

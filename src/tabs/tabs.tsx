@@ -10,8 +10,8 @@ import Tab from './tab';
 import { tabListStyle } from './styles';
 
 type TabsProps = {
-  activeTab: number;
-  onChange: (activeTab: number) => void;
+  activeTab: React.Key;
+  onChange: (activeTab: React.Key) => void;
   autoActivate?: boolean;
   children: React.ReactNode;
 };
@@ -37,7 +37,8 @@ function Tabs({
   function renderTabs() {
     return Children.map(children, (child, index) => {
       if (isValidElement(child)) {
-        const isActive = index === activeTab;
+        const tabKey = child.key || index;
+        const isActive = tabKey === activeTab;
         const tabRef = createRef<HTMLButtonElement>();
 
         // If a tab is not disabled, add it to list of refs
@@ -51,7 +52,7 @@ function Tabs({
         return cloneElement(child, {
           id: `${tabsId}-tab-${index}`,
           tabIndex: isActive ? 0 : -1,
-          onClick: () => handleClick(index),
+          onClick: () => handleClick(tabKey),
           onKeyDown: (event: React.KeyboardEvent<HTMLButtonElement>) =>
             handleKeyDown(event, index),
           isActive,
@@ -69,9 +70,10 @@ function Tabs({
   // Only active tab content is shown
   function renderTabPanels() {
     return Children.map(children, (child, index) => {
-      const isActive = index === activeTab;
-
       if (isValidElement(child)) {
+        const tabKey = child.key || index;
+        const isActive = tabKey === activeTab;
+
         return (
           <div
             role="tabpanel"
@@ -88,8 +90,8 @@ function Tabs({
     });
   }
 
-  function handleClick(index: number) {
-    onChange(index);
+  function handleClick(tabKey: React.Key) {
+    onChange(tabKey);
   }
 
   // Manage navigation between tabs with arrow keys
