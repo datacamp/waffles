@@ -12,6 +12,7 @@ import { tabListStyle } from './styles';
 type TabsProps = {
   activeTab: number;
   onChange: (activeTab: number) => void;
+  autoActivate?: boolean;
   children: React.ReactNode;
 };
 
@@ -20,7 +21,12 @@ type InternalTabRef = {
   ref: React.RefObject<HTMLButtonElement>;
 };
 
-function Tabs({ activeTab, onChange, children }: TabsProps) {
+function Tabs({
+  activeTab,
+  onChange,
+  autoActivate = false,
+  children,
+}: TabsProps) {
   const tabsId = useId('tabs');
   // Keep refs to all non-disabled tabs, so it is possible to navigate between them with arrow keys
   const tabRefs: InternalTabRef[] = [];
@@ -138,7 +144,10 @@ function Tabs({ activeTab, onChange, children }: TabsProps) {
       }
 
       nextTab?.focus();
-      nextTab?.click();
+
+      if (autoActivate) {
+        nextTab?.click();
+      }
     }
   }
 
