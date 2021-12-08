@@ -7,7 +7,7 @@ import React, {
 
 import { useId } from '../hooks';
 import Tab from './tab';
-import { tabListStyle } from './styles';
+import { tabListStyle, tabsWrapper } from './styles';
 
 type TabsProps = {
   activeTab: React.Key;
@@ -158,12 +158,8 @@ function Tabs({
 
   return (
     <>
-      <div
-        role="tablist"
-        aria-orientation="horizontal"
-        css={tabListStyle({ inverted })}
-      >
-        {renderTabs()}
+      <div role="tablist" aria-orientation="horizontal" css={tabListStyle()}>
+        <div css={tabsWrapper({ inverted })}>{renderTabs()}</div>
       </div>
       {renderTabPanels()}
     </>

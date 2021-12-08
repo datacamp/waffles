@@ -1,19 +1,51 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
-import { hexToRgba } from '../helpers';
+import { mediaQuery, hexToRgba } from '../helpers';
 
-type TabListStyleOptions = {
+export function tabListStyle() {
+  return css`
+    width: 100%;
+    margin-bottom: ${tokens.spacing.medium};
+
+    /* Make tabs scrollable on mobile, while hiding scroll  */
+    mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    /* Turn off scrolling for bigger devices */
+    ${mediaQuery.small} {
+      overflow-y: visible;
+      overflow-x: visible;
+      mask-image: none;
+    }
+  `;
+}
+
+type TabsWrapperStyleOptions = {
   inverted: boolean;
 };
 
-export function tabListStyle({ inverted }: TabListStyleOptions) {
+export function tabsWrapper({ inverted }: TabsWrapperStyleOptions) {
   return css`
-    display: flex;
-    width: 100%;
+    display: inline-flex;
+    padding-left: ${tokens.spacing.medium};
+    padding-right: 64px;
     border-bottom: ${tokens.borderWidth.medium} solid
       ${hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)};
-    margin-bottom: ${tokens.spacing.medium};
+
+    ${mediaQuery.small} {
+      display: flex;
+      padding-left: 0;
+      padding-right: 0;
+    }
   `;
 }
 
