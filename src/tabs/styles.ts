@@ -3,12 +3,16 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
-export function tabListStyle() {
+type TabListStyleOptions = {
+  inverted: boolean;
+};
+
+export function tabListStyle({ inverted }: TabListStyleOptions) {
   return css`
     display: flex;
     width: 100%;
     border-bottom: ${tokens.borderWidth.medium} solid
-      ${hexToRgba(tokens.colors.navy, 0.15)};
+      ${hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)};
     margin-bottom: ${tokens.spacing.medium};
   `;
 }
@@ -16,7 +20,6 @@ export function tabListStyle() {
 const tabBaseStyle = css`
   display: flex;
   background-color: transparent;
-  color: ${tokens.colors.navySubtleTextOnLight};
   font-family: ${tokens.fontFamilies.sansSerif};
   font-size: ${tokens.fontSizes.small};
   font-weight: ${tokens.fontWeights.regular};
@@ -49,27 +52,34 @@ const tabBaseStyle = css`
 type TabStyleOptions = {
   isActive: boolean;
   isFocusVisible: boolean;
+  inverted: boolean;
 };
 
-export function tabStyle({ isActive, isFocusVisible }: TabStyleOptions) {
+export function tabStyle({
+  isActive,
+  isFocusVisible,
+  inverted,
+}: TabStyleOptions) {
+  const mainColor = inverted ? tokens.colors.white : tokens.colors.navy;
+
   return css`
     ${tabBaseStyle}
+    color: ${inverted
+      ? tokens.colors.navySubtleTextOnDark
+      : tokens.colors.navySubtleTextOnLight};
 
     ${isActive
       ? css`
           &:not(:disabled) {
-            color: ${tokens.colors.navy};
+            color: ${mainColor};
             font-weight: ${tokens.fontWeights.bold};
-            border-bottom-color: ${tokens.colors.navy};
+            border-bottom-color: ${mainColor};
           }
         `
       : css`
           &:hover:not(:disabled) {
-            color: ${hexToRgba(tokens.colors.navy, 0.8)};
-            border-bottom-color: ${hexToRgba(
-              tokens.colors.navy,
-              tokens.opacity.medium,
-            )};
+            color: ${hexToRgba(mainColor, 0.8)};
+            border-bottom-color: ${hexToRgba(mainColor, tokens.opacity.medium)};
           }
         `}
 

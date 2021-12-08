@@ -9,10 +9,11 @@ type TabProps = {
   children: React.ReactNode;
   icon?: React.ReactNode;
   isActive?: boolean;
+  inverted?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 function Tab(
-  { label, icon, isActive = false, ...restProps }: TabProps,
+  { label, icon, isActive = false, inverted = false, ...restProps }: TabProps,
   ref?: React.Ref<HTMLButtonElement>,
 ) {
   const { focusProps, isFocusVisible } = useFocusRing();
@@ -22,7 +23,7 @@ function Tab(
       {...mergeProps(focusProps, restProps)}
       ref={ref}
       role="tab"
-      css={tabStyle({ isActive, isFocusVisible })}
+      css={tabStyle({ isActive, isFocusVisible, inverted })}
     >
       {icon}
       <span css={tabInnerContentStyle({ hasIcon: !!icon })}>

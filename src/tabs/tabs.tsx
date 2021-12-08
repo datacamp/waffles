@@ -13,6 +13,7 @@ type TabsProps = {
   activeTab: React.Key;
   onChange: (activeTab: React.Key) => void;
   autoActivate?: boolean;
+  inverted?: boolean;
   children: React.ReactNode;
 };
 
@@ -25,6 +26,7 @@ function Tabs({
   activeTab,
   onChange,
   autoActivate = false,
+  inverted = false,
   children,
 }: TabsProps) {
   const tabsId = useId('tabs');
@@ -56,6 +58,7 @@ function Tabs({
           onKeyDown: (event: React.KeyboardEvent<HTMLButtonElement>) =>
             handleKeyDown(event, index),
           isActive,
+          inverted,
           'aria-selected': isActive,
           'aria-controls': `${tabsId}-tab-panel-${index}`,
           ref: tabRef,
@@ -155,7 +158,11 @@ function Tabs({
 
   return (
     <>
-      <div role="tablist" aria-orientation="horizontal" css={tabListStyle()}>
+      <div
+        role="tablist"
+        aria-orientation="horizontal"
+        css={tabListStyle({ inverted })}
+      >
         {renderTabs()}
       </div>
       {renderTabPanels()}
