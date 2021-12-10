@@ -173,6 +173,6 @@ function Tabs({
   );
 }
 
-Tabs.Tab = Tab;
+const TabsNamespace = Object.assign(Tabs, { Tab });
 
-export default Tabs;
+export default TabsNamespace;
