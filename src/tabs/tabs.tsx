@@ -7,8 +7,8 @@ import React, {
 import { mergeProps } from '@react-aria/utils';
 
 import { useId } from '../hooks';
+import TabList from './tab-list';
 import Tab from './tab';
-import { tabListStyle, tabsWrapper } from './styles';
 
 type TabsProps = {
   activeTab: React.Key;
@@ -16,7 +16,7 @@ type TabsProps = {
   onChange?: (activeTab: React.Key) => void;
   autoActivate?: boolean;
   inverted?: boolean;
-};
+} & Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'>;
 
 type InternalTabRef = {
   index: number;
@@ -29,6 +29,7 @@ function Tabs({
   onChange,
   autoActivate = false,
   inverted = false,
+  ...restProps
 }: TabsProps) {
   const tabsId = useId('tabs');
   // Keep refs to all non-disabled tabs, so it is possible to navigate between them with arrow keys
@@ -164,9 +165,9 @@ function Tabs({
 
   return (
     <>
-      <div role="tablist" aria-orientation="horizontal" css={tabListStyle()}>
-        <div css={tabsWrapper({ inverted })}>{renderTabs()}</div>
-      </div>
+      <TabList inverted={inverted} {...restProps}>
+        {renderTabs()}
+      </TabList>
       {renderTabPanels()}
     </>
   );
