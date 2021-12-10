@@ -4,6 +4,7 @@ import React, {
   cloneElement,
   createRef,
 } from 'react';
+import { mergeProps } from '@react-aria/utils';
 
 import { useId } from '../hooks';
 import Tab from './tab';
@@ -52,11 +53,16 @@ function Tabs({
         }
 
         return cloneElement(child, {
+          ...mergeProps(
+            {
+              onClick: () => handleClick(tabKey),
+              onKeyDown: (event: React.KeyboardEvent<HTMLButtonElement>) =>
+                handleKeyDown(event, index),
+            },
+            child.props,
+          ),
           id: `${tabsId}-tab-${index}`,
           tabIndex: isActive ? 0 : -1,
-          onClick: () => handleClick(tabKey),
-          onKeyDown: (event: React.KeyboardEvent<HTMLButtonElement>) =>
-            handleKeyDown(event, index),
           isActive,
           inverted,
           'aria-selected': isActive,
