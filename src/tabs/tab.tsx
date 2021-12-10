@@ -1,39 +1,12 @@
 import React, { forwardRef } from 'react';
-import { useFocusRing } from '@react-aria/focus';
-import { mergeProps } from '@react-aria/utils';
 
-import { tabStyle, tabInnerContentStyle, tabFauxContenStyle } from './styles';
+import TabInternal from './tab-internal';
+import type { TabProps } from './tab-internal';
 
-type TabProps = {
-  label: string;
-  children: React.ReactNode;
-  icon?: React.ReactNode;
-  isActive?: boolean;
-  inverted?: boolean;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+type TabComponent = <T extends React.ElementType = 'button'>(
+  props: TabProps<T>,
+) => JSX.Element | null;
 
-function Tab(
-  { label, icon, isActive = false, inverted = false, ...restProps }: TabProps,
-  ref?: React.Ref<HTMLButtonElement>,
-) {
-  const { focusProps, isFocusVisible } = useFocusRing();
+const Tab: TabComponent = forwardRef(TabInternal);
 
-  return (
-    <button
-      {...mergeProps(focusProps, restProps)}
-      ref={ref}
-      role="tab"
-      css={tabStyle({ isActive, isFocusVisible, inverted })}
-    >
-      {icon}
-      <span css={tabInnerContentStyle({ hasIcon: !!icon })}>
-        {label}
-        <span css={tabFauxContenStyle()} aria-hidden="true">
-          {label}
-        </span>
-      </span>
-    </button>
-  );
-}
-
-export default forwardRef(Tab);
+export default Tab;
