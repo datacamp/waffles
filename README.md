@@ -1,4 +1,4 @@
-# Waffles 2.0
+# Waffles
 
 DataCamp's Design System and React component library.
 
