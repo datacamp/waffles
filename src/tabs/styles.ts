@@ -58,6 +58,7 @@ const tabBaseStyle = css`
   line-height: ${tokens.lineHeights.tight};
   letter-spacing: ${tokens.letterSpacing.relaxed};
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
   outline: 0;
   border: 0;

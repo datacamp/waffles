@@ -11,10 +11,10 @@ import { tabListStyle, tabsWrapper } from './styles';
 
 type TabsProps = {
   activeTab: React.Key;
-  onChange: (activeTab: React.Key) => void;
+  children: React.ReactNode;
+  onChange?: (activeTab: React.Key) => void;
   autoActivate?: boolean;
   inverted?: boolean;
-  children: React.ReactNode;
 };
 
 type InternalTabRef = {
@@ -24,10 +24,10 @@ type InternalTabRef = {
 
 function Tabs({
   activeTab,
+  children,
   onChange,
   autoActivate = false,
   inverted = false,
-  children,
 }: TabsProps) {
   const tabsId = useId('tabs');
   // Keep refs to all non-disabled tabs, so it is possible to navigate between them with arrow keys
@@ -94,7 +94,7 @@ function Tabs({
   }
 
   function handleClick(tabKey: React.Key) {
-    onChange(tabKey);
+    onChange && onChange(tabKey);
   }
 
   // Manage navigation between tabs with arrow keys
