@@ -4,6 +4,7 @@ exports[`Icon exports every icon 1`] = `
 Object {
   "AddCircle": [Function],
   "AddCircleInverted": [Function],
+  "AddUser": [Function],
   "AppleBrand": [Function],
   "Apply": [Function],
   "Archive": [Function],
