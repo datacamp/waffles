@@ -1,0 +1,427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs renders snapshot 1`] = `
+.emotion-0 {
+  width: 100%;
+  margin-bottom: 16px;
+  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.emotion-0::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0 {
+    overflow-y: visible;
+    overflow-x: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-left: 16px;
+  padding-right: 64px;
+  border-bottom: 2px solid rgba(5, 25, 45, 0.15);
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-top: 4px;
+  margin-bottom: -2px;
+  margin-right: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
+  transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
+  color: #65707C;
+}
+
+.emotion-2:last-of-type {
+  margin-right: 0;
+}
+
+.emotion-2:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.emotion-2:not(:disabled) {
+  color: #05192D;
+  font-weight: 800;
+  border-bottom-color: #05192D;
+}
+
+.emotion-3 {
+  display: block;
+  margin-bottom: -1px;
+}
+
+.emotion-4 {
+  display: block;
+  font-weight: 800;
+  color: transparent;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-top: 4px;
+  margin-bottom: -2px;
+  margin-right: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
+  transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
+  color: #65707C;
+}
+
+.emotion-5:last-of-type {
+  margin-right: 0;
+}
+
+.emotion-5:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.emotion-5:hover:not(:disabled) {
+  color: rgba(5, 25, 45, 0.8);
+  border-bottom-color: rgba(5, 25, 45, 0.4);
+}
+
+<div
+  aria-orientation="horizontal"
+  class="emotion-0"
+  role="tablist"
+>
+  <div
+    class="emotion-1"
+  >
+    <button
+      aria-controls="tabs-123abC-tab-panel-0"
+      aria-selected="true"
+      class="emotion-2"
+      id="tabs-123abC-tab-0"
+      role="tab"
+      tabindex="0"
+    >
+      <span
+        class="emotion-3"
+      >
+        First Tab
+        <span
+          aria-hidden="true"
+          class="emotion-4"
+        >
+          First Tab
+        </span>
+      </span>
+    </button>
+    <button
+      aria-controls="tabs-123abC-tab-panel-1"
+      aria-selected="false"
+      class="emotion-5"
+      id="tabs-123abC-tab-1"
+      role="tab"
+      tabindex="-1"
+    >
+      <span
+        class="emotion-3"
+      >
+        Second Tab
+        <span
+          aria-hidden="true"
+          class="emotion-4"
+        >
+          Second Tab
+        </span>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Tabs renders snapshot of inverted 1`] = `
+.emotion-0 {
+  width: 100%;
+  margin-bottom: 16px;
+  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.emotion-0::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0 {
+    overflow-y: visible;
+    overflow-x: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-left: 16px;
+  padding-right: 64px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-top: 4px;
+  margin-bottom: -2px;
+  margin-right: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
+  transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
+  color: #9BA3AB;
+}
+
+.emotion-2:last-of-type {
+  margin-right: 0;
+}
+
+.emotion-2:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.emotion-2:not(:disabled) {
+  color: #FFFFFF;
+  font-weight: 800;
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-3 {
+  display: block;
+  margin-bottom: -1px;
+}
+
+.emotion-4 {
+  display: block;
+  font-weight: 800;
+  color: transparent;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-top: 4px;
+  margin-bottom: -2px;
+  margin-right: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
+  transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
+  color: #9BA3AB;
+}
+
+.emotion-5:last-of-type {
+  margin-right: 0;
+}
+
+.emotion-5:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.emotion-5:hover:not(:disabled) {
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+
+<div
+  aria-orientation="horizontal"
+  class="emotion-0"
+  role="tablist"
+>
+  <div
+    class="emotion-1"
+  >
+    <button
+      aria-controls="tabs-123abC-tab-panel-0"
+      aria-selected="true"
+      class="emotion-2"
+      id="tabs-123abC-tab-0"
+      role="tab"
+      tabindex="0"
+    >
+      <span
+        class="emotion-3"
+      >
+        First Tab
+        <span
+          aria-hidden="true"
+          class="emotion-4"
+        >
+          First Tab
+        </span>
+      </span>
+    </button>
+    <button
+      aria-controls="tabs-123abC-tab-panel-1"
+      aria-selected="false"
+      class="emotion-5"
+      id="tabs-123abC-tab-1"
+      role="tab"
+      tabindex="-1"
+    >
+      <span
+        class="emotion-3"
+      >
+        Second Tab
+        <span
+          aria-hidden="true"
+          class="emotion-4"
+        >
+          Second Tab
+        </span>
+      </span>
+    </button>
+  </div>
+</div>
+`;
