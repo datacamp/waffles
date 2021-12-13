@@ -1,5 +1,6 @@
 export { default as AddCircleInverted } from './add-circle-inverted';
 export { default as AddCircle } from './add-circle';
+export { default as AddUser } from './add-user';
 export { default as AppleBrand } from './apple-brand';
 export { default as Apply } from './apply';
 export { default as Archive } from './archive';
