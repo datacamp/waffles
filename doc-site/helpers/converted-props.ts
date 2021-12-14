@@ -122,16 +122,22 @@ function noDuplicateRawProps(
 function formattedType(metadata: PropRawMetadata): string {
   const { value } = metadata;
 
-  // Nicely format ReactNode type
-  if (value.value) {
+  // Nicely format React internal types
+  if (value.value?.name) {
     const { name } = value.value;
-    return name.includes('ReactNode') ? 'React.ReactNode' : name;
+
+    return name.includes('default') ? name.replace('default', 'React') : name;
   }
 
-  // If it is union list all types, otherwise it's primitive type
-  return value.kind === 'union'
-    ? value.types!.map((type) => type.value).join(' | ')
-    : value.kind;
+  if (value.kind === 'union') {
+    return value.types!.map((type) => type.value).join(' | ');
+  }
+
+  if (value.kind === 'generic' && value.value?.kind) {
+    return value.value.kind;
+  }
+
+  return value.kind;
 }
 
 function formattedDescription(
