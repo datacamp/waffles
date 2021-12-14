@@ -34,7 +34,7 @@ export function codeStyle({ size, inverted }: CodeStyleOptions) {
     font-size: ${sizeMap[size].fontSize};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     background-color: ${inverted
-      ? hexToRgba(tokens.colors.white, tokens.opacity.medium)
+      ? hexToRgba(tokens.colors.white, 0.3)
       : tokens.colors.beige};
   `;
 }
