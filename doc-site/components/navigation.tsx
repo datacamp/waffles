@@ -37,6 +37,9 @@ function Navigation() {
             <Link href="/components/code-block">Code Block</Link>
             <Link href="/components/text">Text</Link>
           </Subcategory>
+          <Subcategory label="Navigation">
+            <Link href="/components/tabs">Tabs</Link>
+          </Subcategory>
           <Subcategory label="Form">
             <Link href="/components/input">Input</Link>
             <Link href="/components/input-field">Input Field</Link>

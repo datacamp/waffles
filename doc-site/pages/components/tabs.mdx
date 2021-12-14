@@ -1,0 +1,76 @@
+import * as TabsExports from '@datacamp/waffles/tabs';
+
+import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/tabs/playground-config';
+import BasicUsage from '../../examples/tabs/basic-usage';
+import Disabled from '../../examples/tabs/disabled';
+import WithIcons from '../../examples/tabs/with-icons';
+import AsLinks from '../../examples/tabs/as-links';
+import AutoActivate from '../../examples/tabs/auto-activate';
+import Inverted from '../../examples/tabs/inverted';
+
+export default Layout;
+
+# Tabs
+
+🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="tabs/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Disabled" path="tabs/disabled">
+  <Disabled />
+</Example>
+
+<Example title="With Icons" path="tabs/with-icons">
+  <WithIcons />
+</Example>
+
+<Example title="As Links" path="tabs/as-links">
+  <AsLinks />
+</Example>
+
+<Example title="Auto Activate" path="tabs/auto-activate">
+  <AutoActivate />
+</Example>
+
+<Example title="Inverted" path="tabs/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### Tabs
+
+In addition to all custom props listed below, `Tabs` accepts all props regular `HTMLDiv` would, such as `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/tabs/tabs-internal')}
+/>
+
+### Tabs.Tab
+
+In addition to all custom props listed below, `Tabs.Tab` accepts all props regular `HTMLButton` would, such as `disabled`, `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/tabs/tab-internal')}
+  isPolymorphic
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={TabsExports} path="@datacamp/waffles/tabs" />
