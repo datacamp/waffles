@@ -11,7 +11,7 @@ exports[`Code renders snapshot of inverted size large 1`] = `
   white-space: nowrap;
   font-size: 14px;
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 <code
@@ -32,7 +32,7 @@ exports[`Code renders snapshot of inverted size medium 1`] = `
   white-space: nowrap;
   font-size: 12px;
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 <code
