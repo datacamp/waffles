@@ -10,10 +10,15 @@ import { useId } from '../hooks';
 import TabList from './tab-list';
 
 type TabsProps = {
+  /* Index of the active tab. By default starts from 0. To provide custom indexes, pass them as the `key` attribute to each `Tab`. */
   activeTab: React.Key;
+  /* A list of `Tabs.Tab` components. */
   children: React.ReactNode;
+  /* Handler called every time a new tab is selected. */
   onChange?: (activeTab: React.Key) => void;
+  /* Activate a tab when it receives focus. */
   autoActivate?: boolean;
+  /* Sets the style of the tabs suitable for dark backgrounds. */
   inverted?: boolean;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'>;
 
