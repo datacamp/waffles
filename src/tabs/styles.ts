@@ -3,13 +3,19 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { mediaQuery, hexToRgba } from '../helpers';
 
-export function tabListStyle() {
+type TabListStyleOptions = {
+  isGradientMaskVisible: boolean;
+};
+
+export function tabListStyle({ isGradientMaskVisible }: TabListStyleOptions) {
   return css`
     width: 100%;
     margin-bottom: ${tokens.spacing.medium};
 
-    /* Make tabs scrollable on mobile, while hiding scroll  */
-    mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+    /* Make tabs scrollable on mobile, while hiding scroll, and show gradient mask  */
+    mask-image: ${isGradientMaskVisible
+      ? 'linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0))'
+      : 'none'};
     overflow-y: hidden;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -36,6 +42,7 @@ type TabsWrapperStyleOptions = {
 export function tabsWrapper({ inverted }: TabsWrapperStyleOptions) {
   return css`
     display: inline-flex;
+    min-width: 100%;
     padding-left: ${tokens.spacing.medium};
     padding-right: 64px;
     border-bottom: ${tokens.borderWidth.medium} solid
