@@ -132,6 +132,7 @@ Object {
   "PaypalBrand": [Function],
   "PaypalColoredBrand": [Function],
   "Phone": [Function],
+  "Picture": [Function],
   "PieChart": [Function],
   "Pin": [Function],
   "PinInverted": [Function],
