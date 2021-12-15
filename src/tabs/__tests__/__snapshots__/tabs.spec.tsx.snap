@@ -4,8 +4,8 @@ exports[`Tabs renders snapshot 1`] = `
 .emotion-0 {
   width: 100%;
   margin-bottom: 16px;
-  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
-  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  -webkit-mask-image: none;
+  mask-image: none;
   overflow-y: hidden;
   overflow-x: scroll;
   scrollbar-width: none;
@@ -32,6 +32,7 @@ exports[`Tabs renders snapshot 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 64px;
   border-bottom: 2px solid rgba(5, 25, 45, 0.15);
@@ -217,8 +218,8 @@ exports[`Tabs renders snapshot of inverted 1`] = `
 .emotion-0 {
   width: 100%;
   margin-bottom: 16px;
-  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
-  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  -webkit-mask-image: none;
+  mask-image: none;
   overflow-y: hidden;
   overflow-x: scroll;
   scrollbar-width: none;
@@ -245,6 +246,7 @@ exports[`Tabs renders snapshot of inverted 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 64px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.15);
