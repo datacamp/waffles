@@ -4,6 +4,12 @@ describe('Tabs', () => {
     cy.get('main').findAllByRole('tab').should('have.length', 3);
   });
 
+  it(`renders correctly on small screen device`, () => {
+    cy.viewport(375, 800);
+    cy.loadStory('tabs-basic');
+    cy.get('main').findAllByRole('tab').should('have.length', 3);
+  });
+
   it('render inverted tabs with one of them disabled', () => {
     cy.loadStory('tabs-inverted');
     cy.get('main').findAllByRole('tab').should('have.length', 3);
@@ -22,11 +28,14 @@ describe('Tabs', () => {
 
   it('render proper focus state of a single tab', () => {
     cy.loadStory('tabs-basic');
-    cy.get('main')
-      .findByTestId('first-tab')
-      .focus()
-      .trigger('keydown', { keyCode: 39, which: 39 }); // key code for right arrow
+    cy.get('main').findByTestId('first-tab').focus();
+    cy.get('body').type('{rightarrow}');
     cy.get('main').findByText('Second Tab Content').should('not.exist');
+  });
+
+  it('renders with custom styles applied', () => {
+    cy.loadStory('tabs-styled');
+    cy.get('main').findAllByRole('tab').should('have.length', 3);
   });
 
   it('when autoActivete is enabled, after tab is focused with arrow key appropriate panel is shown', () => {

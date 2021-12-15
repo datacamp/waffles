@@ -1,32 +1,31 @@
-import React, { useState } from 'react';
 import { css } from '@emotion/react';
 
 import { tokens } from '../../tokens';
-import { mediaQuery } from '../../helpers';
 import { Paragraph } from '../../paragraph';
 import { Tabs } from '../index';
 
 const wrapperStyle = css`
-  padding-top: ${tokens.spacing.medium};
+  padding: ${tokens.spacing.medium};
+`;
 
-  ${mediaQuery.small} {
-    padding-left: ${tokens.spacing.medium};
-    padding-right: ${tokens.spacing.medium};
-  }
+const customTabListStyle = css`
+  border-bottom-color: ${tokens.colors.navy};
+`;
+
+const customTabStyle = css`
+  background-color: ${tokens.colors.green};
+  color: ${tokens.colors.white};
 `;
 
 function Story() {
-  const [activeTabIndex, setActiveTabIndex] = useState<React.Key>(0);
-
   return (
     <div css={wrapperStyle}>
-      <Tabs
-        activeTab={activeTabIndex}
-        onChange={(activeTab) => {
-          setActiveTabIndex(activeTab);
-        }}
-      >
-        <Tabs.Tab label="First Tab" data-testid="first-tab">
+      <Tabs css={customTabListStyle} activeTab={0}>
+        <Tabs.Tab
+          css={customTabStyle}
+          label="First Tab"
+          data-testid="first-tab"
+        >
           <Paragraph>First Tab Content</Paragraph>
         </Tabs.Tab>
         <Tabs.Tab label="Second Tab" data-testid="second-tab">
