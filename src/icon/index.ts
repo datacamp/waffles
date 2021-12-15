@@ -128,6 +128,7 @@ export { default as Pause } from './pause';
 export { default as PaypalBrand } from './paypal-brand';
 export { default as PaypalColoredBrand } from './paypal-colored-brand';
 export { default as Phone } from './phone';
+export { default as Picture } from './picture';
 export { default as PieChart } from './pie-chart';
 export { default as PinInverted } from './pin-inverted';
 export { default as Pin } from './pin';
