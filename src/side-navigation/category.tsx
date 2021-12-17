@@ -19,12 +19,12 @@ const listStyle = css`
   list-style: none;
 `;
 
-type NavigationCategoryProps = {
+type CategoryProps = {
   label: string;
   children: React.ReactNode;
 };
 
-function NavigationCategory({ label, children }: NavigationCategoryProps) {
+function Category({ label, children }: CategoryProps) {
   return (
     <li>
       <Chapeau css={labelStyle}>{label}</Chapeau>
@@ -33,4 +33,4 @@ function NavigationCategory({ label, children }: NavigationCategoryProps) {
   );
 }
 
-export default NavigationCategory;
+export default Category;

@@ -1,8 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import { useFocusRing } from '@react-aria/focus';
 import { css } from '@emotion/react';
-import { useRouter } from 'next/router';
 
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
@@ -50,64 +48,62 @@ const subLinkStyle = css`
   transition: border-color 75ms ease-out;
 `;
 
-type NavigationLinkProps = {
+type LinkProps = {
   href: string;
   children: React.ReactNode;
+  isActive?: boolean;
   isSubLink?: boolean;
 } & React.HTMLProps<HTMLAnchorElement>;
 
-function NavigationLink({
+function Link({
   href,
   children,
+  isActive = false,
   isSubLink = false,
   ...restProps
-}: NavigationLinkProps) {
-  const { pathname } = useRouter();
-  const isActive = pathname === href;
-
+}: LinkProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
 
   return (
     <li>
-      <Link href={href} passHref>
-        <a
-          {...focusProps}
-          {...restProps}
-          css={css`
-            ${linkStyle}
-            ${isFocusVisible &&
-            css`
-              box-shadow: inset 0 0 0 2px ${tokens.colors.blueDark};
-            `}
-            ${isActive &&
-            css`
-              color: ${tokens.colors.white};
-
-              &:hover span {
-                border-left-color: ${tokens.colors.white};
-              }
-            `}
+      <a
+        {...focusProps}
+        {...restProps}
+        href={href}
+        css={css`
+          ${linkStyle}
+          ${isFocusVisible &&
+          css`
+            box-shadow: inset 0 0 0 2px ${tokens.colors.blueDark};
           `}
-        >
-          {isSubLink ? (
-            <span
-              css={css`
-                ${subLinkStyle}
-                ${isActive &&
-                css`
-                  border-left-color: ${tokens.colors.white};
-                `}
+            ${isActive &&
+          css`
+            color: ${tokens.colors.white};
+
+            &:hover span {
+              border-left-color: ${tokens.colors.white};
+            }
+          `}
+        `}
+      >
+        {isSubLink ? (
+          <span
+            css={css`
+              ${subLinkStyle}
+              ${isActive &&
+              css`
+                border-left-color: ${tokens.colors.white};
               `}
-            >
-              {children}
-            </span>
-          ) : (
-            children
-          )}
-        </a>
-      </Link>
+            `}
+          >
+            {children}
+          </span>
+        ) : (
+          children
+        )}
+      </a>
     </li>
   );
 }
 
-export default NavigationLink;
+export default Link;

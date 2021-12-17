@@ -23,17 +23,13 @@ const listStyle = css`
   list-style: none;
 `;
 
-type NavigationCategoryProps = {
+type SubcategoryProps = {
   label: string;
   children: React.ReactNode;
   icon?: React.ReactNode;
 };
 
-function NavigationCategory({
-  label,
-  icon,
-  children,
-}: NavigationCategoryProps) {
+function Subcategory({ label, icon, children }: SubcategoryProps) {
   // Inject isSubLink prop to every child
   function renderChildren() {
     return Children.map(children, (child) => {
@@ -68,4 +64,4 @@ function NavigationCategory({
   );
 }
 
-export default NavigationCategory;
+export default Subcategory;

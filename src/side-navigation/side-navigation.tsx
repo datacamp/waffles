@@ -2,13 +2,18 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
+import Link from './link';
+import Category from './category';
+import Subcategory from './subcategory';
 
 const sidebarStyle = css`
   display: grid;
   grid-template-rows: 1fr auto;
-  width: 230px
+  width: 230px;
   min-width: 230px;
+  height: 100%;
   background-color: ${tokens.colors.navy};
+  padding-bottom: ${tokens.spacing.large};
 `;
 
 const listStyle = css`
@@ -17,11 +22,11 @@ const listStyle = css`
   list-style: none;
 `;
 
-type SidebarProps = {
+type SideNavigationProps = {
   children: React.ReactNode;
 };
 
-function SideNavigation({ children }: SidebarProps) {
+function SideNavigation({ children }: SideNavigationProps) {
   return (
     <div css={sidebarStyle}>
       <nav>
@@ -30,5 +35,9 @@ function SideNavigation({ children }: SidebarProps) {
     </div>
   );
 }
+
+SideNavigation.Link = Link;
+SideNavigation.Category = Category;
+SideNavigation.Subcategory = Subcategory;
 
 export default SideNavigation;
