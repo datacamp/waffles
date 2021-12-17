@@ -190,6 +190,8 @@ Object {
   "UpvoteInverted": [Function],
   "User": [Function],
   "UserInverted": [Function],
+  "Verified": [Function],
+  "VerifiedInverted": [Function],
   "Video": [Function],
   "VideoCamera": [Function],
   "VideoCameraInverted": [Function],
