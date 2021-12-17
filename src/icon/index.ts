@@ -186,6 +186,8 @@ export { default as UpvoteInverted } from './upvote-inverted';
 export { default as Upvote } from './upvote';
 export { default as UserInverted } from './user-inverted';
 export { default as User } from './user';
+export { default as VerifiedInverted } from './verified-inverted';
+export { default as Verified } from './verified';
 export { default as VideoCameraInverted } from './video-camera-inverted';
 export { default as VideoCamera } from './video-camera';
 export { default as VideoInverted } from './video-inverted';
