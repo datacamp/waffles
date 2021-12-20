@@ -66,15 +66,10 @@ export function subCategoryLabelStyle({
 const linkBaseStyle = css`
   display: flex;
   align-items: center;
+  color: ${tokens.colors.white};
+  text-decoration: none;
   padding-left: ${tokens.spacing.medium};
   padding-right: ${tokens.spacing.medium};
-  height: ${tokens.sizing.medium};
-  color: ${tokens.colors.white};
-  font-family: ${tokens.fontFamilies.sansSerif};
-  font-weight: ${tokens.fontWeights.regular};
-  font-size: ${tokens.fontSizes.medium};
-  line-height: ${tokens.lineHeights.tight};
-  text-decoration: none;
   opacity: 0.8;
   outline: 0;
   width: 100%;
@@ -83,13 +78,13 @@ const linkBaseStyle = css`
   cursor: pointer;
   user-select: none;
 
+  & svg {
+    flex-shrink: 0;
+  }
+
   &:hover {
     opacity: 1;
     background-color: ${hexToRgba(tokens.colors.white, tokens.opacity.low)};
-
-    span {
-      border-left-color: ${hexToRgba(tokens.colors.white, tokens.opacity.high)};
-    }
   }
 `;
 
@@ -110,43 +105,47 @@ export function linkStyle({ isActive, isFocusVisible }: LinkStyleOptions) {
     ${isActive &&
     css`
       opacity: 1;
-      font-weight: ${tokens.fontWeights.bold};
-
-      &:hover span {
-        border-left-color: ${tokens.colors.white};
-      }
     `}
   `;
 }
 
-const subLinkBaseStyle = css`
-  display: flex;
-  align-items: center;
-  height: 100%;
-  margin-left: 7px;
-  padding-left: ${tokens.spacing.medium};
-  border-left: ${tokens.borderWidth.medium} solid
-    ${hexToRgba(tokens.colors.white, tokens.opacity.medium)};
-  transition: border-color 75ms ease-out;
-`;
-
-type SubLinkStyleOptions = {
+type LinkInnerContentStyleOptions = {
+  hasIcon: boolean;
+  isSubLink: boolean;
   isActive: boolean;
 };
 
-export function subLinkStyle({ isActive }: SubLinkStyleOptions) {
+export function linkInnerContentStyle({
+  hasIcon,
+  isSubLink,
+  isActive,
+}: LinkInnerContentStyleOptions) {
   return css`
-    ${subLinkBaseStyle}
+    display: flex;
+    align-items: center;
+    color: ${tokens.colors.white};
+    line-height: ${tokens.lineHeights.default};
+    min-height: ${tokens.sizing.medium};
+    padding-top: ${tokens.spacing.small};
+    padding-bottom: ${tokens.spacing.small};
+
+    ${hasIcon &&
+    css`
+      margin-left: ${tokens.spacing.small};
+    `}
+
+    ${isSubLink &&
+    css`
+      margin-left: 7px;
+      padding-left: ${tokens.spacing.medium};
+      border-left: ${tokens.borderWidth.medium} solid
+        ${hexToRgba(tokens.colors.white, tokens.opacity.medium)};
+    `}
 
     ${isActive &&
     css`
       border-left-color: ${tokens.colors.white};
+      font-weight: ${tokens.fontWeights.bold};
     `}
-  `;
-}
-
-export function linkInnerContentStyle() {
-  return css`
-    margin-left: ${tokens.spacing.small};
   `;
 }

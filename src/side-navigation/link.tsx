@@ -2,7 +2,8 @@ import React from 'react';
 import { useFocusRing } from '@react-aria/focus';
 import { mergeProps } from '@react-aria/utils';
 
-import { linkStyle, linkInnerContentStyle, subLinkStyle } from './styles';
+import { Text } from '../text';
+import { linkStyle, linkInnerContentStyle } from './styles';
 
 type LinkProps = {
   href: string;
@@ -22,21 +23,6 @@ function Link({
 }: LinkProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
 
-  function renderContent() {
-    if (isSubLink) {
-      return <span css={subLinkStyle({ isActive })}>{children}</span>;
-    } else if (icon) {
-      return (
-        <>
-          {icon}
-          <span css={linkInnerContentStyle()}>{children}</span>
-        </>
-      );
-    }
-
-    return children;
-  }
-
   return (
     <li>
       <a
@@ -44,7 +30,12 @@ function Link({
         href={href}
         css={linkStyle({ isActive, isFocusVisible })}
       >
-        {renderContent()}
+        {!isSubLink && icon}
+        <Text
+          css={linkInnerContentStyle({ hasIcon: !!icon, isSubLink, isActive })}
+        >
+          {children}
+        </Text>
       </a>
     </li>
   );
