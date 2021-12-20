@@ -1,52 +1,8 @@
 import React from 'react';
 import { useFocusRing } from '@react-aria/focus';
-import { css } from '@emotion/react';
+import { mergeProps } from '@react-aria/utils';
 
-import { tokens } from '../tokens';
-import { hexToRgba } from '../helpers';
-
-const linkStyle = css`
-  display: flex;
-  align-items: center;
-  padding-left: ${tokens.spacing.medium};
-  padding-right: ${tokens.spacing.medium};
-  height: ${tokens.sizing.medium};
-  color: ${tokens.colors.navySubtleTextOnDark};
-  font-family: ${tokens.fontFamilies.sansSerif};
-  font-weight: ${tokens.fontWeights.regular};
-  font-size: ${tokens.fontSizes.medium};
-  line-height: ${tokens.lineHeights.tight};
-  text-decoration: none;
-  outline: 0;
-  width: 100%;
-  transition: background-color 75ms ease-out, color 75ms ease-out,
-    box-shadow 125ms ease-out;
-  cursor: pointer;
-  user-select: none;
-
-  &:hover {
-    color: ${tokens.colors.white};
-    background-color: ${hexToRgba(
-      tokens.colors.navySubtleTextOnDark,
-      tokens.opacity.low,
-    )};
-
-    span {
-      border-left-color: ${hexToRgba(tokens.colors.white, tokens.opacity.high)};
-    }
-  }
-`;
-
-const subLinkStyle = css`
-  display: flex;
-  align-items: center;
-  height: 100%;
-  margin-left: 7px;
-  padding-left: ${tokens.spacing.medium};
-  border-left: ${tokens.borderWidth.medium} solid
-    ${hexToRgba(tokens.colors.navySubtleTextOnDark, tokens.opacity.medium)};
-  transition: border-color 75ms ease-out;
-`;
+import { linkStyle, subLinkStyle } from './styles';
 
 type LinkProps = {
   href: string;
@@ -67,37 +23,12 @@ function Link({
   return (
     <li>
       <a
-        {...focusProps}
-        {...restProps}
+        {...mergeProps(focusProps, restProps)}
         href={href}
-        css={css`
-          ${linkStyle}
-          ${isFocusVisible &&
-          css`
-            box-shadow: inset 0 0 0 2px ${tokens.colors.blueDark};
-          `}
-            ${isActive &&
-          css`
-            color: ${tokens.colors.white};
-
-            &:hover span {
-              border-left-color: ${tokens.colors.white};
-            }
-          `}
-        `}
+        css={linkStyle({ isActive, isFocusVisible })}
       >
         {isSubLink ? (
-          <span
-            css={css`
-              ${subLinkStyle}
-              ${isActive &&
-              css`
-                border-left-color: ${tokens.colors.white};
-              `}
-            `}
-          >
-            {children}
-          </span>
+          <span css={subLinkStyle({ isActive })}>{children}</span>
         ) : (
           children
         )}

@@ -1,23 +1,7 @@
 import React from 'react';
-import { css } from '@emotion/react';
 
-import { tokens } from '../tokens';
 import { Chapeau } from '../chapeau';
-
-const labelStyle = css`
-  color: ${tokens.colors.white};
-  padding-left: ${tokens.spacing.medium};
-  padding-right: ${tokens.spacing.medium};
-  padding-bottom: ${tokens.spacing.small};
-  padding-top: ${tokens.spacing.large};
-  user-select: none;
-`;
-
-const listStyle = css`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-`;
+import { listStyle, categoryLabelStyle } from './styles';
 
 type CategoryProps = {
   label: string;
@@ -27,8 +11,8 @@ type CategoryProps = {
 function Category({ label, children }: CategoryProps) {
   return (
     <li>
-      <Chapeau css={labelStyle}>{label}</Chapeau>
-      <ul css={listStyle}>{children}</ul>
+      <Chapeau css={categoryLabelStyle()}>{label}</Chapeau>
+      <ul css={listStyle()}>{children}</ul>
     </li>
   );
 }

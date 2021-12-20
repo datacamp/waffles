@@ -1,27 +1,7 @@
 import React, { Children, cloneElement, isValidElement } from 'react';
-import { css } from '@emotion/react';
 
-import { tokens } from '../tokens';
 import { Text } from '../text';
-
-const wrapperStyle = css`
-  display: flex;
-  align-items: center;
-  padding-left: ${tokens.spacing.medium};
-  height: ${tokens.sizing.medium};
-  color: ${tokens.colors.navySubtleTextOnDark};
-  user-select: none;
-`;
-
-const labelStyle = css`
-  color: ${tokens.colors.navySubtleTextOnDark};
-`;
-
-const listStyle = css`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-`;
+import { subCategoryStyle, subCategoryLabelStyle, listStyle } from './styles';
 
 type SubcategoryProps = {
   label: string;
@@ -45,21 +25,11 @@ function Subcategory({ label, icon, children }: SubcategoryProps) {
 
   return (
     <li>
-      <span css={wrapperStyle}>
+      <span css={subCategoryStyle()}>
         {icon}
-        <Text
-          css={css`
-            ${labelStyle}
-            ${icon &&
-            css`
-              padding-left: ${tokens.spacing.small};
-            `}
-          `}
-        >
-          {label}
-        </Text>
+        <Text css={subCategoryLabelStyle({ hasIcon: !!icon })}>{label}</Text>
       </span>
-      <ul css={listStyle}>{renderChildren()}</ul>
+      <ul css={listStyle()}>{renderChildren()}</ul>
     </li>
   );
 }
