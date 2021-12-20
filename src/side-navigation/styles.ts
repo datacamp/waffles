@@ -144,3 +144,9 @@ export function subLinkStyle({ isActive }: SubLinkStyleOptions) {
     `}
   `;
 }
+
+export function linkInnerContentStyle() {
+  return css`
+    margin-left: ${tokens.spacing.small};
+  `;
+}
