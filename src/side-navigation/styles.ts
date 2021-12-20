@@ -40,7 +40,8 @@ export function subCategoryStyle() {
     align-items: center;
     padding-left: ${tokens.spacing.medium};
     height: ${tokens.sizing.medium};
-    color: ${tokens.colors.navySubtleTextOnDark};
+    color: ${tokens.colors.white};
+    opacity: 0.8;
     user-select: none;
   `;
 }
@@ -53,7 +54,7 @@ export function subCategoryLabelStyle({
   hasIcon,
 }: SubCategoryLabelStyleOptions) {
   return css`
-    color: ${tokens.colors.navySubtleTextOnDark};
+    color: ${tokens.colors.white};
 
     ${hasIcon &&
     css`
@@ -68,12 +69,13 @@ const linkBaseStyle = css`
   padding-left: ${tokens.spacing.medium};
   padding-right: ${tokens.spacing.medium};
   height: ${tokens.sizing.medium};
-  color: ${tokens.colors.navySubtleTextOnDark};
+  color: ${tokens.colors.white};
   font-family: ${tokens.fontFamilies.sansSerif};
   font-weight: ${tokens.fontWeights.regular};
   font-size: ${tokens.fontSizes.medium};
   line-height: ${tokens.lineHeights.tight};
   text-decoration: none;
+  opacity: 0.8;
   outline: 0;
   width: 100%;
   transition: background-color 75ms ease-out, color 75ms ease-out,
@@ -82,11 +84,8 @@ const linkBaseStyle = css`
   user-select: none;
 
   &:hover {
-    color: ${tokens.colors.white};
-    background-color: ${hexToRgba(
-      tokens.colors.navySubtleTextOnDark,
-      tokens.opacity.low,
-    )};
+    opacity: 1;
+    background-color: ${hexToRgba(tokens.colors.white, tokens.opacity.low)};
 
     span {
       border-left-color: ${hexToRgba(tokens.colors.white, tokens.opacity.high)};
@@ -110,7 +109,8 @@ export function linkStyle({ isActive, isFocusVisible }: LinkStyleOptions) {
 
     ${isActive &&
     css`
-      color: ${tokens.colors.white};
+      opacity: 1;
+      font-weight: ${tokens.fontWeights.bold};
 
       &:hover span {
         border-left-color: ${tokens.colors.white};
@@ -126,7 +126,7 @@ const subLinkBaseStyle = css`
   margin-left: 7px;
   padding-left: ${tokens.spacing.medium};
   border-left: ${tokens.borderWidth.medium} solid
-    ${hexToRgba(tokens.colors.navySubtleTextOnDark, tokens.opacity.medium)};
+    ${hexToRgba(tokens.colors.white, tokens.opacity.medium)};
   transition: border-color 75ms ease-out;
 `;
 
