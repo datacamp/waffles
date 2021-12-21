@@ -1,44 +1,12 @@
-import React from 'react';
-import { useFocusRing } from '@react-aria/focus';
-import { mergeProps } from '@react-aria/utils';
+import React, { forwardRef } from 'react';
 
-import { Text } from '../text';
-import { linkStyle, linkInnerContentStyle } from './styles';
+import LinkInternal from './link-internal';
+import type { LinkProps } from './link-internal';
 
-type LinkProps = {
-  href: string;
-  children: React.ReactNode;
-  icon?: React.ReactNode;
-  isActive?: boolean;
-  isSubLink?: boolean;
-} & React.HTMLProps<HTMLAnchorElement>;
+type LinkComponent = <T extends React.ElementType = 'a'>(
+  props: LinkProps<T>,
+) => JSX.Element | null;
 
-function Link({
-  href,
-  children,
-  icon,
-  isActive = false,
-  isSubLink = false,
-  ...restProps
-}: LinkProps) {
-  const { focusProps, isFocusVisible } = useFocusRing();
-
-  return (
-    <li>
-      <a
-        {...mergeProps(focusProps, restProps)}
-        href={href}
-        css={linkStyle({ isActive, isFocusVisible })}
-      >
-        {!isSubLink && icon}
-        <Text
-          css={linkInnerContentStyle({ hasIcon: !!icon, isSubLink, isActive })}
-        >
-          {children}
-        </Text>
-      </a>
-    </li>
-  );
-}
+const Link: LinkComponent = forwardRef(LinkInternal);
 
 export default Link;

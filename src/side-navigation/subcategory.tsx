@@ -1,15 +1,34 @@
 import React, { Children, cloneElement, isValidElement } from 'react';
 
-import { Text } from '../text';
-import { subCategoryStyle, subCategoryLabelStyle, listStyle } from './styles';
+import Link from './link';
+import { listStyle } from './styles';
 
-type SubcategoryProps = {
+type SubcategoryBaseProps = {
   label: string;
   children: React.ReactNode;
   icon?: React.ReactNode;
 };
 
-function Subcategory({ label, icon, children }: SubcategoryProps) {
+type SubcategoryLinkProps = {
+  href: string;
+  isActive?: boolean;
+} & SubcategoryBaseProps;
+
+type SubcategoryRegularProps = {
+  href?: never;
+  isActive?: never;
+} & SubcategoryBaseProps;
+
+type SubcategoryProps = SubcategoryLinkProps | SubcategoryRegularProps;
+
+function Subcategory({
+  label,
+  icon,
+  children,
+  href,
+  isActive = false,
+  ...restProps
+}: SubcategoryProps) {
   // Inject isSubLink prop to every child
   function renderChildren() {
     return Children.map(children, (child) => {
@@ -25,10 +44,13 @@ function Subcategory({ label, icon, children }: SubcategoryProps) {
 
   return (
     <li>
-      <span css={subCategoryStyle()}>
-        {icon}
-        <Text css={subCategoryLabelStyle({ hasIcon: !!icon })}>{label}</Text>
-      </span>
+      <Link
+        {...(href ? { href, isActive } : { as: 'div' })}
+        icon={icon}
+        {...restProps}
+      >
+        {label}
+      </Link>
       <ul css={listStyle()}>{renderChildren()}</ul>
     </li>
   );

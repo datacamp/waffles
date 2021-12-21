@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Link from './link';
+import Item from './item';
 import Category from './category';
 import Subcategory from './subcategory';
 import { listStyle, sidebarStyle } from './styles';
@@ -19,7 +19,7 @@ function SideNavigation({ children }: SideNavigationProps) {
   );
 }
 
-SideNavigation.Link = Link;
+SideNavigation.Item = Item;
 SideNavigation.Category = Category;
 SideNavigation.Subcategory = Subcategory;
 

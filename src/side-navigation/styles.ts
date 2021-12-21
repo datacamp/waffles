@@ -75,14 +75,18 @@ const linkBaseStyle = css`
   width: 100%;
   transition: background-color 75ms ease-out, color 75ms ease-out,
     box-shadow 125ms ease-out;
-  cursor: pointer;
+  cursor: default;
   user-select: none;
 
   & svg {
     flex-shrink: 0;
   }
 
-  &:hover {
+  &:where(a) {
+    cursor: pointer;
+  }
+
+  &:where(a):hover {
     opacity: 1;
     background-color: ${hexToRgba(tokens.colors.white, tokens.opacity.low)};
   }
