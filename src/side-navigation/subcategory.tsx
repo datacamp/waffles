@@ -1,59 +1,12 @@
-import React, { Children, cloneElement, isValidElement } from 'react';
+import React, { forwardRef } from 'react';
 
-import Link from './link';
-import { listStyle } from './styles';
+import SubcategoryInternal from './subcategory-internal';
+import type { SubcategoryProps } from './subcategory-internal';
 
-type SubcategoryBaseProps = {
-  label: string;
-  children: React.ReactNode;
-  icon?: React.ReactNode;
-};
+type ItemComponent = <T extends React.ElementType = 'a'>(
+  props: SubcategoryProps<T>,
+) => JSX.Element | null;
 
-type SubcategoryLinkProps = {
-  href: string;
-  isActive?: boolean;
-} & SubcategoryBaseProps;
+const Item: ItemComponent = forwardRef(SubcategoryInternal);
 
-type SubcategoryRegularProps = {
-  href?: never;
-  isActive?: never;
-} & SubcategoryBaseProps;
-
-type SubcategoryProps = SubcategoryLinkProps | SubcategoryRegularProps;
-
-function Subcategory({
-  label,
-  icon,
-  children,
-  href,
-  isActive = false,
-  ...restProps
-}: SubcategoryProps) {
-  // Inject isSubLink prop to every child
-  function renderChildren() {
-    return Children.map(children, (child) => {
-      if (isValidElement(child)) {
-        return cloneElement(child, {
-          isSubLink: true,
-        });
-      }
-
-      return null;
-    });
-  }
-
-  return (
-    <li>
-      <Link
-        {...(href ? { href, isActive } : { as: 'div' })}
-        icon={icon}
-        {...restProps}
-      >
-        {label}
-      </Link>
-      <ul css={listStyle()}>{renderChildren()}</ul>
-    </li>
-  );
-}
-
-export default Subcategory;
+export default Item;

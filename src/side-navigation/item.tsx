@@ -1,20 +1,12 @@
-import React from 'react';
-import Link from './link';
+import React, { forwardRef } from 'react';
 
-type ItemProps = {
-  href: string;
-  children: React.ReactNode;
-  icon?: React.ReactNode;
-  isActive?: boolean;
-  isSubLink?: boolean;
-} & React.AnchorHTMLAttributes<HTMLAnchorElement>;
+import ItemInternal from './item-internal';
+import type { ItemProps } from './item-internal';
 
-function Item(props: ItemProps) {
-  return (
-    <li>
-      <Link {...props}></Link>
-    </li>
-  );
-}
+type ItemComponent = <T extends React.ElementType = 'a'>(
+  props: ItemProps<T>,
+) => JSX.Element | null;
+
+const Item: ItemComponent = forwardRef(ItemInternal);
 
 export default Item;

@@ -63,7 +63,7 @@ export function subCategoryLabelStyle({
   `;
 }
 
-const linkBaseStyle = css`
+const itemBaseStyle = css`
   display: flex;
   align-items: center;
   color: ${tokens.colors.white};
@@ -92,14 +92,14 @@ const linkBaseStyle = css`
   }
 `;
 
-type LinkStyleOptions = {
+type ItemStyleOptions = {
   isActive: boolean;
   isFocusVisible: boolean;
 };
 
-export function linkStyle({ isActive, isFocusVisible }: LinkStyleOptions) {
+export function itemStyle({ isActive, isFocusVisible }: ItemStyleOptions) {
   return css`
-    ${linkBaseStyle}
+    ${itemBaseStyle}
 
     ${isFocusVisible &&
     css`
@@ -113,17 +113,17 @@ export function linkStyle({ isActive, isFocusVisible }: LinkStyleOptions) {
   `;
 }
 
-type LinkInnerContentStyleOptions = {
+type ItemInnerContentStyleOptions = {
   hasIcon: boolean;
-  isSubLink: boolean;
+  isSubcategoryItem: boolean;
   isActive: boolean;
 };
 
-export function linkInnerContentStyle({
+export function itemInnerContentStyle({
   hasIcon,
-  isSubLink,
+  isSubcategoryItem,
   isActive,
-}: LinkInnerContentStyleOptions) {
+}: ItemInnerContentStyleOptions) {
   return css`
     display: flex;
     align-items: center;
@@ -138,7 +138,7 @@ export function linkInnerContentStyle({
       margin-left: ${tokens.spacing.small};
     `}
 
-    ${isSubLink &&
+    ${isSubcategoryItem &&
     css`
       margin-left: 7px;
       padding-left: ${tokens.spacing.medium};
