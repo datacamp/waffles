@@ -44,39 +44,12 @@ export function categoryLabelStyle() {
   `;
 }
 
-export function subCategoryStyle() {
-  return css`
-    display: flex;
-    align-items: center;
-    padding-left: ${tokens.spacing.medium};
-    height: ${tokens.sizing.medium};
-    color: ${tokens.colors.white};
-    opacity: 0.8;
-    user-select: none;
-  `;
-}
-
-type SubCategoryLabelStyleOptions = {
-  hasIcon: boolean;
-};
-
-export function subCategoryLabelStyle({
-  hasIcon,
-}: SubCategoryLabelStyleOptions) {
-  return css`
-    color: ${tokens.colors.white};
-
-    ${hasIcon &&
-    css`
-      padding-left: ${tokens.spacing.small};
-    `}
-  `;
-}
-
 const itemBaseStyle = css`
   display: flex;
   align-items: center;
   color: ${tokens.colors.white};
+  background-color: transparent;
+  border: 0;
   text-decoration: none;
   padding-left: ${tokens.spacing.medium};
   padding-right: ${tokens.spacing.medium};
@@ -92,11 +65,11 @@ const itemBaseStyle = css`
     flex-shrink: 0;
   }
 
-  &:where(a) {
+  &:where(a, button) {
     cursor: pointer;
   }
 
-  &:where(a):hover {
+  &:where(a, button):hover {
     opacity: 1;
     background-color: ${hexToRgba(tokens.colors.white, tokens.opacity.low)};
   }
@@ -110,43 +83,41 @@ type ItemStyleOptions = {
 export function itemStyle({ isActive, isFocusVisible }: ItemStyleOptions) {
   return css`
     ${itemBaseStyle}
-
     ${isFocusVisible &&
-    css`
-      box-shadow: inset 0 0 0 2px ${tokens.colors.blueDark};
-    `}
-
-    ${isActive &&
-    css`
-      opacity: 1;
-    `}
+    `box-shadow: inset 0 0 0 2px ${tokens.colors.blueDark};`}
+    ${isActive && `opacity: 1;`}
   `;
 }
 
 type ItemInnerContentStyleOptions = {
-  hasIcon: boolean;
+  hasLeftIcon: boolean;
+  hasRightIcon: boolean;
   isSubcategoryItem: boolean;
   isActive: boolean;
 };
 
+const itemInnerContentBaseStyle = css`
+  display: flex;
+  align-items: center;
+  color: ${tokens.colors.white};
+  line-height: ${tokens.lineHeights.default};
+  min-height: ${tokens.sizing.medium};
+  padding-top: ${tokens.spacing.small};
+  padding-bottom: ${tokens.spacing.small};
+  flex-grow: 1;
+`;
+
 export function itemInnerContentStyle({
-  hasIcon,
+  hasLeftIcon,
+  hasRightIcon,
   isSubcategoryItem,
   isActive,
 }: ItemInnerContentStyleOptions) {
   return css`
-    display: flex;
-    align-items: center;
-    color: ${tokens.colors.white};
-    line-height: ${tokens.lineHeights.default};
-    min-height: ${tokens.sizing.medium};
-    padding-top: ${tokens.spacing.small};
-    padding-bottom: ${tokens.spacing.small};
+    ${itemInnerContentBaseStyle}
 
-    ${hasIcon &&
-    css`
-      margin-left: ${tokens.spacing.small};
-    `}
+    ${hasLeftIcon && `margin-left: ${tokens.spacing.small};`}
+    ${hasRightIcon && `margin-right: ${tokens.spacing.small};`}
 
     ${isSubcategoryItem &&
     css`

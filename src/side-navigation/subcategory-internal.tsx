@@ -9,7 +9,8 @@ import { itemStyle, itemInnerContentStyle, listStyle } from './styles';
 type SubcategoryBaseProps = {
   label: string;
   children: React.ReactNode;
-  icon?: React.ReactNode;
+  iconLeft?: React.ReactNode;
+  iconRight?: React.ReactNode;
   isActive?: boolean;
 };
 
@@ -21,7 +22,8 @@ function Subcategory<T extends React.ElementType = 'div'>(
     as,
     label,
     children,
-    icon,
+    iconLeft,
+    iconRight,
     isActive = false,
     ...restProps
   }: SubcategoryProps<T>,
@@ -51,16 +53,18 @@ function Subcategory<T extends React.ElementType = 'div'>(
         ref={ref}
         css={itemStyle({ isActive, isFocusVisible })}
       >
-        {icon}
+        {iconLeft}
         <Text
           css={itemInnerContentStyle({
-            hasIcon: !!icon,
+            hasLeftIcon: !!iconLeft,
+            hasRightIcon: !!iconRight,
             isSubcategoryItem: false,
             isActive,
           })}
         >
           {label}
         </Text>
+        {iconRight}
       </Element>
       <ul css={listStyle()}>{renderChildren()}</ul>
     </li>

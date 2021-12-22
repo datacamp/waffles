@@ -9,7 +9,8 @@ import Badge from './badge';
 
 type ItemBaseProps = {
   children: React.ReactNode;
-  icon?: React.ReactNode;
+  iconLeft?: React.ReactNode;
+  iconRight?: React.ReactNode;
   isActive?: boolean;
   isNew?: boolean;
   isSubcategoryItem?: boolean;
@@ -22,7 +23,8 @@ function Item<T extends React.ElementType = 'a'>(
   {
     as,
     children,
-    icon,
+    iconLeft,
+    iconRight,
     isActive = false,
     isNew = false,
     isSubcategoryItem = false,
@@ -41,10 +43,11 @@ function Item<T extends React.ElementType = 'a'>(
         ref={ref}
         css={itemStyle({ isActive, isFocusVisible })}
       >
-        {!isSubcategoryItem && icon}
+        {!isSubcategoryItem && iconLeft}
         <Text
           css={itemInnerContentStyle({
-            hasIcon: !!icon,
+            hasLeftIcon: !!iconLeft,
+            hasRightIcon: !!iconRight,
             isSubcategoryItem,
             isActive,
           })}
@@ -52,6 +55,7 @@ function Item<T extends React.ElementType = 'a'>(
           {children}
           {isNew && <Badge>New</Badge>}
         </Text>
+        {iconRight}
       </Element>
     </li>
   );
