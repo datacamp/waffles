@@ -11,6 +11,7 @@ type SubcategoryBaseProps = {
   children: React.ReactNode;
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
+  size?: 'small' | 'medium';
   isActive?: boolean;
 };
 
@@ -24,6 +25,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
     children,
     iconLeft,
     iconRight,
+    size = 'medium',
     isActive = false,
     ...restProps
   }: SubcategoryProps<T>,
@@ -38,6 +40,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
     return Children.map(children, (child) => {
       if (isValidElement(child)) {
         return cloneElement(child, {
+          size,
           isSubcategoryItem: true,
         });
       }
@@ -58,6 +61,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
           css={itemInnerContentStyle({
             hasLeftIcon: !!iconLeft,
             hasRightIcon: !!iconRight,
+            size,
             isSubcategoryItem: false,
             isActive,
           })}

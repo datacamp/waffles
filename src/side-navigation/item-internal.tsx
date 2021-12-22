@@ -11,6 +11,7 @@ type ItemBaseProps = {
   children: React.ReactNode;
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
+  size?: 'small' | 'medium';
   isActive?: boolean;
   isNew?: boolean;
   isSubcategoryItem?: boolean;
@@ -25,6 +26,7 @@ function Item<T extends React.ElementType = 'a'>(
     children,
     iconLeft,
     iconRight,
+    size = 'medium',
     isActive = false,
     isNew = false,
     isSubcategoryItem = false,
@@ -48,6 +50,7 @@ function Item<T extends React.ElementType = 'a'>(
           css={itemInnerContentStyle({
             hasLeftIcon: !!iconLeft,
             hasRightIcon: !!iconRight,
+            size,
             isSubcategoryItem,
             isActive,
           })}

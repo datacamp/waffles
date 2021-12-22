@@ -2,6 +2,20 @@ import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
+import Item from './item';
+
+const sizeMap = {
+  small: {
+    sizing: '28px',
+    spacing: tokens.spacing.xsmall,
+    fontSize: tokens.fontSizes.small,
+  },
+  medium: {
+    sizing: tokens.sizing.medium,
+    spacing: tokens.spacing.small,
+    fontSize: tokens.fontSizes.medium,
+  },
+} as const;
 
 export function listStyle() {
   return css`
@@ -92,6 +106,7 @@ export function itemStyle({ isActive, isFocusVisible }: ItemStyleOptions) {
 type ItemInnerContentStyleOptions = {
   hasLeftIcon: boolean;
   hasRightIcon: boolean;
+  size: NonNullable<React.ComponentProps<typeof Item>['size']>;
   isSubcategoryItem: boolean;
   isActive: boolean;
 };
@@ -101,20 +116,23 @@ const itemInnerContentBaseStyle = css`
   align-items: center;
   color: ${tokens.colors.white};
   line-height: ${tokens.lineHeights.default};
-  min-height: ${tokens.sizing.medium};
-  padding-top: ${tokens.spacing.small};
-  padding-bottom: ${tokens.spacing.small};
   flex-grow: 1;
 `;
 
 export function itemInnerContentStyle({
   hasLeftIcon,
   hasRightIcon,
+  size,
   isSubcategoryItem,
   isActive,
 }: ItemInnerContentStyleOptions) {
   return css`
     ${itemInnerContentBaseStyle}
+
+    font-size: ${sizeMap[size].fontSize};
+    min-height: ${sizeMap[size].sizing};
+    padding-top: ${sizeMap[size].spacing};
+    padding-bottom: ${sizeMap[size].spacing};
 
     ${hasLeftIcon && `margin-left: ${tokens.spacing.small};`}
     ${hasRightIcon && `margin-right: ${tokens.spacing.small};`}
