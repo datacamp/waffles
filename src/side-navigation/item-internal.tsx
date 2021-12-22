@@ -5,11 +5,13 @@ import { mergeProps } from '@react-aria/utils';
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 import { Text } from '../text';
 import { itemStyle, itemInnerContentStyle } from './styles';
+import Badge from './badge';
 
 type ItemBaseProps = {
   children: React.ReactNode;
   icon?: React.ReactNode;
   isActive?: boolean;
+  isNew?: boolean;
   isSubcategoryItem?: boolean;
 };
 
@@ -22,6 +24,7 @@ function Item<T extends React.ElementType = 'a'>(
     children,
     icon,
     isActive = false,
+    isNew = false,
     isSubcategoryItem = false,
     ...restProps
   }: ItemProps<T>,
@@ -47,6 +50,7 @@ function Item<T extends React.ElementType = 'a'>(
           })}
         >
           {children}
+          {isNew && <Badge>New</Badge>}
         </Text>
       </Element>
     </li>

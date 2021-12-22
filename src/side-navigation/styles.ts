@@ -163,3 +163,20 @@ export function itemInnerContentStyle({
     `}
   `;
 }
+
+export function badgeStyle() {
+  return css`
+    background-color: ${tokens.colors.green};
+    color: ${tokens.colors.navy};
+    font-family: ${tokens.fontFamilies.sansSerif};
+    font-size: ${tokens.fontSizes.small};
+    font-weight: ${tokens.fontWeights.bold};
+    line-height: ${tokens.lineHeights.relaxed};
+    text-transform: uppercase;
+    margin-left: ${tokens.spacing.small};
+    border-radius: ${tokens.borderRadius.medium};
+    padding-left: ${tokens.spacing.xsmall};
+    padding-right: ${tokens.spacing.xsmall};
+    letter-spacing: 0.5px;
+  `;
+}
