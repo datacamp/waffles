@@ -7,11 +7,11 @@ import { listStyle, sidebarStyle } from './styles';
 
 type SideNavigationProps = {
   children: React.ReactNode;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
-function SideNavigation({ children }: SideNavigationProps) {
+function SideNavigation({ children, ...restProps }: SideNavigationProps) {
   return (
-    <div css={sidebarStyle()}>
+    <div {...restProps} css={sidebarStyle()}>
       <nav>
         <ul css={listStyle()}>{children}</ul>
       </nav>

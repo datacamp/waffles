@@ -1,17 +1,19 @@
 import React from 'react';
 
 import { Chapeau } from '../chapeau';
-import { listStyle, categoryLabelStyle } from './styles';
+import { categoryDividerStyle, categoryLabelStyle, listStyle } from './styles';
 
 type CategoryProps = {
-  label: string;
+  label?: string;
+  noDivider?: boolean;
   children: React.ReactNode;
 };
 
-function Category({ label, children }: CategoryProps) {
+function Category({ label, children, noDivider = false }: CategoryProps) {
   return (
     <li>
-      <Chapeau css={categoryLabelStyle()}>{label}</Chapeau>
+      {!noDivider && <div css={categoryDividerStyle()} />}
+      {label && <Chapeau css={categoryLabelStyle()}>{label}</Chapeau>}
       <ul css={listStyle()}>{children}</ul>
     </li>
   );

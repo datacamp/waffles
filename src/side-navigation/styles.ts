@@ -19,18 +19,28 @@ export function sidebarStyle() {
     min-width: 230px;
     height: 100%;
     background-color: ${tokens.colors.navy};
-    padding-bottom: ${tokens.spacing.large};
+  `;
+}
+
+export function categoryDividerStyle() {
+  return css`
+    height: 1px;
+    background-color: ${hexToRgba(tokens.colors.white, 0.2)};
+    margin-top: ${tokens.spacing.small};
+    margin-bottom: ${tokens.spacing.small};
+    margin-left: ${tokens.spacing.medium};
+    margin-right: ${tokens.spacing.medium};
   `;
 }
 
 export function categoryLabelStyle() {
   return css`
     color: ${tokens.colors.white};
+    user-select: none;
+    padding-top: ${tokens.spacing.small};
+    padding-bottom: ${tokens.spacing.small};
     padding-left: ${tokens.spacing.medium};
     padding-right: ${tokens.spacing.medium};
-    padding-bottom: ${tokens.spacing.small};
-    padding-top: ${tokens.spacing.large};
-    user-select: none;
   `;
 }
 
