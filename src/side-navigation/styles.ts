@@ -65,6 +65,8 @@ const itemBaseStyle = css`
   background-color: transparent;
   border: 0;
   text-decoration: none;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-left: ${tokens.spacing.medium};
   padding-right: ${tokens.spacing.medium};
   opacity: 0.8;
@@ -114,6 +116,7 @@ type ItemInnerContentStyleOptions = {
 const itemInnerContentBaseStyle = css`
   display: flex;
   align-items: center;
+  text-align: left;
   color: ${tokens.colors.white};
   line-height: ${tokens.lineHeights.default};
   flex-grow: 1;
