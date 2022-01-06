@@ -7,15 +7,20 @@ type CategoryProps = {
   label?: string;
   noDivider?: boolean;
   children: React.ReactNode;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
-function Category({ label, children, noDivider = false }: CategoryProps) {
+function Category({
+  label,
+  children,
+  noDivider = false,
+  ...restProps
+}: CategoryProps) {
   return (
-    <li>
+    <div {...restProps}>
       {!noDivider && <div css={categoryDividerStyle()} />}
       {label && <Chapeau css={categoryLabelStyle()}>{label}</Chapeau>}
       <ul css={listStyle()}>{children}</ul>
-    </li>
+    </div>
   );
 }
 

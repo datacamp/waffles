@@ -27,12 +27,21 @@ export function listStyle() {
 
 export function sidebarStyle() {
   return css`
-    display: grid;
-    grid-template-rows: 1fr auto;
     width: 230px;
     min-width: 230px;
     height: 100%;
     background-color: ${tokens.colors.navy};
+  `;
+}
+
+export function navStyle() {
+  return css`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-top: ${tokens.spacing.medium};
+    padding-bottom: ${tokens.spacing.medium};
   `;
 }
 
