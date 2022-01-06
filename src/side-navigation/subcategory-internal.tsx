@@ -55,6 +55,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
     <li>
       <Element
         {...mergeProps(focusProps, restProps)}
+        {...(Element === 'a' && isActive && { 'aria-current': 'page' })}
         ref={ref}
         css={itemStyle({ isActive, isFocusVisible })}
         id={subcategoryId}

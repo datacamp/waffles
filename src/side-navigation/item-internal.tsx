@@ -42,6 +42,7 @@ function Item<T extends React.ElementType = 'a'>(
     <li>
       <Element
         {...mergeProps(focusProps, restProps)}
+        {...(Element === 'a' && isActive && { 'aria-current': 'page' })}
         ref={ref}
         css={itemStyle({ isActive, isFocusVisible })}
       >
