@@ -2,6 +2,7 @@ import React, { Children, cloneElement, isValidElement } from 'react';
 import { useFocusRing } from '@react-aria/focus';
 import { mergeProps } from '@react-aria/utils';
 
+import { useId } from '../hooks';
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 import { Text } from '../text';
 import { itemStyle, itemInnerContentStyle, listStyle } from './styles';
@@ -31,8 +32,9 @@ function Subcategory<T extends React.ElementType = 'div'>(
   }: SubcategoryProps<T>,
   ref?: PolymorphicRef<T>,
 ) {
-  const Element = as || 'div';
+  const Element = as || 'h2';
 
+  const subcategoryId = useId('menu-subcategory');
   const { focusProps, isFocusVisible } = useFocusRing();
 
   // Inject isSubcategoryItem prop to every child
@@ -55,6 +57,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
         {...mergeProps(focusProps, restProps)}
         ref={ref}
         css={itemStyle({ isActive, isFocusVisible })}
+        id={subcategoryId}
       >
         {iconLeft}
         <Text
@@ -70,7 +73,9 @@ function Subcategory<T extends React.ElementType = 'div'>(
         </Text>
         {iconRight}
       </Element>
-      <ul css={listStyle()}>{renderChildren()}</ul>
+      <ul aria-labelledby={subcategoryId} css={listStyle()}>
+        {renderChildren()}
+      </ul>
     </li>
   );
 }

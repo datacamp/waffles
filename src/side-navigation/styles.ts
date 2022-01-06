@@ -59,11 +59,18 @@ export function categoryDividerStyle() {
 export function categoryLabelStyle() {
   return css`
     color: ${tokens.colors.white};
+    font-family: ${tokens.fontFamilies.sansSerif};
+    font-size: ${tokens.fontSizes.small};
+    font-weight: ${tokens.fontWeights.bold};
+    line-height: ${tokens.lineHeights.default};
+    letter-spacing: ${tokens.letterSpacing.relaxed};
+    text-transform: uppercase;
     user-select: none;
     padding-top: ${tokens.spacing.small};
     padding-bottom: ${tokens.spacing.small};
     padding-left: ${tokens.spacing.medium};
     padding-right: ${tokens.spacing.medium};
+    margin: 0;
   `;
 }
 
@@ -78,6 +85,7 @@ const itemBaseStyle = css`
   padding-bottom: 0;
   padding-left: ${tokens.spacing.medium};
   padding-right: ${tokens.spacing.medium};
+  margin: 0;
   opacity: 0.8;
   outline: 0;
   width: 100%;

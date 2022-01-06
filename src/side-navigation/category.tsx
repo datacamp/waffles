@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Chapeau } from '../chapeau';
+import { useId } from '../hooks';
 import { categoryDividerStyle, categoryLabelStyle, listStyle } from './styles';
 
 type CategoryProps = {
@@ -15,11 +15,19 @@ function Category({
   noDivider = false,
   ...restProps
 }: CategoryProps) {
+  const categoryId = useId('menu-category');
+
   return (
     <div {...restProps}>
       {!noDivider && <div css={categoryDividerStyle()} />}
-      {label && <Chapeau css={categoryLabelStyle()}>{label}</Chapeau>}
-      <ul css={listStyle()}>{children}</ul>
+      {label && (
+        <h2 id={categoryId} css={categoryLabelStyle()}>
+          {label}
+        </h2>
+      )}
+      <ul {...(label && { 'aria-labelledby': categoryId })} css={listStyle()}>
+        {children}
+      </ul>
     </div>
   );
 }
