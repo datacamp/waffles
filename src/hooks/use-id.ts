@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 
 /**
  * Autogenerate random ID to facilitate accessibility features.
+ *
  * For a components which are part of server-side initial render it may be required to provide IDs manually to avoid client-server values mismatch.
  *
  * @param prefix Custom prefix for an ID

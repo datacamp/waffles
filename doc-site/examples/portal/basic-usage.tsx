@@ -19,17 +19,17 @@ const contentStyle = css`
 `;
 
 function Example() {
-  const [isOpened, setIsOpened] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <Button onClick={() => setIsOpened(true)}>Open Portal</Button>
-      {isOpened && (
+      <Button onClick={() => setIsOpen(true)}>Open Portal</Button>
+      {isOpen && (
         <Portal>
           <div css={contentStyle}>
             <Heading>The Portal</Heading>
             <Paragraph>Completely new dimension.</Paragraph>
-            <Button onClick={() => setIsOpened(false)}>Close Portal</Button>
+            <Button onClick={() => setIsOpen(false)}>Close Portal</Button>
           </div>
         </Portal>
       )}
