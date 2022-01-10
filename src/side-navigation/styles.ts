@@ -4,16 +4,31 @@ import { tokens } from '../tokens';
 import { hexToRgba, mediaQuery } from '../helpers';
 import Item from './item';
 
+// Various side nav Item properties based on viewport size
 const sizeMap = {
-  small: {
-    sizing: '28px',
-    spacing: tokens.spacing.xsmall,
-    fontSize: tokens.fontSizes.small,
+  belowSmallBreakpoint: {
+    small: {
+      sizing: tokens.sizing.medium,
+      spacing: tokens.spacing.xsmall,
+      fontSize: tokens.fontSizes.medium,
+    },
+    medium: {
+      sizing: '42px',
+      spacing: tokens.spacing.small,
+      fontSize: tokens.fontSizes.large,
+    },
   },
-  medium: {
-    sizing: tokens.sizing.medium,
-    spacing: tokens.spacing.small,
-    fontSize: tokens.fontSizes.medium,
+  aboveSmallBreakoint: {
+    small: {
+      sizing: '28px',
+      spacing: tokens.spacing.xsmall,
+      fontSize: tokens.fontSizes.small,
+    },
+    medium: {
+      sizing: tokens.sizing.medium,
+      spacing: tokens.spacing.small,
+      fontSize: tokens.fontSizes.medium,
+    },
   },
 } as const;
 
@@ -27,6 +42,7 @@ export function listStyle() {
 
 export function sidebarStyle() {
   return css`
+    background-color: ${tokens.colors.navy};
     position: fixed;
     width: 300px;
     top: 0;
@@ -35,7 +51,13 @@ export function sidebarStyle() {
     z-index: ${tokens.zIndex.modal};
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: ${tokens.colors.navy};
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
 
     ${mediaQuery.small} {
       position: static;
@@ -66,7 +88,7 @@ export function navStyle() {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     padding-top: ${tokens.spacing.medium};
     padding-bottom: ${tokens.spacing.medium};
   `;
@@ -129,9 +151,11 @@ const itemBaseStyle = css`
     cursor: pointer;
   }
 
-  &:where(a, button):hover {
-    opacity: 1;
-    background-color: ${hexToRgba(tokens.colors.white, tokens.opacity.low)};
+  ${mediaQuery.small} {
+    &:where(a, button):hover {
+      opacity: 1;
+      background-color: ${hexToRgba(tokens.colors.white, tokens.opacity.low)};
+    }
   }
 `;
 
@@ -176,10 +200,17 @@ export function itemInnerContentStyle({
   return css`
     ${itemInnerContentBaseStyle}
 
-    font-size: ${sizeMap[size].fontSize};
-    min-height: ${sizeMap[size].sizing};
-    padding-top: ${sizeMap[size].spacing};
-    padding-bottom: ${sizeMap[size].spacing};
+    font-size: ${sizeMap.belowSmallBreakpoint[size].fontSize};
+    min-height: ${sizeMap.belowSmallBreakpoint[size].sizing};
+    padding-top: ${sizeMap.belowSmallBreakpoint[size].spacing};
+    padding-bottom: ${sizeMap.belowSmallBreakpoint[size].spacing};
+
+    ${mediaQuery.small} {
+      font-size: ${sizeMap.aboveSmallBreakoint[size].fontSize};
+      min-height: ${sizeMap.aboveSmallBreakoint[size].sizing};
+      padding-top: ${sizeMap.aboveSmallBreakoint[size].spacing};
+      padding-bottom: ${sizeMap.aboveSmallBreakoint[size].spacing};
+    }
 
     ${hasLeftIcon && `margin-left: ${tokens.spacing.small};`}
     ${hasRightIcon && `margin-right: ${tokens.spacing.small};`}
