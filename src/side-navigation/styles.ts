@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
-import { hexToRgba } from '../helpers';
+import { hexToRgba, mediaQuery } from '../helpers';
 import Item from './item';
 
 const sizeMap = {
@@ -27,10 +27,37 @@ export function listStyle() {
 
 export function sidebarStyle() {
   return css`
-    width: 230px;
-    min-width: 230px;
-    height: 100%;
+    position: fixed;
+    width: 300px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: ${tokens.zIndex.modal};
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: ${tokens.colors.navy};
+
+    ${mediaQuery.small} {
+      position: static;
+      width: 230px;
+      min-width: 230px;
+      height: 100%;
+      z-index: auto;
+      overflow-y: visible;
+      overflow-x: visible;
+    }
+  `;
+}
+
+export function overlayStyle() {
+  return css`
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.high)};
+    z-index: ${tokens.zIndex.overlay};
   `;
 }
 
