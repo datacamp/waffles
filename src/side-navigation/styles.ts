@@ -18,7 +18,7 @@ const sizeMap = {
       fontSize: tokens.fontSizes.large,
     },
   },
-  aboveSmallBreakoint: {
+  aboveSmallBreakpoint: {
     small: {
       sizing: '28px',
       spacing: tokens.spacing.xsmall,
@@ -206,10 +206,10 @@ export function itemInnerContentStyle({
     padding-bottom: ${sizeMap.belowSmallBreakpoint[size].spacing};
 
     ${mediaQuery.small} {
-      font-size: ${sizeMap.aboveSmallBreakoint[size].fontSize};
-      min-height: ${sizeMap.aboveSmallBreakoint[size].sizing};
-      padding-top: ${sizeMap.aboveSmallBreakoint[size].spacing};
-      padding-bottom: ${sizeMap.aboveSmallBreakoint[size].spacing};
+      font-size: ${sizeMap.aboveSmallBreakpoint[size].fontSize};
+      min-height: ${sizeMap.aboveSmallBreakpoint[size].sizing};
+      padding-top: ${sizeMap.aboveSmallBreakpoint[size].spacing};
+      padding-bottom: ${sizeMap.aboveSmallBreakpoint[size].spacing};
     }
 
     ${hasLeftIcon && `margin-left: ${tokens.spacing.small};`}
