@@ -216,3 +216,23 @@ export function badgeStyle() {
     letter-spacing: 0.5px;
   `;
 }
+
+export function closeButtonStyle() {
+  return css`
+    position: fixed;
+    bottom: ${tokens.spacing.medium};
+    left: 308px;
+    z-index: ${tokens.zIndex.modal};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: ${tokens.sizing.large};
+    height: ${tokens.sizing.large};
+    border: 0;
+    outline: 0;
+    border-radius: ${tokens.borderRadius.circle};
+    box-shadow: ${tokens.boxShadow.thick};
+    background-color: ${tokens.colors.navy};
+    color: ${tokens.colors.white};
+  `;
+}
