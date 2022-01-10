@@ -1,4 +1,5 @@
 import React from 'react';
+import { RemoveScroll } from 'react-remove-scroll';
 
 import { useMediaQuery } from '../hooks';
 import Nav from './nav';
@@ -6,7 +7,8 @@ import Item from './item';
 import Category from './category';
 import Subcategory from './subcategory';
 import CloseButton from './close-button';
-import { sidebarStyle, overlayStyle } from './styles';
+import Sidebar from './sidebar';
+import Overlay from './overlay';
 
 type SideNavigationProps = {
   isOpen: boolean;
@@ -23,20 +25,16 @@ function SideNavigation({
   const { isSmall } = useMediaQuery();
 
   if (isSmall) {
-    return (
-      <div {...restProps} css={sidebarStyle()}>
-        {children}
-      </div>
-    );
+    return <Sidebar {...restProps}>{children}</Sidebar>;
   }
 
   return isOpen ? (
     <>
-      <div css={overlayStyle()} onClick={onClose} />
+      <Overlay onClick={onClose} />
       <CloseButton onClick={onClose} />
-      <div {...restProps} css={sidebarStyle()}>
-        {children}
-      </div>
+      <RemoveScroll>
+        <Sidebar {...restProps}>{children}</Sidebar>
+      </RemoveScroll>
     </>
   ) : null;
 }

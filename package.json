@@ -105,6 +105,7 @@
   "dependencies": {
     "@react-aria/focus": "^3.5.0",
     "@react-aria/utils": "^3.9.0",
-    "nanoid": "^3.1.30"
+    "nanoid": "^3.1.30",
+    "react-remove-scroll": "^2.4.3"
   }
 }
