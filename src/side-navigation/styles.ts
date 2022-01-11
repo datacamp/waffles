@@ -80,6 +80,7 @@ export function overlayStyle() {
     right: 0;
     background-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.high)};
     z-index: ${tokens.zIndex.overlay};
+    touch-action: none;
   `;
 }
 
@@ -265,5 +266,6 @@ export function closeButtonStyle() {
     box-shadow: ${tokens.boxShadow.thick};
     background-color: ${tokens.colors.navy};
     color: ${tokens.colors.white};
+    cursor: pointer;
   `;
 }

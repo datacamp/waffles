@@ -1,5 +1,4 @@
 import React from 'react';
-import { RemoveScroll } from 'react-remove-scroll';
 
 import { useMediaQuery } from '../hooks';
 import Nav from './nav';
@@ -32,9 +31,7 @@ function SideNavigation({
     <>
       <Overlay onClick={onClose} />
       <CloseButton onClick={onClose} />
-      <RemoveScroll>
-        <Sidebar {...restProps}>{children}</Sidebar>
-      </RemoveScroll>
+      <Sidebar {...restProps}>{children}</Sidebar>
     </>
   ) : null;
 }
