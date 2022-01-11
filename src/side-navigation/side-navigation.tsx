@@ -5,9 +5,8 @@ import Nav from './nav';
 import Item from './item';
 import Category from './category';
 import Subcategory from './subcategory';
-import CloseButton from './close-button';
 import Sidebar from './sidebar';
-import Overlay from './overlay';
+import AnimatedSidebar from './animated-sidebar';
 
 type SideNavigationProps = {
   isOpen: boolean;
@@ -23,17 +22,17 @@ function SideNavigation({
 }: SideNavigationProps) {
   const { isSmall } = useMediaQuery();
 
+  // Render appropriate sidebar for all viewport sizes above small breakpoint
   if (isSmall) {
     return <Sidebar {...restProps}>{children}</Sidebar>;
   }
 
-  return isOpen ? (
-    <>
-      <Overlay onClick={onClose} />
-      <CloseButton onClick={onClose} />
-      <Sidebar {...restProps}>{children}</Sidebar>
-    </>
-  ) : null;
+  // Render mobile sidebar
+  return (
+    <AnimatedSidebar {...{ isOpen, onClose }} {...restProps}>
+      {children}
+    </AnimatedSidebar>
+  );
 }
 
 SideNavigation.Nav = Nav;

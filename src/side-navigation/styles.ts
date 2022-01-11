@@ -3,6 +3,14 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba, mediaQuery } from '../helpers';
 import Item from './item';
+import {
+  sidebarSlideIn,
+  sidebarSlideOut,
+  overlayFadeIn,
+  overlayFadeOut,
+  buttonSlideIn,
+  buttonSlideOut,
+} from './keyframes';
 
 // Various side nav Item properties based on viewport size
 const sizeMap = {
@@ -42,6 +50,22 @@ export function listStyle() {
 
 export function sidebarStyle() {
   return css`
+    width: 230px;
+    min-width: 230px;
+    height: 100%;
+    background-color: ${tokens.colors.navy};
+  `;
+}
+
+type AnimatedSidebarStyleOptions = {
+  isVisible: boolean;
+};
+
+// Mobile sidebar (displayed below small breakpoint)
+export function animatedSidebarStyle({
+  isVisible,
+}: AnimatedSidebarStyleOptions) {
+  return css`
     background-color: ${tokens.colors.navy};
     position: fixed;
     width: 300px;
@@ -58,20 +82,18 @@ export function sidebarStyle() {
       width: 0;
       height: 0;
     }
-
-    ${mediaQuery.small} {
-      position: static;
-      width: 230px;
-      min-width: 230px;
-      height: 100%;
-      z-index: auto;
-      overflow-y: visible;
-      overflow-x: visible;
-    }
+    // Animation
+    transform: translateX(-300px);
+    animation: ${isVisible ? sidebarSlideIn : sidebarSlideOut} 200ms ease-out
+      forwards;
   `;
 }
 
-export function overlayStyle() {
+type OverlayStyleOptions = {
+  isVisible: boolean;
+};
+
+export function overlayStyle({ isVisible }: OverlayStyleOptions) {
   return css`
     position: fixed;
     top: 0;
@@ -81,6 +103,10 @@ export function overlayStyle() {
     background-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.high)};
     z-index: ${tokens.zIndex.overlay};
     touch-action: none;
+    // Animation
+    opacity: 0;
+    animation: ${isVisible ? overlayFadeIn : overlayFadeOut} 200ms ease-out
+      forwards;
   `;
 }
 
@@ -249,7 +275,11 @@ export function badgeStyle() {
   `;
 }
 
-export function closeButtonStyle() {
+type ButtonStyleOptions = {
+  isVisible: boolean;
+};
+
+export function closeButtonStyle({ isVisible }: ButtonStyleOptions) {
   return css`
     position: fixed;
     bottom: ${tokens.spacing.medium};
@@ -267,5 +297,10 @@ export function closeButtonStyle() {
     background-color: ${tokens.colors.navy};
     color: ${tokens.colors.white};
     cursor: pointer;
+    // Animation
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: ${isVisible ? buttonSlideIn : buttonSlideOut} 250ms ease-out
+      forwards;
   `;
 }

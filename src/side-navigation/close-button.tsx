@@ -4,12 +4,17 @@ import { Cross } from '../icon';
 import { closeButtonStyle } from './styles';
 
 type CloseButtonProps = {
+  isVisible: boolean;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-function CloseButton({ onClick }: CloseButtonProps) {
+function CloseButton({ isVisible, onClick }: CloseButtonProps) {
   return (
-    <button css={closeButtonStyle()} aria-label="Close" onClick={onClick}>
+    <button
+      aria-label="Close"
+      onClick={onClick}
+      css={closeButtonStyle({ isVisible })}
+    >
       <Cross />
     </button>
   );
