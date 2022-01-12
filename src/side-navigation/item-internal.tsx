@@ -42,8 +42,9 @@ function Item<T extends React.ElementType = 'a'>(
   const sidebarState = useSidebar();
 
   function handleClick(event: React.MouseEvent) {
-    // sidebar context is only used in mobile nab
-    sidebarState && sidebarState.onClose();
+    if (sidebarState && Element === 'a') {
+      sidebarState.onClose();
+    }
     onClick && onClick(event);
   }
 

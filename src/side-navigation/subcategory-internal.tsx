@@ -41,7 +41,9 @@ function Subcategory<T extends React.ElementType = 'div'>(
   const sidebarState = useSidebar();
 
   function handleClick(event: React.MouseEvent) {
-    sidebarState && sidebarState.onClose();
+    if (sidebarState && Element === 'a') {
+      sidebarState.onClose();
+    }
     onClick && onClick(event);
   }
 
