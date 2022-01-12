@@ -4,7 +4,7 @@ import { useId } from '../hooks';
 import { categoryDividerStyle, categoryLabelStyle, listStyle } from './styles';
 
 type CategoryProps = {
-  label?: string;
+  label?: React.ReactNode;
   noDivider?: boolean;
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;

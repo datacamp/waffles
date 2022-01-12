@@ -4,9 +4,10 @@ import { mergeProps } from '@react-aria/utils';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 import { Text } from '../text';
-import Badge from './badge';
+import { Badge } from '../badge';
 import { useSidebar } from './sidebar-context';
-import { itemStyle, itemInnerContentStyle } from './styles';
+import { itemStyle, itemInnerContentStyle, badgeStyle } from './styles';
+import { tokens } from '../tokens';
 
 type ItemBaseProps = {
   children: React.ReactNode;
@@ -68,7 +69,11 @@ function Item<T extends React.ElementType = 'a'>(
           })}
         >
           {children}
-          {isNew && <Badge>New</Badge>}
+          {isNew && (
+            <Badge css={badgeStyle()} color={tokens.colors.green}>
+              New
+            </Badge>
+          )}
         </Text>
         {iconRight}
       </Element>
