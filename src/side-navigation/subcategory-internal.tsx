@@ -5,6 +5,7 @@ import { mergeProps } from '@react-aria/utils';
 import { useId } from '../hooks';
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 import { Text } from '../text';
+import { useSidebar } from './sidebar-context';
 import { itemStyle, itemInnerContentStyle, listStyle } from './styles';
 
 type SubcategoryBaseProps = {
@@ -28,6 +29,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
     iconRight,
     size = 'medium',
     isActive = false,
+    onClick,
     ...restProps
   }: SubcategoryProps<T>,
   ref?: PolymorphicRef<T>,
@@ -36,6 +38,12 @@ function Subcategory<T extends React.ElementType = 'div'>(
 
   const subcategoryId = useId('menu-subcategory');
   const { focusProps, isFocusVisible } = useFocusRing();
+  const sidebarState = useSidebar();
+
+  function handleClick(event: React.MouseEvent) {
+    sidebarState && sidebarState.onClose();
+    onClick && onClick(event);
+  }
 
   // Inject isSubcategoryItem prop to every child
   function renderChildren() {
@@ -56,6 +64,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
       <Element
         {...mergeProps(focusProps, restProps)}
         {...(Element === 'a' && isActive && { 'aria-current': 'page' })}
+        onClick={handleClick}
         ref={ref}
         css={itemStyle({ isActive, isFocusVisible })}
         id={subcategoryId}

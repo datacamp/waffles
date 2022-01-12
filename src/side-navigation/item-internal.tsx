@@ -4,8 +4,9 @@ import { mergeProps } from '@react-aria/utils';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 import { Text } from '../text';
-import { itemStyle, itemInnerContentStyle } from './styles';
 import Badge from './badge';
+import { useSidebar } from './sidebar-context';
+import { itemStyle, itemInnerContentStyle } from './styles';
 
 type ItemBaseProps = {
   children: React.ReactNode;
@@ -30,6 +31,7 @@ function Item<T extends React.ElementType = 'a'>(
     isActive = false,
     isNew = false,
     isSubcategoryItem = false,
+    onClick,
     ...restProps
   }: ItemProps<T>,
   ref?: PolymorphicRef<T>,
@@ -37,12 +39,20 @@ function Item<T extends React.ElementType = 'a'>(
   const Element = as || 'a';
 
   const { focusProps, isFocusVisible } = useFocusRing();
+  const sidebarState = useSidebar();
+
+  function handleClick(event: React.MouseEvent) {
+    // sidebar context is only used in mobile nab
+    sidebarState && sidebarState.onClose();
+    onClick && onClick(event);
+  }
 
   return (
     <li>
       <Element
         {...mergeProps(focusProps, restProps)}
         {...(Element === 'a' && isActive && { 'aria-current': 'page' })}
+        onClick={handleClick}
         ref={ref}
         css={itemStyle({ isActive, isFocusVisible })}
       >

@@ -1,13 +1,10 @@
-import React from 'react';
+import { useSidebar } from './sidebar-context';
 import { overlayStyle } from './styles';
 
-type OverlayProps = {
-  isVisible: boolean;
-  onClick: React.MouseEventHandler<HTMLDivElement>;
-};
+function Overlay() {
+  const { isOpen, onClose } = useSidebar();
 
-function Overlay({ isVisible, onClick }: OverlayProps) {
-  return <div onClick={onClick} css={overlayStyle({ isVisible })} />;
+  return <div onClick={onClose} css={overlayStyle({ isVisible: isOpen })} />;
 }
 
 export default Overlay;

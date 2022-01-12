@@ -1,19 +1,15 @@
-import React from 'react';
-
 import { Cross } from '../icon';
+import { useSidebar } from './sidebar-context';
 import { closeButtonStyle } from './styles';
 
-type CloseButtonProps = {
-  isVisible: boolean;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
-};
+function CloseButton() {
+  const { isOpen, onClose } = useSidebar();
 
-function CloseButton({ isVisible, onClick }: CloseButtonProps) {
   return (
     <button
       aria-label="Close"
-      onClick={onClick}
-      css={closeButtonStyle({ isVisible })}
+      onClick={onClose}
+      css={closeButtonStyle({ isVisible: isOpen })}
     >
       <Cross />
     </button>
