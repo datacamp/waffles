@@ -6,15 +6,12 @@ import Badge from './badge';
 
 const sizeMap = {
   small: {
-    sizing: '16px',
     fontSize: '10px',
   },
   medium: {
-    sizing: '18px',
     fontSize: tokens.fontSizes.small,
   },
   large: {
-    sizing: '18px',
     fontSize: tokens.fontSizes.medium,
   },
 };
@@ -43,8 +40,8 @@ export function badgeStyle({ color, size }: BadgeStyleOptions) {
     ${baseBadgeStyle}
     background-color: ${color};
     color: ${readableHexColor(color)};
-    height: ${sizeMap[size].sizing};
     font-size: ${sizeMap[size].fontSize};
+    height: 18px;
   `;
 }
 
