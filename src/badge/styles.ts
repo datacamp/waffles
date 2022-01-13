@@ -47,3 +47,12 @@ export function badgeStyle({ color, size }: BadgeStyleOptions) {
     font-size: ${sizeMap[size].fontSize};
   `;
 }
+
+export function innerContentStyle() {
+  return css`
+    max-width: 164px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  `;
+}

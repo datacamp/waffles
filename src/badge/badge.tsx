@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { badgeStyle } from './styles';
+import { badgeStyle, innerContentStyle } from './styles';
 
 type BadgeProps = {
   color: string;
@@ -10,7 +10,7 @@ type BadgeProps = {
 function Badge({ color, size = 'medium', children, ...restProps }: BadgeProps) {
   return (
     <span {...restProps} css={badgeStyle({ color, size })}>
-      {children}
+      <span css={innerContentStyle()}>{children}</span>
     </span>
   );
 }
