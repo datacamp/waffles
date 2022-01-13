@@ -24,8 +24,8 @@ exports[`Badge renders snapshot of size large 1`] = `
   letter-spacing: 0.5px;
   background-color: #848C92;
   color: #05192D;
-  height: 18px;
   font-size: 14px;
+  height: 18px;
 }
 
 .emotion-1 {
@@ -70,8 +70,8 @@ exports[`Badge renders snapshot of size medium 1`] = `
   letter-spacing: 0.5px;
   background-color: #848C92;
   color: #05192D;
-  height: 18px;
   font-size: 12px;
+  height: 18px;
 }
 
 .emotion-1 {
@@ -116,8 +116,8 @@ exports[`Badge renders snapshot of size small 1`] = `
   letter-spacing: 0.5px;
   background-color: #848C92;
   color: #05192D;
-  height: 16px;
   font-size: 10px;
+  height: 18px;
 }
 
 .emotion-1 {
