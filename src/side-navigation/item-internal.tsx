@@ -70,7 +70,11 @@ function Item<T extends React.ElementType = 'a'>(
         >
           {children}
           {isNew && (
-            <Badge css={badgeStyle()} color={tokens.colors.green}>
+            <Badge
+              css={badgeStyle()}
+              color={tokens.colors.green}
+              data-testid="new-item-indicator"
+            >
               New
             </Badge>
           )}
