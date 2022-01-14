@@ -1,0 +1,385 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideNavigation renders snapshot of category with label and divider 1`] = `
+.emotion-0 {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.emotion-1 {
+  color: #FFFFFF;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0;
+}
+
+.emotion-2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  />
+  <h2
+    class="emotion-1"
+    id="menu-category-123abC"
+  >
+    Category
+  </h2>
+  <ul
+    aria-labelledby="menu-category-123abC"
+    class="emotion-2"
+  >
+    Test
+  </ul>
+</div>
+`;
+
+exports[`SideNavigation renders snapshot of category without label nor divider 1`] = `
+.emotion-0 {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.emotion-1 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  />
+  <ul
+    class="emotion-1"
+  >
+    Test
+  </ul>
+</div>
+`;
+
+exports[`SideNavigation renders snapshot of item focused state 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0;
+  opacity: 0.8;
+  outline: 0;
+  width: 100%;
+  -webkit-transition: background-color 75ms ease-out,color 75ms ease-out,box-shadow 125ms ease-out;
+  transition: background-color 75ms ease-out,color 75ms ease-out,box-shadow 125ms ease-out;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: inset 0 0 0 2px #009BD8;
+}
+
+.emotion-0 svg {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-0:where(a, button) {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0:where(a, button):hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+  color: #FFFFFF;
+  line-height: 1.25;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 16px;
+  min-height: 42px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-1 {
+    font-size: 14px;
+    min-height: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+<a
+  class="emotion-0"
+  href="/test"
+>
+  <span
+    class="emotion-1"
+  >
+    Focused
+  </span>
+</a>
+`;
+
+exports[`SideNavigation renders snapshot of the medium item 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0;
+  opacity: 0.8;
+  outline: 0;
+  width: 100%;
+  -webkit-transition: background-color 75ms ease-out,color 75ms ease-out,box-shadow 125ms ease-out;
+  transition: background-color 75ms ease-out,color 75ms ease-out,box-shadow 125ms ease-out;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0 svg {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-0:where(a, button) {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0:where(a, button):hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+  color: #FFFFFF;
+  line-height: 1.25;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 16px;
+  min-height: 42px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-1 {
+    font-size: 14px;
+    min-height: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+<li>
+  <a
+    class="emotion-0"
+    href="/test"
+  >
+    <span
+      class="emotion-1"
+    >
+      Medium
+    </span>
+  </a>
+</li>
+`;
+
+exports[`SideNavigation renders snapshot of the small item 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0;
+  opacity: 0.8;
+  outline: 0;
+  width: 100%;
+  -webkit-transition: background-color 75ms ease-out,color 75ms ease-out,box-shadow 125ms ease-out;
+  transition: background-color 75ms ease-out,color 75ms ease-out,box-shadow 125ms ease-out;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0 svg {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-0:where(a, button) {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0:where(a, button):hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+  color: #FFFFFF;
+  line-height: 1.25;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 14px;
+  min-height: 36px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-1 {
+    font-size: 12px;
+    min-height: 28px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
+<li>
+  <a
+    class="emotion-0"
+    href="/test"
+  >
+    <span
+      class="emotion-1"
+    >
+      Small
+    </span>
+  </a>
+</li>
+`;
