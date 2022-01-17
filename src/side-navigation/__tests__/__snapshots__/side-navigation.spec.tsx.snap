@@ -172,7 +172,7 @@ exports[`SideNavigation renders snapshot of item focused state 1`] = `
 
 <a
   class="emotion-0"
-  href="/test"
+  href="#test"
 >
   <span
     class="emotion-1"
@@ -272,7 +272,7 @@ exports[`SideNavigation renders snapshot of the medium item 1`] = `
 <li>
   <a
     class="emotion-0"
-    href="/test"
+    href="#test"
   >
     <span
       class="emotion-1"
@@ -373,7 +373,7 @@ exports[`SideNavigation renders snapshot of the small item 1`] = `
 <li>
   <a
     class="emotion-0"
-    href="/test"
+    href="#test"
   >
     <span
       class="emotion-1"

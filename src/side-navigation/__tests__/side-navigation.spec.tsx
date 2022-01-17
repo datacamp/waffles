@@ -30,25 +30,25 @@ function TestSideNav({ isOpen, onClose }: TestSideNavProps) {
       <SideNavigation isOpen={isOpen} onClose={onClose}>
         <SideNavigation.Nav>
           <SideNavigation.Category label="Trending" data-testid="main-category">
-            <SideNavigation.Item href="/pop-stars/taylor" isActive>
+            <SideNavigation.Item href="#taylor" isActive>
               Taylor Swift
             </SideNavigation.Item>
-            <SideNavigation.Item href="/pop-stars/ariana" isNew>
+            <SideNavigation.Item href="#ariana" isNew>
               Ariana Grande
             </SideNavigation.Item>
             <SideNavigation.Item
-              href="/pop-stars/justin"
+              href="#justin"
               iconLeft={<Star data-testid="left-icon" />}
               iconRight={<ChevronRight data-testid="right-icon" />}
             >
               Justin Bieber
             </SideNavigation.Item>
             <SideNavigation.Subcategory label="Classics">
-              <SideNavigation.Item href="/classics/led-zeppelin">
+              <SideNavigation.Item href="#led-zeppelin">
                 Led Zeppelin
               </SideNavigation.Item>
               <SideNavigation.Item
-                href="/classics/pink-floyd"
+                href="#pink-floyd"
                 iconLeft={<Star data-testid="sub-item-left-icon" />}
                 iconRight={<ChevronRight data-testid="sub-item-right-icon" />}
               >
@@ -60,7 +60,7 @@ function TestSideNav({ isOpen, onClose }: TestSideNavProps) {
               iconLeft={<Star data-testid="sub-left-icon" />}
               iconRight={<ChevronRight data-testid="sub-right-icon" />}
             >
-              <SideNavigation.Item href="/new-age/greta-van-fleet">
+              <SideNavigation.Item href="#greta-van-fleet">
                 Greta Van Fleet
               </SideNavigation.Item>
             </SideNavigation.Subcategory>
@@ -89,17 +89,13 @@ function PolymorphicTestSideNav({ isOpen, onClose }: TestSideNavProps) {
       <SideNavigation isOpen={isOpen} onClose={onClose}>
         <SideNavigation.Nav>
           <SideNavigation.Category label="Trending">
-            <SideNavigation.Item
-              as={TestComponent}
-              to="/trending/taylor"
-              isActive
-            >
+            <SideNavigation.Item as={TestComponent} to="#taylor" isActive>
               Taylor Swift
             </SideNavigation.Item>
             <SideNavigation.Subcategory
               label="Classics"
               as={TestComponent}
-              to="/classics"
+              to="#classics"
             >
               <SideNavigation.Item as="button">
                 Led Zeppelin
@@ -171,7 +167,7 @@ describe('SideNavigation', () => {
 
     const activeLink = getByText('Taylor Swift').closest('a');
 
-    expect(activeLink).toHaveAttribute('href', '/pop-stars/taylor');
+    expect(activeLink).toHaveAttribute('href', '#taylor');
     expect(activeLink).toHaveAttribute('aria-current', 'page');
   });
 
@@ -190,7 +186,7 @@ describe('SideNavigation', () => {
     );
 
     const item = getByText('Taylor Swift').closest('a');
-    expect(item).toHaveAttribute('href', '/trending/taylor');
+    expect(item).toHaveAttribute('href', '#taylor');
   });
 
   it('nav subcategory requires props owned by custom component passed into "as" prop', () => {
@@ -199,7 +195,7 @@ describe('SideNavigation', () => {
     );
 
     const subcategoryAsLink = getByText('Classics').closest('a');
-    expect(subcategoryAsLink).toHaveAttribute('href', '/classics');
+    expect(subcategoryAsLink).toHaveAttribute('href', '#classics');
   });
 
   it('nav subcategory could be decorated with left and right icon', () => {
@@ -411,7 +407,7 @@ describe('SideNavigation', () => {
   it('for nav item click is handled correctly', () => {
     const handleClick = jest.fn();
     const { getByText } = render(
-      <SideNavigation.Item href="/pop-star/taylor" onClick={handleClick}>
+      <SideNavigation.Item href="#taylor" onClick={handleClick}>
         Taylor Swift
       </SideNavigation.Item>,
     );
@@ -428,7 +424,7 @@ describe('SideNavigation', () => {
       <SideNavigation.Subcategory
         label="Trending"
         as="a"
-        href="/pop-star/taylor"
+        href="#taylor"
         onClick={handleClick}
       >
         Test
@@ -444,7 +440,7 @@ describe('SideNavigation', () => {
   it('for nav item focus is handled correctly', () => {
     const handleFocus = jest.fn();
     const { getByText } = render(
-      <SideNavigation.Item href="/pop-star/taylor" onFocus={handleFocus}>
+      <SideNavigation.Item href="#taylor" onFocus={handleFocus}>
         Taylor Swift
       </SideNavigation.Item>,
     );
@@ -461,7 +457,7 @@ describe('SideNavigation', () => {
       <SideNavigation.Subcategory
         label="Trending"
         as="a"
-        href="/pop-star/taylor"
+        href="#taylor"
         onFocus={handleFocus}
       >
         Test
@@ -506,7 +502,7 @@ describe('SideNavigation', () => {
 
   it('renders snapshot of the small item', () => {
     const { container } = render(
-      <SideNavigation.Item size="small" href="/test">
+      <SideNavigation.Item size="small" href="#test">
         Small
       </SideNavigation.Item>,
     );
@@ -518,7 +514,7 @@ describe('SideNavigation', () => {
 
   it('renders snapshot of the medium item', () => {
     const { container } = render(
-      <SideNavigation.Item size="medium" href="/test">
+      <SideNavigation.Item size="medium" href="#test">
         Medium
       </SideNavigation.Item>,
     );
@@ -530,7 +526,7 @@ describe('SideNavigation', () => {
 
   it('renders snapshot of item focused state', () => {
     const { getByText } = render(
-      <SideNavigation.Item href="/test">Focused</SideNavigation.Item>,
+      <SideNavigation.Item href="#test">Focused</SideNavigation.Item>,
     );
 
     const item = getByText('Focused').closest('a') as HTMLAnchorElement;
