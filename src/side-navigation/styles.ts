@@ -52,7 +52,7 @@ export function sidebarStyle() {
   return css`
     width: 230px;
     min-width: 230px;
-    height: 100%;
+    min-height: 100%;
     background-color: ${tokens.colors.navy};
   `;
 }
