@@ -127,9 +127,9 @@ describe('SideNavigation', () => {
     jest.resetAllMocks();
 
     useMediaQueryMock.mockReturnValue({
-      isSmall: true,
-      isMedium: false,
-      isLarge: false,
+      isAboveSmall: true,
+      isAboveMedium: false,
+      isAboveLarge: false,
     });
   });
 
@@ -255,9 +255,9 @@ describe('SideNavigation', () => {
       jest.resetAllMocks();
 
       useMediaQueryMock.mockReturnValue({
-        isSmall: false,
-        isMedium: false,
-        isLarge: false,
+        isAboveSmall: false,
+        isAboveMedium: false,
+        isAboveLarge: false,
       });
     });
 
@@ -278,7 +278,7 @@ describe('SideNavigation', () => {
     });
 
     it('is visible when isOpen is set to true', async () => {
-      const { container, getByTestId, getByLabelText } = render(
+      const { getByTestId, getByLabelText } = render(
         <TestSideNav isOpen={true} onClose={() => {}} />,
       );
 
@@ -287,18 +287,12 @@ describe('SideNavigation', () => {
         jest.advanceTimersByTime(500);
       });
 
-      let nav;
+      let overlay;
       await waitFor(() => {
-        nav = container.querySelector('nav');
+        overlay = getByTestId('side-navigation-menu-overlay');
       });
-      const categories = container.querySelectorAll('h2');
-      const links = container.querySelectorAll('a');
       const closeButton = getByLabelText('Close');
-      const overlay = getByTestId('side-navigation-menu-overlay');
 
-      expect(nav).toBeInTheDocument();
-      expect(categories).toHaveLength(3);
-      expect(links).toHaveLength(6);
       expect(overlay).toBeInTheDocument();
       expect(closeButton).toBeInTheDocument();
     });
@@ -367,9 +361,9 @@ describe('SideNavigation', () => {
       jest.resetAllMocks();
 
       useMediaQueryMock.mockReturnValue({
-        isSmall: true,
-        isMedium: true,
-        isLarge: true,
+        isAboveSmall: true,
+        isAboveMedium: true,
+        isAboveLarge: true,
       });
     });
 

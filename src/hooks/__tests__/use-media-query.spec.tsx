@@ -3,15 +3,15 @@ import { render } from '@testing-library/react';
 import { useMediaQuery } from '../index';
 
 function TestComponent() {
-  const { isSmall, isMedium, isLarge } = useMediaQuery();
+  const { isAboveSmall, isAboveMedium, isAboveLarge } = useMediaQuery();
 
   return (
     <div>
       <p>Media query match for each breakpoint:</p>
       <ul>
-        <li>{`small: ${isSmall}`}</li>
-        <li>{`medium: ${isMedium}`}</li>
-        <li>{`large: ${isLarge}`}</li>
+        <li>{`small: ${isAboveSmall}`}</li>
+        <li>{`medium: ${isAboveMedium}`}</li>
+        <li>{`large: ${isAboveLarge}`}</li>
       </ul>
     </div>
   );

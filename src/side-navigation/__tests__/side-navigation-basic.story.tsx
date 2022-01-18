@@ -2,15 +2,20 @@ import { useState } from 'react';
 import { css } from '@emotion/react';
 
 import { tokens } from '../../tokens';
+import { mediaQuery } from '../../helpers';
 import { Home, Cog, AddCircle, Flash, Compass, Book, Chat } from '../../icon';
 import { Button } from '../../button';
 import { Badge } from '../../badge';
 import { SideNavigation } from '../index';
 
 const layoutStyle = css`
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: block;
   min-height: 100vh;
+
+  ${mediaQuery.small} {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
 `;
 
 const mainContent = css`
