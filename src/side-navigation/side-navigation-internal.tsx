@@ -17,10 +17,10 @@ function SideNavigationInternal({
   children,
   ...restProps
 }: SideNavigationProps) {
-  const { isSmall } = useMediaQuery();
+  const { isAboveSmall } = useMediaQuery();
 
   // Render regular sidebar for all viewport sizes above small breakpoint
-  if (isSmall) {
+  if (isAboveSmall) {
     return <Sidebar {...restProps}>{children}</Sidebar>;
   }
 

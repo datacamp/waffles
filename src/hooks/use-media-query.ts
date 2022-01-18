@@ -12,9 +12,9 @@ function mediaQueryStringFromBreakpoint(breakpoint: Breakpoint) {
 }
 
 const breakpointsToResultsMap = {
-  isSmall: mediaQueryStringFromBreakpoint(tokens.breakpoints.small),
-  isMedium: mediaQueryStringFromBreakpoint(tokens.breakpoints.medium),
-  isLarge: mediaQueryStringFromBreakpoint(tokens.breakpoints.large),
+  isAboveSmall: mediaQueryStringFromBreakpoint(tokens.breakpoints.small),
+  isAboveMedium: mediaQueryStringFromBreakpoint(tokens.breakpoints.medium),
+  isAboveLarge: mediaQueryStringFromBreakpoint(tokens.breakpoints.large),
 } as const;
 
 type MediaMatchResults = Record<keyof typeof breakpointsToResultsMap, boolean>;
@@ -35,7 +35,7 @@ function initalMatchResults() {
  *
  * Following mobile-first approach, when using the hook consider base return without conditional rendering to be the mobile one.
  *
- * @returns Object of boolean values with isSmall, isMedium, and isLarge entries
+ * @returns Object of boolean values with isAboveSmall, isAboveMedium, and isAboveLarge entries
  */
 function useMediaQuery() {
   const [matchResults, setMatchResults] = useState(initalMatchResults());

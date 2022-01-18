@@ -46,11 +46,11 @@ type PageHeaderProps = {
 };
 
 function PageHeader({ onNavOpen }: PageHeaderProps) {
-  const { isSmall } = useMediaQuery();
+  const { isAboveSmall } = useMediaQuery();
 
   return (
     <header css={headerStyle}>
-      {isSmall ? null : (
+      {isAboveSmall ? null : (
         <Button
           variant="plain"
           icon={<Menu />}
@@ -67,7 +67,7 @@ function PageHeader({ onNavOpen }: PageHeaderProps) {
           css={logoLinkStyle}
         />
       </Link>
-      {isSmall && <Text css={versionStyle}>{`v${metadata.version}`}</Text>}
+      {isAboveSmall && <Text css={versionStyle}>{`v${metadata.version}`}</Text>}
       <Button
         as="a"
         variant="plain"

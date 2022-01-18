@@ -29,11 +29,11 @@ type NavigationProps = {
 };
 
 function Navigation({ isOpen, onClose }: NavigationProps) {
-  const { isSmall } = useMediaQuery();
+  const { isAboveSmall } = useMediaQuery();
 
   return (
     <SideNav isOpen={isOpen} onClose={onClose}>
-      {isSmall ? null : (
+      {isAboveSmall ? null : (
         <Text as="p" css={versionStyle}>{`v${metadata.version}`}</Text>
       )}
       <SideNav.Nav>
