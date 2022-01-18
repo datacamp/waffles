@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import { css } from '@emotion/react';
 
@@ -10,42 +11,53 @@ import { ContentContainer } from '@datacamp/waffles/content-container';
 
 import { HEADER_HEIGHT, ARTICLE_CONTENT_WIDTH } from '../components/constants';
 import Header from '../components/page-header';
-import Sidebar from '../components/sidebar';
 import Navigation from '../components/navigation';
 import LandingPageCard from 'components/landing-page-card';
 
 const wrapperStyle = css`
   display: flex;
-  padding-top: ${HEADER_HEIGHT};
+  width: 100%;
   min-height: 100vh;
+  padding-top: ${HEADER_HEIGHT};
+
+  ${mediaQuery.small} {
+    display: grid;
+    width: auto;
+    grid-template-columns: auto 1fr;
+  }
 `;
 
 const mainStyle = css`
   background-color: ${tokens.colors.beigeSubtle};
-  flex-grow: 1;
+  width: 100%;
   overflow: hidden;
 `;
 
 const heroStyle = css`
+  height: 480px;
+  width: 100%;
+  background: ${tokens.colors.yellowLight} url('/images/waffles-hero.svg')
+    no-repeat;
+  background-position: 75% 75%;
+  background-size: cover;
+  border-bottom: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
+
   ${mediaQuery.medium} {
-    height: 400px;
+    background-position: right bottom;
   }
 
   ${mediaQuery.large} {
     height: 600px;
   }
-
-  height: 300px;
-  width: 100%;
-  background: ${tokens.colors.yellowLight} url('/images/waffles-hero.svg')
-    no-repeat;
-  background-position: right bottom;
-  background-size: cover;
-  border-bottom: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
 `;
 
 const introStyle = css`
   padding: ${tokens.spacing.medium};
+  background-color: ${tokens.colors.navy};
+
+  ${mediaQuery.small} {
+    background-color: transparent;
+  }
 
   ${mediaQuery.medium} {
     padding: ${tokens.spacing.xlarge};
@@ -54,15 +66,33 @@ const introStyle = css`
   max-width: 500px;
 `;
 
-const mainHeadingStyle = css`
+const introHeadingStyle = css`
+  color: ${tokens.colors.white};
   font-size: 40px;
   letter-spacing: -1px;
   line-height: ${tokens.lineHeights.tight};
   margin-bottom: ${tokens.spacing.medium};
+
+  ${mediaQuery.small} {
+    color: ${tokens.colors.navy};
+  } ;
+`;
+
+const introParagraphStyle = css`
+  color: ${tokens.colors.white};
+  margin-bottom: 0;
+
+  ${mediaQuery.small} {
+    color: ${tokens.colors.navy};
+  } ;
 `;
 
 const higlightStyle = css`
-  color: ${tokens.colors.purple};
+  color: ${tokens.colors.green};
+
+  ${mediaQuery.small} {
+    color: ${tokens.colors.purple};
+  } ;
 `;
 
 const articleStyle = css`
@@ -76,6 +106,8 @@ const cardsLayoutStyle = css`
 `;
 
 export default function Home() {
+  const [isNavOpen, setNavOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -85,19 +117,17 @@ export default function Home() {
           content="Evolution of Waffles design system."
         />
       </Head>
-      <Header />
+      <Header onNavOpen={() => setNavOpen(true)} />
       <div css={wrapperStyle}>
-        <Sidebar>
-          <Navigation />
-        </Sidebar>
+        <Navigation isOpen={isNavOpen} onClose={() => setNavOpen(false)} />
         <main css={mainStyle}>
           <section css={heroStyle}>
             <div css={introStyle}>
-              <Heading css={mainHeadingStyle}>
+              <Heading css={introHeadingStyle}>
                 <span css={higlightStyle}>Waffles</span> is DataCamp Design
                 System.
               </Heading>
-              <Paragraph size="large">
+              <Paragraph size="large" css={introParagraphStyle}>
                 It provides all the tools to build wonderful experiences that
                 look, feel, sound, and smell like DataCamp.
               </Paragraph>

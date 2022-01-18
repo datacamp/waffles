@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import { useRouter } from 'next/router';
 
 import { tokens } from '@datacamp/waffles/tokens';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
 import { ContentContainer } from '@datacamp/waffles/content-container';
 import { Edit } from '@datacamp/waffles/icon';
@@ -10,7 +11,6 @@ import { Edit } from '@datacamp/waffles/icon';
 import { TableOfContentsProvider } from '../context/table-of-contents-context';
 import { HEADER_HEIGHT, ARTICLE_CONTENT_WIDTH } from './constants';
 import Header from './page-header';
-import Sidebar from './sidebar';
 import Navigation from './navigation';
 import TableOfContents from './table-of-contents';
 
@@ -19,18 +19,23 @@ const GITHUB_EDIT_URL =
 
 const wrapperStyle = css`
   display: flex;
-  padding-top: ${HEADER_HEIGHT};
   min-height: 100vh;
-`;
+  padding-top: ${HEADER_HEIGHT};
 
-const containerStyle = css`
-  display: flex;
+  ${mediaQuery.small} {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
 `;
 
 const mainStyle = css`
   background-color: ${tokens.colors.beigeSubtle};
-  flex-grow: 1;
   overflow: hidden;
+  width: 100%;
+`;
+
+const containerStyle = css`
+  display: flex;
 `;
 
 const articleStyle = css`
@@ -51,14 +56,13 @@ type PageLayoutProps = {
 
 function PageLayout({ children, hideEditLink = false }: PageLayoutProps) {
   const { pathname } = useRouter();
+  const [isNavOpen, setNavOpen] = useState(false);
 
   return (
     <>
-      <Header />
+      <Header onNavOpen={() => setNavOpen(true)} />
       <div css={wrapperStyle}>
-        <Sidebar>
-          <Navigation />
-        </Sidebar>
+        <Navigation isOpen={isNavOpen} onClose={() => setNavOpen(false)} />
         <main css={mainStyle}>
           <ContentContainer css={containerStyle}>
             <TableOfContentsProvider>

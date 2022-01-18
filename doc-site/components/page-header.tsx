@@ -4,7 +4,9 @@ import Link from 'next/link';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Button } from '@datacamp/waffles/button';
 import { Text } from '@datacamp/waffles/text';
-import { GithubBrand } from '@datacamp/waffles/icon';
+import { useMediaQuery } from '@datacamp/waffles/hooks';
+import { mediaQuery } from '@datacamp/waffles/helpers';
+import { Menu, GithubBrand } from '@datacamp/waffles/icon';
 import metadata from '../../package.json';
 import { HEADER_HEIGHT } from './constants';
 import Logo from './logo';
@@ -12,6 +14,7 @@ import Logo from './logo';
 const headerStyle = css`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: ${HEADER_HEIGHT};
   background-color: ${tokens.colors.white};
@@ -20,6 +23,10 @@ const headerStyle = css`
   padding-right: ${tokens.spacing.small};
   position: fixed;
   z-index: ${tokens.zIndex.sticky};
+
+  ${mediaQuery.small} {
+    justify-content: flex-start;
+  }
 `;
 
 const logoLinkStyle = css`
@@ -34,9 +41,23 @@ const versionStyle = css`
   padding-top: 2px;
 `;
 
-function PageHeader() {
+type PageHeaderProps = {
+  onNavOpen: () => void;
+};
+
+function PageHeader({ onNavOpen }: PageHeaderProps) {
+  const { isSmall } = useMediaQuery();
+
   return (
     <header css={headerStyle}>
+      {isSmall ? null : (
+        <Button
+          variant="plain"
+          icon={<Menu />}
+          onClick={onNavOpen}
+          aria-label="Open Navigation"
+        />
+      )}
       <Link href="/" passHref>
         <Button
           as="a"
@@ -46,7 +67,7 @@ function PageHeader() {
           css={logoLinkStyle}
         />
       </Link>
-      <Text css={versionStyle}>{`v${metadata.version}`}</Text>
+      {isSmall && <Text css={versionStyle}>{`v${metadata.version}`}</Text>}
       <Button
         as="a"
         variant="plain"
