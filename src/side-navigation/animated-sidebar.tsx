@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Portal } from '../portal';
 import Overlay from './overlay';
 import CloseButton from './close-button';
 import { animatedSidebarStyle } from './styles';
@@ -13,11 +14,11 @@ function AnimatedSidebar(props: AnimatedSidebarProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
 
   return isAnimating ? (
-    <>
+    <Portal>
       <Overlay />
       <CloseButton />
       <div {...props} css={animatedSidebarStyle({ isVisible: isOpen })} />
-    </>
+    </Portal>
   ) : null;
 }
 
