@@ -14,14 +14,6 @@ const linkStyle = css`
   line-height: ${tokens.lineHeights.default};
 `;
 
-const asideStyle = css`
-  display: none;
-
-  @media screen and (min-width: 1254px) {
-    display: block;
-  }
-`;
-
 const listStyle = css`
   margin: 0;
   padding-left: ${tokens.spacing.xlarge};
@@ -54,7 +46,7 @@ function TableOfContents() {
 
   if (entries.length > 0) {
     return (
-      <aside css={asideStyle}>
+      <aside>
         <ul css={listStyle}>
           {entries.map((entry, index) => (
             <Entry key={`toc-entry-${index}`} name={entry} />

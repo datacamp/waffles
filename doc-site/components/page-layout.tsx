@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 
 import { tokens } from '@datacamp/waffles/tokens';
 import { mediaQuery } from '@datacamp/waffles/helpers';
+import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { Button } from '@datacamp/waffles/button';
 import { ContentContainer } from '@datacamp/waffles/content-container';
 import { Edit } from '@datacamp/waffles/icon';
@@ -35,7 +36,11 @@ const mainStyle = css`
 `;
 
 const containerStyle = css`
-  display: flex;
+  display: block;
+
+  ${mediaQuery.large} {
+    display: flex;
+  }
 `;
 
 const articleStyle = css`
@@ -57,6 +62,7 @@ type PageLayoutProps = {
 function PageLayout({ children, hideEditLink = false }: PageLayoutProps) {
   const { pathname } = useRouter();
   const [isNavOpen, setNavOpen] = useState(false);
+  const { isLarge } = useMediaQuery();
 
   return (
     <>
@@ -82,7 +88,7 @@ function PageLayout({ children, hideEditLink = false }: PageLayoutProps) {
                   </footer>
                 )}
               </article>
-              <TableOfContents />
+              {isLarge && <TableOfContents />}
             </TableOfContentsProvider>
           </ContentContainer>
         </main>
