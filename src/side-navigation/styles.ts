@@ -67,6 +67,8 @@ export function animatedSidebarStyle({
 }: AnimatedSidebarStyleOptions) {
   return css`
     background-color: ${tokens.colors.navy};
+    border-right: ${tokens.borderWidth.thin} solid
+      ${hexToRgba(tokens.colors.white, 0.2)};
     position: fixed;
     width: 300px;
     top: 0;
@@ -284,6 +286,8 @@ export function closeButtonStyle({ isVisible }: ButtonStyleOptions) {
     border-radius: ${tokens.borderRadius.circle};
     box-shadow: ${tokens.boxShadow.thick};
     background-color: ${tokens.colors.navy};
+    border: ${tokens.borderWidth.thin} solid
+      ${hexToRgba(tokens.colors.white, 0.2)};
     color: ${tokens.colors.white};
     cursor: pointer;
     // Animation
