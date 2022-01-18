@@ -54,6 +54,8 @@ export function sidebarStyle() {
     min-width: 230px;
     min-height: 100%;
     background-color: ${tokens.colors.navy};
+    display: flex;
+    flex-direction: column;
   `;
 }
 
@@ -66,15 +68,15 @@ export function animatedSidebarStyle({
   isVisible,
 }: AnimatedSidebarStyleOptions) {
   return css`
-    background-color: ${tokens.colors.navy};
-    border-right: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(tokens.colors.white, 0.2)};
     position: fixed;
     width: 300px;
     top: 0;
-    bottom: 0;
     left: 0;
+    height: 100vh;
     z-index: ${tokens.zIndex.modal};
+    background-color: ${tokens.colors.navy};
+    border-right: ${tokens.borderWidth.thin} solid
+      ${hexToRgba(tokens.colors.white, 0.2)};
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none;
@@ -99,9 +101,9 @@ export function overlayStyle({ isVisible }: OverlayStyleOptions) {
   return css`
     position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
+    width: 100%;
+    height: 100vh;
     background-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.high)};
     z-index: ${tokens.zIndex.overlay};
     touch-action: none;
@@ -116,8 +118,8 @@ export function navStyle() {
   return css`
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     width: 100%;
-    min-height: 100%;
     padding-top: ${tokens.spacing.medium};
     padding-bottom: ${tokens.spacing.medium};
   `;
