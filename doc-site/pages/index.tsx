@@ -105,6 +105,10 @@ const cardsLayoutStyle = css`
   gap: ${tokens.spacing.medium};
 `;
 
+const cardParagraphStyle = css`
+  margin-bottom: 0;
+`;
+
 export default function Home() {
   const [isNavOpen, setNavOpen] = useState(false);
 
@@ -139,7 +143,7 @@ export default function Home() {
               <div css={cardsLayoutStyle}>
                 <LandingPageCard imageUrl="images/waffles-components-mini.svg">
                   <Heading size="large">Component for Every Occassion</Heading>
-                  <Paragraph>
+                  <Paragraph css={cardParagraphStyle}>
                     Waffles offers a wide range of React and Figma components,
                     to help developers and designers build DataCamp experiences
                     together in a consistent way. Check a short{' '}
@@ -150,7 +154,7 @@ export default function Home() {
                 </LandingPageCard>
                 <LandingPageCard imageUrl="images/waffles-inclusive-mini.svg">
                   <Heading size="large">Inclusive</Heading>
-                  <Paragraph>
+                  <Paragraph css={cardParagraphStyle}>
                     Accessibility is not an afterthought, but one of Waffles
                     fundamental principles. A lot of effort is put into making
                     sure components are accessible for all users, both with
@@ -160,7 +164,7 @@ export default function Home() {
                 </LandingPageCard>
                 <LandingPageCard imageUrl="images/waffles-flexible-mini.svg">
                   <Heading size="large">Flexible</Heading>
-                  <Paragraph>
+                  <Paragraph css={cardParagraphStyle}>
                     All React components come with sensible defaults out of the
                     box. They are mimicking the behavior and API of native
                     counterparts. In most cases, it is possible to customize
