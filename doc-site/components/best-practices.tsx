@@ -2,12 +2,19 @@ import React, { Children } from 'react';
 import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 import BestPracticesCard from './best-practices-card';
 
 const wrapperStyle = css`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: ${tokens.spacing.medium};
+  display: flex;
+  flex-direction: column;
+  gap: ${tokens.spacing.medium};
+
+  ${mediaQuery.small} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: ${tokens.spacing.medium};
+  }
 `;
 
 type BestPracticesProps = {
