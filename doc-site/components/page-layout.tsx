@@ -62,7 +62,7 @@ type PageLayoutProps = {
 function PageLayout({ children, hideEditLink = false }: PageLayoutProps) {
   const { pathname } = useRouter();
   const [isNavOpen, setNavOpen] = useState(false);
-  const { isLarge } = useMediaQuery();
+  const { isAboveLarge } = useMediaQuery();
 
   return (
     <>
@@ -88,7 +88,7 @@ function PageLayout({ children, hideEditLink = false }: PageLayoutProps) {
                   </footer>
                 )}
               </article>
-              {isLarge && <TableOfContents />}
+              {isAboveLarge && <TableOfContents />}
             </TableOfContentsProvider>
           </ContentContainer>
         </main>
