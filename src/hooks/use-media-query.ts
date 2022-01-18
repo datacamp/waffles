@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { tokens } from '../tokens';
+import useIsomorphicLayoutEffect from './use-isomorphic-layout-effect';
 
 type Breakpoints = typeof tokens.breakpoints;
 
@@ -39,7 +40,7 @@ function initalMatchResults() {
 function useMediaQuery() {
   const [matchResults, setMatchResults] = useState(initalMatchResults());
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     function handleMediaChange() {
       const results = Object.keys(breakpointsToResultsMap).reduce(
         (results, resultKey) => {
