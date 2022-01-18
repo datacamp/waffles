@@ -1,72 +1,104 @@
 import { css } from '@emotion/react';
 
-import Category from './navigation-category';
-import Subcategory from './navigation-subcategory';
-import Link from './navigation-link';
+import { tokens } from '@datacamp/waffles/tokens';
+import { useMediaQuery } from '@datacamp/waffles/hooks';
+import { hexToRgba } from '@datacamp/waffles/helpers';
+import { Text } from '@datacamp/waffles/text';
+import { SideNavigation as SideNav } from '@datacamp/waffles/side-navigation';
+import metadata from '../../package.json';
+import Item from './navigation-item';
 
-const listStyle = css`
-  margin: 0;
-  padding: 0;
-  list-style: none;
+const versionStyle = css`
+  color: ${tokens.colors.white};
+  padding-left: ${tokens.spacing.medium};
+  padding-top: ${tokens.spacing.medium};
 `;
 
-function Navigation() {
+const copyrightStyle = css`
+  display: block;
+  color: ${hexToRgba(tokens.colors.navySubtleTextOnDark, tokens.opacity.high)};
+  font-size: ${tokens.fontSizes.small};
+  padding: ${tokens.spacing.medium};
+  padding-top: ${tokens.spacing.large};
+  user-select: none;
+`;
+
+type NavigationProps = {
+  isOpen: boolean;
+  onClose: () => void;
+};
+
+function Navigation({ isOpen, onClose }: NavigationProps) {
+  const { isSmall } = useMediaQuery();
+
   return (
-    <nav>
-      <ul css={listStyle}>
-        <Category label="Overview">
-          <Link href="/">Welcome</Link>
-          <Link href="/overview/setup">Setup</Link>
-          <Link href="/overview/roadmap">Roadmap</Link>
-        </Category>
-        <Category label="Foundation">
-          <Link href="/foundation/design-tokens">Design Tokens</Link>
-          <Link href="/foundation/accessibility">Accessibility</Link>
-        </Category>
-        <Category label="Components">
-          <Subcategory label="Action">
-            <Link href="/components/button">Button</Link>
-            <Link href="/components/link">Link</Link>
-          </Subcategory>
-          <Subcategory label="Typography">
-            <Link href="/components/heading">Heading</Link>
-            <Link href="/components/paragraph">Paragraph</Link>
-            <Link href="/components/display">Display</Link>
-            <Link href="/components/chapeau">Chapeau</Link>
-            <Link href="/components/code">Code</Link>
-            <Link href="/components/code-block">Code Block</Link>
-            <Link href="/components/text">Text</Link>
-          </Subcategory>
-          <Subcategory label="Navigation">
-            <Link href="/components/tabs">Tabs</Link>
-          </Subcategory>
-          <Subcategory label="Form">
-            <Link href="/components/input">Input</Link>
-            <Link href="/components/input-field">Input Field</Link>
-            <Link href="/components/text-area">Text Area</Link>
-            <Link href="/components/checkbox">Checkbox</Link>
-            <Link href="/components/switch">Switch</Link>
-            <Link href="/components/radio">Radio</Link>
-            <Link href="/components/select">Select</Link>
-          </Subcategory>
-          <Subcategory label="Overlay">
-            <Link href="/components/tooltip">Tooltip</Link>
-          </Subcategory>
-          <Subcategory label="Content">
-            <Link href="/components/icon">Icon</Link>
-            <Link href="/components/content-container">Content Container</Link>
-          </Subcategory>
-          <Subcategory label="Utility">
-            <Link href="/components/portal">Portal</Link>
-            <Link href="/components/screen-reader-only">
+    <SideNav isOpen={isOpen} onClose={onClose}>
+      {isSmall ? null : (
+        <Text as="p" css={versionStyle}>{`v${metadata.version}`}</Text>
+      )}
+      <SideNav.Nav>
+        <SideNav.Category label="Overview" noDivider>
+          <Item href="/">Welcome</Item>
+          <Item href="/overview/setup">Setup</Item>
+          <Item href="/overview/roadmap">Roadmap</Item>
+        </SideNav.Category>
+        <SideNav.Category label="Foundation">
+          <Item href="/foundation/design-tokens">Design Tokens</Item>
+          <Item href="/foundation/accessibility">Accessibility</Item>
+        </SideNav.Category>
+        <SideNav.Category label="Components">
+          <SideNav.Subcategory label="Action">
+            <Item href="/components/button">Button</Item>
+            <Item href="/components/link">Link</Item>
+          </SideNav.Subcategory>
+          <SideNav.Subcategory label="Typography">
+            <Item href="/components/heading">Heading</Item>
+            <Item href="/components/paragraph">Paragraph</Item>
+            <Item href="/components/display">Display</Item>
+            <Item href="/components/chapeau">Chapeau</Item>
+            <Item href="/components/code">Code</Item>
+            <Item href="/components/code-block">Code Block</Item>
+            <Item href="/components/text">Text</Item>
+          </SideNav.Subcategory>
+          <SideNav.Subcategory label="Navigation">
+            <Item href="/components/side-navigation" isNew>
+              Side Navigation
+            </Item>
+            <Item href="/components/tabs">Tabs</Item>
+          </SideNav.Subcategory>
+          <SideNav.Subcategory label="Form">
+            <Item href="/components/input">Input</Item>
+            <Item href="/components/input-field">Input Field</Item>
+            <Item href="/components/text-area">Text Area</Item>
+            <Item href="/components/checkbox">Checkbox</Item>
+            <Item href="/components/switch">Switch</Item>
+            <Item href="/components/radio">Radio</Item>
+            <Item href="/components/select">Select</Item>
+          </SideNav.Subcategory>
+          <SideNav.Subcategory label="Overlay">
+            <Item href="/components/tooltip">Tooltip</Item>
+          </SideNav.Subcategory>
+          <SideNav.Subcategory label="Content">
+            <Item href="/components/badge" isNew>
+              Badge
+            </Item>
+            <Item href="/components/icon">Icon</Item>
+            <Item href="/components/content-container">Content Container</Item>
+          </SideNav.Subcategory>
+          <SideNav.Subcategory label="Utility">
+            <Item href="/components/portal">Portal</Item>
+            <Item href="/components/screen-reader-only">
               Screen Reader Only
-            </Link>
-            <Link href="/components/helpers">Helpers</Link>
-            <Link href="/components/hooks">Hooks</Link>
-          </Subcategory>
-        </Category>
-      </ul>
-    </nav>
+            </Item>
+            <Item href="/components/helpers">Helpers</Item>
+            <Item href="/components/hooks">Hooks</Item>
+          </SideNav.Subcategory>
+        </SideNav.Category>
+      </SideNav.Nav>
+      <Text as="small" css={copyrightStyle}>
+        © 2021 DataCamp, Inc.
+      </Text>
+    </SideNav>
   );
 }
 
