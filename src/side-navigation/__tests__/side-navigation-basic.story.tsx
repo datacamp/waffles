@@ -53,7 +53,9 @@ function Story() {
               <SideNavigation.Item isNew href="/side-nav">
                 Side Navigation
               </SideNavigation.Item>
-              <SideNavigation.Item href="/tabs">Tabs</SideNavigation.Item>
+              <SideNavigation.Item href="/tabs">
+                Tabs and Very Long Item Content
+              </SideNavigation.Item>
             </SideNavigation.Subcategory>
           </SideNavigation.Category>
           <SideNavigation.Category
