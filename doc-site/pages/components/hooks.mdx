@@ -23,9 +23,9 @@ A lot of accessibility-related features rely heavily on element IDs. Manually pr
 
 ## useMediaQuery
 
-A hook to conditionally render component based on the viewport size. Following mobile-first approach, consider base return without conditional rendering to be the mobile one.
+A hook to conditionally render component based on the viewport size. Following mobile-first approach, consider base return without conditional rendering to be the mobile one. Useful when wildly different components must be rendered depending on device screen size.
 
-It determines, if there is a media query match for current viewport for each breakpoint from [design tokens](/foundation/design-tokens) (small, medium, large).
+It determines, if there is a media query match for current viewport for each breakpoint from [design tokens](/foundation/design-tokens): `isAboveSmall`, `isAboveMedium`, `isAboveLarge`.
 
 <Example title="Basic Usage" path="hooks/use-media-query-basic-usage">
   <UseMediaQueryBasicUsage />
