@@ -18,7 +18,9 @@ export default Layout;
 
 ## mediaQuery
 
-Based on the **breakpoints** defined in [design tokens](/foundation/design-tokens) return media queries for various device viewport sizes: `small`, `medium`, and `large`. When using multiple media queries make sure to write them in correct order: put the `small` before `medium`, and `medium` before `large`.
+Based on the **breakpoints** defined in [design tokens](/foundation/design-tokens) return media queries for various device viewport sizes: `aboveSmall` (tablets), `aboveMedium` (small desktops), and `aboveLarge` (wide screen).
+
+Following mobile-first approach, when using multiple media queries make sure to write them in correct order: put the _mobile_ styles first (these are the ones without any media query specified), `aboveSmall` before `aboveMedium`, and `aboveMedium` before `aboveLarge`.
 
 <Example title="Basic Usage" path="helpers/media-query-basic-usage">
   <MediaQueryBasicUsage />

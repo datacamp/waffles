@@ -5,6 +5,10 @@ import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 
 const squareStyle = css`
+  padding: ${tokens.spacing.medium};
+  border-radius: ${tokens.borderRadius.medium};
+  transition: background-color 300ms ease-out;
+
   ${mediaQuery.aboveSmall} {
     background-color: ${tokens.colors.pink};
   }
@@ -16,10 +20,6 @@ const squareStyle = css`
   ${mediaQuery.aboveLarge} {
     background-color: ${tokens.colors.blue};
   }
-
-  padding: ${tokens.spacing.medium};
-  border-radius: ${tokens.borderRadius.medium};
-  transition: background-color 300ms ease-out;
 `;
 
 const textStyle = css`
