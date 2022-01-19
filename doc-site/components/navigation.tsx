@@ -96,7 +96,7 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
         </SideNav.Category>
       </SideNav.Nav>
       <Text as="small" css={copyrightStyle}>
-        © 2021 DataCamp, Inc.
+        © 2022 DataCamp, Inc.
       </Text>
     </SideNav>
   );
