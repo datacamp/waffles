@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
 import DesignTokenExample from './design-token-example';
+
 import Table from './table';
 
 const nameStyle = css`

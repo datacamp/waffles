@@ -7,6 +7,7 @@ import { Text } from '@datacamp/waffles/text';
 import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Menu, GithubBrand } from '@datacamp/waffles/icon';
+
 import metadata from '../../package.json';
 import { HEADER_HEIGHT } from './constants';
 import Logo from './logo';

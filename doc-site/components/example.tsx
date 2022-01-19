@@ -7,6 +7,7 @@ import { Button } from '@datacamp/waffles/button';
 import { Heading } from '@datacamp/waffles/heading';
 import { Code } from '@datacamp/waffles/icon';
 import { hexToRgba } from '@datacamp/waffles/helpers';
+
 import basicTheme from './editor-theme';
 import Highlight from './editor-highlight';
 import CodePreview from './code-preview';

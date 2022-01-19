@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
+
 import formattedModuleExports from '../helpers/formatted-module-exports';
 import CodePreview from './code-preview';
 import basicTheme from './editor-theme';
