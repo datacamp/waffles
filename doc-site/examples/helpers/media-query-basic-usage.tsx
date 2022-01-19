@@ -5,15 +5,15 @@ import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 
 const squareStyle = css`
-  ${mediaQuery.small} {
+  ${mediaQuery.aboveSmall} {
     background-color: ${tokens.colors.pink};
   }
 
-  ${mediaQuery.medium} {
+  ${mediaQuery.aboveMedium} {
     background-color: ${tokens.colors.yellow};
   }
 
-  ${mediaQuery.large} {
+  ${mediaQuery.aboveLarge} {
     background-color: ${tokens.colors.blue};
   }
 

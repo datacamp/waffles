@@ -182,7 +182,7 @@ const itemBaseStyle = css`
     cursor: pointer;
   }
 
-  ${mediaQuery.small} {
+  ${mediaQuery.aboveSmall} {
     &:where(a, button):hover {
       opacity: 1;
       background-color: ${hexToRgba(tokens.colors.white, tokens.opacity.low)};
@@ -236,7 +236,7 @@ export function itemInnerContentStyle({
     padding-top: ${sizeMap.belowSmallBreakpoint[size].spacing};
     padding-bottom: ${sizeMap.belowSmallBreakpoint[size].spacing};
 
-    ${mediaQuery.small} {
+    ${mediaQuery.aboveSmall} {
       font-size: ${sizeMap.aboveSmallBreakpoint[size].fontSize};
       min-height: ${sizeMap.aboveSmallBreakpoint[size].sizing};
       padding-top: ${sizeMap.aboveSmallBreakpoint[size].spacing};

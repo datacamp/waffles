@@ -13,7 +13,7 @@ const cardStyle = css`
   border-radius: ${tokens.borderRadius.medium};
   overflow: hidden;
 
-  ${mediaQuery.small} {
+  ${mediaQuery.aboveSmall} {
     min-height: 180px;
     flex-direction: row;
   }
@@ -26,7 +26,7 @@ const imageWrapperStyle = css`
   background-color: ${tokens.colors.purpleLight};
   padding: ${tokens.spacing.xsmall};
 
-  ${mediaQuery.small} {
+  ${mediaQuery.aboveSmall} {
     max-width: 236px;
   }
 `;
@@ -34,7 +34,7 @@ const imageWrapperStyle = css`
 const imageStyle = css`
   max-height: 140px;
 
-  ${mediaQuery.small} {
+  ${mediaQuery.aboveSmall} {
     height: 100%;
   }
 `;

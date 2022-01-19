@@ -27,7 +27,7 @@ export function tabListStyle({ isGradientMaskVisible }: TabListStyleOptions) {
     }
 
     /* Turn off scrolling for bigger devices */
-    ${mediaQuery.small} {
+    ${mediaQuery.aboveSmall} {
       overflow-y: visible;
       overflow-x: visible;
       mask-image: none;
@@ -48,7 +48,7 @@ export function tabsWrapper({ inverted }: TabsWrapperStyleOptions) {
     border-bottom: ${tokens.borderWidth.medium} solid
       ${hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)};
 
-    ${mediaQuery.small} {
+    ${mediaQuery.aboveSmall} {
       display: flex;
       padding-left: 0;
       padding-right: 0;

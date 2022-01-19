@@ -8,11 +8,11 @@ const wrapperStyle = css`
   max-width: 1000px;
   overflow: hidden;
 
-  ${mediaQuery.medium} {
+  ${mediaQuery.aboveMedium} {
     padding: ${tokens.spacing.xlarge};
   }
 
-  ${mediaQuery.large} {
+  ${mediaQuery.aboveLarge} {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;

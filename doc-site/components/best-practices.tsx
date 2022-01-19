@@ -10,7 +10,7 @@ const wrapperStyle = css`
   flex-direction: column;
   gap: ${tokens.spacing.medium};
 
-  ${mediaQuery.small} {
+  ${mediaQuery.aboveSmall} {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: ${tokens.spacing.medium};

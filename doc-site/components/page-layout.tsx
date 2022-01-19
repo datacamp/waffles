@@ -23,7 +23,7 @@ const wrapperStyle = css`
   min-height: 100vh;
   padding-top: ${HEADER_HEIGHT};
 
-  ${mediaQuery.small} {
+  ${mediaQuery.aboveSmall} {
     display: grid;
     grid-template-columns: auto 1fr;
   }
@@ -38,7 +38,7 @@ const mainStyle = css`
 const containerStyle = css`
   display: block;
 
-  ${mediaQuery.large} {
+  ${mediaQuery.aboveLarge} {
     display: flex;
   }
 `;

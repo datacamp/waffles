@@ -24,7 +24,7 @@ const headerStyle = css`
   position: fixed;
   z-index: ${tokens.zIndex.sticky};
 
-  ${mediaQuery.small} {
+  ${mediaQuery.aboveSmall} {
     justify-content: flex-start;
   }
 `;

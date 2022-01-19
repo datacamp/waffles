@@ -9,7 +9,7 @@ import { Tabs } from '../index';
 const wrapperStyle = css`
   padding-top: ${tokens.spacing.medium};
 
-  ${mediaQuery.small} {
+  ${mediaQuery.aboveSmall} {
     padding-left: ${tokens.spacing.medium};
     padding-right: ${tokens.spacing.medium};
   }
