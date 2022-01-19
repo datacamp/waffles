@@ -5,6 +5,7 @@ import Example from '../../components/example';
 import Imports from '../../components/imports';
 
 import UseIdBasicUsage from '../../examples/hooks/use-id-basic-usage';
+import UseMediaQueryBasicUsage from '../../examples/hooks/use-media-query-basic-usage';
 
 export default Layout;
 
@@ -18,6 +19,16 @@ A lot of accessibility-related features rely heavily on element IDs. Manually pr
 
 <Example title="Basic Usage" path="hooks/use-id-basic-usage">
   <UseIdBasicUsage />
+</Example>
+
+## useMediaQuery
+
+A hook to conditionally render component based on the viewport size. Following mobile-first approach, consider base return without conditional rendering to be the mobile one.
+
+It determines, if there is a media query match for current viewport for each breakpoint from [design tokens](/foundation/design-tokens) (small, medium, large).
+
+<Example title="Basic Usage" path="hooks/use-media-query-basic-usage">
+  <UseMediaQueryBasicUsage />
 </Example>
 
 ## Imports
