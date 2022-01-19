@@ -4,8 +4,11 @@ import { useId } from '../hooks';
 import { categoryDividerStyle, categoryLabelStyle, listStyle } from './styles';
 
 type CategoryProps = {
+  /* Category section caption. */
   label?: React.ReactNode;
+  /* Determines if a subtle horizontal divider is shown above the category label. */
   noDivider?: boolean;
+  /* A list of `SideNavigation.Item` or `SideNavigation.Subcategory` components. */
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 

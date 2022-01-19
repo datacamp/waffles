@@ -6,8 +6,11 @@ import AnimatedSidebar from './animated-sidebar';
 import { SidebarProvider } from './sidebar-context';
 
 type SideNavigationProps = {
+  /* Determines if the side navigation sidebar is open. */
   isOpen: boolean;
+  /* Handler called when the sidebar will close. */
   onClose: () => void;
+  /* Content of the sidebar, either `SideNavigation.Nav` or custom components. */
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 
