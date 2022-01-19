@@ -2,8 +2,8 @@
 
 exports[`mediaQuery exposes media queries generated from breakpoints 1`] = `
 Object {
-  "large": "@media screen and (min-width: 1480px)",
-  "medium": "@media screen and (min-width: 820px)",
-  "small": "@media screen and (min-width: 480px)",
+  "aboveLarge": "@media screen and (min-width: 1480px)",
+  "aboveMedium": "@media screen and (min-width: 820px)",
+  "aboveSmall": "@media screen and (min-width: 480px)",
 }
 `;
