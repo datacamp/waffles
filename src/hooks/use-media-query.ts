@@ -33,7 +33,7 @@ function initalMatchResults() {
 /**
  * For each breakpoint from design tokens (small, medium, large), determine if there is a media query match between it and a current viewport.
  *
- * Following mobile-first approach, when using the hook consider base return without conditional rendering to be the mobile one.
+ * Following mobile-first approach, when using the hook, consider base return without conditional rendering to be the mobile one.
  *
  * @returns Object of boolean values with isAboveSmall, isAboveMedium, and isAboveLarge entries
  */
