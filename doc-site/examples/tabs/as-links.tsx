@@ -14,7 +14,7 @@ function Example() {
 
   useEffect(() => {
     function handleHashChange() {
-      if (['#tab1', '#tab2', '#tab3'].includes(window.location.hash)) {
+      if (availableTabs.includes(window.location.hash)) {
         setActiveTab(window.location.hash);
       }
     }
