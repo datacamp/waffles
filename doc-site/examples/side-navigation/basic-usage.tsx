@@ -22,7 +22,8 @@ const contentStyle = css`
   padding: ${tokens.spacing.medium};
 `;
 
-// When working with react-router or in NextJS use useLocation or useRouter accordingly
+// When working with react-router or in NextJS
+// use useLocation or useRouter accordingly
 
 function useHashLocation() {
   const [location, setLocation] = useState('');
