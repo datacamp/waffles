@@ -1,0 +1,87 @@
+import * as SideNavigationExports from '@datacamp/waffles/side-navigation';
+
+import Layout from '../../components/page-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/badge/playground-config';
+import BasicUsage from '../../examples/side-navigation/basic-usage';
+import AdvancedUsage from '../../examples/side-navigation/advanced-usage';
+
+export default Layout;
+
+# Side Navigation
+
+🚧 This page is **under construction**.
+
+To keep underlying side navigation structure semantically correct and accessible, please follow these rules:
+
+- besides predefined subcomponents `SideNavigation` and `SideNavigation.Nav` can also contain entirely custom components
+- always wrap `SideNavigation.Category` (single or multiple ones) with `SideNavigation.Nav`
+- always wrap `SideNavigation.Subcategory` (single or multiple ones) with `SideNavigation.Category`
+- always wrap `SideNavigation.Item` (single or multiple ones) with `SideNavigation.Category` or `SideNavigation.Subcategory`
+
+## Examples
+
+<Example title="Basic Usage" path="side-navigation/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Advanced Usage" path="side-navigation/advanced-usage">
+  <AdvancedUsage />
+</Example>
+
+## Props
+
+### SideNavigation
+
+In addition to all custom props listed below, `SideNavigation` accepts all props regular `HTMLDiv` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/side-navigation/side-navigation-internal')}
+/>
+
+### SideNavigation.Nav
+
+In addition to all custom props listed below, `SideNavigation.Nav` accepts all props regular `HTMLNav` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/side-navigation/nav')}
+/>
+
+### SideNavigation.Category
+
+In addition to all custom props listed below, `SideNavigation.Category` accepts all props regular `HTMLDiv` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/side-navigation/category')}
+/>
+
+### SideNavigation.Subcategory
+
+In addition to all custom props listed below, `SideNavigation.Subcategory` accepts all props regular `HTMLDiv` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/side-navigation/subcategory-internal')}
+  isPolymorphic
+/>
+
+### SideNavigation.Item
+
+In addition to all custom props listed below, `SideNavigation.Item` accepts all props regular `HTMLAnchor` would, such as `href`, and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/side-navigation/item-internal')}
+  isPolymorphic
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports
+  module={SideNavigationExports}
+  path="@datacamp/waffles/side-navigation"
+/>
