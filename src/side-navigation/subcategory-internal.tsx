@@ -47,7 +47,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
   const sidebarState = useSidebar();
 
   function handleClick(event: React.MouseEvent) {
-    if (sidebarState && Element === 'a') {
+    if (sidebarState) {
       sidebarState.onClose();
     }
     onClick && onClick(event);
@@ -71,7 +71,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
     <li>
       <Element
         {...mergeProps(focusProps, restProps)}
-        {...(Element === 'a' && isActive && { 'aria-current': 'page' })}
+        {...(isActive && { 'aria-current': 'page' })}
         onClick={handleClick}
         ref={ref}
         css={itemStyle({ isActive, isFocusVisible })}

@@ -50,7 +50,7 @@ function Item<T extends React.ElementType = 'a'>(
   const sidebarState = useSidebar();
 
   function handleClick(event: React.MouseEvent) {
-    if (sidebarState && Element === 'a') {
+    if (sidebarState) {
       sidebarState.onClose();
     }
     onClick && onClick(event);
@@ -60,7 +60,7 @@ function Item<T extends React.ElementType = 'a'>(
     <li>
       <Element
         {...mergeProps(focusProps, restProps)}
-        {...(Element === 'a' && isActive && { 'aria-current': 'page' })}
+        {...(isActive && { 'aria-current': 'page' })}
         onClick={handleClick}
         ref={ref}
         css={itemStyle({ isActive, isFocusVisible })}
