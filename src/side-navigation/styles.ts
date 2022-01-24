@@ -69,6 +69,8 @@ export function animatedSidebarStyle({
 }: AnimatedSidebarStyleOptions) {
   return css`
     position: fixed;
+    display: flex;
+    flex-direction: column;
     width: 300px;
     top: 0;
     left: 0;
