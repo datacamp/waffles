@@ -10,6 +10,7 @@ import { SideNavigation as SideNav } from '@datacamp/waffles/side-navigation';
 
 const layoutStyle = css`
   display: block;
+  // Set 'min-height: 100vh;' for real-world application
 
   ${mediaQuery.aboveSmall} {
     display: grid;
@@ -23,7 +24,9 @@ const contentStyle = css`
 `;
 
 // When working with react-router or in NextJS
-// use useLocation or useRouter accordingly
+// use useLocation or useRouter accordingly.
+// For details check:
+// https://github.com/datacamp-engineering/side-nav-workshop
 
 function useHashLocation() {
   const [location, setLocation] = useState('');
