@@ -16,12 +16,17 @@ export default Layout;
 
 🚧 This page is **under construction**.
 
-To keep underlying side navigation structure semantically correct and accessible, please follow these rules:
+To keep underlying side navigation structure _semantically correct_ and _accessible_, please follow these rules:
 
 - besides predefined subcomponents `SideNavigation` and `SideNavigation.Nav` can also contain entirely custom components
 - always wrap `SideNavigation.Category` (single or multiple ones) with `SideNavigation.Nav`
 - always wrap `SideNavigation.Subcategory` (single or multiple ones) with `SideNavigation.Category`
-- always wrap `SideNavigation.Item` (single or multiple ones) with `SideNavigation.Category` or `SideNavigation.Subcategory`
+- always wrap `SideNavigation.Item` (single or multiple ones) with either `SideNavigation.Category` or `SideNavigation.Subcategory`
+
+Bear in mind, that _mobile_ side navigation is automatically displayed below `small` [breakpoint](/foundation/design-tokens/#all-available-tokens). To keep other related elements in sync use:
+
+- `aboveSmall` [mediaQuery](/components/helpers/#mediaquery)
+- conditionally show them based on the result of `isAboveSmall` returned by [useMediaQuery](/components/hooks/#usemediaquery) hook
 
 ## Examples
 

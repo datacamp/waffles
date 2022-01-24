@@ -111,6 +111,6 @@ The output is:
 
 To make the release process and versioning easier we use [Semantic Versioning](https://semver.org/). On each commit, code is automatically formatted and the commit message is verified to check it adheres to the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
 
-The release process is _fully automated_, which makes proper commits messages critically important. Often used commit types include: `feat:`, `fix:`, `chore:`, `docs:`, `perf:`, `test:`. It is also possible to add a scope to commit message, e.g. `feat(button):`.
+The release process is _fully automated_, which makes proper commits messages critically important. Often used commit types include: `feat:`, `fix:`, `chore:`, `docs:`, `perf:`, `test:`. It is also possible to add a scope to commit message, e.g. `feat(button):`, `fix(side-navigation)`.
 
 ℹ️ If you are only tweaking documentation or internal scripts, feel free to skip releasing by adding **[skip ci]** to the body of the last commit of your PR.

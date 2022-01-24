@@ -5,6 +5,7 @@ import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 
 const squareStyle = css`
+  background-color: ${tokens.colors.orange};
   padding: ${tokens.spacing.medium};
   border-radius: ${tokens.borderRadius.medium};
   transition: background-color 300ms ease-out;
