@@ -5,7 +5,7 @@ import { Display } from '@datacamp/waffles/display';
 import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Button } from '@datacamp/waffles/button';
-import Layout from '../components/page-layout';
+import { ContentContainer } from '@datacamp/waffles/content-container';
 
 export default function PageNotFound() {
   return (
@@ -17,7 +17,7 @@ export default function PageNotFound() {
           content="Unfortunately this page could not be found."
         />
       </Head>
-      <Layout hideEditLink>
+      <ContentContainer>
         <Display>404</Display>
         <Heading size="xxlarge">Page not Found</Heading>
         <Paragraph>
@@ -28,7 +28,7 @@ export default function PageNotFound() {
             Go to Home Page
           </Button>
         </Link>
-      </Layout>
+      </ContentContainer>
     </>
   );
 }

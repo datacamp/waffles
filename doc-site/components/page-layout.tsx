@@ -1,24 +1,14 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
-import { useRouter } from 'next/router';
 
 import { tokens } from '@datacamp/waffles/tokens';
 import { mediaQuery } from '@datacamp/waffles/helpers';
-import { useMediaQuery } from '@datacamp/waffles/hooks';
-import { Button } from '@datacamp/waffles/button';
-import { ContentContainer } from '@datacamp/waffles/content-container';
-import { Edit } from '@datacamp/waffles/icon';
 
-import { TableOfContentsProvider } from '../context/table-of-contents-context';
-import { HEADER_HEIGHT, ARTICLE_CONTENT_WIDTH } from './constants';
+import { HEADER_HEIGHT } from './constants';
 import Header from './page-header';
 import Navigation from './navigation';
-import TableOfContents from './table-of-contents';
 
-const GITHUB_EDIT_URL =
-  'https://github.com/datacamp/waffles/edit/master/doc-site/pages';
-
-const wrapperStyle = css`
+const layoutStyle = css`
   display: flex;
   min-height: 100vh;
   padding-top: ${HEADER_HEIGHT};
@@ -35,63 +25,23 @@ const mainStyle = css`
   width: 100%;
 `;
 
-const containerStyle = css`
-  display: block;
-
-  ${mediaQuery.aboveLarge} {
-    display: flex;
-  }
-`;
-
-const articleStyle = css`
-  max-width: ${ARTICLE_CONTENT_WIDTH};
-  flex-grow: 1;
-`;
-
-const footerStyle = css`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: ${tokens.spacing.large};
-`;
-
 type PageLayoutProps = {
   children: React.ReactNode;
-  hideEditLink?: boolean;
 };
 
-function PageLayout({ children, hideEditLink = false }: PageLayoutProps) {
-  const { pathname } = useRouter();
+// Streamlined layout for each page
+// On desktop classic two column layout: side navigation to the left and main content to the right
+// On mobile one column layout: single content column and fixed positioned side navigation
+
+function PageLayout({ children }: PageLayoutProps) {
   const [isNavOpen, setNavOpen] = useState(false);
-  const { isAboveLarge } = useMediaQuery();
 
   return (
     <>
       <Header onNavOpen={() => setNavOpen(true)} />
-      <div css={wrapperStyle}>
+      <div css={layoutStyle}>
         <Navigation isOpen={isNavOpen} onClose={() => setNavOpen(false)} />
-        <main css={mainStyle}>
-          <ContentContainer css={containerStyle}>
-            <TableOfContentsProvider>
-              <article css={articleStyle}>
-                {children}
-                {!hideEditLink && (
-                  <footer css={footerStyle}>
-                    <Button
-                      as="a"
-                      href={`${GITHUB_EDIT_URL}${pathname}.mdx`}
-                      variant="plain"
-                      size="small"
-                      iconLeft={<Edit />}
-                    >
-                      Edit This Page
-                    </Button>
-                  </footer>
-                )}
-              </article>
-              {isAboveLarge && <TableOfContents />}
-            </TableOfContentsProvider>
-          </ContentContainer>
-        </main>
+        <main css={mainStyle}>{children}</main>
       </div>
     </>
   );
