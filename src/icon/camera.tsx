@@ -1,8 +1,8 @@
 import Icon from './icon-internal';
 
-type PictureProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
+type CameraProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
 
-function Picture({ size, ...restProps }: PictureProps) {
+function Camera({ size, ...restProps }: CameraProps) {
   return (
     <Icon viewBox="0 0 18 18" size={size} {...restProps}>
       <path
@@ -15,4 +15,4 @@ function Picture({ size, ...restProps }: PictureProps) {
   );
 }
 
-export default Picture;
+export default Camera;
