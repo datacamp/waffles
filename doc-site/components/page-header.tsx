@@ -16,14 +16,16 @@ const headerStyle = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: ${HEADER_HEIGHT};
+  z-index: ${tokens.zIndex.sticky};
   background-color: ${tokens.colors.white};
   box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.medium};
   padding-left: ${tokens.spacing.small};
   padding-right: ${tokens.spacing.small};
-  position: fixed;
-  z-index: ${tokens.zIndex.sticky};
 
   ${mediaQuery.aboveSmall} {
     justify-content: flex-start;
