@@ -138,6 +138,7 @@ export { default as PlatformSwitch } from './platform-switch';
 export { default as PlayInverted } from './play-inverted';
 export { default as Play } from './play';
 export { default as Practice } from './practice';
+export { default as Publish } from './publish';
 export { default as PythonBrand } from './python-brand';
 export { default as RBrand } from './r-brand';
 export { default as Random } from './random';
