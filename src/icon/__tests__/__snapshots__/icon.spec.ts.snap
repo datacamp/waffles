@@ -142,6 +142,7 @@ Object {
   "Play": [Function],
   "PlayInverted": [Function],
   "Practice": [Function],
+  "Publish": [Function],
   "PythonBrand": [Function],
   "RBrand": [Function],
   "Random": [Function],
