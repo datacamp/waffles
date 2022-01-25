@@ -1,3 +1,5 @@
+// Using babel for now, because SWC doesn't support emotion yet
+
 module.exports = {
   presets: [
     [

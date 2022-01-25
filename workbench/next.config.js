@@ -1,3 +1,5 @@
+/** @type {import('next').NextConfig} */
+
 const { resolve } = require('path');
 
 module.exports = {

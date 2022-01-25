@@ -10,6 +10,7 @@
     "isolatedModules": true,
     "allowJs": true,
     "skipLibCheck": true,
+    "incremental": true,
     "baseUrl": "./",
     "paths": {
       "@datacamp/waffles": ["../dist"],
