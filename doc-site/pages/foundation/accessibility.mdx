@@ -10,7 +10,7 @@ An accessible app gives everyone a great user experience, regardless of their ca
 
 Unfortunately, using accessible Waffles components doesn't automatically mean, that you have an entirely accessible application. Consider the amount of code in your app that doesn't come from Waffles&mdash;it's a lot, isn't it? You need to audit your application to make sure every visitor can successfully use it.
 
-### Automated testing
+### Automated Testing
 
 It’s best to start accessibility testing with automated tools such as [axe](https://www.deque.com/axe) or [lighthouse](https://developers.google.com/web/tools/lighthouse). Even better if such checks are part of CI/CD pipeline. They are good at finding:
 
@@ -21,22 +21,22 @@ It’s best to start accessibility testing with automated tools such as [axe](ht
 
 Unfortunately, they discover only about 30-50% of accessibility issues and fail miserably when it comes to all kinds of behavioral or not-so-obvious problems. Therefore it’s recommended to run a set of manual tests as well.
 
-### Manual testing practical guide
+### Manual Testing Practical Guide
 
 At this point probably a lot of accessibility issues got discovered and addressed during the prototyping phase and by using automated tests. In most cases, to be fully compliant with [WCAG 2.1 AA](https://www.w3.org/TR/WCAG21) and to meet the highest accessibility standards a few additional manual tests are required:
 
-#### Zoom in
+#### Zoom In
 
 - use `Cmd + Plus` to zoom in to at least 150% (ideally 200%), and `Cmd + 0` to reset magnification to 100%
 
-#### Navigate with keyboard
+#### Navigate with Keyboard
 
 - all interactive elements on the web page should have a distinguishable focus style
 - `Tab` key is used to focus interactive elements, and `Shift + Tab` to focus the previous element
 - `Up/Down Arrow` key is used to move through items in dropdown
 - use `Enter` or `Space` to interact
 
-#### Use screen reader
+#### Use Screen Reader
 
 - Mac OS X has a built-in screen reader VoiceOver&mdash;to activate it press `Cmd + F5`
 - the most often used combination by people with disabilities is `Ctrl + Opt + Cmd + H` (jump between headings)
