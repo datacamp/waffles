@@ -1,12 +1,12 @@
 version: 2.1
 
 orbs:
-  slack: circleci/slack@4.4.4
+  slack: circleci/slack@4.6.1
 
 jobs:
   build_and_test:
     docker:
-      - image: cypress/base:14.17.3
+      - image: cypress/base:16.13.0
     resource_class: large
     parallelism: 4
     steps:
@@ -54,7 +54,7 @@ jobs:
           command: yarn test:stories:ci
   release:
     docker:
-      - image: cimg/node:14.17.3
+      - image: cimg/node:16.13.0
     steps:
       - checkout
       - attach_workspace:
@@ -113,7 +113,7 @@ jobs:
             }
   build_docs:
     docker:
-      - image: cimg/node:14.17.3
+      - image: cimg/node:16.13.0
     steps:
       - attach_workspace:
           at: '.'
