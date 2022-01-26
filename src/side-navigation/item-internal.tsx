@@ -2,12 +2,12 @@ import React from 'react';
 import { useFocusRing } from '@react-aria/focus';
 import { mergeProps } from '@react-aria/utils';
 
+import { tokens } from '../tokens';
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 import { Text } from '../text';
 import { Badge } from '../badge';
 import { useSidebar } from './sidebar-context';
 import { itemStyle, itemInnerContentStyle, badgeStyle } from './styles';
-import { tokens } from '../tokens';
 
 type ItemBaseProps = {
   /* The content of navigation item. Most of the time should be a plain text. */
