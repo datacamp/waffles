@@ -78,3 +78,10 @@ export function closeButtonStyle() {
     color: ${tokens.colors.navy};
   `;
 }
+
+export function bodyStyle() {
+  return css`
+    padding: ${tokens.spacing.large};
+    flex-grow: 1;
+  `;
+}
