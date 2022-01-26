@@ -7,6 +7,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Button } from '@datacamp/waffles/button';
 import { Back } from '@datacamp/waffles/icon';
 
+import { CODE_PREVIEW_BORDER } from './constants';
 import type { PlaygroundConfig } from '../types';
 import CodePreview from './code-preview';
 import PreviewControls from './preview-controls';
@@ -36,7 +37,8 @@ const errorStyle = css`
 const liveLabelStyle = css`
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -${CODE_PREVIEW_BORDER};
+  z-index: ${tokens.zIndex.default};
   color: ${tokens.colors.greyLight};
   font-family: ${tokens.fontFamilies.sansSerif};
   font-size: ${tokens.fontSizes.small};
@@ -76,6 +78,7 @@ function Playground({ initialCode, scope, minHeight }: PlaygroundProps) {
           border-left-color: ${isEditorFocused
             ? tokens.colors.green
             : tokens.colors.purple};
+          overflow: hidden;
         `}
       >
         <Editor {...editorProps} setIsFocused={setIsEditorFocused} />

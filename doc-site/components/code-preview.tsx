@@ -3,14 +3,22 @@ import { css } from '@emotion/react';
 
 import { tokens } from '@datacamp/waffles/tokens';
 
+import { CODE_PREVIEW_BORDER } from './constants';
+
 const wrapperStyle = css`
   position: relative;
   padding: ${tokens.spacing.medium};
   background-color: #151d28;
+  border-right: ${CODE_PREVIEW_BORDER} solid #151d28;
   border-left: 8px solid ${tokens.colors.purple};
-  overflow: hidden;
+  overflow-x: scroll;
   transition: border-color 125ms ease-out;
   cursor: text;
+
+  /* Target 3rd party wrapper */
+  & > pre {
+    overflow: visible;
+  }
 `;
 
 type CodePreviewProps = React.HTMLAttributes<HTMLDivElement>;
