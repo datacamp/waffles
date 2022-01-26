@@ -68,3 +68,13 @@ export function overlayStyle({ isVisible }: OverlayStyleOptions) {
       forwards;
   `;
 }
+
+export function closeButtonStyle() {
+  return css`
+    position: absolute;
+    top: ${tokens.spacing.small};
+    right: ${tokens.spacing.small};
+    z-index: ${tokens.zIndex.default};
+    color: ${tokens.colors.navy};
+  `;
+}
