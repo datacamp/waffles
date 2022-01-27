@@ -12,6 +12,8 @@ function Example() {
         color: ${tokens.colors.navy};
       `}
     >
+      <AddCircle size="xlarge" />
+      <AddCircle size="large" />
       <AddCircle size="medium" />
       <AddCircle size="small" />
       <AddCircle size="xsmall" />

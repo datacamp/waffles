@@ -21,9 +21,14 @@ An icon visually indicates available action or option. Icons help the user more 
 
 The main purpose of an icon is to clarify the content by providing a visual cue and improve the scannability of the user interface. The icon should _never_ be used to replace a name of a product or feature. Very often icon helps enhance the button's message.
 
-Icons can also help save screen real-estate in tight user interfaces.
+Icons are available in five different sizes: `xlarge`, `large`, `medium`, `small`, and `xsmall`. In general default, `medium` size should be used.
 
-Icons are available in three different sizes: `medium`, `small`, and `xsmall`. In general default, `medium` size should be used. Use other icon sizes together with smaller text sizes.
+On rare occasions there may be the need to use different sizes:
+
+- use `xsmall` or `small` icon together with smaller text sizes
+- use `xlarge` or `large` icon as standalone or decorative element
+
+Icons can also help save screen real-estate in tight user interfaces.
 
 <BestPractices>
   <BestPractices.Recommended>
@@ -53,7 +58,8 @@ An icon usally is used together with a button. In that case use [Button](/compon
     - be free to use the icon-only button for universally understood actions, like a `Trash` icon representing deletion
     - for icon-only Waffles button provide icon via `icon` prop and specify the accessible description with `aria-label` attribute
     - to enhance Waffles button or link with an icon provide it via `iconLeft` or `iconRight` prop
-    - use default `medium` icon size with a button
+    - in general use default `medium` icon size with a button
+    - in rare cases it is allowed to use `large` or `xlarge` size with an icon-only button
 
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
