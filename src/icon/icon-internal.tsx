@@ -1,14 +1,16 @@
 import React from 'react';
 
 const sizeMap = {
-  medium: 16,
-  small: 14,
   xsmall: 12,
+  small: 14,
+  medium: 16,
+  large: 18,
+  xlarge: 24,
 };
 
 type IconInternalProps = {
   /* Defines the size of the icon. In general use default `medium` size. */
-  size?: 'medium' | 'small' | 'xsmall';
+  size?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
   /* [skip docs] */
   children: React.ReactNode;
 } & React.SVGAttributes<SVGElement>;
