@@ -14,14 +14,14 @@ const iconRowStyle = css`
   align-items: center;
   color: ${tokens.colors.navy};
   gap: ${tokens.spacing.medium};
-  height: ${tokens.sizing.small};
+  height: ${tokens.sizing.medium};
 `;
 
 const labelStyle = css`
   width: 200px;
 `;
 
-const sizes = ['medium', 'small', 'xsmall'] as const;
+const sizes = ['xlarge', 'large', 'medium', 'small', 'xsmall'] as const;
 
 function Story() {
   return (
