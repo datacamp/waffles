@@ -56,7 +56,7 @@ function PageHeader({ onNavOpen }: PageHeaderProps) {
       {isAboveSmall ? null : (
         <Button
           variant="plain"
-          icon={<Menu />}
+          icon={<Menu size="xlarge" />}
           onClick={onNavOpen}
           aria-label="Open Navigation"
         />
@@ -74,7 +74,7 @@ function PageHeader({ onNavOpen }: PageHeaderProps) {
       <Button
         as="a"
         variant="plain"
-        icon={<GithubBrand />}
+        icon={<GithubBrand size="large" />}
         aria-label="Visit Waffles GitHub Repository"
         href="https://github.com/datacamp/waffles"
       />
