@@ -43,7 +43,7 @@ export function tabsWrapper({ inverted }: TabsWrapperStyleOptions) {
   return css`
     display: inline-flex;
     min-width: 100%;
-    padding-left: ${tokens.spacing.medium};
+    padding-left: 0;
     padding-right: 64px;
     border-bottom: ${tokens.borderWidth.medium} solid
       ${hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)};
