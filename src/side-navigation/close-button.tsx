@@ -11,7 +11,7 @@ function CloseButton() {
       onClick={onClose}
       css={closeButtonStyle({ isVisible: isOpen })}
     >
-      <Cross />
+      <Cross size="xlarge" />
     </button>
   );
 }
