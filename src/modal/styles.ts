@@ -4,26 +4,20 @@ import { tokens } from '../tokens';
 import { hexToRgba, mediaQuery } from '../helpers';
 import { overlayFadeIn, overlayFadeOut, dialogAppear } from './keyframes';
 
-export function dialogScrollWrapperStyle() {
+export function dialogWrapperStyle() {
   return css`
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    bottom: 0;
+    right: 0;
     z-index: ${tokens.zIndex.modal};
-    overflow-y: scroll;
-  `;
-}
-
-export function dialogInnerWrapperStyle() {
-  return css`
     display: flex;
     align-items: center;
     justify-content: center;
     padding: ${tokens.spacing.medium};
-    width: 100%;
-    min-height: 100%;
+    overflow: hidden;
+    pointer-events: none;
   `;
 }
 
@@ -33,11 +27,16 @@ export function dialogStyle() {
     display: flex;
     flex-direction: column;
     min-height: 180px;
+    max-height: 100%;
     min-width: 100%;
-    max-width: 100px;
+    max-width: 600px;
     background-color: ${tokens.colors.white};
     border-radius: ${tokens.borderRadius.medium};
     box-shadow: ${tokens.boxShadow.thick};
+    outline: 0;
+    overflow: hidden;
+    pointer-events: all;
+
     // Animation
     opacity: 0;
     transform: scale(0.75);
@@ -83,5 +82,6 @@ export function bodyStyle() {
   return css`
     padding: ${tokens.spacing.large};
     flex-grow: 1;
+    overflow-y: scroll;
   `;
 }
