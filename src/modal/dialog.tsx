@@ -12,7 +12,7 @@ type DialogProps = {
 function Dialog({ isVisible, onClose, children }: DialogProps) {
   return (
     <div css={dialogWrapperStyle()}>
-      <div
+      <section
         role="dialog"
         aria-modal
         tabIndex={-1}
@@ -20,7 +20,7 @@ function Dialog({ isVisible, onClose, children }: DialogProps) {
       >
         <CloseButton onClick={onClose} />
         {children}
-      </div>
+      </section>
     </div>
   );
 }

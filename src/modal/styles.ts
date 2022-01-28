@@ -89,8 +89,32 @@ export function closeButtonStyle() {
 
 export function bodyStyle() {
   return css`
-    padding: ${tokens.spacing.large};
+    padding-top: 0;
+    padding-right: ${tokens.spacing.large};
+    padding-bottom: ${tokens.spacing.small};
+    padding-left: ${tokens.spacing.large};
     flex-grow: 1;
+    overflow-x: hidden;
     overflow-y: scroll;
+  `;
+}
+
+export function headerStyle() {
+  return css`
+    padding-top: ${tokens.spacing.large};
+    padding-right: 48px;
+    padding-bottom: ${tokens.spacing.medium};
+    padding-left: ${tokens.spacing.large};
+    margin: 0;
+  `;
+}
+
+export function footerStyle() {
+  return css`
+    padding: ${tokens.spacing.medium} ${tokens.spacing.large};
+    border-top: ${tokens.borderWidth.thin} solid
+      ${hexToRgba(tokens.colors.navy, 0.15)};
+    display: flex;
+    justify-content: flex-end;
   `;
 }
