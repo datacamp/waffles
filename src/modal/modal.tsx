@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useAnimateTransition } from '../hooks';
 import { Portal } from '../portal';
 import Overlay from './overlay';
 import Dialog from './dialog';
@@ -12,10 +13,14 @@ type ModalProps = {
 };
 
 function Modal({ isOpen, onClose, children }: ModalProps) {
-  return isOpen ? (
+  const isAnimating = useAnimateTransition(isOpen, 300);
+
+  return isAnimating ? (
     <Portal>
       <Overlay isVisible={isOpen} onClose={onClose} />
-      <Dialog onClose={onClose}>{children}</Dialog>
+      <Dialog isVisible={isOpen} onClose={onClose}>
+        {children}
+      </Dialog>
     </Portal>
   ) : null;
 }

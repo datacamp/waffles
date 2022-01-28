@@ -2,7 +2,12 @@ import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
 import { hexToRgba, mediaQuery } from '../helpers';
-import { overlayFadeIn, overlayFadeOut, dialogAppear } from './keyframes';
+import {
+  dialogFadeIn,
+  dialogFadeOut,
+  overlayFadeIn,
+  overlayFadeOut,
+} from './keyframes';
 
 export function dialogWrapperStyle() {
   return css`
@@ -21,7 +26,11 @@ export function dialogWrapperStyle() {
   `;
 }
 
-export function dialogStyle() {
+type DialogStyleOptions = {
+  isVisible: boolean;
+};
+
+export function dialogStyle({ isVisible }: DialogStyleOptions) {
   return css`
     position: relative;
     display: flex;
@@ -36,11 +45,11 @@ export function dialogStyle() {
     outline: 0;
     overflow: hidden;
     pointer-events: all;
-
     // Animation
     opacity: 0;
-    transform: scale(0.75);
-    animation: ${dialogAppear} 200ms ease-out forwards;
+    transform: translateY(12px);
+    animation: ${isVisible ? dialogFadeIn : dialogFadeOut} 200ms
+      cubic-bezier(0.2, 0.8, 0.6, 1) forwards;
 
     ${mediaQuery.aboveSmall} {
       min-width: 400px;
