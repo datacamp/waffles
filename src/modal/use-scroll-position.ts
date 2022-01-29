@@ -17,6 +17,8 @@ function useScrollPosition(targetRef: React.RefObject<HTMLElement>) {
       }
     }
 
+    setPositionFlags();
+
     if (element) {
       setIsAtBottom(element.scrollTop === 0);
       element.addEventListener('scroll', setPositionFlags);

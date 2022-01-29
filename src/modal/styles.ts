@@ -87,7 +87,16 @@ export function closeButtonStyle() {
   `;
 }
 
-export function bodyStyle() {
+type BodyStyleOptions = {
+  showShadowTop: boolean;
+  showShadowBottom: boolean;
+};
+
+// Show shadows at the top or bottom, indicating user can actually scroll a content
+export function bodyStyle({
+  showShadowTop,
+  showShadowBottom,
+}: BodyStyleOptions) {
   return css`
     padding-top: 0;
     padding-right: ${tokens.spacing.large};
@@ -96,6 +105,10 @@ export function bodyStyle() {
     flex-grow: 1;
     overflow-x: hidden;
     overflow-y: scroll;
+    box-shadow: ${showShadowTop &&
+      'inset 0 12px 12px -12px rgba(5, 25, 45, 0.3)'}${showShadowTop &&
+      showShadowBottom &&
+      ','}${showShadowBottom && 'inset 0 -12px 12px -12px rgba(5, 25, 45, 0.3)'};
   `;
 }
 
