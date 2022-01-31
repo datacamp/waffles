@@ -1,4 +1,5 @@
 import React from 'react';
+import { FocusOn } from 'react-focus-on';
 
 import { useAnimateTransition } from '../hooks';
 import { Portal } from '../portal';
@@ -19,10 +20,17 @@ function Modal({ isOpen, onClose, children }: ModalProps) {
 
   return isAnimating ? (
     <Portal>
-      <Overlay isVisible={isOpen} onClose={onClose} />
-      <Dialog isVisible={isOpen} onClose={onClose}>
-        {children}
-      </Dialog>
+      <Overlay isVisible={isOpen} />
+      <FocusOn
+        onClickOutside={onClose}
+        onEscapeKey={onClose}
+        autoFocus
+        returnFocus
+      >
+        <Dialog isVisible={isOpen} onClose={onClose}>
+          {children}
+        </Dialog>
+      </FocusOn>
     </Portal>
   ) : null;
 }
