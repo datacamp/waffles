@@ -131,3 +131,11 @@ export function footerStyle() {
     justify-content: flex-end;
   `;
 }
+
+export function buttonStyle() {
+  return css`
+    &:not(:last-child) {
+      margin-right: ${tokens.spacing.small};
+    }
+  `;
+}

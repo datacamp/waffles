@@ -8,14 +8,22 @@ import Dialog from './dialog';
 import Header from './header';
 import Body from './body';
 import Footer from './footer';
+import Button from './button';
 
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
+  role?: 'dialog' | 'alertdialog';
   children: React.ReactNode;
-};
+} & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
-function Modal({ isOpen, onClose, children }: ModalProps) {
+function Modal({
+  isOpen,
+  onClose,
+  role = 'dialog',
+  children,
+  ...restProps
+}: ModalProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
 
   return isAnimating ? (
@@ -27,15 +35,17 @@ function Modal({ isOpen, onClose, children }: ModalProps) {
         autoFocus
         returnFocus
       >
-        <Dialog isVisible={isOpen} onClose={onClose}>
+        <Dialog role={role} isVisible={isOpen} onClose={onClose} {...restProps}>
           {children}
         </Dialog>
       </FocusOn>
     </Portal>
   ) : null;
 }
+
 Modal.Header = Header;
 Modal.Body = Body;
 Modal.Footer = Footer;
+Modal.Button = Button;
 
 export default Modal;
