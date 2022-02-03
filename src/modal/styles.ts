@@ -129,6 +129,7 @@ export function footerStyle() {
       ${hexToRgba(tokens.colors.navy, 0.15)};
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   `;
 }
 
