@@ -9,6 +9,7 @@ import Header from './header';
 import Body from './body';
 import Footer from './footer';
 import Button from './button';
+import CloseButton from './close-button';
 
 type ModalProps = {
   isOpen: boolean;
@@ -28,7 +29,7 @@ function Modal({
 
   return isAnimating ? (
     <Portal>
-      <Overlay isVisible={isOpen} />
+      <Overlay isVisible={isOpen} data-testid="modal-overlay" />
       <FocusOn
         onClickOutside={onClose}
         onEscapeKey={onClose}
@@ -47,5 +48,7 @@ Modal.Header = Header;
 Modal.Body = Body;
 Modal.Footer = Footer;
 Modal.Button = Button;
+Modal.CloseButton = CloseButton;
+Modal.Overlay = Overlay;
 
 export default Modal;

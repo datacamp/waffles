@@ -1,16 +1,18 @@
 import { Cross } from '../icon';
 import { Button } from '../button';
 import { closeButtonStyle } from './styles';
+import React from 'react';
 
-type CloseButtonProps = {
-  onClick: () => void;
-};
+type CloseButtonProps = Omit<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  'children'
+>;
 
-function CloseButton({ onClick }: CloseButtonProps) {
+function CloseButton(props: CloseButtonProps) {
   return (
     <Button
+      {...props}
       variant="plain"
-      onClick={onClick}
       icon={<Cross />}
       aria-label="Close"
       css={closeButtonStyle()}
