@@ -10,9 +10,11 @@ function useScrollPosition(targetRef: React.RefObject<HTMLElement>) {
     function setPositionFlags() {
       if (element) {
         setIsAtTop(element.scrollTop === 0);
+        // Beacause of inconsistencies between browsers calculations, some wiggle room is left
         setIsAtBottom(
-          Math.ceil(element.scrollHeight - element.scrollTop) ===
-            element.clientHeight,
+          Math.ceil(element.scrollHeight - element.scrollTop) -
+            element.clientHeight <
+            4,
         );
       }
     }
