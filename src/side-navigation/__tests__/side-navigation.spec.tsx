@@ -10,6 +10,7 @@ const MOCKED_ID = '123abC';
 
 jest.mock('../../hooks', () => {
   return {
+    ...jest.requireActual('../../hooks'),
     useMediaQuery: jest.fn(),
     useId: (prefix: string) => {
       return `${prefix}-${MOCKED_ID}`;

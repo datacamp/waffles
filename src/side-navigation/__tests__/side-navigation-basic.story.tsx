@@ -60,7 +60,7 @@ function Story() {
           </SideNavigation.Category>
           <SideNavigation.Category
             label={
-              <Badge size="small" color={tokens.colors.greyDark}>
+              <Badge size="small" variant="grey">
                 Beta
               </Badge>
             }
