@@ -1,8 +1,9 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
-import { readableHexColor } from '../helpers';
 import Badge from './badge';
+
+// Mappings between badge's sizes and variants, and design tokens
 
 const sizeMap = {
   small: {
@@ -13,6 +14,53 @@ const sizeMap = {
   },
   large: {
     fontSize: tokens.fontSizes.medium,
+  },
+};
+
+const variantMap = {
+  green: {
+    color: tokens.colors.navy,
+    backgroundColor: tokens.colors.green,
+  },
+  navy: {
+    color: tokens.colors.white,
+    backgroundColor: tokens.colors.navy,
+  },
+  white: {
+    color: tokens.colors.navy,
+    backgroundColor: tokens.colors.white,
+  },
+  red: {
+    color: tokens.colors.navy,
+    backgroundColor: tokens.colors.red,
+  },
+  orange: {
+    color: tokens.colors.navy,
+    backgroundColor: tokens.colors.orange,
+  },
+  yellow: {
+    color: tokens.colors.navy,
+    backgroundColor: tokens.colors.yellow,
+  },
+  blue: {
+    color: tokens.colors.navy,
+    backgroundColor: tokens.colors.blue,
+  },
+  purple: {
+    color: tokens.colors.white,
+    backgroundColor: tokens.colors.purple,
+  },
+  pink: {
+    color: tokens.colors.navy,
+    backgroundColor: tokens.colors.pink,
+  },
+  grey: {
+    color: tokens.colors.navy,
+    backgroundColor: tokens.colors.greyMedium,
+  },
+  greySubtle: {
+    color: '#626D79',
+    backgroundColor: tokens.colors.greyLight,
   },
 };
 
@@ -31,15 +79,15 @@ const baseBadgeStyle = css`
 `;
 
 type BadgeStyleOptions = {
-  color: string;
   size: NonNullable<React.ComponentProps<typeof Badge>['size']>;
+  variant: NonNullable<React.ComponentProps<typeof Badge>['variant']>;
 };
 
-export function badgeStyle({ color, size }: BadgeStyleOptions) {
+export function badgeStyle({ variant, size }: BadgeStyleOptions) {
   return css`
     ${baseBadgeStyle}
-    background-color: ${color};
-    color: ${readableHexColor(color)};
+    color: ${variantMap[variant].color};
+    background-color: ${variantMap[variant].backgroundColor};
     font-size: ${sizeMap[size].fontSize};
     height: 18px;
   `;
