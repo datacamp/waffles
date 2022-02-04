@@ -13,13 +13,13 @@ function Example() {
           margin-bottom: ${tokens.spacing.small};
         `}
       >
-        <Badge color={tokens.colors.green} size="large">
+        <Badge variant="green" size="large">
           Large
         </Badge>
-        <Badge color={tokens.colors.purple} size="medium">
+        <Badge variant="purple" size="medium">
           Medium
         </Badge>
-        <Badge color={tokens.colors.navy} size="small">
+        <Badge variant="navy" size="small">
           Small
         </Badge>
       </div>
@@ -29,13 +29,13 @@ function Example() {
           gap: ${tokens.spacing.small};
         `}
       >
-        <Badge color={tokens.colors.green} size="large">
+        <Badge variant="green" size="large">
           Large Badge With Long Label
         </Badge>
-        <Badge color={tokens.colors.purple} size="medium">
+        <Badge variant="purple" size="medium">
           Medium Badge With Long Label
         </Badge>
-        <Badge color={tokens.colors.navy} size="small">
+        <Badge variant="navy" size="small">
           Small Badge With Long Label
         </Badge>
       </div>

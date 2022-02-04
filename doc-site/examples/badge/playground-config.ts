@@ -1,15 +1,13 @@
-import { tokens } from '@datacamp/waffles/tokens';
 import { Badge } from '@datacamp/waffles/badge';
 
 import type { PlaygroundConfig } from '../../types';
 
 const initialCode = `
-import { tokens } from '@datacamp/waffles/tokens';
 import { Badge } from '@datacamp/waffles/badge';
 
 function Playground() {
   return (
-    <Badge color={tokens.colors.green} size="medium">Label</Badge>
+    <Badge variant="green" size="medium">Label</Badge>
   );
 }
 `;
@@ -17,7 +15,6 @@ function Playground() {
 const playgroundConfig: PlaygroundConfig = {
   initialCode,
   scope: {
-    tokens,
     Badge,
   },
 };
