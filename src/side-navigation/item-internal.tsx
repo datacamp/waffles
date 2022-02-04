@@ -2,7 +2,6 @@ import React from 'react';
 import { useFocusRing } from '@react-aria/focus';
 import { mergeProps } from '@react-aria/utils';
 
-import { tokens } from '../tokens';
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 import { Text } from '../text';
 import { Badge } from '../badge';
@@ -79,7 +78,7 @@ function Item<T extends React.ElementType = 'a'>(
           {isNew && (
             <Badge
               css={badgeStyle()}
-              color={tokens.colors.green}
+              variant="green"
               data-testid="new-item-indicator"
             >
               New
