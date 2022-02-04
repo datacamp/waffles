@@ -119,6 +119,7 @@ export function headerStyle() {
     padding-bottom: ${tokens.spacing.medium};
     padding-left: ${tokens.spacing.large};
     margin: 0;
+    flex-shrink: 0;
   `;
 }
 
@@ -130,6 +131,7 @@ export function footerStyle() {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-shrink: 0;
   `;
 }
 
