@@ -27,48 +27,46 @@ type TestSideNavProps = {
 
 function TestSideNav({ isOpen, onClose }: TestSideNavProps) {
   return (
-    <>
-      <SideNavigation isOpen={isOpen} onClose={onClose}>
-        <SideNavigation.Nav>
-          <SideNavigation.Category label="Trending" data-testid="main-category">
-            <SideNavigation.Item href="#taylor" isActive>
-              Taylor Swift
-            </SideNavigation.Item>
-            <SideNavigation.Item href="#ariana" isNew>
-              Ariana Grande
+    <SideNavigation isOpen={isOpen} onClose={onClose}>
+      <SideNavigation.Nav>
+        <SideNavigation.Category label="Trending" data-testid="main-category">
+          <SideNavigation.Item href="#taylor" isActive>
+            Taylor Swift
+          </SideNavigation.Item>
+          <SideNavigation.Item href="#ariana" isNew>
+            Ariana Grande
+          </SideNavigation.Item>
+          <SideNavigation.Item
+            href="#justin"
+            iconLeft={<Star data-testid="left-icon" />}
+            iconRight={<ChevronRight data-testid="right-icon" />}
+          >
+            Justin Bieber
+          </SideNavigation.Item>
+          <SideNavigation.Subcategory label="Classics">
+            <SideNavigation.Item href="#led-zeppelin">
+              Led Zeppelin
             </SideNavigation.Item>
             <SideNavigation.Item
-              href="#justin"
-              iconLeft={<Star data-testid="left-icon" />}
-              iconRight={<ChevronRight data-testid="right-icon" />}
+              href="#pink-floyd"
+              iconLeft={<Star data-testid="sub-item-left-icon" />}
+              iconRight={<ChevronRight data-testid="sub-item-right-icon" />}
             >
-              Justin Bieber
+              Pink Floyd
             </SideNavigation.Item>
-            <SideNavigation.Subcategory label="Classics">
-              <SideNavigation.Item href="#led-zeppelin">
-                Led Zeppelin
-              </SideNavigation.Item>
-              <SideNavigation.Item
-                href="#pink-floyd"
-                iconLeft={<Star data-testid="sub-item-left-icon" />}
-                iconRight={<ChevronRight data-testid="sub-item-right-icon" />}
-              >
-                Pink Floyd
-              </SideNavigation.Item>
-            </SideNavigation.Subcategory>
-            <SideNavigation.Subcategory
-              label="New Age"
-              iconLeft={<Star data-testid="sub-left-icon" />}
-              iconRight={<ChevronRight data-testid="sub-right-icon" />}
-            >
-              <SideNavigation.Item href="#greta-van-fleet">
-                Greta Van Fleet
-              </SideNavigation.Item>
-            </SideNavigation.Subcategory>
-          </SideNavigation.Category>
-        </SideNavigation.Nav>
-      </SideNavigation>
-    </>
+          </SideNavigation.Subcategory>
+          <SideNavigation.Subcategory
+            label="New Age"
+            iconLeft={<Star data-testid="sub-left-icon" />}
+            iconRight={<ChevronRight data-testid="sub-right-icon" />}
+          >
+            <SideNavigation.Item href="#greta-van-fleet">
+              Greta Van Fleet
+            </SideNavigation.Item>
+          </SideNavigation.Subcategory>
+        </SideNavigation.Category>
+      </SideNavigation.Nav>
+    </SideNavigation>
   );
 }
 
