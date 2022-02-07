@@ -22,9 +22,14 @@ function Panel({
   return (
     <>
       {/* Background panel which spans whole device heigh */}
-      <div tabIndex={-1} css={panelStyle({ isVisible, placement })} />
+      <div css={panelStyle({ isVisible, placement })} />
       {/* Content only wrapper allows buttons to be fixed at the bottom and be always visible at once*/}
-      <section {...restProps} css={panelContentStyle({ isVisible, placement })}>
+      <section
+        {...restProps}
+        aria-modal
+        tabIndex={-1}
+        css={panelContentStyle({ isVisible, placement })}
+      >
         <Dialog.CloseButton onClick={onClose} />
         {children}
       </section>
