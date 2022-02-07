@@ -3,52 +3,51 @@ import { FocusOn } from 'react-focus-on';
 
 import { useAnimateTransition } from '../hooks';
 import { Portal } from '../portal';
-import Overlay from './overlay';
-import Dialog from './dialog';
+import { Overlay } from '../overlay';
+import Panel from './panel';
 import Header from './header';
 import Body from './body';
 import Footer from './footer';
 import Button from './button';
 import CloseButton from './close-button';
 
-type ModalProps = {
+type DialogProps = {
   isOpen: boolean;
   onClose: () => void;
   role?: 'dialog' | 'alertdialog';
   children: React.ReactNode;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
-function Modal({
+function Dialog({
   isOpen,
   onClose,
   role = 'dialog',
   children,
   ...restProps
-}: ModalProps) {
+}: DialogProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
 
   return isAnimating ? (
     <Portal>
-      <Overlay isVisible={isOpen} data-testid="modal-overlay" />
+      <Overlay isVisible={isOpen} data-testid="dialog-overlay" />
       <FocusOn
         onClickOutside={onClose}
         onEscapeKey={onClose}
         autoFocus
         returnFocus
       >
-        <Dialog role={role} isVisible={isOpen} onClose={onClose} {...restProps}>
+        <Panel role={role} isVisible={isOpen} onClose={onClose} {...restProps}>
           {children}
-        </Dialog>
+        </Panel>
       </FocusOn>
     </Portal>
   ) : null;
 }
 
-Modal.Header = Header;
-Modal.Body = Body;
-Modal.Footer = Footer;
-Modal.Button = Button;
-Modal.CloseButton = CloseButton;
-Modal.Overlay = Overlay;
+Dialog.Header = Header;
+Dialog.Body = Body;
+Dialog.Footer = Footer;
+Dialog.Button = Button;
+Dialog.CloseButton = CloseButton;
 
-export default Modal;
+export default Dialog;

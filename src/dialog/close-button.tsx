@@ -1,7 +1,8 @@
+import React from 'react';
+
 import { Cross } from '../icon';
 import { Button } from '../button';
 import { closeButtonStyle } from './styles';
-import React from 'react';
 
 type CloseButtonProps = Omit<
   React.ButtonHTMLAttributes<HTMLButtonElement>,

@@ -7,6 +7,7 @@ type ButtonProps = { autoFocus?: boolean } & React.ComponentProps<
   typeof ButtonBase
 >;
 
+// Override autoFocus behavior to play nicely with react-focus-on
 function ButtonInternal(
   { autoFocus = false, ...restProps }: ButtonProps,
   ref: React.Ref<HTMLElement>,

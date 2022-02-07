@@ -2,14 +2,10 @@ import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
 import { hexToRgba, mediaQuery } from '../helpers';
-import {
-  dialogFadeIn,
-  dialogFadeOut,
-  overlayFadeIn,
-  overlayFadeOut,
-} from './keyframes';
+import { panelFadeInOut } from './keyframes';
 
-export function dialogWrapperStyle() {
+// Center vertically and horizontally dialog panel
+export function panelWrapperStyle() {
   return css`
     position: fixed;
     top: 0;
@@ -26,11 +22,11 @@ export function dialogWrapperStyle() {
   `;
 }
 
-type DialogStyleOptions = {
+type PanelStyleOptions = {
   isVisible: boolean;
 };
 
-export function dialogStyle({ isVisible }: DialogStyleOptions) {
+export function panelStyle({ isVisible }: PanelStyleOptions) {
   return css`
     position: relative;
     display: flex;
@@ -48,32 +44,12 @@ export function dialogStyle({ isVisible }: DialogStyleOptions) {
     // Animation
     opacity: 0;
     transform: translateY(12px);
-    animation: ${isVisible ? dialogFadeIn : dialogFadeOut} 200ms
+    animation: ${panelFadeInOut({ isVisible })} 200ms
       cubic-bezier(0.2, 0.8, 0.6, 1) forwards;
 
     ${mediaQuery.aboveSmall} {
       min-width: 400px;
     }
-  `;
-}
-
-type OverlayStyleOptions = {
-  isVisible: boolean;
-};
-
-export function overlayStyle({ isVisible }: OverlayStyleOptions) {
-  return css`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.high)};
-    z-index: ${tokens.zIndex.overlay};
-    // Animation
-    opacity: 0;
-    animation: ${isVisible ? overlayFadeIn : overlayFadeOut} 200ms ease-out
-      forwards;
   `;
 }
 

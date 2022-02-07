@@ -1,31 +1,31 @@
 import React from 'react';
 
-import Modal from './modal';
+import Dialog from './dialog';
 import CloseButton from './close-button';
-import { dialogWrapperStyle, dialogStyle } from './styles';
+import { panelWrapperStyle, panelStyle } from './styles';
 
-type DialogProps = {
-  role: NonNullable<React.ComponentProps<typeof Modal>['role']>;
+type PanelProps = {
+  role: NonNullable<React.ComponentProps<typeof Dialog>['role']>;
   isVisible: boolean;
   onClose: () => void;
   children: React.ReactNode;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
-function Dialog({
+function Panel({
   role,
   isVisible,
   onClose,
   children,
   ...restProps
-}: DialogProps) {
+}: PanelProps) {
   return (
-    <div css={dialogWrapperStyle()}>
+    <div css={panelWrapperStyle()}>
       <section
         {...restProps}
         role={role}
         aria-modal
         tabIndex={-1}
-        css={dialogStyle({ isVisible })}
+        css={panelStyle({ isVisible })}
       >
         <CloseButton onClick={onClose} />
         {children}
@@ -34,4 +34,4 @@ function Dialog({
   );
 }
 
-export default Dialog;
+export default Panel;
