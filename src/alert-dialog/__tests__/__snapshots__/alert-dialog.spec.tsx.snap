@@ -1,0 +1,324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlertDialogTest renders snapshot 1`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(12px);
+    -moz-transform: translateY(12px);
+    -ms-transform: translateY(12px);
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 180px;
+  max-height: 100%;
+  min-width: 100%;
+  max-width: 600px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px -1px rgba(5, 25, 45, 0.3);
+  outline: 0;
+  overflow: hidden;
+  pointer-events: all;
+  opacity: 0;
+  -webkit-transform: translateY(12px);
+  -moz-transform: translateY(12px);
+  -ms-transform: translateY(12px);
+  transform: translateY(12px);
+  -webkit-animation: animation-0 200ms cubic-bezier(0.2, 0.8, 0.6, 1) forwards;
+  animation: animation-0 200ms cubic-bezier(0.2, 0.8, 0.6, 1) forwards;
+  max-width: 480px;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0 {
+    min-width: 400px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0 {
+    min-width: 300px;
+  }
+}
+
+.emotion-1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  color: #05192D;
+}
+
+.emotion-1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-1:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-1:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-2 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #05192D;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+  padding-top: 24px;
+  padding-right: 48px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  text-align: center;
+  padding-left: 48px;
+}
+
+.emotion-3 {
+  padding-top: 0;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  text-align: center;
+}
+
+.emotion-4 {
+  padding: 24px;
+  padding-top: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-5::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-5:hover:not(:disabled) {
+  background-color: #00D649;
+}
+
+.emotion-5:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-5:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-5::after {
+  box-shadow: 0 0 0 2px #009BD8;
+}
+
+.emotion-5:active:focus {
+  background-color: #00D649;
+}
+
+.emotion-5:not(:last-child) {
+  margin-right: 8px;
+}
+
+<section
+  aria-labelledby="alert-dialog-title"
+  aria-modal="true"
+  class="emotion-0"
+  role="alertdialog"
+  tabindex="-1"
+>
+  <button
+    aria-label="Close"
+    class="emotion-1"
+  >
+    CrossIcon
+  </button>
+  <h2
+    class="emotion-2"
+    id="alert-dialog-title"
+  >
+    Warning!
+  </h2>
+  <div
+    class="emotion-3"
+  >
+    Oops, something happened.
+  </div>
+  <footer
+    class="emotion-4"
+  >
+    <button
+      class="emotion-5"
+      data-autofocus="true"
+    >
+      <span
+        class="emotion-6"
+      >
+        Got It!
+      </span>
+    </button>
+  </footer>
+</section>
+`;
