@@ -3,7 +3,8 @@ import { FocusOn } from 'react-focus-on';
 
 import { useAnimateTransition } from '../hooks';
 import { Portal } from '../portal';
-import { Modal } from '../modal';
+import { Overlay } from '../overlay';
+import { Dialog } from '../dialog';
 import Panel from './panel';
 
 type DrawerProps = {
@@ -13,19 +14,30 @@ type DrawerProps = {
   children: React.ReactNode;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
-function Drawer({ isOpen, onClose, children, ...restProps }: DrawerProps) {
+function Drawer({
+  isOpen,
+  onClose,
+  placement = 'left',
+  children,
+  ...restProps
+}: DrawerProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
 
   return isAnimating ? (
     <Portal>
-      <Modal.Overlay isVisible={isOpen} data-testid="drawer-overlay" />
+      <Overlay isVisible={isOpen} data-testid="drawer-overlay" />
       <FocusOn
         onClickOutside={onClose}
         onEscapeKey={onClose}
         autoFocus
         returnFocus
       >
-        <Panel isVisible={isOpen} onClose={onClose} {...restProps}>
+        <Panel
+          isVisible={isOpen}
+          onClose={onClose}
+          placement={placement}
+          {...restProps}
+        >
           {children}
         </Panel>
       </FocusOn>
@@ -33,9 +45,9 @@ function Drawer({ isOpen, onClose, children, ...restProps }: DrawerProps) {
   ) : null;
 }
 
-Drawer.Header = Modal.Header;
-Drawer.Body = Modal.Body;
-Drawer.Footer = Modal.Footer;
-Drawer.Button = Modal.Button;
+Drawer.Header = Dialog.Header;
+Drawer.Body = Dialog.Body;
+Drawer.Footer = Dialog.Footer;
+Drawer.Button = Dialog.Button;
 
 export default Drawer;

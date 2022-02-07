@@ -2,42 +2,61 @@ import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
 import { mediaQuery } from '../helpers';
-import { panelSlideIn, panelSlideOut } from './keyframes';
+import Drawer from './drawer';
+import { panelSlideInOut } from './keyframes';
 
 // Sync animation of background drawer panel and content wrapper
 // Makes both of them behave nicely on iOS
 
 type PanelStyleOptions = {
   isVisible: boolean;
+  placement: NonNullable<React.ComponentProps<typeof Drawer>['placement']>;
 };
 
-function basePanelStyle({ isVisible }: PanelStyleOptions) {
+const PANEL_WIDTH_BELOW_SMALL_BREKPOINT = 300;
+const PANEL_WIDTH_ABOVE_SMALL_BREKPOINT = 600;
+
+function basePanelStyle({ isVisible, placement }: PanelStyleOptions) {
+  const horizontalDirection = placement === 'left' ? -1 : 1;
+
   return css`
     position: fixed;
     top: 0;
-    left: 0;
+    ${placement === 'left' ? 'left' : 'right'}: 0;
     outline: 0;
     overflow: hidden;
     pointer-events: all;
-    width: 300px;
+    width: ${PANEL_WIDTH_BELOW_SMALL_BREKPOINT}px;
     // Animation
-    transform: translateX(-300px);
-    animation: ${isVisible ? panelSlideIn('300px') : panelSlideOut('300px')}
+    transform: translateX(
+      ${horizontalDirection * PANEL_WIDTH_BELOW_SMALL_BREKPOINT}px
+    );
+    animation: ${panelSlideInOut({
+        isVisible,
+        offset: PANEL_WIDTH_BELOW_SMALL_BREKPOINT,
+        slideFrom: placement,
+      })}
       200ms cubic-bezier(0, 0, 0.6, 1) forwards;
 
     ${mediaQuery.aboveSmall} {
-      width: 600px;
+      width: ${PANEL_WIDTH_ABOVE_SMALL_BREKPOINT}px;
       // Animation
-      transform: translateX(-600px);
-      animation: ${isVisible ? panelSlideIn('600px') : panelSlideOut('600px')}
+      transform: translateX(
+        ${horizontalDirection * PANEL_WIDTH_ABOVE_SMALL_BREKPOINT}px
+      );
+      animation: ${panelSlideInOut({
+          isVisible,
+          offset: PANEL_WIDTH_ABOVE_SMALL_BREKPOINT,
+          slideFrom: placement,
+        })}
         200ms cubic-bezier(0, 0, 0.6, 1) forwards;
     }
   `;
 }
 
-export function panelStyle({ isVisible }: PanelStyleOptions) {
+export function panelStyle({ isVisible, placement }: PanelStyleOptions) {
   return css`
-    ${basePanelStyle({ isVisible })}
+    ${basePanelStyle({ isVisible, placement })}
     height: 100vh;
     background-color: ${tokens.colors.white};
     box-shadow: ${tokens.boxShadow.thick};
@@ -45,9 +64,9 @@ export function panelStyle({ isVisible }: PanelStyleOptions) {
   `;
 }
 
-export function panelContentStyle({ isVisible }: PanelStyleOptions) {
+export function panelContentStyle({ isVisible, placement }: PanelStyleOptions) {
   return css`
-    ${basePanelStyle({ isVisible })}
+    ${basePanelStyle({ isVisible, placement })}
     display: flex;
     flex-direction: column;
     position: fixed;
