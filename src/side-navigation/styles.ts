@@ -3,14 +3,7 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba, mediaQuery } from '../helpers';
 import Item from './item';
-import {
-  sidebarSlideIn,
-  sidebarSlideOut,
-  overlayFadeIn,
-  overlayFadeOut,
-  buttonSlideIn,
-  buttonSlideOut,
-} from './keyframes';
+import { sidebarSlideInOut, bttonSlideInOut } from './keyframes';
 
 // Various side nav Item properties based on viewport size
 const sizeMap = {
@@ -48,10 +41,14 @@ export function listStyle() {
   `;
 }
 
+const SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT = 300;
+const SIDEBAR_WIDTH_ABOVE_SMALL_BREKPOINT = 230;
+
+// Regular sidebar (displayed above small breakpoint)
 export function sidebarStyle() {
   return css`
-    width: 230px;
-    min-width: 230px;
+    width: ${SIDEBAR_WIDTH_ABOVE_SMALL_BREKPOINT}px;
+    min-width: ${SIDEBAR_WIDTH_ABOVE_SMALL_BREKPOINT}px;
     min-height: 100%;
     background-color: ${tokens.colors.navy};
     display: flex;
@@ -71,7 +68,7 @@ export function animatedSidebarStyle({
     position: fixed;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: ${SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT}px;
     top: 0;
     left: 0;
     height: 100vh;
@@ -89,30 +86,12 @@ export function animatedSidebarStyle({
       height: 0;
     }
     // Animation
-    transform: translateX(-300px);
-    animation: ${isVisible ? sidebarSlideIn : sidebarSlideOut} 200ms ease-out
-      forwards;
-  `;
-}
-
-type OverlayStyleOptions = {
-  isVisible: boolean;
-};
-
-export function overlayStyle({ isVisible }: OverlayStyleOptions) {
-  return css`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.high)};
-    z-index: ${tokens.zIndex.overlay};
-    touch-action: none;
-    // Animation
-    opacity: 0;
-    animation: ${isVisible ? overlayFadeIn : overlayFadeOut} 200ms ease-out
-      forwards;
+    transform: translateX(-${SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT}px);
+    animation: ${sidebarSlideInOut({
+        isVisible,
+        offset: SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT,
+      })}
+      200ms ease-out forwards;
   `;
 }
 
@@ -297,7 +276,6 @@ export function closeButtonStyle({ isVisible }: ButtonStyleOptions) {
     // Animation
     opacity: 0;
     transform: translateX(-100px);
-    animation: ${isVisible ? buttonSlideIn : buttonSlideOut} 250ms ease-out
-      forwards;
+    animation: ${bttonSlideInOut({ isVisible })} 250ms ease-out forwards;
   `;
 }

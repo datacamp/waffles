@@ -1,13 +1,13 @@
+import { Overlay as OverlayBase } from '../overlay';
 import { useSidebar } from './sidebar-context';
-import { overlayStyle } from './styles';
 
 function Overlay() {
   const { isOpen, onClose } = useSidebar();
 
   return (
-    <div
+    <OverlayBase
+      isVisible={isOpen}
       onClick={onClose}
-      css={overlayStyle({ isVisible: isOpen })}
       data-testid="side-navigation-menu-overlay"
     />
   );

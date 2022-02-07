@@ -1,59 +1,43 @@
 import { keyframes } from '@emotion/react';
 
-export const sidebarSlideIn = keyframes`
-  from {
-    transform: translateX(-300px);
-  }
-  to {
-    transform: translateX(0);
-  }
-`;
+type SidebarSlideInOutOptions = {
+  isVisible: boolean;
+  offset: number;
+};
 
-export const sidebarSlideOut = keyframes`
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-300px);
-  }
-`;
+export function sidebarSlideInOut({
+  isVisible,
+  offset,
+}: SidebarSlideInOutOptions) {
+  const initialTransform = `translateX(${-offset}px)`;
+  const finalTransform = 'translateX(0)';
 
-export const overlayFadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
+  return keyframes`
+    from {
+      transform: ${isVisible ? initialTransform : finalTransform};
+    }
+    to {
+      transform: ${isVisible ? finalTransform : initialTransform};
+    }
+  `;
+}
 
-export const overlayFadeOut = keyframes`
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-`;
+type ButtonSlideInOutOptions = {
+  isVisible: boolean;
+};
 
-export const buttonSlideIn = keyframes`
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
+export function bttonSlideInOut({ isVisible }: ButtonSlideInOutOptions) {
+  const initialTransform = `translateX(-100px)`;
+  const finalTransform = 'translateX(0)';
 
-export const buttonSlideOut = keyframes`
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-`;
+  return keyframes`
+    from {
+      transform: ${isVisible ? initialTransform : finalTransform};
+      opacity: ${isVisible ? 0 : 1};
+    }
+    to {
+      transform: ${isVisible ? finalTransform : initialTransform};
+      opacity: ${isVisible ? 1 : 0};
+    }
+  `;
+}
