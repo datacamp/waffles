@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Modal } from '../modal';
+import { Dialog } from '../dialog';
 import { headerStyle } from './styles';
 
 type HeaderProps = {
@@ -8,7 +8,7 @@ type HeaderProps = {
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
 function Header(props: HeaderProps) {
-  return <Modal.Header {...props} css={headerStyle()} />;
+  return <Dialog.Header {...props} css={headerStyle()} />;
 }
 
 export default Header;

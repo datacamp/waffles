@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { mediaQuery } from '../helpers';
 
-export function modalStyle() {
+export function dialogStyle() {
   return css`
     max-width: 480px;
 
