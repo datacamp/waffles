@@ -44,3 +44,5 @@ describe('ContentContainer', () => {
     });
   });
 });
+
+export {};

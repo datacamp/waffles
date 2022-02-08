@@ -4,14 +4,14 @@ describe('SideNavigation', () => {
     cy.findByText('Side Navigation').parent('a').focus();
   });
 
-  it('on large screen device, is always opened ', () => {
+  it('on large screen device, is always opened', () => {
     cy.viewport(1920, 1080);
     cy.loadStory('side-navigation-basic');
     cy.get('nav').should('exist');
     cy.findByTestId('side-navigation-menu-overlay').should('not.exist');
   });
 
-  it('on medium screen device, is always opened ', () => {
+  it('on medium screen device, is always opened', () => {
     cy.viewport(768, 1024);
     cy.loadStory('side-navigation-basic');
     cy.get('nav').should('exist');
