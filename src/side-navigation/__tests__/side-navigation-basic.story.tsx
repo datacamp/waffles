@@ -18,7 +18,7 @@ const layoutStyle = css`
   }
 `;
 
-const mainContent = css`
+const mainContentStyle = css`
   padding: ${tokens.spacing.medium};
 `;
 
@@ -83,7 +83,7 @@ function Story() {
           </SideNavigation.Category>
         </SideNavigation.Nav>
       </SideNavigation>
-      <article css={mainContent}>
+      <article css={mainContentStyle}>
         <Button onClick={() => setIsOpen(true)}>Open</Button>
       </article>
     </div>
