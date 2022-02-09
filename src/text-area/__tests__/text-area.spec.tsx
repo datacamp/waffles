@@ -14,13 +14,13 @@ jest.mock('nanoid', () => {
 });
 
 function TestRefTextArea() {
-  const inputRef = useRef<HTMLTextAreaElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
-    inputRef.current?.focus();
+    textareaRef.current?.focus();
   }, []);
 
-  return <TextArea ref={inputRef} />;
+  return <TextArea ref={textareaRef} />;
 }
 
 describe('TextArea', () => {
@@ -47,9 +47,19 @@ describe('TextArea', () => {
   it('sets the data attribute on the text area', () => {
     const { getByTestId } = render(<TextArea data-testid="test-textarea" />);
 
-    const input = getByTestId('test-textarea');
+    const textarea = getByTestId('test-textarea');
 
-    expect(input).toBeInTheDocument();
+    expect(textarea).toBeInTheDocument();
+  });
+
+  it('sets the aria-label on the textarea', () => {
+    const { getByLabelText } = render(
+      <TextArea aria-label="Accessible textarea" />,
+    );
+
+    const textarea = getByLabelText('Accessible textarea');
+
+    expect(textarea).toBeInTheDocument();
   });
 
   it('renders the disabled text area', () => {

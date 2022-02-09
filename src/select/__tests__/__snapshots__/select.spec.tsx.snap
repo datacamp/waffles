@@ -4,34 +4,11 @@ exports[`Select renders snapshot of disabled 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
-}
-
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #05192D;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  position: relative;
-  width: 100%;
   height: 36px;
   opacity: 0.6;
 }
 
-.emotion-2::after {
+.emotion-0::after {
   content: '';
   display: block;
   position: absolute;
@@ -47,7 +24,7 @@ exports[`Select renders snapshot of disabled 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-3 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -72,11 +49,11 @@ exports[`Select renders snapshot of disabled 1`] = `
   padding-right: 36px;
 }
 
-.emotion-3:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-2 {
   position: absolute;
   z-index: 1;
   display: -webkit-box;
@@ -97,46 +74,35 @@ exports[`Select renders snapshot of disabled 1`] = `
 <div
   class="emotion-0"
 >
-  <label
+  <select
     class="emotion-1"
-    for="form-control-123abC"
+    disabled=""
   >
-    Pick a technology
-  </label>
+    <option
+      value="python"
+    >
+      Python
+    </option>
+    <option
+      value="sql"
+    >
+      SQL
+    </option>
+  </select>
   <div
     class="emotion-2"
   >
-    <select
-      class="emotion-3"
-      disabled=""
-      id="form-control-123abC"
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
     >
-      <option
-        value="python"
-      >
-        Python
-      </option>
-      <option
-        value="sql"
-      >
-        SQL
-      </option>
-    </select>
-    <div
-      class="emotion-4"
-    >
-      <svg
-        aria-hidden="true"
-        height="16"
-        viewBox="0 0 18 18"
-        width="16"
-      >
-        <path
-          d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
+      <path
+        d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
+        fill="currentColor"
+      />
+    </svg>
   </div>
 </div>
 `;
@@ -145,34 +111,11 @@ exports[`Select renders snapshot of inverted 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
-}
-
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #FFFFFF;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  position: relative;
-  width: 100%;
   height: 36px;
   opacity: 1;
 }
 
-.emotion-2::after {
+.emotion-0::after {
   content: '';
   display: block;
   position: absolute;
@@ -188,7 +131,7 @@ exports[`Select renders snapshot of inverted 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-3 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -213,11 +156,11 @@ exports[`Select renders snapshot of inverted 1`] = `
   padding-right: 36px;
 }
 
-.emotion-3:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-2 {
   position: absolute;
   z-index: 1;
   display: -webkit-box;
@@ -238,45 +181,34 @@ exports[`Select renders snapshot of inverted 1`] = `
 <div
   class="emotion-0"
 >
-  <label
+  <select
     class="emotion-1"
-    for="form-control-123abC"
   >
-    Pick a technology
-  </label>
+    <option
+      value="python"
+    >
+      Python
+    </option>
+    <option
+      value="sql"
+    >
+      SQL
+    </option>
+  </select>
   <div
     class="emotion-2"
   >
-    <select
-      class="emotion-3"
-      id="form-control-123abC"
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
     >
-      <option
-        value="python"
-      >
-        Python
-      </option>
-      <option
-        value="sql"
-      >
-        SQL
-      </option>
-    </select>
-    <div
-      class="emotion-4"
-    >
-      <svg
-        aria-hidden="true"
-        height="16"
-        viewBox="0 0 18 18"
-        width="16"
-      >
-        <path
-          d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
+      <path
+        d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
+        fill="currentColor"
+      />
+    </svg>
   </div>
 </div>
 `;
@@ -285,34 +217,11 @@ exports[`Select renders snapshot of placeholder, when value is set to empty stri
 .emotion-0 {
   position: relative;
   width: 100%;
-}
-
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #05192D;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  position: relative;
-  width: 100%;
   height: 36px;
   opacity: 1;
 }
 
-.emotion-2::after {
+.emotion-0::after {
   content: '';
   display: block;
   position: absolute;
@@ -328,7 +237,7 @@ exports[`Select renders snapshot of placeholder, when value is set to empty stri
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-3 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -354,11 +263,11 @@ exports[`Select renders snapshot of placeholder, when value is set to empty stri
   color: #65707C;
 }
 
-.emotion-3:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-2 {
   position: absolute;
   z-index: 1;
   display: -webkit-box;
@@ -379,50 +288,39 @@ exports[`Select renders snapshot of placeholder, when value is set to empty stri
 <div
   class="emotion-0"
 >
-  <label
+  <select
     class="emotion-1"
-    for="form-control-123abC"
   >
-    Pick a technology
-  </label>
+    <option
+      value=""
+    >
+      Placeholder
+    </option>
+    <option
+      value="python"
+    >
+      Python
+    </option>
+    <option
+      value="sql"
+    >
+      SQL
+    </option>
+  </select>
   <div
     class="emotion-2"
   >
-    <select
-      class="emotion-3"
-      id="form-control-123abC"
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
     >
-      <option
-        value=""
-      >
-        Placeholder
-      </option>
-      <option
-        value="python"
-      >
-        Python
-      </option>
-      <option
-        value="sql"
-      >
-        SQL
-      </option>
-    </select>
-    <div
-      class="emotion-4"
-    >
-      <svg
-        aria-hidden="true"
-        height="16"
-        viewBox="0 0 18 18"
-        width="16"
-      >
-        <path
-          d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
+      <path
+        d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
+        fill="currentColor"
+      />
+    </svg>
   </div>
 </div>
 `;
@@ -431,60 +329,11 @@ exports[`Select renders snapshot of required with error 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
-}
-
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #05192D;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  color: #65707C;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  text-align: right;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-3 {
-  font-size: 14px;
-  color: #DD3400;
-}
-
-.emotion-4 {
-  position: relative;
-  width: 100%;
   height: 36px;
   opacity: 1;
 }
 
-.emotion-4::after {
+.emotion-0::after {
   content: '';
   display: block;
   position: absolute;
@@ -500,7 +349,7 @@ exports[`Select renders snapshot of required with error 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-5 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -524,15 +373,13 @@ exports[`Select renders snapshot of required with error 1`] = `
   padding-left: 12px;
   padding-right: 36px;
   color: #65707C;
-  border-color: #DD3400;
-  box-shadow: 0 0 0 1px #DD3400;
 }
 
-.emotion-5:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-6 {
+.emotion-2 {
   position: absolute;
   z-index: 1;
   display: -webkit-box;
@@ -550,88 +397,44 @@ exports[`Select renders snapshot of required with error 1`] = `
   color: #05192D;
 }
 
-.emotion-7 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  margin-top: 8px;
-  color: #C01100;
-  line-height: 1.25;
-}
-
 <div
   class="emotion-0"
 >
-  <label
+  <select
     class="emotion-1"
-    for="form-control-123abC"
+    required=""
   >
-    Pick a technology
-    <span
-      aria-hidden="true"
-      class="emotion-2"
+    <option
+      value=""
     >
-      <span
-        class="emotion-3"
-      >
-        •
-      </span>
-       Required
-    </span>
-  </label>
+      Select appropriate technology...
+    </option>
+    <option
+      value="python"
+    >
+      Python
+    </option>
+    <option
+      value="sql"
+    >
+      SQL
+    </option>
+  </select>
   <div
-    class="emotion-4"
+    class="emotion-2"
   >
-    <select
-      aria-describedby="form-control-error-123abC"
-      aria-errormessage="form-control-error-123abC"
-      aria-invalid="true"
-      class="emotion-5"
-      id="form-control-123abC"
-      required=""
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
     >
-      <option
-        value=""
-      >
-        Select appropriate technology...
-      </option>
-      <option
-        value="python"
-      >
-        Python
-      </option>
-      <option
-        value="sql"
-      >
-        SQL
-      </option>
-    </select>
-    <div
-      class="emotion-6"
-    >
-      <svg
-        aria-hidden="true"
-        height="16"
-        viewBox="0 0 18 18"
-        width="16"
-      >
-        <path
-          d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
+      <path
+        d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
+        fill="currentColor"
+      />
+    </svg>
   </div>
-  <p
-    class="emotion-7"
-    id="form-control-error-123abC"
-  >
-    Select a technology.
-  </p>
 </div>
 `;
 
@@ -639,34 +442,11 @@ exports[`Select renders snapshot of size large 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
-}
-
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #05192D;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  position: relative;
-  width: 100%;
   height: 48px;
   opacity: 1;
 }
 
-.emotion-2::after {
+.emotion-0::after {
   content: '';
   display: block;
   position: absolute;
@@ -682,7 +462,7 @@ exports[`Select renders snapshot of size large 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-3 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -707,11 +487,11 @@ exports[`Select renders snapshot of size large 1`] = `
   padding-right: 36px;
 }
 
-.emotion-3:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-2 {
   position: absolute;
   z-index: 1;
   display: -webkit-box;
@@ -732,45 +512,34 @@ exports[`Select renders snapshot of size large 1`] = `
 <div
   class="emotion-0"
 >
-  <label
+  <select
     class="emotion-1"
-    for="form-control-123abC"
   >
-    Pick a technology
-  </label>
+    <option
+      value="python"
+    >
+      Python
+    </option>
+    <option
+      value="sql"
+    >
+      SQL
+    </option>
+  </select>
   <div
     class="emotion-2"
   >
-    <select
-      class="emotion-3"
-      id="form-control-123abC"
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
     >
-      <option
-        value="python"
-      >
-        Python
-      </option>
-      <option
-        value="sql"
-      >
-        SQL
-      </option>
-    </select>
-    <div
-      class="emotion-4"
-    >
-      <svg
-        aria-hidden="true"
-        height="16"
-        viewBox="0 0 18 18"
-        width="16"
-      >
-        <path
-          d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
+      <path
+        d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
+        fill="currentColor"
+      />
+    </svg>
   </div>
 </div>
 `;
@@ -779,34 +548,11 @@ exports[`Select renders snapshot of size medium 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
-}
-
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #05192D;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  position: relative;
-  width: 100%;
   height: 36px;
   opacity: 1;
 }
 
-.emotion-2::after {
+.emotion-0::after {
   content: '';
   display: block;
   position: absolute;
@@ -822,7 +568,7 @@ exports[`Select renders snapshot of size medium 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-3 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -847,11 +593,11 @@ exports[`Select renders snapshot of size medium 1`] = `
   padding-right: 36px;
 }
 
-.emotion-3:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-2 {
   position: absolute;
   z-index: 1;
   display: -webkit-box;
@@ -872,45 +618,34 @@ exports[`Select renders snapshot of size medium 1`] = `
 <div
   class="emotion-0"
 >
-  <label
+  <select
     class="emotion-1"
-    for="form-control-123abC"
   >
-    Pick a technology
-  </label>
+    <option
+      value="python"
+    >
+      Python
+    </option>
+    <option
+      value="sql"
+    >
+      SQL
+    </option>
+  </select>
   <div
     class="emotion-2"
   >
-    <select
-      class="emotion-3"
-      id="form-control-123abC"
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
     >
-      <option
-        value="python"
-      >
-        Python
-      </option>
-      <option
-        value="sql"
-      >
-        SQL
-      </option>
-    </select>
-    <div
-      class="emotion-4"
-    >
-      <svg
-        aria-hidden="true"
-        height="16"
-        viewBox="0 0 18 18"
-        width="16"
-      >
-        <path
-          d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
+      <path
+        d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
+        fill="currentColor"
+      />
+    </svg>
   </div>
 </div>
 `;
@@ -919,34 +654,11 @@ exports[`Select renders snapshot of size small 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
-}
-
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #05192D;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  position: relative;
-  width: 100%;
   height: 24px;
   opacity: 1;
 }
 
-.emotion-2::after {
+.emotion-0::after {
   content: '';
   display: block;
   position: absolute;
@@ -962,7 +674,7 @@ exports[`Select renders snapshot of size small 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-3 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -987,11 +699,11 @@ exports[`Select renders snapshot of size small 1`] = `
   padding-right: 26px;
 }
 
-.emotion-3:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-2 {
   position: absolute;
   z-index: 1;
   display: -webkit-box;
@@ -1012,206 +724,34 @@ exports[`Select renders snapshot of size small 1`] = `
 <div
   class="emotion-0"
 >
-  <label
+  <select
     class="emotion-1"
-    for="form-control-123abC"
   >
-    Pick a technology
-  </label>
+    <option
+      value="python"
+    >
+      Python
+    </option>
+    <option
+      value="sql"
+    >
+      SQL
+    </option>
+  </select>
   <div
     class="emotion-2"
   >
-    <select
-      class="emotion-3"
-      id="form-control-123abC"
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
     >
-      <option
-        value="python"
-      >
-        Python
-      </option>
-      <option
-        value="sql"
-      >
-        SQL
-      </option>
-    </select>
-    <div
-      class="emotion-4"
-    >
-      <svg
-        aria-hidden="true"
-        height="16"
-        viewBox="0 0 18 18"
-        width="16"
-      >
-        <path
-          d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Select renders snapshot with label and description 1`] = `
-.emotion-0 {
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #05192D;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  margin-bottom: 8px;
-  color: #05192D;
-  font-size: 14px;
-  line-height: 1.25;
-  margin-top: -4px;
-}
-
-.emotion-3 {
-  position: relative;
-  width: 100%;
-  height: 36px;
-  opacity: 1;
-}
-
-.emotion-3::after {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: -2px;
-  border-radius: 6px;
-  pointer-events: none;
-  -webkit-transition: box-shadow 125ms ease-out;
-  transition: box-shadow 125ms ease-out;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
-  border: 1px solid #848C92;
-  border-radius: 4px;
-  outline: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  color: #05192D;
-  background-color: #FFFFFF;
-  padding-left: 12px;
-  padding-right: 36px;
-}
-
-.emotion-4:disabled {
-  cursor: default;
-}
-
-.emotion-5 {
-  position: absolute;
-  z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  pointer-events: none;
-  top: 0;
-  right: 12px;
-  color: #05192D;
-}
-
-<div
-  class="emotion-0"
->
-  <label
-    class="emotion-1"
-    for="form-control-123abC"
-  >
-    Pick a technology
-  </label>
-  <p
-    class="emotion-2"
-  >
-    Additional description
-  </p>
-  <div
-    class="emotion-3"
-  >
-    <select
-      class="emotion-4"
-      id="form-control-123abC"
-    >
-      <option
-        value="python"
-      >
-        Python
-      </option>
-      <option
-        value="sql"
-      >
-        SQL
-      </option>
-    </select>
-    <div
-      class="emotion-5"
-    >
-      <svg
-        aria-hidden="true"
-        height="16"
-        viewBox="0 0 18 18"
-        width="16"
-      >
-        <path
-          d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
+      <path
+        d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
+        fill="currentColor"
+      />
+    </svg>
   </div>
 </div>
 `;
