@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { useRef, useEffect } from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -19,44 +20,22 @@ function TestRefTextArea() {
     inputRef.current?.focus();
   }, []);
 
-  return <TextArea ref={inputRef} label="How do you feel?" />;
+  return <TextArea ref={inputRef} />;
 }
 
 describe('TextArea', () => {
   it('renders a basic text area', () => {
-    const { container } = render(<TextArea label="How do you feel?" />);
+    const { container } = render(<TextArea />);
 
     const textarea = container.querySelector('textarea');
-    const label = container.querySelector('label');
 
     expect(textarea).toBeInTheDocument();
-    expect(label).toHaveTextContent('How do you feel?');
-  });
-
-  it('renders a text area with description and placeholder', () => {
-    const { getByPlaceholderText, getByText } = render(
-      <TextArea
-        label="How do you feel?"
-        description="Additional description"
-        placeholder="Leave a comment here"
-      />,
-    );
-
-    const textarea = getByPlaceholderText('Leave a comment here');
-    const description = getByText('Additional description');
-
-    expect(textarea).toBeInTheDocument();
-    expect(description).toBeInTheDocument();
   });
 
   it('handles typing correctly', () => {
     const handleChange = jest.fn();
     const { getByPlaceholderText } = render(
-      <TextArea
-        onChange={handleChange}
-        label="How do you feel?"
-        placeholder="Leave a comment here"
-      />,
+      <TextArea onChange={handleChange} placeholder="Leave a comment here" />,
     );
 
     const textarea = getByPlaceholderText('Leave a comment here');
@@ -65,107 +44,16 @@ describe('TextArea', () => {
     expect(handleChange).toHaveBeenCalledTimes(4);
   });
 
-  it('after clicking on label text area got focused', () => {
-    const handleFocus = jest.fn();
-    const { getByText } = render(
-      <TextArea
-        label="How do you feel?"
-        description="Additional description"
-        onFocus={handleFocus}
-      />,
-    );
-
-    const label = getByText('How do you feel?');
-    userEvent.click(label);
-
-    expect(handleFocus).toHaveBeenCalledTimes(1);
-  });
-
-  it('renders additional message when text area is required', () => {
-    const { getByText } = render(
-      <TextArea label="How do you feel?" required />,
-    );
-
-    const message = getByText(/required/i);
-
-    expect(message).toBeInTheDocument();
-  });
-
-  it('renders error message', () => {
-    const { getByText } = render(
-      <TextArea label="How do you feel?" error="Comment is just too long." />,
-    );
-
-    const error = getByText('Comment is just too long.');
-
-    expect(error).toBeInTheDocument();
-  });
-
-  it('sets correct aria attributes when has error', () => {
-    const { getByPlaceholderText } = render(
-      <TextArea
-        label="How do you feel?"
-        error="Comment is just too long."
-        placeholder="Leave a comment here"
-      />,
-    );
-
-    const textarea = getByPlaceholderText('Leave a comment here');
-
-    expect(textarea).toHaveAttribute('aria-invalid', 'true');
-  });
-
-  it('textarea and label are associated by the same ID', () => {
-    const { container } = render(<TextArea label="How do you feel?" />);
-
-    const textarea = container.querySelector('textarea');
-    const label = container.querySelector('label');
-
-    expect(label).toHaveAttribute('for', `form-control-${MOCKED_ID}`);
-    expect(textarea).toHaveAttribute('id', `form-control-${MOCKED_ID}`);
-  });
-
-  it('when user defined ID is passed, textarea and label are associated by it', () => {
-    const { container } = render(
-      <TextArea label="How do you feel?" id="mood-textarea" />,
-    );
-
-    const textarea = container.querySelector('textarea');
-    const label = container.querySelector('label');
-
-    expect(label).toHaveAttribute('for', `mood-textarea`);
-    expect(textarea).toHaveAttribute('id', `mood-textarea`);
-  });
-
-  it('textarea and error are associated by the same ID', () => {
-    const { container, getByText } = render(
-      <TextArea label="How do you feel?" error="Comment is just too long." />,
-    );
-
-    const textarea = container.querySelector('textarea');
-    const error = getByText('Comment is just too long.');
-
-    expect(textarea).toHaveAttribute(
-      'aria-errormessage',
-      `form-control-error-${MOCKED_ID}`,
-    );
-    expect(error).toHaveAttribute('id', `form-control-error-${MOCKED_ID}`);
-  });
-
   it('sets the data attribute on the text area', () => {
-    const { getByTestId } = render(
-      <TextArea data-testid="mood-textarea" label="How do you feel?" />,
-    );
+    const { getByTestId } = render(<TextArea data-testid="test-textarea" />);
 
-    const input = getByTestId('mood-textarea');
+    const input = getByTestId('test-textarea');
 
     expect(input).toBeInTheDocument();
   });
 
   it('renders the disabled text area', () => {
-    const { container } = render(
-      <TextArea disabled label="How do you feel?" />,
-    );
+    const { container } = render(<TextArea disabled />);
 
     const textarea = container.querySelector('textarea');
 
@@ -180,13 +68,9 @@ describe('TextArea', () => {
     expect(textarea).toHaveFocus();
   });
 
-  it('renders snapshot with label and description', () => {
+  it('renders snapshot', () => {
     const { container } = render(
-      <TextArea
-        label="How do you feel?"
-        description="Additional description"
-        placeholder="Leave a comment here"
-      />,
+      <TextArea placeholder="Leave a comment here" />,
     );
 
     const textarea = container.firstChild;
@@ -194,39 +78,21 @@ describe('TextArea', () => {
   });
 
   it('renders snapshot of required with error', () => {
-    const { container } = render(
-      <TextArea
-        label="How do you feel?"
-        error="Comment is just too long."
-        required
-      />,
-    );
+    const { container } = render(<TextArea error />);
 
     const textarea = container.firstChild;
     expect(textarea).toMatchSnapshot();
   });
 
   it('renders snapshot of inverted', () => {
-    const { container } = render(
-      <TextArea
-        inverted
-        label="How do you feel?"
-        description="Additional description"
-      />,
-    );
+    const { container } = render(<TextArea inverted />);
 
     const textarea = container.firstChild;
     expect(textarea).toMatchSnapshot();
   });
 
   it('renders snapshot of disabled', () => {
-    const { container } = render(
-      <TextArea
-        disabled
-        label="How do you feel?"
-        description="Additional description"
-      />,
-    );
+    const { container } = render(<TextArea disabled />);
 
     const textarea = container.firstChild;
     expect(textarea).toMatchSnapshot();
@@ -234,7 +100,7 @@ describe('TextArea', () => {
 
   it('renders all supporting elements to make auto-grow work', () => {
     const { container } = render(
-      <TextArea autoGrow label="How do you feel?" />,
+      <TextArea autoGrow value="Welcome" onChange={() => {}} />,
     );
 
     const textarea = container.firstChild;

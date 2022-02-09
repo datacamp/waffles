@@ -2,38 +2,15 @@
 
 exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
 .emotion-0 {
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #05192D;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
   display: grid;
 }
 
-.emotion-3 {
+.emotion-1 {
   position: relative;
   grid-area: 1/1/2/2;
 }
 
-.emotion-3::after {
+.emotion-1::after {
   content: '';
   display: block;
   position: absolute;
@@ -49,7 +26,7 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: block;
   width: 100%;
   height: 100%;
@@ -68,32 +45,32 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
   background-color: #FFFFFF;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: default;
   opacity: 0.6;
 }
 
-.emotion-4::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   opacity: 1;
   color: #65707C;
 }
 
-.emotion-4::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   opacity: 1;
   color: #65707C;
 }
 
-.emotion-4:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   opacity: 1;
   color: #65707C;
 }
 
-.emotion-4::placeholder {
+.emotion-2::placeholder {
   opacity: 1;
   color: #65707C;
 }
 
-.emotion-5 {
+.emotion-3 {
   display: block;
   width: 100%;
   height: 100%;
@@ -113,7 +90,7 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
   white-space: pre-wrap;
 }
 
-.emotion-5:disabled {
+.emotion-3:disabled {
   cursor: default;
   opacity: 0.6;
 }
@@ -121,78 +98,30 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
 <div
   class="emotion-0"
 >
-  <label
-    class="emotion-1"
-    for="form-control-123abC"
-  >
-    How do you feel?
-  </label>
   <div
-    class="emotion-2"
+    class="emotion-1"
   >
-    <div
-      class="emotion-3"
+    <textarea
+      class="emotion-2"
     >
-      <textarea
-        class="emotion-4"
-        id="form-control-123abC"
-      />
-    </div>
-    <div
-      aria-hidden="true"
-      class="emotion-5"
-    >
-      undefined 
-    </div>
+      Welcome
+    </textarea>
+  </div>
+  <div
+    aria-hidden="true"
+    class="emotion-3"
+  >
+    Welcome 
   </div>
 </div>
 `;
 
-exports[`TextArea renders snapshot of disabled 1`] = `
+exports[`TextArea renders snapshot 1`] = `
 .emotion-0 {
   position: relative;
-  width: 100%;
 }
 
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #05192D;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  margin-bottom: 8px;
-  color: #05192D;
-  font-size: 14px;
-  line-height: 1.25;
-  margin-top: -4px;
-}
-
-.emotion-3 {
-  position: relative;
-}
-
-.emotion-3::after {
+.emotion-0::after {
   content: '';
   display: block;
   position: absolute;
@@ -208,7 +137,7 @@ exports[`TextArea renders snapshot of disabled 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-4 {
+.emotion-1 {
   display: block;
   width: 100%;
   height: 100%;
@@ -227,27 +156,27 @@ exports[`TextArea renders snapshot of disabled 1`] = `
   background-color: #FFFFFF;
 }
 
-.emotion-4:disabled {
+.emotion-1:disabled {
   cursor: default;
   opacity: 0.6;
 }
 
-.emotion-4::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   opacity: 1;
   color: #65707C;
 }
 
-.emotion-4::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   opacity: 1;
   color: #65707C;
 }
 
-.emotion-4:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   opacity: 1;
   color: #65707C;
 }
 
-.emotion-4::placeholder {
+.emotion-1::placeholder {
   opacity: 1;
   color: #65707C;
 }
@@ -255,74 +184,19 @@ exports[`TextArea renders snapshot of disabled 1`] = `
 <div
   class="emotion-0"
 >
-  <label
+  <textarea
     class="emotion-1"
-    for="form-control-123abC"
-  >
-    How do you feel?
-  </label>
-  <p
-    class="emotion-2"
-  >
-    Additional description
-  </p>
-  <div
-    class="emotion-3"
-  >
-    <textarea
-      class="emotion-4"
-      disabled=""
-      id="form-control-123abC"
-    />
-  </div>
+    placeholder="Leave a comment here"
+  />
 </div>
 `;
 
-exports[`TextArea renders snapshot of inverted 1`] = `
+exports[`TextArea renders snapshot of disabled 1`] = `
 .emotion-0 {
   position: relative;
-  width: 100%;
 }
 
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #FFFFFF;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  margin-bottom: 8px;
-  color: #FFFFFF;
-  font-size: 14px;
-  line-height: 1.25;
-  margin-top: -4px;
-}
-
-.emotion-3 {
-  position: relative;
-}
-
-.emotion-3::after {
+.emotion-0::after {
   content: '';
   display: block;
   position: absolute;
@@ -338,7 +212,82 @@ exports[`TextArea renders snapshot of inverted 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-4 {
+.emotion-1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 8px 12px;
+  color: #05192D;
+  background-color: #FFFFFF;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid #848C92;
+  border-radius: 4px;
+  outline: 0;
+  color: #05192D;
+  background-color: #FFFFFF;
+}
+
+.emotion-1:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-1::-moz-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-1:-ms-input-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-1::placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+<div
+  class="emotion-0"
+>
+  <textarea
+    class="emotion-1"
+    disabled=""
+  />
+</div>
+`;
+
+exports[`TextArea renders snapshot of inverted 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-1 {
   display: block;
   width: 100%;
   height: 100%;
@@ -357,27 +306,27 @@ exports[`TextArea renders snapshot of inverted 1`] = `
   background-color: #213147;
 }
 
-.emotion-4:disabled {
+.emotion-1:disabled {
   cursor: default;
   opacity: 0.6;
 }
 
-.emotion-4::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   opacity: 1;
   color: #9BA3AB;
 }
 
-.emotion-4::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   opacity: 1;
   color: #9BA3AB;
 }
 
-.emotion-4:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   opacity: 1;
   color: #9BA3AB;
 }
 
-.emotion-4::placeholder {
+.emotion-1::placeholder {
   opacity: 1;
   color: #9BA3AB;
 }
@@ -385,83 +334,18 @@ exports[`TextArea renders snapshot of inverted 1`] = `
 <div
   class="emotion-0"
 >
-  <label
+  <textarea
     class="emotion-1"
-    for="form-control-123abC"
-  >
-    How do you feel?
-  </label>
-  <p
-    class="emotion-2"
-  >
-    Additional description
-  </p>
-  <div
-    class="emotion-3"
-  >
-    <textarea
-      class="emotion-4"
-      id="form-control-123abC"
-    />
-  </div>
+  />
 </div>
 `;
 
 exports[`TextArea renders snapshot of required with error 1`] = `
 .emotion-0 {
   position: relative;
-  width: 100%;
 }
 
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #05192D;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  color: #65707C;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  text-align: right;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-3 {
-  font-size: 14px;
-  color: #DD3400;
-}
-
-.emotion-4 {
-  position: relative;
-}
-
-.emotion-4::after {
+.emotion-0::after {
   content: '';
   display: block;
   position: absolute;
@@ -477,7 +361,7 @@ exports[`TextArea renders snapshot of required with error 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-5 {
+.emotion-1 {
   display: block;
   width: 100%;
   height: 100%;
@@ -498,184 +382,27 @@ exports[`TextArea renders snapshot of required with error 1`] = `
   box-shadow: 0 0 0 1px #DD3400;
 }
 
-.emotion-5:disabled {
+.emotion-1:disabled {
   cursor: default;
   opacity: 0.6;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   opacity: 1;
   color: #65707C;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   opacity: 1;
   color: #65707C;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   opacity: 1;
   color: #65707C;
 }
 
-.emotion-5::placeholder {
-  opacity: 1;
-  color: #65707C;
-}
-
-.emotion-6 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  margin-top: 8px;
-  color: #C01100;
-  line-height: 1.25;
-}
-
-<div
-  class="emotion-0"
->
-  <label
-    class="emotion-1"
-    for="form-control-123abC"
-  >
-    How do you feel?
-    <span
-      aria-hidden="true"
-      class="emotion-2"
-    >
-      <span
-        class="emotion-3"
-      >
-        •
-      </span>
-       Required
-    </span>
-  </label>
-  <div
-    class="emotion-4"
-  >
-    <textarea
-      aria-describedby="form-control-error-123abC"
-      aria-errormessage="form-control-error-123abC"
-      aria-invalid="true"
-      class="emotion-5"
-      id="form-control-123abC"
-    />
-  </div>
-  <p
-    class="emotion-6"
-    id="form-control-error-123abC"
-  >
-    Comment is just too long.
-  </p>
-</div>
-`;
-
-exports[`TextArea renders snapshot with label and description 1`] = `
-.emotion-0 {
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.25;
-  font-weight: 800;
-  color: #05192D;
-  margin-bottom: 8px;
-}
-
-.emotion-2 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  margin-bottom: 8px;
-  color: #05192D;
-  font-size: 14px;
-  line-height: 1.25;
-  margin-top: -4px;
-}
-
-.emotion-3 {
-  position: relative;
-}
-
-.emotion-3::after {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: -2px;
-  border-radius: 6px;
-  pointer-events: none;
-  -webkit-transition: box-shadow 125ms ease-out;
-  transition: box-shadow 125ms ease-out;
-}
-
-.emotion-4 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  resize: none;
-  padding: 8px 12px;
-  color: #05192D;
-  background-color: #FFFFFF;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
-  border: 1px solid #848C92;
-  border-radius: 4px;
-  outline: 0;
-  color: #05192D;
-  background-color: #FFFFFF;
-}
-
-.emotion-4:disabled {
-  cursor: default;
-  opacity: 0.6;
-}
-
-.emotion-4::-webkit-input-placeholder {
-  opacity: 1;
-  color: #65707C;
-}
-
-.emotion-4::-moz-placeholder {
-  opacity: 1;
-  color: #65707C;
-}
-
-.emotion-4:-ms-input-placeholder {
-  opacity: 1;
-  color: #65707C;
-}
-
-.emotion-4::placeholder {
+.emotion-1::placeholder {
   opacity: 1;
   color: #65707C;
 }
@@ -683,25 +410,8 @@ exports[`TextArea renders snapshot with label and description 1`] = `
 <div
   class="emotion-0"
 >
-  <label
+  <textarea
     class="emotion-1"
-    for="form-control-123abC"
-  >
-    How do you feel?
-  </label>
-  <p
-    class="emotion-2"
-  >
-    Additional description
-  </p>
-  <div
-    class="emotion-3"
-  >
-    <textarea
-      class="emotion-4"
-      id="form-control-123abC"
-      placeholder="Leave a comment here"
-    />
-  </div>
+  />
 </div>
 `;
