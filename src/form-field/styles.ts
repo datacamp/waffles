@@ -34,7 +34,7 @@ type RequiredStyleOptions = {
   inverted: boolean;
 };
 
-export function requiredStyle({ inverted }: RequiredStyleOptions) {
+export function requiredIndicatorStyle({ inverted }: RequiredStyleOptions) {
   return css`
     font-size: ${tokens.fontSizes.small};
     color: ${inverted
@@ -50,10 +50,11 @@ type RequiredBulletStyleOptions = {
   inverted: boolean;
 };
 
-export function requiredBulletStyle({ inverted }: RequiredBulletStyleOptions) {
+export function requiredMarkerStyle({ inverted }: RequiredBulletStyleOptions) {
   return css`
     font-size: ${tokens.fontSizes.medium};
     color: ${inverted ? tokens.colors.red : tokens.colors.redDark};
+    margin-right: 4px;
   `;
 }
 
