@@ -11,7 +11,7 @@ type InputProps = {
   size?: 'small' | 'medium' | 'large';
   /* Sets the style of the input suitable for dark backgrounds. */
   inverted?: boolean;
-  /* Sets appropriate error styling, and `aria-invalid` attribute. */
+  /* Sets appropriate error style. */
   error?: boolean;
   /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
   iconLeft?: React.ReactNode;
