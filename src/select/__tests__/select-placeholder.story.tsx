@@ -11,7 +11,7 @@ const wrapperStyle = css`
 function Story() {
   return (
     <div css={wrapperStyle}>
-      <Select label="Select with placeholder" value="" onChange={() => {}}>
+      <Select aria-label="Select with placeholder" value="" onChange={() => {}}>
         <option value="" disabled hidden>
           Select a programming language...
         </option>

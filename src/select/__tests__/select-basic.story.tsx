@@ -17,7 +17,7 @@ function Story() {
 
   return (
     <div css={wrapperStyle}>
-      <Select label="Basic select" value={value} onChange={handleChange}>
+      <Select aria-label="Basic select" value={value} onChange={handleChange}>
         <option value="python">Python</option>
         <option value="sql">SQL</option>
         <option value="r-lang">R</option>

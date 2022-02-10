@@ -14,8 +14,8 @@ function Story() {
     <>
       <div css={wrapperStyle}>
         <Select
-          error="Provide correct value."
-          label="Regular select with error"
+          aria-label="Regular select with error"
+          error
           value="python"
           onChange={() => {}}
         >
@@ -30,9 +30,8 @@ function Story() {
         `}
       >
         <Select
-          error="Provide correct value."
+          aria-label="Inverted select with error"
           inverted
-          label="Inverted select with error"
           value="python"
           onChange={() => {}}
         >

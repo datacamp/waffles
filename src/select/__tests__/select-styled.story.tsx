@@ -19,7 +19,7 @@ function Story() {
     <div css={wrapperStyle}>
       <Select
         css={customSelectStyle}
-        label="Select with custom styles"
+        aria-label="Select with custom styles"
         value="python"
         onChange={() => {}}
       >

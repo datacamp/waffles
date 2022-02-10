@@ -6,7 +6,8 @@ describe('Select', () => {
 
   it('renders proper focus state', () => {
     cy.loadStory('select-basic');
-    cy.get('main').findByText('Basic select').click();
+    cy.get('main').findByLabelText('Basic select').focus();
+    cy.get('main').findByLabelText('Basic select').should('have.focus');
   });
 
   it('renders with custom styles applied', () => {
@@ -22,11 +23,6 @@ describe('Select', () => {
   it('renders a placeholder', () => {
     cy.loadStory('select-placeholder');
     cy.get('main').find('select').should('have.length', 1);
-  });
-
-  it('renders required indicator', () => {
-    cy.loadStory('select-required');
-    cy.get('main').findAllByText('Required').should('have.length', 2);
   });
 
   it('render all sizes, with inverted and disabled', () => {
