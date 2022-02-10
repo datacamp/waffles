@@ -55,6 +55,7 @@ export { default as Crosshair } from './crosshair';
 export { default as DataCampBrand } from './data-camp-brand';
 export { default as Database } from './database';
 export { default as Desktop } from './desktop';
+export { default as Diamond } from './diamond';
 export { default as Document } from './document';
 export { default as Dollar } from './dollar';
 export { default as Download } from './download';
