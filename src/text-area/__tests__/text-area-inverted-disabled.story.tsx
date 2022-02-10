@@ -4,8 +4,6 @@ import { tokens } from '../../tokens';
 import { TextArea } from '../index';
 
 const wrapperStyle = css`
-  display: flex;
-  gap: ${tokens.spacing.large};
   padding: ${tokens.spacing.medium};
 `;
 
@@ -15,8 +13,7 @@ function Story() {
       {/* Regular */}
       <div css={wrapperStyle}>
         <TextArea
-          label="Regular text area"
-          description="Description of regular text area"
+          aria-label="Regular text area"
           placeholder="Type a message here"
         />
       </div>
@@ -24,8 +21,7 @@ function Story() {
       <div css={wrapperStyle}>
         <TextArea
           disabled
-          label="Disabled text area"
-          description="Description of disabled text area"
+          aria-label="Disabled text area"
           placeholder="Type a message here"
         />
       </div>
@@ -38,8 +34,7 @@ function Story() {
       >
         <TextArea
           inverted
-          label="Inverted text area"
-          description="Description of inverted text area"
+          aria-label="Inverted text area"
           placeholder="Type a message here"
         />
       </div>
@@ -53,8 +48,7 @@ function Story() {
         <TextArea
           inverted
           disabled
-          label="Inverted disabled text area"
-          description="Description of inverted disabled text area"
+          aria-label="Inverted disabled text area"
           placeholder="Type a message here"
         />
       </div>

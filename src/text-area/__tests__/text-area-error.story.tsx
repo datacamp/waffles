@@ -12,8 +12,8 @@ function Story() {
   return (
     <div css={wrapperStyle}>
       <TextArea
-        label="Text area with error"
-        error="Provide correct value."
+        aria-label="Text area with error"
+        error
         value="Invalid value"
         onChange={() => {}}
         rows={3}

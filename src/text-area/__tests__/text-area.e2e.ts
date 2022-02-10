@@ -2,12 +2,11 @@ describe('TextArea', () => {
   it('renders a basic text area', () => {
     cy.loadStory('text-area-basic');
     cy.get('main').find('textarea').should('have.length', 1);
-    cy.get('main').find('label').should('have.length', 1);
   });
 
   it('renders proper focus state', () => {
     cy.loadStory('text-area-basic');
-    cy.get('main').findByText('Basic text area').click();
+    cy.get('main').findByLabelText('Basic text area').focus();
     cy.get('main').find('textarea').should('have.focus');
   });
 
@@ -18,14 +17,7 @@ describe('TextArea', () => {
 
   it('renders with error', () => {
     cy.loadStory('text-area-error');
-    cy.get('main')
-      .findByText(/provide correct value/i)
-      .should('exist');
-  });
-
-  it('renders required indicator', () => {
-    cy.loadStory('text-area-required');
-    cy.get('main').findAllByText('Required').should('have.length', 2);
+    cy.get('main').find('textarea').should('have.length', 1);
   });
 
   it('render inverted and disabled', () => {

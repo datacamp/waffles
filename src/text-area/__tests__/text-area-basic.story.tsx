@@ -18,7 +18,7 @@ function Story() {
   return (
     <div css={wrapperStyle}>
       <TextArea
-        label="Basic text area"
+        aria-label="Basic text area"
         value={value}
         onChange={handleChange}
         rows={3}

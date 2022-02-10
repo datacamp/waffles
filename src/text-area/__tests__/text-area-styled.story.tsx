@@ -19,7 +19,7 @@ function Story() {
     <div css={wrapperStyle}>
       <TextArea
         css={customTextAreaStyle}
-        label="Text area with custom style"
+        aria-label="Text area with custom style"
         value="Texarea value"
         onChange={() => {}}
         rows={3}
