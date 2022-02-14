@@ -16,7 +16,7 @@ type FormFieldProps = {
   id?: string;
   /* Optional description shown above the input. */
   description?: React.ReactNode;
-  /* Depending on the selected `requiredIndicator` option, shows or hides appropriate indicator next tot the label, and sets `required` attribute on the enhanced input. */
+  /* Depending on the selected `requiredIndicator` option, shows or hides appropriate indicator next to the label, and sets `required` attribute on the enhanced input. */
   required?: boolean;
   /* Type of required indicator to display. Depending on selected option show either *Optional* when input is not required, or *Required* when input is marked as required.  */
   requiredIndicator?: 'showOptional' | 'showRequired';
