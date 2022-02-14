@@ -22,7 +22,7 @@ type FormFieldProps = {
   requiredIndicator?: 'showOptional' | 'showRequired';
   /* Sets the style of the input field suitable for dark backgrounds. */
   inverted?: boolean;
-  /* Error message displayed below the input. Also sets appropriate error styling of the input itself, and `aria-invalid` attribute.*/
+  /* Error message displayed below the input. */
   error?: string;
 };
 
@@ -50,7 +50,6 @@ function FormField({
         error: true,
         'aria-errormessage': errorId,
         'aria-describedby': errorId,
-        'aria-invalid': true,
       }),
     });
 

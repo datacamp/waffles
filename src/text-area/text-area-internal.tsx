@@ -4,7 +4,7 @@ import { textAreaWrapper, textAreaStyle } from './styles';
 import AutoGrow from './auto-grow';
 
 type TextAreaProps = {
-  /* Sets appropriate error style. */
+  /* Sets appropriate error style and `aria-invalid` attribute. */
   error?: boolean;
   /* Sets the style of the text area suitable for dark backgrounds. */
   inverted?: boolean;
@@ -14,10 +14,10 @@ type TextAreaProps = {
 
 function TextAreaInternal(
   {
-    error,
     value,
     inverted = false,
     autoGrow = false,
+    error = false,
     onFocus,
     onBlur,
     ...restProps
@@ -49,6 +49,7 @@ function TextAreaInternal(
           value={value}
           onFocus={handleFocus}
           onBlur={handleBlur}
+          aria-invalid={error}
           css={textAreaStyle({ hasError: !!error, inverted })}
         />
       </div>

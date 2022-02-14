@@ -11,7 +11,7 @@ type InputProps = {
   size?: 'small' | 'medium' | 'large';
   /* Sets the style of the input suitable for dark backgrounds. */
   inverted?: boolean;
-  /* Sets appropriate error style. */
+  /* Sets appropriate error style and `aria-invalid` attribute. */
   error?: boolean;
   /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
   iconLeft?: React.ReactNode;
@@ -108,6 +108,7 @@ function InputInternal(
         ref={ref}
         type={isPasswordVisible ? 'text' : type}
         disabled={disabled}
+        aria-invalid={error}
         onFocus={handleFocus}
         onBlur={handleBlur}
         css={inputStyle({

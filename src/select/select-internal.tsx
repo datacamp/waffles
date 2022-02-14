@@ -6,7 +6,7 @@ import { selectWrapperStyle, selectStyle, iconRightStyle } from './styles';
 type SelectProps = {
   /* Options to be displayed in the dropdown. To show a placeholder provide an `option` with an empty value, and both `disabled` and `hidden` attributes set. */
   children?: React.ReactNode;
-  /* Sets appropriate error style. */
+  /* Sets appropriate error style and `aria-invalid` attribute. */
   error?: boolean;
   /* Defines the size of the select. In most cases default `medium` size should be used. */
   size?: 'small' | 'medium' | 'large';
@@ -16,10 +16,10 @@ type SelectProps = {
 
 function SelectInternal(
   {
-    error,
     size = 'medium',
     inverted = false,
     disabled = false,
+    error = false,
     children,
     value,
     onFocus,
@@ -52,8 +52,9 @@ function SelectInternal(
         ref={ref}
         onFocus={handleFocus}
         onBlur={handleBlur}
+        aria-invalid={error}
         css={selectStyle({
-          hasError: !!error,
+          hasError: error,
           withPlaceholder: value === '' || value === 'placeholder',
           size,
           inverted,
