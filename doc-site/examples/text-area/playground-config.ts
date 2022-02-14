@@ -18,7 +18,8 @@ function Playground() {
 
   return (
     <TextArea
-      label="Text area label"
+      aria-label="Simple text area"
+      placeholder="Controlled TextArea"
       size="medium"
       rows={3}
       value={value}

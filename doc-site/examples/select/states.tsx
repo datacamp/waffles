@@ -12,11 +12,11 @@ function Example() {
         gap: ${tokens.spacing.large};
       `}
     >
-      <Select disabled label="Disabled select">
+      <Select disabled aria-label="Disabled select">
         <option>First option</option>
         <option>Second option</option>
       </Select>
-      <Select error="Error message" label="Select in error state">
+      <Select error aria-label="Select in error state">
         <option>First option</option>
         <option>Second option</option>
       </Select>

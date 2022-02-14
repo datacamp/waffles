@@ -8,8 +8,8 @@ function Example() {
   return (
     <TextArea
       autoGrow
-      label="Auto-growing text area"
-      description="Text area expands in height as much as it needs."
+      aria-label="Auto-growing text area"
+      placeholder="Auto-growing text area expands in height as much as it needs."
       value={value}
       onChange={(event) => setValue(event.target.value)}
       rows={3}

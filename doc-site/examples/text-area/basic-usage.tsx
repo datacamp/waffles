@@ -7,11 +7,10 @@ function Example() {
 
   return (
     <TextArea
-      label="Your mood"
-      description="How was your day?"
+      aria-label="Your mood"
+      placeholder="How do you feel?"
       value={value}
       onChange={(event) => setValue(event.target.value)}
-      placeholder="How do you feel?"
       rows={3}
     />
   );

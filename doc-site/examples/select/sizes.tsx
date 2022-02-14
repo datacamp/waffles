@@ -12,15 +12,15 @@ function Example() {
         gap: ${tokens.spacing.large};
       `}
     >
-      <Select size="large" label="Large select">
+      <Select size="large" aria-label="Large select">
         <option>First option</option>
         <option>Second option</option>
       </Select>
-      <Select size="medium" label="Medium select">
+      <Select size="medium" aria-label="Medium select">
         <option>First option</option>
         <option>Second option</option>
       </Select>
-      <Select size="small" label="Small select">
+      <Select size="small" aria-label="Small select">
         <option>First option</option>
         <option>Second option</option>
       </Select>

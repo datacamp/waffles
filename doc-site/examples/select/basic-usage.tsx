@@ -7,9 +7,7 @@ function Example() {
 
   return (
     <Select
-      label="What's your favorite code editor?"
-      description="Pick the one you're most comfortable
-        using on the daily basis."
+      aria-label="What's your favorite code editor?"
       value={value}
       onChange={(event) => setValue(event.target.value)}
     >

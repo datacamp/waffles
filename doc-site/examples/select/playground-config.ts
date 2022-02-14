@@ -18,7 +18,7 @@ function Playground() {
 
   return (
     <Select
-      label="Select label"
+      aria-label="Simple select input"
       value={value}
       onChange={handleChange}
     >

@@ -12,10 +12,14 @@ function Example() {
         gap: ${tokens.spacing.large};
       `}
     >
-      <TextArea disabled label="Disabled text area" placeholder="Disabled" />
       <TextArea
-        error="Error message"
-        label="Text area in error state"
+        disabled
+        aria-label="Disabled text area"
+        placeholder="Disabled"
+      />
+      <TextArea
+        error
+        aria-label="Text area in error state"
         placeholder="Error"
       />
     </form>

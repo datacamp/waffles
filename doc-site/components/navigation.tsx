@@ -69,12 +69,11 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Form">
             <Item href="/components/input">Input</Item>
-            <Item href="/components/input-field">Input Field</Item>
             <Item href="/components/text-area">Text Area</Item>
+            <Item href="/components/select">Select</Item>
             <Item href="/components/checkbox">Checkbox</Item>
             <Item href="/components/switch">Switch</Item>
             <Item href="/components/radio">Radio</Item>
-            <Item href="/components/select">Select</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Overlay">
             <Item href="/components/tooltip">Tooltip</Item>

@@ -7,9 +7,7 @@ function Example() {
 
   return (
     <Select
-      label="Select with placeholder"
-      description="Provide an option with empty value which is
-        at the same time disabled and hidden."
+      aria-label="Select with placeholder"
       value={value}
       onChange={(event) => setValue(event.target.value)}
     >
