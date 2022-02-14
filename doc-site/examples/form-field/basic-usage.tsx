@@ -45,6 +45,7 @@ function Example() {
         required
       >
         <TextArea
+          rows={4}
           value={reason}
           onChange={(event) => setReason(event.target.value)}
         />
