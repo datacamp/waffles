@@ -114,6 +114,24 @@ describe('Select', () => {
     expect(select).toBeDisabled();
   });
 
+  it('when error is set provide aria-invalid attribute', () => {
+    const { getByTestId } = render(
+      <Select
+        error
+        value="python"
+        data-testid="custom-select"
+        onChange={jest.fn()}
+      >
+        <option value="python">Python</option>
+        <option value="sql">SQL</option>
+      </Select>,
+    );
+
+    const select = getByTestId('custom-select');
+
+    expect(select).toHaveAttribute('aria-invalid', 'true');
+  });
+
   it('accepts ref and could be focused programmatically', () => {
     const { container } = render(<TestRefSelect />);
 

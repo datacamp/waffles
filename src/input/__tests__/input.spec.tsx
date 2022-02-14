@@ -94,6 +94,16 @@ describe('Input', () => {
     expect(input).toBeDisabled();
   });
 
+  it('when error is set provide aria-invalid attribute', () => {
+    const { getByPlaceholderText } = render(
+      <Input error placeholder="Ariana Grande" />,
+    );
+
+    const input = getByPlaceholderText('Ariana Grande');
+
+    expect(input).toHaveAttribute('aria-invalid', 'true');
+  });
+
   it('renders left icon', () => {
     const { container } = render(<Input iconLeft={<AddCircle />} />);
 

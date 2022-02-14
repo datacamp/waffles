@@ -95,6 +95,7 @@ exports[`Input renders snapshot of disabled state 1`] = `
   class="emotion-0"
 >
   <input
+    aria-invalid="false"
     class="emotion-1"
     disabled=""
     placeholder="Ariana Grande"
@@ -171,6 +172,7 @@ exports[`Input renders snapshot of focused state 1`] = `
 }
 
 <input
+  aria-invalid="false"
   class="emotion-0"
   placeholder="Ariana Grande"
 />
@@ -271,6 +273,7 @@ exports[`Input renders snapshot of inverted 1`] = `
   class="emotion-0"
 >
   <input
+    aria-invalid="false"
     class="emotion-1"
   />
 </div>
@@ -414,6 +417,7 @@ exports[`Input renders snapshot of password type 1`] = `
   class="emotion-0"
 >
   <input
+    aria-invalid="false"
     autocomplete="new-password"
     class="emotion-1"
     spellcheck="false"
@@ -572,6 +576,7 @@ exports[`Input renders snapshot of search type 1`] = `
     </svg>
   </div>
   <input
+    aria-invalid="false"
     class="emotion-2"
     type="search"
   />
@@ -673,6 +678,7 @@ exports[`Input renders snapshot of size large 1`] = `
   class="emotion-0"
 >
   <input
+    aria-invalid="false"
     class="emotion-1"
   />
 </div>
@@ -773,6 +779,7 @@ exports[`Input renders snapshot of size medium 1`] = `
   class="emotion-0"
 >
   <input
+    aria-invalid="false"
     class="emotion-1"
   />
 </div>
@@ -873,6 +880,7 @@ exports[`Input renders snapshot of size small 1`] = `
   class="emotion-0"
 >
   <input
+    aria-invalid="false"
     class="emotion-1"
   />
 </div>
@@ -975,6 +983,7 @@ exports[`Input renders snapshot with error 1`] = `
   class="emotion-0"
 >
   <input
+    aria-invalid="true"
     class="emotion-1"
   />
 </div>
@@ -1106,6 +1115,7 @@ exports[`Input renders snapshot with left icon 1`] = `
     </svg>
   </div>
   <input
+    aria-invalid="false"
     class="emotion-2"
   />
 </div>
@@ -1249,6 +1259,7 @@ exports[`Input renders snapshot with right enhancer 1`] = `
   class="emotion-0"
 >
   <input
+    aria-invalid="false"
     class="emotion-1"
   />
   <div

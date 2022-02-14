@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useRef, useEffect } from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -31,9 +30,8 @@ type TestInputProps = {
   error?: boolean;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
-// Swallow optional error prop, so error is not thrown when running tests
 function TestInput({ error, ...props }: TestInputProps) {
-  return <input {...props} />;
+  return <input {...props} aria-invalid={error} />;
 }
 
 describe('FormField', () => {

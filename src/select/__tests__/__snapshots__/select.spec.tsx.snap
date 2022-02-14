@@ -75,6 +75,7 @@ exports[`Select renders snapshot of disabled 1`] = `
   class="emotion-0"
 >
   <select
+    aria-invalid="false"
     class="emotion-1"
     disabled=""
   >
@@ -182,6 +183,7 @@ exports[`Select renders snapshot of inverted 1`] = `
   class="emotion-0"
 >
   <select
+    aria-invalid="false"
     class="emotion-1"
   >
     <option
@@ -289,6 +291,7 @@ exports[`Select renders snapshot of placeholder, when value is set to empty stri
   class="emotion-0"
 >
   <select
+    aria-invalid="false"
     class="emotion-1"
   >
     <option
@@ -401,6 +404,7 @@ exports[`Select renders snapshot of required with error 1`] = `
   class="emotion-0"
 >
   <select
+    aria-invalid="false"
     class="emotion-1"
     required=""
   >
@@ -513,6 +517,7 @@ exports[`Select renders snapshot of size large 1`] = `
   class="emotion-0"
 >
   <select
+    aria-invalid="false"
     class="emotion-1"
   >
     <option
@@ -619,6 +624,7 @@ exports[`Select renders snapshot of size medium 1`] = `
   class="emotion-0"
 >
   <select
+    aria-invalid="false"
     class="emotion-1"
   >
     <option
@@ -725,6 +731,7 @@ exports[`Select renders snapshot of size small 1`] = `
   class="emotion-0"
 >
   <select
+    aria-invalid="false"
     class="emotion-1"
   >
     <option

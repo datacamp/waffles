@@ -102,6 +102,7 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
     class="emotion-1"
   >
     <textarea
+      aria-invalid="false"
       class="emotion-2"
     >
       Welcome
@@ -185,6 +186,7 @@ exports[`TextArea renders snapshot 1`] = `
   class="emotion-0"
 >
   <textarea
+    aria-invalid="false"
     class="emotion-1"
     placeholder="Leave a comment here"
   />
@@ -260,6 +262,7 @@ exports[`TextArea renders snapshot of disabled 1`] = `
   class="emotion-0"
 >
   <textarea
+    aria-invalid="false"
     class="emotion-1"
     disabled=""
   />
@@ -335,6 +338,7 @@ exports[`TextArea renders snapshot of inverted 1`] = `
   class="emotion-0"
 >
   <textarea
+    aria-invalid="false"
     class="emotion-1"
   />
 </div>
@@ -411,6 +415,7 @@ exports[`TextArea renders snapshot of required with error 1`] = `
   class="emotion-0"
 >
   <textarea
+    aria-invalid="true"
     class="emotion-1"
   />
 </div>

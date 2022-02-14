@@ -70,6 +70,14 @@ describe('TextArea', () => {
     expect(textarea).toBeDisabled();
   });
 
+  it('when error is set provide aria-invalid attribute', () => {
+    const { container } = render(<TextArea error />);
+
+    const textarea = container.querySelector('textarea');
+
+    expect(textarea).toHaveAttribute('aria-invalid', 'true');
+  });
+
   it('accepts ref and could be focused programmatically', () => {
     const { container } = render(<TestRefTextArea />);
 
