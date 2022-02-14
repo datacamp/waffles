@@ -10,12 +10,13 @@ import { wrapperStyle } from './styles';
 type FormFieldProps = {
   /* The label displayed above the input. */
   label: string;
-  /* Input component to be enhanced. In general pass Waffles `Input`, `TextArea` or `Select`. */
+  /* Input component to be enhanced. In general pass Waffles [Input](/components/input), [TextArea](/components/text-area) or [Select](/components/select). */
   children: JSX.Element;
+  /* Optional input identifier. Pass it when component is rendered on the server to avoid client-server attribute mismatch. */
   id?: string;
   /* Optional description shown above the input. */
   description?: React.ReactNode;
-  /* Shows required indicator above the input. */
+  /* Depending on the selected `requiredIndicator` option, shows or hides appropriate indicator next tot the label, and sets `required` attribute on the enhanced input. */
   required?: boolean;
   /* Type of required indicator to display. Depending on selected option show either *Optional* when input is not required, or *Required* when input is marked as required.  */
   requiredIndicator?: 'showOptional' | 'showRequired';
