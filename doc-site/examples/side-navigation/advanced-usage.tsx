@@ -132,7 +132,7 @@ function Example() {
           </SideNav.Category>
           <SideNav.Category
             label={
-              <Badge color={tokens.colors.greyDark} size="small">
+              <Badge variant="grey" size="small">
                 Beta
               </Badge>
             }
