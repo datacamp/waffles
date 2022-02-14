@@ -1,0 +1,58 @@
+import * as FormFieldExports from '@datacamp/waffles/form-field';
+
+import Layout from '../../components/content-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/form-field/playground-config';
+import BasicUsage from '../../examples/form-field/basic-usage';
+import States from '../../examples/form-field/states';
+import Required from '../../examples/form-field/required';
+import Inverted from '../../examples/form-field/inverted';
+
+export default Layout;
+
+# Form Field
+
+🚧 This page is **under construction**.
+
+Use this utility component in conjunction
+with [Input](/components/input), [TextArea](/components/text-area), and [Select](/components/select) to enhance them with: an accessible **label**, an optional **desciription**, and an **error message**. It is also possible to configure which **required indicator** is shown next to the label.
+
+## Examples
+
+<Example title="Basic Usage" path="form-field/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="States" path="form-field/states">
+  <States />
+</Example>
+
+<Example title="Required" path="form-field/required">
+  <Required />
+</Example>
+
+<Example title="Inverted" path="form-field/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### FormField
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/form-field/form-field')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={FormFieldExports} path="@datacamp/waffles/form-field" />
