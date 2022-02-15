@@ -13,18 +13,18 @@ function Example() {
       `}
     >
       <Paragraph variant="primary">
-        Through hands-on exercises, you’ll learn how to understand data, whether
-        it’s a bar plot on the news or as a statistic shared during a work
-        meeting. You’ll expand your knowledge of key data topics, including data
-        science, machine learning, data visualization, and even data engineering
-        and cloud computing.
+        Through hands-on exercises, you’ll learn how to{' '}
+        <strong>understand</strong> data, whether it’s a bar plot on the news or
+        as a statistic shared during a work meeting. You’ll <em>expand</em> your
+        knowledge of key data topics, including data science, machine learning,
+        data visualization, and even data engineering and cloud computing.
       </Paragraph>
       <Paragraph variant="secondary">
-        Through hands-on exercises, you’ll learn how to understand data, whether
-        it’s a bar plot on the news or as a statistic shared during a work
-        meeting. You’ll expand your knowledge of key data topics, including data
-        science, machine learning, data visualization, and even data engineering
-        and cloud computing.
+        Through hands-on exercises, you’ll learn how to{' '}
+        <strong>understand</strong> data, whether it’s a bar plot on the news or
+        as a statistic shared during a work meeting. You’ll <em>expand</em> your
+        knowledge of key data topics, including data science, machine learning,
+        data visualization, and even data engineering and cloud computing.
       </Paragraph>
     </div>
   );
