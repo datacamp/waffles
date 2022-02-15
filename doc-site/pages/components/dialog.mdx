@@ -15,6 +15,15 @@ export default Layout;
 
 🚧 This page is **under construction**.
 
+## Accessibility
+
+It is recommended to have the initial focus set on the most relevant element&mdash;in most cases confirmation button. To do so, pass `autoFocus` flag to `Dialog.Button` subcomponent used in the dialog's footer.
+If no initial focus is set explicitly close button will be focused by default.
+
+To properly label `Dialog` and provide context for users using screen readers, associate both header and dialog by unique identifier by adding `id` attribute to `Dialog.Header` and `aria-labelledby` to `Dialog` itself. If the design doesn't include a visible label provide `aria-label` to `Dialog` instead.
+
+Additionally, a description may be provided with `aria-describedby` associated with one of the `Dialog.Body` paragraph's `id`.
+
 ## Examples
 
 <Example title="Basic Usage" path="dialog/basic-usage">
