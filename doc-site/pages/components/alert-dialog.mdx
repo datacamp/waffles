@@ -1,0 +1,42 @@
+import * as AlertDialogExports from '@datacamp/waffles/alert-dialog';
+
+import Layout from '../../components/content-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/alert-dialog/playground-config';
+import BasicUsage from '../../examples/alert-dialog/basic-usage';
+
+export default Layout;
+
+# Dialog
+
+🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="alert-dialog/basic-usage">
+  <BasicUsage />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### Dialog
+
+In addition to all custom props listed below, `Badge` accepts all props regular `HTMLSpan` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/alert-dialog/alert-dialog-internal')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={AlertDialogExports} path="@datacamp/waffles/alert-dialog" />

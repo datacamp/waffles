@@ -1,0 +1,42 @@
+import * as DrawerExports from '@datacamp/waffles/drawer';
+
+import Layout from '../../components/content-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/drawer/playground-config';
+import BasicUsage from '../../examples/drawer/basic-usage';
+
+export default Layout;
+
+# Dialog
+
+🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="drawer/basic-usage">
+  <BasicUsage />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### Dialog
+
+In addition to all custom props listed below, `Badge` accepts all props regular `HTMLSpan` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/drawer/drawer-internal')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={DrawerExports} path="@datacamp/waffles/drawer" />
