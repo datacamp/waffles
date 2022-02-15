@@ -3,6 +3,7 @@ import React from 'react';
 import { footerStyle } from './styles';
 
 type FooterProps = {
+  /* Content of the footer. In most cases, should be one or multiple modal `Button` subcomponents. */
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 

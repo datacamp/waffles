@@ -4,6 +4,7 @@ import useScrollPosition from './use-scroll-position';
 import { bodyStyle } from './styles';
 
 type BodyProps = {
+  /* Dialog main content or description. When it is getting long, subtle scroll indicators appear at the top and bottom. */
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 

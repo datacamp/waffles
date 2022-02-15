@@ -4,6 +4,7 @@ import { Heading } from '../heading';
 import { headerStyle } from './styles';
 
 type HeaderProps = {
+  /* Title of the modal. */
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLHeadingElement>;
 

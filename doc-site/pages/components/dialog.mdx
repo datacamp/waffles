@@ -29,11 +29,47 @@ export default Layout;
 
 ### Dialog
 
-In addition to all custom props listed below, `Badge` accepts all props regular `HTMLSpan` would, such as `data-` attributes.
+In addition to all custom props listed below, `Dialog` accepts all props regular `HTMLDiv` would, such as `aria-labelledby`, `aria-describedby`, `data-` attributes.
 
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/dialog/dialog-internal')}
 />
+
+### Dialog.Header
+
+In addition to all custom props listed below, `Dialog.Header` accepts all props regular `HTMLHeading` would, such as `id`, and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/dialog/header')}
+/>
+
+### Dialog.Body
+
+In addition to all custom props listed below, `Dialog.Body` accepts all props regular `HTMLDiv` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/dialog/body')}
+/>
+
+### Dialog.Footer
+
+In addition to all custom props listed below, `Dialog.Footer` accepts all props regular `HTMLDiv` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/dialog/footer')}
+/>
+
+### Dialog.Button
+
+In addition to all custom props listed below, `Dialog.Button` accepts all props Waffles [Button](/components/button/#props) would.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/dialog/button-internal')}
+/>
+
+### Dialog.CloseButton
+
+`Dialog.CloseButton` accepts all props regular `HTMLButton` would, such as `onClick`, and `data-` attributes.
 
 ## Imports
 

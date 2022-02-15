@@ -7,9 +7,13 @@ import { Overlay } from '../overlay';
 import Panel from './panel';
 
 type DialogProps = {
+  /* Determines if the dialog is open. */
   isOpen: boolean;
+  /* Handler called when the dialog will close. */
   onClose: () => void;
+  /* Defines the dialog role. */
   role?: 'dialog' | 'alertdialog';
+  /* Content of the dialog. In general, dialog's own subcomponents should be used: `Dialog.Header`, `Dialog.Body`, and `Dialog.Footer`. */
   children: React.ReactNode;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
