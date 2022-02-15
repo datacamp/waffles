@@ -7,9 +7,13 @@ import { Overlay } from '../overlay';
 import Panel from './panel';
 
 type DrawerProps = {
+  /* Determines if the drawer is open. */
   isOpen: boolean;
+  /* Handler called when the drawer will close. */
   onClose: () => void;
+  /* Side from which the drawer originates from. */
   placement?: 'left' | 'right';
+  /* Content of the drawer. In general, drawer's own subcomponents should be used: `Drawer.Header`, `Drawer.Body`, and `Drawer.Footer`. */
   children: React.ReactNode;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
