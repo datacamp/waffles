@@ -3,6 +3,7 @@ import React from 'react';
 import { bodyStyle } from './styles';
 
 type BodyProps = {
+  /* Alert dialog description. */
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 

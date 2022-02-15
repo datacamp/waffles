@@ -11,7 +11,7 @@ import BasicUsage from '../../examples/alert-dialog/basic-usage';
 
 export default Layout;
 
-# Dialog
+# Alert Dialog
 
 🚧 This page is **under construction**.
 
@@ -27,12 +27,44 @@ export default Layout;
 
 ## Props
 
-### Dialog
+### AlertDialog
 
-In addition to all custom props listed below, `Badge` accepts all props regular `HTMLSpan` would, such as `data-` attributes.
+In addition to all custom props listed below, `AlertDialog` accepts all props regular `HTMLDiv` would, such as `aria-labelledby`, `aria-describedby`, `data-` attributes.
 
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/alert-dialog/alert-dialog-internal')}
+/>
+
+### AlertDialog.Header
+
+In addition to all custom props listed below, `AlertDialog.Header` accepts all props regular `HTMLHeading` would, such as `id`, and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/alert-dialog/header')}
+/>
+
+### AlertDialog.Body
+
+In addition to all custom props listed below, `AlertDialog.Body` accepts all props regular `HTMLDiv` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/alert-dialog/body')}
+/>
+
+### AlertDialog.Footer
+
+In addition to all custom props listed below, `AlertDialog.Footer` accepts all props regular `HTMLDiv` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/alert-dialog/footer')}
+/>
+
+### AlertDialog.Button
+
+In addition to all custom props listed below, `AlertDialog.Button` accepts all props Waffles [Button](/components/button/#props) would.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/dialog/button-internal')}
 />
 
 ## Imports

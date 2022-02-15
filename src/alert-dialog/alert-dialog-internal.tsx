@@ -2,8 +2,11 @@ import { Dialog } from '../dialog';
 import { dialogStyle } from './styles';
 
 type AlertDialogProps = {
+  /* Determines if the alert dialog is open. */
   isOpen: boolean;
+  /* Handler called when the alert dialog will close. */
   onClose: () => void;
+  /* Content of the alert dialog. In general, alert dialog's own subcomponents should be used: `AlertDialog.Header`, `AlertDialog.Body`, and `AlertDialog.Footer`. */
   children: React.ReactNode;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
