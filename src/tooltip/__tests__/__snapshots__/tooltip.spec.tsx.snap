@@ -16,7 +16,7 @@ exports[`Tooltip renders snapshot of bottom placement 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5000;
+  z-index: 10;
   left: 0px;
   top: calc(0px + 0px + 8px);
   -webkit-transform: translate(-50%, 0);
@@ -52,7 +52,7 @@ exports[`Tooltip renders snapshot of bottomLeft placement 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5000;
+  z-index: 10;
   left: 0px;
   top: calc(0px + 0px + 8px);
   background-color: #05192D;
@@ -84,7 +84,7 @@ exports[`Tooltip renders snapshot of bottomRight placement 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5000;
+  z-index: 10;
   left: 0px;
   top: calc(0px + 0px + 8px);
   -webkit-transform: translate(-100%);
@@ -120,7 +120,7 @@ exports[`Tooltip renders snapshot of inverted variant 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5000;
+  z-index: 10;
   left: 0px;
   top: calc(0px + 0px + 8px);
   -webkit-transform: translate(-50%, 0);
@@ -156,7 +156,7 @@ exports[`Tooltip renders snapshot of left placement 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5000;
+  z-index: 10;
   left: calc(0px - 8px);
   top: 0px;
   -webkit-transform: translate(-100%, -50%);
@@ -192,7 +192,7 @@ exports[`Tooltip renders snapshot of right placement 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5000;
+  z-index: 10;
   left: calc(0px + 8px);
   top: 0px;
   -webkit-transform: translate(0, -50%);
@@ -228,7 +228,7 @@ exports[`Tooltip renders snapshot of top placement 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5000;
+  z-index: 10;
   left: 0px;
   top: calc(0px + 0px - 8px);
   -webkit-transform: translate(-50%, -100%);
@@ -264,7 +264,7 @@ exports[`Tooltip renders snapshot of topLeft placement 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5000;
+  z-index: 10;
   left: 0px;
   top: calc(0px + 0px - 8px);
   -webkit-transform: translate(0, -100%);
@@ -300,7 +300,7 @@ exports[`Tooltip renders snapshot of topRight placement 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5000;
+  z-index: 10;
   left: 0px;
   top: calc(0px + 0px - 8px);
   -webkit-transform: translate(-100%, -100%);
