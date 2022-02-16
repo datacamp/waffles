@@ -1,13 +1,19 @@
 import { Tooltip } from '@datacamp/waffles/tooltip';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Link } from '@datacamp/waffles/link';
+import { InfoCircle } from '@datacamp/waffles/icon';
 
 function Example() {
   return (
     <Paragraph>
       Through hands-on exercises, with{' '}
       <Tooltip content="The best place to build data skills online.">
-        <Link href="https://www.datacamp.com/">DataCamp</Link>
+        <Link
+          href="https://www.datacamp.com/"
+          iconRight={<InfoCircle size="small" />}
+        >
+          DataCamp
+        </Link>
       </Tooltip>{' '}
       you’ll learn how to understand data, whether it’s a bar plot on the news
       or as a statistic shared during a work meeting. You’ll expand your
