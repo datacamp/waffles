@@ -6,6 +6,7 @@ import Imports from '../../components/imports';
 
 import UseIdBasicUsage from '../../examples/hooks/use-id-basic-usage';
 import UseMediaQueryBasicUsage from '../../examples/hooks/use-media-query-basic-usage';
+import UseAnimateTransitionBasicUsage from '../../examples/hooks/use-animate-transition-basic-usage';
 
 export default Layout;
 
@@ -29,6 +30,16 @@ It determines, if there is a media query match for current viewport for each bre
 
 <Example title="Basic Usage" path="hooks/use-media-query-basic-usage">
   <UseMediaQueryBasicUsage />
+</Example>
+
+## useAnimateTransition
+
+Handlings animations of components that are conditionally appearing and disappearing, like dialogs, overlays, and dropdowns, could be quite tricky because normally there is no time for an exit animation to finish when the component unmounts.
+
+This hook delays component unmount by the specified time, which allows complex CSS animations to finish. It doesn't animate styles by itself, therefore custom CSS keyframe animations must be provided explicitly.
+
+<Example title="Basic Usage" path="hooks/use-animate-transition-basic-usage">
+  <UseAnimateTransitionBasicUsage />
 </Example>
 
 ## Imports

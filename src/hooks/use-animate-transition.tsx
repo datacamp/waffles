@@ -1,8 +1,12 @@
 import { useEffect, useState, useRef } from 'react';
 
-// Add timeout to conditional component unmount
-// It allows CSS exit animation to finish
-// CSS keyframes animation duration should be shorther than timeout
+/**
+ * Unmount component after a specified time, which allows complex CSS animations to finish.
+ *
+ * @param isVisible Animated component basic visibility, change of this state triggers the animations
+ * @param timeout Time in milliseconds after which component will unmount, CSS animation duration should be shorter than the timeout
+ * @returns True or false, whether animation already finished or not
+ */
 function useAnimateTransition(isVisible: boolean, timeout: number) {
   const [isAnimating, setIsAnimating] = useState(false);
 
