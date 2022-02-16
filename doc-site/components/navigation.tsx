@@ -62,12 +62,13 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/components/text">Text</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Navigation">
-            <Item href="/components/side-navigation" isNew>
-              Side Navigation
-            </Item>
+            <Item href="/components/side-navigation">Side Navigation</Item>
             <Item href="/components/tabs">Tabs</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Form">
+            <Item href="/components/form-field" isNew>
+              Form Field
+            </Item>
             <Item href="/components/input">Input</Item>
             <Item href="/components/text-area">Text Area</Item>
             <Item href="/components/select">Select</Item>
@@ -76,6 +77,15 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/components/radio">Radio</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Overlay">
+            <Item href="/components/dialog" isNew>
+              Dialog
+            </Item>
+            <Item href="/components/alert-dialog" isNew>
+              Alert Dialog
+            </Item>
+            <Item href="/components/drawer" isNew>
+              Drawer
+            </Item>
             <Item href="/components/tooltip">Tooltip</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Content">
