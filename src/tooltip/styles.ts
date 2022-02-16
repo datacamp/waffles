@@ -11,7 +11,7 @@ const tooltipBaseStyle = css`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: ${tokens.zIndex.popup};
+  z-index: 10;
 `;
 
 type Placement = NonNullable<React.ComponentProps<typeof Tooltip>['placement']>;
