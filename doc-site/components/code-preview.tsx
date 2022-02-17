@@ -11,7 +11,8 @@ const wrapperStyle = css`
   background-color: #151d28;
   border-right: ${CODE_PREVIEW_BORDER} solid #151d28;
   border-left: 8px solid ${tokens.colors.purple};
-  overflow-x: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
   transition: border-color 125ms ease-out;
   cursor: text;
 
