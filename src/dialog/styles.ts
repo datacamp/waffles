@@ -80,7 +80,7 @@ export function bodyStyle({
     padding-left: ${tokens.spacing.large};
     flex-grow: 1;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     box-shadow: ${showShadowTop &&
       'inset 0 12px 12px -12px rgba(5, 25, 45, 0.3)'}${showShadowTop &&
       showShadowBottom &&
