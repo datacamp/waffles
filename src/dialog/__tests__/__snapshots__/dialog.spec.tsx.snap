@@ -165,7 +165,7 @@ exports[`Dialog renders snapshot 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .emotion-4 {

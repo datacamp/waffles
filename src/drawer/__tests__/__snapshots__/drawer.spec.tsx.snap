@@ -231,7 +231,7 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .emotion-4 {
@@ -703,7 +703,7 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .emotion-4 {

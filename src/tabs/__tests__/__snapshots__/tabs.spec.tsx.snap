@@ -7,7 +7,7 @@ exports[`Tabs renders snapshot 1`] = `
   -webkit-mask-image: none;
   mask-image: none;
   overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -221,7 +221,7 @@ exports[`Tabs renders snapshot of inverted 1`] = `
   -webkit-mask-image: none;
   mask-image: none;
   overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
