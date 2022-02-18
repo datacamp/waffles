@@ -25,7 +25,7 @@ exports[`Badge renders snapshot of variant blue and size large 1`] = `
   color: #05192D;
   background-color: #06BDFC;
   font-size: 14px;
-  height: 18px;
+  height: 20px;
 }
 
 .emotion-1 {
@@ -117,7 +117,7 @@ exports[`Badge renders snapshot of variant blue and size small 1`] = `
   color: #05192D;
   background-color: #06BDFC;
   font-size: 10px;
-  height: 18px;
+  height: 14px;
 }
 
 .emotion-1 {
@@ -163,7 +163,7 @@ exports[`Badge renders snapshot of variant green and size large 1`] = `
   color: #05192D;
   background-color: #03EF62;
   font-size: 14px;
-  height: 18px;
+  height: 20px;
 }
 
 .emotion-1 {
@@ -255,7 +255,7 @@ exports[`Badge renders snapshot of variant green and size small 1`] = `
   color: #05192D;
   background-color: #03EF62;
   font-size: 10px;
-  height: 18px;
+  height: 14px;
 }
 
 .emotion-1 {
@@ -301,7 +301,7 @@ exports[`Badge renders snapshot of variant grey and size large 1`] = `
   color: #05192D;
   background-color: #D9D9E2;
   font-size: 14px;
-  height: 18px;
+  height: 20px;
 }
 
 .emotion-1 {
@@ -393,7 +393,7 @@ exports[`Badge renders snapshot of variant grey and size small 1`] = `
   color: #05192D;
   background-color: #D9D9E2;
   font-size: 10px;
-  height: 18px;
+  height: 14px;
 }
 
 .emotion-1 {
@@ -439,7 +439,7 @@ exports[`Badge renders snapshot of variant greySubtle and size large 1`] = `
   color: #626D79;
   background-color: #EFEFEF;
   font-size: 14px;
-  height: 18px;
+  height: 20px;
 }
 
 .emotion-1 {
@@ -531,7 +531,7 @@ exports[`Badge renders snapshot of variant greySubtle and size small 1`] = `
   color: #626D79;
   background-color: #EFEFEF;
   font-size: 10px;
-  height: 18px;
+  height: 14px;
 }
 
 .emotion-1 {
@@ -577,7 +577,7 @@ exports[`Badge renders snapshot of variant navy and size large 1`] = `
   color: #FFFFFF;
   background-color: #05192D;
   font-size: 14px;
-  height: 18px;
+  height: 20px;
 }
 
 .emotion-1 {
@@ -669,7 +669,7 @@ exports[`Badge renders snapshot of variant navy and size small 1`] = `
   color: #FFFFFF;
   background-color: #05192D;
   font-size: 10px;
-  height: 18px;
+  height: 14px;
 }
 
 .emotion-1 {
@@ -715,7 +715,7 @@ exports[`Badge renders snapshot of variant orange and size large 1`] = `
   color: #05192D;
   background-color: #FF931E;
   font-size: 14px;
-  height: 18px;
+  height: 20px;
 }
 
 .emotion-1 {
@@ -807,7 +807,7 @@ exports[`Badge renders snapshot of variant orange and size small 1`] = `
   color: #05192D;
   background-color: #FF931E;
   font-size: 10px;
-  height: 18px;
+  height: 14px;
 }
 
 .emotion-1 {
@@ -853,7 +853,7 @@ exports[`Badge renders snapshot of variant pink and size large 1`] = `
   color: #05192D;
   background-color: #FF6EA9;
   font-size: 14px;
-  height: 18px;
+  height: 20px;
 }
 
 .emotion-1 {
@@ -945,7 +945,7 @@ exports[`Badge renders snapshot of variant pink and size small 1`] = `
   color: #05192D;
   background-color: #FF6EA9;
   font-size: 10px;
-  height: 18px;
+  height: 14px;
 }
 
 .emotion-1 {
@@ -991,7 +991,7 @@ exports[`Badge renders snapshot of variant purple and size large 1`] = `
   color: #FFFFFF;
   background-color: #7933FF;
   font-size: 14px;
-  height: 18px;
+  height: 20px;
 }
 
 .emotion-1 {
@@ -1083,7 +1083,7 @@ exports[`Badge renders snapshot of variant purple and size small 1`] = `
   color: #FFFFFF;
   background-color: #7933FF;
   font-size: 10px;
-  height: 18px;
+  height: 14px;
 }
 
 .emotion-1 {
@@ -1129,7 +1129,7 @@ exports[`Badge renders snapshot of variant red and size large 1`] = `
   color: #05192D;
   background-color: #FF5400;
   font-size: 14px;
-  height: 18px;
+  height: 20px;
 }
 
 .emotion-1 {
@@ -1221,7 +1221,7 @@ exports[`Badge renders snapshot of variant red and size small 1`] = `
   color: #05192D;
   background-color: #FF5400;
   font-size: 10px;
-  height: 18px;
+  height: 14px;
 }
 
 .emotion-1 {
@@ -1267,7 +1267,7 @@ exports[`Badge renders snapshot of variant white and size large 1`] = `
   color: #05192D;
   background-color: #FFFFFF;
   font-size: 14px;
-  height: 18px;
+  height: 20px;
 }
 
 .emotion-1 {
@@ -1359,7 +1359,7 @@ exports[`Badge renders snapshot of variant white and size small 1`] = `
   color: #05192D;
   background-color: #FFFFFF;
   font-size: 10px;
-  height: 18px;
+  height: 14px;
 }
 
 .emotion-1 {
@@ -1405,7 +1405,7 @@ exports[`Badge renders snapshot of variant yellow and size large 1`] = `
   color: #05192D;
   background-color: #FCCE0D;
   font-size: 14px;
-  height: 18px;
+  height: 20px;
 }
 
 .emotion-1 {
@@ -1497,7 +1497,7 @@ exports[`Badge renders snapshot of variant yellow and size small 1`] = `
   color: #05192D;
   background-color: #FCCE0D;
   font-size: 10px;
-  height: 18px;
+  height: 14px;
 }
 
 .emotion-1 {
