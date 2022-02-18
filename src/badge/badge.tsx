@@ -18,7 +18,7 @@ type BadgeProps = {
     | 'greySubtle';
   /* The text content of the badge. */
   children: React.ReactNode;
-  /* Defines the font size of the text content. In general default `medium` size should be used. */
+  /* Defines the size of the badge. In general default `medium` size should be used. */
   size?: 'small' | 'medium' | 'large';
 } & React.HTMLAttributes<HTMLSpanElement>;
 

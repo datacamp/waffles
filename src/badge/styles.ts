@@ -8,12 +8,15 @@ import Badge from './badge';
 const sizeMap = {
   small: {
     fontSize: '10px',
+    sizing: '14px',
   },
   medium: {
     fontSize: tokens.fontSizes.small,
+    sizing: '18px',
   },
   large: {
     fontSize: tokens.fontSizes.medium,
+    sizing: '20px',
   },
 };
 
@@ -89,7 +92,7 @@ export function badgeStyle({ variant, size }: BadgeStyleOptions) {
     color: ${variantMap[variant].color};
     background-color: ${variantMap[variant].backgroundColor};
     font-size: ${sizeMap[size].fontSize};
-    height: 18px;
+    height: ${sizeMap[size].sizing};
   `;
 }
 
