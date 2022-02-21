@@ -107,3 +107,23 @@ export function fauxGrowElementStyle() {
     white-space: pre-wrap;
   `;
 }
+
+type CharacterCountStyleOptions = {
+  inverted: boolean;
+};
+
+export function characterCountStyle({ inverted }: CharacterCountStyleOptions) {
+  return css`
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: ${tokens.zIndex.default};
+    bottom: ${tokens.spacing.small};
+    right: 12px;
+    color: ${inverted
+      ? tokens.colors.navySubtleTextOnDark
+      : tokens.colors.navySubtleTextOnLight};
+    line-height: ${tokens.lineHeights.default};
+    pointer-events: none;
+  `;
+}
