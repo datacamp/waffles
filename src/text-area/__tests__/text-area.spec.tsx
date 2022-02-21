@@ -78,6 +78,41 @@ describe('TextArea', () => {
     expect(textarea).toHaveAttribute('aria-invalid', 'true');
   });
 
+  it('shows character count', () => {
+    const { getByText } = render(
+      <TextArea
+        showCharacterCount
+        maxLength={100}
+        value="Taylor Swift"
+        onChange={() => {}}
+      />,
+    );
+
+    const counter = getByText('12 / 100');
+
+    expect(counter).toBeInTheDocument();
+  });
+
+  it('character counter and textarea are associated by the same ID', () => {
+    const { container, getByLabelText } = render(
+      <TextArea
+        showCharacterCount
+        maxLength={255}
+        value="Ariana Grande"
+        onChange={() => {}}
+      />,
+    );
+
+    const textarea = container.querySelector('textarea');
+    const counterLabel = getByLabelText('13 of 255 characters used');
+
+    expect(textarea).toHaveAttribute(
+      'aria-describedby',
+      `character-count-${MOCKED_ID}`,
+    );
+    expect(counterLabel).toHaveAttribute('id', `character-count-${MOCKED_ID}`);
+  });
+
   it('accepts ref and could be focused programmatically', () => {
     const { container } = render(<TestRefTextArea />);
 
@@ -119,6 +154,20 @@ describe('TextArea', () => {
   it('renders all supporting elements to make auto-grow work', () => {
     const { container } = render(
       <TextArea autoGrow value="Welcome" onChange={() => {}} />,
+    );
+
+    const textarea = container.firstChild;
+    expect(textarea).toMatchSnapshot();
+  });
+
+  it('renders snapshot when character count is displayed', () => {
+    const { container } = render(
+      <TextArea
+        showCharacterCount
+        maxLength={255}
+        value="Welcome"
+        onChange={() => {}}
+      />,
     );
 
     const textarea = container.firstChild;
