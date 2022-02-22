@@ -18,24 +18,21 @@ function Story() {
     <>
       <div css={wrapperStyle}>
         <FormField
-          label="Regular input"
-          description="Description of regular input"
+          label="Input with Required label"
           requiredIndicator="showRequired"
           required
         >
           <Input />
         </FormField>
         <FormField
-          label="Regular text area"
-          description="Description of regular text area"
+          label="Text area with Required label"
           requiredIndicator="showRequired"
           required
         >
           <TextArea />
         </FormField>
         <FormField
-          label="Regular select"
-          description="Description of regular select"
+          label="Select with Required label"
           requiredIndicator="showRequired"
           required
         >
@@ -48,23 +45,47 @@ function Story() {
       </div>
       <div css={wrapperStyle}>
         <FormField
-          label="Regular input"
-          description="Description of regular input"
+          label="Input with Optional label"
           requiredIndicator="showOptional"
         >
           <Input />
         </FormField>
         <FormField
-          label="Regular text area"
-          description="Description of regular text area"
+          label="Text area with Optional label"
           requiredIndicator="showOptional"
         >
           <TextArea />
         </FormField>
         <FormField
-          label="Regular select"
-          description="Description of regular select"
+          label="Select with Optional label"
           requiredIndicator="showOptional"
+        >
+          <Select value="python" onChange={() => {}}>
+            <option value="python">Python</option>
+            <option value="sql">SQL</option>
+            <option value="r-lang">R</option>
+          </Select>
+        </FormField>
+      </div>
+      <div css={wrapperStyle}>
+        <FormField
+          label="Input with required indicator disabled"
+          requiredIndicator="none"
+          required
+        >
+          <Input />
+        </FormField>
+        <FormField
+          label="Text area with required indicator disabled"
+          requiredIndicator="none"
+          required
+        >
+          <TextArea />
+        </FormField>
+        <FormField
+          label="Select with required indicator disabled"
+          requiredIndicator="none"
+          required
         >
           <Select value="python" onChange={() => {}}>
             <option value="python">Python</option>

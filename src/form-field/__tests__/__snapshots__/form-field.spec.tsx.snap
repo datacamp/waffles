@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormField renders snapshot of form field 1`] = `
+.emotion-0 {
+  position: relative;
+  width: 100%;
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #05192D;
+  margin-bottom: 8px;
+}
+
+.emotion-2 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #65707C;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-3 {
+  font-size: 14px;
+  color: #DD3400;
+  margin-right: 4px;
+}
+
+.emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #05192D;
+  font-size: 14px;
+  line-height: 1.25;
+  margin-top: -4px;
+}
+
+.emotion-5 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+  color: #C01100;
+  line-height: 1.25;
+}
+
+<div
+  class="emotion-0"
+>
+  <label
+    class="emotion-1"
+    for="form-field-123abC"
+  >
+    Form field label
+    <span
+      aria-hidden="true"
+      class="emotion-2"
+    >
+      <span
+        class="emotion-3"
+      >
+        •
+      </span>
+      Required
+    </span>
+  </label>
+  <p
+    class="emotion-4"
+  >
+    Form field description.
+  </p>
+  <input
+    aria-describedby="form-field-error-123abC"
+    aria-errormessage="form-field-error-123abC"
+    aria-invalid="true"
+    id="form-field-123abC"
+    required=""
+  />
+  <p
+    class="emotion-5"
+    id="form-field-error-123abC"
+  >
+    Provided value is incorrect.
+  </p>
+</div>
+`;
+
+exports[`FormField renders snapshot of inverted form field 1`] = `
+.emotion-0 {
+  position: relative;
+  width: 100%;
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.emotion-2 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #9BA3AB;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-3 {
+  font-size: 14px;
+  color: #FF5400;
+  margin-right: 4px;
+}
+
+.emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 1.25;
+  margin-top: -4px;
+}
+
+.emotion-5 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+  color: #FF5400;
+  line-height: 1.25;
+}
+
+<div
+  class="emotion-0"
+>
+  <label
+    class="emotion-1"
+    for="form-field-123abC"
+  >
+    Inverted form field label
+    <span
+      aria-hidden="true"
+      class="emotion-2"
+    >
+      <span
+        class="emotion-3"
+      >
+        •
+      </span>
+      Required
+    </span>
+  </label>
+  <p
+    class="emotion-4"
+  >
+    Inverted form field description.
+  </p>
+  <input
+    aria-describedby="form-field-error-123abC"
+    aria-errormessage="form-field-error-123abC"
+    aria-invalid="true"
+    id="form-field-123abC"
+    required=""
+  />
+  <p
+    class="emotion-5"
+    id="form-field-error-123abC"
+  >
+    Provided value is incorrect.
+  </p>
+</div>
+`;

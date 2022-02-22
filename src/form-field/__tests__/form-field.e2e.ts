@@ -1,5 +1,5 @@
 describe('FormField', () => {
-  it('renders basic input', () => {
+  it('renders input with label and description', () => {
     cy.loadStory('form-field-basic');
     cy.get('main').find('input').should('exist');
     cy.get('main').find('label').should('exist');
@@ -38,6 +38,7 @@ describe('FormField', () => {
 
   it('renders required or optional indicator', () => {
     cy.loadStory('form-field-required-optional');
+    cy.get('main').find('label').should('have.length', 9);
     cy.get('main').findAllByText('Required').should('have.length', 3);
     cy.get('main').findAllByText('Optional').should('have.length', 3);
   });

@@ -28,9 +28,15 @@ function TestRefFormField() {
 
 type TestInputProps = {
   error?: boolean;
+  inverted?: boolean;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
-function TestInput({ error, ...props }: TestInputProps) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function TestInput({
+  error = false,
+  inverted = false,
+  ...props
+}: TestInputProps) {
   return <input {...props} aria-invalid={error} />;
 }
 
@@ -190,6 +196,38 @@ describe('FormField', () => {
     expect(indicator).toBeInTheDocument();
   });
 
+  it("when 'requiredIndicator' is set to 'none', and required prop is not passed don't display any indicator", () => {
+    const { container, queryByText } = render(
+      <FormField label="Form field label" requiredIndicator="none">
+        <TestInput />
+      </FormField>,
+    );
+
+    const input = container.querySelector('input');
+    const optional = queryByText(/optional/i);
+    const required = queryByText(/required/i);
+
+    expect(input).not.toHaveAttribute('required');
+    expect(optional).not.toBeInTheDocument();
+    expect(required).not.toBeInTheDocument();
+  });
+
+  it("when 'requiredIndicator' is set to 'none', and required prop is passed don't display any indicator", () => {
+    const { container, queryByText } = render(
+      <FormField label="Form field label" required requiredIndicator="none">
+        <TestInput />
+      </FormField>,
+    );
+
+    const input = container.querySelector('input');
+    const optional = queryByText(/optional/i);
+    const required = queryByText(/required/i);
+
+    expect(input).toHaveAttribute('required');
+    expect(optional).not.toBeInTheDocument();
+    expect(required).not.toBeInTheDocument();
+  });
+
   it('renders error message', () => {
     const { getByText } = render(
       <FormField label="Form field label" error="Form field error">
@@ -218,5 +256,40 @@ describe('FormField', () => {
     );
     expect(input).toHaveAttribute('aria-invalid', 'true');
     expect(error).toHaveAttribute('id', `form-field-error-${MOCKED_ID}`);
+  });
+
+  it('renders snapshot of form field', () => {
+    const { container } = render(
+      <FormField
+        label="Form field label"
+        description="Form field description."
+        error="Provided value is incorrect."
+        required
+        requiredIndicator="showRequired"
+      >
+        <TestInput />
+      </FormField>,
+    );
+
+    const formField = container.firstChild;
+    expect(formField).toMatchSnapshot();
+  });
+
+  it('renders snapshot of inverted form field', () => {
+    const { container } = render(
+      <FormField
+        inverted
+        label="Inverted form field label"
+        description="Inverted form field description."
+        error="Provided value is incorrect."
+        required
+        requiredIndicator="showRequired"
+      >
+        <TestInput />
+      </FormField>,
+    );
+
+    const formField = container.firstChild;
+    expect(formField).toMatchSnapshot();
   });
 });
