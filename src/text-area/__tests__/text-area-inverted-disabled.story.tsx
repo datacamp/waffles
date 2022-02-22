@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { css } from '@emotion/react';
 
 import { tokens } from '../../tokens';
@@ -15,6 +16,16 @@ function Story() {
         <TextArea
           aria-label="Regular text area"
           placeholder="Type a message here"
+        />
+      </div>
+      {/* Regular with character count */}
+      <div css={wrapperStyle}>
+        <TextArea
+          showCharacterCount
+          maxLength={100}
+          aria-label="Regular text area with character count"
+          value="Data Camp"
+          onChange={() => {}}
         />
       </div>
       {/* Regular disabled */}
@@ -36,6 +47,22 @@ function Story() {
           inverted
           aria-label="Inverted text area"
           placeholder="Type a message here"
+        />
+      </div>
+      {/* Inverted with character count */}
+      <div
+        css={css`
+          ${wrapperStyle}
+          background-color: ${tokens.colors.navy};
+        `}
+      >
+        <TextArea
+          inverted
+          showCharacterCount
+          maxLength={100}
+          aria-label="Inverted text area with character count"
+          value="Data Camp"
+          onChange={() => {}}
         />
       </div>
       {/* Inverted disabled */}
