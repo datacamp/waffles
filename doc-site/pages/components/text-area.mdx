@@ -10,6 +10,7 @@ import playgroundConfig from '../../examples/text-area/playground-config';
 import BasicUsage from '../../examples/text-area/basic-usage';
 import States from '../../examples/text-area/states';
 import AutoGrow from '../../examples/text-area/auto-grow';
+import CharacterCount from '../../examples/text-area/character-count';
 import Inverted from '../../examples/text-area/inverted';
 
 export default Layout;
@@ -38,6 +39,10 @@ When using this component without `FormField` be mindful to provide `aria-label`
   <AutoGrow />
 </Example>
 
+<Example title="Character Count" path="text-area/character-count">
+  <CharacterCount />
+</Example>
+
 <Example title="Inverted" path="text-area/inverted" darkPreview>
   <Inverted />
 </Example>
@@ -50,7 +55,7 @@ When using this component without `FormField` be mindful to provide `aria-label`
 
 ### TextArea
 
-In addition to all custom props listed below, `TextArea` accepts all props regular `HTMLTextArea` would, such as `placeholder`, `disabled`, `rows`, `autocomplete`, `aria-` and `data-` attributes. Keep in mind that when `value` is specified `onChange` handler must be also provided.
+In addition to all custom props listed below, `TextArea` accepts all props regular `HTMLTextArea` would, such as `placeholder`, `disabled`, `rows`, `autocomplete`, `maxLength`, `aria-` and `data-` attributes. Keep in mind that when `value` is specified `onChange` handler must be also provided.
 
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/text-area/text-area-internal')}
