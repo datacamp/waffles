@@ -16,10 +16,10 @@ type FormFieldProps = {
   id?: string;
   /* Optional description shown above the input. */
   description?: React.ReactNode;
-  /* Depending on the selected `requiredIndicator` option, shows or hides appropriate indicator next to the label, and sets `required` attribute on the enhanced input. */
+  /* Sets `required` attribute on the enhanced input. Depending on the selected `requiredIndicator` option, shows or hides appropriate indicator next to the label. */
   required?: boolean;
-  /* Type of required indicator to display. Depending on selected option show either *Optional* when input is not required, or *Required* when input is marked as required.  */
-  requiredIndicator?: 'showOptional' | 'showRequired';
+  /* Type of required indicator to display. Depending on selected option show either *Optional* when input is not required, *Required* when input is marked as required or disable it completely.  */
+  requiredIndicator?: 'showOptional' | 'showRequired' | 'none';
   /* Sets the style of the input field suitable for dark backgrounds. */
   inverted?: boolean;
   /* Error message displayed below the input. */
