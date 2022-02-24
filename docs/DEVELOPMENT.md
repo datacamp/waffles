@@ -12,7 +12,7 @@ All **Waffles** components and their tests exist in the `src` directory with mat
 
 ## 💻 Before You Start
 
-- Make sure you have a compatible version of **node** installed: **14+**
+- Make sure you have a compatible version of **node** installed: **16+**
 - Install the latest version of **yarn** package manager: **1.22+**
 - Run **yarn** in the root directory to install all dependencies
 
