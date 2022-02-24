@@ -123,6 +123,7 @@ export function characterCountStyle({ inverted }: CharacterCountStyleOptions) {
     color: ${inverted
       ? tokens.colors.navySubtleTextOnDark
       : tokens.colors.navySubtleTextOnLight};
+    font-size: ${tokens.fontSizes.small};
     line-height: ${tokens.lineHeights.default};
     pointer-events: none;
   `;
