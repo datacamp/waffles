@@ -1,5 +1,5 @@
 describe('Paragraph', () => {
-  it('render all varaints and sizes', () => {
+  it('render all variants and sizes', () => {
     cy.loadStory('paragraph-variants-and-sizes');
     cy.get('main').find('p').should('have.length', 24);
   });

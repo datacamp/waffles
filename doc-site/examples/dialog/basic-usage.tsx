@@ -35,7 +35,7 @@ function Example() {
           </Dialog.Button>
           <Dialog.Button
             autoFocus
-            varaint="primary"
+            variant="primary"
             onClick={() => setIsOpen(false)}
           >
             Confirm

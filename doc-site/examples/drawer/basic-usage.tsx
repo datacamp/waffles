@@ -79,7 +79,7 @@ function Example() {
           </Drawer.Button>
           <Drawer.Button
             autoFocus
-            varaint="primary"
+            variant="primary"
             onClick={() => setIsOpen(false)}
           >
             Submit

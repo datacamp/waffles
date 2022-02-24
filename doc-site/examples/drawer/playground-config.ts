@@ -39,7 +39,7 @@ function Playground() {
           </Drawer.Button>
           <Drawer.Button
             autoFocus
-            varaint="primary"
+            variant="primary"
             onClick={() => setIsOpen(false)}
           >
             Confirm
