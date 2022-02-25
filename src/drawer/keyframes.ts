@@ -1,26 +1,32 @@
 import { keyframes } from '@emotion/react';
 
-type PanelSlideInOutOptions = {
-  isVisible: boolean;
+type PanelKeyframesOptions = {
   offset: number;
   slideFrom: 'left' | 'right';
 };
 
-export function panelSlideInOut({
-  isVisible,
-  offset,
-  slideFrom,
-}: PanelSlideInOutOptions) {
+export function panelEnter({ offset, slideFrom }: PanelKeyframesOptions) {
   const horizontalDirection = slideFrom === 'left' ? -1 : 1;
-  const initialTransform = 'translateX(0)';
-  const finalTransform = `translateX(${horizontalDirection * offset}px)`;
 
   return keyframes`
     from {
-      transform: ${isVisible ? finalTransform : initialTransform};
+      transform: translateX(${horizontalDirection * offset}px);
     }
     to {
-      transform: ${isVisible ? initialTransform : finalTransform};
+      transform: translateX(0);
+    }
+  `;
+}
+
+export function panelExit({ offset, slideFrom }: PanelKeyframesOptions) {
+  const horizontalDirection = slideFrom === 'left' ? -1 : 1;
+
+  return keyframes`
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(${horizontalDirection * offset}px);
     }
   `;
 }

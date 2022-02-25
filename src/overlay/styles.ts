@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
-import { overlayFadeInOut } from './keyframes';
+import { overlayEnter, overlayExit } from './keyframes';
 
 type OverlayStyleOptions = {
   isVisible: boolean;
@@ -20,6 +20,7 @@ export function overlayStyle({ isVisible }: OverlayStyleOptions) {
     touch-action: none;
     // Animation
     opacity: 0;
-    animation: ${overlayFadeInOut({ isVisible })} 200ms ease-out forwards;
+    animation: ${isVisible ? overlayEnter() : overlayExit()} 200ms ease-out
+      forwards;
   `;
 }

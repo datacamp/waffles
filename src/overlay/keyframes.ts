@@ -1,16 +1,23 @@
 import { keyframes } from '@emotion/react';
 
-type OverlayFadeInOutOptions = {
-  isVisible: boolean;
-};
-
-export function overlayFadeInOut({ isVisible }: OverlayFadeInOutOptions) {
+export function overlayEnter() {
   return keyframes`
-    from {
-      opacity: ${isVisible ? 0 : 1};
+  from {
+      opacity: 0;
     }
     to {
-      opacity: ${isVisible ? 1 : 0};
+      opacity: 1;
+    }
+  `;
+}
+
+export function overlayExit() {
+  return keyframes`
+  from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
     }
   `;
 }

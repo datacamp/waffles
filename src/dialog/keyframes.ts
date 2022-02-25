@@ -1,18 +1,27 @@
 import { keyframes } from '@emotion/react';
 
-type PanelFadeInOutOptions = {
-  isVisible: boolean;
-};
-
-export function panelFadeInOut({ isVisible }: PanelFadeInOutOptions) {
+export function panelEnter() {
   return keyframes`
     from {
-      opacity: ${isVisible ? 0 : 1};
-      transform: ${isVisible ? 'translateY(12px)' : 'translateX(0)'};
+      opacity: 0;
+      transform: translateY(12px);
     }
     to {
-      opacity: ${isVisible ? 1 : 0};
+      opacity: 1;
       transform: translateY(0);
     }
+  `;
+}
+
+export function panelExit() {
+  return keyframes`
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0);
+  }
   `;
 }

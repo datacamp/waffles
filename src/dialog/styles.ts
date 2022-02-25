@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
 import { hexToRgba, mediaQuery } from '../helpers';
-import { panelFadeInOut } from './keyframes';
+import { panelEnter, panelExit } from './keyframes';
 
 // Center vertically and horizontally dialog panel
 export function panelWrapperStyle() {
@@ -44,7 +44,7 @@ export function panelStyle({ isVisible }: PanelStyleOptions) {
     // Animation
     opacity: 0;
     transform: translateY(12px);
-    animation: ${panelFadeInOut({ isVisible })} 200ms
+    animation: ${isVisible ? panelEnter() : panelExit()} 200ms
       cubic-bezier(0.2, 0.8, 0.6, 1) forwards;
 
     ${mediaQuery.aboveSmall} {

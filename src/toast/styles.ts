@@ -38,7 +38,7 @@ export function toastStyle({ variant, isVisible }: ToastStyleOptions) {
     transform-origin: 50% 20%;
     opacity: 0;
     transform: scale3d(0.5, 0.5, 0.5);
-    animation: ${isVisible ? toastEnter : toastExit} 600ms
+    animation: ${isVisible ? toastEnter() : toastExit()} 600ms
       ${isVisible
         ? 'cubic-bezier(0.2, 1, 0.4, 1)'
         : 'cubic-bezier(0.8, 0.05, 0.8, 0.05)'}

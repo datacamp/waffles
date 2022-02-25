@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { mediaQuery } from '../helpers';
 import Drawer from './drawer';
-import { panelSlideInOut } from './keyframes';
+import { panelEnter, panelExit } from './keyframes';
 
 // Sync animation of background drawer panel and content wrapper
 // Makes both of them behave nicely on iOS
@@ -31,11 +31,15 @@ function basePanelStyle({ isVisible, placement }: PanelStyleOptions) {
     transform: translateX(
       ${horizontalDirection * PANEL_WIDTH_BELOW_SMALL_BREKPOINT}px
     );
-    animation: ${panelSlideInOut({
-        isVisible,
-        offset: PANEL_WIDTH_BELOW_SMALL_BREKPOINT,
-        slideFrom: placement,
-      })}
+    animation: ${isVisible
+        ? panelEnter({
+            offset: PANEL_WIDTH_BELOW_SMALL_BREKPOINT,
+            slideFrom: placement,
+          })
+        : panelExit({
+            offset: PANEL_WIDTH_BELOW_SMALL_BREKPOINT,
+            slideFrom: placement,
+          })}
       200ms cubic-bezier(0, 0, 0.6, 1) forwards;
 
     ${mediaQuery.aboveSmall} {
@@ -44,11 +48,15 @@ function basePanelStyle({ isVisible, placement }: PanelStyleOptions) {
       transform: translateX(
         ${horizontalDirection * PANEL_WIDTH_ABOVE_SMALL_BREKPOINT}px
       );
-      animation: ${panelSlideInOut({
-          isVisible,
-          offset: PANEL_WIDTH_ABOVE_SMALL_BREKPOINT,
-          slideFrom: placement,
-        })}
+      animation: ${isVisible
+          ? panelEnter({
+              offset: PANEL_WIDTH_ABOVE_SMALL_BREKPOINT,
+              slideFrom: placement,
+            })
+          : panelExit({
+              offset: PANEL_WIDTH_ABOVE_SMALL_BREKPOINT,
+              slideFrom: placement,
+            })}
         200ms cubic-bezier(0, 0, 0.6, 1) forwards;
     }
   `;

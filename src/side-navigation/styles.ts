@@ -3,7 +3,12 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba, mediaQuery } from '../helpers';
 import Item from './item';
-import { sidebarSlideInOut, bttonSlideInOut } from './keyframes';
+import {
+  sidebarEnter,
+  sidebarExit,
+  closeButtonEnter,
+  closeButtonExit,
+} from './keyframes';
 
 // Various side nav Item properties based on viewport size
 const sizeMap = {
@@ -87,10 +92,9 @@ export function animatedSidebarStyle({
     }
     // Animation
     transform: translateX(-${SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT}px);
-    animation: ${sidebarSlideInOut({
-        isVisible,
-        offset: SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT,
-      })}
+    animation: ${isVisible
+        ? sidebarEnter({ offset: SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT })
+        : sidebarExit({ offset: SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT })}
       200ms ease-out forwards;
   `;
 }
@@ -276,6 +280,7 @@ export function closeButtonStyle({ isVisible }: ButtonStyleOptions) {
     // Animation
     opacity: 0;
     transform: translateX(-100px);
-    animation: ${bttonSlideInOut({ isVisible })} 250ms ease-out forwards;
+    animation: ${isVisible ? closeButtonEnter() : closeButtonExit()} 250ms
+      ease-out forwards;
   `;
 }

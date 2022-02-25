@@ -1,43 +1,52 @@
 import { keyframes } from '@emotion/react';
 
-type SidebarSlideInOutOptions = {
-  isVisible: boolean;
+type SidebarKeyframesOptions = {
   offset: number;
 };
 
-export function sidebarSlideInOut({
-  isVisible,
-  offset,
-}: SidebarSlideInOutOptions) {
-  const initialTransform = `translateX(${-offset}px)`;
-  const finalTransform = 'translateX(0)';
-
+export function sidebarEnter({ offset }: SidebarKeyframesOptions) {
   return keyframes`
     from {
-      transform: ${isVisible ? initialTransform : finalTransform};
+      transform: translateX(${-offset}px);
     }
     to {
-      transform: ${isVisible ? finalTransform : initialTransform};
+      transform: translateX(0);
     }
   `;
 }
 
-type ButtonSlideInOutOptions = {
-  isVisible: boolean;
-};
-
-export function bttonSlideInOut({ isVisible }: ButtonSlideInOutOptions) {
-  const initialTransform = `translateX(-100px)`;
-  const finalTransform = 'translateX(0)';
-
+export function sidebarExit({ offset }: SidebarKeyframesOptions) {
   return keyframes`
     from {
-      transform: ${isVisible ? initialTransform : finalTransform};
-      opacity: ${isVisible ? 0 : 1};
+      transform: translateX(0);
     }
     to {
-      transform: ${isVisible ? finalTransform : initialTransform};
-      opacity: ${isVisible ? 1 : 0};
+      transform: translateX(${-offset}px);
+    }
+  `;
+}
+
+export function closeButtonEnter() {
+  return keyframes`
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }`;
+}
+
+export function closeButtonExit() {
+  return keyframes`
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-100px);
+      opacity: 0;
     }
   `;
 }
