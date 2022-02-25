@@ -507,6 +507,7 @@ exports[`TextArea renders snapshot when character count is displayed 1`] = `
   bottom: 8px;
   right: 12px;
   color: #65707C;
+  font-size: 12px;
   line-height: 1.25;
   pointer-events: none;
 }

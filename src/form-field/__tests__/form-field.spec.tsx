@@ -31,9 +31,9 @@ type TestInputProps = {
   inverted?: boolean;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function TestInput({
   error = false,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   inverted = false,
   ...props
 }: TestInputProps) {
