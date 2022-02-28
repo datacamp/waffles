@@ -46,6 +46,13 @@ export function toastStyle({ variant, isVisible }: ToastStyleOptions) {
   `;
 }
 
+export function wrapperStyle() {
+  return css`
+    list-style: none;
+    margin-top: ${tokens.spacing.medium};
+  `;
+}
+
 export function iconStyle() {
   return css`
     width: ${tokens.sizing.small};
@@ -84,5 +91,19 @@ export function closeButtonStyle() {
   return css`
     color: ${tokens.colors.navy};
     flex-shrink: 0;
+  `;
+}
+
+export function toastsStyle() {
+  return css`
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: ${tokens.zIndex.toast};
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
   `;
 }

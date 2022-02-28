@@ -12,6 +12,7 @@ import { ScreenReaderOnly } from '../screen-reader-only';
 import CloseButton from './close-button';
 import {
   toastStyle,
+  wrapperStyle,
   iconStyle,
   contentStyle,
   titleStyle,
@@ -19,11 +20,11 @@ import {
 } from './styles';
 
 type ToastProps = {
-  isOpen: boolean;
-  onClose: () => void;
   title: string;
   variant?: 'default' | 'success' | 'warning' | 'error';
   description?: React.ReactNode;
+  isOpen: boolean;
+  onClose: () => void;
 };
 
 function Toast({
@@ -60,21 +61,23 @@ function Toast({
   }
 
   return isAnimating ? (
-    <section role="status" css={toastStyle({ isVisible: isOpen, variant })}>
-      <div css={iconStyle()}>{renderIcon()}</div>
-      <div css={contentStyle()}>
-        <Heading as="h2" size="medium" css={titleStyle()}>
-          {renderAnnouncement()}
-          {title}
-        </Heading>
-        {description && (
-          <Paragraph variant="secondary" css={descriptionStyle()}>
-            {description}
-          </Paragraph>
-        )}
-      </div>
-      <CloseButton onClick={onClose} />
-    </section>
+    <li css={wrapperStyle()}>
+      <section role="status" css={toastStyle({ isVisible: isOpen, variant })}>
+        <div css={iconStyle()}>{renderIcon()}</div>
+        <div css={contentStyle()}>
+          <Heading as="h2" size="medium" css={titleStyle()}>
+            {renderAnnouncement()}
+            {title}
+          </Heading>
+          {description && (
+            <Paragraph variant="secondary" css={descriptionStyle()}>
+              {description}
+            </Paragraph>
+          )}
+        </div>
+        <CloseButton onClick={onClose} />
+      </section>
+    </li>
   ) : null;
 }
 
