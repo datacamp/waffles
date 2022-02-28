@@ -8,15 +8,11 @@ type SidebarContextValue = {
 
 const SidebarContext = createContext<SidebarContextValue>(undefined!);
 
-type TableOfContentsProviderProps = {
+type SidebarProviderProps = {
   children: React.ReactNode;
 } & SidebarContextValue;
 
-function SidebarProvider({
-  isOpen,
-  onClose,
-  children,
-}: TableOfContentsProviderProps) {
+function SidebarProvider({ isOpen, onClose, children }: SidebarProviderProps) {
   return (
     <SidebarContext.Provider value={{ isOpen, onClose }}>
       {children}
@@ -25,9 +21,9 @@ function SidebarProvider({
 }
 
 function useSidebar() {
-  const state = useContext(SidebarContext);
+  const context = useContext(SidebarContext);
 
-  return state;
+  return context;
 }
 
 export { SidebarProvider, useSidebar };

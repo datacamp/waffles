@@ -23,27 +23,27 @@ function TableOfContentsProvider({ children }: TableOfContentsProviderProps) {
 }
 
 function useTableOfContentsEntries() {
-  const entries = useContext(EntriesContext);
+  const context = useContext(EntriesContext);
 
-  if (typeof entries === undefined) {
+  if (context === undefined) {
     throw new Error(
       'Make sure to wrap useTableOfContentsEntries with a TableOfContentsProvider.',
     );
   }
 
-  return entries;
+  return context;
 }
 
 function useAddTableOfContentsEntry() {
-  const setEntries = useContext(AddEntryContext);
+  const context = useContext(AddEntryContext);
 
-  if (typeof setEntries === undefined) {
+  if (context === undefined) {
     throw new Error(
       'Make sure to wrap useCounuseAddTableOfContentsEntry with a TableOfContentsProvider.',
     );
   }
 
-  return setEntries;
+  return context;
 }
 
 export {
