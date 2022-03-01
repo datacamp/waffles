@@ -19,37 +19,44 @@ const variantMap = {
   },
 };
 
-type ToastStyleOptions = {
-  variant: NonNullable<React.ComponentProps<typeof Toast>['variant']>;
+type AnimatedWrapperOptions = {
   isVisible: boolean;
+  height: string;
 };
 
-export function toastStyle({ variant, isVisible }: ToastStyleOptions) {
+export function animatedWrapperStyle({
+  isVisible,
+  height,
+}: AnimatedWrapperOptions) {
+  return css`
+    list-style: none;
+    // Animation
+    height: ${height};
+    transform-origin: 50% 20%;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: ${isVisible ? toastEnter() : toastExit({ height })} 600ms
+      ${isVisible
+        ? 'cubic-bezier(0.2, 1, 0.4, 1)'
+        : 'cubic-bezier(0.4, 1, 0.4, 0.8)'}
+      forwards;
+  `;
+}
+
+type ToastStyleOptions = {
+  variant: NonNullable<React.ComponentProps<typeof Toast>['variant']>;
+};
+
+export function toastStyle({ variant }: ToastStyleOptions) {
   return css`
     display: flex;
     background-color: ${tokens.colors.white};
     border-radius: ${tokens.borderRadius.medium};
     width: 360px;
     box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.thick};
+    margin-top: ${tokens.spacing.medium};
     padding: 12px;
     border-left: ${tokens.borderWidth.xthick} solid ${variantMap[variant].color};
-    overflow: hidden;
-    // Animation
-    transform-origin: 50% 20%;
-    opacity: 0;
-    transform: scale3d(0.5, 0.5, 0.5);
-    animation: ${isVisible ? toastEnter() : toastExit()} 600ms
-      ${isVisible
-        ? 'cubic-bezier(0.2, 1, 0.4, 1)'
-        : 'cubic-bezier(0.8, 0.05, 0.8, 0.05)'}
-      forwards;
-  `;
-}
-
-export function wrapperStyle() {
-  return css`
-    list-style: none;
-    margin-top: ${tokens.spacing.medium};
   `;
 }
 
@@ -91,6 +98,7 @@ export function closeButtonStyle() {
   return css`
     color: ${tokens.colors.navy};
     flex-shrink: 0;
+    pointer-events: all;
   `;
 }
 
@@ -105,5 +113,6 @@ export function toastsStyle() {
     transform: translateX(-50%);
     margin: 0;
     padding: 0;
+    pointer-events: none;
   `;
 }

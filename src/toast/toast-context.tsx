@@ -57,23 +57,28 @@ function ToastProvider({ children }: ToastProviderProps) {
       },
     });
 
-    // TODO: Actually remove toast from dataset after its closing animation is finished
-    // e.g. const { [toastId]: removed, ...restToasts } = toasts;
+    setTimeout(() => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { [toastId]: removed, ...restToasts } = toasts;
+      setToasts(restToasts);
+    }, 600);
   }
 
   return (
     <ToastContext.Provider value={{ toast }}>
-      <Toasts>
-        {Object.keys(toasts).map((toastId) => {
-          return (
-            <Toast
-              key={toastId}
-              {...toasts[toastId]}
-              onClose={() => handleClose(toastId)}
-            />
-          );
-        })}
-      </Toasts>
+      {Object.keys(toasts).length > 0 && (
+        <Toasts>
+          {Object.keys(toasts).map((toastId) => {
+            return (
+              <Toast
+                key={toastId}
+                {...toasts[toastId]}
+                onClose={() => handleClose(toastId)}
+              />
+            );
+          })}
+        </Toasts>
+      )}
       {children}
     </ToastContext.Provider>
   );

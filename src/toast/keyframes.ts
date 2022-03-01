@@ -16,19 +16,26 @@ export function toastEnter() {
   `;
 }
 
-export function toastExit() {
+type ToastKeyframesOptions = {
+  height: string;
+};
+
+export function toastExit({ height }: ToastKeyframesOptions) {
   return keyframes`
     0% {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+      height: ${height};
     }
     50% {
       opacity: 0;
       transform: scale3d(0.5, 0.5, 0.5);
+      height: ${height};
     }
     100% {
       opacity: 0;
       transform: scale3d(0.5, 0.5, 0.5);
+      height: 0;
     }
   `;
 }

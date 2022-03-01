@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
-import { useAnimateTransition } from '../hooks';
 import {
   AttentionCircleInverted,
   CheckmarkCircleInverted,
@@ -10,9 +9,10 @@ import { Heading } from '../heading';
 import { Paragraph } from '../paragraph';
 import { ScreenReaderOnly } from '../screen-reader-only';
 import CloseButton from './close-button';
+import useHeight from './use-height';
 import {
+  animatedWrapperStyle,
   toastStyle,
-  wrapperStyle,
   iconStyle,
   contentStyle,
   titleStyle,
@@ -34,7 +34,8 @@ function Toast({
   variant = 'default',
   description,
 }: ToastProps) {
-  const isAnimating = useAnimateTransition(isOpen, 600);
+  const wrapperRef = useRef<HTMLLIElement>(null);
+  const height = useHeight(wrapperRef);
 
   function renderIcon() {
     switch (variant) {
@@ -60,9 +61,12 @@ function Toast({
     }
   }
 
-  return isAnimating ? (
-    <li css={wrapperStyle()}>
-      <section role="status" css={toastStyle({ isVisible: isOpen, variant })}>
+  return (
+    <li
+      ref={wrapperRef}
+      css={animatedWrapperStyle({ isVisible: isOpen, height })}
+    >
+      <section role="status" css={toastStyle({ variant })}>
         <div css={iconStyle()}>{renderIcon()}</div>
         <div css={contentStyle()}>
           <Heading as="h2" size="medium" css={titleStyle()}>
@@ -78,7 +82,7 @@ function Toast({
         <CloseButton onClick={onClose} />
       </section>
     </li>
-  ) : null;
+  );
 }
 
 export default Toast;
