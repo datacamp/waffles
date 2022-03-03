@@ -2,21 +2,15 @@
 import { createContext, useContext, useState } from 'react';
 import { nanoid } from 'nanoid';
 
-import Toasts from './toasts';
+import ToastsList from './toasts-list';
 import Toast from './toast';
 
-type ToastsDataset = Record<
-  string,
-  Omit<React.ComponentProps<typeof Toast>, 'onClose'>
->;
+type ToastOptions = Omit<React.ComponentProps<typeof Toast>, 'onClose'>;
 
-type ShowToastOptions = Omit<
-  React.ComponentProps<typeof Toast>,
-  'isOpen' | 'onClose'
->;
+type ToastsDataset = Record<string, ToastOptions>;
 
 type ToastContextValue = {
-  toast: ({ title, variant, description }: ShowToastOptions) => void;
+  toast: ({ title, variant, description }: ToastOptions) => void;
 };
 
 const ToastContext = createContext<ToastContextValue>(undefined!);
@@ -26,49 +20,40 @@ type ToastProviderProps = {
 };
 
 function ToastProvider({ children }: ToastProviderProps) {
+  // Keep each new toast in a hash map under unique ID
   const [toasts, setToasts] = useState<ToastsDataset>({});
+  const toastIds = Object.keys(toasts);
 
-  function toast({
-    title,
-    variant = 'default',
-    description,
-  }: ShowToastOptions) {
+  // Create new toast
+  function toast({ title, variant = 'default', description }: ToastOptions) {
     const toastId = nanoid(6);
 
-    // Add new toast to toasts hash map under unique ID
-    setToasts({
-      ...toasts,
-      [toastId]: {
-        title,
-        variant,
-        description,
-        isOpen: true,
-      },
+    setToasts((toasts) => {
+      return {
+        ...toasts,
+        [toastId]: {
+          title,
+          variant,
+          description,
+        },
+      };
     });
   }
 
+  // Remove toast from hash map by ID
+  // Handler is called by toast after exit animation is finished
+  // It's called either automatically by internal toast timer or after close button is clicked
   function handleClose(toastId: string) {
-    // Trigger toast closing animation
-    setToasts({
-      ...toasts,
-      [toastId]: {
-        ...toasts[toastId],
-        isOpen: false,
-      },
-    });
-
-    setTimeout(() => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const { [toastId]: removed, ...restToasts } = toasts;
-      setToasts(restToasts);
-    }, 600);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { [toastId]: removed, ...restToasts } = toasts;
+    setToasts(restToasts);
   }
 
   return (
     <ToastContext.Provider value={{ toast }}>
-      {Object.keys(toasts).length > 0 && (
-        <Toasts>
-          {Object.keys(toasts).map((toastId) => {
+      {toastIds.length > 0 && (
+        <ToastsList>
+          {toastIds.map((toastId) => {
             return (
               <Toast
                 key={toastId}
@@ -77,7 +62,7 @@ function ToastProvider({ children }: ToastProviderProps) {
               />
             );
           })}
-        </Toasts>
+        </ToastsList>
       )}
       {children}
     </ToastContext.Provider>
