@@ -15,9 +15,8 @@ function useAnimateTransition(isVisible: boolean, timeout: number) {
   const animateOutTimer = useRef<ReturnType<typeof setTimeout>>();
 
   function clearTimers() {
-    animateStartTimer &&
-      cancelAnimationFrame(Number(animateStartTimer.current));
-    animateOutTimer && clearTimeout(Number(animateOutTimer.current));
+    cancelAnimationFrame(Number(animateStartTimer.current));
+    clearTimeout(Number(animateOutTimer.current));
   }
 
   useEffect(() => {

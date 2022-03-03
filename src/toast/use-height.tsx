@@ -6,22 +6,18 @@ function useHeight(targetRef: React.RefObject<HTMLElement>) {
   const animateTimer = useRef<ReturnType<typeof requestAnimationFrame>>();
   const [height, setHeight] = useState('auto');
 
-  function clearTimer() {
-    animateTimer && cancelAnimationFrame(Number(animateTimer.current));
-  }
-
   useEffect(() => {
     const element = targetRef.current;
 
     if (element) {
-      clearTimer();
+      cancelAnimationFrame(Number(animateTimer.current));
       animateTimer.current = requestAnimationFrame(() => {
         setHeight(`${element.clientHeight}px`);
       });
     }
 
     return () => {
-      clearTimer();
+      cancelAnimationFrame(Number(animateTimer.current));
     };
   }, [targetRef]);
 
