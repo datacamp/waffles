@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 
-// Return explicit height of element required for smooth exit animation
+// Return explicit height (in pixels) of an element
+// Required for smooth exit animation, since it is not possible to animate from auto height in CSS
 function useHeight(targetRef: React.RefObject<HTMLElement>) {
   const animateTimer = useRef<ReturnType<typeof requestAnimationFrame>>();
   const [height, setHeight] = useState('auto');

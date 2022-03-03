@@ -35,7 +35,7 @@ export function animatedWrapperStyle({
     transform-origin: 50% 20%;
     opacity: 0;
     transform: scale3d(0.5, 0.5, 0.5);
-    animation: ${isVisible ? toastEnter() : toastExit({ height })} 600ms
+    animation: ${isVisible ? toastEnter() : toastExit({ height })} 500ms
       ${isVisible
         ? 'cubic-bezier(0.2, 1, 0.4, 1)'
         : 'cubic-bezier(0.4, 1, 0.4, 0.8)'}
@@ -57,6 +57,7 @@ export function toastStyle({ variant }: ToastStyleOptions) {
     margin-top: ${tokens.spacing.medium};
     padding: 12px;
     border-left: ${tokens.borderWidth.xthick} solid ${variantMap[variant].color};
+    user-select: none;
   `;
 }
 
@@ -89,7 +90,7 @@ export function titleStyle() {
 
 export function descriptionStyle() {
   return css`
-    margin-top: ${tokens.spacing.small};
+    margin-top: ${tokens.spacing.xsmall};
     margin-bottom: 0;
   `;
 }
@@ -102,7 +103,7 @@ export function closeButtonStyle() {
   `;
 }
 
-export function toastsStyle() {
+export function toastsListStyle() {
   return css`
     display: flex;
     flex-direction: column;
