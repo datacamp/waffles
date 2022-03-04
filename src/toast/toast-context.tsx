@@ -5,9 +5,15 @@ import { nanoid } from 'nanoid';
 import ToastsList from './toasts-list';
 import Toast from './toast';
 
-type ToastOptions = Omit<React.ComponentProps<typeof Toast>, 'onClose'>;
+type ToastOptions = Omit<
+  React.ComponentProps<typeof Toast>,
+  'onClose' | 'disableAutoHide' | 'autoHideDuration'
+>;
 
-type ToastsDataset = Record<string, ToastOptions>;
+type ToastsDataset = Record<
+  string,
+  Omit<React.ComponentProps<typeof Toast>, 'onClose'>
+>;
 
 type ToastContextValue = {
   toast: ({ title, variant, description }: ToastOptions) => void;
@@ -16,15 +22,21 @@ type ToastContextValue = {
 const ToastContext = createContext<ToastContextValue>(undefined!);
 
 type ToastProviderProps = {
+  disableAutoHide?: boolean;
+  autoHideDuration?: number;
   children: React.ReactNode;
 };
 
-function ToastProvider({ children }: ToastProviderProps) {
+function ToastProvider({
+  disableAutoHide = false,
+  autoHideDuration = 6000,
+  children,
+}: ToastProviderProps) {
   // Keep each new toast in a hash map under unique ID
   const [toasts, setToasts] = useState<ToastsDataset>({});
   const toastIds = Object.keys(toasts);
 
-  // Create new toast
+  // Create new toast, exposed by hook
   function toast({ title, variant = 'default', description }: ToastOptions) {
     const toastId = nanoid(6);
 
@@ -35,6 +47,8 @@ function ToastProvider({ children }: ToastProviderProps) {
           title,
           variant,
           description,
+          disableAutoHide,
+          autoHideDuration,
         },
       };
     });

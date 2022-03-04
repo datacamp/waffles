@@ -16,7 +16,10 @@ import {
   descriptionStyle,
 } from './styles';
 
-type CardProps = React.ComponentProps<typeof Toast>;
+type CardProps = Omit<
+  React.ComponentProps<typeof Toast>,
+  'disableAutoHide' | 'autoHideDuration'
+>;
 
 function Card({ onClose, title, variant = 'default', description }: CardProps) {
   function renderIcon() {

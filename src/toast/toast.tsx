@@ -7,16 +7,20 @@ import { animatedWrapperStyle } from './styles';
 
 type ToastProps = {
   title: string;
-  variant?: 'default' | 'success' | 'warning' | 'error';
   description?: React.ReactNode;
+  variant?: 'default' | 'success' | 'warning' | 'error';
+  autoHideDuration: number;
+  disableAutoHide: boolean;
   onClose: () => void;
 };
 
 function Toast({
-  onClose,
   title,
-  variant = 'default',
   description,
+  variant = 'default',
+  autoHideDuration,
+  disableAutoHide,
+  onClose,
 }: ToastProps) {
   // A flag to trigger enter / exit animation
   const [isVisible, setIsVisible] = useState(true);
@@ -46,19 +50,19 @@ function Toast({
 
   // Close toast after timeout, tracked internally
   useEffect(() => {
-    if (isVisible) {
+    if (isVisible && !disableAutoHide) {
       autoCloseTimer.current = setTimeout(() => {
         setIsVisible(false);
         setTimeout(() => {
           handleClose();
         }, 600);
-      }, 6000);
+      }, autoHideDuration);
     }
 
     return () => {
       clearTimeout(Number(autoCloseTimer.current));
     };
-  }, [isVisible, handleClose]);
+  }, [isVisible, disableAutoHide, autoHideDuration, handleClose]);
 
   return (
     <li ref={wrapperRef} css={animatedWrapperStyle({ isVisible, height })}>
