@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
+import { mediaQuery } from '../helpers';
 import Toast from './toast';
 import { toastEnter, toastExit } from './keyframes';
 
@@ -18,6 +19,29 @@ const variantMap = {
     color: tokens.colors.red,
   },
 };
+
+export function toastsListStyle() {
+  return css`
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: ${tokens.zIndex.toast};
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding-left: ${tokens.spacing.medium};
+    padding-right: ${tokens.spacing.medium};
+    padding-top: 0;
+    padding-bottom: 0;
+    pointer-events: none;
+
+    ${mediaQuery.aboveSmall} {
+      width: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  `;
+}
 
 type AnimatedWrapperOptions = {
   isVisible: boolean;
@@ -52,12 +76,17 @@ export function toastStyle({ variant }: ToastStyleOptions) {
     display: flex;
     background-color: ${tokens.colors.white};
     border-radius: ${tokens.borderRadius.medium};
-    width: 360px;
-    box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.thick};
+    width: 100%;
     margin-top: ${tokens.spacing.medium};
+    box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.thick};
     padding: 12px;
     border-left: ${tokens.borderWidth.xthick} solid ${variantMap[variant].color};
     user-select: none;
+    pointer-events: all;
+
+    ${mediaQuery.aboveSmall} {
+      width: 360px;
+    }
   `;
 }
 
@@ -99,21 +128,5 @@ export function closeButtonStyle() {
   return css`
     color: ${tokens.colors.navy};
     flex-shrink: 0;
-    pointer-events: all;
-  `;
-}
-
-export function toastsListStyle() {
-  return css`
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    z-index: ${tokens.zIndex.toast};
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    padding: 0;
-    pointer-events: none;
   `;
 }
