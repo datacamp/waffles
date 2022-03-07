@@ -88,6 +88,7 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
   grid-area: 1/1/2/2;
   visibility: hidden;
   white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .emotion-3:disabled {
