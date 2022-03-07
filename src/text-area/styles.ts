@@ -105,6 +105,7 @@ export function fauxGrowElementStyle() {
     grid-area: 1 / 1 / 2 / 2;
     visibility: hidden;
     white-space: pre-wrap;
+    word-break: break-all;
   `;
 }
 
