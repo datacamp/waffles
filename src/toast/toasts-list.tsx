@@ -10,7 +10,9 @@ type ToastsListProps = {
 function ToastsList({ children }: ToastsListProps) {
   return (
     <Portal>
-      <ul css={toastsListStyle()}>{children}</ul>
+      <ul data-testid="toasts-list" css={toastsListStyle()}>
+        {children}
+      </ul>
     </Portal>
   );
 }

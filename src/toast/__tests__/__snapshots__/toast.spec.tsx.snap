@@ -1,0 +1,889 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast render snapshot of default toast 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 16px;
+  box-shadow: 0px 0px 2px 0px rgba(5, 25, 45, 0.3),0px 3px 5px -1px rgba(5, 25, 45, 0.3);
+  padding: 12px;
+  border-left: 4px solid #7933FF;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: all;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0 {
+    width: 360px;
+  }
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-2 {
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #05192D;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #65707C;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-5::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-5:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-5:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-5:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18Zm0-4a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM8 5v5a1 1 0 0 0 2 0V5a1 1 0 1 0-2 0Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+  <div
+    class="emotion-2"
+  >
+    <h2
+      class="emotion-3"
+    >
+      Default Toast Title
+    </h2>
+    <p
+      class="emotion-4"
+    >
+      Default toast description.
+    </p>
+  </div>
+  <button
+    aria-label="Close"
+    class="emotion-5"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
+
+exports[`Toast render snapshot of error toast 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 16px;
+  box-shadow: 0px 0px 2px 0px rgba(5, 25, 45, 0.3),0px 3px 5px -1px rgba(5, 25, 45, 0.3);
+  padding: 12px;
+  border-left: 4px solid #FF5400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: all;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0 {
+    width: 360px;
+  }
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-2 {
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #05192D;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.emotion-4 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.emotion-5 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #65707C;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-6:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18Zm1.414-9 2.122-2.121a1 1 0 1 0-1.415-1.415L9 7.586 6.879 5.464A1 1 0 0 0 5.464 6.88L7.586 9l-2.122 2.121a1 1 0 0 0 1.415 1.415L9 10.414l2.121 2.122a1 1 0 0 0 1.415-1.415L10.414 9Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+  <div
+    class="emotion-2"
+  >
+    <h2
+      class="emotion-3"
+    >
+      <span
+        class="emotion-4"
+      >
+        Error:
+      </span>
+      Oops, Something Went Wrong
+    </h2>
+    <p
+      class="emotion-5"
+    >
+      Error toast description.
+    </p>
+  </div>
+  <button
+    aria-label="Close"
+    class="emotion-6"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
+
+exports[`Toast render snapshot of success toast 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 16px;
+  box-shadow: 0px 0px 2px 0px rgba(5, 25, 45, 0.3),0px 3px 5px -1px rgba(5, 25, 45, 0.3);
+  padding: 12px;
+  border-left: 4px solid #03EF62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: all;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0 {
+    width: 360px;
+  }
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-2 {
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #05192D;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.emotion-4 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-5::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-5:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-5:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-5:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18Zm2.326-11.96-3.355 4.143L6.63 8.627a1 1 0 1 0-1.514 1.307l2.124 2.461a1 1 0 0 0 1.534-.024l4.108-5.073a1 1 0 0 0-1.555-1.259Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+  <div
+    class="emotion-2"
+  >
+    <h2
+      class="emotion-3"
+    >
+      <span
+        class="emotion-4"
+      >
+        Success:
+      </span>
+      Success!
+    </h2>
+  </div>
+  <button
+    aria-label="Close"
+    class="emotion-5"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
+
+exports[`Toast render snapshot of warning toast 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 16px;
+  box-shadow: 0px 0px 2px 0px rgba(5, 25, 45, 0.3),0px 3px 5px -1px rgba(5, 25, 45, 0.3);
+  padding: 12px;
+  border-left: 4px solid #FFBC4B;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: all;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0 {
+    width: 360px;
+  }
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-2 {
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #05192D;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.emotion-4 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-5::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-5:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-5:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-5:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18Zm0-4a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM8 5v5a1 1 0 0 0 2 0V5a1 1 0 1 0-2 0Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+  <div
+    class="emotion-2"
+  >
+    <h2
+      class="emotion-3"
+    >
+      <span
+        class="emotion-4"
+      >
+        Warning:
+      </span>
+      Warning Toast Title
+    </h2>
+  </div>
+  <button
+    aria-label="Close"
+    class="emotion-5"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
