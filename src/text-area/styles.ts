@@ -48,6 +48,7 @@ const textAreaBaseStyle = css`
   width: 100%;
   height: 100%;
   resize: none;
+  word-break: break-word;
   padding: ${tokens.spacing.small} 12px;
   color: ${tokens.colors.navy};
   background-color: ${tokens.colors.white};
@@ -105,7 +106,7 @@ export function fauxGrowElementStyle() {
     grid-area: 1 / 1 / 2 / 2;
     visibility: hidden;
     white-space: pre-wrap;
-    word-break: break-all;
+    word-break: break-word;
   `;
 }
 
