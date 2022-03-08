@@ -6,11 +6,17 @@ import Card from './card';
 import { animatedWrapperStyle } from './styles';
 
 type ToastProps = {
+  /* The main content of the notification. */
   title: string;
+  /* Supportive content to display below the title. */
   description?: React.ReactNode;
+  /* Defines the type of notification. */
   variant?: 'default' | 'success' | 'warning' | 'error';
+  /* [skip docs] */
   autoHideDuration: number;
+  /* [skip docs] */
   disableAutoHide: boolean;
+  /* [skip docs] */
   onClose: () => void;
 };
 

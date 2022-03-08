@@ -20,7 +20,11 @@ const variantMap = {
   },
 };
 
-export function toastsListStyle() {
+type ToastsListStyleOptions = {
+  offset: string;
+};
+
+export function toastsListStyle({ offset }: ToastsListStyleOptions) {
   return css`
     display: flex;
     flex-direction: column;
@@ -31,7 +35,7 @@ export function toastsListStyle() {
     margin: 0;
     padding-left: ${tokens.spacing.medium};
     padding-right: ${tokens.spacing.medium};
-    padding-top: 0;
+    padding-top: ${offset};
     padding-bottom: 0;
     pointer-events: none;
 
