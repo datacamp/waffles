@@ -1,0 +1,67 @@
+import * as ToastExports from '@datacamp/waffles/toast';
+
+import Layout from '../../components/content-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/toast/playground-config';
+import BasicUsage from '../../examples/toast/basic-usage';
+import Variants from '../../examples/toast/variants';
+import CustomDuration from '../../examples/toast/custom-duration';
+import Persistent from '../../examples/toast/persistent';
+
+export default Layout;
+
+# Toast
+
+🚧 This page is **under construction**.
+
+Toasts can be created easily with `toast` function exposed by `useToast` hook. It is also possible to alter default toast behavior, such as duration after which they hide automatically, by configuring it via `ToastProvider`.
+
+## Examples
+
+⚠️ To show various features, unique `ToastProvider` has been used in each example. It may cause toasts from different examples to overlap. In realistic scenarios it's sufficient to use only single `ToastProvider` per app.
+
+<Example title="Basic Usage" path="toast/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Variants" path="toast/variants">
+  <Variants />
+</Example>
+
+<Example title="Custom Duration" path="toast/custom-duration">
+  <CustomDuration />
+</Example>
+
+<Example title="Persistent" path="toast/persistent">
+  <Persistent />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### toast
+
+Helper function options which triggers notification, exposed by the `useToast` hook.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/toast/toast')}
+/>
+
+### ToastProvider
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/toast/toast-provider')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={ToastExports} path="@datacamp/waffles/toast" />
