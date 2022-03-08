@@ -197,6 +197,25 @@ describe('Toast', () => {
     expect(title).not.toBeInTheDocument();
   });
 
+  it('apply custom offset to toasts container', async () => {
+    const { getByText, getByTestId } = render(
+      <ToastProvider offset="20px">
+        <ToastTest />
+      </ToastProvider>,
+    );
+
+    const toastTrigger = getByText('Show Default Toast');
+    fireEvent.click(toastTrigger);
+
+    act(() => {
+      jest.advanceTimersByTime(1000);
+    });
+
+    const list = getByTestId('toasts-list');
+
+    expect(list).toHaveStyle('padding-top: 20px');
+  });
+
   describe('accessible announcement', () => {
     it('should be rendered by success toast', async () => {
       const { getByText } = render(
