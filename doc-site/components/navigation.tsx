@@ -66,9 +66,7 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/components/tabs">Tabs</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Form">
-            <Item href="/components/form-field" isNew>
-              Form Field
-            </Item>
+            <Item href="/components/form-field">Form Field</Item>
             <Item href="/components/input">Input</Item>
             <Item href="/components/text-area">Text Area</Item>
             <Item href="/components/select">Select</Item>
@@ -77,21 +75,16 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/components/radio">Radio</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Overlay">
-            <Item href="/components/dialog" isNew>
-              Dialog
-            </Item>
-            <Item href="/components/alert-dialog" isNew>
-              Alert Dialog
-            </Item>
-            <Item href="/components/drawer" isNew>
-              Drawer
-            </Item>
+            <Item href="/components/dialog">Dialog</Item>
+            <Item href="/components/alert-dialog">Alert Dialog</Item>
+            <Item href="/components/drawer">Drawer</Item>
             <Item href="/components/tooltip">Tooltip</Item>
+            <Item href="/components/toast" isNew>
+              Toast
+            </Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Content">
-            <Item href="/components/badge" isNew>
-              Badge
-            </Item>
+            <Item href="/components/badge">Badge</Item>
             <Item href="/components/icon">Icon</Item>
             <Item href="/components/content-container">Content Container</Item>
           </SideNav.Subcategory>
