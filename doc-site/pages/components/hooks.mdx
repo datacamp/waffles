@@ -42,6 +42,14 @@ This hook delays component unmount by the specified time, which allows complex C
   <UseAnimateTransitionBasicUsage />
 </Example>
 
+## useIsomorphicLayoutEffect
+
+Occasionally there is a need to use `useLayoutEffect` React hook to ensure there is not a render flash for certain operations. This hook bypasses React warning when trying to use `useLayoutEffect` on the server.
+
+## useCallbackRef
+
+Persists any function and prevents it from being invalidated between renders. Also keeps it up to date if it changes.
+
 ## Imports
 
 You can import following components or utilities from this module:
