@@ -101,6 +101,7 @@ export { default as Image } from './image';
 export { default as InfoCircleInverted } from './info-circle-inverted';
 export { default as InfoCircle } from './info-circle';
 export { default as InstagramBrand } from './instagram-brand';
+export { default as Integration } from './integration';
 export { default as Interface } from './interface';
 export { default as Introduction } from './introduction';
 export { default as KaggleBrand } from './kaggle-brand';
