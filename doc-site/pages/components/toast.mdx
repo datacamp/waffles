@@ -18,11 +18,11 @@ export default Layout;
 
 🚧 This page is **under construction**.
 
-Toasts can be created easily with `toast` function exposed by `useToast` hook. It is also possible to alter default toast behavior, such as duration after which they hide automatically, by configuring it via `ToastProvider`.
+Toasts can be created easily with `toast` function exposed by `useToast` hook. It is also possible to alter default toasts behavior, such as duration after which they hide automatically, by configuring it via `ToastProvider`.
 
 ## Examples
 
-⚠️ To show various features, unique `ToastProvider` has been used in each example. It may cause toasts from different examples to overlap. In realistic scenarios it's sufficient to use only single `ToastProvider` per app.
+⚠️ To show various features, unique `ToastProvider` has been used in each example. It may cause toasts from different examples to overlap. In realistic scenarios, it's sufficient to use only a single `ToastProvider` per app.
 
 <Example title="Basic Usage" path="toast/basic-usage">
   <BasicUsage />
@@ -48,7 +48,7 @@ Toasts can be created easily with `toast` function exposed by `useToast` hook. I
 
 ### toast
 
-Helper function options which triggers notification, exposed by the `useToast` hook.
+Options of the helper function that triggers a new notification, exposed by the `useToast` hook.
 
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/toast/toast')}
