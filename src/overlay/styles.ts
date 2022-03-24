@@ -15,7 +15,7 @@ export function overlayStyle({ isVisible }: OverlayStyleOptions) {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.high)};
+    background-color: ${hexToRgba(tokens.colors.navy, 0.7)};
     z-index: ${tokens.zIndex.overlay};
     touch-action: none;
     // Animation
