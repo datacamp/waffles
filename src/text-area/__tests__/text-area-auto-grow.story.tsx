@@ -5,6 +5,7 @@ import { tokens } from '../../tokens';
 import { TextArea } from '../index';
 
 const wrapperStyle = css`
+  width: 300px;
   padding: ${tokens.spacing.medium};
 `;
 

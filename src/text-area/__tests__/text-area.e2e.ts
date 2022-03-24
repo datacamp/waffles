@@ -63,4 +63,19 @@ describe('TextArea', () => {
         'Learn the data skills\nyou need online at\nyour own pace.\nStart your own data analysis\nin seconds.',
       );
   });
+
+  it('with autoGrow enabled, it grows correctly even when very long string is provided', () => {
+    cy.loadStory('text-area-auto-grow');
+    cy.get('main')
+      .find('textarea')
+      .type(
+        'LearnthedataskillsyouneedonlineatyourownpaceStartyourowndataanalysisinsecondsLearnthedataskillsyouneedonlineatyourownpaceStartyourowndataanalysisinseconds',
+      );
+    cy.get('main')
+      .find('textarea')
+      .should(
+        'have.value',
+        'LearnthedataskillsyouneedonlineatyourownpaceStartyourowndataanalysisinsecondsLearnthedataskillsyouneedonlineatyourownpaceStartyourowndataanalysisinseconds',
+      );
+  });
 });
