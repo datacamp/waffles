@@ -33,18 +33,36 @@ type NotificationStyleStyleOptions = {
 
 export function notificationStyle({ variant }: NotificationStyleStyleOptions) {
   return css`
+    position: relative;
     display: flex;
+    // A little trick to mix multiple colors with different opacity
     background: linear-gradient(
         ${variantMap[variant].backgroundColor},
         ${variantMap[variant].backgroundColor}
       ),
       linear-gradient(${tokens.colors.white}, ${tokens.colors.white});
     border: ${tokens.borderWidth.thin} solid ${variantMap[variant].borderColor};
-    border-left: ${tokens.borderWidth.xthick} solid
-      ${variantMap[variant].decorColor};
     border-radius: ${tokens.borderRadius.medium};
     width: 360px;
     padding: 12px;
+  `;
+}
+
+type DecorStyleStyleOptions = {
+  variant: NonNullable<React.ComponentProps<typeof Notification>['variant']>;
+};
+
+export function decorStyle({ variant }: DecorStyleStyleOptions) {
+  return css`
+    position: absolute;
+    z-index: ${tokens.zIndex.default};
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    width: 4px;
+    background-color: ${variantMap[variant].decorColor};
+    border-top-left-radius: ${tokens.borderRadius.medium};
+    border-bottom-left-radius: ${tokens.borderRadius.medium};
   `;
 }
 

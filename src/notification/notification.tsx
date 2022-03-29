@@ -3,14 +3,8 @@ import React from 'react';
 import { Heading } from '../heading';
 import { Paragraph } from '../paragraph';
 import { ScreenReaderOnly } from '../screen-reader-only';
-import Icon from './icon';
-import CloseButton from './close-button';
-import {
-  notificationStyle,
-  contentStyle,
-  titleStyle,
-  descriptionStyle,
-} from './styles';
+import Card from './card';
+import { titleStyle, descriptionStyle } from './styles';
 
 type NotificationProps = {
   title: string;
@@ -45,21 +39,17 @@ function Notification({
   }
 
   return (
-    <section role="status" css={notificationStyle({ variant })}>
-      <Icon variant={variant} />
-      <div css={contentStyle()}>
-        <Heading as="h2" size="medium" css={titleStyle()}>
-          {renderAnnouncement()}
-          {title}
-        </Heading>
-        {description && (
-          <Paragraph variant="secondary" css={descriptionStyle()}>
-            {description}
-          </Paragraph>
-        )}
-      </div>
-      <CloseButton onClick={onClose} />
-    </section>
+    <Card variant={variant} onClose={onClose}>
+      <Heading as="h2" size="medium" css={titleStyle()}>
+        {renderAnnouncement()}
+        {title}
+      </Heading>
+      {description && (
+        <Paragraph variant="primary" css={descriptionStyle()}>
+          {description}
+        </Paragraph>
+      )}
+    </Card>
   );
 }
 
