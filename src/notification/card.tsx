@@ -7,18 +7,19 @@ import { notificationStyle, decorStyle, contentStyle } from './styles';
 
 type CardProps = {
   variant: NonNullable<React.ComponentProps<typeof Notification>['variant']>;
-  children: React.ReactNode;
+  inverted: boolean;
   closeable: boolean;
   onClose?: () => void;
+  children: React.ReactNode;
 };
 
-function Card({ variant, children, closeable, onClose }: CardProps) {
+function Card({ variant, inverted, closeable, onClose, children }: CardProps) {
   return (
-    <section role="status" css={notificationStyle({ variant })}>
-      <div css={decorStyle({ variant })} />
+    <section role="status" css={notificationStyle({ variant, inverted })}>
+      <div css={decorStyle({ variant, inverted })} />
       <Icon variant={variant} />
       <div css={contentStyle({ closeable })}>{children}</div>
-      {closeable && <CloseButton onClick={onClose} />}
+      {closeable && <CloseButton inverted={inverted} onClick={onClose} />}
     </section>
   );
 }

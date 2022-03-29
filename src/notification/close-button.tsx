@@ -5,18 +5,20 @@ import { Button } from '../button';
 import { closeButtonStyle } from './styles';
 
 type CloseButtonProps = {
+  inverted: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-function CloseButton({ onClick }: CloseButtonProps) {
+function CloseButton({ inverted, onClick }: CloseButtonProps) {
   return (
     <Button
       variant="plain"
       size="small"
       icon={<Cross size="xsmall" />}
       aria-label="Close"
+      inverted={inverted}
       onClick={onClick}
-      css={closeButtonStyle()}
+      css={closeButtonStyle({ inverted })}
     />
   );
 }

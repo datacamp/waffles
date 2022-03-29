@@ -39,13 +39,17 @@ function Notification({
   }
 
   return (
-    <Card {...{ variant, closeable, onClose }}>
-      <Heading as="h2" size="medium" css={titleStyle()}>
+    <Card {...{ variant, inverted, closeable, onClose }}>
+      <Heading as="h2" size="medium" inverted={inverted} css={titleStyle()}>
         {renderAnnouncement()}
         {title}
       </Heading>
       {description && (
-        <Paragraph variant="primary" css={descriptionStyle()}>
+        <Paragraph
+          variant="primary"
+          inverted={inverted}
+          css={descriptionStyle()}
+        >
           {description}
         </Paragraph>
       )}

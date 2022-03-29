@@ -4,34 +4,62 @@ import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 import Notification from './notification';
 
-const variantMap = {
+const regularVariantMap = {
   default: {
     backgroundColor: hexToRgba(tokens.colors.blue, 0.15),
     borderColor: hexToRgba(tokens.colors.navy, 0.2),
     decorColor: tokens.colors.blue,
   },
   success: {
-    backgroundColor: hexToRgba(tokens.colors.green, 0.15),
+    backgroundColor: hexToRgba(tokens.colors.green, 0.2),
     borderColor: hexToRgba(tokens.colors.green, tokens.opacity.high),
     decorColor: tokens.colors.green,
   },
   warning: {
-    backgroundColor: hexToRgba(tokens.colors.orangeLight, 0.2),
+    backgroundColor: hexToRgba(tokens.colors.orangeLight, 0.25),
     borderColor: hexToRgba(tokens.colors.orangeLight, 0.8),
     decorColor: tokens.colors.orangeLight,
   },
   error: {
-    backgroundColor: hexToRgba(tokens.colors.red, tokens.opacity.low),
+    backgroundColor: hexToRgba(tokens.colors.red, 0.15),
     borderColor: hexToRgba(tokens.colors.red, tokens.opacity.high),
     decorColor: tokens.colors.red,
   },
 };
 
-type NotificationStyleStyleOptions = {
-  variant: NonNullable<React.ComponentProps<typeof Notification>['variant']>;
+const invertedVariantMap = {
+  default: {
+    backgroundColor: hexToRgba(tokens.colors.blue, 0.25),
+    borderColor: hexToRgba(tokens.colors.blue, 0.8),
+    decorColor: tokens.colors.blue,
+  },
+  success: {
+    ...regularVariantMap.success,
+    backgroundColor: hexToRgba(tokens.colors.green, 0.25),
+  },
+  warning: {
+    ...regularVariantMap.warning,
+  },
+  error: {
+    ...regularVariantMap.error,
+    backgroundColor: hexToRgba(tokens.colors.red, 0.25),
+  },
 };
 
-export function notificationStyle({ variant }: NotificationStyleStyleOptions) {
+type NotificationStyleStyleOptions = {
+  variant: NonNullable<React.ComponentProps<typeof Notification>['variant']>;
+  inverted: boolean;
+};
+
+export function notificationStyle({
+  variant,
+  inverted,
+}: NotificationStyleStyleOptions) {
+  const variantMap = inverted ? invertedVariantMap : regularVariantMap;
+  const fillBackgroundColor = inverted
+    ? tokens.colors.navy
+    : tokens.colors.white;
+
   return css`
     position: relative;
     display: flex;
@@ -40,7 +68,7 @@ export function notificationStyle({ variant }: NotificationStyleStyleOptions) {
         ${variantMap[variant].backgroundColor},
         ${variantMap[variant].backgroundColor}
       ),
-      linear-gradient(${tokens.colors.white}, ${tokens.colors.white});
+      linear-gradient(${fillBackgroundColor}, ${fillBackgroundColor});
     border: ${tokens.borderWidth.thin} solid ${variantMap[variant].borderColor};
     border-radius: ${tokens.borderRadius.medium};
     width: 360px;
@@ -50,9 +78,12 @@ export function notificationStyle({ variant }: NotificationStyleStyleOptions) {
 
 type DecorStyleStyleOptions = {
   variant: NonNullable<React.ComponentProps<typeof Notification>['variant']>;
+  inverted: boolean;
 };
 
-export function decorStyle({ variant }: DecorStyleStyleOptions) {
+export function decorStyle({ variant, inverted }: DecorStyleStyleOptions) {
+  const variantMap = inverted ? invertedVariantMap : regularVariantMap;
+
   return css`
     position: absolute;
     z-index: ${tokens.zIndex.default};
@@ -140,9 +171,13 @@ export function descriptionStyle() {
   `;
 }
 
-export function closeButtonStyle() {
+type CloseButtonStyleOptions = {
+  inverted: boolean;
+};
+
+export function closeButtonStyle({ inverted }: CloseButtonStyleOptions) {
   return css`
-    color: ${tokens.colors.navy};
+    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     flex-shrink: 0;
   `;
 }
