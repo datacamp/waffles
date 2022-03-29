@@ -6,12 +6,12 @@ import Notification from './notification';
 
 const variantMap = {
   default: {
-    backgroundColor: hexToRgba(tokens.colors.blue, 0.2),
+    backgroundColor: hexToRgba(tokens.colors.blue, 0.15),
     borderColor: hexToRgba(tokens.colors.navy, 0.2),
     decorColor: tokens.colors.blue,
   },
   success: {
-    backgroundColor: hexToRgba(tokens.colors.green, tokens.opacity.low),
+    backgroundColor: hexToRgba(tokens.colors.green, 0.15),
     borderColor: hexToRgba(tokens.colors.green, tokens.opacity.high),
     decorColor: tokens.colors.green,
   },
@@ -113,9 +113,13 @@ export function iconBackgroundStyle({
   `;
 }
 
-export function contentStyle() {
+type ContentStyleOptions = {
+  closeable: boolean;
+};
+
+export function contentStyle({ closeable }: ContentStyleOptions) {
   return css`
-    padding-right: ${tokens.spacing.small};
+    padding-right: ${closeable ? tokens.spacing.small : 0};
     padding-left: ${tokens.spacing.small};
     padding-top: 2px;
     flex-grow: 1;

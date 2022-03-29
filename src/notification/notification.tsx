@@ -39,7 +39,7 @@ function Notification({
   }
 
   return (
-    <Card variant={variant} onClose={onClose}>
+    <Card {...{ variant, closeable, onClose }}>
       <Heading as="h2" size="medium" css={titleStyle()}>
         {renderAnnouncement()}
         {title}
