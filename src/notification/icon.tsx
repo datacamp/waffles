@@ -11,17 +11,17 @@ import { iconStyle, iconWrapperStyle, iconBackgroundStyle } from './styles';
 const variantMap = {
   success: {
     icon: <CheckmarkCircleInverted />,
-    iconColor: tokens.colors.blue,
+    iconColor: tokens.colors.green,
     backgroundColor: tokens.colors.navy,
   },
   error: {
     icon: <CrossCircleInverted />,
-    iconColor: tokens.colors.blue,
+    iconColor: tokens.colors.red,
     backgroundColor: tokens.colors.white,
   },
   warning: {
     icon: <AttentionCircleInverted />,
-    iconColor: tokens.colors.blue,
+    iconColor: tokens.colors.orangeLight,
     backgroundColor: tokens.colors.navy,
   },
   default: {

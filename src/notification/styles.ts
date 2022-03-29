@@ -11,19 +11,19 @@ const variantMap = {
     decorColor: tokens.colors.blue,
   },
   success: {
-    backgroundColor: tokens.colors.green,
-    borderColor: tokens.colors.navy,
-    decorColor: tokens.colors.navy,
+    backgroundColor: hexToRgba(tokens.colors.green, tokens.opacity.low),
+    borderColor: hexToRgba(tokens.colors.green, tokens.opacity.high),
+    decorColor: tokens.colors.green,
   },
   warning: {
-    backgroundColor: tokens.colors.orangeLight,
-    borderColor: tokens.colors.navy,
-    decorColor: tokens.colors.navy,
+    backgroundColor: hexToRgba(tokens.colors.orangeLight, 0.2),
+    borderColor: hexToRgba(tokens.colors.orangeLight, 0.8),
+    decorColor: tokens.colors.orangeLight,
   },
   error: {
-    backgroundColor: tokens.colors.red,
-    borderColor: tokens.colors.navy,
-    decorColor: tokens.colors.navy,
+    backgroundColor: hexToRgba(tokens.colors.red, tokens.opacity.low),
+    borderColor: hexToRgba(tokens.colors.red, tokens.opacity.high),
+    decorColor: tokens.colors.red,
   },
 };
 
