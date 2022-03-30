@@ -12,7 +12,7 @@ const regularVariantMap = {
   },
   success: {
     backgroundColor: hexToRgba(tokens.colors.green, 0.2),
-    borderColor: hexToRgba(tokens.colors.green, tokens.opacity.high),
+    borderColor: hexToRgba(tokens.colors.green, 0.8),
     decorColor: tokens.colors.green,
   },
   warning: {
@@ -34,8 +34,9 @@ const invertedVariantMap = {
     decorColor: tokens.colors.blue,
   },
   success: {
-    ...regularVariantMap.success,
     backgroundColor: hexToRgba(tokens.colors.green, 0.25),
+    borderColor: hexToRgba(tokens.colors.green, tokens.opacity.high),
+    decorColor: tokens.colors.green,
   },
   warning: {
     ...regularVariantMap.warning,
@@ -71,7 +72,7 @@ export function notificationStyle({
       linear-gradient(${fillBackgroundColor}, ${fillBackgroundColor});
     border: ${tokens.borderWidth.thin} solid ${variantMap[variant].borderColor};
     border-radius: ${tokens.borderRadius.medium};
-    width: 360px;
+    width: 100%;
     padding: 12px;
   `;
 }
@@ -145,12 +146,12 @@ export function iconBackgroundStyle({
 }
 
 type ContentStyleOptions = {
-  closeable: boolean;
+  closable: boolean;
 };
 
-export function contentStyle({ closeable }: ContentStyleOptions) {
+export function contentStyle({ closable }: ContentStyleOptions) {
   return css`
-    padding-right: ${closeable ? tokens.spacing.small : 0};
+    padding-right: ${closable ? tokens.spacing.small : 0};
     padding-left: ${tokens.spacing.small};
     padding-top: 2px;
     flex-grow: 1;

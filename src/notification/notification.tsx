@@ -11,8 +11,7 @@ type NotificationProps = {
   description?: React.ReactNode;
   variant?: 'default' | 'success' | 'warning' | 'error';
   inverted?: boolean;
-  fullWidth?: boolean;
-  closeable?: boolean;
+  closable?: boolean;
   onClose?: () => void;
 };
 
@@ -21,8 +20,7 @@ function Notification({
   description,
   variant = 'default',
   inverted = false,
-  fullWidth = false,
-  closeable = false,
+  closable = false,
   onClose,
 }: NotificationProps) {
   function renderAnnouncement() {
@@ -39,7 +37,7 @@ function Notification({
   }
 
   return (
-    <Card {...{ variant, inverted, closeable, onClose }}>
+    <Card {...{ variant, inverted, closable, onClose }}>
       <Heading as="h2" size="medium" inverted={inverted} css={titleStyle()}>
         {renderAnnouncement()}
         {title}
