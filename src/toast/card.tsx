@@ -1,38 +1,16 @@
-import {
-  AttentionCircleInverted,
-  CheckmarkCircleInverted,
-  CrossCircleInverted,
-} from '../icon';
+import { NotificationCard } from '../notification-card';
 import { Heading } from '../heading';
 import { Paragraph } from '../paragraph';
 import { ScreenReaderOnly } from '../screen-reader-only';
 import Toast from './toast';
-import CloseButton from './close-button';
-import {
-  toastStyle,
-  iconStyle,
-  contentStyle,
-  titleStyle,
-  descriptionStyle,
-} from './styles';
+import { toastStyle, titleStyle, descriptionStyle } from './styles';
 
 type CardProps = Omit<
   React.ComponentProps<typeof Toast>,
   'disableAutoHide' | 'autoHideDuration'
 >;
 
-function Card({ onClose, title, variant = 'default', description }: CardProps) {
-  function renderIcon() {
-    switch (variant) {
-      case 'success':
-        return <CheckmarkCircleInverted />;
-      case 'error':
-        return <CrossCircleInverted />;
-      default:
-        return <AttentionCircleInverted />;
-    }
-  }
-
+function Card({ title, variant = 'default', description, onClose }: CardProps) {
   function renderAnnouncement() {
     switch (variant) {
       case 'success':
@@ -47,21 +25,22 @@ function Card({ onClose, title, variant = 'default', description }: CardProps) {
   }
 
   return (
-    <section role="status" css={toastStyle({ variant })}>
-      <div css={iconStyle()}>{renderIcon()}</div>
-      <div css={contentStyle()}>
-        <Heading as="h2" size="medium" css={titleStyle()}>
-          {renderAnnouncement()}
-          {title}
-        </Heading>
-        {description && (
-          <Paragraph variant="secondary" css={descriptionStyle()}>
-            {description}
-          </Paragraph>
-        )}
-      </div>
-      <CloseButton onClick={onClose} />
-    </section>
+    <NotificationCard
+      variant={variant}
+      onClose={onClose}
+      closable
+      css={toastStyle()}
+    >
+      <Heading as="h2" size="medium" css={titleStyle()}>
+        {renderAnnouncement()}
+        {title}
+      </Heading>
+      {description && (
+        <Paragraph variant="secondary" css={descriptionStyle()}>
+          {description}
+        </Paragraph>
+      )}
+    </NotificationCard>
   );
 }
 

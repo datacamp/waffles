@@ -2,23 +2,7 @@ import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
 import { mediaQuery } from '../helpers';
-import Toast from './toast';
 import { toastEnter, toastExit } from './keyframes';
-
-const variantMap = {
-  default: {
-    color: tokens.colors.purple,
-  },
-  success: {
-    color: tokens.colors.green,
-  },
-  warning: {
-    color: tokens.colors.orangeLight,
-  },
-  error: {
-    color: tokens.colors.red,
-  },
-};
 
 type ToastsListStyleOptions = {
   offset: string;
@@ -71,20 +55,11 @@ export function animatedWrapperStyle({
   `;
 }
 
-type ToastStyleOptions = {
-  variant: NonNullable<React.ComponentProps<typeof Toast>['variant']>;
-};
-
-export function toastStyle({ variant }: ToastStyleOptions) {
+export function toastStyle() {
   return css`
-    display: flex;
-    background-color: ${tokens.colors.white};
-    border-radius: ${tokens.borderRadius.medium};
     width: 100%;
     margin-top: ${tokens.spacing.medium};
     box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.thick};
-    padding: 12px;
-    border-left: ${tokens.borderWidth.xthick} solid ${variantMap[variant].color};
     user-select: none;
     pointer-events: all;
 
@@ -94,29 +69,10 @@ export function toastStyle({ variant }: ToastStyleOptions) {
   `;
 }
 
-export function iconStyle() {
-  return css`
-    width: ${tokens.sizing.small};
-    height: ${tokens.sizing.small};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  `;
-}
-
-export function contentStyle() {
-  return css`
-    padding-right: ${tokens.spacing.small};
-    padding-left: ${tokens.spacing.small};
-    padding-top: 2px;
-    flex-grow: 1;
-  `;
-}
-
 export function titleStyle() {
   return css`
     margin: 0;
+    padding-top: 2px;
     line-height: ${tokens.lineHeights.relaxed};
   `;
 }
@@ -125,12 +81,5 @@ export function descriptionStyle() {
   return css`
     margin-top: ${tokens.spacing.xsmall};
     margin-bottom: 0;
-  `;
-}
-
-export function closeButtonStyle() {
-  return css`
-    color: ${tokens.colors.navy};
-    flex-shrink: 0;
   `;
 }
