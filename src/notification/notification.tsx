@@ -1,18 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 
-import { NotificationCard } from '../notification-card';
-import { Heading } from '../heading';
-import { Paragraph } from '../paragraph';
-import { ScreenReaderOnly } from '../screen-reader-only';
-import useInternalLayout from './use-internal-layout';
-import {
-  notificationStyle,
-  contentStyle,
-  titleStyle,
-  descriptionStyle,
-  textContentStyle,
-  actionStyle,
-} from './styles';
+import { useAnimateTransition } from '../hooks';
+import Card from './card';
 
 type NotificationProps = {
   title: string;
@@ -33,48 +22,21 @@ function Notification({
   onClose,
   action,
 }: NotificationProps) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const layout = useInternalLayout(cardRef);
+  const [isOpen, setIsOpen] = useState(true);
+  const isAnimating = useAnimateTransition(isOpen, 400);
 
-  function renderAnnouncement() {
-    switch (variant) {
-      case 'success':
-        return <ScreenReaderOnly>Success:</ScreenReaderOnly>;
-      case 'warning':
-        return <ScreenReaderOnly>Warning:</ScreenReaderOnly>;
-      case 'error':
-        return <ScreenReaderOnly>Error:</ScreenReaderOnly>;
-      default:
-        return null;
-    }
+  function handleClose() {
+    onClose && onClose();
+    setIsOpen(false);
   }
 
-  return (
-    <NotificationCard
-      {...{ variant, inverted, closable, onClose }}
-      ref={cardRef}
-      css={notificationStyle({ variant, inverted })}
-    >
-      <div css={contentStyle({ layout })}>
-        <div css={textContentStyle({ layout })}>
-          <Heading as="h2" size="medium" inverted={inverted} css={titleStyle()}>
-            {renderAnnouncement()}
-            {title}
-          </Heading>
-          {description && (
-            <Paragraph
-              variant="primary"
-              inverted={inverted}
-              css={descriptionStyle()}
-            >
-              {description}
-            </Paragraph>
-          )}
-        </div>
-        {action && <div css={actionStyle({ layout })}>{action}</div>}
-      </div>
-    </NotificationCard>
-  );
+  return isAnimating ? (
+    <Card
+      {...{ title, description, variant, inverted, closable, action }}
+      isVisible={isOpen}
+      onClose={handleClose}
+    />
+  ) : null;
 }
 
 export default Notification;

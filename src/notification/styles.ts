@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 import Notification from './notification';
+import { notificationExit } from './keyframes';
 
 type LayoutType = 'horizontal' | 'vertical';
 
@@ -46,11 +47,13 @@ const invertedVariantMap = {
 type NotificationStyleStyleOptions = {
   variant: NonNullable<React.ComponentProps<typeof Notification>['variant']>;
   inverted: boolean;
+  isVisible: boolean;
 };
 
 export function notificationStyle({
   variant,
   inverted,
+  isVisible,
 }: NotificationStyleStyleOptions) {
   const variantMap = inverted ? invertedVariantMap : regularVariantMap;
   const fillBackgroundColor = inverted
@@ -66,6 +69,12 @@ export function notificationStyle({
       linear-gradient(${fillBackgroundColor}, ${fillBackgroundColor});
     border: ${tokens.borderWidth.thin} solid ${variantMap[variant].borderColor};
     width: 100%;
+    // Animation
+    opacity: 1;
+    ${!isVisible &&
+    css`
+      animation: ${notificationExit()} 300ms ease-out forwards;
+    `}
   `;
 }
 

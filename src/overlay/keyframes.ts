@@ -2,7 +2,7 @@ import { keyframes } from '@emotion/react';
 
 export function overlayEnter() {
   return keyframes`
-  from {
+    from {
       opacity: 0;
     }
     to {
@@ -13,7 +13,7 @@ export function overlayEnter() {
 
 export function overlayExit() {
   return keyframes`
-  from {
+    from {
       opacity: 1;
     }
     to {

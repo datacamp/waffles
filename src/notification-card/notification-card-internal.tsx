@@ -32,7 +32,7 @@ function NotificationCardInternal(
     >
       <div css={decorStyle({ variant })} />
       <Icon variant={variant} />
-      <div css={contentStyle()}>{children}</div>
+      <div css={contentStyle({ closable })}>{children}</div>
       {closable && <CloseButton inverted={inverted} onClick={onClose} />}
     </section>
   );

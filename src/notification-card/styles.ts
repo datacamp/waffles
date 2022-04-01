@@ -100,9 +100,13 @@ export function iconBackgroundStyle({
   `;
 }
 
-export function contentStyle() {
+type ContentStyleOptions = {
+  closable: boolean;
+};
+
+export function contentStyle({ closable }: ContentStyleOptions) {
   return css`
-    padding-right: ${tokens.spacing.small};
+    ${closable && `padding-right: ${tokens.spacing.small};`}
     padding-left: ${tokens.spacing.small};
     flex-grow: 1;
   `;
