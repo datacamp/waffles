@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
+import { NotificationCard } from '../notification-card';
 import { Heading } from '../heading';
 import { Paragraph } from '../paragraph';
 import { ScreenReaderOnly } from '../screen-reader-only';
-import Card from './card';
-import { titleStyle, descriptionStyle } from './styles';
+import useInternalLayout from './use-internal-layout';
+import {
+  notificationStyle,
+  contentStyle,
+  titleStyle,
+  descriptionStyle,
+  textContentStyle,
+  actionStyle,
+} from './styles';
 
 type NotificationProps = {
   title: string;
@@ -13,6 +21,7 @@ type NotificationProps = {
   inverted?: boolean;
   closable?: boolean;
   onClose?: () => void;
+  action?: React.ReactNode;
 };
 
 function Notification({
@@ -22,7 +31,11 @@ function Notification({
   inverted = false,
   closable = false,
   onClose,
+  action,
 }: NotificationProps) {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const layout = useInternalLayout(cardRef);
+
   function renderAnnouncement() {
     switch (variant) {
       case 'success':
@@ -37,21 +50,30 @@ function Notification({
   }
 
   return (
-    <Card {...{ variant, inverted, closable, onClose }}>
-      <Heading as="h2" size="medium" inverted={inverted} css={titleStyle()}>
-        {renderAnnouncement()}
-        {title}
-      </Heading>
-      {description && (
-        <Paragraph
-          variant="primary"
-          inverted={inverted}
-          css={descriptionStyle()}
-        >
-          {description}
-        </Paragraph>
-      )}
-    </Card>
+    <NotificationCard
+      {...{ variant, inverted, closable, onClose }}
+      ref={cardRef}
+      css={notificationStyle({ variant, inverted })}
+    >
+      <div css={contentStyle({ layout })}>
+        <div css={textContentStyle({ layout })}>
+          <Heading as="h2" size="medium" inverted={inverted} css={titleStyle()}>
+            {renderAnnouncement()}
+            {title}
+          </Heading>
+          {description && (
+            <Paragraph
+              variant="primary"
+              inverted={inverted}
+              css={descriptionStyle()}
+            >
+              {description}
+            </Paragraph>
+          )}
+        </div>
+        {action && <div css={actionStyle({ layout })}>{action}</div>}
+      </div>
+    </NotificationCard>
   );
 }
 

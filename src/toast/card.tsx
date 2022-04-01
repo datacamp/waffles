@@ -10,7 +10,7 @@ type CardProps = Omit<
   'disableAutoHide' | 'autoHideDuration'
 >;
 
-function Card({ title, variant = 'default', description, onClose }: CardProps) {
+function Card({ title, variant, description, onClose }: CardProps) {
   function renderAnnouncement() {
     switch (variant) {
       case 'success':
