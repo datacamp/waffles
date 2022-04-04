@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, Children, cloneElement, isValidElement } from 'react';
 
 import { NotificationCard } from '../notification-card';
 import { Heading } from '../heading';
@@ -52,6 +52,27 @@ function Card({
     }
   }
 
+  function renderAction() {
+    if (action) {
+      // Set inverted style
+      return (
+        <div css={actionStyle({ layout })}>
+          {Children.map(action, (child) => {
+            if (isValidElement(child)) {
+              return cloneElement(child, {
+                inverted,
+              });
+            }
+
+            return null;
+          })}
+        </div>
+      );
+    }
+
+    return null;
+  }
+
   return (
     <NotificationCard
       {...{ variant, inverted, closable, onClose }}
@@ -74,7 +95,7 @@ function Card({
             </Paragraph>
           )}
         </div>
-        {action && <div css={actionStyle({ layout })}>{action}</div>}
+        {renderAction()}
       </div>
     </NotificationCard>
   );
