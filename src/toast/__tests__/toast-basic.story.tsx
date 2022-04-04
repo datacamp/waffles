@@ -4,8 +4,6 @@ import { tokens } from '../../tokens';
 import { Button } from '../../button';
 import { ToastProvider, useToast } from '../index';
 
-/// ON MOBILE
-
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};
 `;

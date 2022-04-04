@@ -18,7 +18,7 @@ describe('Toast', () => {
     cy.loadStory('toast-basic');
     cy.findByText('Show Toast').click();
     cy.wait(1000);
-    cy.findByLabelText('Close').click();
+    cy.findByLabelText('Close notification').click();
     cy.findByText('Toast Title').should('not.exist');
     cy.findByTestId('toasts-list').should('not.exist');
   });

@@ -39,6 +39,16 @@ describe('NotificationCard', () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
+  it('sets the data attribute on the notification', () => {
+    const { getByTestId } = render(
+      <NotificationCard data-testid="test-notification">Test</NotificationCard>,
+    );
+
+    const card = getByTestId('test-notification');
+
+    expect(card).toBeInTheDocument();
+  });
+
   describe('renders snapshot of', () => {
     variants.forEach((variant) => {
       it(`variant ${variant}`, () => {
@@ -53,16 +63,6 @@ describe('NotificationCard', () => {
         expect(notification).toMatchSnapshot();
       });
     });
-  });
-
-  it('sets the data attribute on the notification', () => {
-    const { getByTestId } = render(
-      <NotificationCard data-testid="test-notification">Test</NotificationCard>,
-    );
-
-    const card = getByTestId('test-notification');
-
-    expect(card).toBeInTheDocument();
   });
 
   describe('renders snapshot of inverted', () => {
