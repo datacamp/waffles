@@ -93,6 +93,7 @@ function InputInternal(
         </EnhancerRight>
       );
     }
+
     return null;
   }
 

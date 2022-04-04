@@ -1,42 +1,8 @@
-import React, { useState } from 'react';
+import NotificationInternal from './notification-internal';
+import ActionButton from './action-button';
 
-import { useAnimateTransition } from '../hooks';
-import Card from './card';
+const NotificationNamespace = Object.assign(NotificationInternal, {
+  ActionButton,
+});
 
-type NotificationProps = {
-  title: string;
-  description?: React.ReactNode;
-  variant?: 'default' | 'success' | 'warning' | 'error';
-  inverted?: boolean;
-  closable?: boolean;
-  onClose?: () => void;
-  action?: React.ReactNode;
-};
-
-function Notification({
-  title,
-  description,
-  variant = 'default',
-  inverted = false,
-  closable = false,
-  onClose,
-  action,
-}: NotificationProps) {
-  const [isOpen, setIsOpen] = useState(true);
-  const isAnimating = useAnimateTransition(isOpen, 400);
-
-  function handleClose() {
-    onClose && onClose();
-    setIsOpen(false);
-  }
-
-  return isAnimating ? (
-    <Card
-      {...{ title, description, variant, inverted, closable, action }}
-      isVisible={isOpen}
-      onClose={handleClose}
-    />
-  ) : null;
-}
-
-export default Notification;
+export default NotificationNamespace;
