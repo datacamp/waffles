@@ -184,7 +184,7 @@ describe('Toast', () => {
       jest.advanceTimersByTime(1000);
     });
 
-    const closeButton = getByLabelText('Close');
+    const closeButton = getByLabelText('Close notification');
     fireEvent.click(closeButton);
 
     act(() => {

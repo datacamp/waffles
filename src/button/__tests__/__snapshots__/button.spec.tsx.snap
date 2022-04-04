@@ -759,7 +759,7 @@ exports[`Button renders snapshot of inverted variant plain and size large 1`] = 
   width: auto;
   padding-left: 16px;
   padding-right: 16px;
-  color: #009BD8;
+  color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
 }
@@ -847,7 +847,7 @@ exports[`Button renders snapshot of inverted variant plain and size medium 1`] =
   width: auto;
   padding-left: 16px;
   padding-right: 16px;
-  color: #009BD8;
+  color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
 }
@@ -935,7 +935,7 @@ exports[`Button renders snapshot of inverted variant plain and size small 1`] = 
   width: auto;
   padding-left: 8px;
   padding-right: 8px;
-  color: #009BD8;
+  color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
 }
