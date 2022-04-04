@@ -83,6 +83,19 @@ describe('Notification', () => {
     jest.useRealTimers();
   });
 
+  it('sets the data attribute on the notification', async () => {
+    const { getByTestId } = render(
+      <Notification data-testid="test-notification" title="Test" />,
+    );
+
+    let notification;
+    await waitFor(() => {
+      notification = getByTestId('test-notification');
+    });
+
+    expect(notification).toBeInTheDocument();
+  });
+
   describe('accessible announcement', () => {
     it('should be rendered by success notification', async () => {
       const { getByText } = render(
