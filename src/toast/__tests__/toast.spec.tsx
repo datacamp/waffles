@@ -129,7 +129,7 @@ describe('Toast', () => {
     expect(list).not.toBeInTheDocument();
   });
 
-  it('when custom auto hide duration time is specified close a toasts after that duration', async () => {
+  it('when custom auto hide duration time is specified, close a toasts after that duration', async () => {
     const { getByText, queryByText } = render(
       <ToastProvider autoHideDuration={10000}>
         <ToastTest />

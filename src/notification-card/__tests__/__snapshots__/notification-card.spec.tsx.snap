@@ -1,0 +1,1657 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationCard renders snapshot of inverted variant default 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #05192D;
+  border-radius: 4px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 4px;
+  background-color: #06BDFC;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: #009BD8;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  z-index: 5;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.emotion-5 {
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  color: #FFFFFF;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-6:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  />
+  <div
+    class="emotion-2"
+  >
+    <div
+      class="emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 18 18"
+        width="16"
+      >
+        <path
+          d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18ZM9 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 8a1 1 0 0 1-1-1V8a1 1 0 0 1 2 0v5a1 1 0 0 1-1 1Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-4"
+    />
+  </div>
+  <div
+    class="emotion-5"
+  >
+    Test
+  </div>
+  <button
+    aria-label="Close notification"
+    class="emotion-6"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
+
+exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #05192D;
+  border-radius: 4px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 4px;
+  background-color: #FF5400;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: #FF5400;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  z-index: 5;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.emotion-5 {
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  color: #FFFFFF;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-6:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  />
+  <div
+    class="emotion-2"
+  >
+    <div
+      class="emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 18 18"
+        width="16"
+      >
+        <path
+          d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18Zm1.414-9 2.122-2.121a1 1 0 1 0-1.415-1.415L9 7.586 6.879 5.464A1 1 0 0 0 5.464 6.88L7.586 9l-2.122 2.121a1 1 0 0 0 1.415 1.415L9 10.414l2.121 2.122a1 1 0 0 0 1.415-1.415L10.414 9Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-4"
+    />
+  </div>
+  <div
+    class="emotion-5"
+  >
+    Test
+  </div>
+  <button
+    aria-label="Close notification"
+    class="emotion-6"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
+
+exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #05192D;
+  border-radius: 4px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 4px;
+  background-color: #03EF62;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: #03EF62;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  z-index: 5;
+  background-color: #05192D;
+  border-radius: 50%;
+}
+
+.emotion-5 {
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  color: #FFFFFF;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-6:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  />
+  <div
+    class="emotion-2"
+  >
+    <div
+      class="emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 18 18"
+        width="16"
+      >
+        <path
+          d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18Zm2.326-11.96-3.355 4.143L6.63 8.627a1 1 0 1 0-1.514 1.307l2.124 2.461a1 1 0 0 0 1.534-.024l4.108-5.073a1 1 0 0 0-1.555-1.259Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-4"
+    />
+  </div>
+  <div
+    class="emotion-5"
+  >
+    Test
+  </div>
+  <button
+    aria-label="Close notification"
+    class="emotion-6"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
+
+exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #05192D;
+  border-radius: 4px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 4px;
+  background-color: #FFBC4B;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: #FFBC4B;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  z-index: 5;
+  background-color: #05192D;
+  border-radius: 50%;
+}
+
+.emotion-5 {
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  color: #FFFFFF;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-6:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  />
+  <div
+    class="emotion-2"
+  >
+    <div
+      class="emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 18 18"
+        width="16"
+      >
+        <path
+          d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18Zm0-4a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM8 5v5a1 1 0 0 0 2 0V5a1 1 0 1 0-2 0Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-4"
+    />
+  </div>
+  <div
+    class="emotion-5"
+  >
+    Test
+  </div>
+  <button
+    aria-label="Close notification"
+    class="emotion-6"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
+
+exports[`NotificationCard renders snapshot of variant default 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 4px;
+  background-color: #06BDFC;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: #009BD8;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  z-index: 5;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.emotion-5 {
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-6:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  />
+  <div
+    class="emotion-2"
+  >
+    <div
+      class="emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 18 18"
+        width="16"
+      >
+        <path
+          d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18ZM9 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 8a1 1 0 0 1-1-1V8a1 1 0 0 1 2 0v5a1 1 0 0 1-1 1Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-4"
+    />
+  </div>
+  <div
+    class="emotion-5"
+  >
+    Test
+  </div>
+  <button
+    aria-label="Close notification"
+    class="emotion-6"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
+
+exports[`NotificationCard renders snapshot of variant error 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 4px;
+  background-color: #FF5400;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: #FF5400;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  z-index: 5;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.emotion-5 {
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-6:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  />
+  <div
+    class="emotion-2"
+  >
+    <div
+      class="emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 18 18"
+        width="16"
+      >
+        <path
+          d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18Zm1.414-9 2.122-2.121a1 1 0 1 0-1.415-1.415L9 7.586 6.879 5.464A1 1 0 0 0 5.464 6.88L7.586 9l-2.122 2.121a1 1 0 0 0 1.415 1.415L9 10.414l2.121 2.122a1 1 0 0 0 1.415-1.415L10.414 9Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-4"
+    />
+  </div>
+  <div
+    class="emotion-5"
+  >
+    Test
+  </div>
+  <button
+    aria-label="Close notification"
+    class="emotion-6"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
+
+exports[`NotificationCard renders snapshot of variant success 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 4px;
+  background-color: #03EF62;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: #03EF62;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  z-index: 5;
+  background-color: #05192D;
+  border-radius: 50%;
+}
+
+.emotion-5 {
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-6:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  />
+  <div
+    class="emotion-2"
+  >
+    <div
+      class="emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 18 18"
+        width="16"
+      >
+        <path
+          d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18Zm2.326-11.96-3.355 4.143L6.63 8.627a1 1 0 1 0-1.514 1.307l2.124 2.461a1 1 0 0 0 1.534-.024l4.108-5.073a1 1 0 0 0-1.555-1.259Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-4"
+    />
+  </div>
+  <div
+    class="emotion-5"
+  >
+    Test
+  </div>
+  <button
+    aria-label="Close notification"
+    class="emotion-6"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
+
+exports[`NotificationCard renders snapshot of variant warning 1`] = `
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 4px;
+  background-color: #FFBC4B;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: #FFBC4B;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  z-index: 5;
+  background-color: #05192D;
+  border-radius: 50%;
+}
+
+.emotion-5 {
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  width: auto;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-6:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+<section
+  class="emotion-0"
+  role="status"
+>
+  <div
+    class="emotion-1"
+  />
+  <div
+    class="emotion-2"
+  >
+    <div
+      class="emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 18 18"
+        width="16"
+      >
+        <path
+          d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18Zm0-4a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM8 5v5a1 1 0 0 0 2 0V5a1 1 0 1 0-2 0Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-4"
+    />
+  </div>
+  <div
+    class="emotion-5"
+  >
+    Test
+  </div>
+  <button
+    aria-label="Close notification"
+    class="emotion-6"
+  >
+    <svg
+      aria-hidden="true"
+      height="12"
+      viewBox="0 0 18 18"
+      width="12"
+    >
+      <path
+        d="m9.005 7.625 4.83-4.83a.976.976 0 0 1 1.38 1.38l-4.83 4.83 4.82 4.82a.976.976 0 1 1-1.38 1.38l-4.82-4.82-4.83 4.83a.976.976 0 0 1-1.38-1.38l4.83-4.83-4.84-4.84a.976.976 0 1 1 1.38-1.38l4.84 4.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</section>
+`;
