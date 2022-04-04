@@ -11,7 +11,7 @@ type NotificationProps = {
   closable?: boolean;
   onClose?: () => void;
   action?: React.ReactNode;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
 function NotificationInternal({
   title,
@@ -21,6 +21,7 @@ function NotificationInternal({
   closable = false,
   onClose,
   action,
+  ...restProps
 }: NotificationProps) {
   const [isOpen, setIsOpen] = useState(true);
   const isAnimating = useAnimateTransition(isOpen, 400);
@@ -33,6 +34,7 @@ function NotificationInternal({
   return isAnimating ? (
     <Card
       {...{ title, description, variant, inverted, closable, action }}
+      {...restProps}
       isVisible={isOpen}
       onClose={handleClose}
     />

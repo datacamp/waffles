@@ -24,7 +24,7 @@ type CardProps = {
   closable: boolean;
   onClose?: () => void;
   action?: React.ReactNode;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
 function Card({
   isVisible,
@@ -35,6 +35,7 @@ function Card({
   closable,
   onClose,
   action,
+  ...restProps
 }: CardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const layout = useInternalLayout(cardRef);
@@ -76,6 +77,7 @@ function Card({
   return (
     <NotificationCard
       {...{ variant, inverted, closable, onClose }}
+      {...restProps}
       ref={cardRef}
       css={notificationStyle({ variant, inverted, isVisible })}
     >
