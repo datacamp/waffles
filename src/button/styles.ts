@@ -61,7 +61,7 @@ const invertedVariantMap = {
     borderColor: hexToRgba(tokens.colors.white, tokens.opacity.high),
   },
   plain: {
-    color: tokens.colors.blueDark,
+    color: tokens.colors.blue,
     backgroundColor: 'transparent',
     hoverColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
     borderColor: 'transparent',
