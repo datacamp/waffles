@@ -15,8 +15,8 @@ function Playground() {
       <Button
         onClick={() =>
           toast({
-            title: 'Toast Title',
-            description: 'Short toast description.',
+            title: 'Short Toast Title',
+            description: 'Keep title and description as short as possible.',
             variant: 'default'
           })
         }

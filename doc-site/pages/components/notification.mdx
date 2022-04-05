@@ -1,0 +1,60 @@
+import * as NotificationExports from '@datacamp/waffles/notification';
+
+import Layout from '../../components/content-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/notification/playground-config';
+import BasicUsage from '../../examples/notification/basic-usage';
+import Variants from '../../examples/notification/variants';
+import Closable from '../../examples/notification/closable';
+import WithAction from '../../examples/notification/with-action';
+import Inverted from '../../examples/notification/inverted';
+
+export default Layout;
+
+# Notification
+
+🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="notification/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Variants" path="notification/variants">
+  <Variants />
+</Example>
+
+<Example title="Closable" path="notification/closable">
+  <Closable />
+</Example>
+
+<Example title="With Custom Action" path="notification/with-action">
+  <WithAction />
+</Example>
+
+<Example title="Inverted" path="notification/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### Notification
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/notification/notification-internal')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={NotificationExports} path="@datacamp/waffles/notification" />

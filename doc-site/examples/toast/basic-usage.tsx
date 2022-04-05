@@ -8,8 +8,8 @@ function ToastTrigger() {
     <Button
       onClick={() =>
         toast({
-          title: 'Very Short Title',
-          description: 'Keep toast title and description as short as possible.',
+          title: 'Workspace Saved',
+          variant: 'success',
         })
       }
     >

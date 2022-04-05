@@ -1,5 +1,7 @@
 import * as ToastExports from '@datacamp/waffles/toast';
 
+import { Notification } from '@datacamp/waffles/notification';
+
 import Layout from '../../components/content-layout';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
@@ -22,7 +24,18 @@ Toasts can be created easily with `toast` function exposed by `useToast` hook. I
 
 ## Examples
 
-⚠️ To show various features, unique `ToastProvider` has been used in each example. It may cause toasts from different examples to overlap. In realistic scenarios, it's sufficient to use only a single `ToastProvider` per app.
+<Notification
+  title="Multiple ToastProviders In Examples"
+  description={
+    <>
+      To show various toast features, unique <em>ToastProvider</em> has been
+      used in each example. It may cause toasts from different examples to
+      overlap. In realistic scenarios, it's sufficient to use only a single{' '}
+      <em>ToastProvider</em> per app close to its root.
+    </>
+  }
+  variant="warning"
+/>
 
 <Example title="Basic Usage" path="toast/basic-usage">
   <BasicUsage />
