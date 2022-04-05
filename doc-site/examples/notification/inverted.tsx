@@ -16,7 +16,8 @@ function Example() {
       <Notification
         variant="default"
         title="We Don't Share Your Personal Information"
-        description="Your info is only shared with an employer when you apply for a job or accept their request."
+        description="Your info is only shared with an employer when you
+          apply for a job or accept their request."
         closable
         inverted
       />
@@ -33,13 +34,15 @@ function Example() {
       <Notification
         variant="warning"
         title="Some Personal Details Are Missing"
-        description="To discover jobs tailored exclusively for you, we need a bit more information about you."
+        description="To discover jobs tailored exclusively for you, we need
+          a bit more information about you."
         inverted
       />
       <Notification
         variant="error"
         title="Do Not Close This Window"
-        description="The recording will immediately stop if you close this window."
+        description="The recording will immediately stop if you close
+          this window."
         inverted
       />
     </div>

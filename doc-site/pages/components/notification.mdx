@@ -49,8 +49,19 @@ export default Layout;
 
 ### Notification
 
+In addition to all custom props listed below, `Notification` accepts all props regular `HTMLDiv` would, such as `data-` attributes.
+
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/notification/notification-internal')}
+/>
+
+### Notification.ActionButton
+
+In addition to all custom props listed below, `Notification.ActionButton` accepts all props regular `HTMLButton` would, such as `onClick`, and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/notification/action-button-internal')}
+  isPolymorphic
 />
 
 ## Imports
