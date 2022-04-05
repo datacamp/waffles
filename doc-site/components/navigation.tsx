@@ -86,6 +86,9 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
           <SideNav.Subcategory label="Content">
             <Item href="/components/badge">Badge</Item>
             <Item href="/components/icon">Icon</Item>
+            <Item href="/components/notification" isNew>
+              Notification
+            </Item>
             <Item href="/components/content-container">Content Container</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Utility">
