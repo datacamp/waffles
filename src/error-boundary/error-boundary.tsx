@@ -3,8 +3,11 @@ import React from 'react';
 import ErrorNotification from './error-notification';
 
 type ErrorBoundaryProps = {
+  /* Handler called when there has been error. Useful for logging errors. */
   onError?: (error: Error, info: { componentStack: string }) => void;
+  /* Handler called just before `ErrorBoundary` resets its internal state. Useful for more advanced error recovery strategies. */
   onReset?: () => void;
+  /* The content to render when there are no errors. If there is an error it will be caught and handled gracefully. */
   children: React.ReactNode;
 };
 
