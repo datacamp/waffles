@@ -96,6 +96,9 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/components/screen-reader-only">
               Screen Reader Only
             </Item>
+            <Item href="/components/error-boundary" isNew>
+              Error Boundary
+            </Item>
             <Item href="/components/helpers">Helpers</Item>
             <Item href="/components/hooks">Hooks</Item>
           </SideNav.Subcategory>
