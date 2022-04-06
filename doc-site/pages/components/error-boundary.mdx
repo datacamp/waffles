@@ -1,34 +1,37 @@
-import * as PortalExports from '@datacamp/waffles/portal';
+import * as ErrorBoundaryExports from '@datacamp/waffles/error-boundary';
 
 import Layout from '../../components/content-layout';
 import Example from '../../components/example';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
 
-import BasicUsage from '../../examples/portal/basic-usage';
+import BasicUsage from '../../examples/error-boundary/basic-usage';
 
 export default Layout;
 
-# Portal
+# Error Boundary
 
 🚧 This page is **under construction**.
 
 ## Examples
 
-<Example title="Basic Usage" path="portal/basic-usage">
+<Example title="Basic Usage" path="error-boundary/basic-usage">
   <BasicUsage />
 </Example>
 
 ## Props
 
-### Portal
+### ErrorBoundary
 
 <PropsTable
-  metadata={require('!!extract-react-types-loader!../../../src/portal/portal')}
+  metadata={require('!!extract-react-types-loader!../../../src/error-boundary/error-boundary')}
 />
 
 ## Imports
 
 You can import following components or utilities from this module:
 
-<Imports module={PortalExports} path="@datacamp/waffles/portal" />
+<Imports
+  module={ErrorBoundaryExports}
+  path="@datacamp/waffles/error-boundary"
+/>
