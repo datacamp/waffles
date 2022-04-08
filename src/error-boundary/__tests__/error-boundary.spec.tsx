@@ -2,7 +2,7 @@
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import { useState } from 'react';
 
-import { ErrorBoundary } from '../index';
+import { ErrorBoundary, useError } from '../index';
 
 beforeAll(() => {
   // Silence console errors for this test suite
@@ -22,11 +22,46 @@ function ThrowErrorComponent() {
   return null;
 }
 
+function CustomError() {
+  const { error, onReset } = useError();
+
+  return (
+    <div data-testid="custom-error-notification">
+      <h2>Custom Error</h2>
+      <p>{error.message}</p>
+      <button onClick={onReset}>Retry</button>
+    </div>
+  );
+}
+
 function TestComponent() {
   const [hasError, setHasError] = useState(false);
 
   return (
     <ErrorBoundary
+      onReset={() => {
+        setHasError(false);
+      }}
+    >
+      <button
+        onClick={() => {
+          setHasError(true);
+        }}
+      >
+        Crash
+      </button>
+      <p>Regular content</p>
+      {hasError ? <ThrowErrorComponent /> : null}
+    </ErrorBoundary>
+  );
+}
+
+function TestComponentWithCustomError() {
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <ErrorBoundary
+      fallback={<CustomError />}
       onReset={() => {
         setHasError(false);
       }}
@@ -95,6 +130,42 @@ describe('ErrorBoundary', () => {
     expect(notification).toBeInTheDocument();
 
     const resetButton = getByText('Try Again');
+    fireEvent.click(resetButton);
+    const content = getByText('Regular content');
+
+    expect(content).toBeInTheDocument();
+    expect(console.error).toHaveBeenCalledTimes(2);
+  });
+
+  it('renders custom error fallback component if error occured', async () => {
+    const { getByText, getByTestId } = render(<TestComponentWithCustomError />);
+
+    const crashButton = getByText('Crash');
+    fireEvent.click(crashButton);
+    let customErrorComponent;
+    await waitFor(() => {
+      customErrorComponent = getByTestId('custom-error-notification');
+    });
+    const errorMessage = getByText('Very serious error!');
+
+    expect(customErrorComponent).toBeInTheDocument();
+    expect(errorMessage).toBeInTheDocument();
+    expect(console.error).toHaveBeenCalledTimes(2);
+  });
+
+  it('allows to manually reset an error state for custom error fallback component', async () => {
+    const { getByText, getByTestId } = render(<TestComponentWithCustomError />);
+
+    const crashButton = getByText('Crash');
+    fireEvent.click(crashButton);
+    let customErrorComponent;
+    await waitFor(() => {
+      customErrorComponent = getByTestId('custom-error-notification');
+    });
+
+    expect(customErrorComponent).toBeInTheDocument();
+
+    const resetButton = getByText('Retry');
     fireEvent.click(resetButton);
     const content = getByText('Regular content');
 
