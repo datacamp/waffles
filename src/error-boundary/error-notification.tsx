@@ -2,7 +2,9 @@ import { Notification } from '../notification';
 import { Back } from '../icon';
 
 type ErrorNotificationProps = {
+  /* Error object. Usually used to display detailed `error.message`. */
   error: Error;
+  /* Handler called just before `ErrorBoundary` resets its internal state. */
   onReset: () => void;
 };
 

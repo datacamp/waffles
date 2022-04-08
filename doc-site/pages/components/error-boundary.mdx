@@ -6,6 +6,7 @@ import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
 
 import BasicUsage from '../../examples/error-boundary/basic-usage';
+import WithCustomError from '../../examples/error-boundary/with-custom-error';
 
 export default Layout;
 
@@ -19,12 +20,27 @@ export default Layout;
   <BasicUsage />
 </Example>
 
+<Example
+  title="With Custom Error Notification"
+  path="error-boundary/with-custom-error"
+>
+  <WithCustomError />
+</Example>
+
 ## Props
 
 ### ErrorBoundary
 
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/error-boundary/error-boundary')}
+/>
+
+### useError
+
+Utilities exposed by `useError` hook. Handy for resetting `ErrorBoundary` inner state or displaying `error.message` via custom error notification `fallback` component.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/error-boundary/error-notification')}
 />
 
 ## Imports
