@@ -12,7 +12,7 @@ const layoutStyle = css`
   display: block;
   // Set 'min-height: 100vh;' for real-world application
 
-  ${mediaQuery.aboveSmall} {
+  ${mediaQuery.aboveMedium} {
     display: grid;
     grid-template-columns: auto 1fr;
   }
@@ -49,7 +49,7 @@ function useHashLocation() {
 }
 
 function Example() {
-  const { isAboveSmall } = useMediaQuery();
+  const { isAboveMedium } = useMediaQuery();
   const [isOpen, setIsOpen] = useState(false);
   const location = useHashLocation();
 
@@ -89,7 +89,7 @@ function Example() {
           Resize the viewport to make mobile menu trigger button to appear /
           disappear.
         </Paragraph>
-        {isAboveSmall ? null : (
+        {isAboveMedium ? null : (
           <Button onClick={() => setIsOpen(true)}>Open</Button>
         )}
       </article>

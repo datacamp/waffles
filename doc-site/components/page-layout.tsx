@@ -13,7 +13,7 @@ const layoutStyle = css`
   min-height: 100vh;
   padding-top: ${HEADER_HEIGHT};
 
-  ${mediaQuery.aboveSmall} {
+  ${mediaQuery.aboveMedium} {
     display: grid;
     grid-template-columns: auto 1fr;
   }

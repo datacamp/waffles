@@ -2,7 +2,6 @@ import * as SideNavigationExports from '@datacamp/waffles/side-navigation';
 
 import Layout from '../../components/content-layout';
 import Example from '../../components/example';
-import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
 
@@ -23,10 +22,10 @@ To keep underlying side navigation structure _semantically correct_ and _accessi
 - always wrap `SideNavigation.Subcategory` (single or multiple ones) with `SideNavigation.Category`
 - always wrap `SideNavigation.Item` (single or multiple ones) with either `SideNavigation.Category` or `SideNavigation.Subcategory`
 
-Bear in mind, that _mobile_ side navigation is automatically displayed below `small` [breakpoint](/foundation/design-tokens/#all-available-tokens). To keep other related elements in sync use:
+Bear in mind, that _mobile_ side navigation is automatically displayed below `medium` [breakpoint](/foundation/design-tokens/#all-available-tokens). To keep other related elements in sync use:
 
-- `aboveSmall` [mediaQuery](/components/helpers/#mediaquery)
-- conditionally show them based on the result of `isAboveSmall` returned by [useMediaQuery](/components/hooks/#usemediaquery) hook
+- `aboveMedium` [mediaQuery](/components/helpers/#mediaquery)
+- conditionally show them based on the result of `isAboveMedium` returned by [useMediaQuery](/components/hooks/#usemediaquery) hook
 
 For detailed real-world example check [Side Navigation Workshop](https://github.com/datacamp-engineering/side-nav-workshop) app.
 

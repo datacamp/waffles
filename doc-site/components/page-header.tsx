@@ -27,7 +27,7 @@ const headerStyle = css`
   padding-left: ${tokens.spacing.small};
   padding-right: ${tokens.spacing.small};
 
-  ${mediaQuery.aboveSmall} {
+  ${mediaQuery.aboveMedium} {
     justify-content: flex-start;
   }
 `;
@@ -49,11 +49,11 @@ type PageHeaderProps = {
 };
 
 function PageHeader({ onNavOpen }: PageHeaderProps) {
-  const { isAboveSmall } = useMediaQuery();
+  const { isAboveMedium } = useMediaQuery();
 
   return (
     <header css={headerStyle}>
-      {isAboveSmall ? null : (
+      {isAboveMedium ? null : (
         <Button
           variant="plain"
           icon={<Menu size="xlarge" />}
@@ -70,7 +70,9 @@ function PageHeader({ onNavOpen }: PageHeaderProps) {
           css={logoLinkStyle}
         />
       </Link>
-      {isAboveSmall && <Text css={versionStyle}>{`v${metadata.version}`}</Text>}
+      {isAboveMedium && (
+        <Text css={versionStyle}>{`v${metadata.version}`}</Text>
+      )}
       <Button
         as="a"
         variant="plain"
