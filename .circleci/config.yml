@@ -49,9 +49,9 @@ jobs:
       - run:
           name: Run unit tests
           command: yarn test:unit:ci
-      - run:
-          name: Run e2e stories tests
-          command: yarn test:stories:ci
+      # - run:
+      #     name: Run e2e stories tests
+      #     command: yarn test:stories:ci
   release:
     docker:
       - image: cimg/node:16.14.2
