@@ -12,7 +12,7 @@ import {
 
 // Various side nav Item properties based on viewport size
 const sizeMap = {
-  belowSmallBreakpoint: {
+  belowMediumBreakpoint: {
     small: {
       sizing: tokens.sizing.medium,
       spacing: tokens.spacing.xsmall,
@@ -24,7 +24,7 @@ const sizeMap = {
       fontSize: tokens.fontSizes.large,
     },
   },
-  aboveSmallBreakpoint: {
+  aboveMediumBreakpoint: {
     small: {
       sizing: '28px',
       spacing: tokens.spacing.xsmall,
@@ -46,14 +46,14 @@ export function listStyle() {
   `;
 }
 
-const SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT = 300;
-const SIDEBAR_WIDTH_ABOVE_SMALL_BREKPOINT = 230;
+const SIDEBAR_WIDTH_BELOW_MEDIUM_BREKPOINT = 300;
+const SIDEBAR_WIDTH_ABOVE_MEDIUM_BREKPOINT = 230;
 
-// Regular sidebar (displayed above small breakpoint)
+// Regular sidebar (displayed above medium breakpoint)
 export function sidebarStyle() {
   return css`
-    width: ${SIDEBAR_WIDTH_ABOVE_SMALL_BREKPOINT}px;
-    min-width: ${SIDEBAR_WIDTH_ABOVE_SMALL_BREKPOINT}px;
+    width: ${SIDEBAR_WIDTH_ABOVE_MEDIUM_BREKPOINT}px;
+    min-width: ${SIDEBAR_WIDTH_ABOVE_MEDIUM_BREKPOINT}px;
     min-height: 100%;
     background-color: ${tokens.colors.navy};
     display: flex;
@@ -65,7 +65,7 @@ type AnimatedSidebarStyleOptions = {
   isVisible: boolean;
 };
 
-// Mobile sidebar (displayed below small breakpoint)
+// Mobile sidebar (displayed below medium breakpoint)
 export function animatedSidebarStyle({
   isVisible,
 }: AnimatedSidebarStyleOptions) {
@@ -73,7 +73,7 @@ export function animatedSidebarStyle({
     position: fixed;
     display: flex;
     flex-direction: column;
-    width: ${SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT}px;
+    width: ${SIDEBAR_WIDTH_BELOW_MEDIUM_BREKPOINT}px;
     top: 0;
     left: 0;
     height: 100vh;
@@ -91,10 +91,10 @@ export function animatedSidebarStyle({
       height: 0;
     }
     // Animation
-    transform: translateX(-${SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT}px);
+    transform: translateX(-${SIDEBAR_WIDTH_BELOW_MEDIUM_BREKPOINT}px);
     animation: ${isVisible
-        ? sidebarEnter({ offset: SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT })
-        : sidebarExit({ offset: SIDEBAR_WIDTH_BELOW_SMALL_BREKPOINT })}
+        ? sidebarEnter({ offset: SIDEBAR_WIDTH_BELOW_MEDIUM_BREKPOINT })
+        : sidebarExit({ offset: SIDEBAR_WIDTH_BELOW_MEDIUM_BREKPOINT })}
       200ms ease-out forwards;
   `;
 }
@@ -167,7 +167,7 @@ const itemBaseStyle = css`
     cursor: pointer;
   }
 
-  ${mediaQuery.aboveSmall} {
+  ${mediaQuery.aboveMedium} {
     &:where(a, button):hover {
       opacity: 1;
       background-color: ${hexToRgba(tokens.colors.white, tokens.opacity.low)};
@@ -216,16 +216,16 @@ export function itemInnerContentStyle({
   return css`
     ${itemInnerContentBaseStyle}
 
-    font-size: ${sizeMap.belowSmallBreakpoint[size].fontSize};
-    min-height: ${sizeMap.belowSmallBreakpoint[size].sizing};
-    padding-top: ${sizeMap.belowSmallBreakpoint[size].spacing};
-    padding-bottom: ${sizeMap.belowSmallBreakpoint[size].spacing};
+    font-size: ${sizeMap.belowMediumBreakpoint[size].fontSize};
+    min-height: ${sizeMap.belowMediumBreakpoint[size].sizing};
+    padding-top: ${sizeMap.belowMediumBreakpoint[size].spacing};
+    padding-bottom: ${sizeMap.belowMediumBreakpoint[size].spacing};
 
-    ${mediaQuery.aboveSmall} {
-      font-size: ${sizeMap.aboveSmallBreakpoint[size].fontSize};
-      min-height: ${sizeMap.aboveSmallBreakpoint[size].sizing};
-      padding-top: ${sizeMap.aboveSmallBreakpoint[size].spacing};
-      padding-bottom: ${sizeMap.aboveSmallBreakpoint[size].spacing};
+    ${mediaQuery.aboveMedium} {
+      font-size: ${sizeMap.aboveMediumBreakpoint[size].fontSize};
+      min-height: ${sizeMap.aboveMediumBreakpoint[size].sizing};
+      padding-top: ${sizeMap.aboveMediumBreakpoint[size].spacing};
+      padding-bottom: ${sizeMap.aboveMediumBreakpoint[size].spacing};
     }
 
     ${hasLeftIcon && `margin-left: ${tokens.spacing.small};`}
