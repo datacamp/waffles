@@ -74,7 +74,7 @@ exports[` 2`] = `
   border-radius: 4px;
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
-  color: #009BD8;
+  color: #06BDFC;
 }
 
 .emotion-0 svg {
