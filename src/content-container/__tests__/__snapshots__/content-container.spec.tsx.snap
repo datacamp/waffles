@@ -2,59 +2,22 @@
 
 exports[`ContentContainer renders correctly 1`] = `
 .emotion-0 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
   padding: 16px;
-  max-width: 1000px;
   overflow: hidden;
 }
 
 @media screen and (min-width: 820px) {
   .emotion-0 {
     padding: 32px;
-  }
-}
-
-@media screen and (min-width: 1480px) {
-  .emotion-0 {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
   }
 }
 
 <div
   class="emotion-0"
   data-testid="container"
->
-  Unofficial Fanpage of Taylor Swift
-</div>
-`;
-
-exports[`ContentContainer renders correctly when noSidebar flag is passed 1`] = `
-.emotion-0 {
-  padding: 16px;
-  max-width: 1000px;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 820px) {
-  .emotion-0 {
-    padding: 32px;
-  }
-}
-
-@media screen and (min-width: 1480px) {
-  .emotion-0 {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
-  }
-}
-
-<div
-  class="emotion-0"
-  role="main"
 >
   Unofficial Fanpage of Taylor Swift
 </div>

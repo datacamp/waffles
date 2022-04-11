@@ -16,7 +16,7 @@ const textStyle = css`
 
 function Story() {
   return (
-    <ContentContainer css={containerStyle} data-testid="container" noSidebar>
+    <ContentContainer css={containerStyle} data-testid="container">
       <Paragraph css={textStyle}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

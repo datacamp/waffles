@@ -14,16 +14,4 @@ describe('ContentContainer', () => {
 
     expect(contentContainer).toMatchSnapshot();
   });
-
-  it('renders correctly when noSidebar flag is passed', () => {
-    const { getByRole } = render(
-      <ContentContainer role="main" noSidebar>
-        Unofficial Fanpage of Taylor Swift
-      </ContentContainer>,
-    );
-
-    const contentContainer = getByRole('main');
-
-    expect(contentContainer).toMatchSnapshot();
-  });
 });

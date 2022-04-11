@@ -30,7 +30,8 @@ describe('ContentContainer', () => {
   });
 
   describe('with a sidebar', () => {
-    // Remove small size, because sidebar is hidden / rendered as an overlay on mobile devices
+    // Remove small size, because realistically sidebar shouldn't be displayed on such small devices
+    // When using Waffles SideNavigation component sidebar appears above medium breakpoint
     delete screenSizes.small;
 
     Object.keys(screenSizes).forEach((size) => {
