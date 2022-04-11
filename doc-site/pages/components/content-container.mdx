@@ -10,12 +10,12 @@ export default Layout;
 
 🚧 This page is **under construction**.
 
-The content container aligns the main content on the page depending on the viewport size, based on `breakpoints` from [design tokens](/foundation/design-tokens):
+The content container positions the main content on the page depending on the viewport size, based on `breakpoints` from [design tokens](/foundation/design-tokens):
 
-- for `small` and `medium` breakpoints, if there is side navigation, content is aligned to the left
-- for the `large` breakpoint, even if there is side navigation, content is centered
-- if there is no side navigation on the page, `noSidebar` prop should be passed, and content is always centered
-- for the `large` breakpoint padding around content is increased from `medium` to `xlarge`
+- content is always centered, even if there is side navigation
+- for all viewport sizes, maximum content width is `1200px`
+- for phones, and small tablets (viewport size below `medium` breakpoint), padding around content of `medium` size is used
+- for desktop, and large tablets (for viewport size above `medium` breakpoint), padding is increased to `xlarge` size
 
 ## Props
 
