@@ -127,7 +127,7 @@ describe('SideNavigation', () => {
 
     useMediaQueryMock.mockReturnValue({
       isAboveSmall: true,
-      isAboveMedium: false,
+      isAboveMedium: true,
       isAboveLarge: false,
     });
   });

@@ -12,7 +12,7 @@ const layoutStyle = css`
   display: block;
   min-height: 100vh;
 
-  ${mediaQuery.aboveSmall} {
+  ${mediaQuery.aboveMedium} {
     display: grid;
     grid-template-columns: auto 1fr;
   }

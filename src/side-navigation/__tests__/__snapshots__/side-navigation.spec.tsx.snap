@@ -125,7 +125,7 @@ exports[`SideNavigation renders snapshot of item focused state 1`] = `
   cursor: pointer;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 820px) {
   .emotion-0:where(a, button):hover {
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.1);
@@ -161,7 +161,7 @@ exports[`SideNavigation renders snapshot of item focused state 1`] = `
   padding-bottom: 8px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 820px) {
   .emotion-1 {
     font-size: 14px;
     min-height: 36px;
@@ -224,7 +224,7 @@ exports[`SideNavigation renders snapshot of the medium item 1`] = `
   cursor: pointer;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 820px) {
   .emotion-0:where(a, button):hover {
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.1);
@@ -260,7 +260,7 @@ exports[`SideNavigation renders snapshot of the medium item 1`] = `
   padding-bottom: 8px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 820px) {
   .emotion-1 {
     font-size: 14px;
     min-height: 36px;
@@ -325,7 +325,7 @@ exports[`SideNavigation renders snapshot of the small item 1`] = `
   cursor: pointer;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 820px) {
   .emotion-0:where(a, button):hover {
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.1);
@@ -361,7 +361,7 @@ exports[`SideNavigation renders snapshot of the small item 1`] = `
   padding-bottom: 4px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 820px) {
   .emotion-1 {
     font-size: 12px;
     min-height: 28px;
