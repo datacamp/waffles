@@ -28,9 +28,7 @@ type LinkStyleOptions = {
 };
 
 export function linkStyle({ inverted, isFocusVisible }: LinkStyleOptions) {
-  const mainColor = inverted
-    ? tokens.colors.blueDark
-    : tokens.colors.blueDarkText;
+  const mainColor = inverted ? tokens.colors.blue : tokens.colors.blueDarkText;
 
   const highlightColor = hexToRgba(
     inverted ? tokens.colors.white : tokens.colors.navy,
