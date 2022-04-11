@@ -3,7 +3,14 @@
 const { resolve } = require('path');
 const remarkGfm = require('remark-gfm');
 
-module.exports = {
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkGfm],
+  },
+});
+
+module.exports = withMDX({
   reactStrictMode: true,
   trailingSlash: true,
   eslint: {
@@ -17,18 +24,6 @@ module.exports = {
       config.resolve.fallback.fs = false;
     }
 
-    config.module.rules.push({
-      test: /\.mdx$/,
-      use: [
-        {
-          loader: 'xdm/webpack.cjs',
-          options: {
-            remarkPlugins: [remarkGfm],
-          },
-        },
-      ],
-    });
-
     return config;
   },
-};
+});
