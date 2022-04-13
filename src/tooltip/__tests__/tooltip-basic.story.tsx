@@ -11,7 +11,7 @@ const wrapperStyle = css`
 function Story() {
   return (
     <div css={wrapperStyle}>
-      <Tooltip content="Basic Tooltip">
+      <Tooltip content="Basic Tooltip" placement="top">
         <Button>Tooltip Trigger</Button>
       </Tooltip>
     </div>
