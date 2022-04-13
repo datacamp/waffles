@@ -48,6 +48,8 @@ function usePositioner({ isVisible, placement, offset }: PositionerOptions) {
       }
     }
 
+    updatePosition();
+
     window.addEventListener('scroll', updatePosition, { passive: true });
     window.addEventListener('resize', updatePosition);
 
