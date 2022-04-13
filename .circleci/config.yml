@@ -6,7 +6,7 @@ orbs:
 jobs:
   build_and_test:
     docker:
-      - image: cypress/base:16.14.2
+      - image: cypress/base:16.13.0
     resource_class: large
     parallelism: 4
     steps:
@@ -21,13 +21,13 @@ jobs:
       - restore_cache:
           name: Restore cache
           keys:
-            - project-cache-v3-{{ checksum "yarn.lock" }}
+            - project-cache-v2-{{ checksum "yarn.lock" }}
       - run:
           name: Install packages
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save cache
-          key: project-cache-v3-{{ checksum "yarn.lock" }}
+          key: project-cache-v2-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache
       - run:
@@ -54,7 +54,7 @@ jobs:
           command: yarn test:stories:ci
   release:
     docker:
-      - image: cimg/node:16.14.2
+      - image: cimg/node:16.13.0
     steps:
       - checkout
       - attach_workspace:
@@ -113,7 +113,7 @@ jobs:
             }
   build_docs:
     docker:
-      - image: cimg/node:16.14.2
+      - image: cimg/node:16.13.0
     steps:
       - attach_workspace:
           at: '.'
