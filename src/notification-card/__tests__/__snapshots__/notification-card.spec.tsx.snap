@@ -10,7 +10,6 @@ exports[`NotificationCard renders snapshot of inverted variant default 1`] = `
   background-color: #05192D;
   border-radius: 4px;
   padding: 12px;
-  overflow: hidden;
 }
 
 .emotion-1 {
@@ -217,7 +216,6 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
   background-color: #05192D;
   border-radius: 4px;
   padding: 12px;
-  overflow: hidden;
 }
 
 .emotion-1 {
@@ -424,7 +422,6 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
   background-color: #05192D;
   border-radius: 4px;
   padding: 12px;
-  overflow: hidden;
 }
 
 .emotion-1 {
@@ -631,7 +628,6 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
   background-color: #05192D;
   border-radius: 4px;
   padding: 12px;
-  overflow: hidden;
 }
 
 .emotion-1 {
@@ -838,7 +834,6 @@ exports[`NotificationCard renders snapshot of variant default 1`] = `
   background-color: #FFFFFF;
   border-radius: 4px;
   padding: 12px;
-  overflow: hidden;
 }
 
 .emotion-1 {
@@ -1045,7 +1040,6 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
   background-color: #FFFFFF;
   border-radius: 4px;
   padding: 12px;
-  overflow: hidden;
 }
 
 .emotion-1 {
@@ -1252,7 +1246,6 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
   background-color: #FFFFFF;
   border-radius: 4px;
   padding: 12px;
-  overflow: hidden;
 }
 
 .emotion-1 {
@@ -1459,7 +1452,6 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
   background-color: #FFFFFF;
   border-radius: 4px;
   padding: 12px;
-  overflow: hidden;
 }
 
 .emotion-1 {

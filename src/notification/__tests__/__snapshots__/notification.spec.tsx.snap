@@ -10,7 +10,6 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   background-color: #05192D;
   border-radius: 4px;
   padding: 12px;
-  overflow: hidden;
   background: linear-gradient(
           rgba(6, 189, 252, 0.25),
           rgba(6, 189, 252, 0.25)
@@ -399,7 +398,6 @@ exports[`Notification renders snapshot of regular notification with all optional
   background-color: #FFFFFF;
   border-radius: 4px;
   padding: 12px;
-  overflow: hidden;
   background: linear-gradient(
           rgba(6, 189, 252, 0.15),
           rgba(6, 189, 252, 0.15)
