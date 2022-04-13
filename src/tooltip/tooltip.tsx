@@ -1,18 +1,18 @@
 import React, {
-  useRef,
   Children,
   cloneElement,
   isValidElement,
   useState,
   useEffect,
+  useRef,
 } from 'react';
 
 import { tokens } from '../tokens';
 import { Text } from '../text';
 import { Portal } from '../portal';
 import { useId } from '../hooks';
+import usePositioner from './use-positioner';
 import { tooltipStyle } from './styles';
-import useElementMeasurements from './use-element-measurements';
 
 const REST_TIMER = 125;
 
@@ -45,12 +45,14 @@ function Tooltip({
   inverted = false,
   ...restProps
 }: Tooltip) {
-  const [isVisible, setIsVisible] = useState(false);
   const tooltipId = useId('tooltip');
-  const triggerRef = useRef<HTMLElement>(null);
   const trigger = Children.toArray(children)[0] as React.ReactElement; // It's safe to get single trigger component, because only 1 child is allowed
-  const triggerMeasurements = useElementMeasurements(triggerRef);
-
+  const [isVisible, setIsVisible] = useState(false);
+  const { x, y, triggerRef, floatingRef } = usePositioner({
+    isVisible,
+    placement,
+    offset,
+  });
   const enterTimer = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
@@ -116,16 +118,9 @@ function Tooltip({
               id={tooltipId}
               role="tooltip"
               as="div"
+              ref={floatingRef}
               {...restProps}
-              css={
-                triggerMeasurements &&
-                tooltipStyle({
-                  triggerMeasurements,
-                  placement,
-                  offset,
-                  inverted,
-                })
-              }
+              css={tooltipStyle({ x, y, inverted })}
             >
               {content}
             </Text>
