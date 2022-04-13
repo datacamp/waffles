@@ -40,7 +40,7 @@
   "license": "MIT",
   "homepage": "https://waffles-next.datacamp.com",
   "engines": {
-    "node": ">=16.x"
+    "node": ">=14.x"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.16.7",
