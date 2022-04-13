@@ -14,7 +14,6 @@ export function notificationStyle({ inverted }: NotificationStyleStyleOptions) {
     background-color: ${inverted ? tokens.colors.navy : tokens.colors.white};
     border-radius: ${tokens.borderRadius.medium};
     padding: 12px;
-    overflow: hidden;
   `;
 }
 
