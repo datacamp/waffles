@@ -125,8 +125,7 @@ describe('Tooltip', () => {
     expect(tooltip).toBeInTheDocument();
   });
 
-  // TODO: Looks like floating-ui is not merging some props correctly, re-enable when it got fixed
-  it.skip('focusing trigger is handled properly', () => {
+  it('focusing trigger is handled properly', () => {
     const handleFocus = jest.fn();
     const { getByText } = render(
       <Tooltip content="Follow Taylor Swift">
