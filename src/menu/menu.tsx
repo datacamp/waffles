@@ -21,6 +21,7 @@ import {
 import { tokens } from '../tokens';
 import { Portal } from '../portal';
 import { useId } from '../hooks';
+import { MenuProvider } from './menu-context';
 import Item from './item';
 import { dropdownStyle } from './styles';
 
@@ -78,21 +79,7 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
   function renderItems() {
     return Children.map(children, (child, index) => {
       if (isValidElement(child)) {
-        return cloneElement(
-          child,
-          getItemProps({
-            ref: (node: HTMLButtonElement) => {
-              listItemsRef.current[index] = node;
-            },
-            ...child.props,
-            onClick: () => {
-              child.props.onClick?.();
-              setIsOpen(false);
-              // @ts-expect-error: focus() not recognized
-              refs.reference.current?.focus();
-            },
-          }),
-        );
+        return cloneElement(child, { index });
       }
 
       return null;
@@ -100,7 +87,15 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
   }
 
   return (
-    <>
+    <MenuProvider
+      {...{
+        activeIndex,
+        setActiveIndex,
+        listRef: listItemsRef,
+        setIsOpen,
+        getItemProps,
+      }}
+    >
       {element}
       <Portal>
         {isOpen && (
@@ -118,7 +113,7 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
           </FloatingFocusManager>
         )}
       </Portal>
-    </>
+    </MenuProvider>
   );
 }
 

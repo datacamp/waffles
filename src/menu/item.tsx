@@ -1,24 +1,33 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { useFocusRing } from '@react-aria/focus';
-import { mergeProps } from '@react-aria/utils';
 
 import { Text } from '../text';
+import { useMenu } from './menu-context';
 import { itemStyle } from './styles';
 
 type ItemProps = {
+  index?: number;
   children: React.ReactNode;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+} & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'children'>;
 
-function ItemInternal(
-  { children, ...restProps }: ItemProps,
-  ref: React.Ref<HTMLButtonElement>,
-) {
+function Item({ index = 0, onClick, children, ...restProps }: ItemProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
+  const { listRef, setIsOpen, getItemProps } = useMenu();
+
+  function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
+    onClick?.(event);
+    setIsOpen(false);
+  }
+
   return (
     <li>
       <button
-        {...mergeProps(focusProps, restProps)}
-        ref={ref}
+        {...getItemProps({
+          onClick: handleClick,
+          ...focusProps,
+          ...restProps,
+        })}
+        ref={(node) => (listRef.current[index] = node)}
         role="menuitem"
         css={itemStyle({ isFocusVisible })}
       >
@@ -27,7 +36,5 @@ function ItemInternal(
     </li>
   );
 }
-
-const Item = forwardRef(ItemInternal);
 
 export default Item;
