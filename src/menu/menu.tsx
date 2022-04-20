@@ -20,6 +20,7 @@ import {
 
 import { tokens } from '../tokens';
 import { Portal } from '../portal';
+import { useId } from '../hooks';
 import Item from './item';
 import { dropdownStyle } from './styles';
 
@@ -32,6 +33,7 @@ type MenuProps = {
 function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const triggerId = useId('menu-trigger');
   const listItemsRef = useRef<Array<HTMLButtonElement | null>>([]);
 
   const { x, y, reference, floating, refs, update, context } = useFloating({
@@ -67,32 +69,35 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
     getReferenceProps({
       ref: reference,
       ...trigger.props,
-      'aria-expanded': isOpen,
+      id: triggerId,
+      'aria-expanded': isOpen ? true : undefined,
       'aria-haspopup': 'menu',
     }),
   );
 
-  const menuItems = Children.map(children, (child, index) => {
-    if (isValidElement(child)) {
-      return cloneElement(
-        child,
-        getItemProps({
-          ref: (node: HTMLButtonElement) => {
-            listItemsRef.current[index] = node;
-          },
-          ...child.props,
-          onClick: () => {
-            child.props.onClick?.();
-            setIsOpen(false);
-            // @ts-expect-error: focus() not recognized
-            refs.reference.current?.focus();
-          },
-        }),
-      );
-    }
+  function renderItems() {
+    return Children.map(children, (child, index) => {
+      if (isValidElement(child)) {
+        return cloneElement(
+          child,
+          getItemProps({
+            ref: (node: HTMLButtonElement) => {
+              listItemsRef.current[index] = node;
+            },
+            ...child.props,
+            onClick: () => {
+              child.props.onClick?.();
+              setIsOpen(false);
+              // @ts-expect-error: focus() not recognized
+              refs.reference.current?.focus();
+            },
+          }),
+        );
+      }
 
-    return null;
-  });
+      return null;
+    });
+  }
 
   return (
     <>
@@ -105,9 +110,10 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
                 ref: floating,
               })}
               role="menu"
+              aria-labelledby={triggerId}
               css={dropdownStyle({ x, y })}
             >
-              {menuItems}
+              {renderItems()}
             </ul>
           </FloatingFocusManager>
         )}
