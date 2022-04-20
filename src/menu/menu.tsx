@@ -20,6 +20,7 @@ import {
 
 import { tokens } from '../tokens';
 import { Portal } from '../portal';
+import Item from './item';
 import { dropdownStyle } from './styles';
 
 type MenuProps = {
@@ -114,5 +115,7 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
     </>
   );
 }
+
+Menu.Item = Item;
 
 export default Menu;
