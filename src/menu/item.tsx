@@ -12,11 +12,13 @@ type ItemProps = {
 
 function Item({ index = 0, onClick, children, ...restProps }: ItemProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
-  const { listRef, setIsOpen, getItemProps } = useMenu();
+  const { listRef, setIsOpen, getItemProps, triggerRef } = useMenu();
 
   function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
     onClick?.(event);
     setIsOpen(false);
+    // @ts-expect-error: focus() not recognized
+    triggerRef.current?.focus();
   }
 
   return (
