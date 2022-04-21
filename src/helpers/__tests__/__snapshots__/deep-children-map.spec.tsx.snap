@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`deepChildrenMap renders snapshot 1`] = `
+<div>
+  <div
+    data-testid="taylor-swift-clone"
+  >
+    <h1
+      data-testid="taylor-swift-clone"
+    >
+      Little Test
+    </h1>
+    <div
+      data-testid="taylor-swift-clone"
+    >
+      <span
+        data-testid="taylor-swift-clone"
+      >
+        Test
+      </span>
+    </div>
+    <p
+      data-testid="taylor-swift-clone"
+    >
+      Test 3
+    </p>
+  </div>
+</div>
+`;
