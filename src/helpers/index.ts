@@ -5,3 +5,4 @@ export { default as hexToRgba } from './hex-to-rgba';
 export { default as hexColorShade } from './hex-color-shade';
 export { default as hexColorLuminance } from './hex-color-luminance';
 export { default as readableHexColor } from './readable-hex-color';
+export { default as deepChildrenMap } from './deep-children-map';
