@@ -2,7 +2,6 @@ import React, {
   useState,
   useEffect,
   useRef,
-  Children,
   isValidElement,
   cloneElement,
 } from 'react';
@@ -21,8 +20,10 @@ import {
 import { tokens } from '../tokens';
 import { Portal } from '../portal';
 import { useId } from '../hooks';
+import { deepChildrenMap } from '../helpers';
 import { MenuProvider } from './menu-context';
 import Item from './item';
+import Category from './category';
 import { dropdownStyle } from './styles';
 
 type MenuProps = {
@@ -33,9 +34,9 @@ type MenuProps = {
 
 function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const triggerId = useId('menu-trigger');
-  const listItemsRef = useRef<Array<HTMLButtonElement | null>>([]);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const listItemsRef = useRef<Array<HTMLButtonElement | null>>([]); // Refs for all menu Items
 
   const { x, y, reference, floating, refs, update, context } = useFloating({
     open: isOpen,
@@ -65,21 +66,27 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
     return;
   }, [refs.reference, refs.floating, update, isOpen]);
 
+  // Enchance trigger with a11y aria attributes
   const element = cloneElement(
     trigger,
     getReferenceProps({
       ref: reference,
       ...trigger.props,
       id: triggerId,
-      'aria-expanded': isOpen ? true : undefined,
       'aria-haspopup': 'menu',
+      ...(isOpen && { 'aria-expanded': true }),
     }),
   );
 
+  // Pass an index to each Item, so Menu could be navigated with arrows properly
   function renderItems() {
-    return Children.map(children, (child, index) => {
+    let itemIndex = 0;
+
+    return deepChildrenMap(children, (child) => {
       if (isValidElement(child)) {
-        return cloneElement(child, { index });
+        return cloneElement(child, {
+          ...(child.type === Item && { index: itemIndex++ }),
+        });
       }
 
       return null;
@@ -94,13 +101,14 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
         listRef: listItemsRef,
         setIsOpen,
         getItemProps,
+        triggerRef: refs.reference,
       }}
     >
       {element}
       <Portal>
         {isOpen && (
           <FloatingFocusManager context={context} preventTabbing>
-            <ul
+            <div
               {...getFloatingProps({
                 ref: floating,
               })}
@@ -109,7 +117,7 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
               css={dropdownStyle({ x, y })}
             >
               {renderItems()}
-            </ul>
+            </div>
           </FloatingFocusManager>
         )}
       </Portal>
@@ -118,5 +126,6 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
 }
 
 Menu.Item = Item;
+Menu.Category = Category;
 
 export default Menu;
