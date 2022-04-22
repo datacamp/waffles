@@ -15,7 +15,8 @@ const dropdownBaseStyle = css`
   list-style: none;
   background-color: ${tokens.colors.white};
   border-radius: ${tokens.borderRadius.medium};
-  box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.thick};
+  box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.thick},
+    ${tokens.boxShadow.xthick};
   width: 200px;
 `;
 
@@ -44,6 +45,7 @@ export function itemStyle({ isFocusVisible }: ItemStyleOptions) {
     height: ${tokens.sizing.medium};
     padding-right: ${tokens.spacing.medium};
     padding-left: ${tokens.spacing.medium};
+    color: ${tokens.colors.navy};
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -62,5 +64,22 @@ export function itemStyle({ isFocusVisible }: ItemStyleOptions) {
 
     ${isFocusVisible &&
     `box-shadow: inset 0 0 0 2px ${tokens.colors.blueDark};`}
+  `;
+}
+
+type ItemInnerContentStyleOptions = {
+  hasLeftIcon: boolean;
+  hasRightIcon: boolean;
+};
+
+export function itemInnerContentStyle({
+  hasLeftIcon,
+  hasRightIcon,
+}: ItemInnerContentStyleOptions) {
+  return css`
+    color: inherit;
+    margin-right: auto;
+    ${hasLeftIcon && `padding-left: ${tokens.spacing.small};`}
+    ${hasRightIcon && `padding-right: ${tokens.spacing.small};`}
   `;
 }
