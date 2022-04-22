@@ -83,3 +83,28 @@ export function itemInnerContentStyle({
     ${hasRightIcon && `padding-right: ${tokens.spacing.small};`}
   `;
 }
+
+export function categoryDividerStyle() {
+  return css`
+    height: 1px;
+    background-color: ${hexToRgba(tokens.colors.navy, 0.2)};
+    margin-top: ${tokens.spacing.small};
+    margin-bottom: ${tokens.spacing.small};
+  `;
+}
+
+export function categoryLabelStyle() {
+  return css`
+    font-size: ${tokens.fontSizes.small};
+    font-weight: ${tokens.fontWeights.bold};
+    line-height: ${tokens.lineHeights.default};
+    letter-spacing: ${tokens.letterSpacing.relaxed};
+    text-transform: uppercase;
+    user-select: none;
+    padding-top: ${tokens.spacing.small};
+    padding-bottom: ${tokens.spacing.small};
+    padding-left: ${tokens.spacing.medium};
+    padding-right: ${tokens.spacing.medium};
+    margin: 0;
+  `;
+}
