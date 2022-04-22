@@ -44,7 +44,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
 ) {
   const Element = as || 'h2';
 
-  const subcategoryId = useId('menu-subcategory');
+  const subcategoryId = useId('side-navigation-subcategory');
   const { focusProps, isFocusVisible } = useFocusRing();
   const sidebarState = useSidebar();
 

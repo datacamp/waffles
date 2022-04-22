@@ -19,7 +19,7 @@ function Category({
   noDivider = false,
   ...restProps
 }: CategoryProps) {
-  const categoryId = useId('menu-category');
+  const categoryId = useId('side-navigation-category');
 
   return (
     <div {...restProps}>
