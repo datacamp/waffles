@@ -3,14 +3,23 @@ import { useFocusRing } from '@react-aria/focus';
 
 import { Text } from '../text';
 import { useMenu } from './menu-context';
-import { itemStyle } from './styles';
+import { itemStyle, itemInnerContentStyle } from './styles';
 
 type ItemProps = {
   index?: number;
   children: React.ReactNode;
+  iconLeft?: React.ReactNode;
+  iconRight?: React.ReactNode;
 } & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'children'>;
 
-function Item({ index = 0, onClick, children, ...restProps }: ItemProps) {
+function Item({
+  index = 0,
+  onClick,
+  children,
+  iconLeft,
+  iconRight,
+  ...restProps
+}: ItemProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
   const { listRef, setIsOpen, getItemProps, triggerRef } = useMenu();
 
@@ -22,20 +31,27 @@ function Item({ index = 0, onClick, children, ...restProps }: ItemProps) {
   }
 
   return (
-    <li>
-      <button
-        {...getItemProps({
-          onClick: handleClick,
-          ...focusProps,
-          ...restProps,
+    <button
+      {...getItemProps({
+        onClick: handleClick,
+        ...focusProps,
+        ...restProps,
+      })}
+      ref={(node) => (listRef.current[index] = node)}
+      role="menuitem"
+      css={itemStyle({ isFocusVisible })}
+    >
+      {iconLeft}
+      <Text
+        css={itemInnerContentStyle({
+          hasLeftIcon: !!iconLeft,
+          hasRightIcon: !!iconRight,
         })}
-        ref={(node) => (listRef.current[index] = node)}
-        role="menuitem"
-        css={itemStyle({ isFocusVisible })}
       >
-        <Text>{children}</Text>
-      </button>
-    </li>
+        {children}
+      </Text>
+      {iconRight}
+    </button>
   );
 }
 
