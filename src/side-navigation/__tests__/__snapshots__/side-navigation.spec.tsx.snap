@@ -41,12 +41,12 @@ exports[`SideNavigation renders snapshot of category with label and divider 1`] 
   />
   <h2
     class="emotion-1"
-    id="menu-category-123abC"
+    id="side-navigation-category-123abC"
   >
     Category
   </h2>
   <ul
-    aria-labelledby="menu-category-123abC"
+    aria-labelledby="side-navigation-category-123abC"
     class="emotion-2"
   >
     Test
