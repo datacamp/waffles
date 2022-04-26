@@ -23,6 +23,7 @@ import { useId } from '../hooks';
 import { deepChildrenMap } from '../helpers';
 import { MenuProvider } from './menu-context';
 import Item from './item';
+import Button from './button';
 import Category from './category';
 import { dropdownStyle } from './styles';
 
@@ -85,7 +86,9 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
     return deepChildrenMap(children, (child) => {
       if (isValidElement(child)) {
         return cloneElement(child, {
-          ...(child.type === Item && { index: itemIndex++ }),
+          ...((child.type === Item || child.type === Button) && {
+            index: itemIndex++,
+          }),
         });
       }
 
@@ -126,6 +129,7 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
 }
 
 Menu.Item = Item;
+Menu.Button = Button;
 Menu.Category = Category;
 
 export default Menu;
