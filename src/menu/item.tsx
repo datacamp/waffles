@@ -3,6 +3,7 @@ import { useFocusRing } from '@react-aria/focus';
 
 import { Text } from '../text';
 import { useMenu } from './menu-context';
+import AlertDot from './alert-dot';
 import { itemStyle, itemInnerContentStyle } from './styles';
 
 type ItemProps = {
@@ -10,6 +11,7 @@ type ItemProps = {
   children: React.ReactNode;
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
+  showAlert?: boolean;
 } & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'children'>;
 
 function Item({
@@ -18,6 +20,7 @@ function Item({
   children,
   iconLeft,
   iconRight,
+  showAlert = false,
   ...restProps
 }: ItemProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
@@ -51,6 +54,7 @@ function Item({
         {children}
       </Text>
       {iconRight}
+      {showAlert && <AlertDot />}
     </button>
   );
 }
