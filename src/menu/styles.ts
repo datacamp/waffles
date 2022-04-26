@@ -15,9 +15,9 @@ const dropdownBaseStyle = css`
   list-style: none;
   background-color: ${tokens.colors.white};
   border-radius: ${tokens.borderRadius.medium};
-  box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.thick},
+  box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.medium},
     ${tokens.boxShadow.xthick};
-  width: 200px;
+  width: 260px;
 `;
 
 type DropdownStyleOptions = {
@@ -39,16 +39,19 @@ type ItemStyleOptions = {
 
 export function itemStyle({ isFocusVisible }: ItemStyleOptions) {
   return css`
+    position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 16px);
     height: ${tokens.sizing.medium};
-    padding-right: ${tokens.spacing.medium};
-    padding-left: ${tokens.spacing.medium};
+    padding-right: ${tokens.spacing.small};
+    padding-left: ${tokens.spacing.small};
+    margin-left: ${tokens.spacing.small};
+    margin-right: ${tokens.spacing.small};
     color: ${tokens.colors.navy};
     background: transparent;
     border: 0;
-    border-radius: 0;
+    border-radius: ${tokens.borderRadius.medium};
     outline: 0;
     transition: background-color 125ms ease-out;
     cursor: pointer;
@@ -88,8 +91,7 @@ export function categoryDividerStyle() {
   return css`
     height: 1px;
     background-color: ${hexToRgba(tokens.colors.navy, 0.2)};
-    margin-top: ${tokens.spacing.small};
-    margin-bottom: ${tokens.spacing.small};
+    margin: ${tokens.spacing.small};
   `;
 }
 
@@ -106,5 +108,30 @@ export function categoryLabelStyle() {
     padding-left: ${tokens.spacing.medium};
     padding-right: ${tokens.spacing.medium};
     margin: 0;
+  `;
+}
+
+export function buttonStyle() {
+  return css`
+    width: calc(100% - 16px);
+    margin-left: ${tokens.spacing.small};
+    margin-right: ${tokens.spacing.small};
+
+    &:not(:last-child) {
+      margin-bottom: ${tokens.spacing.small};
+    }
+  `;
+}
+
+export function alertDotStyle() {
+  return css`
+    position: absolute;
+    z-index: ${tokens.zIndex.default};
+    top: 3px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    background-color: ${tokens.colors.red};
+    border-radius: ${tokens.borderRadius.circle};
   `;
 }
