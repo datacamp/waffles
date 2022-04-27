@@ -140,7 +140,7 @@ describe('SideNavigation', () => {
     const category = getByTestId('main-category');
     const categoryLabel = category.querySelector('h2');
     const list = category.querySelector('ul');
-    const categoryId = `menu-category-${MOCKED_ID}`;
+    const categoryId = `side-navigation-category-${MOCKED_ID}`;
 
     expect(categoryLabel).toHaveAttribute('id', categoryId);
     expect(list).toHaveAttribute('aria-labelledby', categoryId);
@@ -153,7 +153,7 @@ describe('SideNavigation', () => {
 
     const subcategoryLabel = getByText('Classics').closest('h2');
     const list = subcategoryLabel?.closest('li')?.querySelector('ul');
-    const categoryId = `menu-subcategory-${MOCKED_ID}`;
+    const categoryId = `side-navigation-subcategory-${MOCKED_ID}`;
 
     expect(subcategoryLabel).toHaveAttribute('id', categoryId);
     expect(list).toHaveAttribute('aria-labelledby', categoryId);
