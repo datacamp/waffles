@@ -100,7 +100,8 @@ export default function Home() {
       <section css={heroStyle}>
         <div css={introStyle}>
           <Heading css={introHeadingStyle}>
-            <span css={higlightStyle}>Waffles</span> is DataCamp Design System.
+            <span css={higlightStyle}>Waffles</span> is the DataCamp Design
+            System.
           </Heading>
           <Paragraph size="large" css={introParagraphStyle}>
             It provides all the tools to build wonderful experiences that look,
