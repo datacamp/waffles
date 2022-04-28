@@ -16,6 +16,7 @@ function Example() {
       <Button variant="secondary">Secondary Variant</Button>
       <Button variant="plain">Plain Variant</Button>
       <Button variant="destructive">Destructive Variant</Button>
+      <Button variant="upgrade">Upgrade Variant</Button>
     </div>
   );
 }

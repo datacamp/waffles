@@ -24,6 +24,9 @@ function Example() {
       <Button variant="destructive" inverted>
         Destructive Inverted
       </Button>
+      <Button variant="upgrade" inverted>
+        Upgrade Inverted
+      </Button>
     </div>
   );
 }
