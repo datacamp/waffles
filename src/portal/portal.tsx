@@ -1,43 +1,43 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 
+import { useIsomorphicLayoutEffect } from '../hooks';
+
+const DEFAULT_ID = 'waffles-portal-root';
+
 type PortalProps = {
+  /* If the node with this `id` doesn't exist, it will be created, and appended to the end of the `body`. */
+  id?: string;
   /* The content to render into the portal. */
   children: React.ReactNode;
 };
 
-function Portal({ children }: PortalProps) {
-  const element = useRef<HTMLElement | null>(null);
+function Portal({ id = DEFAULT_ID, children }: PortalProps) {
+  const portalRef = useRef<HTMLElement | null>(null);
   const [isMounted, setIsMounted] = useState(false);
   const [, forceUpdate] = useState(Object.create(null));
 
-  // Check wheter component is mounted or not, since useEffect doesn't trigger on server
-  // Therefore all DOM objects and methods will be available
-  useEffect(() => {
-    setIsMounted(true);
+  useIsomorphicLayoutEffect(() => {
+    const rootNode = document.getElementById(id);
 
-    return () => {
-      setIsMounted(false);
-    };
-  }, []);
+    if (rootNode) {
+      portalRef.current = rootNode;
+    } else {
+      portalRef.current = document.createElement('div');
+      portalRef.current.id = id;
+    }
 
-  // Create portal node in document's body
-  useEffect(() => {
-    if (isMounted) {
-      element.current = document.createElement('div');
-      document.body.appendChild(element.current);
-      // Simple trick to force re-render
+    if (!document.body.contains(portalRef.current)) {
+      document.body.appendChild(portalRef.current);
       forceUpdate(Object.create(null));
     }
 
-    return () => {
-      if (isMounted && element.current) {
-        document.body.removeChild(element.current);
-      }
-    };
-  }, [isMounted]);
+    setIsMounted(true);
+  }, [id]);
 
-  return element.current ? createPortal(children, element.current) : null;
+  return isMounted && portalRef.current
+    ? createPortal(children, portalRef.current)
+    : null;
 }
 
 export default Portal;
