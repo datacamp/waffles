@@ -1,20 +1,34 @@
-import React, {
-  Children,
-  cloneElement,
-  isValidElement,
-  useState,
-  useEffect,
-  useRef,
-} from 'react';
+import React, { useState, useEffect, cloneElement } from 'react';
+import {
+  offset as floatingOffset,
+  flip,
+  autoUpdate,
+  useFloating,
+  useInteractions,
+  useHover,
+  useFocus,
+  useDismiss,
+} from '@floating-ui/react-dom-interactions';
 
 import { tokens } from '../tokens';
+import { useId, useMergeRefs } from '../hooks';
 import { Text } from '../text';
 import { Portal } from '../portal';
-import { useId } from '../hooks';
-import usePositioner from './use-positioner';
 import { tooltipStyle } from './styles';
 
 const REST_TIMER = 125;
+
+// Mapping between Waffles and floating-ui placement
+const placementMap = {
+  bottom: 'bottom',
+  top: 'top',
+  right: 'right',
+  left: 'left',
+  bottomLeft: 'bottom-start',
+  bottomRight: 'bottom-end',
+  topLeft: 'top-start',
+  topRight: 'top-end',
+} as const;
 
 type Tooltip = {
   /* The content that will trigger the tooltip. Must be single element. */
@@ -31,7 +45,7 @@ type Tooltip = {
     | 'bottomRight'
     | 'topLeft'
     | 'topRight';
-  /* Sets the distance between tooltip and it's trigger. By default `tokens.spacing.small` [design token](/foundation/design-tokens/) is used. */
+  /* Sets the distance between tooltip and its trigger. By default `tokens.spacing.small` [design token](/foundation/design-tokens/) is used. */
   offset?: string;
   /* Sets the style of the tooltip suitable for dark backgrounds. */
   inverted?: boolean;
@@ -45,92 +59,63 @@ function Tooltip({
   inverted = false,
   ...restProps
 }: Tooltip) {
-  const tooltipId = useId('tooltip');
-  const trigger = Children.toArray(children)[0] as React.ReactElement; // It's safe to get single trigger component, because only 1 child is allowed
-  const [isVisible, setIsVisible] = useState(false);
-  const { x, y, triggerRef, floatingRef } = usePositioner({
-    isVisible,
-    placement,
-    offset,
+  const [isOpen, setIsOpen] = useState(false);
+  const id = useId('tooltip');
+
+  const { x, y, reference, floating, update, context, refs } = useFloating({
+    placement: placementMap[placement],
+    middleware: [floatingOffset(parseInt(offset, 10)), flip()],
+    open: isOpen,
+    onOpenChange: setIsOpen,
   });
-  const enterTimer = useRef<ReturnType<typeof setTimeout>>();
+
+  const { getReferenceProps, getFloatingProps } = useInteractions([
+    useHover(context, { delay: REST_TIMER }),
+    useFocus(context),
+    useDismiss(context),
+  ]);
 
   useEffect(() => {
-    return () => {
-      clearTimeout(Number(enterTimer.current));
-    };
-  }, []);
-
-  function handleMouseEnter() {
-    if (trigger.props.onMouseEnter) {
-      trigger.props.onMouseEnter();
+    if (refs.reference.current && refs.floating.current && isOpen) {
+      return autoUpdate(refs.reference.current, refs.floating.current, update);
     }
 
-    enterTimer.current = setTimeout(() => {
-      setIsVisible(true);
-    }, REST_TIMER);
-  }
+    return;
+  }, [refs.reference, refs.floating, update, isOpen]);
 
-  function handleMouseLeave() {
-    clearTimeout(Number(enterTimer.current));
+  // @ts-expect-error: children.ref not recognized
+  const triggerRef = useMergeRefs(reference, children.ref);
 
-    if (trigger.props.onMouseLeave) {
-      trigger.props.onMouseLeave();
-    }
-    setIsVisible(false);
-  }
-
-  function handleFocus() {
-    if (trigger.props.onFocus) {
-      trigger.props.onFocus();
-    }
-
-    enterTimer.current = setTimeout(() => {
-      setIsVisible(true);
-    }, REST_TIMER);
-  }
-
-  function handleBlur() {
-    clearTimeout(Number(enterTimer.current));
-
-    if (trigger.props.onBlur) {
-      trigger.props.onBlur();
-    }
-    setIsVisible(false);
-  }
-
-  if (isValidElement(trigger)) {
-    const element = cloneElement(trigger as React.ReactElement, {
+  const element = cloneElement(
+    children,
+    getReferenceProps({
       ref: triggerRef,
-      onMouseEnter: handleMouseEnter,
-      onMouseLeave: handleMouseLeave,
-      onFocus: handleFocus,
-      onBlur: handleBlur,
-      ...(isVisible && { 'aria-describedby': tooltipId }),
-    });
+      ...children.props,
+      ...(isOpen && { 'aria-describedby': id }),
+    }),
+  );
 
-    return (
-      <>
-        {element}
-        {isVisible && (
-          <Portal>
-            <Text
-              id={tooltipId}
-              role="tooltip"
-              as="div"
-              ref={floatingRef}
-              {...restProps}
-              css={tooltipStyle({ x, y, inverted })}
-            >
-              {content}
-            </Text>
-          </Portal>
+  return (
+    <>
+      {element}
+      <Portal>
+        {isOpen && (
+          <Text
+            {...getFloatingProps({
+              ...restProps,
+              ref: floating,
+              id,
+            })}
+            as="div"
+            role="tooltip"
+            css={tooltipStyle({ x, y, inverted })}
+          >
+            {content}
+          </Text>
         )}
-      </>
-    );
-  }
-
-  return children;
+      </Portal>
+    </>
+  );
 }
 
 export default Tooltip;

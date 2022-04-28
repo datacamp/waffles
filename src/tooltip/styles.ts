@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 
 const tooltipBaseStyle = css`
-  position: absolute; // Use absolute position, expected by float-ui by default
+  position: absolute; // Use absolute position, expected by float-ui default strategy
   z-index: 10;
   padding: ${tokens.spacing.small} 12px;
   border-radius: ${tokens.borderRadius.medium};
