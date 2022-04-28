@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
 
 import { Tooltip } from '../index';
@@ -20,6 +21,20 @@ const placements = [
   'topLeft',
   'topRight',
 ] as const;
+
+function TestRefTooltip() {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    buttonRef.current?.focus();
+  }, []);
+
+  return (
+    <Tooltip content="Follow Taylor Swift">
+      <button ref={buttonRef}>Tooltip Trigger</button>
+    </Tooltip>
+  );
+}
 
 describe('Tooltip', () => {
   it('renders a tooltip after trigger got focused', async () => {
@@ -121,6 +136,20 @@ describe('Tooltip', () => {
     const button = getByText('Show Swift Tooltip');
     fireEvent.focus(button);
     expect(handleFocus).toHaveBeenCalledTimes(1);
+  });
+
+  it('tooltip trigger could be focused programmatically', async () => {
+    const { getByText } = render(<TestRefTooltip />);
+
+    const button = getByText('Tooltip Trigger');
+
+    let tooltip;
+    await waitFor(() => {
+      tooltip = getByText('Follow Taylor Swift');
+    });
+
+    expect(button).toHaveFocus();
+    expect(tooltip).toBeInTheDocument();
   });
 
   describe('renders snapshot of', () => {
