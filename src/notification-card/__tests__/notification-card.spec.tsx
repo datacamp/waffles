@@ -2,7 +2,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { NotificationCard } from '../index';
 
-const variants = ['default', 'success', 'warning', 'error'] as const;
+const variants = ['default', 'success', 'warning', 'error', 'upgrade'] as const;
 
 describe('NotificationCard', () => {
   it('renders content', () => {
