@@ -79,16 +79,12 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/components/alert-dialog">Alert Dialog</Item>
             <Item href="/components/drawer">Drawer</Item>
             <Item href="/components/tooltip">Tooltip</Item>
-            <Item href="/components/toast" isNew>
-              Toast
-            </Item>
+            <Item href="/components/toast">Toast</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Content">
             <Item href="/components/badge">Badge</Item>
             <Item href="/components/icon">Icon</Item>
-            <Item href="/components/notification" isNew>
-              Notification
-            </Item>
+            <Item href="/components/notification">Notification</Item>
             <Item href="/components/content-container">Content Container</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Utility">
@@ -96,9 +92,7 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/components/screen-reader-only">
               Screen Reader Only
             </Item>
-            <Item href="/components/error-boundary" isNew>
-              Error Boundary
-            </Item>
+            <Item href="/components/error-boundary">Error Boundary</Item>
             <Item href="/components/helpers">Helpers</Item>
             <Item href="/components/hooks">Hooks</Item>
           </SideNav.Subcategory>
