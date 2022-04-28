@@ -47,6 +47,12 @@ const regularVariantMap = {
     hoverColor: hexColorShade(tokens.colors.red, -tokens.opacity.low),
     borderColor: 'transparent',
   },
+  upgrade: {
+    color: tokens.colors.white,
+    backgroundColor: tokens.colors.purple,
+    hoverColor: hexColorShade(tokens.colors.purple, -tokens.opacity.low),
+    borderColor: 'transparent',
+  },
 };
 
 const invertedVariantMap = {
@@ -69,6 +75,10 @@ const invertedVariantMap = {
   destructive: {
     ...regularVariantMap.destructive,
     hoverColor: hexColorShade(tokens.colors.red, tokens.opacity.low),
+  },
+  upgrade: {
+    ...regularVariantMap.upgrade,
+    hoverColor: hexColorShade(tokens.colors.purple, tokens.opacity.low),
   },
 };
 

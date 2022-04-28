@@ -7,7 +7,7 @@ import { buttonStyle, innerContentStyle } from './styles';
 
 type ButtonBaseProps = {
   /* Defines the variant of the button. */
-  variant?: 'primary' | 'secondary' | 'plain' | 'destructive';
+  variant?: 'primary' | 'secondary' | 'plain' | 'destructive' | 'upgrade';
   /* Defines the size of the button. In most cases default `medium` size should be used. */
   size?: 'small' | 'medium' | 'large';
   /* Allows button to grow to the width of its container. */
