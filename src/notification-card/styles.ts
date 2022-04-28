@@ -12,6 +12,8 @@ export function notificationStyle({ inverted }: NotificationStyleStyleOptions) {
     position: relative;
     display: flex;
     background-color: ${inverted ? tokens.colors.navy : tokens.colors.white};
+    border: ${tokens.borderWidth.thin} solid
+      ${inverted ? tokens.colors.navy : tokens.colors.white};
     border-radius: ${tokens.borderRadius.medium};
     padding: 12px;
   `;
@@ -30,15 +32,28 @@ const decorVariantMap = {
   error: {
     color: tokens.colors.red,
   },
+  upgrade: {
+    color: tokens.colors.purple,
+  },
+};
+
+const invertedDecorVariantMap = {
+  ...decorVariantMap,
+  upgrade: {
+    color: tokens.colors.purpleLight,
+  },
 };
 
 type DecorStyleStyleOptions = {
   variant: NonNullable<
     React.ComponentProps<typeof NotificationCard>['variant']
   >;
+  inverted: boolean;
 };
 
-export function decorStyle({ variant }: DecorStyleStyleOptions) {
+export function decorStyle({ variant, inverted }: DecorStyleStyleOptions) {
+  const variantMap = inverted ? invertedDecorVariantMap : decorVariantMap;
+
   return css`
     position: absolute;
     z-index: ${tokens.zIndex.default};
@@ -46,7 +61,7 @@ export function decorStyle({ variant }: DecorStyleStyleOptions) {
     left: -1px;
     bottom: -1px;
     width: 4px;
-    background-color: ${decorVariantMap[variant].color};
+    background-color: ${variantMap[variant].color};
     border-top-left-radius: ${tokens.borderRadius.medium};
     border-bottom-left-radius: ${tokens.borderRadius.medium};
   `;
