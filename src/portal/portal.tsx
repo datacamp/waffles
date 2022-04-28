@@ -33,6 +33,12 @@ function Portal({ id = DEFAULT_ID, children }: PortalProps) {
     }
 
     setIsMounted(true);
+
+    return () => {
+      if (portalRef.current && document.body) {
+        document.body.removeChild(portalRef.current);
+      }
+    };
   }, [id]);
 
   return isMounted && portalRef.current
