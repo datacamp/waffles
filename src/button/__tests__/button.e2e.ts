@@ -24,16 +24,16 @@ describe('Button', () => {
 
   it('render full width buttons', () => {
     cy.loadStory('button-full-width');
-    cy.get('button').should('have.length', 8);
+    cy.get('button').should('have.length', 10);
   });
 
   it('render all variants and sizes, when disabled and inverted', () => {
     cy.loadStory('button-variants-and-sizes');
-    cy.get('button').should('have.length', 48);
+    cy.get('button').should('have.length', 60);
   });
 
   it('render all variants and sizes with various icons', () => {
     cy.loadStory('button-with-icons');
-    cy.get('button').should('have.length', 51);
+    cy.get('button').should('have.length', 63);
   });
 });

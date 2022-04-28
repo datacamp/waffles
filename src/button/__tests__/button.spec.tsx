@@ -4,7 +4,13 @@ import { render, fireEvent } from '@testing-library/react';
 import { AddCircle, ChevronRight } from '../../icon';
 import { Button } from '../index';
 
-const variants = ['primary', 'secondary', 'plain', 'destructive'] as const;
+const variants = [
+  'primary',
+  'secondary',
+  'plain',
+  'destructive',
+  'upgrade',
+] as const;
 const sizes = ['small', 'medium', 'large'] as const;
 
 type TestComponentProps = {

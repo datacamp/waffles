@@ -11,7 +11,13 @@ const wrapperStyle = css`
   padding: ${tokens.spacing.medium};
 `;
 
-const variants = ['primary', 'secondary', 'plain', 'destructive'] as const;
+const variants = [
+  'primary',
+  'secondary',
+  'plain',
+  'destructive',
+  'upgrade',
+] as const;
 
 function Story() {
   return (
