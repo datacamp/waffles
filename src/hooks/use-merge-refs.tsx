@@ -15,6 +15,15 @@ function setRef<T>(
   }
 }
 
+/**
+ * Merge two React refs into single one in a stable way.
+ *
+ * Useful when the ref received via props must be combined with internal component ref.
+ *
+ * @param refA Initial ref
+ * @param refB Secondary ref
+ * @returns A function that receives the element and assign the value to the given refs
+ */
 function useMergeRefs<RefA, RefB>(
   refA: React.Ref<RefA> | null | undefined,
   refB: React.Ref<RefB> | null | undefined,
