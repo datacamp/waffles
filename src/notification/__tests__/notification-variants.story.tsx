@@ -10,7 +10,7 @@ const wrapperStyle = css`
   padding: ${tokens.spacing.medium};
 `;
 
-const variants = ['default', 'success', 'warning', 'error'] as const;
+const variants = ['default', 'success', 'warning', 'error', 'upgrade'] as const;
 
 function Story() {
   return (

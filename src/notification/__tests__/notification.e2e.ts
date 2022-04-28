@@ -26,7 +26,7 @@ describe('Notification', () => {
       it(`on ${size} screen device`, () => {
         cy.viewport(width, height);
         cy.loadStory('notification-variants');
-        cy.get('section').should('have.length', 8);
+        cy.get('section').should('have.length', 10);
       });
     });
   });
