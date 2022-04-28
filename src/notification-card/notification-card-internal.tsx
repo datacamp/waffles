@@ -5,7 +5,7 @@ import CloseButton from './close-button';
 import { notificationStyle, decorStyle, contentStyle } from './styles';
 
 type NotificationCardProps = {
-  variant?: 'default' | 'success' | 'warning' | 'error';
+  variant?: 'default' | 'success' | 'warning' | 'error' | 'upgrade';
   inverted?: boolean;
   closable?: boolean;
   onClose?: () => void;
@@ -30,8 +30,8 @@ function NotificationCardInternal(
       role="status"
       css={notificationStyle({ inverted })}
     >
-      <div css={decorStyle({ variant })} />
-      <Icon variant={variant} />
+      <div css={decorStyle({ variant, inverted })} />
+      <Icon {...{ variant, inverted }} />
       <div css={contentStyle({ closable })}>{children}</div>
       {closable && <CloseButton inverted={inverted} onClick={onClose} />}
     </section>

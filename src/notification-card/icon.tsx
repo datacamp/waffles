@@ -4,14 +4,25 @@ import {
   CrossCircleInverted,
   AttentionCircleInverted,
   InfoCircleInverted,
+  RocketInverted,
 } from '../icon';
 import NotificationCard from './notification-card';
 import { iconWrapperStyle, iconStyle, iconBackgroundStyle } from './styles';
 
-const variantMap = {
+const regularVariantMap = {
+  default: {
+    icon: <InfoCircleInverted />,
+    iconColor: tokens.colors.blueDark,
+    backgroundColor: tokens.colors.white,
+  },
   success: {
     icon: <CheckmarkCircleInverted />,
     iconColor: tokens.colors.green,
+    backgroundColor: tokens.colors.navy,
+  },
+  warning: {
+    icon: <AttentionCircleInverted />,
+    iconColor: tokens.colors.orangeLight,
     backgroundColor: tokens.colors.navy,
   },
   error: {
@@ -19,15 +30,18 @@ const variantMap = {
     iconColor: tokens.colors.red,
     backgroundColor: tokens.colors.white,
   },
-  warning: {
-    icon: <AttentionCircleInverted />,
-    iconColor: tokens.colors.orangeLight,
-    backgroundColor: tokens.colors.navy,
+  upgrade: {
+    icon: <RocketInverted />,
+    iconColor: tokens.colors.purple,
+    backgroundColor: 'transparent',
   },
-  default: {
-    icon: <InfoCircleInverted />,
-    iconColor: tokens.colors.blueDark,
-    backgroundColor: tokens.colors.white,
+};
+
+const invertedVariantMap = {
+  ...regularVariantMap,
+  upgrade: {
+    ...regularVariantMap.upgrade,
+    iconColor: tokens.colors.purpleLight,
   },
 };
 
@@ -35,9 +49,12 @@ type IconProps = {
   variant: NonNullable<
     React.ComponentProps<typeof NotificationCard>['variant']
   >;
+  inverted: boolean;
 };
 
-function Icon({ variant }: IconProps) {
+function Icon({ variant, inverted }: IconProps) {
+  const variantMap = inverted ? invertedVariantMap : regularVariantMap;
+
   return (
     <div css={iconWrapperStyle()}>
       <div css={iconStyle({ iconColor: variantMap[variant].iconColor })}>
