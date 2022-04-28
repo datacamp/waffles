@@ -41,6 +41,12 @@ function Example() {
         description="The recording will immediately stop if you close
           this window."
       />
+      <Notification
+        variant="upgrade"
+        title="Upgrade To Premium!"
+        description="Publish jobs, view full profiles, and contact candidates directly."
+        action={<Notification.ActionButton>Upgrade</Notification.ActionButton>}
+      />
     </div>
   );
 }
