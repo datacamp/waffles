@@ -1,4 +1,4 @@
-import React, { useRef, Children, cloneElement, isValidElement } from 'react';
+import React, { useRef, cloneElement } from 'react';
 
 import { NotificationCard } from '../notification-card';
 import { Heading } from '../heading';
@@ -23,7 +23,7 @@ type CardProps = {
   inverted: boolean;
   closable: boolean;
   onClose?: () => void;
-  action?: React.ReactNode;
+  action?: JSX.Element;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 function Card({
@@ -54,18 +54,15 @@ function Card({
   }
 
   function renderAction() {
-    if (action) {
-      // Set inverted style
-      return (
-        <div css={actionStyle({ layout })}>
-          {Children.map(action, (child) => {
-            if (isValidElement(child)) {
-              return cloneElement(child, {
-                inverted,
-              });
-            }
+    const isUpgrade = variant === 'upgrade';
 
-            return null;
+    if (action) {
+      // Pass inverted and upgrade style flags
+      return (
+        <div css={actionStyle({ layout, isUpgrade })}>
+          {cloneElement(action, {
+            inverted,
+            isUpgrade,
           })}
         </div>
       );

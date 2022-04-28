@@ -24,6 +24,10 @@ const regularVariantMap = {
     backgroundColor: hexToRgba(tokens.colors.red, 0.15),
     borderColor: hexToRgba(tokens.colors.red, tokens.opacity.high),
   },
+  upgrade: {
+    backgroundColor: hexToRgba(tokens.colors.purple, 0.15),
+    borderColor: hexToRgba(tokens.colors.purple, tokens.opacity.high),
+  },
 };
 
 const invertedVariantMap = {
@@ -41,6 +45,10 @@ const invertedVariantMap = {
   error: {
     ...regularVariantMap.error,
     backgroundColor: hexToRgba(tokens.colors.red, 0.25),
+  },
+  upgrade: {
+    backgroundColor: hexToRgba(tokens.colors.purpleLight, 0.25),
+    borderColor: hexToRgba(tokens.colors.purpleLight, 0.8),
   },
 };
 
@@ -92,14 +100,37 @@ export function contentStyle({ layout }: ContentStyleOptions) {
 
 type ActionStyleOptions = {
   layout: LayoutType;
+  isUpgrade: boolean;
 };
 
-export function actionStyle({ layout }: ActionStyleOptions) {
+export function actionStyle({ layout, isUpgrade }: ActionStyleOptions) {
+  function calculateLeftMargin() {
+    if (layout === 'horizontal') {
+      return tokens.spacing.small;
+    }
+
+    if (isUpgrade) {
+      return 0;
+    }
+
+    return `-${tokens.spacing.small}`;
+  }
+
+  function calculateTopMargin() {
+    if (layout === 'horizontal') {
+      return 0;
+    }
+
+    if (isUpgrade) {
+      return tokens.spacing.small;
+    }
+
+    return tokens.spacing.xsmall;
+  }
+
   return css`
-    margin-left: ${layout === 'horizontal'
-      ? tokens.spacing.small
-      : `-${tokens.spacing.small}`};
-    margin-top: ${layout === 'horizontal' ? 0 : tokens.spacing.xsmall};
+    margin-left: ${calculateLeftMargin()};
+    margin-top: ${calculateTopMargin()};
     flex-shrink: 0;
   `;
 }
