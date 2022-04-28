@@ -27,7 +27,7 @@ function DrawerInternal({
   const isAnimating = useAnimateTransition(isOpen, 300);
 
   return isAnimating ? (
-    <Portal id="waffles-dialog-root">
+    <Portal id="waffles-dialog-portal-root">
       <Overlay isVisible={isOpen} data-testid="drawer-overlay" />
       <FocusOn
         onClickOutside={onClose}

@@ -14,7 +14,7 @@ function AnimatedSidebar(props: AnimatedSidebarProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
 
   return isAnimating ? (
-    <Portal>
+    <Portal id="waffles-side-navigation-portal-root">
       <Overlay />
       <CloseButton />
       <div {...props} css={animatedSidebarStyle({ isVisible: isOpen })} />

@@ -27,7 +27,7 @@ function DialogInternal({
   const isAnimating = useAnimateTransition(isOpen, 300);
 
   return isAnimating ? (
-    <Portal id="waffles-dialog-root">
+    <Portal id="waffles-dialog-portal-root">
       <Overlay isVisible={isOpen} data-testid="dialog-overlay" />
       <FocusOn
         onClickOutside={onClose}
