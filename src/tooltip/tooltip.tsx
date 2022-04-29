@@ -87,9 +87,6 @@ function Tooltip({
   // @ts-expect-error: children.ref not recognized
   const triggerRef = useMergeRefs(reference, children.ref);
 
-  // @ts-expect-error: children.ref not recognized
-  const triggerRef = useMergeRefs(reference, children.ref);
-
   const element = cloneElement(
     children,
     getReferenceProps({
