@@ -19,10 +19,10 @@ type MenuButtonBaseProps = {
   index?: number;
 };
 
-export type MenuButtonProps<T extends React.ElementType = 'button'> =
+type MenuButtonProps<T extends React.ElementType = 'button'> =
   PolymorphicComponentProps<T, MenuButtonBaseProps>;
 
-function MenuButtonInternal<T extends React.ElementType = 'button'>({
+function MenuButton<T extends React.ElementType = 'button'>({
   index = 0,
   onClick,
   ...restProps
@@ -51,4 +51,4 @@ function MenuButtonInternal<T extends React.ElementType = 'button'>({
   );
 }
 
-export default MenuButtonInternal;
+export default MenuButton;

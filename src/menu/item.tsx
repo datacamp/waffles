@@ -1,20 +1,25 @@
 import React from 'react';
 import { useFocusRing } from '@react-aria/focus';
 
+import type { PolymorphicComponentProps } from '../helpers';
 import { Text } from '../text';
 import { useMenu } from './menu-context';
 import AlertDot from './alert-dot';
 import { itemStyle, itemInnerContentStyle } from './styles';
 
-type ItemProps = {
+type ItemBaseProps = {
   index?: number;
   children: React.ReactNode;
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
   showAlert?: boolean;
-} & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'children'>;
+};
 
-function Item({
+type ItemProps<T extends React.ElementType = 'button'> =
+  PolymorphicComponentProps<T, ItemBaseProps>;
+
+function Item<T extends React.ElementType = 'button'>({
+  as,
   index = 0,
   onClick,
   children,
@@ -22,7 +27,9 @@ function Item({
   iconRight,
   showAlert = false,
   ...restProps
-}: ItemProps) {
+}: ItemProps<T>) {
+  const Element = as || 'button';
+
   const { focusProps, isFocusVisible } = useFocusRing();
   const { listRef, setIsOpen, getItemProps, triggerRef } = useMenu();
 
@@ -34,7 +41,7 @@ function Item({
   }
 
   return (
-    <button
+    <Element
       {...getItemProps({
         onClick: handleClick,
         ...focusProps,
@@ -52,10 +59,10 @@ function Item({
         })}
       >
         {children}
+        {showAlert && <AlertDot />}
       </Text>
       {iconRight}
-      {showAlert && <AlertDot />}
-    </button>
+    </Element>
   );
 }
 

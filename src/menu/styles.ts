@@ -49,6 +49,7 @@ export function itemStyle({ isFocusVisible }: ItemStyleOptions) {
     margin-left: ${tokens.spacing.small};
     margin-right: ${tokens.spacing.small};
     color: ${tokens.colors.navy};
+    text-decoration: none;
     background: transparent;
     border: 0;
     border-radius: ${tokens.borderRadius.medium};
@@ -82,6 +83,8 @@ export function itemInnerContentStyle({
   return css`
     color: inherit;
     margin-right: auto;
+    display: flex;
+    align-items: center;
     ${hasLeftIcon && `padding-left: ${tokens.spacing.small};`}
     ${hasRightIcon && `padding-right: ${tokens.spacing.small};`}
   `;
@@ -97,6 +100,7 @@ export function categoryDividerStyle() {
 
 export function categoryLabelStyle() {
   return css`
+    color: ${tokens.colors.navySubtleTextOnLight};
     font-size: ${tokens.fontSizes.small};
     font-weight: ${tokens.fontWeights.bold};
     line-height: ${tokens.lineHeights.default};
@@ -125,12 +129,9 @@ export function buttonStyle() {
 
 export function alertDotStyle() {
   return css`
-    position: absolute;
-    z-index: ${tokens.zIndex.default};
-    top: 3px;
-    left: 3px;
-    width: 6px;
-    height: 6px;
+    margin-left: ${tokens.spacing.small};
+    width: 8px;
+    height: 8px;
     background-color: ${tokens.colors.red};
     border-radius: ${tokens.borderRadius.circle};
   `;
