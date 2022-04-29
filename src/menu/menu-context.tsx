@@ -4,6 +4,7 @@ import type { ReferenceType } from '@floating-ui/react-dom-interactions';
 
 type MenuContextValue = {
   listRef: React.MutableRefObject<Array<HTMLButtonElement | null>>;
+  isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   getItemProps: (userProps?: React.HTMLProps<HTMLElement>) => unknown;
   triggerRef: React.MutableRefObject<ReferenceType | null>;
@@ -21,6 +22,12 @@ function MenuProvider({ children, ...value }: MenuProviderProps) {
 
 function useMenu() {
   const context = useContext(MenuContext);
+
+  if (context === undefined) {
+    throw new Error(
+      'Make sure to wrap useMenu with a MenuProvider or Menu component.',
+    );
+  }
 
   return context;
 }
