@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
+import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 
 import convertedProps from '../helpers/converted-props';
 import markdownElements from '../components/props-table-markdown-elements';
@@ -41,41 +42,43 @@ function PropsTable({ metadata, isPolymorphic = false }: PropsTableProps) {
   }
 
   return (
-    <Table>
-      <thead>
-        <tr>
-          <Table.HeadCell>Name</Table.HeadCell>
-          <Table.HeadCell>Type</Table.HeadCell>
-          <Table.HeadCell css={descriptionStyle}>Description</Table.HeadCell>
-        </tr>
-      </thead>
-      <tbody>
-        {propsMetadata.map((singleProp) => {
-          return (
-            <tr key={`prop-${singleProp.name}`}>
-              <Table.Cell css={nameStyle}>
-                {singleProp.name}
-                {!singleProp.isOptional && (
-                  <span aria-label="Is required" css={requiredMarkerStyle}>
-                    &bull;
-                  </span>
-                )}
-              </Table.Cell>
-              <Table.Cell>{singleProp.type}</Table.Cell>
-              <Table.Cell>
-                {singleProp.description ? (
-                  <ReactMarkdown components={markdownElements}>
-                    {singleProp.description}
-                  </ReactMarkdown>
-                ) : (
-                  '—'
-                )}
-              </Table.Cell>
-            </tr>
-          );
-        })}
-      </tbody>
-    </Table>
+    <ErrorBoundary>
+      <Table>
+        <thead>
+          <tr>
+            <Table.HeadCell>Name</Table.HeadCell>
+            <Table.HeadCell>Type</Table.HeadCell>
+            <Table.HeadCell css={descriptionStyle}>Description</Table.HeadCell>
+          </tr>
+        </thead>
+        <tbody>
+          {propsMetadata.map((singleProp) => {
+            return (
+              <tr key={`prop-${singleProp.name}`}>
+                <Table.Cell css={nameStyle}>
+                  {singleProp.name}
+                  {!singleProp.isOptional && (
+                    <span aria-label="Is required" css={requiredMarkerStyle}>
+                      &bull;
+                    </span>
+                  )}
+                </Table.Cell>
+                <Table.Cell>{singleProp.type}</Table.Cell>
+                <Table.Cell>
+                  {singleProp.description ? (
+                    <ReactMarkdown components={markdownElements}>
+                      {singleProp.description}
+                    </ReactMarkdown>
+                  ) : (
+                    '—'
+                  )}
+                </Table.Cell>
+              </tr>
+            );
+          })}
+        </tbody>
+      </Table>
+    </ErrorBoundary>
   );
 }
 

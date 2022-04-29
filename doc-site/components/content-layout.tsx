@@ -5,6 +5,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Edit } from '@datacamp/waffles/icon';
 import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { mediaQuery } from '@datacamp/waffles/helpers';
+import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { ContentContainer } from '@datacamp/waffles/content-container';
 import { Button } from '@datacamp/waffles/button';
 
@@ -46,25 +47,27 @@ function ContentLayout({ children }: ContentLayoutProps) {
   const { isAboveLarge } = useMediaQuery();
 
   return (
-    <ContentContainer css={containerStyle}>
-      <TableOfContentsProvider>
-        <article css={articleStyle}>
-          {children}
-          <footer css={footerStyle}>
-            <Button
-              as="a"
-              href={`${GITHUB_EDIT_URL}${pathname}.mdx`}
-              variant="plain"
-              size="small"
-              iconLeft={<Edit />}
-            >
-              Edit This Page
-            </Button>
-          </footer>
-        </article>
-        {isAboveLarge && <TableOfContents />}
-      </TableOfContentsProvider>
-    </ContentContainer>
+    <ErrorBoundary>
+      <ContentContainer css={containerStyle}>
+        <TableOfContentsProvider>
+          <article css={articleStyle}>
+            {children}
+            <footer css={footerStyle}>
+              <Button
+                as="a"
+                href={`${GITHUB_EDIT_URL}${pathname}.mdx`}
+                variant="plain"
+                size="small"
+                iconLeft={<Edit />}
+              >
+                Edit This Page
+              </Button>
+            </footer>
+          </article>
+          {isAboveLarge && <TableOfContents />}
+        </TableOfContentsProvider>
+      </ContentContainer>
+    </ErrorBoundary>
   );
 }
 

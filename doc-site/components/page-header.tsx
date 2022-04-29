@@ -5,6 +5,7 @@ import { Text } from '@datacamp/waffles/text';
 import { Menu, GithubBrand } from '@datacamp/waffles/icon';
 import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { mediaQuery } from '@datacamp/waffles/helpers';
+import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { Button } from '@datacamp/waffles/button';
 
 import metadata from '../../package.json';
@@ -52,35 +53,37 @@ function PageHeader({ onNavOpen }: PageHeaderProps) {
   const { isAboveMedium } = useMediaQuery();
 
   return (
-    <header css={headerStyle}>
-      {isAboveMedium ? null : (
-        <Button
-          variant="plain"
-          icon={<Menu size="xlarge" />}
-          onClick={onNavOpen}
-          aria-label="Open Navigation"
-        />
-      )}
-      <Link href="/" passHref>
+    <ErrorBoundary>
+      <header css={headerStyle}>
+        {isAboveMedium ? null : (
+          <Button
+            variant="plain"
+            icon={<Menu size="xlarge" />}
+            onClick={onNavOpen}
+            aria-label="Open Navigation"
+          />
+        )}
+        <Link href="/" passHref>
+          <Button
+            as="a"
+            variant="plain"
+            icon={<Logo />}
+            aria-label="Waffles, DataCamp Design System"
+            css={logoLinkStyle}
+          />
+        </Link>
+        {isAboveMedium && (
+          <Text css={versionStyle}>{`v${metadata.version}`}</Text>
+        )}
         <Button
           as="a"
           variant="plain"
-          icon={<Logo />}
-          aria-label="Waffles, DataCamp Design System"
-          css={logoLinkStyle}
+          icon={<GithubBrand size="large" />}
+          aria-label="Visit Waffles GitHub Repository"
+          href="https://github.com/datacamp/waffles"
         />
-      </Link>
-      {isAboveMedium && (
-        <Text css={versionStyle}>{`v${metadata.version}`}</Text>
-      )}
-      <Button
-        as="a"
-        variant="plain"
-        icon={<GithubBrand size="large" />}
-        aria-label="Visit Waffles GitHub Repository"
-        href="https://github.com/datacamp/waffles"
-      />
-    </header>
+      </header>
+    </ErrorBoundary>
   );
 }
 

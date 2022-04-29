@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Back } from '@datacamp/waffles/icon';
+import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { Button } from '@datacamp/waffles/button';
 import presetTypescript from '@babel/preset-typescript';
 
@@ -61,7 +62,7 @@ function Playground({ initialCode, scope, minHeight }: PlaygroundProps) {
   const [isEditorFocused, setIsEditorFocused] = useState(false);
 
   return (
-    <>
+    <ErrorBoundary>
       <Compiler
         {...compilerProps}
         css={css`
@@ -102,7 +103,7 @@ function Playground({ initialCode, scope, minHeight }: PlaygroundProps) {
           Reset
         </Button>
       </PreviewControls>
-    </>
+    </ErrorBoundary>
   );
 }
 

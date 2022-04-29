@@ -7,6 +7,7 @@ import { Link } from '@datacamp/waffles/link';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { ContentContainer } from '@datacamp/waffles/content-container';
+import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 
 import { ARTICLE_CONTENT_WIDTH } from '../components/constants';
 
@@ -88,7 +89,7 @@ const cardParagraphStyle = css`
 
 export default function Home() {
   return (
-    <>
+    <ErrorBoundary>
       <Head>
         <title>Waffles - DataCamp Design System</title>
         <meta
@@ -145,6 +146,6 @@ export default function Home() {
           </div>
         </article>
       </ContentContainer>
-    </>
+    </ErrorBoundary>
   );
 }
