@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
+import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 
 import formattedModuleExports from '../helpers/formatted-module-exports';
 
@@ -21,11 +22,13 @@ type ImportsProps = {
 // For manually specified imports provide the array of names
 function Imports({ module, path }: ImportsProps) {
   return (
-    <CodePreview css={previewStyle}>
-      <Highlight theme={basicTheme}>
-        {formattedModuleExports(module, path)}
-      </Highlight>
-    </CodePreview>
+    <ErrorBoundary>
+      <CodePreview css={previewStyle}>
+        <Highlight theme={basicTheme}>
+          {formattedModuleExports(module, path)}
+        </Highlight>
+      </CodePreview>
+    </ErrorBoundary>
   );
 }
 

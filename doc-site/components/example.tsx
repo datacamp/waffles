@@ -4,6 +4,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Code } from '@datacamp/waffles/icon';
 import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
+import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { Button } from '@datacamp/waffles/button';
 
 import PreviewControls from './preview-controls';
@@ -67,47 +68,49 @@ function Example({
   }, [path]);
 
   return (
-    <section css={sectionStyle}>
-      <Heading size="large">{title}</Heading>
-      <div
-        css={css`
-          ${wrapperStyle};
-          ${minHeight &&
-          css`
-            min-height: ${minHeight}px;
+    <ErrorBoundary>
+      <section css={sectionStyle}>
+        <Heading size="large">{title}</Heading>
+        <div
+          css={css`
+            ${wrapperStyle};
+            ${minHeight &&
+            css`
+              min-height: ${minHeight}px;
+            `}
+            background-color: ${darkPreview
+              ? tokens.colors.navy
+              : tokens.colors.white};
+            border-color: ${darkPreview
+              ? tokens.colors.navy
+              : tokens.colors.beigeMedium};
+            border-bottom-color: ${darkPreview
+              ? hexToRgba(tokens.colors.white, tokens.opacity.low)
+              : hexToRgba(tokens.colors.beigeMedium, tokens.opacity.high)};
           `}
-          background-color: ${darkPreview
-            ? tokens.colors.navy
-            : tokens.colors.white};
-          border-color: ${darkPreview
-            ? tokens.colors.navy
-            : tokens.colors.beigeMedium};
-          border-bottom-color: ${darkPreview
-            ? hexToRgba(tokens.colors.white, tokens.opacity.low)
-            : hexToRgba(tokens.colors.beigeMedium, tokens.opacity.high)};
-        `}
-      >
-        {children}
-      </div>
-      {code && isCodePreviewVisible && (
-        <CodePreview>
-          <Highlight theme={basicTheme}>{code}</Highlight>
-        </CodePreview>
-      )}
-      <PreviewControls>
-        <Button
-          variant="plain"
-          size="small"
-          iconLeft={<Code />}
-          disabled={!code}
-          onClick={toggleCodePreviewVisibility}
         >
-          <div css={buttonContentStyle}>
-            {isCodePreviewVisible ? 'Hide' : 'Show'} Code
-          </div>
-        </Button>
-      </PreviewControls>
-    </section>
+          {children}
+        </div>
+        {code && isCodePreviewVisible && (
+          <CodePreview>
+            <Highlight theme={basicTheme}>{code}</Highlight>
+          </CodePreview>
+        )}
+        <PreviewControls>
+          <Button
+            variant="plain"
+            size="small"
+            iconLeft={<Code />}
+            disabled={!code}
+            onClick={toggleCodePreviewVisibility}
+          >
+            <div css={buttonContentStyle}>
+              {isCodePreviewVisible ? 'Hide' : 'Show'} Code
+            </div>
+          </Button>
+        </PreviewControls>
+      </section>
+    </ErrorBoundary>
   );
 }
 
