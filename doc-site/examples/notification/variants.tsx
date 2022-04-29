@@ -43,7 +43,8 @@ function Example() {
       <Notification
         variant="upgrade"
         title="Upgrade To Premium!"
-        description="Publish jobs, view full profiles, and contact candidates directly."
+        description="Publish jobs, view full profiles, and contact
+          candidates directly."
         action={<Notification.ActionButton>Upgrade</Notification.ActionButton>}
       />
     </div>
