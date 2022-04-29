@@ -99,9 +99,8 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
   return (
     <MenuProvider
       {...{
-        activeIndex,
-        setActiveIndex,
         listRef: listItemsRef,
+        isOpen,
         setIsOpen,
         getItemProps,
         triggerRef: refs.reference,

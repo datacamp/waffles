@@ -30,7 +30,9 @@ function useError() {
   const context = useContext(ErrorBoundaryContext);
 
   if (context === undefined) {
-    throw new Error('Make sure to wrap useError with a ErrorBoundaryProvider.');
+    throw new Error(
+      'Make sure to wrap useError with a ErrorBoundaryProvider or ErrorBoundary component.',
+    );
   }
 
   return context;
