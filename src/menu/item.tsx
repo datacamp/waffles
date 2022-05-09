@@ -51,6 +51,7 @@ function Item<T extends React.ElementType = 'button'>({
       role="menuitem"
       css={itemStyle({ isFocusVisible })}
     >
+      {showAlert && <AlertDot />}
       {iconLeft}
       <Text
         css={itemInnerContentStyle({
@@ -59,7 +60,6 @@ function Item<T extends React.ElementType = 'button'>({
         })}
       >
         {children}
-        {showAlert && <AlertDot />}
       </Text>
       {iconRight}
     </Element>
