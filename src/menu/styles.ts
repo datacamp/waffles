@@ -42,12 +42,12 @@ export function itemStyle({ isFocusVisible }: ItemStyleOptions) {
     position: relative;
     display: flex;
     align-items: center;
-    width: calc(100% - 16px);
+    width: calc(100% - 8px);
     height: ${tokens.sizing.medium};
-    padding-right: ${tokens.spacing.small};
-    padding-left: ${tokens.spacing.small};
-    margin-left: ${tokens.spacing.small};
-    margin-right: ${tokens.spacing.small};
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-left: ${tokens.spacing.xsmall};
+    margin-right: ${tokens.spacing.xsmall};
     color: ${tokens.colors.navy};
     text-decoration: none;
     background: transparent;
@@ -83,8 +83,6 @@ export function itemInnerContentStyle({
   return css`
     color: inherit;
     margin-right: auto;
-    display: flex;
-    align-items: center;
     ${hasLeftIcon && `padding-left: ${tokens.spacing.small};`}
     ${hasRightIcon && `padding-right: ${tokens.spacing.small};`}
   `;
@@ -94,7 +92,10 @@ export function categoryDividerStyle() {
   return css`
     height: 1px;
     background-color: ${hexToRgba(tokens.colors.navy, 0.2)};
-    margin: ${tokens.spacing.small};
+    margin-top: ${tokens.spacing.small};
+    margin-bottom: ${tokens.spacing.small};
+    margin-right: ${tokens.spacing.xsmall};
+    margin-left: ${tokens.spacing.xsmall};
   `;
 }
 
@@ -129,9 +130,12 @@ export function buttonStyle() {
 
 export function alertDotStyle() {
   return css`
-    margin-left: ${tokens.spacing.small};
-    width: 8px;
-    height: 8px;
+    position: absolute;
+    z-index: ${tokens.zIndex.default};
+    top: ${tokens.spacing.xsmall};
+    left: ${tokens.spacing.xsmall};
+    width: 6px;
+    height: 6px;
     background-color: ${tokens.colors.red};
     border-radius: ${tokens.borderRadius.circle};
   `;
