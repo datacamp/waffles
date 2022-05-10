@@ -16,6 +16,10 @@ All **Waffles** components and their tests exist in the `src` directory with mat
 - Install the latest version of **yarn** package manager: **1.22+**
 - Run **yarn** in the root directory to install all dependencies
 
+## 🎨 Coding Style Guidelines
+
+Please see the [Coding Style Guidelines](https://github.com/datacamp/waffles/blob/master/docs/CODING_STYLE.md) overview.
+
 ## 🔧 Workbench
 
 **Workbench** is a lightweight _local development environment_ created specifically for updating existing or developing new components.
