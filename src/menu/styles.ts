@@ -41,7 +41,7 @@ const itemBaseStyle = css`
   display: flex;
   align-items: center;
   width: calc(100% - 8px);
-  height: ${tokens.sizing.medium};
+  min-height: ${tokens.sizing.medium};
   padding-right: 12px;
   padding-left: 12px;
   margin-left: ${tokens.spacing.xsmall};
@@ -52,6 +52,10 @@ const itemBaseStyle = css`
   outline: 0;
   transition: background-color 125ms ease-out;
   cursor: pointer;
+
+  & svg {
+    flex-shrink: 0;
+  }
 
   &:disabled {
     opacity: ${tokens.opacity.high};
@@ -101,8 +105,13 @@ export function itemInnerContentStyle({
   hasRightIcon,
 }: ItemInnerContentStyleOptions) {
   return css`
+    display: block;
     color: inherit;
-    margin-right: auto;
+    flex-grow: 1;
+    line-height: ${tokens.lineHeights.default};
+    padding-top: ${tokens.spacing.small};
+    padding-bottom: ${tokens.spacing.small};
+    text-align: left;
     ${hasLeftIcon && `padding-left: ${tokens.spacing.small};`}
     ${hasRightIcon && `padding-right: ${tokens.spacing.small};`}
   `;
