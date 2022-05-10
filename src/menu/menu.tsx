@@ -31,9 +31,15 @@ type MenuProps = {
   trigger: JSX.Element;
   children: React.ReactNode;
   offset?: string;
+  inverted?: boolean;
 };
 
-function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
+function Menu({
+  trigger,
+  children,
+  offset = tokens.spacing.small,
+  inverted = false,
+}: MenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const triggerId = useId('menu-trigger');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -76,6 +82,7 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
       id: triggerId,
       'aria-haspopup': 'menu',
       ...(isOpen && { 'aria-expanded': true }),
+      inverted,
     }),
   );
 
@@ -104,6 +111,7 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
         setIsOpen,
         getItemProps,
         triggerRef: refs.reference,
+        inverted,
       }}
     >
       {element}
@@ -116,7 +124,7 @@ function Menu({ trigger, children, offset = tokens.spacing.small }: MenuProps) {
               })}
               role="menu"
               aria-labelledby={triggerId}
-              css={dropdownStyle({ x, y })}
+              css={dropdownStyle({ x, y, inverted })}
             >
               {renderItems()}
             </div>

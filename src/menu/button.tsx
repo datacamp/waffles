@@ -27,7 +27,7 @@ function MenuButton<T extends React.ElementType = 'button'>({
   onClick,
   ...restProps
 }: MenuButtonProps<T>) {
-  const { listRef, setIsOpen, getItemProps, triggerRef } = useMenu();
+  const { listRef, setIsOpen, getItemProps, triggerRef, inverted } = useMenu();
 
   function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
     onClick?.(event);
@@ -46,6 +46,7 @@ function MenuButton<T extends React.ElementType = 'button'>({
       ref={(node) => (listRef.current[index] = node)}
       role="menuitem"
       onClick={handleClick}
+      inverted={inverted}
       css={buttonStyle()}
     />
   );
