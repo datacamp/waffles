@@ -13,6 +13,7 @@ type ItemBaseProps = {
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
   showAlert?: boolean;
+  isActive?: boolean;
 };
 
 type ItemProps<T extends React.ElementType = 'button'> =
@@ -26,6 +27,7 @@ function Item<T extends React.ElementType = 'button'>({
   iconLeft,
   iconRight,
   showAlert = false,
+  isActive = false,
   ...restProps
 }: ItemProps<T>) {
   const Element = as || 'button';
@@ -49,7 +51,7 @@ function Item<T extends React.ElementType = 'button'>({
       })}
       ref={(node) => (listRef.current[index] = node)}
       role="menuitem"
-      css={itemStyle({ isFocusVisible })}
+      css={itemStyle({ isFocusVisible, isActive })}
     >
       {showAlert && <AlertDot />}
       {iconLeft}

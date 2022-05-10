@@ -35,9 +35,10 @@ export function dropdownStyle({ x, y }: DropdownStyleOptions) {
 
 type ItemStyleOptions = {
   isFocusVisible: boolean;
+  isActive: boolean;
 };
 
-export function itemStyle({ isFocusVisible }: ItemStyleOptions) {
+export function itemStyle({ isFocusVisible, isActive }: ItemStyleOptions) {
   return css`
     position: relative;
     display: flex;
@@ -50,7 +51,7 @@ export function itemStyle({ isFocusVisible }: ItemStyleOptions) {
     margin-right: ${tokens.spacing.xsmall};
     color: ${tokens.colors.navy};
     text-decoration: none;
-    background: transparent;
+    background: ${isActive ? tokens.colors.greySubtle : 'transparent'};
     border: 0;
     border-radius: ${tokens.borderRadius.medium};
     outline: 0;
