@@ -32,13 +32,14 @@ type MenuProps = {
   children: React.ReactNode;
   offset?: string;
   inverted?: boolean;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
 function Menu({
   trigger,
   children,
   offset = tokens.spacing.small,
   inverted = false,
+  ...restProps
 }: MenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const triggerId = useId('menu-trigger');
@@ -121,6 +122,7 @@ function Menu({
             <div
               {...getFloatingProps({
                 ref: floating,
+                ...restProps,
               })}
               role="menu"
               aria-labelledby={triggerId}
