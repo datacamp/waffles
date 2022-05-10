@@ -1,17 +1,17 @@
 import React from 'react';
-import { css } from '@emotion/react';
 import { useRouter } from 'next/router';
-
+import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
-import { mediaQuery } from '@datacamp/waffles/helpers';
-import { useMediaQuery } from '@datacamp/waffles/hooks';
-import { Button } from '@datacamp/waffles/button';
-import { ContentContainer } from '@datacamp/waffles/content-container';
 import { Edit } from '@datacamp/waffles/icon';
+import { useMediaQuery } from '@datacamp/waffles/hooks';
+import { mediaQuery } from '@datacamp/waffles/helpers';
+import { ContentContainer } from '@datacamp/waffles/content-container';
+import { Button } from '@datacamp/waffles/button';
+
+import TableOfContents from './table-of-contents';
+import { ARTICLE_CONTENT_WIDTH } from './constants';
 
 import { TableOfContentsProvider } from '../context/table-of-contents-context';
-import { ARTICLE_CONTENT_WIDTH } from './constants';
-import TableOfContents from './table-of-contents';
 
 const GITHUB_EDIT_URL =
   'https://github.com/datacamp/waffles/edit/master/doc-site/pages';

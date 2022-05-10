@@ -1,11 +1,11 @@
-import { css } from '@emotion/react';
 import ReactMarkdown from 'react-markdown';
-
+import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
+
+import Table from './table';
 
 import convertedProps from '../helpers/converted-props';
 import markdownElements from '../components/props-table-markdown-elements';
-import Table from './table';
 
 const POLYMORPHIC_METADATA = {
   name: 'as',

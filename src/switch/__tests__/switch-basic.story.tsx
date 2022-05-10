@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { css } from '@emotion/react';
 
-import { tokens } from '../../tokens';
 import { Switch } from '../index';
+import { tokens } from '../../tokens';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};

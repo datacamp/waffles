@@ -1,10 +1,10 @@
 import 'sanitize.css';
 import '../styles/globals.css';
 
-import type { AppProps } from 'next/app';
-
-import markdownElements from '../components/markdown-elements';
 import PageLayout from '../components/page-layout';
+import markdownElements from '../components/markdown-elements';
+
+import type { AppProps } from 'next/app';
 
 function App({ Component, pageProps }: AppProps) {
   return (

@@ -1,6 +1,6 @@
-import React from 'react';
-import SimpleEditor from 'react-simple-code-editor';
 import { TEditorProps as BaseEditorProps, useValueDebounce } from 'react-view';
+import SimpleEditor from 'react-simple-code-editor';
+import React from 'react';
 
 import baseTheme from './editor-theme';
 import Highlight from './editor-highlight';

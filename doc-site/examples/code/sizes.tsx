@@ -1,8 +1,7 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { Code } from '@datacamp/waffles/code';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { Code } from '@datacamp/waffles/code';
 
 function Example() {
   return (

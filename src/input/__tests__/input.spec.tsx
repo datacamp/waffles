@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react';
-import { render, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { render, fireEvent } from '@testing-library/react';
 
-import { AddCircle, ChevronRight } from '../../icon';
 import { Input } from '../index';
+import { AddCircle, ChevronRight } from '../../icon';
 
 const sizes = ['small', 'medium', 'large'] as const;
 

@@ -1,6 +1,7 @@
-import { Cross } from '../icon';
-import { useSidebar } from './sidebar-context';
 import { closeButtonStyle } from './styles';
+import { useSidebar } from './sidebar-context';
+
+import { Cross } from '../icon';
 
 function CloseButton() {
   const { isOpen, onClose } = useSidebar();

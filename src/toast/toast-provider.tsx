@@ -2,10 +2,11 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 
-import { ToastContext } from './toast-context';
-import type { ToastOptions } from './toast-context';
 import ToastsList from './toasts-list';
+import { ToastContext } from './toast-context';
 import Toast from './toast';
+
+import type { ToastOptions } from './toast-context';
 
 type ToastsDataset = Record<
   string,

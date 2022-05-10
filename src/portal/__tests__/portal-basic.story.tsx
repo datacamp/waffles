@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
+import { Portal } from '../index';
 import { tokens } from '../../tokens';
 import { Paragraph } from '../../paragraph';
-import { Portal } from '../index';
 
 const contentStyle = css`
   position: absolute;

@@ -1,10 +1,10 @@
 import { css } from '@emotion/react';
 
-import { tokens } from '../../tokens';
-import { hexToRgba } from '../../helpers';
-import { Paragraph } from '../../paragraph';
-import { Text } from '../../text';
 import { ContentContainer } from '../index';
+import { tokens } from '../../tokens';
+import { Text } from '../../text';
+import { Paragraph } from '../../paragraph';
+import { hexToRgba } from '../../helpers';
 
 const containerStyle = css`
   background-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.medium)};

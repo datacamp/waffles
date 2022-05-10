@@ -1,8 +1,8 @@
 import React from 'react';
 
+import { notificationStyle, decorStyle, contentStyle } from './styles';
 import Icon from './icon';
 import CloseButton from './close-button';
-import { notificationStyle, decorStyle, contentStyle } from './styles';
 
 type NotificationCardProps = {
   variant?: 'default' | 'success' | 'warning' | 'error' | 'upgrade';

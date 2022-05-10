@@ -1,8 +1,7 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { Button } from '@datacamp/waffles/button';
 import { hexColorShade } from '@datacamp/waffles/helpers';
+import { Button } from '@datacamp/waffles/button';
 
 const customButtonStyle = css`
   background-color: ${tokens.colors.purple};

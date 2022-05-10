@@ -1,8 +1,7 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { Heading } from '@datacamp/waffles/heading';
 
 const cardStyle = css`
   background-color: ${tokens.colors.navy};

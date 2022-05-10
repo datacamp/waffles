@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { Select } from '@datacamp/waffles/select';
 
 function Example() {

@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { Portal } from '@datacamp/waffles/portal';
-import { Button } from '@datacamp/waffles/button';
-import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { Heading } from '@datacamp/waffles/heading';
+import { Button } from '@datacamp/waffles/button';
 
 const contentStyle = css`
   position: fixed;

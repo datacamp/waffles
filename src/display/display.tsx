@@ -1,5 +1,6 @@
-import { Text } from '../text';
 import { displayStyle } from './styles';
+
+import { Text } from '../text';
 
 type DisplayProps = {
   /* Text content to display. */

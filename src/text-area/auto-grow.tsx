@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { growWrapperStyle, fauxGrowElementStyle } from './styles';
 
 type AutoGrowProps = {

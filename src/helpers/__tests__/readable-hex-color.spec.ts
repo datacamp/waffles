@@ -1,5 +1,5 @@
-import { tokens } from '../../tokens';
 import { readableHexColor } from '../index';
+import { tokens } from '../../tokens';
 
 describe('readableHexColor', () => {
   it('returns navy color when passed color is light', () => {

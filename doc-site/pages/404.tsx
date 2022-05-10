@@ -1,11 +1,10 @@
-import Head from 'next/head';
 import Link from 'next/link';
-
-import { Display } from '@datacamp/waffles/display';
-import { Heading } from '@datacamp/waffles/heading';
+import Head from 'next/head';
 import { Paragraph } from '@datacamp/waffles/paragraph';
-import { Button } from '@datacamp/waffles/button';
+import { Heading } from '@datacamp/waffles/heading';
+import { Display } from '@datacamp/waffles/display';
 import { ContentContainer } from '@datacamp/waffles/content-container';
+import { Button } from '@datacamp/waffles/button';
 
 export default function PageNotFound() {
   return (

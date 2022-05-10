@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-import { fireEvent, render, waitFor } from '@testing-library/react';
 import { useState } from 'react';
+import { fireEvent, render, waitFor } from '@testing-library/react';
 
 import { ErrorBoundary, useError } from '../index';
 

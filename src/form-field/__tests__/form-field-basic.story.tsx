@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
 
+import { FormField } from '../index';
 import { tokens } from '../../tokens';
 import { Input } from '../../input';
-import { FormField } from '../index';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};

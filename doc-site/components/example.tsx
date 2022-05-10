@@ -1,17 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { css } from '@emotion/react';
-import { useEffect, useState } from 'react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { Button } from '@datacamp/waffles/button';
-import { Heading } from '@datacamp/waffles/heading';
 import { Code } from '@datacamp/waffles/icon';
 import { hexToRgba } from '@datacamp/waffles/helpers';
+import { Heading } from '@datacamp/waffles/heading';
+import { Button } from '@datacamp/waffles/button';
 
+import PreviewControls from './preview-controls';
 import basicTheme from './editor-theme';
 import Highlight from './editor-highlight';
 import CodePreview from './code-preview';
-import PreviewControls from './preview-controls';
 
 const sectionStyle = css`
   margin-top: ${tokens.spacing.medium};

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { Switch } from '@datacamp/waffles/switch';
 
 import type { PlaygroundConfig } from '../../types';

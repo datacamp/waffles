@@ -1,9 +1,8 @@
 import { useState, useRef } from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { Branch, ChevronRight, CrossCircle } from '@datacamp/waffles/icon';
 import { Input } from '@datacamp/waffles/input';
+import { Branch, ChevronRight, CrossCircle } from '@datacamp/waffles/icon';
 
 function Example() {
   const [value, setValue] = useState('');

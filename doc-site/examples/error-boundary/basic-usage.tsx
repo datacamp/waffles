@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { Button } from '@datacamp/waffles/button';
 

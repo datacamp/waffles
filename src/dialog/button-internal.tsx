@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Button as ButtonBase } from '../button';
 import { buttonStyle } from './styles';
+
+import { Button as ButtonBase } from '../button';
 
 type ButtonProps = {
   /* Focus this particular button when dialog is opened. */

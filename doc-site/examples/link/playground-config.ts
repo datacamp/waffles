@@ -1,5 +1,5 @@
-import { Link } from '@datacamp/waffles/link';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { Link } from '@datacamp/waffles/link';
 import { ExternalLink } from '@datacamp/waffles/icon';
 
 import type { PlaygroundConfig } from '../../types';

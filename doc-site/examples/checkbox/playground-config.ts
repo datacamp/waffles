@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { Checkbox } from '@datacamp/waffles/checkbox';
 
 import type { PlaygroundConfig } from '../../types';

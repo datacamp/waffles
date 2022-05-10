@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { useMediaQuery } from '@datacamp/waffles/hooks';
-import { mediaQuery } from '@datacamp/waffles/helpers';
+import { SideNavigation as SideNav } from '@datacamp/waffles/side-navigation';
+import { Paragraph } from '@datacamp/waffles/paragraph';
 import {
   Rocket,
   Bookmark,
@@ -14,10 +13,10 @@ import {
   Chat,
   ExternalLink,
 } from '@datacamp/waffles/icon';
+import { useMediaQuery } from '@datacamp/waffles/hooks';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
 import { Badge } from '@datacamp/waffles/badge';
-import { Paragraph } from '@datacamp/waffles/paragraph';
-import { SideNavigation as SideNav } from '@datacamp/waffles/side-navigation';
 
 const layoutStyle = css`
   display: block;

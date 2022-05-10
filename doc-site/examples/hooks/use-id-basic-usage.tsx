@@ -1,9 +1,8 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { useId } from '@datacamp/waffles/hooks';
-import { Input } from '@datacamp/waffles/input';
 import { Text } from '@datacamp/waffles/text';
+import { Input } from '@datacamp/waffles/input';
+import { useId } from '@datacamp/waffles/hooks';
 
 const errorStyle = css`
   color: ${tokens.colors.redDarkText};

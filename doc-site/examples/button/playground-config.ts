@@ -1,5 +1,5 @@
-import { Button } from '@datacamp/waffles/button';
 import { AddCircle, ChevronRight } from '@datacamp/waffles/icon';
+import { Button } from '@datacamp/waffles/button';
 
 import type { PlaygroundConfig } from '../../types';
 

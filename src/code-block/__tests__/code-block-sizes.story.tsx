@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
-import { tokens } from '../../tokens';
 import { CodeBlock } from '../index';
+import { tokens } from '../../tokens';
 
 const wrapperStyle = css`
   display: flex;

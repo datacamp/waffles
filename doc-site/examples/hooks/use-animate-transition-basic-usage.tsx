@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { css, keyframes } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { useAnimateTransition } from '@datacamp/waffles/hooks';
 import { Text } from '@datacamp/waffles/text';
+import { useAnimateTransition } from '@datacamp/waffles/hooks';
 import { Button } from '@datacamp/waffles/button';
 
 const fadeIn = keyframes`

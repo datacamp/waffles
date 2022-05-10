@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { Checkbox } from '@datacamp/waffles/checkbox';
 

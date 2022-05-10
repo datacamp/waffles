@@ -1,6 +1,6 @@
 import React from 'react';
-import { useFocusRing } from '@react-aria/focus';
 import { mergeProps } from '@react-aria/utils';
+import { useFocusRing } from '@react-aria/focus';
 
 import { enhancerStyle } from './styles';
 

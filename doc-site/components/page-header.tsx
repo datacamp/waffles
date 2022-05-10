@@ -1,16 +1,16 @@
-import { css } from '@emotion/react';
 import Link from 'next/link';
-
+import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
-import { Button } from '@datacamp/waffles/button';
 import { Text } from '@datacamp/waffles/text';
+import { Menu, GithubBrand } from '@datacamp/waffles/icon';
 import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { mediaQuery } from '@datacamp/waffles/helpers';
-import { Menu, GithubBrand } from '@datacamp/waffles/icon';
+import { Button } from '@datacamp/waffles/button';
+
+import Logo from './logo';
+import { HEADER_HEIGHT } from './constants';
 
 import metadata from '../../package.json';
-import { HEADER_HEIGHT } from './constants';
-import Logo from './logo';
 
 const headerStyle = css`
   display: flex;

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { TextArea } from '@datacamp/waffles/text-area';
 
 import type { PlaygroundConfig } from '../../types';

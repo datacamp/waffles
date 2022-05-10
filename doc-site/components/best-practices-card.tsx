@@ -1,9 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { Heading } from '@datacamp/waffles/heading';
 import { Checkmark, Cross } from '@datacamp/waffles/icon';
+import { Heading } from '@datacamp/waffles/heading';
 
 const sectionStyle = css`
   background-color: ${tokens.colors.white};

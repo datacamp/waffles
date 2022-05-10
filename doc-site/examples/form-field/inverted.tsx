@@ -1,10 +1,9 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { FormField } from '@datacamp/waffles/form-field';
-import { Input } from '@datacamp/waffles/input';
 import { TextArea } from '@datacamp/waffles/text-area';
 import { Select } from '@datacamp/waffles/select';
+import { Input } from '@datacamp/waffles/input';
+import { FormField } from '@datacamp/waffles/form-field';
 
 const formStyle = css`
   display: flex;

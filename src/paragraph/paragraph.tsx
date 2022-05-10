@@ -1,5 +1,6 @@
-import { Text } from '../text';
 import { paragraphStyle } from './styles';
+
+import { Text } from '../text';
 
 type ParagraphProps = {
   /* The content of the paragraph. */

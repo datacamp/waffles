@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Text } from '../text';
 import { characterCountStyle } from './styles';
+
+import { Text } from '../text';
 
 type CharacterCountProps = {
   value: React.TextareaHTMLAttributes<HTMLTextAreaElement>['value'];

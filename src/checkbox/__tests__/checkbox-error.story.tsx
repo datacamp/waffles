@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { css } from '@emotion/react';
 
-import { tokens } from '../../tokens';
 import { Checkbox } from '../index';
+import { tokens } from '../../tokens';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};

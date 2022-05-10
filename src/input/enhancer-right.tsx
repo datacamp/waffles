@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Input from './input';
 import { enhancerRightStyle } from './styles';
+import Input from './input';
 
 type EnhancerRightProps = {
   size: NonNullable<React.ComponentProps<typeof Input>['size']>;

@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { useMediaQuery } from '../hooks';
+import { SidebarProvider } from './sidebar-context';
 import Sidebar from './sidebar';
 import AnimatedSidebar from './animated-sidebar';
-import { SidebarProvider } from './sidebar-context';
+
+import { useMediaQuery } from '../hooks';
 
 type SideNavigationProps = {
   /* Determines if the side navigation sidebar is open. */

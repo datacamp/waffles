@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import { AddCircle, ExternalLink } from '../../icon';
 import { Link } from '../index';
+import { AddCircle, ExternalLink } from '../../icon';
 
 type TestComponentProps = {
   to: string;

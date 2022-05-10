@@ -1,7 +1,8 @@
 import React from 'react';
 
-import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 import { textStyle } from './styles';
+
+import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
 type TextBaseProps = {
   /* A text content of the component. */

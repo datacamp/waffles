@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { Radio } from '@datacamp/waffles/radio';
 
 import type { PlaygroundConfig } from '../../types';

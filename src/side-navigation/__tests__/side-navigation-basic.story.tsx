@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { css } from '@emotion/react';
 
+import { SideNavigation } from '../index';
 import { tokens } from '../../tokens';
-import { mediaQuery } from '../../helpers';
 import { Home, Cog, AddCircle, Flash, Compass, Book, Chat } from '../../icon';
+import { mediaQuery } from '../../helpers';
 import { Button } from '../../button';
 import { Badge } from '../../badge';
-import { SideNavigation } from '../index';
 
 const layoutStyle = css`
   display: block;

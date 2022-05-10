@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import React, { useState, useRef } from 'react';
 
 import { useIsomorphicLayoutEffect } from '../hooks';
 

@@ -1,8 +1,7 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { hexColorShade } from '@datacamp/waffles/helpers';
 import { Text } from '@datacamp/waffles/text';
+import { hexColorShade } from '@datacamp/waffles/helpers';
 
 const wrapperStyle = css`
   display: grid;

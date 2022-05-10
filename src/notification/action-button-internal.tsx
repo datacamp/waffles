@@ -1,7 +1,8 @@
 import React from 'react';
 
-import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 import { Button } from '../button';
+
+import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
 type ActionButtonBaseProps = {
   /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */

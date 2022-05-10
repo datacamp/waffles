@@ -1,8 +1,7 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 
 const squareStyle = css`
   background-color: ${tokens.colors.orange};

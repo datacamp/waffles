@@ -1,6 +1,6 @@
 import { ScreenReaderOnly } from '@datacamp/waffles/screen-reader-only';
-import { Link } from '@datacamp/waffles/link';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { Link } from '@datacamp/waffles/link';
 import { ExternalLink } from '@datacamp/waffles/icon';
 
 function Example() {

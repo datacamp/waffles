@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { Tabs } from '@datacamp/waffles/tabs';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 

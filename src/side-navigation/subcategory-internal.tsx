@@ -1,12 +1,14 @@
 import React, { Children, cloneElement, isValidElement } from 'react';
-import { useFocusRing } from '@react-aria/focus';
 import { mergeProps } from '@react-aria/utils';
+import { useFocusRing } from '@react-aria/focus';
 
-import { useId } from '../hooks';
-import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
-import { Text } from '../text';
-import { useSidebar } from './sidebar-context';
 import { itemStyle, itemInnerContentStyle, listStyle } from './styles';
+import { useSidebar } from './sidebar-context';
+
+import { Text } from '../text';
+import { useId } from '../hooks';
+
+import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
 type SubcategoryBaseProps = {
   /* Subcategory section caption. */

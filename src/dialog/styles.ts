@@ -1,8 +1,9 @@
 import { css } from '@emotion/react';
 
+import { panelEnter, panelExit } from './keyframes';
+
 import { tokens } from '../tokens';
 import { hexToRgba, mediaQuery } from '../helpers';
-import { panelEnter, panelExit } from './keyframes';
 
 // Center vertically and horizontally dialog panel
 export function panelWrapperStyle() {

@@ -1,9 +1,10 @@
 import React from 'react';
-import { useFocusRing } from '@react-aria/focus';
 import { mergeProps } from '@react-aria/utils';
+import { useFocusRing } from '@react-aria/focus';
+
+import { tabStyle, tabInnerContentStyle, tabFauxContenStyle } from './styles';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
-import { tabStyle, tabInnerContentStyle, tabFauxContenStyle } from './styles';
 
 type TabBaseProps = {
   /* The label displayed on the tab. */
