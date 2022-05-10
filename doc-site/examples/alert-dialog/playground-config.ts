@@ -1,8 +1,7 @@
 import { useState } from 'react';
-
-import { AlertDialog } from '@datacamp/waffles/alert-dialog';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Button } from '@datacamp/waffles/button';
+import { AlertDialog } from '@datacamp/waffles/alert-dialog';
 
 import type { PlaygroundConfig } from '../../types';
 

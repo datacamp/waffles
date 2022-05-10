@@ -1,6 +1,6 @@
-import { ExternalLink } from '@datacamp/waffles/icon';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Link } from '@datacamp/waffles/link';
+import { ExternalLink } from '@datacamp/waffles/icon';
 
 function Example() {
   return (

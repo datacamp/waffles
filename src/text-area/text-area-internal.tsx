@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-import { useId } from '../hooks';
-import AutoGrow from './auto-grow';
-import CharacterCount from './character-count';
 import { textAreaWrapper, textAreaStyle } from './styles';
+import CharacterCount from './character-count';
+import AutoGrow from './auto-grow';
+
+import { useId } from '../hooks';
 
 type TextAreaBaseProps = {
   /* Sets appropriate error style and `aria-invalid` attribute. */

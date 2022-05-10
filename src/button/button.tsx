@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 
 import ButtonInternal from './button-internal';
+
 import type { ButtonProps } from './button-internal';
 
 type ButtonComponent = <T extends React.ElementType = 'button'>(

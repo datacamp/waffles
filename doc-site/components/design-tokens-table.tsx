@@ -1,9 +1,8 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import DesignTokenExample from './design-token-example';
 
 import Table from './table';
+import DesignTokenExample from './design-token-example';
 
 const nameStyle = css`
   width: 40%;

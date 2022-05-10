@@ -1,6 +1,5 @@
 import React from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 

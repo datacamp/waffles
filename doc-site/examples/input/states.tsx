@@ -1,5 +1,4 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { Input } from '@datacamp/waffles/input';
 

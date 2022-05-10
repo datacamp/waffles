@@ -1,9 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { useMediaQuery } from '@datacamp/waffles/hooks';
 
 const wrapperStyle = css`
   display: grid;

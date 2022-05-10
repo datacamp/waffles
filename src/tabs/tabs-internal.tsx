@@ -6,8 +6,9 @@ import React, {
 } from 'react';
 import { mergeProps } from '@react-aria/utils';
 
-import { useId } from '../hooks';
 import TabList from './tab-list';
+
+import { useId } from '../hooks';
 
 type TabsProps = {
   /* Index of the active tab. By default starts from 0. To provide custom indexes, pass them as the `key` attribute to each `Tab`. */

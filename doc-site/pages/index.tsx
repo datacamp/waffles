@@ -1,15 +1,14 @@
 import Head from 'next/head';
+import LandingPageCard from 'components/landing-page-card';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { mediaQuery } from '@datacamp/waffles/helpers';
-import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Link } from '@datacamp/waffles/link';
+import { mediaQuery } from '@datacamp/waffles/helpers';
+import { Heading } from '@datacamp/waffles/heading';
 import { ContentContainer } from '@datacamp/waffles/content-container';
 
 import { ARTICLE_CONTENT_WIDTH } from '../components/constants';
-import LandingPageCard from 'components/landing-page-card';
 
 const heroStyle = css`
   height: 480px;

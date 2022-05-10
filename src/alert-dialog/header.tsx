@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Dialog } from '../dialog';
 import { headerStyle } from './styles';
+
+import { Dialog } from '../dialog';
 
 type HeaderProps = {
   /* Title of the alert dialog. */

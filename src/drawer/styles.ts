@@ -1,9 +1,10 @@
 import { css } from '@emotion/react';
 
+import { panelEnter, panelExit } from './keyframes';
+import Drawer from './drawer';
+
 import { tokens } from '../tokens';
 import { mediaQuery } from '../helpers';
-import Drawer from './drawer';
-import { panelEnter, panelExit } from './keyframes';
 
 // Sync animation of background drawer panel and content wrapper
 // Makes both of them behave nicely on iOS

@@ -1,11 +1,10 @@
 import Link from 'next/link';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { Link as LinkBase } from '@datacamp/waffles/link';
 
-import { useTableOfContentsEntries } from '../context/table-of-contents-context';
 import slugify from '../helpers/slugify';
+import { useTableOfContentsEntries } from '../context/table-of-contents-context';
 
 const linkStyle = css`
   color: ${tokens.colors.navySubtleTextOnLight};

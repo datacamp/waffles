@@ -1,9 +1,9 @@
-import DialogInternal from './dialog-internal';
 import Header from './header';
-import Body from './body';
 import Footer from './footer';
-import Button from './button';
+import DialogInternal from './dialog-internal';
 import CloseButton from './close-button';
+import Button from './button';
+import Body from './body';
 
 const DialogNamespace = Object.assign(DialogInternal, {
   Header,

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-
 import { Tabs } from '@datacamp/waffles/tabs';
-import { Bell, Clock, Heart } from '@datacamp/waffles/icon';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { Bell, Clock, Heart } from '@datacamp/waffles/icon';
 import { Code } from '@datacamp/waffles/code';
 
 function Example() {

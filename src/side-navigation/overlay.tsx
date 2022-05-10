@@ -1,5 +1,6 @@
-import { Overlay as OverlayBase } from '../overlay';
 import { useSidebar } from './sidebar-context';
+
+import { Overlay as OverlayBase } from '../overlay';
 
 function Overlay() {
   const { isOpen, onClose } = useSidebar();

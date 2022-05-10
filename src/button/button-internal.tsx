@@ -1,9 +1,10 @@
 import React from 'react';
-import { useFocusRing } from '@react-aria/focus';
 import { mergeProps } from '@react-aria/utils';
+import { useFocusRing } from '@react-aria/focus';
+
+import { buttonStyle, innerContentStyle } from './styles';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
-import { buttonStyle, innerContentStyle } from './styles';
 
 type ButtonBaseProps = {
   /* Defines the variant of the button. */

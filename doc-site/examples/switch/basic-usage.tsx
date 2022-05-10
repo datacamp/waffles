@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { Switch } from '@datacamp/waffles/switch';
 

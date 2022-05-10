@@ -1,7 +1,6 @@
 import { useState } from 'react';
-
-import { Checkbox } from '@datacamp/waffles/checkbox';
 import { Link } from '@datacamp/waffles/link';
+import { Checkbox } from '@datacamp/waffles/checkbox';
 
 function Example() {
   const [checked, setChecked] = useState(false);

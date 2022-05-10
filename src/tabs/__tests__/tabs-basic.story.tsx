@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
 
-import { tokens } from '../../tokens';
-import { mediaQuery } from '../../helpers';
-import { Paragraph } from '../../paragraph';
 import { Tabs } from '../index';
+import { tokens } from '../../tokens';
+import { Paragraph } from '../../paragraph';
+import { mediaQuery } from '../../helpers';
 
 const wrapperStyle = css`
   padding-top: ${tokens.spacing.medium};

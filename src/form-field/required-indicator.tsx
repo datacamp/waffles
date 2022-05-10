@@ -1,6 +1,7 @@
-import { Text } from '../text';
-import FormField from './form-field';
 import { requiredIndicatorStyle, requiredMarkerStyle } from './styles';
+import FormField from './form-field';
+
+import { Text } from '../text';
 
 type RequiredIndicatorProps = {
   isRequired: boolean;

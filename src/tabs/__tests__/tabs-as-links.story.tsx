@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
+import { Tabs } from '../index';
 import { tokens } from '../../tokens';
 import { Paragraph } from '../../paragraph';
-import { Tabs } from '../index';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};

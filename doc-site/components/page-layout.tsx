@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 
-import { HEADER_HEIGHT } from './constants';
 import Header from './page-header';
 import Navigation from './navigation';
+import { HEADER_HEIGHT } from './constants';
 
 const layoutStyle = css`
   display: flex;

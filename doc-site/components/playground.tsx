@@ -1,17 +1,17 @@
+import { Compiler, Error, useView } from 'react-view';
 import { useState } from 'react';
 import { css } from '@emotion/react';
-import { Compiler, Error, useView } from 'react-view';
+import { tokens } from '@datacamp/waffles/tokens';
+import { Back } from '@datacamp/waffles/icon';
+import { Button } from '@datacamp/waffles/button';
 import presetTypescript from '@babel/preset-typescript';
 
-import { tokens } from '@datacamp/waffles/tokens';
-import { Button } from '@datacamp/waffles/button';
-import { Back } from '@datacamp/waffles/icon';
-
-import { CODE_PREVIEW_BORDER } from './constants';
-import type { PlaygroundConfig } from '../types';
-import CodePreview from './code-preview';
 import PreviewControls from './preview-controls';
 import Editor from './editor';
+import { CODE_PREVIEW_BORDER } from './constants';
+import CodePreview from './code-preview';
+
+import type { PlaygroundConfig } from '../types';
 
 const compilerStyle = css`
   padding: ${tokens.spacing.medium};

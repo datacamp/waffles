@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Input from './input';
 import { iconLeftStyle } from './styles';
+import Input from './input';
 
 type IconLeftProps = {
   size: NonNullable<React.ComponentProps<typeof Input>['size']>;

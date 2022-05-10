@@ -1,5 +1,6 @@
-import { Checkmark as Icon } from '../icon';
 import { toggleStyle, handleStyle } from './styles';
+
+import { Checkmark as Icon } from '../icon';
 
 type ToggleProps = {
   inverted: boolean;

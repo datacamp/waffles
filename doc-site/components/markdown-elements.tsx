@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react';
-import { css } from '@emotion/react';
 import Link from 'next/link';
 import Head from 'next/head';
-
+import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
-import { Code as CodeBase } from '@datacamp/waffles/code';
-import { CodeBlock as CodeBlockBase } from '@datacamp/waffles/code-block';
-import { Heading } from '@datacamp/waffles/heading';
 import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
+import { Heading } from '@datacamp/waffles/heading';
+import { CodeBlock as CodeBlockBase } from '@datacamp/waffles/code-block';
+import { Code as CodeBase } from '@datacamp/waffles/code';
 
-import { useAddTableOfContentsEntry } from '../context/table-of-contents-context';
+import TableBase from './table';
+import List from './list';
+import Bookmark from './bookmark';
+
 import textFromChildren from '../helpers/text-from-children';
 import slugify from '../helpers/slugify';
-import TableBase from './table';
-import Bookmark from './bookmark';
-import List from './list';
+import { useAddTableOfContentsEntry } from '../context/table-of-contents-context';
 
 // Use custom Waffles components in markdown
 

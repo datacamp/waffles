@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Text } from '../text';
 import { labelStyle } from './styles';
+
+import { Text } from '../text';
 
 type LabelProps = {
   inverted: boolean;

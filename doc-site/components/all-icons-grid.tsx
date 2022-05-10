@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import * as allIcons from '@datacamp/waffles/icon';
 import { Text } from '@datacamp/waffles/text';
+import * as allIcons from '@datacamp/waffles/icon';
 import { Button } from '@datacamp/waffles/button';
-import groupedIcons from '../helpers/grouped-icons';
+
 import PreviewControls from './preview-controls';
+
+import groupedIcons from '../helpers/grouped-icons';
 
 const { Visible, Hidden } = allIcons;
 

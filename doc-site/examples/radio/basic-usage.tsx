@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { Radio } from '@datacamp/waffles/radio';
 import { Text } from '@datacamp/waffles/text';
+import { Radio } from '@datacamp/waffles/radio';
 
 function Example() {
   const [value, setValue] = useState('');

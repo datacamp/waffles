@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
 
+import { ScreenReaderOnly } from '../index';
 import { tokens } from '../../tokens';
 import { Paragraph } from '../../paragraph';
 import { Link } from '../../link';
-import { ScreenReaderOnly } from '../index';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};

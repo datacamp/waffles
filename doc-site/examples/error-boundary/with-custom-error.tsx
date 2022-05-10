@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
+import { Paragraph } from '@datacamp/waffles/paragraph';
 import { hexToRgba } from '@datacamp/waffles/helpers';
+import { Heading } from '@datacamp/waffles/heading';
 import { ErrorBoundary, useError } from '@datacamp/waffles/error-boundary';
 import { Button } from '@datacamp/waffles/button';
-import { Heading } from '@datacamp/waffles/heading';
-import { Paragraph } from '@datacamp/waffles/paragraph';
 
 function ThrowErrorComponent() {
   throw new Error('Very serious error!');

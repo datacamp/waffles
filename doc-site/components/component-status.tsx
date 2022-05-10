@@ -1,10 +1,9 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
-import { Button } from '@datacamp/waffles/button';
-import { ExternalLink } from '@datacamp/waffles/icon';
 import { ScreenReaderOnly } from '@datacamp/waffles/screen-reader-only';
+import { ExternalLink } from '@datacamp/waffles/icon';
+import { Button } from '@datacamp/waffles/button';
 
 import Table from './table';
 

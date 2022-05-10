@@ -1,10 +1,11 @@
 import React from 'react';
-import { useFocusRing } from '@react-aria/focus';
 import { mergeProps } from '@react-aria/utils';
+import { useFocusRing } from '@react-aria/focus';
 
-import { Text } from '../text';
 import { labelStyle, inputStyle, contentStyle } from './styles';
 import Radiomark from './radiomark';
+
+import { Text } from '../text';
 
 type RadioProps = {
   /* The description displayed next to the radio. */

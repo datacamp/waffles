@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { render, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { render, fireEvent } from '@testing-library/react';
 
-import { AddCircle } from '../../icon';
 import { Tabs } from '../index';
+import { AddCircle } from '../../icon';
 
 const MOCKED_ID = '123abC';
 

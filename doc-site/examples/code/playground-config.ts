@@ -1,5 +1,5 @@
-import { Code } from '@datacamp/waffles/code';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { Code } from '@datacamp/waffles/code';
 
 import type { PlaygroundConfig } from '../../types';
 

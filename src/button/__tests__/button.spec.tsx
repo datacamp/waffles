@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import { AddCircle, ChevronRight } from '../../icon';
 import { Button } from '../index';
+import { AddCircle, ChevronRight } from '../../icon';
 
 const variants = [
   'primary',

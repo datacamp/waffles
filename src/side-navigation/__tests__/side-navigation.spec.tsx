@@ -2,9 +2,9 @@
 import { useRef, useEffect } from 'react';
 import { render, fireEvent, waitFor, act } from '@testing-library/react';
 
+import { SideNavigation } from '../index';
 import { Star, ChevronRight } from '../../icon';
 import { useMediaQuery } from '../../hooks';
-import { SideNavigation } from '../index';
 
 const MOCKED_ID = '123abC';
 

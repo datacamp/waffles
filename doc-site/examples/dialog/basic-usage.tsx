@@ -1,7 +1,6 @@
 import { useState } from 'react';
-
-import { Dialog } from '@datacamp/waffles/dialog';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { Dialog } from '@datacamp/waffles/dialog';
 import { Button } from '@datacamp/waffles/button';
 
 function Example() {

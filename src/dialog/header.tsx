@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Heading } from '../heading';
 import { headerStyle } from './styles';
+
+import { Heading } from '../heading';
 
 type HeaderProps = {
   /* Title of the modal. */

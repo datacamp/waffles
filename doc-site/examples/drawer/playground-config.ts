@@ -1,7 +1,6 @@
 import { useState } from 'react';
-
-import { Drawer } from '@datacamp/waffles/drawer';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { Drawer } from '@datacamp/waffles/drawer';
 import { Button } from '@datacamp/waffles/button';
 
 import type { PlaygroundConfig } from '../../types';

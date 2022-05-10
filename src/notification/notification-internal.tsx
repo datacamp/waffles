@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-import { useAnimateTransition } from '../hooks';
 import Card from './card';
+
+import { useAnimateTransition } from '../hooks';
 
 type NotificationProps = {
   /* The main content of the notification. */

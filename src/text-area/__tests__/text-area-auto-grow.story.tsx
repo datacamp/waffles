@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
 
-import { tokens } from '../../tokens';
 import { TextArea } from '../index';
+import { tokens } from '../../tokens';
 
 const wrapperStyle = css`
   width: 300px;

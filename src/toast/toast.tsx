@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import { useCallbackRef } from '../hooks';
 import useHeight from './use-height';
-import Card from './card';
 import { animatedWrapperStyle } from './styles';
+import Card from './card';
+
+import { useCallbackRef } from '../hooks';
 
 type ToastProps = {
   /* The main content of the notification. */

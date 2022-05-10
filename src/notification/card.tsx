@@ -1,11 +1,6 @@
 import React, { useRef, cloneElement } from 'react';
 
-import { NotificationCard } from '../notification-card';
-import { Heading } from '../heading';
-import { Paragraph } from '../paragraph';
-import { ScreenReaderOnly } from '../screen-reader-only';
 import useInternalLayout from './use-internal-layout';
-import Notification from './notification';
 import {
   notificationStyle,
   contentStyle,
@@ -14,6 +9,12 @@ import {
   textContentStyle,
   actionStyle,
 } from './styles';
+import Notification from './notification';
+
+import { ScreenReaderOnly } from '../screen-reader-only';
+import { Paragraph } from '../paragraph';
+import { NotificationCard } from '../notification-card';
+import { Heading } from '../heading';
 
 type CardProps = {
   isVisible: boolean;

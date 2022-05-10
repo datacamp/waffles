@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { useAnimateTransition } from '../hooks';
-import { Portal } from '../portal';
-import Overlay from './overlay';
-import CloseButton from './close-button';
 import { animatedSidebarStyle } from './styles';
 import { useSidebar } from './sidebar-context';
+import Overlay from './overlay';
+import CloseButton from './close-button';
+
+import { Portal } from '../portal';
+import { useAnimateTransition } from '../hooks';
 
 type AnimatedSidebarProps = React.HTMLAttributes<HTMLDivElement>;
 

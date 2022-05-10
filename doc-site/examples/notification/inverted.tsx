@@ -1,5 +1,4 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { Notification } from '@datacamp/waffles/notification';
 import { ArrowRight } from '@datacamp/waffles/icon';

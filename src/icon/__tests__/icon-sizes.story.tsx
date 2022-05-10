@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
+import * as icons from '../index';
 import { tokens } from '../../tokens';
 import { Text } from '../../text';
-import * as icons from '../index';
 
 const wrapperStyle = css`
   width: 400px;

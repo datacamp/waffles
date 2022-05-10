@@ -1,6 +1,5 @@
 import React from 'react';
 import { css } from '@emotion/react';
-
 import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
 
 import markdownElements from '../components/markdown-elements';

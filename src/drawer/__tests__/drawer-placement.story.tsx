@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { css } from '@emotion/react';
 
-import { tokens } from '../../tokens';
-import { Button } from '../../button';
-import { Paragraph } from '../../paragraph';
 import { Drawer } from '../index';
+import { tokens } from '../../tokens';
+import { Paragraph } from '../../paragraph';
+import { Button } from '../../button';
 
 const mainContentStyle = css`
   padding: ${tokens.spacing.medium};

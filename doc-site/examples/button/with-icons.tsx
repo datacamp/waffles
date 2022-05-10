@@ -1,5 +1,4 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { AddCircle, Trash, ChevronRight } from '@datacamp/waffles/icon';
 import { Button } from '@datacamp/waffles/button';

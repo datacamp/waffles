@@ -1,8 +1,8 @@
 import React from 'react';
 
+import { panelWrapperStyle, panelStyle } from './styles';
 import Dialog from './dialog';
 import CloseButton from './close-button';
-import { panelWrapperStyle, panelStyle } from './styles';
 
 type PanelProps = {
   role: NonNullable<React.ComponentProps<typeof Dialog>['role']>;

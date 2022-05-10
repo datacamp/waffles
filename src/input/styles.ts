@@ -1,7 +1,8 @@
 import { css } from '@emotion/react';
 
-import { tokens } from '../tokens';
 import Input from './input';
+
+import { tokens } from '../tokens';
 
 type InputSize = NonNullable<React.ComponentProps<typeof Input>['size']>;
 

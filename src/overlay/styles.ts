@@ -1,8 +1,9 @@
 import { css } from '@emotion/react';
 
+import { overlayEnter, overlayExit } from './keyframes';
+
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
-import { overlayEnter, overlayExit } from './keyframes';
 
 type OverlayStyleOptions = {
   isVisible: boolean;

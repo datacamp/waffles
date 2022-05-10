@@ -1,10 +1,11 @@
-import React from 'react';
 import { FocusOn } from 'react-focus-on';
+import React from 'react';
 
-import { useAnimateTransition } from '../hooks';
+import Panel from './panel';
+
 import { Portal } from '../portal';
 import { Overlay } from '../overlay';
-import Panel from './panel';
+import { useAnimateTransition } from '../hooks';
 
 type DrawerProps = {
   /* Determines if the drawer is open. */

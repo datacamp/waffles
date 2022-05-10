@@ -1,5 +1,5 @@
-import { Link } from '@datacamp/waffles/link';
 import { Paragraph } from '@datacamp/waffles/paragraph';
+import { Link } from '@datacamp/waffles/link';
 import { DataCampBrand, ExternalLink } from '@datacamp/waffles/icon';
 
 function Example() {

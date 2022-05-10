@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Text } from '../text';
 import { errorStyle } from './styles';
+
+import { Text } from '../text';
 
 type ErrorProps = {
   id: string;

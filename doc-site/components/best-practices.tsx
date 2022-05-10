@@ -1,8 +1,8 @@
 import React, { Children } from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { mediaQuery } from '@datacamp/waffles/helpers';
+
 import BestPracticesCard from './best-practices-card';
 
 const wrapperStyle = css`

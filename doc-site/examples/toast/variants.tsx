@@ -1,5 +1,4 @@
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
 import { ToastProvider, useToast } from '@datacamp/waffles/toast';
 import { Button } from '@datacamp/waffles/button';

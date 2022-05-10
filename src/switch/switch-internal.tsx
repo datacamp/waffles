@@ -1,10 +1,11 @@
 import React from 'react';
-import { useFocusRing } from '@react-aria/focus';
 import { mergeProps } from '@react-aria/utils';
+import { useFocusRing } from '@react-aria/focus';
+
+import Toggle from './toggle';
+import { labelStyle, inputStyle, contentStyle } from './styles';
 
 import { Text } from '../text';
-import { labelStyle, inputStyle, contentStyle } from './styles';
-import Toggle from './toggle';
 
 type SwitchProps = {
   /* The description displayed next to the switch. */

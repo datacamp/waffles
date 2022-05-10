@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
-
-import { tokens } from '@datacamp/waffles/tokens';
 import { Tooltip } from '@datacamp/waffles/tooltip';
+import { tokens } from '@datacamp/waffles/tokens';
 import { Button } from '@datacamp/waffles/button';
 
 const higlightStyle = css`

@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
+import { SideNavigation as SideNav } from '@datacamp/waffles/side-navigation';
+import { Paragraph } from '@datacamp/waffles/paragraph';
 import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
-import { Paragraph } from '@datacamp/waffles/paragraph';
-import { SideNavigation as SideNav } from '@datacamp/waffles/side-navigation';
 
 const layoutStyle = css`
   display: block;

@@ -1,9 +1,10 @@
 import { css } from '@emotion/react';
 
-import { tokens } from '../tokens';
-import { hexToRgba } from '../helpers';
 import Notification from './notification';
 import { notificationExit } from './keyframes';
+
+import { tokens } from '../tokens';
+import { hexToRgba } from '../helpers';
 
 type LayoutType = 'horizontal' | 'vertical';
 

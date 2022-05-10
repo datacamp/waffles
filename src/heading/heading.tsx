@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Text } from '../text';
 import { headingStyle, sizeToElement } from './styles';
+
+import { Text } from '../text';
 
 type HeadingProps = {
   /* The content of the heading. */

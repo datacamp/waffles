@@ -1,11 +1,12 @@
 import React, { Children, cloneElement, isValidElement } from 'react';
 
-import { useId } from '../hooks';
-import Label from './label';
-import Description from './description';
-import RequiredIndicator from './required-indicator';
-import Error from './error';
 import { wrapperStyle } from './styles';
+import RequiredIndicator from './required-indicator';
+import Label from './label';
+import Error from './error';
+import Description from './description';
+
+import { useId } from '../hooks';
 
 type FormFieldProps = {
   /* The label displayed above the input. */

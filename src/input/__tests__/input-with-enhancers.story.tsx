@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
+import { Input } from '../index';
 import { tokens } from '../../tokens';
 import { CrossCircle, Branch, ChevronRight } from '../../icon';
-import { Input } from '../index';
 
 const wrapperStyle = css`
   display: flex;

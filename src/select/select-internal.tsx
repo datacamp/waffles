@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-import { ChevronDown } from '../icon';
 import { selectWrapperStyle, selectStyle, iconRightStyle } from './styles';
+
+import { ChevronDown } from '../icon';
 
 type SelectProps = {
   /* Options to be displayed in the dropdown. To show a placeholder provide an `option` with an empty value, and both `disabled` and `hidden` attributes set. */

@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
 
-import { tokens } from '../../tokens';
-import { AddCircle, ExternalLink } from '../../icon';
-import { Paragraph } from '../../paragraph';
 import { Link } from '../index';
+import { tokens } from '../../tokens';
+import { Paragraph } from '../../paragraph';
+import { AddCircle, ExternalLink } from '../../icon';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};

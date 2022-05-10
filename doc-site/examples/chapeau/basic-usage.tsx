@@ -1,5 +1,5 @@
-import { Chapeau } from '@datacamp/waffles/chapeau';
 import { Heading } from '@datacamp/waffles/heading';
+import { Chapeau } from '@datacamp/waffles/chapeau';
 
 function Example() {
   return (

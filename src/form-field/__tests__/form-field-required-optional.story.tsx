@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { css } from '@emotion/react';
 
+import { FormField } from '../index';
 import { tokens } from '../../tokens';
-import { Input } from '../../input';
 import { TextArea } from '../../text-area';
 import { Select } from '../../select';
-import { FormField } from '../index';
+import { Input } from '../../input';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};
