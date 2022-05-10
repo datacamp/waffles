@@ -8,6 +8,7 @@ type MenuContextValue = {
   setIsOpen: (isOpen: boolean) => void;
   getItemProps: (userProps?: React.HTMLProps<HTMLElement>) => unknown;
   triggerRef: React.MutableRefObject<ReferenceType | null>;
+  inverted: boolean;
 };
 
 const MenuContext = createContext<MenuContextValue>(undefined!);

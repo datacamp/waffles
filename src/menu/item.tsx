@@ -33,7 +33,7 @@ function Item<T extends React.ElementType = 'button'>({
   const Element = as || 'button';
 
   const { focusProps, isFocusVisible } = useFocusRing();
-  const { listRef, setIsOpen, getItemProps, triggerRef } = useMenu();
+  const { listRef, setIsOpen, getItemProps, triggerRef, inverted } = useMenu();
 
   function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
     onClick?.(event);
@@ -51,7 +51,7 @@ function Item<T extends React.ElementType = 'button'>({
       })}
       ref={(node) => (listRef.current[index] = node)}
       role="menuitem"
-      css={itemStyle({ isFocusVisible, isActive })}
+      css={itemStyle({ isFocusVisible, isActive, inverted })}
     >
       {showAlert && <AlertDot />}
       {iconLeft}

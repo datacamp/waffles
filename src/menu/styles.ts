@@ -13,7 +13,6 @@ const dropdownBaseStyle = css`
   padding-right: 0;
   outline: 0;
   list-style: none;
-  background-color: ${tokens.colors.white};
   border-radius: ${tokens.borderRadius.medium};
   box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.medium},
     ${tokens.boxShadow.xthick};
@@ -23,48 +22,68 @@ const dropdownBaseStyle = css`
 type DropdownStyleOptions = {
   x: number | null;
   y: number | null;
+  inverted: boolean;
 };
 
-export function dropdownStyle({ x, y }: DropdownStyleOptions) {
+export function dropdownStyle({ x, y, inverted }: DropdownStyleOptions) {
   return css`
     ${dropdownBaseStyle}
     top: ${y ? y : 0}px;
     left: ${x ? x : 0}px;
+    background-color: ${inverted
+      ? tokens.colors.navyLight
+      : tokens.colors.white};
   `;
 }
+
+const itemBaseStyle = css`
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 8px);
+  height: ${tokens.sizing.medium};
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-left: ${tokens.spacing.xsmall};
+  margin-right: ${tokens.spacing.xsmall};
+  text-decoration: none;
+  border: 0;
+  border-radius: ${tokens.borderRadius.medium};
+  outline: 0;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: ${tokens.opacity.high};
+    cursor: default;
+  }
+`;
 
 type ItemStyleOptions = {
   isFocusVisible: boolean;
   isActive: boolean;
+  inverted: boolean;
 };
 
-export function itemStyle({ isFocusVisible, isActive }: ItemStyleOptions) {
+export function itemStyle({
+  isFocusVisible,
+  isActive,
+  inverted,
+}: ItemStyleOptions) {
+  const invertedActiveColor = inverted
+    ? hexToRgba(tokens.colors.white, 0.05)
+    : tokens.colors.greySubtle;
+
   return css`
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: calc(100% - 8px);
-    height: ${tokens.sizing.medium};
-    padding-right: 12px;
-    padding-left: 12px;
-    margin-left: ${tokens.spacing.xsmall};
-    margin-right: ${tokens.spacing.xsmall};
-    color: ${tokens.colors.navy};
-    text-decoration: none;
-    background: ${isActive ? tokens.colors.greySubtle : 'transparent'};
-    border: 0;
-    border-radius: ${tokens.borderRadius.medium};
-    outline: 0;
-    transition: background-color 125ms ease-out;
-    cursor: pointer;
+    ${itemBaseStyle}
+    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+    background: ${isActive ? invertedActiveColor : 'transparent'};
 
     &:hover:not(:disabled) {
-      background-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.low)};
-    }
-
-    &:disabled {
-      opacity: ${tokens.opacity.high};
-      cursor: default;
+      background-color: ${hexToRgba(
+        inverted ? tokens.colors.white : tokens.colors.navy,
+        tokens.opacity.low,
+      )};
     }
 
     ${isFocusVisible &&
@@ -89,10 +108,18 @@ export function itemInnerContentStyle({
   `;
 }
 
-export function categoryDividerStyle() {
+type CategoryDividerStyleOptions = {
+  inverted: boolean;
+};
+
+export function categoryDividerStyle({
+  inverted,
+}: CategoryDividerStyleOptions) {
   return css`
     height: 1px;
-    background-color: ${hexToRgba(tokens.colors.navy, 0.2)};
+    background-color: ${inverted
+      ? hexToRgba(tokens.colors.white, 0.15)
+      : hexToRgba(tokens.colors.navy, 0.2)};
     margin-top: ${tokens.spacing.small};
     margin-bottom: ${tokens.spacing.small};
     margin-right: ${tokens.spacing.xsmall};
@@ -100,9 +127,17 @@ export function categoryDividerStyle() {
   `;
 }
 
-export function categoryLabelStyle() {
+type CategoryLabelStyleStyleOptions = {
+  inverted: boolean;
+};
+
+export function categoryLabelStyle({
+  inverted,
+}: CategoryLabelStyleStyleOptions) {
   return css`
-    color: ${tokens.colors.navySubtleTextOnLight};
+    color: ${inverted
+      ? tokens.colors.navySubtleTextOnDark
+      : tokens.colors.navySubtleTextOnLight};
     font-size: ${tokens.fontSizes.small};
     font-weight: ${tokens.fontWeights.bold};
     line-height: ${tokens.lineHeights.default};
