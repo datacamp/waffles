@@ -1,6 +1,3 @@
-import { iconWrapperStyle, iconStyle, iconBackgroundStyle } from './styles';
-import NotificationCard from './notification-card';
-
 import { tokens } from '../tokens';
 import {
   CheckmarkCircleInverted,
@@ -9,6 +6,9 @@ import {
   InfoCircleInverted,
   RocketInverted,
 } from '../icon';
+
+import { iconWrapperStyle, iconStyle, iconBackgroundStyle } from './styles';
+import NotificationCard from './notification-card';
 
 const regularVariantMap = {
   default: {

@@ -8,10 +8,10 @@ import { mediaQuery } from '@datacamp/waffles/helpers';
 import { ContentContainer } from '@datacamp/waffles/content-container';
 import { Button } from '@datacamp/waffles/button';
 
+import { TableOfContentsProvider } from '../context/table-of-contents-context';
+
 import TableOfContents from './table-of-contents';
 import { ARTICLE_CONTENT_WIDTH } from './constants';
-
-import { TableOfContentsProvider } from '../context/table-of-contents-context';
 
 const GITHUB_EDIT_URL =
   'https://github.com/datacamp/waffles/edit/master/doc-site/pages';

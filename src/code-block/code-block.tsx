@@ -2,9 +2,9 @@ import React from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
-import { codeBlockStyle } from './styles';
-
 import { Code } from '../code';
+
+import { codeBlockStyle } from './styles';
 
 type CodeBlockProps = {
   /* The content of the code block. */

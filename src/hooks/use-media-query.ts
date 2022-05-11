@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import useIsomorphicLayoutEffect from './use-isomorphic-layout-effect';
-
 import { tokens } from '../tokens';
+
+import useIsomorphicLayoutEffect from './use-isomorphic-layout-effect';
 
 type Breakpoints = typeof tokens.breakpoints;
 

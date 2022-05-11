@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { toastsListStyle } from './styles';
-
 import { Portal } from '../portal';
+
+import { toastsListStyle } from './styles';
 
 type ToastsListProps = {
   offset: string;

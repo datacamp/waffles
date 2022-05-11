@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
-import Badge from './badge';
-
 import { tokens } from '../tokens';
+
+import Badge from './badge';
 
 // Mappings between badge's sizes and variants, and design tokens
 

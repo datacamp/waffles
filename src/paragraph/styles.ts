@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
-import Paragraph from './paragraph';
-
 import { tokens } from '../tokens';
+
+import Paragraph from './paragraph';
 
 // Mappings between paragraph's sizes and variants, and design tokens
 

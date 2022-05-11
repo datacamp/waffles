@@ -2,11 +2,11 @@ import React, { Children, cloneElement, isValidElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
-import { itemStyle, itemInnerContentStyle, listStyle } from './styles';
-import { useSidebar } from './sidebar-context';
-
 import { Text } from '../text';
 import { useId } from '../hooks';
+
+import { itemStyle, itemInnerContentStyle, listStyle } from './styles';
+import { useSidebar } from './sidebar-context';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 

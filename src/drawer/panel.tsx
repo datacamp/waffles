@@ -1,9 +1,9 @@
 import React from 'react';
 
+import { Dialog } from '../dialog';
+
 import { panelStyle, panelContentStyle } from './styles';
 import Drawer from './drawer';
-
-import { Dialog } from '../dialog';
 
 type PanelProps = {
   isVisible: boolean;

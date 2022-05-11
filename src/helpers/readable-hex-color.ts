@@ -1,7 +1,7 @@
+import { tokens } from '../tokens';
+
 import isHexColor from './is-hex-color';
 import hexColorLuminance from './hex-color-luminance';
-
-import { tokens } from '../tokens';
 
 /**
  * For the best contrast depending whether provided HEX color is dark or light return white or navy color from design tokens.

@@ -1,6 +1,6 @@
-import { chapeauStyle } from './styles';
-
 import { Text } from '../text';
+
+import { chapeauStyle } from './styles';
 
 type ChapeauProps = {
   /* Text content of the chapeau. */

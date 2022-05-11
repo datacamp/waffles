@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
 
-import { toastEnter, toastExit } from './keyframes';
-
 import { tokens } from '../tokens';
 import { mediaQuery } from '../helpers';
+
+import { toastEnter, toastExit } from './keyframes';
 
 type ToastsListStyleOptions = {
   offset: string;

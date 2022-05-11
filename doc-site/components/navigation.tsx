@@ -5,9 +5,9 @@ import { SideNavigation as SideNav } from '@datacamp/waffles/side-navigation';
 import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { hexToRgba } from '@datacamp/waffles/helpers';
 
-import Item from './navigation-item';
-
 import metadata from '../../package.json';
+
+import Item from './navigation-item';
 
 const versionStyle = css`
   color: ${tokens.colors.white};

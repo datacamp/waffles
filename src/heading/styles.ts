@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
-import Heading from './heading';
-
 import { tokens } from '../tokens';
+
+import Heading from './heading';
 
 // Mapping between heading size, HTML elements, and actual font size
 

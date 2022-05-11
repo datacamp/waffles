@@ -1,6 +1,6 @@
-import { checkmarkStyle } from './styles';
-
 import { Checkmark as Icon } from '../icon';
+
+import { checkmarkStyle } from './styles';
 
 type CheckmarkProps = {
   inverted: boolean;

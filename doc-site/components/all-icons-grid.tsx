@@ -5,9 +5,9 @@ import { Text } from '@datacamp/waffles/text';
 import * as allIcons from '@datacamp/waffles/icon';
 import { Button } from '@datacamp/waffles/button';
 
-import PreviewControls from './preview-controls';
-
 import groupedIcons from '../helpers/grouped-icons';
+
+import PreviewControls from './preview-controls';
 
 const { Visible, Hidden } = allIcons;
 

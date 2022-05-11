@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
-import Select from './select';
-
 import { tokens } from '../tokens';
+
+import Select from './select';
 
 type SelectSize = NonNullable<React.ComponentProps<typeof Select>['size']>;
 

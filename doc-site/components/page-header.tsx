@@ -7,10 +7,10 @@ import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
 
+import metadata from '../../package.json';
+
 import Logo from './logo';
 import { HEADER_HEIGHT } from './constants';
-
-import metadata from '../../package.json';
 
 const headerStyle = css`
   display: flex;
