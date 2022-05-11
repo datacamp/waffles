@@ -82,6 +82,9 @@ export function itemStyle({
     ${itemBaseStyle}
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     background: ${isActive ? invertedActiveColor : 'transparent'};
+    font-weight: ${isActive
+      ? tokens.fontWeights.bold
+      : tokens.fontWeights.regular};
 
     &:hover:not(:disabled) {
       background-color: ${hexToRgba(
@@ -107,6 +110,7 @@ export function itemInnerContentStyle({
   return css`
     display: block;
     color: inherit;
+    font-weight: inherit;
     flex-grow: 1;
     line-height: ${tokens.lineHeights.default};
     padding-top: ${tokens.spacing.small};
