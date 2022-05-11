@@ -1,5 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn run eslint --fix $(git diff --name-only HEAD | grep -E '\.(ts|tsx)$' | xargs)
 yarn pretty-quick --staged
