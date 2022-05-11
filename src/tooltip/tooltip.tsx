@@ -1,4 +1,4 @@
-import React, { useState, useEffect, cloneElement } from 'react';
+import React, { useState, cloneElement } from 'react';
 import {
   offset as floatingOffset,
   flip,
@@ -63,11 +63,12 @@ function Tooltip({
   const [isOpen, setIsOpen] = useState(false);
   const id = useId('tooltip');
 
-  const { x, y, reference, floating, update, context, refs } = useFloating({
+  const { x, y, reference, floating, context } = useFloating({
     placement: placementMap[placement],
     middleware: [floatingOffset(parseInt(offset, 10)), flip()],
     open: isOpen,
     onOpenChange: setIsOpen,
+    whileElementsMounted: autoUpdate,
   });
 
   const { getReferenceProps, getFloatingProps } = useInteractions([
@@ -75,14 +76,6 @@ function Tooltip({
     useFocus(context),
     useDismiss(context),
   ]);
-
-  useEffect(() => {
-    if (refs.reference.current && refs.floating.current && isOpen) {
-      return autoUpdate(refs.reference.current, refs.floating.current, update);
-    }
-
-    return;
-  }, [refs.reference, refs.floating, update, isOpen]);
 
   // @ts-expect-error: children.ref not recognized
   const triggerRef = useMergeRefs(reference, children.ref);
