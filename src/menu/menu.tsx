@@ -27,9 +27,17 @@ import Button from './button';
 import Category from './category';
 import { dropdownStyle } from './styles';
 
+const placementMap = {
+  bottom: 'bottom-end',
+  top: 'top-end',
+  right: 'right-start',
+  left: 'left-start',
+} as const;
+
 type MenuProps = {
   trigger: JSX.Element;
   children: React.ReactNode;
+  placement?: 'bottom' | 'top' | 'right' | 'left';
   offset?: string;
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
@@ -37,6 +45,7 @@ type MenuProps = {
 function Menu({
   trigger,
   children,
+  placement = 'bottom',
   offset = tokens.spacing.small,
   inverted = false,
   ...restProps
@@ -50,7 +59,7 @@ function Menu({
     open: isOpen,
     onOpenChange: setIsOpen,
     middleware: [floatingOffset(parseInt(offset, 10)), flip()],
-    placement: 'bottom-end',
+    placement: placementMap[placement],
   });
 
   const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions(
