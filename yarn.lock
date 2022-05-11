@@ -758,33 +758,33 @@
   resolved "https://registry.yarnpkg.com/@fisker/parse-srcset/-/parse-srcset-1.0.2.tgz#6e051549fbf77ab5febda5176720e85aea70e80e"
   integrity sha512-DCLDSVB5PWC/KbT1ajPPwBGWwAb87/BxfwL8LVlbx3RPlOo5kWg/OMkNyrzwAk4KFMhdINLoBIhqz01f39Joug==
 
-"@floating-ui/core@^0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-0.6.2.tgz#f2813f0e5f3d5ed7af5029e1a082203dadf02b7d"
-  integrity sha512-jktYRmZwmau63adUG3GKOAVCofBXkk55S/zQ94XOorAHhwqFIOFAy1rSp2N0Wp6/tGbe9V3u/ExlGZypyY17rg==
+"@floating-ui/core@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-0.7.0.tgz#f2442168d65c22daeb48cfb730cbc3a29a846ac7"
+  integrity sha512-W7+i5Suhhvv97WDTW//KqUA43f/2a4abprM1rWqtLM9lIlJ29tbFI8h232SvqunXon0WmKNEKVjbOsgBhTnbLw==
 
-"@floating-ui/dom@^0.4.5":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-0.4.5.tgz#2e88d16646119cc67d44683f75ee99840475bbfa"
-  integrity sha512-b+prvQgJt8pieaKYMSJBXHxX/DYwdLsAWxKYqnO5dO2V4oo/TYBZJAUQCVNjTWWsrs6o4VDrNcP9+E70HAhJdw==
+"@floating-ui/dom@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-0.5.0.tgz#e4efd9e609ff3ee6778fbe4273930d6d1c220f2e"
+  integrity sha512-PS75dnMg4GdWjDFOiOs15cDzYJpukRNHqQn0ugrBlsrpk2n+y8bwZ24XrsdLSL7kxshmxxr2nTNycLnmRIvV7g==
   dependencies:
-    "@floating-ui/core" "^0.6.2"
+    "@floating-ui/core" "^0.7.0"
 
-"@floating-ui/react-dom-interactions@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@floating-ui/react-dom-interactions/-/react-dom-interactions-0.4.0.tgz#b4d951aaa3b0a66cd0b2787a7bf9d5d7b2f12021"
-  integrity sha512-pcXxg2QVrQmlo54v39fIfPNda3bkFibuQVji0b4I9PLXOTV+KI5phc8ANnKLdfttfsYap/0bAknS9dQW97KShw==
+"@floating-ui/react-dom-interactions@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@floating-ui/react-dom-interactions/-/react-dom-interactions-0.5.0.tgz#1e99915674605a3febba78644138aba9c9402702"
+  integrity sha512-rfON7mkHjCeogd0BSXPa8GBp1TMxEytJQqGVlCouSUonJ4POqdHsqcxRnCh0yAaGVaL/nB/J1vq28V4RdoLszg==
   dependencies:
-    "@floating-ui/react-dom" "^0.6.3"
+    "@floating-ui/react-dom" "^0.7.0"
     aria-hidden "^1.1.3"
     use-isomorphic-layout-effect "^1.1.1"
 
-"@floating-ui/react-dom@^0.6.3":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@floating-ui/react-dom/-/react-dom-0.6.3.tgz#7b64cfd4fd12e4a0515dbf1b2be16e48c9a06c5a"
-  integrity sha512-hC+pS5D6AgS2wWjbmSQ6UR6Kpy+drvWGJIri6e1EDGADTPsCaa4KzCgmCczHrQeInx9tqs81EyDmbKJYY2swKg==
+"@floating-ui/react-dom@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@floating-ui/react-dom/-/react-dom-0.7.0.tgz#8f867b6fbf87dbfde6f55fd5f5c2c53cfdd1c873"
+  integrity sha512-mpYGykTqwtBYT+ZTQQ2OfZ6wXJNuUgmqqD9ooCgbMRgvul6InFOTtWYvtujps439hmOFiVPm4PoBkEEn5imidg==
   dependencies:
-    "@floating-ui/dom" "^0.4.5"
+    "@floating-ui/dom" "^0.5.0"
     use-isomorphic-layout-effect "^1.1.1"
 
 "@hapi/hoek@^9.0.0":
@@ -1329,7 +1329,7 @@
   dependencies:
     "@octokit/openapi-types" "^11.2.0"
 
-"@react-aria/focus@^3.5.4":
+"@react-aria/focus@^3.5.5":
   version "3.5.5"
   resolved "https://registry.yarnpkg.com/@react-aria/focus/-/focus-3.5.5.tgz#d5e3eb7af8612e8dafda214746084766e55c4b01"
   integrity sha512-scv+jhbQ25JCh36gu8a++edvdEFdlRScdQdnkJOB4NbHbYYfY36APtI70hgQHdfq9dDl5fJ9LMsH9hoF7X3gLw==
@@ -1356,7 +1356,7 @@
   dependencies:
     "@babel/runtime" "^7.6.2"
 
-"@react-aria/utils@^3.11.3", "@react-aria/utils@^3.12.0":
+"@react-aria/utils@^3.12.0":
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/@react-aria/utils/-/utils-3.12.0.tgz#39d0f37525e050356c4de725c85d9b10e7a5c0d9"
   integrity sha512-1TMrE7UpgTgQHgW3z0r6Zo4CTUDwNsZEwzg+mQVub8ZalonhuNs5OrulUn+lRIsGELNktGNkeh/29WsS1Od8eg==
@@ -7985,7 +7985,7 @@ react-focus-lock@^2.9.0:
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
 
-react-focus-on@^3.5.4:
+react-focus-on@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/react-focus-on/-/react-focus-on-3.6.0.tgz#159e13082dad4ea1f07abe11254f0e981d5a7b79"
   integrity sha512-onIRjpd9trAUenXNdDcvjc8KJUSklty4X/Gr7hAm/MzM7ekSF2pg9D8KBKL7ipige22IAPxLRRf/EmJji9KD6Q==
