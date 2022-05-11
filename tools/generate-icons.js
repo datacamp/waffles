@@ -8,6 +8,7 @@ const { optimize } = require('svgo');
 
 const prettierConfig = prettier.resolveConfig.sync(__dirname);
 const iconsDirPath = path.resolve(__dirname, '../src/icon');
+const iconsExportDirPath = path.resolve(iconsDirPath, 'output');
 const iconsExportPath = path.join(iconsDirPath, 'index.ts');
 
 // Generate pascal case component name based on SVG icon file name
@@ -70,7 +71,7 @@ function componentInnerContent(svgIcon) {
 
 // Generate React component based on provided SVG content
 function componentFromSvg(componentName, svgIcon) {
-  return `import Icon from './icon-internal';
+  return `import Icon from '../icon-internal';
 
   type ${componentName}Props = Omit<React.ComponentProps<typeof Icon>, 'children'>;
 
@@ -99,7 +100,7 @@ function generateIcons() {
     const componentName = formattedComponentName(filename);
 
     iconsExports.push(
-      `export { default as ${componentName} } from './${filename}';`,
+      `export { default as ${componentName} } from './output/${filename}';`,
     );
 
     // Grab the whole content of SVG file
@@ -121,7 +122,7 @@ function generateIcons() {
     );
 
     fs.writeFileSync(
-      path.join(iconsDirPath, `${filename}.tsx`),
+      path.join(iconsExportDirPath, `${filename}.tsx`),
       formattedContent,
     );
   });
