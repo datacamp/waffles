@@ -12,6 +12,7 @@ Please delete options that are not relevant.
 - `ci`: Changes to the CI configuration / scripts
 - `build`: Changes to build configuration, irrelevant to the user
 - `refactor`: Changes to the output that neither fix an issue nor add a feature
+- `style`: Changes that only affect the order/layout of code, but do not change the functionality
 - `chore`: Changes that do not affect production code output
 - `BREAKING-CHANGE`: Breaking change (fix or feature that would cause existing functionality to no longer work as expected)
 
