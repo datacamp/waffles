@@ -1,11 +1,11 @@
 import React, { useState, Children, cloneElement, isValidElement } from 'react';
 
+import { Search, Visible, Hidden } from '../icon';
+
 import { inputWrapperStyle, inputStyle } from './styles';
 import IconLeft from './icon-left';
 import EnhancerRight from './enhancer-right';
 import Enhancer from './enhancer';
-
-import { Search, Visible, Hidden } from '../icon';
 
 type InputProps = {
   /* Defines the size of the input. In most cases default `medium` size should be used. */

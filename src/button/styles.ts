@@ -1,10 +1,10 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-import Button from './button';
-
 import { tokens } from '../tokens';
 import { hexToRgba, hexColorShade } from '../helpers';
+
+import Button from './button';
 
 // Mappings between button's sizes and variants, and design tokens
 

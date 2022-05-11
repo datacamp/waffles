@@ -1,5 +1,8 @@
 import { css } from '@emotion/react';
 
+import { tokens } from '../tokens';
+import { hexToRgba, mediaQuery } from '../helpers';
+
 import {
   sidebarEnter,
   sidebarExit,
@@ -7,9 +10,6 @@ import {
   closeButtonExit,
 } from './keyframes';
 import Item from './item';
-
-import { tokens } from '../tokens';
-import { hexToRgba, mediaQuery } from '../helpers';
 
 // Various side nav Item properties based on viewport size
 const sizeMap = {

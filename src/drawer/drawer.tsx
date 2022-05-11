@@ -1,6 +1,6 @@
-import DrawerInternal from './drawer-internal';
-
 import { Dialog } from '../dialog';
+
+import DrawerInternal from './drawer-internal';
 
 const DrawerNamespace = Object.assign(DrawerInternal, {
   Header: Dialog.Header,

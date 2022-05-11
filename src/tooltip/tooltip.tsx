@@ -10,12 +10,12 @@ import {
   useDismiss,
 } from '@floating-ui/react-dom-interactions';
 
-import { tooltipStyle } from './styles';
-
 import { tokens } from '../tokens';
 import { Text } from '../text';
 import { Portal } from '../portal';
 import { useId, useMergeRefs } from '../hooks';
+
+import { tooltipStyle } from './styles';
 
 const REST_TIMER = 125;
 

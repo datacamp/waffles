@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
 
-import Code from './code';
-
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
+
+import Code from './code';
 
 const sizeMap = {
   medium: {

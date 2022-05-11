@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
-import NotificationCard from './notification-card';
-
 import { tokens } from '../tokens';
+
+import NotificationCard from './notification-card';
 
 type NotificationStyleStyleOptions = {
   inverted: boolean;

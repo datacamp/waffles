@@ -42,8 +42,8 @@ module.exports = {
         groups: [
           'external',
           'index',
-          'sibling',
           'parent',
+          'sibling',
           'internal',
           'builtin',
           'object',

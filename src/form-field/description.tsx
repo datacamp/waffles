@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { descriptionStyle } from './styles';
-
 import { Paragraph } from '../paragraph';
+
+import { descriptionStyle } from './styles';
 
 type DescriptionProps = {
   inverted: boolean;

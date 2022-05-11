@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { categoryDividerStyle, categoryLabelStyle, listStyle } from './styles';
-
 import { useId } from '../hooks';
+
+import { categoryDividerStyle, categoryLabelStyle, listStyle } from './styles';
 
 type CategoryProps = {
   /* Category section caption. */

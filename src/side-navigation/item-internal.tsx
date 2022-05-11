@@ -2,11 +2,11 @@ import React from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
-import { itemStyle, itemInnerContentStyle, badgeStyle } from './styles';
-import { useSidebar } from './sidebar-context';
-
 import { Text } from '../text';
 import { Badge } from '../badge';
+
+import { itemStyle, itemInnerContentStyle, badgeStyle } from './styles';
+import { useSidebar } from './sidebar-context';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 

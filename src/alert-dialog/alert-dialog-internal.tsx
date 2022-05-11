@@ -1,6 +1,6 @@
-import { dialogStyle } from './styles';
-
 import { Dialog } from '../dialog';
+
+import { dialogStyle } from './styles';
 
 type AlertDialogProps = {
   /* Determines if the alert dialog is open. */

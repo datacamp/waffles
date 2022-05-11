@@ -1,10 +1,10 @@
-import Toast from './toast';
-import { toastStyle, titleStyle, descriptionStyle } from './styles';
-
 import { ScreenReaderOnly } from '../screen-reader-only';
 import { Paragraph } from '../paragraph';
 import { NotificationCard } from '../notification-card';
 import { Heading } from '../heading';
+
+import Toast from './toast';
+import { toastStyle, titleStyle, descriptionStyle } from './styles';
 
 type CardProps = Omit<
   React.ComponentProps<typeof Toast>,

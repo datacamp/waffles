@@ -1,11 +1,11 @@
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 
+import formattedModuleExports from '../helpers/formatted-module-exports';
+
 import basicTheme from './editor-theme';
 import Highlight from './editor-highlight';
 import CodePreview from './code-preview';
-
-import formattedModuleExports from '../helpers/formatted-module-exports';
 
 const previewStyle = css`
   border-radius: ${tokens.borderRadius.medium};
