@@ -16,22 +16,22 @@ Please delete options that are not relevant.
 - `chore`: Changes that do not affect production code output
 - `BREAKING-CHANGE`: Breaking change (fix or feature that would cause existing functionality to no longer work as expected)
 
-# Changes
+## Changes
 
-## 🚨 Breaking Changes
-
--
-
-## 🚀 Major Changes
+### 🚨 Breaking Changes
 
 -
 
-## 🔧 Minor Changes
+### 🚀 Major Changes
 
 -
 
-## ❓ Misc Changes
+### 🔧 Minor Changes
 
 -
 
-# Screenshot(s):
+### ❓ Misc Changes
+
+-
+
+## Screenshot(s):
