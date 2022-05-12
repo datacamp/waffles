@@ -97,17 +97,19 @@ It is also possible to test for various **accessibility (a11y) violations** agai
 
 Under the hood **Workbench** runs these stories.
 
-## 🖼️ Design Tokens and Icons
+## 🖼️ Design Tokens, Assets and Icons
 
-Both design tokens and icons are generated from source files using matching `generate` scripts:
+Design tokens, assets and icons are generated from source files using the matching `generate` scripts:
 
 - **design tokens** are generated based on `src/tokens/tokens.json` file, which contains definitions compatible with [Figma Tokens](https://www.figma.com/community/plugin/843461159747178978/Figma-Tokens) plugin, by running `generate:design-tokens` command
-- **icons** are generated based on SVG files from `src/icon/raw` directory via `generate:icons` command
+- **assets** are generated based on SVG files from the `src/asset/raw` directory via the `generate:assets` command
+- **icons** are generated based on SVG files from the `src/icon/raw` directory via the `generate:icons` command
 
 The output is:
 
 - **design tokens**: a `src/tokens/tokens.ts` file
-- **icons**: new React components in the `src/icon` folder and an updated `src/icon/index.ts` file
+- **assets**: new React components in the `src/asset/output` folder and an updated `src/asset/index.ts` file
+- **icons**: new React components in the `src/icon/output` folder and an updated `src/icon/index.ts` file
 
 ℹ️ After adding new design tokens or icons, please run the appropriate `generate` script(s). After this **commit** the resulting files. That way they can be easily consumed internally.
 
