@@ -18,7 +18,6 @@ const assetsExportDirPath = path.resolve(assetsDirPath, 'output');
 const assetsExportPath = path.join(assetsDirPath, 'index.ts');
 
 // TODO: Get width/height from asset
-// TODO: Use folder structure to apply prefix (misc folder = no prefix);
 // TODO: Should 'misc' be it's own folder or just have them non-nested under 'raw'
 
 // Generate a React component based on the provided SVG content
@@ -48,8 +47,6 @@ function generateAssets() {
 
   // Iterate each asset input directory to handle the different type prefixes
   assetDirs.forEach((directory) => {
-    console.log(directory);
-
     // Array of SVG asset filenames
     const svgAssets = glob.sync('*.svg', { cwd: `src/asset/raw/${directory}` });
     svgAssets.forEach((svgFilename) => {
@@ -79,8 +76,8 @@ function generateAssets() {
     });
   });
 
-  // // Write export statements for all asset components to index.ts file
-  // fs.writeFileSync(assetsExportPath, `${assetsExports.join('\n')}\n`);
+  // Write export statements for all asset components to index.ts file
+  fs.writeFileSync(assetsExportPath, `${assetsExports.join('\n')}\n`);
 }
 
 generateAssets();
