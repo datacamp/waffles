@@ -3,9 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-const prettier = require('prettier');
-
-const prettierConfig = prettier.resolveConfig.sync(__dirname);
+const { formatContentWithPrettier } = require('./helpers/formatting');
 
 // Return full path to main component e.g. src/button, based on provided path to story
 function componentDirectoryName(storyPath) {
@@ -47,14 +45,10 @@ function prepareWorkbenchStories() {
       storyContent,
       componentDir,
     );
-    const formattedContent = prettier.format(updatedImports, {
-      parser: 'typescript',
-      ...prettierConfig,
-    });
 
     fs.writeFileSync(
       path.join(workbenchStoriesPath, fileName),
-      formattedContent,
+      formatContentWithPrettier(updatedImports),
     );
   });
 }

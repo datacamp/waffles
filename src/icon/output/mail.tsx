@@ -1,3 +1,5 @@
+// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:icons' to update
+
 import Icon from '../icon-internal';
 
 type MailProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
