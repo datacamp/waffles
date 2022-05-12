@@ -3,85 +3,35 @@
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-const prettier = require('prettier');
-const { optimize } = require('svgo');
+const {
+  getPascalFormattedName,
+  formatContentWithPrettier,
+} = require('./helpers/formatting');
+const {
+  getOptimizedSVG,
+  getSVGInnerContent,
+  getSVGViewBox,
+} = require('./helpers/svg');
 
-const prettierConfig = prettier.resolveConfig.sync(__dirname);
 const iconsDirPath = path.resolve(__dirname, '../src/icon');
 const iconsExportDirPath = path.resolve(iconsDirPath, 'output');
 const iconsExportPath = path.join(iconsDirPath, 'index.ts');
 
-// Generate pascal case component name based on SVG icon file name
-function formattedComponentName(filename) {
-  return filename
-    .split('-')
-    .map((part) => {
-      return `${part.charAt(0).toUpperCase()}${part.slice(1)}`;
-    })
-    .join('');
-}
+// Generate a React component based on the provided SVG content
+function componentFromSVG(componentName, svgContent) {
+  return `// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:icons' to update
 
-// If the SVG is not marked as colored version (filename doesn't contain 'colored')
-// Replace any fill color with 'currentColor'
-function svgWithCurrentColorFill(filename, svgIcon) {
-  if (!filename.includes('colored')) {
-    return svgIcon.replace(/fill="#[^"]+"/g, 'fill="currentColor"');
-  }
-
-  return svgIcon;
-}
-
-// Optimize SVG icon with svgo
-function optimizedSvgIcon(svgIcon) {
-  return optimize(svgIcon, {
-    multipass: true,
-    floatPrecision: 3,
-    plugins: [
-      {
-        name: 'preset-default',
-        params: {
-          overrides: {
-            removeViewBox: false,
-          },
-        },
-      },
-    ],
-  }).data;
-}
-
-// Extracts viewBox from SVG icon
-function iconViewBox(svgIcon) {
-  return svgIcon.match(/viewBox="([^"]+)"/)[1];
-}
-
-// Grab pretty much everything between SVG tags
-// Transofrm some attributes to ones compatible with React
-function componentInnerContent(svgIcon) {
-  return svgIcon
-    .replace(/<!--.*-->\n/gm, '')
-    .replace(/<\/?svg[^>]*>/gm, '')
-    .replace(/^\s*\n/gm, '')
-    .replace(/\n$/, '')
-    .replace(/\t/g, '  ')
-    .replace(/fill-rule/g, 'fillRule')
-    .replace(/clip-rule/g, 'clipRule')
-    .replace(/fill-opacity/g, 'fillOpacity')
-    .trim();
-}
-
-// Generate React component based on provided SVG content
-function componentFromSvg(componentName, svgIcon) {
-  return `import Icon from '../icon-internal';
+  import Icon from '../icon-internal';
 
   type ${componentName}Props = Omit<React.ComponentProps<typeof Icon>, 'children'>;
 
   function ${componentName}({ size, ...restProps }: ${componentName}Props) {
     return <Icon
-        viewBox="${iconViewBox(svgIcon)}"
+        viewBox="${getSVGViewBox(svgContent)}"
         size={size}
         {...restProps}
       >
-        ${componentInnerContent(svgIcon)}
+        ${getSVGInnerContent(svgContent)}
       </Icon>;
   }
 
@@ -89,15 +39,14 @@ function componentFromSvg(componentName, svgIcon) {
 }
 
 function generateIcons() {
-  // Array of SVG icons file names
+  // Array of SVG icons filenames
   const svgIcons = glob.sync('*.svg', { cwd: 'src/icon/raw/' });
-
   // Array of export statements
   const iconsExports = [];
 
   svgIcons.forEach((svgFilename) => {
     const filename = svgFilename.split('.')[0];
-    const componentName = formattedComponentName(filename);
+    const componentName = getPascalFormattedName(filename);
 
     iconsExports.push(
       `export { default as ${componentName} } from './output/${filename}';`,
@@ -109,21 +58,12 @@ function generateIcons() {
       { encoding: 'utf-8' },
     );
 
-    const svgWithUpdatedFillColor = svgWithCurrentColorFill(filename, svgIcon);
-    const optimizedSvg = optimizedSvgIcon(svgWithUpdatedFillColor);
-
-    // Generate and format new React component content
-    const formattedContent = prettier.format(
-      componentFromSvg(componentName, optimizedSvg),
-      {
-        parser: 'typescript',
-        ...prettierConfig,
-      },
-    );
-
+    // Generate, format and write to file new icon React components
     fs.writeFileSync(
       path.join(iconsExportDirPath, `${filename}.tsx`),
-      formattedContent,
+      formatContentWithPrettier(
+        componentFromSVG(componentName, getOptimizedSVG(filename, svgIcon)),
+      ),
     );
   });
 

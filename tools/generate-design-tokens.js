@@ -7,9 +7,8 @@
 const fs = require('fs');
 const util = require('util');
 const path = require('path');
-const prettier = require('prettier');
+const { formatContentWithPrettier } = require('./helpers/formatting');
 
-const prettierConfig = prettier.resolveConfig.sync(__dirname);
 const tokensDirPath = path.resolve(__dirname, '../src/tokens');
 const baseTokensPath = path.join(tokensDirPath, 'tokens.json');
 const transformedTokensPath = path.join(tokensDirPath, 'tokens.ts');
@@ -117,12 +116,8 @@ async function generateDesignTokens() {
     depth: null,
   });
   const content = `const tokens = ${transformedTokens} as const\n\nexport default tokens`;
-  const formattedContent = prettier.format(content, {
-    parser: 'typescript',
-    ...prettierConfig,
-  });
 
-  fs.writeFileSync(transformedTokensPath, formattedContent);
+  fs.writeFileSync(transformedTokensPath, formatContentWithPrettier(content));
 }
 
 generateDesignTokens();
