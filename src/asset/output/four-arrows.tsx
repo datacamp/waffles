@@ -2,13 +2,13 @@
 
 import Asset from '../asset-internal';
 
-type FourArrows3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type FourArrows3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function FourArrows3D({
+function FourArrows3d({
   width = 240,
   height = 240,
   ...restProps
-}: FourArrows3DProps) {
+}: FourArrows3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function FourArrows3D({
   );
 }
 
-export default FourArrows3D;
+export default FourArrows3d;

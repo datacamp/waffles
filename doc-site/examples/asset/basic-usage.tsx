@@ -1,7 +1,7 @@
-import { Love3D } from '@datacamp/waffles/asset';
+import { Love3d } from '@datacamp/waffles/asset';
 
 function Example() {
-  return <Love3D />;
+  return <Love3d />;
 }
 
 export default Example;

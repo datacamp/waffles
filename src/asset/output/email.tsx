@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Email3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Email3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Email3D({ width = 240, height = 240, ...restProps }: Email3DProps) {
+function Email3d({ width = 240, height = 240, ...restProps }: Email3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Email3D({ width = 240, height = 240, ...restProps }: Email3DProps) {
   );
 }
 
-export default Email3D;
+export default Email3d;

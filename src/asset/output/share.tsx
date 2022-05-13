@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Share3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Share3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Share3D({ width = 240, height = 240, ...restProps }: Share3DProps) {
+function Share3d({ width = 240, height = 240, ...restProps }: Share3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Share3D({ width = 240, height = 240, ...restProps }: Share3DProps) {
   );
 }
 
-export default Share3D;
+export default Share3d;

@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Track3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Track3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Track3D({ width = 240, height = 240, ...restProps }: Track3DProps) {
+function Track3d({ width = 240, height = 240, ...restProps }: Track3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Track3D({ width = 240, height = 240, ...restProps }: Track3DProps) {
   );
 }
 
-export default Track3D;
+export default Track3d;

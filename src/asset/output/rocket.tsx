@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Rocket3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Rocket3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Rocket3D({ width = 240, height = 240, ...restProps }: Rocket3DProps) {
+function Rocket3d({ width = 240, height = 240, ...restProps }: Rocket3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -17,4 +17,4 @@ function Rocket3D({ width = 240, height = 240, ...restProps }: Rocket3DProps) {
   );
 }
 
-export default Rocket3D;
+export default Rocket3d;

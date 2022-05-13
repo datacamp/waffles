@@ -2,13 +2,13 @@
 
 import Asset from '../asset-internal';
 
-type Calendar3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Calendar3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Calendar3D({
+function Calendar3d({
   width = 240,
   height = 240,
   ...restProps
-}: Calendar3DProps) {
+}: Calendar3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -25,4 +25,4 @@ function Calendar3D({
   );
 }
 
-export default Calendar3D;
+export default Calendar3d;

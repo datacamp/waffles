@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Code3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Code3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Code3D({ width = 240, height = 240, ...restProps }: Code3DProps) {
+function Code3d({ width = 240, height = 240, ...restProps }: Code3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Code3D({ width = 240, height = 240, ...restProps }: Code3DProps) {
   );
 }
 
-export default Code3D;
+export default Code3d;

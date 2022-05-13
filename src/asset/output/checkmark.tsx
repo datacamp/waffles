@@ -2,13 +2,13 @@
 
 import Asset from '../asset-internal';
 
-type Checkmark3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Checkmark3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Checkmark3D({
+function Checkmark3d({
   width = 240,
   height = 240,
   ...restProps
-}: Checkmark3DProps) {
+}: Checkmark3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -25,4 +25,4 @@ function Checkmark3D({
   );
 }
 
-export default Checkmark3D;
+export default Checkmark3d;

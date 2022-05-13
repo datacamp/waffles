@@ -11,7 +11,7 @@ type GroupedAssets = {
 function groupAssets(assets: AssetModule): GroupedAssets {
   return Object.entries(assets).reduce((groupedAssets, entry) => {
     const [name, Asset] = entry;
-    const group = name.endsWith('3D') ? '3D' : 'Other';
+    const group = name.endsWith('3d') ? '3D' : 'Other';
     return {
       ...groupedAssets,
       [group]: {

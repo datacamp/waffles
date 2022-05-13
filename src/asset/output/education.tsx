@@ -2,13 +2,13 @@
 
 import Asset from '../asset-internal';
 
-type Education3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Education3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Education3D({
+function Education3d({
   width = 240,
   height = 240,
   ...restProps
-}: Education3DProps) {
+}: Education3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Education3D({
   );
 }
 
-export default Education3D;
+export default Education3d;

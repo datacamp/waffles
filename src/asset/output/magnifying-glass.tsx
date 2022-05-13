@@ -2,16 +2,16 @@
 
 import Asset from '../asset-internal';
 
-type MagnifyingGlass3DProps = Omit<
+type MagnifyingGlass3dProps = Omit<
   React.ComponentProps<typeof Asset>,
   'children'
 >;
 
-function MagnifyingGlass3D({
+function MagnifyingGlass3d({
   width = 240,
   height = 240,
   ...restProps
-}: MagnifyingGlass3DProps) {
+}: MagnifyingGlass3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -28,4 +28,4 @@ function MagnifyingGlass3D({
   );
 }
 
-export default MagnifyingGlass3D;
+export default MagnifyingGlass3d;

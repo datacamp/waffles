@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Branch3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Branch3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Branch3D({ width = 240, height = 240, ...restProps }: Branch3DProps) {
+function Branch3d({ width = 240, height = 240, ...restProps }: Branch3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Branch3D({ width = 240, height = 240, ...restProps }: Branch3DProps) {
   );
 }
 
-export default Branch3D;
+export default Branch3d;
