@@ -8,12 +8,12 @@ type AvatarPlaceholderProps = Omit<
 >;
 
 function AvatarPlaceholder({
-  width,
-  height,
+  width = 256,
+  height = 256,
   ...restProps
 }: AvatarPlaceholderProps) {
   return (
-    <Asset viewBox="0 0 256 256" {...restProps}>
+    <Asset viewBox="0 0 256 256" width={width} height={height} {...restProps}>
       <path fill="currentColor" d="M0 0h256v256H0z" />
       <path
         fill="currentColor"

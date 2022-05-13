@@ -11,26 +11,29 @@ const {
   getOptimizedSVG,
   getSVGInnerContent,
   getSVGViewBox,
+  getViewBoxDimensions,
 } = require('./helpers/svg');
 
 const assetsDirPath = path.resolve(__dirname, '../src/asset');
 const assetsExportDirPath = path.resolve(assetsDirPath, 'output');
 const assetsExportPath = path.join(assetsDirPath, 'index.ts');
 
-// TODO: Get width/height from asset
-// TODO: Should 'misc' be it's own folder or just have them non-nested under 'raw'
-
 // Generate a React component based on the provided SVG content
 function componentFromSVG(componentName, svgContent) {
+  const viewBox = getSVGViewBox(svgContent);
+  const { width, height } = getViewBoxDimensions(viewBox);
+
   return `// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:assets' to update
 
   import Asset from '../asset-internal';
 
   type ${componentName}Props = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-  function ${componentName}({ width, height, ...restProps }: ${componentName}Props) {
+  function ${componentName}({ width = ${width}, height = ${height}, ...restProps }: ${componentName}Props) {
     return <Asset
-        viewBox="${getSVGViewBox(svgContent)}"
+        viewBox="${viewBox}"
+        width={width}
+        height={height}
         {...restProps}
       >
         ${getSVGInnerContent(svgContent)}
