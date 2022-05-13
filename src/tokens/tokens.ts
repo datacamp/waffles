@@ -54,7 +54,7 @@ const tokens = {
     brandFacebook: '#1778F2',
     brandTwitter: '#00ACEE',
     brandGoogle: '#DB4437',
-    brandLinkedIn: '#0E76A8',
+    brandLinkedIn: '#0A66C2',
   },
   borderRadius: { medium: '4px', circle: '50%' },
   borderWidth: { thin: '1px', medium: '2px', thick: '3px', xthick: '4px' },
