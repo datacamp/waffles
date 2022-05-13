@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Paper3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Paper3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Paper3D({ width = 240, height = 240, ...restProps }: Paper3DProps) {
+function Paper3d({ width = 240, height = 240, ...restProps }: Paper3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Paper3D({ width = 240, height = 240, ...restProps }: Paper3DProps) {
   );
 }
 
-export default Paper3D;
+export default Paper3d;

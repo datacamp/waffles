@@ -2,13 +2,13 @@
 
 import Asset from '../asset-internal';
 
-type BarChart3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type BarChart3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function BarChart3D({
+function BarChart3d({
   width = 240,
   height = 240,
   ...restProps
-}: BarChart3DProps) {
+}: BarChart3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -25,4 +25,4 @@ function BarChart3D({
   );
 }
 
-export default BarChart3D;
+export default BarChart3d;

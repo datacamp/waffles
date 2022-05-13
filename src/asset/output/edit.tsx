@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Edit3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Edit3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Edit3D({ width = 240, height = 240, ...restProps }: Edit3DProps) {
+function Edit3d({ width = 240, height = 240, ...restProps }: Edit3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Edit3D({ width = 240, height = 240, ...restProps }: Edit3DProps) {
   );
 }
 
-export default Edit3D;
+export default Edit3d;

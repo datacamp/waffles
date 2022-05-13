@@ -2,13 +2,13 @@
 
 import Asset from '../asset-internal';
 
-type DoubleArrow3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type DoubleArrow3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function DoubleArrow3D({
+function DoubleArrow3d({
   width = 240,
   height = 240,
   ...restProps
-}: DoubleArrow3DProps) {
+}: DoubleArrow3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -25,4 +25,4 @@ function DoubleArrow3D({
   );
 }
 
-export default DoubleArrow3D;
+export default DoubleArrow3d;

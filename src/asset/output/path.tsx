@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Path3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Path3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Path3D({ width = 240, height = 240, ...restProps }: Path3DProps) {
+function Path3d({ width = 240, height = 240, ...restProps }: Path3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Path3D({ width = 240, height = 240, ...restProps }: Path3DProps) {
   );
 }
 
-export default Path3D;
+export default Path3d;

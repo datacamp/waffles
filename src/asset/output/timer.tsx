@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Timer3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Timer3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Timer3D({ width = 240, height = 240, ...restProps }: Timer3DProps) {
+function Timer3d({ width = 240, height = 240, ...restProps }: Timer3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Timer3D({ width = 240, height = 240, ...restProps }: Timer3DProps) {
   );
 }
 
-export default Timer3D;
+export default Timer3d;

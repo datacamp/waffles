@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Love3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Love3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Love3D({ width = 240, height = 240, ...restProps }: Love3DProps) {
+function Love3d({ width = 240, height = 240, ...restProps }: Love3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Love3D({ width = 240, height = 240, ...restProps }: Love3DProps) {
   );
 }
 
-export default Love3D;
+export default Love3d;

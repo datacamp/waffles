@@ -2,13 +2,13 @@
 
 import Asset from '../asset-internal';
 
-type Bookmark3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Bookmark3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Bookmark3D({
+function Bookmark3d({
   width = 240,
   height = 240,
   ...restProps
-}: Bookmark3DProps) {
+}: Bookmark3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Bookmark3D({
   );
 }
 
-export default Bookmark3D;
+export default Bookmark3d;

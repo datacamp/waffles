@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Team3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Team3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Team3D({ width = 240, height = 240, ...restProps }: Team3DProps) {
+function Team3d({ width = 240, height = 240, ...restProps }: Team3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Team3D({ width = 240, height = 240, ...restProps }: Team3DProps) {
   );
 }
 
-export default Team3D;
+export default Team3d;

@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Trophy3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Trophy3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Trophy3D({ width = 240, height = 240, ...restProps }: Trophy3DProps) {
+function Trophy3d({ width = 240, height = 240, ...restProps }: Trophy3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Trophy3D({ width = 240, height = 240, ...restProps }: Trophy3DProps) {
   );
 }
 
-export default Trophy3D;
+export default Trophy3d;

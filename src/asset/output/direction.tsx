@@ -2,13 +2,13 @@
 
 import Asset from '../asset-internal';
 
-type Direction3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Direction3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Direction3D({
+function Direction3d({
   width = 240,
   height = 240,
   ...restProps
-}: Direction3DProps) {
+}: Direction3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -25,4 +25,4 @@ function Direction3D({
   );
 }
 
-export default Direction3D;
+export default Direction3d;

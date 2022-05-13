@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Globe3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Globe3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Globe3D({ width = 240, height = 240, ...restProps }: Globe3DProps) {
+function Globe3d({ width = 240, height = 240, ...restProps }: Globe3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Globe3D({ width = 240, height = 240, ...restProps }: Globe3DProps) {
   );
 }
 
-export default Globe3D;
+export default Globe3d;

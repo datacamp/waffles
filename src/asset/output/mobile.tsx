@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Mobile3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Mobile3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Mobile3D({ width = 240, height = 240, ...restProps }: Mobile3DProps) {
+function Mobile3d({ width = 240, height = 240, ...restProps }: Mobile3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function Mobile3D({ width = 240, height = 240, ...restProps }: Mobile3DProps) {
   );
 }
 
-export default Mobile3D;
+export default Mobile3d;

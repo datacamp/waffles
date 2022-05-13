@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type People3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type People3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function People3D({ width = 240, height = 240, ...restProps }: People3DProps) {
+function People3d({ width = 240, height = 240, ...restProps }: People3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function People3D({ width = 240, height = 240, ...restProps }: People3DProps) {
   );
 }
 
-export default People3D;
+export default People3d;

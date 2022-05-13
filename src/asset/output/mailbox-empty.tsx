@@ -2,13 +2,13 @@
 
 import Asset from '../asset-internal';
 
-type MailboxEmpty3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type MailboxEmpty3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function MailboxEmpty3D({
+function MailboxEmpty3d({
   width = 240,
   height = 240,
   ...restProps
-}: MailboxEmpty3DProps) {
+}: MailboxEmpty3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -21,4 +21,4 @@ function MailboxEmpty3D({
   );
 }
 
-export default MailboxEmpty3D;
+export default MailboxEmpty3d;

@@ -2,9 +2,9 @@
 
 import Asset from '../asset-internal';
 
-type Import3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Import3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Import3D({ width = 240, height = 240, ...restProps }: Import3DProps) {
+function Import3d({ width = 240, height = 240, ...restProps }: Import3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -17,4 +17,4 @@ function Import3D({ width = 240, height = 240, ...restProps }: Import3DProps) {
   );
 }
 
-export default Import3D;
+export default Import3d;

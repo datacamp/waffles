@@ -2,13 +2,13 @@
 
 import Asset from '../asset-internal';
 
-type Finance3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Finance3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Finance3D({
+function Finance3d({
   width = 240,
   height = 240,
   ...restProps
-}: Finance3DProps) {
+}: Finance3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -25,4 +25,4 @@ function Finance3D({
   );
 }
 
-export default Finance3D;
+export default Finance3d;

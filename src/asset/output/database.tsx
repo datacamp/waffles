@@ -2,13 +2,13 @@
 
 import Asset from '../asset-internal';
 
-type Database3DProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
+type Database3dProps = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-function Database3D({
+function Database3d({
   width = 240,
   height = 240,
   ...restProps
-}: Database3DProps) {
+}: Database3dProps) {
   return (
     <Asset viewBox="0 0 240 240" width={width} height={height} {...restProps}>
       <path
@@ -25,4 +25,4 @@ function Database3D({
   );
 }
 
-export default Database3D;
+export default Database3d;
