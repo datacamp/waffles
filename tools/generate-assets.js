@@ -56,7 +56,7 @@ function generateAssets() {
       const filename = svgFilename.split('.')[0];
       // Add asset type suffix to component name if it has one
       const componentName = getPascalFormattedName(
-        directory === 'misc' ? filename : `${filename}-${directory}`,
+        directory === 'other' ? filename : `${filename}-${directory}`,
       );
 
       assetsExports.push(

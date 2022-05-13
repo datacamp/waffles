@@ -2,7 +2,13 @@ import React from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
-import * as allAssets from '@datacamp/waffles/asset';
+import { Heading } from '@datacamp/waffles/heading';
+
+const gridHeadingStyle = css`
+  &:not(:first-child) {
+    padding-top: ${tokens.spacing.medium};
+  }
+`;
 
 const wrapperStyle = css`
   display: flex;
@@ -47,25 +53,38 @@ function AssetPreview({ name, asset }: AssetPreviewType) {
   );
 }
 
-// TODO: Handle splitting assets up into their types (3D, assignment, misc etc) @ixTec
+type AssetModule = Record<
+  string,
+  (props: Record<string, unknown>) => JSX.Element
+>;
 
-function AllAssetsGrid() {
+type AssetGridProps = {
+  assetType: string;
+  assets: AssetModule;
+};
+
+function AssetGrid({ assetType, assets }: AssetGridProps) {
   return (
-    <section css={wrapperStyle}>
-      <div css={assetPreview}>
-        {Object.entries(allAssets).map((assetData) => {
-          const [name, Asset] = assetData;
-          return (
-            <AssetPreview
-              key={name}
-              name={name}
-              asset={<Asset width={'160px'} />}
-            />
-          );
-        })}
-      </div>
-    </section>
+    <>
+      <Heading css={gridHeadingStyle} as={'h3'}>
+        {assetType}
+      </Heading>
+      <section css={wrapperStyle}>
+        <div css={assetPreview}>
+          {Object.entries(assets).map((assetData) => {
+            const [name, Asset] = assetData;
+            return (
+              <AssetPreview
+                key={name}
+                name={name}
+                asset={<Asset width={'160px'} />}
+              />
+            );
+          })}
+        </div>
+      </section>
+    </>
   );
 }
 
-export default AllAssetsGrid;
+export default AssetGrid;
