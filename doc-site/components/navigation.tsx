@@ -82,10 +82,11 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/components/toast">Toast</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Content">
+            <Item href="/components/asset">Asset</Item>
             <Item href="/components/badge">Badge</Item>
+            <Item href="/components/content-container">Content Container</Item>
             <Item href="/components/icon">Icon</Item>
             <Item href="/components/notification">Notification</Item>
-            <Item href="/components/content-container">Content Container</Item>
           </SideNav.Subcategory>
           <SideNav.Subcategory label="Utility">
             <Item href="/components/portal">Portal</Item>

@@ -1,10 +1,10 @@
 import React from 'react';
 
 type AssetInternalProps = {
-  /* [skip docs] */
-  width?: number;
-  /* [skip docs] */
-  height?: number;
+  /* The width of the asset */
+  width?: string | number;
+  /* The height of the asset */
+  height?: string | number;
   /* [skip docs] */
   children: React.ReactNode;
 } & React.SVGAttributes<SVGElement>;

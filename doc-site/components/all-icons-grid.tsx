@@ -11,7 +11,7 @@ import PreviewControls from './preview-controls';
 
 const { Visible, Hidden } = allIcons;
 
-const wraperStyle = css`
+const wrapperStyle = css`
   display: flex;
   flex-direction: column;
 `;
@@ -85,7 +85,7 @@ function AllIconsGrid() {
   const [allLabelsVisible, setLabelsVisiblity] = useState(false);
 
   return (
-    <section css={wraperStyle}>
+    <section css={wrapperStyle}>
       <div css={regularIconsPreview}>
         {Object.entries(regular).map((iconData) => {
           const [name, Icon] = iconData;

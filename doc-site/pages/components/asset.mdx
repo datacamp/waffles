@@ -1,0 +1,61 @@
+import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
+import AllAssetsGrid from '../../components/all-assets-grid';
+import Example from '../../components/example';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import BasicUsage from '../../examples/asset/basic-usage';
+
+export default Layout;
+
+# Asset
+
+🚧 This page is **under construction**.
+
+An asset is a visual element.
+
+## Best Practices
+
+### General
+
+The main purpose of an asset is to...
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - TBC
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - TBC
+
+  </BestPractices.Discouraged>
+</BestPractices>
+
+## All Available Assets
+
+<AllAssetsGrid />
+
+## Examples
+
+<Example title="Basic Usage" path="asset/basic-usage">
+  <BasicUsage />
+</Example>
+
+## Props
+
+### Asset
+
+In addition to the props listed below, assets accept all props regular `SVGElement` would, such as `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/asset/asset-internal')}
+/>
+
+## Imports
+
+You can import any existing asset as a separate component. For example to import `AvatarPlaceholder` asset use:
+
+<Imports module={['AvatarPlaceholder']} path="@datacamp/waffles/asset" />
