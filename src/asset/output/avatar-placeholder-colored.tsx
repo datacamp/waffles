@@ -2,25 +2,26 @@
 
 import Asset from '../asset-internal';
 
-type AvatarPlaceholderProps = Omit<
+type AvatarPlaceholderColoredProps = Omit<
   React.ComponentProps<typeof Asset>,
   'children'
 >;
 
-function AvatarPlaceholder({
+function AvatarPlaceholderColored({
   width = 256,
   height = 256,
   ...restProps
-}: AvatarPlaceholderProps) {
+}: AvatarPlaceholderColoredProps) {
   return (
     <Asset viewBox="0 0 256 256" width={width} height={height} {...restProps}>
-      <path fill="currentColor" d="M0 0h256v256H0z" />
+      <path fill="#7933ff" d="M0 0h256v256H0z" />
       <path
-        fill="currentColor"
-        d="M10.528 256h126.673l66.186-114.637-95.005-54.851zM256 256V50.236L137.202 256z"
+        fill="#03ef62"
+        d="M10.528 256h126.673l66.186-114.637-95.005-54.851z"
       />
+      <path fill="#00c53b" d="M256 256V50.236L137.202 256z" />
     </Asset>
   );
 }
 
-export default AvatarPlaceholder;
+export default AvatarPlaceholderColored;

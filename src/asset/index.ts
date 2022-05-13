@@ -32,4 +32,4 @@ export { default as TimerSleep3D } from './output/timer-sleep';
 export { default as Timer3D } from './output/timer';
 export { default as Track3D } from './output/track';
 export { default as Trophy3D } from './output/trophy';
-export { default as AvatarPlaceholder } from './output/avatar-placeholder';
+export { default as AvatarPlaceholderColored } from './output/avatar-placeholder-colored';
