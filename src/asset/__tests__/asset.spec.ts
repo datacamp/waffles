@@ -1,7 +1,7 @@
-import * as Assets from '../index';
+import * as assets from '../index';
 
 describe('Asset', () => {
   it('exports every asset', () => {
-    expect(Assets).toMatchSnapshot();
+    expect(assets).toMatchSnapshot();
   });
 });

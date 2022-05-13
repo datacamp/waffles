@@ -1,6 +1,11 @@
 module.exports = {
   preset: 'ts-jest',
-  coveragePathIgnorePatterns: ['/node_modules/', 'src/icon', 'src/tokens'],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    'src/asset',
+    'src/icon',
+    'src/tokens',
+  ],
   rootDir: '.',
   testEnvironment: 'jsdom',
   coverageDirectory: './coverage',
