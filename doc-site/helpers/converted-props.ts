@@ -130,7 +130,7 @@ function formattedType(metadata: PropRawMetadata): string {
   }
 
   if (value.kind === 'union') {
-    return value.types!.map((type) => type.value).join(' | ');
+    return value.types!.map((type) => type.value || type.kind).join(' | ');
   }
 
   if (value.kind === 'generic' && value.value?.kind) {

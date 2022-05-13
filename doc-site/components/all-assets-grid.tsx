@@ -47,7 +47,7 @@ function AssetPreview({ name, asset }: AssetPreviewType) {
   );
 }
 
-// TODO: Handle splitting assets up into their types (3D, assignment, misc etc)
+// TODO: Handle splitting assets up into their types (3D, assignment, misc etc) @ixTec
 
 function AllAssetsGrid() {
   return (
