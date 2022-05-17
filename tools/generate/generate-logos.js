@@ -26,8 +26,8 @@ function generateLogos() {
   const logosExports = [];
 
   svgLogos.forEach((svgFilename) => {
-    const filename = svgFilename.split('.')[0];
-    const componentName = getPascalFormattedName(`${filename}-logo`);
+    const filename = `${svgFilename.split('.')[0]}-logo`;
+    const componentName = getPascalFormattedName(`${filename}`);
     logosExports[componentName] = filename;
 
     // Grab the whole content of SVG file

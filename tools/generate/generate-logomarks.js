@@ -26,8 +26,8 @@ function generateLogomarks() {
   const logomarksExports = {};
 
   svgLogomarks.forEach((svgFilename) => {
-    const filename = svgFilename.split('.')[0];
-    const componentName = getPascalFormattedName(`${filename}-logomark`);
+    const filename = `${svgFilename.split('.')[0]}-logomark`;
+    const componentName = getPascalFormattedName(filename);
     logomarksExports[componentName] = filename;
 
     // Grab the whole content of SVG file
