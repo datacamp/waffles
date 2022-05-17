@@ -22,9 +22,12 @@ For troubleshooting purposes, all scripts can be run locally as `yarn <script-na
 | test:unit:ci           | Run unit tests and generate code coverage report                                                                                                      | ✅         |
 | test:stories:ci        | Run e2e tests in headless browser<br >ℹ️ To start it locally run `build` first                                                                        | ✅         |
 | format:check           | Check if the codebase is properly formatted with _Prettier_                                                                                           | ✅         |
+| generate:all           | Runs all of the `generate:*` scripts listed below                                                                                                     | ✅         |
 | generate:design-tokens | Build design tokens based on definitions compatible with _Figma Tokens_ plugin                                                                        | ✅         |
 | generate:assets        | Build optimized React asset components based on regular SVG assets                                                                                    | ✅         |
 | generate:icons         | Build optimized React icon components based on regular SVG icons                                                                                      | ✅         |
+| generate:logos         | Build optimized React logo components based on regular SVG logo                                                                                       | ✅         |
+| generate:logomarks     | Build optimized React logomark components based on regular SVG logomarks                                                                              | ✅         |
 | release                | Automatically release a library to npm, bump package version based on commit messages, and generate changelog                                         | ✅         |
 | prepare                | Set up git hooks with _Husky_                                                                                                                         |            |
 
