@@ -4,10 +4,11 @@
 // whole typography and paragraphSpacing are defined for convenience, because Figma doesn't support text components, and are removed
 // colors are grouped for convenience, and are flattened
 
-const fs = require('fs');
+const { formatContentWithPrettier } = require('../helpers/formatting');
+
 const util = require('util');
 const path = require('path');
-const { formatContentWithPrettier } = require('./helpers/formatting');
+const fs = require('fs');
 
 const tokensDirPath = path.resolve(__dirname, '../src/tokens');
 const baseTokensPath = path.join(tokensDirPath, 'tokens.json');
