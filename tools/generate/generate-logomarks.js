@@ -44,7 +44,6 @@ function generateLogomarks() {
           componentName,
           getOptimizedSvg(filename, svgLogomark),
           'Logomark',
-          'logomarks',
         ),
       ),
     );

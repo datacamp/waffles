@@ -10,7 +10,7 @@ const util = require('util');
 const path = require('path');
 const fs = require('fs');
 
-const tokensDirPath = path.resolve(__dirname, '../src/tokens');
+const tokensDirPath = path.resolve(__dirname, '../../src/tokens');
 const baseTokensPath = path.join(tokensDirPath, 'tokens.json');
 const transformedTokensPath = path.join(tokensDirPath, 'tokens.ts');
 
