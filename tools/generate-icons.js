@@ -50,6 +50,7 @@ function generateIcons() {
             componentName,
             getOptimizedSvg(filename, svgIcon),
             'Icon',
+            'icons',
             ['size'],
           ),
         ),

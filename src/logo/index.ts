@@ -1,0 +1,12 @@
+export { default as ExcelLogo } from './output/excel';
+export { default as GitLogo } from './output/git';
+export { default as OracleLogo } from './output/oracle';
+export { default as PowerBiLogo } from './output/power-bi';
+export { default as PythonLogo } from './output/python';
+export { default as RLogo } from './output/r';
+export { default as ScalaLogo } from './output/scala';
+export { default as ShellLogo } from './output/shell';
+export { default as SparkLogo } from './output/spark';
+export { default as SpreadsheetsLogo } from './output/spreadsheets';
+export { default as SqlLogo } from './output/sql';
+export { default as TableauLogo } from './output/tableau';

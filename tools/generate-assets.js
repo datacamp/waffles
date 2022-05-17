@@ -52,6 +52,7 @@ function generateAssets() {
             componentName,
             getOptimizedSvg(filename, svgAsset),
             'Asset',
+            'assets',
           ),
         ),
       );
