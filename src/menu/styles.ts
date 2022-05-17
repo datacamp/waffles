@@ -118,6 +118,9 @@ export function itemInnerContentStyle({
     text-align: left;
     ${hasLeftIcon && `padding-left: ${tokens.spacing.small};`}
     ${hasRightIcon && `padding-right: ${tokens.spacing.small};`}
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   `;
 }
 
