@@ -12,30 +12,11 @@ const {
   getSvgInnerContent,
   getSvgViewBox,
 } = require('./helpers/svg-generation');
+const { generateComponentFromSvg } = require('./helpers/component-from-svg');
 
 const assetsDirPath = path.resolve(__dirname, '../src/asset');
 const assetsExportDirPath = path.resolve(assetsDirPath, 'generated');
 const assetsExportPath = path.join(assetsDirPath, 'index.ts');
-
-// Generate a React component based on the provided SVG content
-function componentFromSvg(componentName, svgContent) {
-  return `// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:assets' to update
-
-  import Asset from '../asset-internal';
-
-  type ${componentName}Props = Omit<React.ComponentProps<typeof Asset>, 'children'>;
-
-  function ${componentName}({ ...restProps }: ${componentName}Props) {
-    return <Asset
-        viewBox="${getSvgViewBox(svgContent)}"
-        {...restProps}
-      >
-        ${getSvgInnerContent(svgContent)}
-      </Asset>;
-  }
-
-  export default ${componentName}`;
-}
 
 function generateAssets() {
   const assetDirs = glob.sync('*', { cwd: 'src/asset/raw/' });
@@ -67,7 +48,11 @@ function generateAssets() {
       fs.writeFileSync(
         path.join(assetsExportDirPath, `${filename}.tsx`),
         formatContentWithPrettier(
-          componentFromSvg(componentName, getOptimizedSvg(filename, svgAsset)),
+          generateComponentFromSvg(
+            componentName,
+            getOptimizedSvg(filename, svgAsset),
+            'Asset',
+          ),
         ),
       );
     });
