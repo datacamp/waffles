@@ -1,8 +1,11 @@
-// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:logomark' to update
+// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:logomarks' to update
 
 import Logomark from '../logomark-internal';
 
-type TableauLogomarkProps = Omit<React.ComponentProps<typeof Logo>, 'children'>;
+type TableauLogomarkProps = Omit<
+  React.ComponentProps<typeof Logomark>,
+  'children'
+>;
 
 function TableauLogomark({ ...restProps }: TableauLogomarkProps) {
   return (
