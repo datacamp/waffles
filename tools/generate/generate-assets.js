@@ -1,18 +1,20 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 const glob = require('glob');
-const {
-  getPascalFormattedName,
-  formatContentWithPrettier,
-} = require('./helpers/formatting');
+
 const {
   getOptimizedSvg,
   getSvgInnerContent,
   getSvgViewBox,
-} = require('./helpers/svg-generation');
-const { generateComponentFromSvg } = require('./helpers/component-from-svg');
+} = require('../helpers/svg-generation');
+const {
+  getPascalFormattedName,
+  formatContentWithPrettier,
+} = require('../helpers/formatting');
+const { generateComponentFromSvg } = require('../helpers/component-from-svg');
+
+const path = require('path');
+const fs = require('fs');
 
 const assetsDirPath = path.resolve(__dirname, '../src/asset');
 const assetsExportDirPath = path.resolve(assetsDirPath, 'generated');

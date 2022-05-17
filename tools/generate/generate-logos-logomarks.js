@@ -12,6 +12,10 @@ const { generateComponentFromSvg } = require('../helpers/component-from-svg');
 const path = require('path');
 const fs = require('fs');
 
+// TODO: Handle datacamp logo / logomark generation as part of this script?
+//      - Maybe separate it out into own script / tool
+function generateDataCampLogosLogomarks() {}
+
 function generateLogos() {
   const logosDirPath = path.resolve(__dirname, '../../src/logo');
   const logosExportDirPath = path.resolve(logosDirPath, 'output');
