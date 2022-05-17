@@ -66,7 +66,7 @@ type AssetGridProps = {
 function AssetGrid({ assetType, assets }: AssetGridProps) {
   return (
     <>
-      <Heading css={gridHeadingStyle} as={'h3'}>
+      <Heading css={gridHeadingStyle} as={'h2'}>
         {assetType}
       </Heading>
       <section css={wrapperStyle}>
