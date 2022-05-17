@@ -7,28 +7,28 @@ const {
   getPascalFormattedName,
   formatContentWithPrettier,
 } = require('../helpers/formatting');
-const { generateComponentFromSvg } = require('../helpers/component-from-svg');
+const {
+  generateComponentFromSvg,
+  generateExportIndex,
+} = require('../helpers/component-generation');
 
 const path = require('path');
 const fs = require('fs');
 
-function generateLogomarks() {
-  const logomarksDirPath = path.resolve(__dirname, '../../src/logomark');
-  const logomarksExportDirPath = path.resolve(logomarksDirPath, 'generated');
-  const logomarksExportPath = path.join(logomarksDirPath, 'index.ts');
+const logomarksDirPath = path.resolve(__dirname, '../../src/logomark');
+const logomarksExportDirPath = path.resolve(logomarksDirPath, 'generated');
+const logomarksExportPath = path.join(logomarksDirPath, 'index.ts');
 
+function generateLogomarks() {
   // Array of SVG logomark filenames
   const svgLogomarks = glob.sync('*.svg', { cwd: 'src/logomark/raw/' });
-  // Array of export statements
-  const logomarksExports = [];
+  // Export key pairs
+  const logomarksExports = {};
 
   svgLogomarks.forEach((svgFilename) => {
     const filename = svgFilename.split('.')[0];
     const componentName = getPascalFormattedName(`${filename}-logomark`);
-
-    logomarksExports.push(
-      `export { default as ${componentName} } from './generated/${filename}';`,
-    );
+    logomarksExports[componentName] = filename;
 
     // Grab the whole content of SVG file
     const svgLogomark = fs.readFileSync(
@@ -49,8 +49,7 @@ function generateLogomarks() {
     );
   });
 
-  // Write export statements for all logomark components to index.ts file
-  fs.writeFileSync(logomarksExportPath, `${logomarksExports.join('\n')}\n`);
+  generateExportIndex(logomarksExportPath, logomarksExports);
 }
 
 generateLogomarks();

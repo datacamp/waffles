@@ -1,6 +1,6 @@
 const { getSvgInnerContent, getSvgViewBox } = require('./svg-generation');
 
-// TODO: Handle comamnd name from type / import?
+const fs = require('fs');
 
 // Generate a React component based on the provided SVG content
 function generateComponentFromSvg(
@@ -31,4 +31,16 @@ function generateComponentFromSvg(
   export default ${componentName}`;
 }
 
-module.exports = { generateComponentFromSvg };
+function generateExportIndex(exportPath, exportKeyPairs) {
+  // Write export statements for all the provided components to an index.ts file
+  fs.writeFileSync(
+    exportPath,
+    `${Object.entries(exportKeyPairs)
+      .map(([key, val]) => {
+        return `export { default as ${key} } from './generated/${val}';\n`;
+      })
+      .join('')}`,
+  );
+}
+
+module.exports = { generateComponentFromSvg, generateExportIndex };
