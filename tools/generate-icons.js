@@ -39,32 +39,37 @@ function componentFromSvg(componentName, svgContent) {
 }
 
 function generateIcons() {
-  // Array of SVG icons filenames
-  const svgIcons = glob.sync('*.svg', { cwd: 'src/icon/raw/' });
+  const assetDirs = glob.sync('*', { cwd: 'src/icon/raw/' });
   // Array of export statements
   const iconsExports = [];
 
-  svgIcons.forEach((svgFilename) => {
-    const filename = svgFilename.split('.')[0];
-    const componentName = getPascalFormattedName(filename);
+  // Iterate each icon input directory to handle the different type prefixes
+  assetDirs.forEach((directory) => {
+    // Array of SVG icons filenames
+    const svgIcons = glob.sync('*.svg', { cwd: `src/icon/raw/${directory}` });
 
-    iconsExports.push(
-      `export { default as ${componentName} } from './generated/${filename}';`,
-    );
+    svgIcons.forEach((svgFilename) => {
+      const filename = svgFilename.split('.')[0];
+      const componentName = getPascalFormattedName(filename);
 
-    // Grab the whole content of SVG file
-    const svgIcon = fs.readFileSync(
-      path.join(iconsDirPath, 'raw', svgFilename),
-      { encoding: 'utf-8' },
-    );
+      iconsExports.push(
+        `export { default as ${componentName} } from './generated/${filename}';`,
+      );
 
-    // Generate, format and write to file new icon React components
-    fs.writeFileSync(
-      path.join(iconsExportDirPath, `${filename}.tsx`),
-      formatContentWithPrettier(
-        componentFromSvg(componentName, getOptimizedSvg(filename, svgIcon)),
-      ),
-    );
+      // Grab the whole content of SVG file
+      const svgIcon = fs.readFileSync(
+        path.join(iconsDirPath, 'raw', directory, svgFilename),
+        { encoding: 'utf-8' },
+      );
+
+      // Generate, format and write to file new icon React components
+      fs.writeFileSync(
+        path.join(iconsExportDirPath, `${filename}.tsx`),
+        formatContentWithPrettier(
+          componentFromSvg(componentName, getOptimizedSvg(filename, svgIcon)),
+        ),
+      );
+    });
   });
 
   // Write export statements for all icon components to index.ts file
