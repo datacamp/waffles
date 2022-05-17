@@ -2,11 +2,7 @@
 
 const glob = require('glob');
 
-const {
-  getOptimizedSvg,
-  getSvgInnerContent,
-  getSvgViewBox,
-} = require('../helpers/svg-generation');
+const { getOptimizedSvg } = require('../helpers/svg-generation');
 const {
   getPascalFormattedName,
   formatContentWithPrettier,
@@ -16,7 +12,7 @@ const { generateComponentFromSvg } = require('../helpers/component-from-svg');
 const path = require('path');
 const fs = require('fs');
 
-const assetsDirPath = path.resolve(__dirname, '../src/asset');
+const assetsDirPath = path.resolve(__dirname, '../../src/asset');
 const assetsExportDirPath = path.resolve(assetsDirPath, 'generated');
 const assetsExportPath = path.join(assetsDirPath, 'index.ts');
 
@@ -54,7 +50,6 @@ function generateAssets() {
             componentName,
             getOptimizedSvg(filename, svgAsset),
             'Asset',
-            'assets',
           ),
         ),
       );

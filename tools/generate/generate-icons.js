@@ -2,11 +2,7 @@
 
 const glob = require('glob');
 
-const {
-  getOptimizedSvg,
-  getSvgInnerContent,
-  getSvgViewBox,
-} = require('../helpers/svg-generation');
+const { getOptimizedSvg } = require('../helpers/svg-generation');
 const {
   getPascalFormattedName,
   formatContentWithPrettier,
@@ -16,7 +12,7 @@ const { generateComponentFromSvg } = require('../helpers/component-from-svg');
 const path = require('path');
 const fs = require('fs');
 
-const iconsDirPath = path.resolve(__dirname, '../src/icon');
+const iconsDirPath = path.resolve(__dirname, '../../src/icon');
 const iconsExportDirPath = path.resolve(iconsDirPath, 'generated');
 const iconsExportPath = path.join(iconsDirPath, 'index.ts');
 
@@ -52,7 +48,6 @@ function generateIcons() {
             componentName,
             getOptimizedSvg(filename, svgIcon),
             'Icon',
-            'icons',
             ['size'],
           ),
         ),

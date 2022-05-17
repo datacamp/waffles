@@ -44,7 +44,6 @@ function generateLogos() {
           componentName,
           getOptimizedSvg(filename, svgLogo),
           'Logo',
-          'logos',
         ),
       ),
     );
