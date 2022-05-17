@@ -6,14 +6,13 @@ import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
 
 import BasicUsage from '../../examples/asset/basic-usage';
+import CustomSize from '../../examples/asset/custom-size';
 
 export default Layout;
 
 # Asset
 
 🚧 This page is **under construction**.
-
-## Asset Types
 
 <AllAssetTypes />
 
@@ -23,15 +22,15 @@ export default Layout;
   <BasicUsage />
 </Example>
 
+<Example title="Custom Size" path="asset/custom-size">
+  <CustomSize />
+</Example>
+
 ## Props
 
 ### Asset
 
-In addition to the props listed below, assets accept all props regular `SVGElement` would, such as `width`, `height`, `aria-` and `data-` attributes.
-
-<PropsTable
-  metadata={require('!!extract-react-types-loader!../../../src/asset/asset-internal')}
-/>
+Assets accept all props a regular `SVGElement` would, such as `width`, `height`, `aria-` and `data-` attributes.
 
 ## Imports
 
