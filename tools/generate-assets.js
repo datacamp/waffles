@@ -8,35 +8,29 @@ const {
   formatContentWithPrettier,
 } = require('./helpers/formatting');
 const {
-  getOptimizedSVG,
-  getSVGInnerContent,
-  getSVGViewBox,
-  getViewBoxDimensions,
-} = require('./helpers/svg');
+  getOptimizedSvg,
+  getSvgInnerContent,
+  getSvgViewBox,
+} = require('./helpers/svg-generation');
 
 const assetsDirPath = path.resolve(__dirname, '../src/asset');
-const assetsExportDirPath = path.resolve(assetsDirPath, 'output');
+const assetsExportDirPath = path.resolve(assetsDirPath, 'generated');
 const assetsExportPath = path.join(assetsDirPath, 'index.ts');
 
 // Generate a React component based on the provided SVG content
-function componentFromSVG(componentName, svgContent) {
-  const viewBox = getSVGViewBox(svgContent);
-  const { width, height } = getViewBoxDimensions(viewBox);
-
+function componentFromSvg(componentName, svgContent) {
   return `// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:assets' to update
 
   import Asset from '../asset-internal';
 
   type ${componentName}Props = Omit<React.ComponentProps<typeof Asset>, 'children'>;
 
-  function ${componentName}({ width = ${width}, height = ${height}, ...restProps }: ${componentName}Props) {
+  function ${componentName}({ ...restProps }: ${componentName}Props) {
     return <Asset
-        viewBox="${viewBox}"
-        width={width}
-        height={height}
+        viewBox="${getSvgViewBox(svgContent)}"
         {...restProps}
       >
-        ${getSVGInnerContent(svgContent)}
+        ${getSvgInnerContent(svgContent)}
       </Asset>;
   }
 
@@ -53,14 +47,14 @@ function generateAssets() {
     // Array of SVG asset filenames
     const svgAssets = glob.sync('*.svg', { cwd: `src/asset/raw/${directory}` });
     svgAssets.forEach((svgFilename) => {
-      const filename = svgFilename.split('.')[0];
       // Add asset type suffix to component name if it has one
-      const componentName = getPascalFormattedName(
-        directory === 'other' ? filename : `${filename}-${directory}`,
-      );
+      const filename = svgFilename
+        .split('.')[0]
+        .concat(directory !== 'other' ? `-${directory}` : '');
+      const componentName = getPascalFormattedName(filename);
 
       assetsExports.push(
-        `export { default as ${componentName} } from './output/${filename}';`,
+        `export { default as ${componentName} } from './generated/${filename}';`,
       );
 
       // Grab the whole content of SVG file
@@ -73,7 +67,7 @@ function generateAssets() {
       fs.writeFileSync(
         path.join(assetsExportDirPath, `${filename}.tsx`),
         formatContentWithPrettier(
-          componentFromSVG(componentName, getOptimizedSVG(filename, svgAsset)),
+          componentFromSvg(componentName, getOptimizedSvg(filename, svgAsset)),
         ),
       );
     });
