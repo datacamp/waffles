@@ -14,7 +14,7 @@ const fs = require('fs');
 
 function generateLogos() {
   const logosDirPath = path.resolve(__dirname, '../../src/logo');
-  const logosExportDirPath = path.resolve(logosDirPath, 'output');
+  const logosExportDirPath = path.resolve(logosDirPath, 'generated');
   const logosExportPath = path.join(logosDirPath, 'index.ts');
 
   // Array of SVG logos filenames
@@ -27,7 +27,7 @@ function generateLogos() {
     const componentName = getPascalFormattedName(`${filename}-logo`);
 
     logosExports.push(
-      `export { default as ${componentName} } from './output/${filename}';`,
+      `export { default as ${componentName} } from './generated/${filename}';`,
     );
 
     // Grab the whole content of SVG file

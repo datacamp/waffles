@@ -14,7 +14,7 @@ const fs = require('fs');
 
 function generateLogomarks() {
   const logomarksDirPath = path.resolve(__dirname, '../../src/logomark');
-  const logomarksExportDirPath = path.resolve(logomarksDirPath, 'output');
+  const logomarksExportDirPath = path.resolve(logomarksDirPath, 'generated');
   const logomarksExportPath = path.join(logomarksDirPath, 'index.ts');
 
   // Array of SVG logomark filenames
@@ -27,7 +27,7 @@ function generateLogomarks() {
     const componentName = getPascalFormattedName(`${filename}-logomark`);
 
     logomarksExports.push(
-      `export { default as ${componentName} } from './output/${filename}';`,
+      `export { default as ${componentName} } from './generated/${filename}';`,
     );
 
     // Grab the whole content of SVG file
