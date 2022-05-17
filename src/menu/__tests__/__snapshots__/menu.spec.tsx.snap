@@ -1,0 +1,374 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu renders snapshot with categories, active style, icons, and alert dot 1`] = `
+.emotion-0 {
+  position: absolute;
+  z-index: 7000;
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 0;
+  padding-right: 0;
+  outline: 0;
+  list-style: none;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px 0px rgba(5, 25, 45, 0.3),0px 1px 4px -1px rgba(5, 25, 45, 0.3),0px 8px 12px -4px rgba(5, 25, 45, 0.3);
+  width: 260px;
+  top: 0px;
+  left: 0px;
+  background-color: #FFFFFF;
+}
+
+.emotion-1 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #65707C;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: calc(100% - 8px);
+  min-height: 36px;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-left: 4px;
+  margin-right: 4px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  color: #05192D;
+  background: transparent;
+  font-weight: 400;
+}
+
+.emotion-2 svg {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-2:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-3 {
+  position: absolute;
+  z-index: 1;
+  top: 4px;
+  left: 4px;
+  width: 6px;
+  height: 6px;
+  background-color: #FF5400;
+  border-radius: 50%;
+}
+
+.emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: block;
+  color: inherit;
+  font-weight: inherit;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  line-height: 1.25;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: left;
+}
+
+.emotion-6 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: block;
+  color: inherit;
+  font-weight: inherit;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  line-height: 1.25;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: calc(100% - 8px);
+  min-height: 36px;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-left: 4px;
+  margin-right: 4px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  color: #05192D;
+  background: #F7F7FC;
+  font-weight: 800;
+}
+
+.emotion-7 svg {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-7:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-7:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-9 {
+  height: 1px;
+  background-color: rgba(5, 25, 45, 0.2);
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.emotion-10 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+  width: calc(100% - 16px);
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.emotion-10::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-10:hover:not(:disabled) {
+  background-color: #00D649;
+}
+
+.emotion-10:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-10:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-10:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+<div
+  aria-labelledby="menu-trigger-123abC"
+  aria-orientation="vertical"
+  class="emotion-0"
+  role="menu"
+  tabindex="-1"
+>
+  <div
+    aria-labelledby="menu-category-123abC"
+    role="group"
+  >
+    <p
+      class="emotion-1"
+      id="menu-category-123abC"
+    >
+      Singers
+    </p>
+    <button
+      class="emotion-2"
+      role="menuitem"
+    >
+      <div
+        class="emotion-3"
+        data-testid="alert-dot"
+      />
+      <span
+        class="emotion-4"
+      >
+        Taylor Swift
+      </span>
+    </button>
+    <button
+      class="emotion-2"
+      role="menuitem"
+    >
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 18 18"
+        width="16"
+      >
+        <path
+          d="M13.746 4.337a1.015 1.015 0 0 1 1.409-.099c.417.354.462.97.101 1.378l-7.13 8.047a1.015 1.015 0 0 1-1.483.03L2.771 9.67a.961.961 0 0 1 .044-1.38 1.015 1.015 0 0 1 1.412.041l3.113 3.235 6.406-7.229Z"
+          fill="currentColor"
+        />
+      </svg>
+      <span
+        class="emotion-6"
+      >
+        Ariana Grande
+      </span>
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 18 18"
+        width="16"
+      >
+        <path
+          d="M13.746 4.337a1.015 1.015 0 0 1 1.409-.099c.417.354.462.97.101 1.378l-7.13 8.047a1.015 1.015 0 0 1-1.483.03L2.771 9.67a.961.961 0 0 1 .044-1.38 1.015 1.015 0 0 1 1.412.041l3.113 3.235 6.406-7.229Z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+    <button
+      class="emotion-7"
+      role="menuitem"
+    >
+      <span
+        class="emotion-4"
+      >
+        Justin Bieber
+      </span>
+    </button>
+  </div>
+  <div
+    role="group"
+  >
+    <div
+      class="emotion-9"
+    />
+    <button
+      class="emotion-10"
+      role="menuitem"
+    >
+      <span
+        class="emotion-11"
+      >
+        Log Out
+      </span>
+    </button>
+  </div>
+</div>
+`;

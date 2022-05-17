@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
+import { User, Checkmark } from '../../icon';
 import { Menu, useMenu } from '../index';
 
 const MOCKED_ID = '123abC';
@@ -144,6 +145,47 @@ describe('Menu', () => {
     );
   });
 
+  it('menu item could be decorated with left and right icon', () => {
+    const { getByTestId, getByText } = render(
+      <Menu trigger={<MenuTrigger />}>
+        <Menu.Item
+          iconLeft={<User data-testid="left-icon" />}
+          iconRight={<Checkmark data-testid="right-icon" />}
+        >
+          Taylor Swift
+        </Menu.Item>
+        <Menu.Item>Ariana Grande</Menu.Item>
+      </Menu>,
+    );
+
+    const trigger = getByText('Open Menu');
+    fireEvent.click(trigger);
+
+    const itemWithIcons = getByText('Taylor Swift').closest('button');
+    const leftIcon = getByTestId('left-icon');
+    const rightIcon = getByTestId('right-icon');
+
+    expect(itemWithIcons).toContainElement(leftIcon);
+    expect(itemWithIcons).toContainElement(rightIcon);
+  });
+
+  it('menu item could be decorated with alert notification dot', () => {
+    const { getByTestId, getByText } = render(
+      <Menu trigger={<MenuTrigger />}>
+        <Menu.Item showAlert>Taylor Swift</Menu.Item>
+        <Menu.Item>Ariana Grande</Menu.Item>
+      </Menu>,
+    );
+
+    const trigger = getByText('Open Menu');
+    fireEvent.click(trigger);
+
+    const item = getByText('Taylor Swift').closest('button');
+    const dot = getByTestId('alert-dot');
+
+    expect(item).toContainElement(dot);
+  });
+
   it('when menu is already opened, clicking trigger closes it', () => {
     const { getByText, queryByRole } = render(
       <Menu trigger={<MenuTrigger />}>
@@ -226,5 +268,28 @@ describe('Menu', () => {
     const item = getByText('Polymorphic Taylor Swift Link').closest('a');
 
     expect(item).toHaveAttribute('href', 'http://polymorphic-taylor-swift.com');
+  });
+
+  it('renders snapshot with categories, active style, icons, and alert dot', () => {
+    const { getByRole, getByText } = render(
+      <Menu trigger={<MenuTrigger />}>
+        <Menu.Category label="Singers" noDivider>
+          <Menu.Item showAlert>Taylor Swift</Menu.Item>
+          <Menu.Item iconLeft={<Checkmark />} iconRight={<Checkmark />}>
+            Ariana Grande
+          </Menu.Item>
+          <Menu.Item isActive>Justin Bieber</Menu.Item>
+        </Menu.Category>
+        <Menu.Category>
+          <Menu.Button>Log Out</Menu.Button>
+        </Menu.Category>
+      </Menu>,
+    );
+
+    const trigger = getByText('Open Menu');
+    fireEvent.click(trigger);
+    const menu = getByRole('menu');
+
+    expect(menu).toMatchSnapshot();
   });
 });
