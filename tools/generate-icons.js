@@ -12,31 +12,11 @@ const {
   getSvgInnerContent,
   getSvgViewBox,
 } = require('./helpers/svg-generation');
+const { generateComponentFromSvg } = require('./helpers/component-from-svg');
 
 const iconsDirPath = path.resolve(__dirname, '../src/icon');
 const iconsExportDirPath = path.resolve(iconsDirPath, 'generated');
 const iconsExportPath = path.join(iconsDirPath, 'index.ts');
-
-// Generate a React component based on the provided SVG content
-function componentFromSvg(componentName, svgContent) {
-  return `// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:icons' to update
-
-  import Icon from '../icon-internal';
-
-  type ${componentName}Props = Omit<React.ComponentProps<typeof Icon>, 'children'>;
-
-  function ${componentName}({ size, ...restProps }: ${componentName}Props) {
-    return <Icon
-        viewBox="${getSvgViewBox(svgContent)}"
-        size={size}
-        {...restProps}
-      >
-        ${getSvgInnerContent(svgContent)}
-      </Icon>;
-  }
-
-  export default ${componentName}`;
-}
 
 function generateIcons() {
   const assetDirs = glob.sync('*', { cwd: 'src/icon/raw/' });
@@ -66,7 +46,12 @@ function generateIcons() {
       fs.writeFileSync(
         path.join(iconsExportDirPath, `${filename}.tsx`),
         formatContentWithPrettier(
-          componentFromSvg(componentName, getOptimizedSvg(filename, svgIcon)),
+          generateComponentFromSvg(
+            componentName,
+            getOptimizedSvg(filename, svgIcon),
+            'Icon',
+            ['size'],
+          ),
         ),
       );
     });
