@@ -8,7 +8,7 @@ import Bookmark from './bookmark';
 
 const gridHeadingStyle = css`
   &:not(:first-of-type) {
-    ${tokens.spacing.medium};
+    padding-top: ${tokens.spacing.medium};
   }
 `;
 
@@ -20,7 +20,7 @@ const wrapperStyle = css`
 const assetPreview = css`
   display: flex;
   flex-wrap: wrap;
-  padding: ${tokens.spacing.small};
+  padding: ${tokens.spacing.medium};
   background-color: ${tokens.colors.white};
   border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
   border-radius: ${tokens.borderRadius.medium};
@@ -30,12 +30,14 @@ const assetWrapperStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: ${tokens.spacing.xsmall};
   width: 160px;
   height: 160px;
 `;
 
 const labelStyle = css`
+  display: flex;
   color: inherit;
   padding-top: ${tokens.spacing.small};
 `;
@@ -80,7 +82,7 @@ function AssetGrid({ assetType, assets }: AssetGridProps) {
               <AssetPreview
                 key={name}
                 name={name}
-                asset={<Asset width={'160px'} />}
+                asset={<Asset width={'160px'} height={'160px'} />}
               />
             );
           })}
