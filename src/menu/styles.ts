@@ -40,12 +40,12 @@ const itemBaseStyle = css`
   position: relative;
   display: flex;
   align-items: center;
-  width: calc(100% - 8px);
+  width: calc(100% - 16px);
   min-height: ${tokens.sizing.medium};
   padding-right: 12px;
   padding-left: 12px;
-  margin-left: ${tokens.spacing.xsmall};
-  margin-right: ${tokens.spacing.xsmall};
+  margin-left: ${tokens.spacing.small};
+  margin-right: ${tokens.spacing.small};
   text-decoration: none;
   border: 0;
   border-radius: ${tokens.borderRadius.medium};
@@ -135,8 +135,8 @@ export function categoryDividerStyle({
       : hexToRgba(tokens.colors.navy, 0.2)};
     margin-top: ${tokens.spacing.small};
     margin-bottom: ${tokens.spacing.small};
-    margin-right: ${tokens.spacing.xsmall};
-    margin-left: ${tokens.spacing.xsmall};
+    margin-right: ${tokens.spacing.small};
+    margin-left: ${tokens.spacing.small};
   `;
 }
 
@@ -151,7 +151,7 @@ export function categoryLabelStyle({
     color: ${inverted
       ? tokens.colors.navySubtleTextOnDark
       : tokens.colors.navySubtleTextOnLight};
-    font-size: ${tokens.fontSizes.small};
+    font-size: ${tokens.fontSizes.xsmall};
     font-weight: ${tokens.fontWeights.bold};
     line-height: ${tokens.lineHeights.default};
     letter-spacing: ${tokens.letterSpacing.relaxed};
@@ -183,8 +183,8 @@ export function alertDotStyle() {
     z-index: ${tokens.zIndex.default};
     top: ${tokens.spacing.xsmall};
     left: ${tokens.spacing.xsmall};
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
     background-color: ${tokens.colors.red};
     border-radius: ${tokens.borderRadius.circle};
   `;
