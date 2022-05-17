@@ -97,21 +97,25 @@ It is also possible to test for various **accessibility (a11y) violations** agai
 
 Under the hood **Workbench** runs these stories.
 
-## 🖼️ Design Tokens, Assets and Icons
+## 🖼️ Design Tokens, Assets, Icons, Logos and Logomarks
 
-Design tokens, assets and icons are generated from source files using the matching `generate` scripts:
+Design tokens, assets, icons, logos and logomarks are generated from source files using their matching `generate` scripts:
 
 - **design tokens** are generated based on `src/tokens/tokens.json` file, which contains definitions compatible with [Figma Tokens](https://www.figma.com/community/plugin/843461159747178978/Figma-Tokens) plugin, by running `generate:design-tokens` command
 - **assets** are generated based on SVG files from the `src/asset/raw` directory via the `generate:assets` command
 - **icons** are generated based on SVG files from the `src/icon/raw` directory via the `generate:icons` command
+- **logos** are generated based on SVG files from the `src/logo/raw` directory via the `generate:logos` command
+- **logomarks** are generated based on SVG files from the `src/logomark/raw` directory via the `generate:logomarks` command
 
 The output is:
 
 - **design tokens**: a `src/tokens/tokens.ts` file
-- **assets**: new React components in the `src/asset/output` folder and an updated `src/asset/index.ts` file
-- **icons**: new React components in the `src/icon/output` folder and an updated `src/icon/index.ts` file
+- **assets**: new React components in the `src/asset/generated` folder and an updated `src/asset/index.ts` file
+- **icons**: new React components in the `src/icon/generated` folder and an updated `src/icon/index.ts` file
+- **logos**: new React components in the `src/logo/generated` folder and an updated `src/logo/index.ts` file
+- **logomarks**: new React components in the `src/logomark/generated` folder and an updated `src/logomark/index.ts` file
 
-ℹ️ After adding new design tokens or icons, please run the appropriate `generate` script(s). After this **commit** the resulting files. That way they can be easily consumed internally.
+ℹ️ After adding new; design tokens, assets, icons, logos or logomarks - please run the appropriate `generate` script(s). After this **commit** the resulting files. That way they can be easily consumed internally.
 
 ## 📦 Releases
 
