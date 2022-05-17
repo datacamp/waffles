@@ -1,0 +1,11 @@
+export { default as ExcelLogomark } from './output/excel';
+export { default as GitLogomark } from './output/git';
+export { default as PowerBiLogomark } from './output/power-bi';
+export { default as PythonLogomark } from './output/python';
+export { default as RLogomark } from './output/r';
+export { default as ScalaLogomark } from './output/scala';
+export { default as ShellLogomark } from './output/shell';
+export { default as SpreadsheetLogomark } from './output/spreadsheet';
+export { default as SqlLogomark } from './output/sql';
+export { default as TableauLogomark } from './output/tableau';
+export { default as TheoryLogomark } from './output/theory';
