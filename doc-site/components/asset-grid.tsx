@@ -4,6 +4,8 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { Heading } from '@datacamp/waffles/heading';
 
+import Bookmark from './bookmark';
+
 const gridHeadingStyle = css`
   &:not(:first-child) {
     padding-top: ${tokens.spacing.medium};
@@ -66,8 +68,9 @@ type AssetGridProps = {
 function AssetGrid({ assetType, assets }: AssetGridProps) {
   return (
     <>
-      <Heading css={gridHeadingStyle} as={'h2'}>
+      <Heading id={`${assetType}-assets`} css={gridHeadingStyle} as={'h2'}>
         {assetType}
+        <Bookmark targetId={`${assetType}-assets`} />
       </Heading>
       <section css={wrapperStyle}>
         <div css={assetPreview}>
