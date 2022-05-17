@@ -3,19 +3,25 @@ type AssetModule = Record<
   (props: Record<string, unknown>) => JSX.Element
 >;
 
+const groups = ['3d', 'Logomark', 'Logo'];
+
 type GroupedAssets = {
   '3D': AssetModule;
+  Logomark: AssetModule;
+  Logo: AssetModule;
   Other: AssetModule;
 };
 
 function groupAssets(assets: AssetModule): GroupedAssets {
   return Object.entries(assets).reduce((groupedAssets, entry) => {
     const [name, Asset] = entry;
-    const group = name.endsWith('3d') ? '3D' : 'Other';
+    // Find the group the asset should fall under, otherwise fall back to 'Other'
+    const assignedGroup =
+      groups.find((group) => name.endsWith(group)) || 'Other';
     return {
       ...groupedAssets,
-      [group]: {
-        ...groupedAssets[group],
+      [assignedGroup]: {
+        ...groupedAssets[assignedGroup as keyof GroupedAssets],
         [name]: Asset,
       },
     };
