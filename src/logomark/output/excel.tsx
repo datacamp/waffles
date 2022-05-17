@@ -1,8 +1,11 @@
-// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:logomark' to update
+// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:logomarks' to update
 
 import Logomark from '../logomark-internal';
 
-type ExcelLogomarkProps = Omit<React.ComponentProps<typeof Logo>, 'children'>;
+type ExcelLogomarkProps = Omit<
+  React.ComponentProps<typeof Logomark>,
+  'children'
+>;
 
 function ExcelLogomark({ ...restProps }: ExcelLogomarkProps) {
   return (

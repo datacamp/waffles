@@ -1,4 +1,4 @@
-// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:logos-logomarks' to update
+// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:logos' to update
 
 import Logo from '../logo-internal';
 

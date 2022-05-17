@@ -1,8 +1,8 @@
-// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:logomark' to update
+// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:logomarks' to update
 
 import Logomark from '../logomark-internal';
 
-type GitLogomarkProps = Omit<React.ComponentProps<typeof Logo>, 'children'>;
+type GitLogomarkProps = Omit<React.ComponentProps<typeof Logomark>, 'children'>;
 
 function GitLogomark({ ...restProps }: GitLogomarkProps) {
   return (

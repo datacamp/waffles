@@ -1,9 +1,9 @@
-// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:logomark' to update
+// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:logomarks' to update
 
 import Logomark from '../logomark-internal';
 
 type SpreadsheetLogomarkProps = Omit<
-  React.ComponentProps<typeof Logo>,
+  React.ComponentProps<typeof Logomark>,
   'children'
 >;
 
