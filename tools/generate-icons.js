@@ -8,17 +8,17 @@ const {
   formatContentWithPrettier,
 } = require('./helpers/formatting');
 const {
-  getOptimizedSVG,
-  getSVGInnerContent,
-  getSVGViewBox,
-} = require('./helpers/svg');
+  getOptimizedSvg,
+  getSvgInnerContent,
+  getSvgViewBox,
+} = require('./helpers/svg-generation');
 
 const iconsDirPath = path.resolve(__dirname, '../src/icon');
-const iconsExportDirPath = path.resolve(iconsDirPath, 'output');
+const iconsExportDirPath = path.resolve(iconsDirPath, 'generated');
 const iconsExportPath = path.join(iconsDirPath, 'index.ts');
 
 // Generate a React component based on the provided SVG content
-function componentFromSVG(componentName, svgContent) {
+function componentFromSvg(componentName, svgContent) {
   return `// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:icons' to update
 
   import Icon from '../icon-internal';
@@ -27,11 +27,11 @@ function componentFromSVG(componentName, svgContent) {
 
   function ${componentName}({ size, ...restProps }: ${componentName}Props) {
     return <Icon
-        viewBox="${getSVGViewBox(svgContent)}"
+        viewBox="${getSvgViewBox(svgContent)}"
         size={size}
         {...restProps}
       >
-        ${getSVGInnerContent(svgContent)}
+        ${getSvgInnerContent(svgContent)}
       </Icon>;
   }
 
@@ -49,7 +49,7 @@ function generateIcons() {
     const componentName = getPascalFormattedName(filename);
 
     iconsExports.push(
-      `export { default as ${componentName} } from './output/${filename}';`,
+      `export { default as ${componentName} } from './generated/${filename}';`,
     );
 
     // Grab the whole content of SVG file
@@ -62,7 +62,7 @@ function generateIcons() {
     fs.writeFileSync(
       path.join(iconsExportDirPath, `${filename}.tsx`),
       formatContentWithPrettier(
-        componentFromSVG(componentName, getOptimizedSVG(filename, svgIcon)),
+        componentFromSvg(componentName, getOptimizedSvg(filename, svgIcon)),
       ),
     );
   });
