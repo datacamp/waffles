@@ -7,7 +7,10 @@ const {
   getPascalFormattedName,
   formatContentWithPrettier,
 } = require('../helpers/formatting');
-const { generateComponentFromSvg } = require('../helpers/component-from-svg');
+const {
+  generateComponentFromSvg,
+  generateExportIndex,
+} = require('../helpers/component-generation');
 
 const path = require('path');
 const fs = require('fs');
@@ -18,8 +21,8 @@ const assetsExportPath = path.join(assetsDirPath, 'index.ts');
 
 function generateAssets() {
   const assetDirs = glob.sync('*', { cwd: 'src/asset/raw/' });
-  // Array of export statements
-  const assetsExports = [];
+  // Export key pairs
+  const assetsExports = {};
 
   // Iterate each asset input directory to handle the different type prefixes
   assetDirs.forEach((directory) => {
@@ -31,10 +34,7 @@ function generateAssets() {
         .split('.')[0]
         .concat(directory !== 'other' ? `-${directory}` : '');
       const componentName = getPascalFormattedName(filename);
-
-      assetsExports.push(
-        `export { default as ${componentName} } from './generated/${filename}';`,
-      );
+      assetsExports[componentName] = filename;
 
       // Grab the whole content of SVG file
       const svgAsset = fs.readFileSync(
@@ -56,8 +56,7 @@ function generateAssets() {
     });
   });
 
-  // Write export statements for all asset components to index.ts file
-  fs.writeFileSync(assetsExportPath, `${assetsExports.join('\n')}\n`);
+  generateExportIndex(assetsExportPath, assetsExports);
 }
 
 generateAssets();

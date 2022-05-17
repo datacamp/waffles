@@ -7,7 +7,10 @@ const {
   getPascalFormattedName,
   formatContentWithPrettier,
 } = require('../helpers/formatting');
-const { generateComponentFromSvg } = require('../helpers/component-from-svg');
+const {
+  generateComponentFromSvg,
+  generateExportIndex,
+} = require('../helpers/component-generation');
 
 const path = require('path');
 const fs = require('fs');
@@ -18,8 +21,8 @@ const iconsExportPath = path.join(iconsDirPath, 'index.ts');
 
 function generateIcons() {
   const assetDirs = glob.sync('*', { cwd: 'src/icon/raw/' });
-  // Array of export statements
-  const iconsExports = [];
+  // Export key pairs
+  const iconsExports = {};
 
   // Iterate each icon input directory to handle the different type prefixes
   assetDirs.forEach((directory) => {
@@ -29,10 +32,7 @@ function generateIcons() {
     svgIcons.forEach((svgFilename) => {
       const filename = svgFilename.split('.')[0];
       const componentName = getPascalFormattedName(filename);
-
-      iconsExports.push(
-        `export { default as ${componentName} } from './generated/${filename}';`,
-      );
+      iconsExports[componentName] = filename;
 
       // Grab the whole content of SVG file
       const svgIcon = fs.readFileSync(
@@ -55,8 +55,7 @@ function generateIcons() {
     });
   });
 
-  // Write export statements for all icon components to index.ts file
-  fs.writeFileSync(iconsExportPath, `${iconsExports.join('\n')}\n`);
+  generateExportIndex(iconsExportPath, iconsExports);
 }
 
 generateIcons();
