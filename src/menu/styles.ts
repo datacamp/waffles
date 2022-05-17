@@ -82,9 +82,6 @@ export function itemStyle({
     ${itemBaseStyle}
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     background: ${isActive ? invertedActiveColor : 'transparent'};
-    font-weight: ${isActive
-      ? tokens.fontWeights.bold
-      : tokens.fontWeights.regular};
 
     &:hover:not(:disabled) {
       background-color: ${hexToRgba(
@@ -109,18 +106,53 @@ export function itemInnerContentStyle({
 }: ItemInnerContentStyleOptions) {
   return css`
     display: block;
-    color: inherit;
-    font-weight: inherit;
-    flex-grow: 1;
-    line-height: ${tokens.lineHeights.default};
+    overflow: hidden;
     padding-top: ${tokens.spacing.small};
     padding-bottom: ${tokens.spacing.small};
-    text-align: left;
+    flex-grow: 1;
     ${hasLeftIcon && `padding-left: ${tokens.spacing.small};`}
     ${hasRightIcon && `padding-right: ${tokens.spacing.small};`}
+  `;
+}
+
+const textBaseStyle = css`
+  display: block;
+  text-align: left;
+  line-height: ${tokens.lineHeights.relaxed};
+`;
+
+type ItemLabelStyleOptions = {
+  isActive: boolean;
+};
+
+// Inherits text color to keep it in sync with icon color in case of custom style overrides
+export function itemLabelStyle({ isActive }: ItemLabelStyleOptions) {
+  return css`
+    ${textBaseStyle}
+    color: inherit;
+    font-weight: ${isActive
+      ? tokens.fontWeights.bold
+      : tokens.fontWeights.regular};
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  `;
+}
+
+type ItemDescriptionStyleOptions = {
+  inverted: boolean;
+};
+
+export function itemDescriptionStyle({
+  inverted,
+}: ItemDescriptionStyleOptions) {
+  return css`
+    ${textBaseStyle}
+    color: ${inverted
+      ? tokens.colors.navySubtleTextOnDark
+      : tokens.colors.navySubtleTextOnLight};
+    font-size: ${tokens.fontSizes.small};
+    margin-top: 2px;
   `;
 }
 
