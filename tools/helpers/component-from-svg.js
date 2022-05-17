@@ -7,8 +7,8 @@ function generateComponentFromSvg(
   componentName,
   svgContent,
   componentType,
+  yarnScript,
   componentProps = [],
-  yarnScript = `${componentType.toLowerCase()}s`,
 ) {
   const functionProps = [...componentProps, '...restProps'].join(',');
   return `// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'yarn generate:${yarnScript}' to update
