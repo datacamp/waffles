@@ -5,11 +5,17 @@ import type { PolymorphicComponentProps } from '../helpers';
 import { Text } from '../text';
 import { useMenu } from './menu-context';
 import AlertDot from './alert-dot';
-import { itemStyle, itemInnerContentStyle } from './styles';
+import {
+  itemStyle,
+  itemInnerContentStyle,
+  itemLabelStyle,
+  itemDescriptionStyle,
+} from './styles';
 
 type ItemBaseProps = {
+  label: React.ReactNode;
   index?: number;
-  children: React.ReactNode;
+  description?: React.ReactNode;
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
   showAlert?: boolean;
@@ -21,13 +27,14 @@ type ItemProps<T extends React.ElementType = 'button'> =
 
 function Item<T extends React.ElementType = 'button'>({
   as,
+  label,
   index = 0,
-  onClick,
-  children,
+  description,
   iconLeft,
   iconRight,
   showAlert = false,
   isActive = false,
+  onClick,
   ...restProps
 }: ItemProps<T>) {
   const Element = as || 'button';
@@ -55,14 +62,17 @@ function Item<T extends React.ElementType = 'button'>({
     >
       {showAlert && <AlertDot />}
       {iconLeft}
-      <Text
+      <span
         css={itemInnerContentStyle({
           hasLeftIcon: !!iconLeft,
           hasRightIcon: !!iconRight,
         })}
       >
-        {children}
-      </Text>
+        <Text css={itemLabelStyle({ isActive })}>{label}</Text>
+        {description && (
+          <Text css={itemDescriptionStyle({ inverted })}>{description}</Text>
+        )}
+      </span>
       {iconRight}
     </Element>
   );
