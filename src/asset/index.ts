@@ -44,6 +44,8 @@ export { default as SparkLogo } from './generated/spark-logo';
 export { default as SpreadsheetsLogo } from './generated/spreadsheets-logo';
 export { default as SqlLogo } from './generated/sql-logo';
 export { default as TableauLogo } from './generated/tableau-logo';
+export { default as WafflesColoredLogo } from './generated/waffles-colored-logo';
+export { default as WafflesLogo } from './generated/waffles-logo';
 export { default as ExcelLogomark } from './generated/excel-logomark';
 export { default as GitLogomark } from './generated/git-logomark';
 export { default as PowerBiLogomark } from './generated/power-bi-logomark';
@@ -55,4 +57,5 @@ export { default as SpreadsheetLogomark } from './generated/spreadsheet-logomark
 export { default as SqlLogomark } from './generated/sql-logomark';
 export { default as TableauLogomark } from './generated/tableau-logomark';
 export { default as TheoryLogomark } from './generated/theory-logomark';
+export { default as WafflesColoredLogomark } from './generated/waffles-colored-logomark';
 export { default as AvatarPlaceholderColored } from './generated/avatar-placeholder-colored';
