@@ -82,7 +82,7 @@ function AssetGrid({ assetType, assets }: AssetGridProps) {
               <AssetPreview
                 key={name}
                 name={name}
-                asset={<Asset width={'160px'} height={'160px'} />}
+                asset={<Asset width={'125px'} height={'125px'} />}
               />
             );
           })}
