@@ -37,9 +37,14 @@ const assetWrapperStyle = css`
 `;
 
 const labelStyle = css`
-  display: flex;
+  display: block;
+  flex: 1;
   color: inherit;
   padding-top: ${tokens.spacing.small};
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 type AssetPreviewType = {
