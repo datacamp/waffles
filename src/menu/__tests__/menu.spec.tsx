@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
+import { tokens } from '../../tokens';
 import { User, Checkmark } from '../../icon';
 import { Menu, useMenu } from '../index';
 
@@ -53,9 +54,9 @@ describe('Menu', () => {
   it('renders trigger with proper a11y attributes when closed', () => {
     const { getByText } = render(
       <Menu trigger={<MenuTrigger />}>
-        <Menu.Item>Taylor Swift</Menu.Item>
-        <Menu.Item>Ariana Grande</Menu.Item>
-        <Menu.Item>Justin Bieber</Menu.Item>
+        <Menu.Item label="Taylor Swift" />
+        <Menu.Item label="Ariana Grande" />
+        <Menu.Item label="Justin Bieber" />
       </Menu>,
     );
 
@@ -69,9 +70,9 @@ describe('Menu', () => {
   it('renders trigger and dropdown with proper content and a11y attributes when opened', () => {
     const { getByRole, getAllByRole, getByText } = render(
       <Menu trigger={<MenuTrigger />}>
-        <Menu.Item>Taylor Swift</Menu.Item>
-        <Menu.Item>Ariana Grande</Menu.Item>
-        <Menu.Item>Justin Bieber</Menu.Item>
+        <Menu.Item label="Taylor Swift" />
+        <Menu.Item label="Ariana Grande" />
+        <Menu.Item label="Justin Bieber" />
       </Menu>,
     );
 
@@ -90,8 +91,8 @@ describe('Menu', () => {
   it('trigger and dropdown are associated by the same ID', () => {
     const { getByRole, getByText } = render(
       <Menu trigger={<MenuTrigger />}>
-        <Menu.Item>Taylor Swift</Menu.Item>
-        <Menu.Item>Ariana Grande</Menu.Item>
+        <Menu.Item label="Taylor Swift" />
+        <Menu.Item label="Ariana Grande" />
       </Menu>,
     );
 
@@ -109,8 +110,8 @@ describe('Menu', () => {
   it('trigger could be customised with useMenu hook', () => {
     const { getByTestId } = render(
       <Menu trigger={<MenuTrigger />}>
-        <Menu.Item>Taylor Swift</Menu.Item>
-        <Menu.Item>Ariana Grande</Menu.Item>
+        <Menu.Item label="Taylor Swift" />
+        <Menu.Item label="Ariana Grande" />
       </Menu>,
     );
 
@@ -127,8 +128,8 @@ describe('Menu', () => {
     const { getByTestId, getByText } = render(
       <Menu trigger={<MenuTrigger />}>
         <Menu.Category label="Singers" noDivider data-testid="singers-category">
-          <Menu.Item>Taylor Swift</Menu.Item>
-          <Menu.Item>Ariana Grande</Menu.Item>
+          <Menu.Item label="Taylor Swift" />
+          <Menu.Item label="Ariana Grande" />
         </Menu.Category>
       </Menu>,
     );
@@ -145,16 +146,33 @@ describe('Menu', () => {
     );
   });
 
+  it('menu item renders label and description', () => {
+    const { getByText } = render(
+      <Menu trigger={<MenuTrigger />}>
+        <Menu.Item label="Taylor Swift" description="Pop singer" />
+        <Menu.Item label="Ariana Grande" />
+      </Menu>,
+    );
+
+    const trigger = getByText('Open Menu');
+    fireEvent.click(trigger);
+
+    const label = getByText('Taylor Swift');
+    const description = getByText('Pop singer');
+
+    expect(label).toBeInTheDocument();
+    expect(description).toBeInTheDocument();
+  });
+
   it('menu item could be decorated with left and right icon', () => {
     const { getByTestId, getByText } = render(
       <Menu trigger={<MenuTrigger />}>
         <Menu.Item
           iconLeft={<User data-testid="left-icon" />}
           iconRight={<Checkmark data-testid="right-icon" />}
-        >
-          Taylor Swift
-        </Menu.Item>
-        <Menu.Item>Ariana Grande</Menu.Item>
+          label="Taylor Swift"
+        />
+        <Menu.Item label="Ariana Grande" />
       </Menu>,
     );
 
@@ -172,8 +190,8 @@ describe('Menu', () => {
   it('menu item could be decorated with alert notification dot', () => {
     const { getByTestId, getByText } = render(
       <Menu trigger={<MenuTrigger />}>
-        <Menu.Item showAlert>Taylor Swift</Menu.Item>
-        <Menu.Item>Ariana Grande</Menu.Item>
+        <Menu.Item showAlert label="Taylor Swift" />
+        <Menu.Item label="Ariana Grande" />
       </Menu>,
     );
 
@@ -189,8 +207,8 @@ describe('Menu', () => {
   it('when menu is already opened, clicking trigger closes it', () => {
     const { getByText, queryByRole } = render(
       <Menu trigger={<MenuTrigger />}>
-        <Menu.Item>Taylor Swift</Menu.Item>
-        <Menu.Item>Ariana Grande</Menu.Item>
+        <Menu.Item label="Taylor Swift" />
+        <Menu.Item label="Ariana Grande" />
       </Menu>,
     );
 
@@ -205,9 +223,9 @@ describe('Menu', () => {
   it('when menu is already opened, clicking menu item closes it', () => {
     const { getByText, queryByRole } = render(
       <Menu trigger={<MenuTrigger />}>
-        <Menu.Item>Taylor Swift</Menu.Item>
-        <Menu.Item>Ariana Grande</Menu.Item>
-        <Menu.Item>Justin Bieber</Menu.Item>
+        <Menu.Item label="Taylor Swift" />
+        <Menu.Item label="Ariana Grande" />
+        <Menu.Item label="Justin Bieber" />
       </Menu>,
     );
 
@@ -223,8 +241,8 @@ describe('Menu', () => {
   it('when menu is already opened, clicking menu button closes it', () => {
     const { getByText, queryByRole } = render(
       <Menu trigger={<MenuTrigger />}>
-        <Menu.Item>Taylor Swift</Menu.Item>
-        <Menu.Item>Ariana Grande</Menu.Item>
+        <Menu.Item label="Taylor Swift" />
+        <Menu.Item label="Ariana Grande" />
         <Menu.Button>See More</Menu.Button>
       </Menu>,
     );
@@ -241,9 +259,11 @@ describe('Menu', () => {
   it('menu item could be rendered as a link', () => {
     const { getByText } = render(
       <Menu trigger={<MenuTrigger />}>
-        <Menu.Item as="a" href="http://taylor-swift.com">
-          Taylor Swift Link
-        </Menu.Item>
+        <Menu.Item
+          as="a"
+          href="http://taylor-swift.com"
+          label="Taylor Swift Link"
+        />
       </Menu>,
     );
 
@@ -257,9 +277,11 @@ describe('Menu', () => {
   it('menu item requires props owned by custom component passed into "as" prop', () => {
     const { getByText } = render(
       <Menu trigger={<MenuTrigger />}>
-        <Menu.Item as={TestComponent} to="http://polymorphic-taylor-swift.com">
-          Polymorphic Taylor Swift Link
-        </Menu.Item>
+        <Menu.Item
+          as={TestComponent}
+          to="http://polymorphic-taylor-swift.com"
+          label="Polymorphic Taylor Swift Link"
+        />
       </Menu>,
     );
 
@@ -270,26 +292,63 @@ describe('Menu', () => {
     expect(item).toHaveAttribute('href', 'http://polymorphic-taylor-swift.com');
   });
 
-  it('renders snapshot with categories, active style, icons, and alert dot', () => {
-    const { getByRole, getByText } = render(
-      <Menu trigger={<MenuTrigger />}>
-        <Menu.Category label="Singers" noDivider>
-          <Menu.Item showAlert>Taylor Swift</Menu.Item>
-          <Menu.Item iconLeft={<Checkmark />} iconRight={<Checkmark />}>
-            Ariana Grande
-          </Menu.Item>
-          <Menu.Item isActive>Justin Bieber</Menu.Item>
-        </Menu.Category>
-        <Menu.Category>
-          <Menu.Button>Log Out</Menu.Button>
-        </Menu.Category>
-      </Menu>,
-    );
+  describe('renders snapshot with categories, active style, icons, alert dot, and custom offset of', () => {
+    it('regular menu', () => {
+      const { getByRole, getByText } = render(
+        <Menu trigger={<MenuTrigger />} offset={tokens.spacing.large}>
+          <Menu.Category label="Singers" noDivider>
+            <Menu.Item
+              showAlert
+              label="Taylor Swift"
+              description="Pop singer"
+            />
+            <Menu.Item
+              iconLeft={<Checkmark />}
+              iconRight={<Checkmark />}
+              label="Ariana Grande"
+            />
+            <Menu.Item isActive label="Justin Bieber" />
+          </Menu.Category>
+          <Menu.Category>
+            <Menu.Button>Log Out</Menu.Button>
+          </Menu.Category>
+        </Menu>,
+      );
 
-    const trigger = getByText('Open Menu');
-    fireEvent.click(trigger);
-    const menu = getByRole('menu');
+      const trigger = getByText('Open Menu');
+      fireEvent.click(trigger);
+      const menu = getByRole('menu');
 
-    expect(menu).toMatchSnapshot();
+      expect(menu).toMatchSnapshot();
+    });
+
+    it('inverted menu', () => {
+      const { getByRole, getByText } = render(
+        <Menu inverted trigger={<MenuTrigger />} offset={tokens.spacing.large}>
+          <Menu.Category label="Singers" noDivider>
+            <Menu.Item
+              showAlert
+              label="Taylor Swift"
+              description="Pop singer"
+            />
+            <Menu.Item
+              iconLeft={<Checkmark />}
+              iconRight={<Checkmark />}
+              label="Ariana Grande"
+            />
+            <Menu.Item isActive label="Justin Bieber" />
+          </Menu.Category>
+          <Menu.Category>
+            <Menu.Button>Log Out</Menu.Button>
+          </Menu.Category>
+        </Menu>,
+      );
+
+      const trigger = getByText('Open Menu');
+      fireEvent.click(trigger);
+      const menu = getByRole('menu');
+
+      expect(menu).toMatchSnapshot();
+    });
   });
 });
