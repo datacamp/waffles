@@ -4,7 +4,9 @@ import { mergeProps } from '@react-aria/utils';
 import { tokens } from '../tokens';
 
 type DataCampBrandingInternalProps = {
+  /* Whether the logo/logomark is inverted in color */
   inverted?: boolean;
+  /* Whether the logo/logomark is monochrome in color */
   monochrome?: boolean;
   /* [skip docs] */
   regularVariant: (props: SVGProps<SVGSVGElement>) => JSX.Element;
