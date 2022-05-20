@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
-import * as allBrandingAssets from '@datacamp/waffles/datacamp-branding';
+import * as allBrandingAssets from '@datacamp/waffles/branding-asset';
 
 const wrapperStyle = css`
   display: flex;

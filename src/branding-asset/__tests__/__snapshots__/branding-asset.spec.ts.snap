@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataCamp Branding exports every DataCamp branding asset 1`] = `
+exports[`Branding Asset exports every Branding Asset asset 1`] = `
 Object {
   "DataCampLogo": [Function],
   "DataCampLogoTag": [Function],

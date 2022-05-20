@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import * as datacampBrandingAssets from '../index';
+import * as brandingAssets from '../index';
 import { tokens } from '../../tokens';
 import { Text } from '../../text';
 
@@ -13,7 +13,7 @@ const wrapperStyle = css`
   border-radius: ${tokens.borderRadius.medium};
 `;
 
-const datacampBrandingWrapperStyle = css`
+const brandingAssetWrapperStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,15 +30,15 @@ const labelStyle = css`
 function Story() {
   return (
     <div css={wrapperStyle}>
-      {Object.entries(datacampBrandingAssets).map((assetEntry) => {
-        const [name, DataCampBrandingAsset] = assetEntry;
+      {Object.entries(brandingAssets).map((assetEntry) => {
+        const [name, BrandingAsset] = assetEntry;
         return (
           <div
             key={name}
-            css={datacampBrandingWrapperStyle}
-            data-testid="datacamp-branding-row"
+            css={brandingAssetWrapperStyle}
+            data-testid="branding-asset-row"
           >
-            <DataCampBrandingAsset />
+            <BrandingAsset />
             <Text css={labelStyle}>{name}</Text>
           </div>
         );
