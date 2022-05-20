@@ -50,7 +50,6 @@ const labelStyle = css`
 type AssetPreviewType = {
   name: string;
   asset: React.ReactNode;
-  isLabelVisible?: boolean;
 };
 
 function AssetPreview({ name, asset }: AssetPreviewType) {
