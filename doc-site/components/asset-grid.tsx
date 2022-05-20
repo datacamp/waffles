@@ -7,9 +7,7 @@ import { Heading } from '@datacamp/waffles/heading';
 import Bookmark from './bookmark';
 
 const gridHeadingStyle = css`
-  &:not(:first-of-type) {
-    padding-top: ${tokens.spacing.medium};
-  }
+  padding-top: ${tokens.spacing.medium};
 `;
 
 const wrapperStyle = css`
