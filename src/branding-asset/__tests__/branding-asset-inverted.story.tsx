@@ -23,7 +23,7 @@ const brandingAssetWrapperStyle = css`
 `;
 
 const labelStyle = css`
-  color: inherit;
+  color: ${tokens.colors.white};
   padding-top: ${tokens.spacing.small};
 `;
 
