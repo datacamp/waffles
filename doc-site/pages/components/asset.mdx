@@ -7,12 +7,24 @@ import Imports from '../../components/imports';
 
 import BasicUsage from '../../examples/asset/basic-usage';
 import CustomSize from '../../examples/asset/custom-size';
+import { Notification } from '@datacamp/waffles/notification';
+import { Link } from '@datacamp/waffles/link';
 
 export default Layout;
 
 # Asset
 
 🚧 This page is **under construction**.
+
+<Notification
+  title="Branding Assets"
+  description={
+    <>
+      If you're looking DataCamp Logos/Logomarks, see our{' '}
+      <Link href="../branding-asset">Branding Assets</Link> components.
+    </>
+  }
+/>
 
 <AllAssetTypes />
 
