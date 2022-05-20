@@ -1,4 +1,4 @@
-import { DataCampLogoTag } from '@datacamp/waffles/datacamp-branding';
+import { DataCampLogoTag } from '@datacamp/waffles/branding-asset';
 
 function Example() {
   return <DataCampLogoTag width="200px" />;

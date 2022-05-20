@@ -2,14 +2,12 @@ import React from 'react';
 
 import DataCampLogomarkRegular from './generated/logomark/datacamp-logomark-regular';
 import DataCampLogomarkMonochrome from './generated/logomark/datacamp-logomark-monochrome';
-import DataCampBrandingInternal from './datacamp-branding-internal';
+import BrandingAssetInternal from './branding-asset-internal';
 
 type DataCampLogomarkProps = {
   inverted?: boolean;
   monochrome?: boolean;
 } & React.SVGAttributes<SVGElement>;
-
-// TODO: Document props
 
 function DataCampLogomark({
   inverted = false,
@@ -17,7 +15,7 @@ function DataCampLogomark({
   ...restProps
 }: DataCampLogomarkProps) {
   return (
-    <DataCampBrandingInternal
+    <BrandingAssetInternal
       regularVariant={DataCampLogomarkRegular}
       monochromeVariant={DataCampLogomarkMonochrome}
       inverted={inverted}

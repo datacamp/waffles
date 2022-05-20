@@ -1,0 +1,62 @@
+import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
+import AllBrandingGrid from '../../components/all-branding-grid';
+import Example from '../../components/example';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import BasicUsage from '../../examples/branding-asset/basic-usage';
+import CustomSize from '../../examples/branding-asset/custom-size';
+import InvertedMonochrome from '../../examples/branding-asset/inverted-monochrome';
+import Inverted from '../../examples/branding-asset/inverted';
+import Monochrome from '../../examples/branding-asset/monochrome';
+
+export default Layout;
+
+# Branding Asset
+
+🚧 This page is **under construction**.
+
+<AllBrandingGrid />
+
+## Examples
+
+<Example title="Basic Usage" path="branding-asset/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Custom Size" path="branding-asset/custom-size">
+  <CustomSize />
+</Example>
+
+<Example title="Monochrome" path="branding-asset/monochrome">
+  <Monochrome />
+</Example>
+
+<Example title="Inverted" path="branding-asset/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+<Example
+  title="Inverted and Monochrome"
+  path="branding-asset/inverted-monochrome"
+  darkPreview
+>
+  <InvertedMonochrome />
+</Example>
+
+## Props
+
+### Branding Asset
+
+In addition to `inverted` and `monochrome` listed below, Branding Assets accept all props a regular `SVGElement` would, such as `width`, `height`, `aria-` and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/branding-asset/branding-asset-internal')}
+/>
+
+## Imports
+
+You can import any existing Branding Asset as a separate component. For example to import the `DataCampLogo` asset use:
+
+<Imports module={['DataCampLogo']} path="@datacamp/waffles/branding-asset" />
