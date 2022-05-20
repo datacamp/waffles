@@ -36,6 +36,7 @@ function getSvgInnerContent(svg) {
     .replace(/fill-rule/g, 'fillRule')
     .replace(/clip-rule/g, 'clipRule')
     .replace(/fill-opacity/g, 'fillOpacity')
+    .replace(/stroke-width/g, 'strokeWidth')
     .trim();
 }
 
