@@ -3,9 +3,10 @@ type AssetModule = Record<
   (props: Record<string, unknown>) => JSX.Element
 >;
 
-const groups = ['3d', 'Logomark', 'Logo'];
+const groups = ['Alpa', '3d', 'Logomark', 'Logo'];
 
 type GroupedAssets = {
+  Alpa: AssetModule;
   '3D': AssetModule;
   Logomark: AssetModule;
   Logo: AssetModule;
