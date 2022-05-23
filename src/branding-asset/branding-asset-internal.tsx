@@ -1,18 +1,16 @@
-import React, { SVGProps } from 'react';
+import { SVGProps } from 'react';
 import { mergeProps } from '@react-aria/utils';
 
 import { tokens } from '../tokens';
 
-type BrandingAssetInternalProps = {
-  /* Whether the branding asset is inverted in color */
-  inverted?: boolean;
-  /* Whether the branding asset is monochrome in color */
-  monochrome?: boolean;
+import { BrandingAssetGenericProps } from './branding-asset.types';
+
+type BrandingAssetInternalProps = BrandingAssetGenericProps & {
   /* [skip docs] */
   regularVariant: (props: SVGProps<SVGSVGElement>) => JSX.Element;
   /* [skip docs] */
   monochromeVariant: (props: SVGProps<SVGSVGElement>) => JSX.Element;
-} & React.SVGAttributes<SVGElement>;
+};
 
 function BrandingAssetInternal({
   inverted = false,

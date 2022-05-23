@@ -1,19 +1,13 @@
-import React from 'react';
-
 import DataCampLogoTagRegular from './generated/logo-tag/datacamp-logo-tag-regular';
 import DataCampLogoTagMonochrome from './generated/logo-tag/datacamp-logo-tag-monochrome';
+import { BrandingAssetGenericProps } from './branding-asset.types';
 import BrandingAssetInternal from './branding-asset-internal';
-
-type DataCampLogoTagProps = {
-  inverted?: boolean;
-  monochrome?: boolean;
-} & React.SVGAttributes<SVGElement>;
 
 function DataCampLogoTag({
   inverted = false,
   monochrome = false,
   ...restProps
-}: DataCampLogoTagProps) {
+}: BrandingAssetGenericProps) {
   return (
     <BrandingAssetInternal
       regularVariant={DataCampLogoTagRegular}
