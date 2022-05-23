@@ -1,15 +1,15 @@
 import DataCampLogomarkRegular from './generated/logomark/datacamp-logomark-regular';
 import DataCampLogomarkMonochrome from './generated/logomark/datacamp-logomark-monochrome';
-import { BrandingAssetGenericProps } from './branding-asset.types';
-import BrandingAssetInternal from './branding-asset-internal';
+import { BrandGenericProps } from './brand.types';
+import BrandInternal from './brand-internal';
 
 function DataCampLogomark({
   inverted = false,
   monochrome = false,
   ...restProps
-}: BrandingAssetGenericProps) {
+}: BrandGenericProps) {
   return (
-    <BrandingAssetInternal
+    <BrandInternal
       regularVariant={DataCampLogomarkRegular}
       monochromeVariant={DataCampLogomarkMonochrome}
       inverted={inverted}

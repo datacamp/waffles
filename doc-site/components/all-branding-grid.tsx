@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
-import * as allBrandingAssets from '@datacamp/waffles/branding-asset';
+import * as allBrands from '@datacamp/waffles/brand';
 
 const wrapperStyle = css`
   display: flex;
@@ -35,12 +35,12 @@ const labelStyle = css`
   white-space: nowrap;
 `;
 
-type BrandssetPreviewType = {
+type BrandPreviewType = {
   name: string;
   asset: React.ReactNode;
 };
 
-function BrandAssetPreview({ name, asset }: BrandssetPreviewType) {
+function BrandAssetPreview({ name, asset }: BrandPreviewType) {
   return (
     <div css={assetWrapperStyle}>
       {asset}
@@ -53,7 +53,7 @@ function AllBrandingGrid() {
   return (
     <section css={wrapperStyle}>
       <div css={assetPreview}>
-        {Object.entries(allBrandingAssets).map(([name, BrandAsset]) => {
+        {Object.entries(allBrands).map(([name, BrandAsset]) => {
           return (
             <BrandAssetPreview
               key={name}

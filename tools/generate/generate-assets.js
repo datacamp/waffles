@@ -35,7 +35,7 @@ function generateAssetBundle() {
 
   // Add the datacamp brand assets to the archive too
   archive.directory(
-    path.join(__dirname, '../../src/branding-asset/raw'),
+    path.join(__dirname, '../../src/brand/raw'),
     'datacamp-brand',
   );
   // Finalize the archiving

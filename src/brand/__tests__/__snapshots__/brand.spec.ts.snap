@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brand exports every Brand component 1`] = `
+Object {
+  "DataCampLogo": [Function],
+  "DataCampLogoTagline": [Function],
+  "DataCampLogomark": [Function],
+  "DataCampLogomarkTagline": [Function],
+}
+`;

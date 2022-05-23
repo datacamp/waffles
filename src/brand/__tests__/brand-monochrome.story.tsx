@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import * as brandingAssets from '../index';
+import * as brands from '../index';
 import { tokens } from '../../tokens';
 import { Text } from '../../text';
 
@@ -8,7 +8,7 @@ const wrapperStyle = css`
   display: flex;
   flex-wrap: wrap;
   padding: ${tokens.spacing.small};
-  background-color: ${tokens.colors.navy};
+  background-color: ${tokens.colors.white};
   border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
   border-radius: ${tokens.borderRadius.medium};
 `;
@@ -23,22 +23,22 @@ const brandingAssetWrapperStyle = css`
 `;
 
 const labelStyle = css`
-  color: ${tokens.colors.white};
+  color: inherit;
   padding-top: ${tokens.spacing.small};
 `;
 
 function Story() {
   return (
     <div css={wrapperStyle}>
-      {Object.entries(brandingAssets).map((assetEntry) => {
-        const [name, BrandingAsset] = assetEntry;
+      {Object.entries(brands).map((assetEntry) => {
+        const [name, Brand] = assetEntry;
         return (
           <div
             key={name}
             css={brandingAssetWrapperStyle}
-            data-testid="branding-asset-row"
+            data-testid="brand-row"
           >
-            <BrandingAsset inverted />
+            <Brand monochrome />
             <Text css={labelStyle}>{name}</Text>
           </div>
         );

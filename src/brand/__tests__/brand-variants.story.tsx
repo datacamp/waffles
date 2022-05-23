@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import * as brandingAssets from '../index';
+import * as brands from '../index';
 import { tokens } from '../../tokens';
 import { Text } from '../../text';
 
@@ -30,15 +30,15 @@ const labelStyle = css`
 function Story() {
   return (
     <div css={wrapperStyle}>
-      {Object.entries(brandingAssets).map((assetEntry) => {
-        const [name, BrandingAsset] = assetEntry;
+      {Object.entries(brands).map((assetEntry) => {
+        const [name, Brand] = assetEntry;
         return (
           <div
             key={name}
             css={brandingAssetWrapperStyle}
-            data-testid="branding-asset-row"
+            data-testid="brand-row"
           >
-            <BrandingAsset />
+            <Brand />
             <Text css={labelStyle}>{name}</Text>
           </div>
         );
