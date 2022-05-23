@@ -1,19 +1,13 @@
-import React from 'react';
-
 import DataCampLogomarkRegular from './generated/logomark/datacamp-logomark-regular';
 import DataCampLogomarkMonochrome from './generated/logomark/datacamp-logomark-monochrome';
+import { BrandingAssetGenericProps } from './branding-asset.types';
 import BrandingAssetInternal from './branding-asset-internal';
-
-type DataCampLogomarkProps = {
-  inverted?: boolean;
-  monochrome?: boolean;
-} & React.SVGAttributes<SVGElement>;
 
 function DataCampLogomark({
   inverted = false,
   monochrome = false,
   ...restProps
-}: DataCampLogomarkProps) {
+}: BrandingAssetGenericProps) {
   return (
     <BrandingAssetInternal
       regularVariant={DataCampLogomarkRegular}
