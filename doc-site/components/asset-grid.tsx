@@ -1,4 +1,5 @@
 import React from 'react';
+import { AssetModule } from 'helpers/group-assets';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
@@ -10,39 +11,37 @@ const gridHeadingStyle = css`
   padding-top: ${tokens.spacing.medium};
 `;
 
-const wrapperStyle = css`
-  display: flex;
-  flex-direction: column;
-`;
-
-const assetPreview = css`
-  display: flex;
-  flex-wrap: wrap;
-  padding: ${tokens.spacing.medium};
-  background-color: ${tokens.colors.white};
-  border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
-  border-radius: ${tokens.borderRadius.medium};
-`;
+const assetPreview = (columnCount: number) => {
+  return css`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(${columnCount}px, 1fr));
+    gap: ${tokens.spacing.large};
+    align-items: center;
+    padding: ${tokens.spacing.medium};
+    background-color: ${tokens.colors.white};
+    border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
+    border-radius: ${tokens.borderRadius.medium};
+  `;
+};
 
 const assetWrapperStyle = css`
+  color: ${tokens.colors.navy};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: ${tokens.spacing.xsmall};
-  width: 160px;
-  height: 160px;
 `;
 
 const labelStyle = css`
   display: block;
   flex: 1;
   color: inherit;
+  padding-bottom: ${tokens.spacing.xsmall};
   padding-top: ${tokens.spacing.small};
-  max-width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 100%;
 `;
 
 type AssetPreviewType = {
@@ -59,32 +58,31 @@ function AssetPreview({ name, asset }: AssetPreviewType) {
   );
 }
 
-type AssetModule = Record<
-  string,
-  (props: Record<string, unknown>) => JSX.Element
->;
-
 type AssetGridProps = {
   assetType: string;
   assets: AssetModule;
+  maxColumns: number;
 };
 
-function AssetGrid({ assetType, assets }: AssetGridProps) {
+function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
+  // Calculate the responsive max column width, given a maxColumns number
+  const maxColumnWidth = (720 - 32 - 24 * (maxColumns - 1) - 2) / maxColumns;
   return (
     <>
       <Heading id={`${assetType}-assets`} css={gridHeadingStyle} as={'h2'}>
         {assetType}
         <Bookmark targetId={`${assetType}-assets`} />
       </Heading>
-      <section css={wrapperStyle}>
-        <div css={assetPreview}>
+      <section>
+        <div css={assetPreview(maxColumnWidth)}>
           {Object.entries(assets).map((assetData) => {
             const [name, Asset] = assetData;
+
             return (
               <AssetPreview
                 key={name}
                 name={name}
-                asset={<Asset width={'125px'} height={'125px'} />}
+                asset={<Asset height={assetType === 'Logo' ? 30 : ''} />}
               />
             );
           })}
