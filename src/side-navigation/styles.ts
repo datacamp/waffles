@@ -137,6 +137,10 @@ export function categoryLabelStyle() {
     padding-left: ${tokens.spacing.medium};
     padding-right: ${tokens.spacing.medium};
     margin: 0;
+
+    ${mediaQuery.aboveMedium} {
+      font-size: ${tokens.fontSizes.xsmall};
+    }
   `;
 }
 
