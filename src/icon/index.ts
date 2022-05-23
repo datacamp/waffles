@@ -144,6 +144,7 @@ export { default as Matrix } from './generated/matrix';
 export { default as Medal } from './generated/medal';
 export { default as Menu } from './generated/menu';
 export { default as Microphone } from './generated/microphone';
+export { default as Minus } from './generated/minus';
 export { default as Mobile } from './generated/mobile';
 export { default as Moon } from './generated/moon';
 export { default as More } from './generated/more';

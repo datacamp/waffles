@@ -126,6 +126,7 @@ Object {
   "Menu": [Function],
   "Microphone": [Function],
   "MicrophoneInverted": [Function],
+  "Minus": [Function],
   "Mobile": [Function],
   "Moon": [Function],
   "MoonInverted": [Function],
