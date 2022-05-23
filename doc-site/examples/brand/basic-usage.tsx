@@ -1,4 +1,4 @@
-import { DataCampLogo } from '@datacamp/waffles/branding-asset';
+import { DataCampLogo } from '@datacamp/waffles/brand';
 
 function Example() {
   return <DataCampLogo />;

@@ -3,22 +3,22 @@ import { mergeProps } from '@react-aria/utils';
 
 import { tokens } from '../tokens';
 
-import { BrandingAssetGenericProps } from './branding-asset.types';
+import { BrandGenericProps } from './brand.types';
 
-type BrandingAssetInternalProps = BrandingAssetGenericProps & {
+type BrandInternalProps = BrandGenericProps & {
   /* [skip docs] */
   regularVariant: (props: SVGProps<SVGSVGElement>) => JSX.Element;
   /* [skip docs] */
   monochromeVariant: (props: SVGProps<SVGSVGElement>) => JSX.Element;
 };
 
-function BrandingAssetInternal({
+function BrandInternal({
   inverted = false,
   monochrome = false,
   regularVariant: RegularVariant,
   monochromeVariant: MonochromeVariant,
   ...restProps
-}: BrandingAssetInternalProps) {
+}: BrandInternalProps) {
   const mergedProps = mergeProps(
     { color: inverted ? tokens.colors.white : tokens.colors.navy },
     restProps,
@@ -31,4 +31,4 @@ function BrandingAssetInternal({
   );
 }
 
-export default BrandingAssetInternal;
+export default BrandInternal;
