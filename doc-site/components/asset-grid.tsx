@@ -3,12 +3,17 @@ import { AssetModule } from 'helpers/group-assets';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
+import { Link } from '@datacamp/waffles/link';
 import { Heading } from '@datacamp/waffles/heading';
 
 import Bookmark from './bookmark';
 
 const gridHeadingStyle = css`
   padding-top: ${tokens.spacing.medium};
+`;
+
+const downloadLinkStyle = css`
+  margin-top: ${tokens.spacing.medium};
 `;
 
 const assetPreview = (columnCount: number) => {
@@ -88,6 +93,15 @@ function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
           })}
         </div>
       </section>
+      <Link
+        href={`../../downloads/waffles-${
+          assetType.toLowerCase().split(' ')[0]
+        }-asset-bundle.zip`}
+        download
+        css={downloadLinkStyle}
+      >
+        Download {assetType} `SVG` Assets
+      </Link>
     </>
   );
 }

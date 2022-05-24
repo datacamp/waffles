@@ -22,25 +22,8 @@ const assetsExportPath = path.join(assetsDirPath, 'index.ts');
 
 const assetBundleExportPath = path.join(
   __dirname,
-  '../../doc-site/public/waffles-asset-bundle.zip',
+  '../../doc-site/public/downloads',
 );
-
-function generateAssetBundle() {
-  // Initialise output file for asset bundle and archiver
-  const assetOutputBundle = fs.createWriteStream(assetBundleExportPath);
-  const archive = archiver('zip');
-  archive.pipe(assetOutputBundle);
-  // Add all of the icons from the directory into the bundle zip, under group directory
-  archive.directory(path.join(assetsDirPath, 'raw'), false);
-
-  // Add the datacamp brand assets to the archive too
-  archive.directory(
-    path.join(__dirname, '../../src/brand/raw'),
-    'datacamp-brand',
-  );
-  // Finalize the archiving
-  archive.finalize();
-}
 
 function generateAssets() {
   const assetDirs = glob.sync('*', { cwd: 'src/asset/raw/' });
@@ -49,6 +32,9 @@ function generateAssets() {
 
   // Iterate each asset input directory to handle the different types / groupings
   assetDirs.forEach((directory) => {
+    // Bundle up the raw svgs for download on the docs site
+    generateAssetBundle(directory);
+
     // Array of SVG asset filenames
     const svgAssets = glob.sync('*.svg', { cwd: `src/asset/raw/${directory}` });
     svgAssets.forEach((svgFilename) => {
@@ -82,5 +68,35 @@ function generateAssets() {
   generateExportIndex(assetsExportPath, assetsExports);
 }
 
+function generateAssetBundle(directory) {
+  const archive = archiver('zip');
+
+  // Initialise output file for asset bundle and archiver
+  const assetOutputBundle = fs.createWriteStream(
+    path.join(assetBundleExportPath, `waffles-${directory}-asset-bundle.zip`),
+  );
+  archive.pipe(assetOutputBundle);
+  // Add all of the raw svgs from the directory into a bundle zip,
+  archive.directory(path.join(assetsDirPath, 'raw', directory), false);
+  // Finalize the archiving
+  archive.finalize();
+}
+
+function generateBrandBundle() {
+  const archive = archiver('zip');
+  // Initialise output file for asset bundle and archiver
+  const assetOutputBundle = fs.createWriteStream(
+    path.join(assetBundleExportPath, 'waffles-brand-bundle.zip'),
+  );
+
+  archive.pipe(assetOutputBundle);
+
+  // Bundle up the brand svgs into a zip
+  archive.directory(path.join(__dirname, '../../src/brand/raw'), false);
+
+  // Finalize the archiving
+  archive.finalize();
+}
+
 generateAssets();
-generateAssetBundle();
+generateBrandBundle();
