@@ -27,26 +27,30 @@ function DrawerInternal({
 }: DrawerProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
 
-  return isAnimating ? (
-    <Portal id="waffles-dialog-portal-root">
-      <Overlay isVisible={isOpen} data-testid="drawer-overlay" />
-      <FocusOn
-        onClickOutside={onClose}
-        onEscapeKey={onClose}
-        autoFocus
-        returnFocus
-      >
-        <Panel
-          isVisible={isOpen}
-          onClose={onClose}
-          placement={placement}
-          {...restProps}
-        >
-          {children}
-        </Panel>
-      </FocusOn>
+  return (
+    <Portal>
+      {isAnimating && (
+        <>
+          <Overlay isVisible={isOpen} data-testid="drawer-overlay" />
+          <FocusOn
+            onClickOutside={onClose}
+            onEscapeKey={onClose}
+            autoFocus
+            returnFocus
+          >
+            <Panel
+              isVisible={isOpen}
+              onClose={onClose}
+              placement={placement}
+              {...restProps}
+            >
+              {children}
+            </Panel>
+          </FocusOn>
+        </>
+      )}
     </Portal>
-  ) : null;
+  );
 }
 
 export default DrawerInternal;

@@ -27,21 +27,30 @@ function DialogInternal({
 }: DialogProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
 
-  return isAnimating ? (
-    <Portal id="waffles-dialog-portal-root">
-      <Overlay isVisible={isOpen} data-testid="dialog-overlay" />
-      <FocusOn
-        onClickOutside={onClose}
-        onEscapeKey={onClose}
-        autoFocus
-        returnFocus
-      >
-        <Panel role={role} isVisible={isOpen} onClose={onClose} {...restProps}>
-          {children}
-        </Panel>
-      </FocusOn>
+  return (
+    <Portal>
+      {isAnimating && (
+        <>
+          <Overlay isVisible={isOpen} data-testid="dialog-overlay" />
+          <FocusOn
+            onClickOutside={onClose}
+            onEscapeKey={onClose}
+            autoFocus
+            returnFocus
+          >
+            <Panel
+              role={role}
+              isVisible={isOpen}
+              onClose={onClose}
+              {...restProps}
+            >
+              {children}
+            </Panel>
+          </FocusOn>
+        </>
+      )}
     </Portal>
-  ) : null;
+  );
 }
 
 export default DialogInternal;

@@ -23,15 +23,15 @@ function Example() {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Portal</Button>
-      {isOpen && (
-        <Portal>
+      <Portal>
+        {isOpen && (
           <div css={contentStyle}>
             <Heading>The Portal</Heading>
             <Paragraph>Completely new dimension.</Paragraph>
             <Button onClick={() => setIsOpen(false)}>Close Portal</Button>
           </div>
-        </Portal>
-      )}
+        )}
+      </Portal>
     </>
   );
 }

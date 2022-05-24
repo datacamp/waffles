@@ -11,7 +11,7 @@ type ToastsListProps = {
 
 function ToastsList({ offset, children }: ToastsListProps) {
   return (
-    <Portal id="waffles-toast-portal-root">
+    <Portal>
       <ul data-testid="toasts-list" css={toastsListStyle({ offset })}>
         {children}
       </ul>
