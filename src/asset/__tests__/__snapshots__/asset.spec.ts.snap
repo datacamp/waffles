@@ -81,5 +81,6 @@ Object {
   "WafflesColoredLogo": [Function],
   "WafflesColoredLogomark": [Function],
   "WafflesLogo": [Function],
+  "WafflesLogomark": [Function],
 }
 `;
