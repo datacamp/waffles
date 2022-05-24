@@ -13,4 +13,9 @@ describe('Brand components', () => {
     cy.loadStory('brand-monochrome');
     cy.findAllByTestId('brand-row').should('have.length', 4);
   });
+
+  it('render all available Brand components as monochrome and inverted', () => {
+    cy.loadStory('brand-monochrome-inverted');
+    cy.findAllByTestId('brand-row').should('have.length', 4);
+  });
 });
