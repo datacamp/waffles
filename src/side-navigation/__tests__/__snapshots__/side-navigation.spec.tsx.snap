@@ -29,6 +29,12 @@ exports[`SideNavigation renders snapshot of category with label and divider 1`] 
   margin: 0;
 }
 
+@media screen and (min-width: 820px) {
+  .emotion-1 {
+    font-size: 10px;
+  }
+}
+
 .emotion-2 {
   margin: 0;
   padding: 0;

@@ -238,6 +238,22 @@ describe('Menu', () => {
     expect(dropdown).not.toBeInTheDocument();
   });
 
+  it('sets the data attribute on the menu item', () => {
+    const { getByText } = render(
+      <Menu trigger={<MenuTrigger />}>
+        <Menu.Item label="Taylor Swift" data-trackid="track-taylor-swift" />
+        <Menu.Item label="Ariana Grande" />
+        <Menu.Item label="Justin Bieber" />
+      </Menu>,
+    );
+
+    const trigger = getByText('Open Menu');
+    fireEvent.click(trigger);
+    const menuItem = getByText('Taylor Swift').closest('button');
+
+    expect(menuItem).toHaveAttribute('data-trackid', 'track-taylor-swift');
+  });
+
   it('when menu is already opened, clicking menu button closes it', () => {
     const { getByText, queryByRole } = render(
       <Menu trigger={<MenuTrigger />}>
@@ -254,6 +270,22 @@ describe('Menu', () => {
     const dropdown = queryByRole('menu');
 
     expect(dropdown).not.toBeInTheDocument();
+  });
+
+  it('sets the data attribute on the menu button', () => {
+    const { getByText } = render(
+      <Menu trigger={<MenuTrigger />}>
+        <Menu.Item label="Taylor Swift" />
+        <Menu.Item label="Ariana Grande" />
+        <Menu.Button data-trackid="track-see-more">See More</Menu.Button>
+      </Menu>,
+    );
+
+    const trigger = getByText('Open Menu');
+    fireEvent.click(trigger);
+    const menuButton = getByText('See More').closest('button');
+
+    expect(menuButton).toHaveAttribute('data-trackid', 'track-see-more');
   });
 
   it('menu item could be rendered as a link', () => {

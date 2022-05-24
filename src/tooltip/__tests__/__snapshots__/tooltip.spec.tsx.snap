@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tooltip renders snapshot of bottom placement 1`] = `
+exports[`Tooltip renders snapshot 1`] = `
 .emotion-0 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
@@ -15,69 +15,7 @@ exports[`Tooltip renders snapshot of bottom placement 1`] = `
   border-radius: 4px;
   line-height: 1.25;
   max-width: 300px;
-  top: 8px;
-  left: 0px;
-  background-color: #05192D;
-  color: #FFFFFF;
-}
-
-<div
-  class="emotion-0"
-  id="tooltip-123abC"
-  role="tooltip"
-  tabindex="-1"
->
-  Tooltip
-</div>
-`;
-
-exports[`Tooltip renders snapshot of bottomLeft placement 1`] = `
-.emotion-0 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  z-index: 10;
-  padding: 8px 12px;
-  border-radius: 4px;
-  line-height: 1.25;
-  max-width: 300px;
-  top: 8px;
-  left: 0px;
-  background-color: #05192D;
-  color: #FFFFFF;
-}
-
-<div
-  class="emotion-0"
-  id="tooltip-123abC"
-  role="tooltip"
-  tabindex="-1"
->
-  Tooltip
-</div>
-`;
-
-exports[`Tooltip renders snapshot of bottomRight placement 1`] = `
-.emotion-0 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  z-index: 10;
-  padding: 8px 12px;
-  border-radius: 4px;
-  line-height: 1.25;
-  max-width: 300px;
-  top: 8px;
+  top: 0px;
   left: 0px;
   background-color: #05192D;
   color: #FFFFFF;
@@ -108,165 +46,10 @@ exports[`Tooltip renders snapshot of inverted variant 1`] = `
   border-radius: 4px;
   line-height: 1.25;
   max-width: 300px;
-  top: 8px;
+  top: 0px;
   left: 0px;
   background-color: #FFFFFF;
   color: #05192D;
-}
-
-<div
-  class="emotion-0"
-  id="tooltip-123abC"
-  role="tooltip"
-  tabindex="-1"
->
-  Tooltip
-</div>
-`;
-
-exports[`Tooltip renders snapshot of left placement 1`] = `
-.emotion-0 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  z-index: 10;
-  padding: 8px 12px;
-  border-radius: 4px;
-  line-height: 1.25;
-  max-width: 300px;
-  top: 0px;
-  left: -8px;
-  background-color: #05192D;
-  color: #FFFFFF;
-}
-
-<div
-  class="emotion-0"
-  id="tooltip-123abC"
-  role="tooltip"
-  tabindex="-1"
->
-  Tooltip
-</div>
-`;
-
-exports[`Tooltip renders snapshot of right placement 1`] = `
-.emotion-0 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  z-index: 10;
-  padding: 8px 12px;
-  border-radius: 4px;
-  line-height: 1.25;
-  max-width: 300px;
-  top: 0px;
-  left: 8px;
-  background-color: #05192D;
-  color: #FFFFFF;
-}
-
-<div
-  class="emotion-0"
-  id="tooltip-123abC"
-  role="tooltip"
-  tabindex="-1"
->
-  Tooltip
-</div>
-`;
-
-exports[`Tooltip renders snapshot of top placement 1`] = `
-.emotion-0 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  z-index: 10;
-  padding: 8px 12px;
-  border-radius: 4px;
-  line-height: 1.25;
-  max-width: 300px;
-  top: -8px;
-  left: 0px;
-  background-color: #05192D;
-  color: #FFFFFF;
-}
-
-<div
-  class="emotion-0"
-  id="tooltip-123abC"
-  role="tooltip"
-  tabindex="-1"
->
-  Tooltip
-</div>
-`;
-
-exports[`Tooltip renders snapshot of topLeft placement 1`] = `
-.emotion-0 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  z-index: 10;
-  padding: 8px 12px;
-  border-radius: 4px;
-  line-height: 1.25;
-  max-width: 300px;
-  top: -8px;
-  left: 0px;
-  background-color: #05192D;
-  color: #FFFFFF;
-}
-
-<div
-  class="emotion-0"
-  id="tooltip-123abC"
-  role="tooltip"
-  tabindex="-1"
->
-  Tooltip
-</div>
-`;
-
-exports[`Tooltip renders snapshot of topRight placement 1`] = `
-.emotion-0 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  z-index: 10;
-  padding: 8px 12px;
-  border-radius: 4px;
-  line-height: 1.25;
-  max-width: 300px;
-  top: -8px;
-  left: 0px;
-  background-color: #05192D;
-  color: #FFFFFF;
 }
 
 <div
