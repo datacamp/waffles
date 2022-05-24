@@ -4,16 +4,13 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { Link } from '@datacamp/waffles/link';
-import { Heading } from '@datacamp/waffles/heading';
 
-import Bookmark from './bookmark';
+import markdownElements from '../components/markdown-elements';
 
-const gridHeadingStyle = css`
-  padding-top: ${tokens.spacing.medium};
-`;
+const TableHeading = markdownElements.h2;
 
 const downloadLinkStyle = css`
-  margin-top: ${tokens.spacing.medium};
+  margin-top: ${tokens.spacing.small};
 `;
 
 const assetPreview = (columnCount: number) => {
@@ -68,16 +65,13 @@ type AssetGridProps = {
   assets: AssetModule;
   maxColumns: number;
 };
-
 function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
   // Calculate the responsive max column width, given a maxColumns number
   const maxColumnWidth = (720 - 32 - 24 * (maxColumns - 1) - 2) / maxColumns;
+
   return (
     <>
-      <Heading id={`${assetType}-assets`} css={gridHeadingStyle} as={'h2'}>
-        {assetType}
-        <Bookmark targetId={`${assetType}-assets`} />
-      </Heading>
+      <TableHeading>{`${assetType} Assets`}</TableHeading>
       <section>
         <div css={assetPreview(maxColumnWidth)}>
           {Object.entries(assets).map((assetData) => {
@@ -87,7 +81,7 @@ function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
               <AssetPreview
                 key={name}
                 name={name}
-                asset={<Asset height={assetType === 'Logo' ? 30 : ''} />}
+                asset={<Asset height={assetType === 'Logo' ? 30 : undefined} />}
               />
             );
           })}
