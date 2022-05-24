@@ -76,4 +76,5 @@ export { default as SqlLogomark } from './generated/sql-logomark';
 export { default as TableauLogomark } from './generated/tableau-logomark';
 export { default as TheoryLogomark } from './generated/theory-logomark';
 export { default as WafflesColoredLogomark } from './generated/waffles-colored-logomark';
+export { default as WafflesLogomark } from './generated/waffles-logomark';
 export { default as AvatarPlaceholderColored } from './generated/avatar-placeholder-colored';
