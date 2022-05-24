@@ -92,7 +92,7 @@ function Tooltip({
   return (
     <>
       {element}
-      <Portal id="waffles-tooltip-portal-root">
+      <Portal>
         {isOpen && (
           <Text
             {...getFloatingProps({
