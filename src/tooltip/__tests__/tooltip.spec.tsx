@@ -11,17 +11,6 @@ jest.mock('nanoid', () => {
   };
 });
 
-const placements = [
-  'bottom',
-  'top',
-  'right',
-  'left',
-  'bottomLeft',
-  'bottomRight',
-  'topLeft',
-  'topRight',
-] as const;
-
 function TestRefTooltip() {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -152,41 +141,37 @@ describe('Tooltip', () => {
     expect(tooltip).toBeInTheDocument();
   });
 
-  describe('renders snapshot of', () => {
-    placements.forEach((placement) => {
-      it(`${placement} placement`, async () => {
-        const { getByRole, getByText } = render(
-          <Tooltip content="Tooltip" placement={placement}>
-            <button>Test</button>
-          </Tooltip>,
-        );
+  it('renders snapshot', async () => {
+    const { getByRole, getByText } = render(
+      <Tooltip content="Tooltip">
+        <button>Test</button>
+      </Tooltip>,
+    );
 
-        const button = getByText('Test');
-        fireEvent.focus(button);
+    const button = getByText('Test');
+    fireEvent.focus(button);
 
-        let tooltip;
-        await waitFor(() => {
-          tooltip = getByRole('tooltip');
-        });
-        expect(tooltip).toMatchSnapshot();
-      });
+    let tooltip;
+    await waitFor(() => {
+      tooltip = getByRole('tooltip');
     });
+    expect(tooltip).toMatchSnapshot();
+  });
 
-    it('inverted variant', async () => {
-      const { getByRole, getByText } = render(
-        <Tooltip content="Tooltip" inverted>
-          <button>Test</button>
-        </Tooltip>,
-      );
+  it('renders snapshot of inverted variant', async () => {
+    const { getByRole, getByText } = render(
+      <Tooltip content="Tooltip" inverted>
+        <button>Test</button>
+      </Tooltip>,
+    );
 
-      const button = getByText('Test');
-      fireEvent.focus(button);
+    const button = getByText('Test');
+    fireEvent.focus(button);
 
-      let tooltip;
-      await waitFor(() => {
-        tooltip = getByRole('tooltip');
-      });
-      expect(tooltip).toMatchSnapshot();
+    let tooltip;
+    await waitFor(() => {
+      tooltip = getByRole('tooltip');
     });
+    expect(tooltip).toMatchSnapshot();
   });
 });

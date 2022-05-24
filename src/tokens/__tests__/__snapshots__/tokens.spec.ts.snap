@@ -82,6 +82,7 @@ Object {
     "medium": "14px",
     "small": "12px",
     "xlarge": "18px",
+    "xsmall": "10px",
     "xxlarge": "20px",
   },
   "fontWeights": Object {
