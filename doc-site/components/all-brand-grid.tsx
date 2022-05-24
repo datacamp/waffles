@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
+import { Link } from '@datacamp/waffles/link';
 import * as allBrands from '@datacamp/waffles/brand';
 
 const wrapperStyle = css`
@@ -9,14 +10,18 @@ const wrapperStyle = css`
   flex-direction: column;
 `;
 
-const assetPreview = css`
+const downloadLinkStyle = css`
+  margin-top: ${tokens.spacing.medium};
+`;
+
+const brandPreview = css`
   padding: ${tokens.spacing.medium};
   background-color: ${tokens.colors.white};
   border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
   border-radius: ${tokens.borderRadius.medium};
 `;
 
-const assetWrapperStyle = css`
+const brandWrapperStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,29 +47,38 @@ type BrandPreviewType = {
 
 function BrandAssetPreview({ name, asset }: BrandPreviewType) {
   return (
-    <div css={assetWrapperStyle}>
+    <div css={brandWrapperStyle}>
       {asset}
       <Text css={labelStyle}>{name}</Text>
     </div>
   );
 }
 
-function AllBrandingGrid() {
+function AllBrandGrid() {
   return (
-    <section css={wrapperStyle}>
-      <div css={assetPreview}>
-        {Object.entries(allBrands).map(([name, BrandAsset]) => {
-          return (
-            <BrandAssetPreview
-              key={name}
-              name={name}
-              asset={<BrandAsset height={'100px'} />}
-            />
-          );
-        })}
-      </div>
-    </section>
+    <>
+      <section css={wrapperStyle}>
+        <div css={brandPreview}>
+          {Object.entries(allBrands).map(([name, BrandAsset]) => {
+            return (
+              <BrandAssetPreview
+                key={name}
+                name={name}
+                asset={<BrandAsset height={'100px'} />}
+              />
+            );
+          })}
+        </div>
+      </section>
+      <Link
+        href={`../../downloads/waffles-brand-bundle.zip`}
+        download
+        css={downloadLinkStyle}
+      >
+        Download Brand `SVG` Bundle
+      </Link>
+    </>
   );
 }
 
-export default AllBrandingGrid;
+export default AllBrandGrid;
