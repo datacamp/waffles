@@ -39,7 +39,7 @@ function useAddTableOfContentsEntry() {
 
   if (context === undefined) {
     throw new Error(
-      'Make sure to wrap useCounuseAddTableOfContentsEntry with a TableOfContentsProvider.',
+      'Make sure to wrap useAddTableOfContentsEntry with a TableOfContentsProvider.',
     );
   }
 
