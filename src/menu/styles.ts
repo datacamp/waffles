@@ -7,10 +7,7 @@ const dropdownBaseStyle = css`
   position: absolute; // Use absolute position, expected by float-ui default strategy
   z-index: ${tokens.zIndex.dropdown};
   margin: 0;
-  padding-top: ${tokens.spacing.small};
-  padding-bottom: ${tokens.spacing.small};
-  padding-left: 0;
-  padding-right: 0;
+  padding: ${tokens.spacing.small} 0;
   outline: 0;
   list-style: none;
   border-radius: ${tokens.borderRadius.medium};
@@ -192,10 +189,7 @@ export function categoryLabelStyle({
     letter-spacing: ${tokens.letterSpacing.relaxed};
     text-transform: uppercase;
     user-select: none;
-    padding-top: ${tokens.spacing.small};
-    padding-bottom: ${tokens.spacing.small};
-    padding-left: ${tokens.spacing.medium};
-    padding-right: ${tokens.spacing.medium};
+    padding: ${tokens.spacing.small} ${tokens.spacing.medium};
     margin: 0;
   `;
 }
