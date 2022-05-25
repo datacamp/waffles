@@ -22,7 +22,7 @@ const headerStyle = css`
   left: 0;
   width: 100%;
   height: ${HEADER_HEIGHT};
-  z-index: ${tokens.zIndex.sticky};
+  z-index: 7500; // Value between dropdown and modal
   background-color: ${tokens.colors.white};
   box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.medium};
   padding-left: ${tokens.spacing.small};
