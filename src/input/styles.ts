@@ -11,16 +11,19 @@ type InputSize = NonNullable<React.ComponentProps<typeof Input>['size']>;
 const sizeMap = {
   small: {
     sizing: tokens.sizing.small,
+    fontSize: tokens.fontSizes.small,
     spacing: '6px',
     spacingWithEnhancer: '26px',
   },
   medium: {
     sizing: tokens.sizing.medium,
+    fontSize: tokens.fontSizes.medium,
     spacing: '12px',
     spacingWithEnhancer: '36px',
   },
   large: {
     sizing: tokens.sizing.large,
+    fontSize: tokens.fontSizes.medium,
     spacing: '12px',
     spacingWithEnhancer: '36px',
   },
@@ -74,7 +77,6 @@ const inputBaseStyle = css`
   width: 100%;
   height: 100%;
   font-family: ${tokens.fontFamilies.sansSerif};
-  font-size: ${tokens.fontSizes.medium};
   font-weight: ${tokens.fontWeights.regular};
   line-height: ${tokens.lineHeights.relaxed};
   border: ${tokens.borderWidth.thin} solid ${tokens.colors.greyDark};
@@ -123,6 +125,7 @@ export function inputStyle({
 }: InputStyleOptions) {
   return css`
     ${inputBaseStyle}
+    font-size: ${sizeMap[size].fontSize};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     background-color: ${inverted
       ? tokens.colors.navyLight

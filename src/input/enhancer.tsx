@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
+
+import { Button } from '../button';
 
 import { enhancerStyle } from './styles';
 
 type EnhancerProps = {
   /* The content of the enhancer. In general, an [icon](/components/icon) from Waffles (of the default `medium` size) should be used.  */
   children: React.ReactNode;
+  /* [skip docs] */
+  size?: NonNullable<React.ComponentProps<typeof Button>['size']>;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-function Enhancer({ children, ...restProps }: EnhancerProps) {
+function Enhancer({ children, size = 'medium', ...restProps }: EnhancerProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
 
   return (
@@ -18,7 +22,12 @@ function Enhancer({ children, ...restProps }: EnhancerProps) {
       {...mergeProps(focusProps, restProps)}
       css={enhancerStyle({ isFocusVisible })}
     >
-      {children}
+      {children && (children as React.ReactElement).props['size']
+        ? children
+        : cloneElement(children as React.ReactElement, {
+            // Handle large buttons having medium sized icons by default
+            size: size === 'large' ? 'medium' : size,
+          })}
     </button>
   );
 }

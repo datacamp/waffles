@@ -1,5 +1,5 @@
 const tokens = {
-  sizing: { small: '24px', medium: '36px', large: '48px' },
+  sizing: { small: '28px', medium: '36px', large: '48px' },
   spacing: {
     xsmall: '4px',
     small: '8px',
