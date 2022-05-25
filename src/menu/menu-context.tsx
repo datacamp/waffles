@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { createContext, useContext } from 'react';
+
 import type { ReferenceType } from '@floating-ui/react-dom-interactions';
 
 type MenuContextValue = {

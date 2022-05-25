@@ -6,8 +6,8 @@ import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Link } from '@datacamp/waffles/link';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
-import { ContentContainer } from '@datacamp/waffles/content-container';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
+import { ContentContainer } from '@datacamp/waffles/content-container';
 
 import { ARTICLE_CONTENT_WIDTH } from '../components/constants';
 
