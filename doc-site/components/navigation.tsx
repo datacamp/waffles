@@ -82,6 +82,9 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/drawer">Drawer</Item>
               <Item href="/components/tooltip">Tooltip</Item>
               <Item href="/components/toast">Toast</Item>
+              <Item href="/components/menu" isNew>
+                Menu
+              </Item>
             </SideNav.Subcategory>
             <SideNav.Subcategory label="Content">
               <Item href="/components/asset" isNew>
