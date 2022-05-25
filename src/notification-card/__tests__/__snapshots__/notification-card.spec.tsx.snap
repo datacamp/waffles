@@ -27,8 +27,8 @@ exports[`NotificationCard renders snapshot of inverted variant default 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -98,7 +98,6 @@ exports[`NotificationCard renders snapshot of inverted variant default 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -113,9 +112,10 @@ exports[`NotificationCard renders snapshot of inverted variant default 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
@@ -234,8 +234,8 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -305,7 +305,6 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -320,9 +319,10 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
@@ -441,8 +441,8 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -512,7 +512,6 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -527,9 +526,10 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
@@ -648,8 +648,8 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -719,7 +719,6 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -734,9 +733,10 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
@@ -857,8 +857,8 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -928,7 +928,6 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -943,9 +942,10 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
@@ -1064,8 +1064,8 @@ exports[`NotificationCard renders snapshot of variant default 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -1135,7 +1135,6 @@ exports[`NotificationCard renders snapshot of variant default 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -1150,9 +1149,10 @@ exports[`NotificationCard renders snapshot of variant default 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;
@@ -1271,8 +1271,8 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -1342,7 +1342,6 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -1357,9 +1356,10 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;
@@ -1478,8 +1478,8 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -1549,7 +1549,6 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -1564,9 +1563,10 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;
@@ -1685,8 +1685,8 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -1756,7 +1756,6 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -1771,9 +1770,10 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;
@@ -1894,8 +1894,8 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -1965,7 +1965,6 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -1980,9 +1979,10 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;

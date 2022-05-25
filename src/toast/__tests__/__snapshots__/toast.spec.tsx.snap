@@ -41,8 +41,8 @@ exports[`Toast render snapshot of default toast 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -146,7 +146,6 @@ exports[`Toast render snapshot of default toast 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -161,9 +160,10 @@ exports[`Toast render snapshot of default toast 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;
@@ -305,8 +305,8 @@ exports[`Toast render snapshot of error toast 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -423,7 +423,6 @@ exports[`Toast render snapshot of error toast 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -438,9 +437,10 @@ exports[`Toast render snapshot of error toast 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;
@@ -587,8 +587,8 @@ exports[`Toast render snapshot of success toast 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -689,7 +689,6 @@ exports[`Toast render snapshot of success toast 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -704,9 +703,10 @@ exports[`Toast render snapshot of success toast 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;
@@ -848,8 +848,8 @@ exports[`Toast render snapshot of warning toast 1`] = `
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -950,7 +950,6 @@ exports[`Toast render snapshot of warning toast 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -965,9 +964,10 @@ exports[`Toast render snapshot of warning toast 1`] = `
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;

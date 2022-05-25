@@ -34,8 +34,8 @@ exports[`Notification renders snapshot of inverted notification with all optiona
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -170,7 +170,6 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -185,11 +184,12 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
   padding-left: 8px;
   padding-right: 8px;
+  font-size: 12px;
   color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
@@ -246,7 +246,6 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -261,9 +260,10 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
@@ -423,8 +423,8 @@ exports[`Notification renders snapshot of regular notification with all optional
 
 .emotion-2 {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -559,7 +559,6 @@ exports[`Notification renders snapshot of regular notification with all optional
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -574,11 +573,12 @@ exports[`Notification renders snapshot of regular notification with all optional
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
   padding-left: 8px;
   padding-right: 8px;
+  font-size: 12px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;
@@ -635,7 +635,6 @@ exports[`Notification renders snapshot of regular notification with all optional
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -650,9 +649,10 @@ exports[`Notification renders snapshot of regular notification with all optional
   -webkit-transition: background-color 125ms ease-out;
   transition: background-color 125ms ease-out;
   cursor: pointer;
-  height: 24px;
-  min-width: 24px;
+  height: 28px;
+  min-width: 28px;
   width: auto;
+  font-size: 12px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;
