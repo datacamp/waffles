@@ -3,9 +3,11 @@ import { Notification } from '@datacamp/waffles/notification';
 
 import Layout from '../../components/content-layout';
 import Example from '../../components/example';
+import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
 
+import playgroundConfig from '../../examples/menu/playground-config';
 import BasicUsage from '../../examples/menu/basic-usage';
 import AdvancedUsage from '../../examples/menu/advanced-usage';
 import Placement from '../../examples/menu/placement';
@@ -52,6 +54,10 @@ To keep the underlying menu structure _semantically correct_ and _accessible_, p
   <Inverted />
 </Example>
 
+## Playground
+
+<Playground {...playgroundConfig} />
+
 ## Props
 
 ### Menu
@@ -81,7 +87,12 @@ In addition to all custom props listed below, `Menu.Item` accepts all props regu
 
 ### Menu.Button
 
-Accepts all props Waffles [Button](/components/button/#props) would.
+In addition to all custom props listed below, `Menu.Button` accepts all props regular `HTMLButton` would, such as `onClick`, `disabled`, and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/menu/button')}
+  isPolymorphic
+/>
 
 ### useMenu
 
