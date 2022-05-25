@@ -12,7 +12,6 @@ import {
 
 import { tokens } from '../tokens';
 import { Text } from '../text';
-import { Portal } from '../portal';
 import { useId, useMergeRefs } from '../hooks';
 
 import { tooltipStyle } from './styles';
@@ -92,22 +91,20 @@ function Tooltip({
   return (
     <>
       {element}
-      <Portal>
-        {isOpen && (
-          <Text
-            {...getFloatingProps({
-              ...restProps,
-              ref: floating,
-              id,
-            })}
-            as="div"
-            role="tooltip"
-            css={tooltipStyle({ x, y, inverted })}
-          >
-            {content}
-          </Text>
-        )}
-      </Portal>
+      {isOpen && (
+        <Text
+          {...getFloatingProps({
+            ...restProps,
+            ref: floating,
+            id,
+          })}
+          as="div"
+          role="tooltip"
+          css={tooltipStyle({ x, y, inverted })}
+        >
+          {content}
+        </Text>
+      )}
     </>
   );
 }
