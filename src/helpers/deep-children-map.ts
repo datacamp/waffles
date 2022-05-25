@@ -1,5 +1,12 @@
 import React, { Children, cloneElement, isValidElement } from 'react';
 
+/**
+ * In a smimilar way to React.Children.map, creates a new children array, but calls a provided function recursively on every child (and its children).
+ *
+ * @param children React children
+ * @param mapFn Function called recursively on every child
+ * @returns Array of transformed React children
+ */
 function deepChildrenMap(
   children: React.ReactNode | React.ReactNode[],
   mapFn: (child: React.ReactNode) => React.ReactNode,
