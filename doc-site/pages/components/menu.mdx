@@ -1,0 +1,94 @@
+import * as MenuExports from '@datacamp/waffles/menu';
+import { Notification } from '@datacamp/waffles/notification';
+
+import Layout from '../../components/content-layout';
+import Example from '../../components/example';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import BasicUsage from '../../examples/menu/basic-usage';
+import AdvancedUsage from '../../examples/menu/advanced-usage';
+import Placement from '../../examples/menu/placement';
+import Inverted from '../../examples/menu/inverted';
+
+export default Layout;
+
+# Menu
+
+🚧 This page is **under construction**.
+
+To keep underlying menu structure _semantically correct_ and _accessible_, please follow these rules:
+
+- besides predefined subcomponents `Menu` can also contain entirely custom components
+- always wrap `Menu.Item` and `Menu.Button` (single or multiple ones) with `Menu.Category`
+
+<Notification
+  title="Accessible Subcomponents"
+  description={
+    <>
+      Currently <em>Menu</em> provides <em>Menu.Item</em>, and{' '}
+      <em>Menu.Button</em> accessible subcomponents for optimal keyboard
+      navigation experience. Other optimized subcompnents such as{' '}
+      <em>Menu.Checkbox</em> and <em>Menu.Radio</em> are coming soon!
+    </>
+  }
+/>
+
+## Examples
+
+<Example title="Basic Usage" path="menu/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Advanced Usage" path="menu/advanced-usage">
+  <AdvancedUsage />
+</Example>
+
+<Example title="Placement" path="menu/placement">
+  <Placement />
+</Example>
+
+<Example title="Inverted" path="menu/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Props
+
+### Menu
+
+In addition to all custom props listed below, `Menu` accepts all props regular `HTMLDiv` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/menu/menu-internal')}
+/>
+
+### Menu.Category
+
+In addition to all custom props listed below, `Menu.Category` accepts all props regular `HTMLDiv` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/menu/category')}
+/>
+
+### Menu.Item
+
+In addition to all custom props listed below, `Menu.Item` accepts all props regular `HTMLButton` would, such as `onClick`, `disabled`, and `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/menu/item')}
+  isPolymorphic
+/>
+
+### Menu.Button
+
+Accepts all props Waffles [Button](/components/button/#props) would.
+
+### useMenu
+
+A hook that exposes internal data for a given `Menu` component such as: `isOpen`, and `inverted`.
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={MenuExports} path="@datacamp/waffles/menu" />

@@ -6,6 +6,7 @@ import { useMenu } from './menu-context';
 import { buttonStyle } from './styles';
 
 type MenuButtonBaseProps = {
+  /* Defines the variant of the button. */
   variant?: React.ComponentProps<typeof Button>['variant'];
   /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
   iconLeft?: React.ReactNode;

@@ -28,10 +28,15 @@ const placementMap = {
 } as const;
 
 type MenuProps = {
+  /* The element that will trigger menu dropdown. In general [Button](/components/button) from Waffles should be used. */
   trigger: JSX.Element;
+  /* Content of the menu, either `Menu.Category` or custom components. */
   children: React.ReactNode;
+  /* Sets the menu dropdown's position relative to the trigger. */
   placement?: 'bottom' | 'top' | 'right' | 'left';
+  /* Sets the distance between menu dropdown and its trigger. By default `tokens.spacing.small` [design token](/foundation/design-tokens/) is used. */
   offset?: string;
+  /* Sets the style of all menu elements suitable for dark backgrounds. */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
