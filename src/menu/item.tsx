@@ -9,8 +9,8 @@ import {
   itemLabelStyle,
   itemDescriptionStyle,
 } from './styles';
+import NotificationDot from './notification-dot';
 import { useMenu } from './menu-context';
-import AlertDot from './alert-dot';
 
 import type { PolymorphicComponentProps } from '../helpers';
 
@@ -26,7 +26,7 @@ type ItemBaseProps = {
   /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
   iconRight?: React.ReactNode;
   /* Displays small notification dot next to the label. Useful for highlighting important items. */
-  showAlert?: boolean;
+  showNotificationDot?: boolean;
   /* Indicates that the item is currently active. */
   isActive?: boolean;
 };
@@ -41,7 +41,7 @@ function Item<T extends React.ElementType = 'button'>({
   description,
   iconLeft,
   iconRight,
-  showAlert = false,
+  showNotificationDot = false,
   isActive = false,
   onClick,
   ...restProps
@@ -69,7 +69,7 @@ function Item<T extends React.ElementType = 'button'>({
       role="menuitem"
       css={itemStyle({ isFocusVisible, isActive, inverted })}
     >
-      {showAlert && <AlertDot />}
+      {showNotificationDot && <NotificationDot />}
       {iconLeft}
       <span
         css={itemInnerContentStyle({
