@@ -63,7 +63,11 @@ function Example() {
         />
       </Menu.Category>
       <Menu.Category label="Access">
-        <Menu.Item label="Advanced Settings" showAlert iconLeft={<Cog />} />
+        <Menu.Item
+          label="Advanced Settings"
+          showNotificationDot
+          iconLeft={<Cog />}
+        />
         <Menu.Item label="Disable" disabled iconLeft={<Cross />} />
       </Menu.Category>
       <Menu.Category>

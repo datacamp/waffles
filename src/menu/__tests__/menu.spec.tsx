@@ -190,7 +190,7 @@ describe('Menu', () => {
   it('menu item could be decorated with alert notification dot', () => {
     const { getByTestId, getByText } = render(
       <Menu trigger={<MenuTrigger />}>
-        <Menu.Item showAlert label="Taylor Swift" />
+        <Menu.Item showNotificationDot label="Taylor Swift" />
         <Menu.Item label="Ariana Grande" />
       </Menu>,
     );
@@ -330,7 +330,7 @@ describe('Menu', () => {
         <Menu trigger={<MenuTrigger />} offset={tokens.spacing.large}>
           <Menu.Category label="Singers" noDivider>
             <Menu.Item
-              showAlert
+              showNotificationDot
               label="Taylor Swift"
               description="Pop singer"
             />
@@ -359,7 +359,7 @@ describe('Menu', () => {
         <Menu inverted trigger={<MenuTrigger />} offset={tokens.spacing.large}>
           <Menu.Category label="Singers" noDivider>
             <Menu.Item
-              showAlert
+              showNotificationDot
               label="Taylor Swift"
               description="Pop singer"
             />

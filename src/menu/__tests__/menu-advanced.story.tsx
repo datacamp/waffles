@@ -50,7 +50,11 @@ function Story() {
           />
         </Menu.Category>
         <Menu.Category label="Access">
-          <Menu.Item label="Enable" showAlert iconLeft={<Verified />} />
+          <Menu.Item
+            label="Enable"
+            showNotificationDot
+            iconLeft={<Verified />}
+          />
           <Menu.Item label="Disable" disabled iconLeft={<Cross />} />
         </Menu.Category>
         <Menu.Category>
