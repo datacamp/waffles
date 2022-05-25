@@ -1,9 +1,11 @@
 import React from 'react';
 
-import type { PolymorphicComponentProps } from '../helpers';
 import { Button } from '../button';
-import { useMenu } from './menu-context';
+
 import { buttonStyle } from './styles';
+import { useMenu } from './menu-context';
+
+import type { PolymorphicComponentProps } from '../helpers';
 
 type MenuButtonBaseProps = {
   /* Defines the variant of the button. */

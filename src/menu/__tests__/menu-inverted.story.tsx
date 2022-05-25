@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
 
+import { Menu } from '../index';
 import { tokens } from '../../tokens';
 import { Checkmark, Cross, Verified } from '../../icon';
 import { Button } from '../../button';
-import { Menu } from '../index';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};

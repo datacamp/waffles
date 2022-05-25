@@ -1,16 +1,18 @@
 import React from 'react';
 import { useFocusRing } from '@react-aria/focus';
 
-import type { PolymorphicComponentProps } from '../helpers';
 import { Text } from '../text';
-import { useMenu } from './menu-context';
-import AlertDot from './alert-dot';
+
 import {
   itemStyle,
   itemInnerContentStyle,
   itemLabelStyle,
   itemDescriptionStyle,
 } from './styles';
+import { useMenu } from './menu-context';
+import AlertDot from './alert-dot';
+
+import type { PolymorphicComponentProps } from '../helpers';
 
 type ItemBaseProps = {
   /* The content of the item. Most of the time should be a plain text. */

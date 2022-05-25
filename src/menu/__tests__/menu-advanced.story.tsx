@@ -1,10 +1,10 @@
 import { forwardRef } from 'react';
 import { css } from '@emotion/react';
 
+import { Menu, useMenu } from '../index';
 import { tokens } from '../../tokens';
 import { ChevronUp, ChevronDown, Checkmark, Cross, Verified } from '../../icon';
 import { Button } from '../../button';
-import { Menu, useMenu } from '../index';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};

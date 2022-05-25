@@ -1,7 +1,7 @@
 import MenuInternal from './menu-internal';
 import Item from './item';
-import Button from './button';
 import Category from './category';
+import Button from './button';
 
 const MenuNamespace = Object.assign(MenuInternal, {
   Item,

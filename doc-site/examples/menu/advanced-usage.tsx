@@ -1,5 +1,5 @@
 import { forwardRef, useState } from 'react';
-
+import { Menu, useMenu } from '@datacamp/waffles/menu';
 import {
   ChevronUp,
   ChevronDown,
@@ -8,7 +8,6 @@ import {
   Cog,
 } from '@datacamp/waffles/icon';
 import { Button } from '@datacamp/waffles/button';
-import { Menu, useMenu } from '@datacamp/waffles/menu';
 
 type MenuTriggerProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 

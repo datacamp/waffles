@@ -1,3 +1,4 @@
+import { Menu } from '@datacamp/waffles/menu';
 import {
   Code,
   Edit,
@@ -6,7 +7,6 @@ import {
   ExternalLink,
 } from '@datacamp/waffles/icon';
 import { Button } from '@datacamp/waffles/button';
-import { Menu } from '@datacamp/waffles/menu';
 
 function Example() {
   return (

@@ -15,10 +15,11 @@ import { tokens } from '../tokens';
 import { Portal } from '../portal';
 import { useId } from '../hooks';
 import { deepChildrenMap } from '../helpers';
+
+import { dropdownStyle } from './styles';
 import { MenuProvider } from './menu-context';
 import Item from './item';
 import Button from './button';
-import { dropdownStyle } from './styles';
 
 const placementMap = {
   bottom: 'bottom-end',

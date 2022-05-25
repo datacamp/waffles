@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
-
 import { tokens } from '@datacamp/waffles/tokens';
-import { Menu } from '@datacamp/waffles/menu';
 import { Radio } from '@datacamp/waffles/radio';
+import { Menu } from '@datacamp/waffles/menu';
 import { Button } from '@datacamp/waffles/button';
 
 function Example() {

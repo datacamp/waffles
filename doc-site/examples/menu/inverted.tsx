@@ -1,6 +1,6 @@
+import { Menu } from '@datacamp/waffles/menu';
 import { More, Code, Edit, Copy } from '@datacamp/waffles/icon';
 import { Button } from '@datacamp/waffles/button';
-import { Menu } from '@datacamp/waffles/menu';
 
 function Example() {
   return (

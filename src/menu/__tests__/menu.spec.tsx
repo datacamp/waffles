@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
+import { Menu, useMenu } from '../index';
 import { tokens } from '../../tokens';
 import { User, Checkmark } from '../../icon';
-import { Menu, useMenu } from '../index';
 
 const MOCKED_ID = '123abC';
 

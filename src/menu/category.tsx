@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { useId } from '../hooks';
 import { Text } from '../text';
-import { useMenu } from './menu-context';
+import { useId } from '../hooks';
+
 import { categoryDividerStyle, categoryLabelStyle } from './styles';
+import { useMenu } from './menu-context';
 
 type CategoryProps = {
   /* Category section caption. */

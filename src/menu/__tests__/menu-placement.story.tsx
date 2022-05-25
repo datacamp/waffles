@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
 
+import { Menu } from '../index';
 import { tokens } from '../../tokens';
+import { Radio } from '../../radio';
 import { Code, Edit, Copy } from '../../icon';
 import { Button } from '../../button';
-import { Radio } from '../../radio';
-import { Menu } from '../index';
 
 function Story() {
   const [placement, setPlacement] =
