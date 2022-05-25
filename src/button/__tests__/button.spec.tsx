@@ -133,6 +133,20 @@ describe('Button', () => {
     expect(icon).toHaveAttribute('height', '16');
   });
 
+  it('renders button with small size and small icon', () => {
+    const { container } = render(
+      <Button
+        size={'small'}
+        icon={<AddCircle />}
+        aria-label="Accessible button"
+      />,
+    );
+
+    const icon = container.querySelector('svg');
+    expect(icon).toHaveAttribute('width', '14');
+    expect(icon).toHaveAttribute('height', '14');
+  });
+
   it('renders icon of custom size', () => {
     const { container, getByLabelText } = render(
       <Button

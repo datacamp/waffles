@@ -82,7 +82,6 @@ exports[`AlertDialogTest renders snapshot 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -100,6 +99,7 @@ exports[`AlertDialogTest renders snapshot 1`] = `
   height: 36px;
   min-width: 36px;
   width: auto;
+  font-size: 14px;
   color: #0075AD;
   background-color: transparent;
   border-color: transparent;
@@ -216,7 +216,6 @@ exports[`AlertDialogTest renders snapshot 1`] = `
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -236,6 +235,7 @@ exports[`AlertDialogTest renders snapshot 1`] = `
   width: auto;
   padding-left: 16px;
   padding-right: 16px;
+  font-size: 14px;
   color: #05192D;
   background-color: #03EF62;
   border-color: transparent;

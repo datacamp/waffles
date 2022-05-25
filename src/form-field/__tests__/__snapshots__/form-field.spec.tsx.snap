@@ -19,6 +19,7 @@ exports[`FormField renders snapshot of form field 1`] = `
   display: -ms-flexbox;
   display: flex;
   line-height: 1.25;
+  font-size: 14px;
   font-weight: 800;
   color: #05192D;
   margin-bottom: 8px;
@@ -64,6 +65,7 @@ exports[`FormField renders snapshot of form field 1`] = `
   color: #05192D;
   font-size: 14px;
   line-height: 1.25;
+  font-size: 14px;
   margin-top: -4px;
 }
 
@@ -77,6 +79,7 @@ exports[`FormField renders snapshot of form field 1`] = `
   padding: 0;
   margin-top: 8px;
   color: #C01100;
+  font-size: 14px;
   line-height: 1.25;
 }
 
@@ -140,6 +143,7 @@ exports[`FormField renders snapshot of inverted form field 1`] = `
   display: -ms-flexbox;
   display: flex;
   line-height: 1.25;
+  font-size: 14px;
   font-weight: 800;
   color: #FFFFFF;
   margin-bottom: 8px;
@@ -185,6 +189,7 @@ exports[`FormField renders snapshot of inverted form field 1`] = `
   color: #FFFFFF;
   font-size: 14px;
   line-height: 1.25;
+  font-size: 14px;
   margin-top: -4px;
 }
 
@@ -198,6 +203,7 @@ exports[`FormField renders snapshot of inverted form field 1`] = `
   padding: 0;
   margin-top: 8px;
   color: #FF5400;
+  font-size: 14px;
   line-height: 1.25;
 }
 
