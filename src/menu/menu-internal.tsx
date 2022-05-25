@@ -33,7 +33,7 @@ type MenuProps = {
   trigger: JSX.Element;
   /* Content of the menu, either `Menu.Category` or custom components. */
   children: React.ReactNode;
-  /* Sets the menu dropdown's position relative to the trigger. */
+  /* Sets the menu dropdown's position relative to the trigger. Defaults to `bottom`. */
   placement?: 'bottom' | 'top' | 'right' | 'left';
   /* Sets the distance between menu dropdown and its trigger. By default `tokens.spacing.small` [design token](/foundation/design-tokens/) is used. */
   offset?: string;
