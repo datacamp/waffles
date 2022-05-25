@@ -52,15 +52,38 @@ function InputInternal(
     setIsFocused(false);
   }
 
+  function cloneIconElement(
+    originalIcon: React.ReactElement,
+    props?: Partial<any> & React.Attributes,
+  ) {
+    // Check if the icon has a provided custom size prop already
+    return originalIcon.props['size']
+      ? cloneElement(originalIcon, {
+          ...{ props },
+        })
+      : cloneElement(originalIcon, {
+          // Handle large buttons having medium sized icons by default
+          size: size === 'large' ? 'medium' : size,
+          ...{ ...props },
+        });
+  }
+
   function renderIconLeft() {
     if (type === 'search') {
       return (
         <IconLeft {...{ size, inverted }}>
-          <Search data-testid="search-icon" />
+          <Search
+            data-testid="search-icon"
+            size={size === 'large' ? 'medium' : size}
+          />
         </IconLeft>
       );
     } else if (iconLeft) {
-      return <IconLeft {...{ size, inverted }}>{iconLeft}</IconLeft>;
+      return (
+        <IconLeft {...{ size, inverted }}>
+          {cloneIconElement(iconLeft as React.ReactElement)}
+        </IconLeft>
+      );
     }
     return null;
   }
@@ -73,6 +96,7 @@ function InputInternal(
             aria-label={`${isPasswordVisible ? 'Hide' : 'Show'} password text`}
             onClick={() => setIsPasswordVisible(!isPasswordVisible)}
             disabled={disabled}
+            size={size}
           >
             {isPasswordVisible ? <Hidden /> : <Visible />}
           </Enhancer>
@@ -84,7 +108,7 @@ function InputInternal(
         <EnhancerRight {...{ size, inverted }}>
           {Children.map(enhancerRight, (child) => {
             if (isValidElement(child)) {
-              return cloneElement(child, {
+              return cloneIconElement(child, {
                 disabled,
               });
             }

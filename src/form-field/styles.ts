@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
+import FormField from './form-field';
 
 export function wrapperStyle() {
   return css`
@@ -9,23 +10,44 @@ export function wrapperStyle() {
   `;
 }
 
-type LabelStyleOptions = {
-  inverted: boolean;
+// Mappings between form field's sizes and variants, and design tokens
+
+const sizeMap = {
+  small: {
+    fontSize: tokens.fontSizes.small,
+  },
+  medium: {
+    fontSize: tokens.fontSizes.medium,
+  },
+  large: {
+    fontSize: tokens.fontSizes.medium,
+  },
 };
 
-export function labelStyle({ inverted }: LabelStyleOptions) {
+type LabelStyleOptions = {
+  inverted: boolean;
+  size: NonNullable<React.ComponentProps<typeof FormField>['size']>;
+};
+
+export function labelStyle({ inverted, size }: LabelStyleOptions) {
   return css`
     display: flex;
     line-height: ${tokens.lineHeights.default};
+    font-size: ${sizeMap[size].fontSize};
     font-weight: ${tokens.fontWeights.bold};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     margin-bottom: ${tokens.spacing.small};
   `;
 }
 
-export function descriptionStyle() {
+type DescriptionStyleOptions = {
+  size: NonNullable<React.ComponentProps<typeof FormField>['size']>;
+};
+
+export function descriptionStyle({ size }: DescriptionStyleOptions) {
   return css`
     line-height: ${tokens.lineHeights.default};
+    font-size: ${sizeMap[size].fontSize};
     margin-top: -${tokens.spacing.xsmall};
   `;
 }
@@ -60,12 +82,14 @@ export function requiredMarkerStyle({ inverted }: RequiredBulletStyleOptions) {
 
 type ErrorStyleOptions = {
   inverted: boolean;
+  size: NonNullable<React.ComponentProps<typeof FormField>['size']>;
 };
 
-export function errorStyle({ inverted }: ErrorStyleOptions) {
+export function errorStyle({ inverted, size }: ErrorStyleOptions) {
   return css`
     margin-top: ${tokens.spacing.small};
     color: ${inverted ? tokens.colors.red : tokens.colors.redDarkText};
+    font-size: ${sizeMap[size].fontSize};
     line-height: ${tokens.lineHeights.default};
   `;
 }

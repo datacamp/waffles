@@ -11,14 +11,17 @@ import Button from './button';
 const sizeMap = {
   small: {
     sizing: tokens.sizing.small,
+    fontSize: tokens.fontSizes.small,
     spacing: tokens.spacing.small,
   },
   medium: {
     sizing: tokens.sizing.medium,
+    fontSize: tokens.fontSizes.medium,
     spacing: tokens.spacing.medium,
   },
   large: {
     sizing: tokens.sizing.large,
+    fontSize: tokens.fontSizes.medium,
     spacing: tokens.spacing.medium,
   },
 };
@@ -95,7 +98,6 @@ const buttonBaseStyle = css`
   text-decoration: none;
   font-family: ${tokens.fontFamilies.sansSerif};
   font-weight: ${tokens.fontWeights.bold};
-  font-size: ${tokens.fontSizes.medium};
   line-height: ${tokens.lineHeights.tight};
   margin: 0;
   padding: 0;
@@ -151,6 +153,7 @@ export function buttonStyle({
     width: ${fullWidth ? '100%' : 'auto'};
     padding-left: ${!hasIcon && sizeMap[size].spacing};
     padding-right: ${!hasIcon && sizeMap[size].spacing};
+    font-size: ${sizeMap[size].fontSize};
     color: ${variantMap[variant].color};
     background-color: ${variantMap[variant].backgroundColor};
     border-color: ${variantMap[variant].borderColor};

@@ -15,6 +15,8 @@ type FormFieldProps = {
   children: JSX.Element;
   /* Optional input identifier. Pass it when component is rendered on the server to avoid client-server attribute mismatch. */
   id?: string;
+  /* Defines the size of the form field. In most cases default `medium` size should be used. */
+  size?: 'small' | 'medium' | 'large';
   /* Optional description shown above the input. */
   description?: React.ReactNode;
   /* Sets `required` attribute on the enhanced input. Depending on the selected `requiredIndicator` option, shows or hides appropriate indicator next to the label. */
@@ -30,6 +32,7 @@ type FormFieldProps = {
 function FormField({
   label,
   id,
+  size = 'medium',
   description,
   required = false,
   requiredIndicator = 'showOptional',
@@ -50,11 +53,12 @@ function FormField({
       'aria-errormessage': errorId,
       'aria-describedby': errorId,
     }),
+    size: size,
   });
 
   return (
     <div css={wrapperStyle()}>
-      <Label htmlFor={fieldId} inverted={inverted}>
+      <Label htmlFor={fieldId} inverted={inverted} size={size}>
         {label}
         <RequiredIndicator
           isRequired={required}
@@ -63,11 +67,13 @@ function FormField({
         />
       </Label>
       {description && (
-        <Description inverted={inverted}>{description}</Description>
+        <Description inverted={inverted} size={size}>
+          {description}
+        </Description>
       )}
       {element}
       {error && (
-        <Error id={errorId} inverted={inverted}>
+        <Error id={errorId} inverted={inverted} size={size}>
           {error}
         </Error>
       )}

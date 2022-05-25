@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
@@ -60,6 +60,16 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
 
   const { focusProps, isFocusVisible } = useFocusRing();
 
+  function getClonedIcon(originalIcon: React.ReactElement) {
+    // Check if the icon has a provided custom size prop already
+    return originalIcon.props['size']
+      ? originalIcon
+      : cloneElement(originalIcon, {
+          // Handle large buttons having medium sized icons by default
+          size: size === 'large' ? 'medium' : size,
+        });
+  }
+
   return (
     <Element
       {...mergeProps(focusProps, restProps)}
@@ -74,10 +84,10 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
       })}
     >
       {icon ? (
-        icon
+        getClonedIcon(icon as React.ReactElement)
       ) : (
         <>
-          {iconLeft}
+          {iconLeft && getClonedIcon(iconLeft as React.ReactElement)}
           {children && (
             <span
               css={innerContentStyle({
@@ -88,7 +98,7 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
               {children}
             </span>
           )}
-          {iconRight}
+          {iconRight && getClonedIcon(iconRight as React.ReactElement)}
         </>
       )}
     </Element>
