@@ -48,7 +48,6 @@ function MenuButton<T extends React.ElementType = 'button'>({
       })}
       ref={(node) => (listRef.current[index] = node)}
       role="menuitem"
-      onClick={handleClick}
       inverted={inverted}
       css={buttonStyle()}
     />
