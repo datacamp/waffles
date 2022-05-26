@@ -18,8 +18,8 @@ type CodePreviewControlsProps = {
   children: React.ReactNode;
 };
 
-function CodePreviewControls({ children }: CodePreviewControlsProps) {
+function PreviewControls({ children }: CodePreviewControlsProps) {
   return <div css={wrapperStyle}>{children}</div>;
 }
 
-export default CodePreviewControls;
+export default PreviewControls;

@@ -7,12 +7,10 @@ import { Button } from '@datacamp/waffles/button';
 
 import markdownElements from '../components/markdown-elements';
 import { mediaQuery } from '@datacamp/waffles/helpers';
+import PreviewControls from './preview-controls';
+import { Download } from '@datacamp/waffles/icon';
 
 const Heading = markdownElements.h2;
-
-const downloadButtonStyle = css`
-  margin-top: ${tokens.spacing.small};
-`;
 
 function assetPreviewStyle(maxColumnCount: number, hasDarkBackground: boolean) {
   return css`
@@ -25,13 +23,14 @@ function assetPreviewStyle(maxColumnCount: number, hasDarkBackground: boolean) {
       ? tokens.colors.navy
       : tokens.colors.white};
     border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
-    border-radius: ${tokens.borderRadius.medium};
+    border-top-right-radius: ${tokens.borderRadius.medium};
+    border-top-left-radius: ${tokens.borderRadius.medium};
 
-    ${mediaQuery.aboveSmall} {
+    ${mediaQuery.aboveMedium} {
       grid-template-columns: repeat(${maxColumnCount - 1}, 1fr);
     }
 
-    ${mediaQuery.aboveMedium} {
+    ${mediaQuery.aboveLarge} {
       grid-template-columns: repeat(${maxColumnCount}, 1fr);
     }
   `;
@@ -101,18 +100,20 @@ function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
           })}
         </div>
       </section>
-      <Button
-        as="a"
-        size="small"
-        variant="secondary"
-        href={`../../downloads/waffles-${
-          assetType.toLowerCase().split(' ')[0]
-        }-asset-bundle.zip`}
-        download
-        css={downloadButtonStyle}
-      >
-        Download {assetType} Assets
-      </Button>
+      <PreviewControls>
+        <Button
+          as="a"
+          size="small"
+          variant="plain"
+          href={`../../downloads/waffles-${
+            assetType.toLowerCase().split(' ')[0]
+          }-asset-bundle.zip`}
+          download
+          iconLeft={<Download />}
+        >
+          Download {assetType} Assets
+        </Button>
+      </PreviewControls>
     </>
   );
 }
