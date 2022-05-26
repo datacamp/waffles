@@ -11,7 +11,7 @@ function ApplyColoredAlpa({ ...restProps }: ApplyColoredAlpaProps) {
   return (
     <Asset viewBox="0 0 673 673" {...restProps}>
       <g fill="none" fillRule="evenodd">
-        <g transform="translate(26)">
+        <g opacity=".3" transform="translate(26)">
           <path
             d="M310 25v14C157.987 39 32.566 152.435 14.29 298.998H.185C18.54 144.675 150.253 25 310 25z"
             fill="#FFF"
@@ -65,7 +65,7 @@ function ApplyColoredAlpa({ ...restProps }: ApplyColoredAlpaProps) {
             <path d="M133 177v52.361h-10V177z" />
           </g>
         </g>
-        <g transform="translate(369 26)">
+        <g opacity=".3" transform="translate(369 26)">
           <path
             d="M.004.72C156.798 17.151 279 149.346 279 310h-14C265 157.093 149.057 31.167.003 14.8z"
             fill="#FFF"
@@ -98,7 +98,7 @@ function ApplyColoredAlpa({ ...restProps }: ApplyColoredAlpaProps) {
           fillRule="nonzero"
           d="m348.05 609.05 9.9 9.9L336.899 640l21.05 21.05-9.899 9.9L317.1 640z"
         />
-        <g transform="translate(471 473)">
+        <g opacity=".3" transform="translate(471 473)">
           <ellipse
             stroke="#05192D"
             strokeWidth="14"
