@@ -4,6 +4,9 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { Link } from '@datacamp/waffles/link';
 import * as allBrands from '@datacamp/waffles/brand';
+import PreviewControls from './preview-controls';
+import { Button } from '@datacamp/waffles/button';
+import { Download } from '@datacamp/waffles/icon';
 
 const wrapperStyle = css`
   display: flex;
@@ -70,13 +73,18 @@ function AllBrandGrid() {
           })}
         </div>
       </section>
-      <Link
-        href={`../../downloads/waffles-brand-bundle.zip`}
-        download
-        css={downloadLinkStyle}
-      >
-        Download Brand `SVG` Bundle
-      </Link>
+      <PreviewControls>
+        <Button
+          as="a"
+          size="small"
+          variant="plain"
+          href={`../../downloads/waffles-brand-bundle.zip`}
+          download
+          iconLeft={<Download />}
+        >
+          Download DataCamp Logos and Logomarks
+        </Button>
+      </PreviewControls>
     </>
   );
 }
