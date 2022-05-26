@@ -6,7 +6,7 @@ function Example() {
   return (
     <div
       css={css`
-        color: ${tokens.colors.grey};
+        color: ${tokens.colors.greyDark};
       `}
     >
       <DoubleArrow3d width="200" />
