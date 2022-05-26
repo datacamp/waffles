@@ -25,6 +25,7 @@
     "test:stories:ci": "yarn pretest:stories && start-server-and-test \"next dev workbench --port 8080\" 8080 \"cypress run --record --parallel\"",
     "pretest:stories": "yarn preworkbench && node ./tools/prepare-workbench-stories.js",
     "lint": "eslint ./ --fix --cache",
+    "lint:ci": "eslint ./",
     "lint:commits": "commitlint --to HEAD --verbose",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
