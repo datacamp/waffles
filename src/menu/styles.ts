@@ -206,7 +206,7 @@ export function buttonStyle() {
   `;
 }
 
-export function alertDotStyle() {
+export function notificationDotStyle() {
   return css`
     position: absolute;
     z-index: ${tokens.zIndex.default};
