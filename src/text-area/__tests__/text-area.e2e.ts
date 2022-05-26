@@ -6,7 +6,7 @@ describe('TextArea', () => {
 
   it('renders proper focus state', () => {
     cy.loadStory('text-area-basic');
-    cy.get('main').find('textarea[aria-label="Basic text area"]').focus();
+    cy.get('main').find('textarea').focus();
     cy.get('main').find('textarea').should('have.focus');
   });
 
