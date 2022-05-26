@@ -6,7 +6,7 @@ import AssetGrid from './asset-grid';
 const groupMaxColumnCount = {
   'ALPA Loop': 2,
   '3D': 4,
-  Logomark: 4,
+  Logomark: 3,
   Logo: 3,
   Other: 4,
 };

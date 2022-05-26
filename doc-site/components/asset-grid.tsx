@@ -3,36 +3,49 @@ import { AssetModule } from 'helpers/group-assets';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
-import { Link } from '@datacamp/waffles/link';
+import { Button } from '@datacamp/waffles/button';
 
 import markdownElements from '../components/markdown-elements';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 
-const TableHeading = markdownElements.h2;
+const Heading = markdownElements.h2;
 
-const downloadLinkStyle = css`
+const downloadButtonStyle = css`
   margin-top: ${tokens.spacing.small};
 `;
 
-const assetPreview = (columnCount: number) => {
+function assetPreviewStyle(maxColumnCount: number, hasDarkBackground: boolean) {
   return css`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(${columnCount}px, 1fr));
+    grid-template-columns: repeat(${maxColumnCount - 2}, 1fr);
     gap: ${tokens.spacing.large};
     align-items: center;
     padding: ${tokens.spacing.medium};
-    background-color: ${tokens.colors.white};
+    background-color: ${hasDarkBackground
+      ? tokens.colors.navy
+      : tokens.colors.white};
     border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
     border-radius: ${tokens.borderRadius.medium};
-  `;
-};
 
-const assetWrapperStyle = css`
-  color: ${tokens.colors.navy};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+    ${mediaQuery.aboveSmall} {
+      grid-template-columns: repeat(${maxColumnCount - 1}, 1fr);
+    }
+
+    ${mediaQuery.aboveMedium} {
+      grid-template-columns: repeat(${maxColumnCount}, 1fr);
+    }
+  `;
+}
+
+function assetWrapperStyle(hasDarkBackground: boolean) {
+  return css`
+    color: ${hasDarkBackground ? tokens.colors.white : tokens.colors.navy};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `;
+}
 
 const labelStyle = css`
   display: block;
@@ -46,14 +59,15 @@ const labelStyle = css`
   max-width: 100%;
 `;
 
-type AssetPreviewType = {
+type AssetPreviewProps = {
   name: string;
+  hasDarkBackground: boolean;
   asset: React.ReactNode;
 };
 
-function AssetPreview({ name, asset }: AssetPreviewType) {
+function AssetPreview({ name, hasDarkBackground, asset }: AssetPreviewProps) {
   return (
-    <div css={assetWrapperStyle}>
+    <div css={assetWrapperStyle(hasDarkBackground)}>
       {asset}
       <Text css={labelStyle}>{name}</Text>
     </div>
@@ -66,14 +80,13 @@ type AssetGridProps = {
   maxColumns: number;
 };
 function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
-  // Calculate the responsive max column width, given a maxColumns number
-  const maxColumnWidth = (720 - 32 - 24 * (maxColumns - 1) - 2) / maxColumns;
+  const hasDarkBackground = assetType === 'ALPA Loop';
 
   return (
     <>
-      <TableHeading>{`${assetType} Assets`}</TableHeading>
+      <Heading>{`${assetType} Assets`}</Heading>
       <section>
-        <div css={assetPreview(maxColumnWidth)}>
+        <div css={assetPreviewStyle(maxColumns, hasDarkBackground)}>
           {Object.entries(assets).map((assetData) => {
             const [name, Asset] = assetData;
 
@@ -81,21 +94,25 @@ function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
               <AssetPreview
                 key={name}
                 name={name}
+                hasDarkBackground={hasDarkBackground}
                 asset={<Asset height={assetType === 'Logo' ? 30 : undefined} />}
               />
             );
           })}
         </div>
       </section>
-      <Link
+      <Button
+        as="a"
+        size="small"
+        variant="secondary"
         href={`../../downloads/waffles-${
           assetType.toLowerCase().split(' ')[0]
         }-asset-bundle.zip`}
         download
-        css={downloadLinkStyle}
+        css={downloadButtonStyle}
       >
-        Download {assetType} `SVG` Assets
-      </Link>
+        Download {assetType} Assets
+      </Button>
     </>
   );
 }
