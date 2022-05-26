@@ -1,6 +1,6 @@
-import { DoubleArrow3d } from '@datacamp/waffles/asset';
-import { tokens } from '@datacamp/waffles/tokens';
 import { css } from '@emotion/react';
+import { tokens } from '@datacamp/waffles/tokens';
+import { DoubleArrow3d } from '@datacamp/waffles/asset';
 
 function Example() {
   return (

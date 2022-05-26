@@ -3,12 +3,13 @@ import { AssetModule } from 'helpers/group-assets';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
+import { Download } from '@datacamp/waffles/icon';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
 
 import markdownElements from '../components/markdown-elements';
-import { mediaQuery } from '@datacamp/waffles/helpers';
+
 import PreviewControls from './preview-controls';
-import { Download } from '@datacamp/waffles/icon';
 
 const Heading = markdownElements.h2;
 
