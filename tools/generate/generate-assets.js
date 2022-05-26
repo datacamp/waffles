@@ -26,6 +26,11 @@ const assetBundleExportPath = path.join(
 );
 
 function generateAssets() {
+  // Create the downloads output directory if it doesn't already exist
+  if (!fs.existsSync(assetBundleExportPath)) {
+    fs.mkdirSync(assetBundleExportPath);
+  }
+
   const assetDirs = glob.sync('*', { cwd: 'src/asset/raw/' });
   // Export key pairs
   const assetsExports = {};
