@@ -1,17 +1,18 @@
 import { tokens } from '../tokens';
 
-import { BrandGenericProps } from './brand.types';
+import { BrandProps } from './types';
 
 function DataCampLogomark({
   inverted = false,
   monochrome = false,
   ...restProps
-}: BrandGenericProps) {
+}: BrandProps) {
   const logomarkColor = monochrome
     ? inverted
       ? tokens.colors.white
       : tokens.colors.navy
     : tokens.colors.green;
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
