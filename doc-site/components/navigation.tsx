@@ -91,7 +91,9 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
                 Asset
               </Item>
               <Item href="/components/badge">Badge</Item>
-              <Item href="/components/content-container">Content Container</Item>
+              <Item href="/components/content-container">
+                Content Container
+              </Item>
               <Item href="/components/icon">Icon</Item>
               <Item href="/components/notification">Notification</Item>
             </SideNav.Subcategory>
