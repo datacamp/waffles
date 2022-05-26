@@ -1,5 +1,5 @@
-import { DataCampLogo } from '@datacamp/waffles/brand';
 import { css } from '@emotion/react';
+import { DataCampLogo } from '@datacamp/waffles/brand';
 
 function Example() {
   return (

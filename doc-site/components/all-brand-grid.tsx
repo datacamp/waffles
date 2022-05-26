@@ -2,19 +2,15 @@ import React from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
-import { Link } from '@datacamp/waffles/link';
-import * as allBrands from '@datacamp/waffles/brand';
-import PreviewControls from './preview-controls';
-import { Button } from '@datacamp/waffles/button';
 import { Download } from '@datacamp/waffles/icon';
+import { Button } from '@datacamp/waffles/button';
+import * as allBrands from '@datacamp/waffles/brand';
+
+import PreviewControls from './preview-controls';
 
 const wrapperStyle = css`
   display: flex;
   flex-direction: column;
-`;
-
-const downloadLinkStyle = css`
-  margin-top: ${tokens.spacing.medium};
 `;
 
 const brandPreview = css`
