@@ -39,7 +39,7 @@ jobs:
             - '*'
       - run:
           name: Lint codebase
-          command: yarn lint
+          command: yarn lint:ci
       - run:
           name: Check code formatting
           command: yarn format:check
