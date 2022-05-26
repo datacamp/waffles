@@ -8,7 +8,7 @@ const wrapperStyle = css`
   display: flex;
   flex-wrap: wrap;
   padding: ${tokens.spacing.small};
-  background-color: ${tokens.colors.white};
+  background-color: ${tokens.colors.navy};
   border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
   border-radius: ${tokens.borderRadius.medium};
 `;
@@ -23,7 +23,7 @@ const brandingAssetWrapperStyle = css`
 `;
 
 const labelStyle = css`
-  color: inherit;
+  color: ${tokens.colors.white};
   padding-top: ${tokens.spacing.small};
 `;
 
