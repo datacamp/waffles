@@ -54,6 +54,7 @@ function InputInternal(
 
   function cloneIconElement(
     originalIcon: React.ReactElement,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     props?: Partial<any> & React.Attributes,
   ) {
     // Check if the icon has a provided custom size prop already
