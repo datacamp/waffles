@@ -242,7 +242,6 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -262,6 +261,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   width: auto;
   padding-left: 16px;
   padding-right: 16px;
+  font-size: 14px;
   color: #05192D;
   background-color: #03EF62;
   border-color: transparent;
@@ -656,7 +656,6 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   text-decoration: none;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
-  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -676,6 +675,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   width: auto;
   padding-left: 16px;
   padding-right: 16px;
+  font-size: 14px;
   color: #05192D;
   background-color: #03EF62;
   border-color: transparent;
