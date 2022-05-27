@@ -30,7 +30,7 @@ function Example() {
     >
       <FormField
         label="What are your favorite programming languages?"
-        description="Please separate them with comma."
+        description="Please separate them with a comma."
         required
       >
         <Input
