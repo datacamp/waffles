@@ -15,7 +15,10 @@ const Loader = ({
 }: LoaderProps): React.ReactElement => {
   const { height, width } = restProps;
   return (
-    <div css={wrapperStyle(height as string, width as string)}>
+    <div
+      css={wrapperStyle(height as string, width as string)}
+      data-testid="loader-wrapper"
+    >
       <div css={svgWrapperStyle}>
         <svg viewBox="0 0 2640 3444" css={svgStyle} {...restProps}>
           <title>Loading</title>
