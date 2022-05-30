@@ -58,7 +58,7 @@ function InputInternal(
     props?: Partial<any> & React.Attributes,
   ) {
     // Check if the icon has a provided custom size prop already
-    return originalIcon.props['size']
+    return originalIcon.props.size
       ? cloneElement(originalIcon, {
           ...{ props },
         })
