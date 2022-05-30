@@ -10,9 +10,9 @@ type ButtonProps = {
   /* [skip docs] */
   size?: React.ComponentProps<typeof Button>['size'];
   /* [skip docs] */
-  iconLeft?: React.ReactNode;
+  iconLeft?: JSX.Element;
   /* [skip docs] */
-  iconRight?: React.ReactNode;
+  iconRight?: JSX.Element;
   /* [skip docs] */
   children: React.ReactNode;
   /* [skip docs] */

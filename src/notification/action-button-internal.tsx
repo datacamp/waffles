@@ -6,9 +6,9 @@ import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
 type ActionButtonBaseProps = {
   /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
-  iconLeft?: React.ReactNode;
+  iconLeft?: JSX.Element;
   /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
-  iconRight?: React.ReactNode;
+  iconRight?: JSX.Element;
   /* The content inside the button. Most of the time should be a plain text. */
   children: React.ReactNode;
   /* [skip docs] */

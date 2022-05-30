@@ -22,9 +22,9 @@ type ItemBaseProps = {
   /* Optional description shown below the label. */
   description?: React.ReactNode;
   /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
-  iconLeft?: React.ReactNode;
+  iconLeft?: JSX.Element;
   /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
-  iconRight?: React.ReactNode;
+  iconRight?: JSX.Element;
   /* Displays small notification dot next to the label. Useful for highlighting important items. */
   showNotificationDot?: boolean;
   /* Indicates that the item is currently active. */

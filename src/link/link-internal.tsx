@@ -12,9 +12,9 @@ type LinkBaseProps = {
   /* Sets the style of the link suitable for dark backgrounds. */
   inverted?: boolean;
   /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (for smaller text sizes use `small` size) or a custom component. */
-  iconLeft?: React.ReactNode;
+  iconLeft?: JSX.Element;
   /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (for smaller text sizes use `small` size) or a custom component. */
-  iconRight?: React.ReactNode;
+  iconRight?: JSX.Element;
 };
 
 export type LinkProps<T extends React.ElementType = 'a'> =

@@ -19,7 +19,7 @@ type ButtonBaseProps = {
 
 type ButtonIconOnlyProps = {
   /* An icon displayed as the only content of the button. Because of that `aria-label` attribute must be specified. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
-  icon: React.ReactNode;
+  icon: JSX.Element;
   children?: never;
   iconLeft?: never;
   iconRight?: never;
@@ -31,9 +31,9 @@ type ButtonNoIconProps = {
   /* The content inside the button. Most of the time should be a plain text. */
   children: React.ReactNode;
   /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
-  iconLeft?: React.ReactNode;
+  iconLeft?: JSX.Element;
   /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
-  iconRight?: React.ReactNode;
+  iconRight?: JSX.Element;
   /* [skip docs] */
   'aria-label'?: string;
 } & ButtonBaseProps;
@@ -60,12 +60,12 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
 
   const { focusProps, isFocusVisible } = useFocusRing();
 
-  function getClonedIcon(originalIcon: React.ReactElement) {
+  function renderIcon(originalIcon: JSX.Element) {
     // Check if the icon has a provided custom size prop already
     return originalIcon.props['size']
       ? originalIcon
       : cloneElement(originalIcon, {
-          // Handle large buttons having medium sized icons by default
+          // Handle large buttons having medium sized icons by default, and small / medium as defined
           size: size === 'large' ? 'medium' : size,
         });
   }
@@ -84,10 +84,10 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
       })}
     >
       {icon ? (
-        getClonedIcon(icon as React.ReactElement)
+        renderIcon(icon)
       ) : (
         <>
-          {iconLeft && getClonedIcon(iconLeft as React.ReactElement)}
+          {iconLeft && renderIcon(iconLeft)}
           {children && (
             <span
               css={innerContentStyle({
@@ -98,7 +98,7 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
               {children}
             </span>
           )}
-          {iconRight && getClonedIcon(iconRight as React.ReactElement)}
+          {iconRight && renderIcon(iconRight)}
         </>
       )}
     </Element>
