@@ -105,8 +105,8 @@ export function iconBackgroundStyle({
 }: IconBackgroundStyleOptions) {
   return css`
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 7px;
+    left: 7px;
     width: 14px;
     height: 14px;
     z-index: 5;
@@ -124,6 +124,7 @@ export function contentStyle({ closable }: ContentStyleOptions) {
     ${closable && `padding-right: ${tokens.spacing.small};`}
     padding-left: ${tokens.spacing.small};
     flex-grow: 1;
+    align-self: center;
   `;
 }
 

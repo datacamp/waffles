@@ -72,8 +72,8 @@ exports[`Toast render snapshot of default toast 1`] = `
 
 .emotion-4 {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
   width: 14px;
   height: 14px;
   z-index: 5;
@@ -88,6 +88,9 @@ exports[`Toast render snapshot of default toast 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-6 {
@@ -104,7 +107,7 @@ exports[`Toast render snapshot of default toast 1`] = `
   margin-bottom: 8px;
   line-height: 1.25;
   margin: 0;
-  padding-top: 2px;
+  padding: 4px 0;
   line-height: 1.5;
 }
 
@@ -336,8 +339,8 @@ exports[`Toast render snapshot of error toast 1`] = `
 
 .emotion-4 {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
   width: 14px;
   height: 14px;
   z-index: 5;
@@ -352,6 +355,9 @@ exports[`Toast render snapshot of error toast 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-6 {
@@ -368,7 +374,7 @@ exports[`Toast render snapshot of error toast 1`] = `
   margin-bottom: 8px;
   line-height: 1.25;
   margin: 0;
-  padding-top: 2px;
+  padding: 4px 0;
   line-height: 1.5;
 }
 
@@ -618,8 +624,8 @@ exports[`Toast render snapshot of success toast 1`] = `
 
 .emotion-4 {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
   width: 14px;
   height: 14px;
   z-index: 5;
@@ -634,6 +640,9 @@ exports[`Toast render snapshot of success toast 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-6 {
@@ -650,7 +659,7 @@ exports[`Toast render snapshot of success toast 1`] = `
   margin-bottom: 8px;
   line-height: 1.25;
   margin: 0;
-  padding-top: 2px;
+  padding: 4px 0;
   line-height: 1.5;
 }
 
@@ -879,8 +888,8 @@ exports[`Toast render snapshot of warning toast 1`] = `
 
 .emotion-4 {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
   width: 14px;
   height: 14px;
   z-index: 5;
@@ -895,6 +904,9 @@ exports[`Toast render snapshot of warning toast 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-6 {
@@ -911,7 +923,7 @@ exports[`Toast render snapshot of warning toast 1`] = `
   margin-bottom: 8px;
   line-height: 1.25;
   margin: 0;
-  padding-top: 2px;
+  padding: 4px 0;
   line-height: 1.5;
 }
 

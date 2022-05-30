@@ -73,7 +73,7 @@ export function toastStyle() {
 export function titleStyle() {
   return css`
     margin: 0;
-    padding-top: 2px;
+    padding: 4px 0;
     line-height: ${tokens.lineHeights.relaxed};
   `;
 }
