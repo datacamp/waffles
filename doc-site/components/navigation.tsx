@@ -104,6 +104,9 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/error-boundary">Error Boundary</Item>
               <Item href="/components/helpers">Helpers</Item>
               <Item href="/components/hooks">Hooks</Item>
+              <Item href="/components/loader" isNew>
+                Loader
+              </Item>
               <Item href="/components/portal">Portal</Item>
               <Item href="/components/screen-reader-only">
                 Screen Reader Only
