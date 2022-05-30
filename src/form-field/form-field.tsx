@@ -15,7 +15,7 @@ type FormFieldProps = {
   children: JSX.Element;
   /* Optional input identifier. Pass it when component is rendered on the server to avoid client-server attribute mismatch. */
   id?: string;
-  /* Defines the size of the form field. In most cases default `medium` size should be used. Children of the form field will inherit the size by default */
+  /* Defines the size of the form field. In most cases default `medium` size should be used. Children of the form field will inherit the size by default. */
   size?: 'small' | 'medium' | 'large';
   /* Optional description shown above the input. */
   description?: React.ReactNode;
@@ -53,7 +53,7 @@ function FormField({
       'aria-errormessage': errorId,
       'aria-describedby': errorId,
     }),
-    size: size,
+    size,
   });
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState, Children, cloneElement, isValidElement } from 'react';
+import React, { useState, cloneElement } from 'react';
 
 import { Search, Visible, Hidden } from '../icon';
 
@@ -15,9 +15,9 @@ type InputProps = {
   /* Sets appropriate error style and `aria-invalid` attribute. */
   error?: boolean;
   /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
-  iconLeft?: React.ReactNode;
+  iconLeft?: JSX.Element;
   /* An enhancer displayed to the right. Could be `Input.Enhancer` or any [icon](/components/icon) from Waffles (use default `medium` size). */
-  enhancerRight?: React.ReactNode;
+  enhancerRight?: JSX.Element;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>;
 
 function InputInternal(
@@ -53,7 +53,7 @@ function InputInternal(
   }
 
   function cloneIconElement(
-    originalIcon: React.ReactElement,
+    originalIcon: JSX.Element,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     props?: Partial<any> & React.Attributes,
   ) {
@@ -63,7 +63,7 @@ function InputInternal(
           ...{ props },
         })
       : cloneElement(originalIcon, {
-          // Handle large buttons having medium sized icons by default
+          // Handle large buttons having medium sized icons by default, and small / medium as defined
           size: size === 'large' ? 'medium' : size,
           ...{ ...props },
         });
@@ -82,7 +82,7 @@ function InputInternal(
     } else if (iconLeft) {
       return (
         <IconLeft {...{ size, inverted }}>
-          {cloneIconElement(iconLeft as React.ReactElement)}
+          {cloneIconElement(iconLeft)}
         </IconLeft>
       );
     }
@@ -107,14 +107,8 @@ function InputInternal(
       // Disable custom enhancer when whole input is disabled by passing disabled prop
       return (
         <EnhancerRight {...{ size, inverted }}>
-          {Children.map(enhancerRight, (child) => {
-            if (isValidElement(child)) {
-              return cloneIconElement(child, {
-                disabled,
-              });
-            }
-
-            return null;
+          {cloneIconElement(enhancerRight, {
+            disabled,
           })}
         </EnhancerRight>
       );
