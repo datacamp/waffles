@@ -79,6 +79,9 @@ export function animatedSidebarStyle({
     top: 0;
     left: 0;
     height: 100vh;
+    @supports (height: 100dvh) {
+      height: 100dvh;
+    }
     z-index: ${tokens.zIndex.modal};
     background-color: ${tokens.colors.navy};
     border-right: ${tokens.borderWidth.thin} solid
