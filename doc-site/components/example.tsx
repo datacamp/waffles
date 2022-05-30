@@ -28,7 +28,6 @@ const wrapperStyle = css`
 `;
 
 const buttonContentStyle = css`
-  width: 78px;
   text-align: center;
 `;
 
