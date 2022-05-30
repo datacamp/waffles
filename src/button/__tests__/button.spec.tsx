@@ -136,7 +136,7 @@ describe('Button', () => {
   it('renders button with small size and small icon', () => {
     const { container } = render(
       <Button
-        size={'small'}
+        size="small"
         icon={<AddCircle />}
         aria-label="Accessible button"
       />,
