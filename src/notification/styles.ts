@@ -155,8 +155,7 @@ export function titleStyle() {
   return css`
     margin: 0;
     margin-right: ${tokens.spacing.small};
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 4px;
     line-height: ${tokens.lineHeights.relaxed};
   `;
 }

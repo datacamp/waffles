@@ -65,8 +65,8 @@ exports[`Notification renders snapshot of inverted notification with all optiona
 
 .emotion-4 {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
   width: 14px;
   height: 14px;
   z-index: 5;
@@ -81,6 +81,9 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-6 {
@@ -119,8 +122,7 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   line-height: 1.25;
   margin: 0;
   margin-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 4px;
   line-height: 1.5;
 }
 
@@ -454,8 +456,8 @@ exports[`Notification renders snapshot of regular notification with all optional
 
 .emotion-4 {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
   width: 14px;
   height: 14px;
   z-index: 5;
@@ -470,6 +472,9 @@ exports[`Notification renders snapshot of regular notification with all optional
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-6 {
@@ -508,8 +513,7 @@ exports[`Notification renders snapshot of regular notification with all optional
   line-height: 1.25;
   margin: 0;
   margin-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 4px;
   line-height: 1.5;
 }
 
