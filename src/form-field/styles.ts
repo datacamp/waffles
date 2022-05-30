@@ -55,11 +55,18 @@ export function descriptionStyle({ size }: DescriptionStyleOptions) {
 
 type RequiredStyleOptions = {
   inverted: boolean;
+  size: NonNullable<React.ComponentProps<typeof FormField>['size']>;
 };
 
-export function requiredIndicatorStyle({ inverted }: RequiredStyleOptions) {
+export function requiredIndicatorStyle({
+  inverted,
+  size,
+}: RequiredStyleOptions) {
   return css`
-    font-size: ${tokens.fontSizes.small};
+    // Set required indicator to xsmall if the font size is small
+    font-size: ${size === 'small'
+      ? tokens.fontSizes.xsmall
+      : tokens.fontSizes.small};
     color: ${inverted
       ? tokens.colors.navySubtleTextOnDark
       : tokens.colors.navySubtleTextOnLight};

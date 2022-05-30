@@ -64,6 +64,7 @@ function FormField({
           isRequired={required}
           indicator={requiredIndicator}
           inverted={inverted}
+          size={size}
         />
       </Label>
       {description && (

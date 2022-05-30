@@ -9,12 +9,14 @@ type RequiredIndicatorProps = {
     React.ComponentProps<typeof FormField>['requiredIndicator']
   >;
   inverted: boolean;
+  size: NonNullable<React.ComponentProps<typeof FormField>['size']>;
 };
 
 function RequiredIndicator({
   isRequired,
   indicator,
   inverted,
+  size,
 }: RequiredIndicatorProps) {
   function renderIndicator() {
     if (indicator === 'showOptional' && !isRequired) {
@@ -30,7 +32,7 @@ function RequiredIndicator({
   }
 
   return (
-    <Text css={requiredIndicatorStyle({ inverted })} aria-hidden>
+    <Text css={requiredIndicatorStyle({ inverted, size })} aria-hidden>
       {renderIndicator()}
     </Text>
   );

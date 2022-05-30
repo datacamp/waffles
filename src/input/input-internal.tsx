@@ -52,7 +52,7 @@ function InputInternal(
     setIsFocused(false);
   }
 
-  function cloneIconElement(
+  function renderIcon(
     originalIcon: JSX.Element,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     props?: Partial<any> & React.Attributes,
@@ -81,9 +81,7 @@ function InputInternal(
       );
     } else if (iconLeft) {
       return (
-        <IconLeft {...{ size, inverted }}>
-          {cloneIconElement(iconLeft)}
-        </IconLeft>
+        <IconLeft {...{ size, inverted }}>{renderIcon(iconLeft)}</IconLeft>
       );
     }
     return null;
@@ -107,7 +105,7 @@ function InputInternal(
       // Disable custom enhancer when whole input is disabled by passing disabled prop
       return (
         <EnhancerRight {...{ size, inverted }}>
-          {cloneIconElement(enhancerRight, {
+          {renderIcon(enhancerRight, {
             disabled,
           })}
         </EnhancerRight>
