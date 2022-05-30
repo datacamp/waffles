@@ -1,0 +1,49 @@
+import * as LoaderExports from '@datacamp/waffles/loader';
+
+import Layout from '../../components/content-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import BasicUsage from '../../examples/loader/basic-usage';
+import CustomSize from '../../examples/loader/custom-size';
+import Inverted from '../../examples/loader/inverted';
+
+export default Layout;
+
+# Loader
+
+An animated component to represent loading.
+
+🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Basic Usage" path="loader/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Inverted" path="loader/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+<Example title="Custom Size" path="loader/custom-size">
+  <CustomSize />
+</Example>
+
+## Props
+
+### Loader
+
+In addition to all custom props listed below, `Loader` accepts all props regular `HTMLDiv` would, such as `aria-labelledby`, `aria-describedby`, `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/loader/loader')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={LoaderExports} path="@datacamp/waffles/loader" />
