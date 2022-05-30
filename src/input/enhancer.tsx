@@ -8,7 +8,7 @@ import { enhancerStyle } from './styles';
 
 type EnhancerProps = {
   /* The content of the enhancer. In general, an [icon](/components/icon) from Waffles (of the default `medium` size) should be used.  */
-  children: React.ReactNode;
+  children: JSX.Element;
   /* [skip docs] */
   size?: NonNullable<React.ComponentProps<typeof Button>['size']>;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -22,9 +22,9 @@ function Enhancer({ children, size = 'medium', ...restProps }: EnhancerProps) {
       {...mergeProps(focusProps, restProps)}
       css={enhancerStyle({ isFocusVisible })}
     >
-      {children && (children as React.ReactElement).props['size']
+      {children && children.props.size
         ? children
-        : cloneElement(children as React.ReactElement, {
+        : cloneElement(children, {
             // Handle large buttons having medium sized icons by default
             size: size === 'large' ? 'medium' : size,
           })}
