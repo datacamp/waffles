@@ -47,7 +47,7 @@ export function listStyle() {
   `;
 }
 
-const SIDEBAR_WIDTH_BELOW_MEDIUM_BREKPOINT = 300;
+const SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT = 356;
 const SIDEBAR_WIDTH_ABOVE_MEDIUM_BREKPOINT = 230;
 
 // Regular sidebar (displayed above medium breakpoint)
@@ -74,7 +74,8 @@ export function animatedSidebarStyle({
     position: fixed;
     display: flex;
     flex-direction: column;
-    width: ${SIDEBAR_WIDTH_BELOW_MEDIUM_BREKPOINT}px;
+    width: calc(100vw - ${tokens.spacing.xxlarge});
+    max-width: ${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT}px;
     top: 0;
     left: 0;
     height: 100vh;
@@ -92,10 +93,10 @@ export function animatedSidebarStyle({
       height: 0;
     }
     // Animation
-    transform: translateX(-${SIDEBAR_WIDTH_BELOW_MEDIUM_BREKPOINT}px);
+    transform: translateX(-${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT}px);
     animation: ${isVisible
-        ? sidebarEnter({ offset: SIDEBAR_WIDTH_BELOW_MEDIUM_BREKPOINT })
-        : sidebarExit({ offset: SIDEBAR_WIDTH_BELOW_MEDIUM_BREKPOINT })}
+        ? sidebarEnter({ offset: SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT })
+        : sidebarExit({ offset: SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT })}
       200ms ease-out forwards;
   `;
 }
@@ -266,7 +267,13 @@ export function closeButtonStyle({ isVisible }: ButtonStyleOptions) {
   return css`
     position: fixed;
     bottom: ${tokens.spacing.medium};
-    left: 308px;
+    // Calculate button position next to sidebar depending on display size
+    left: min(
+      calc(100vw - ${tokens.spacing.xxlarge} + ${tokens.spacing.small}),
+      calc(
+        ${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT}px + ${tokens.spacing.small}
+      )
+    );
     z-index: ${tokens.zIndex.modal};
     display: flex;
     align-items: center;
