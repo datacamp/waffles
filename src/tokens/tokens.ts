@@ -6,6 +6,7 @@ const tokens = {
     medium: '16px',
     large: '24px',
     xlarge: '32px',
+    xxlarge: '64px',
   },
   colors: {
     navyLight: '#213147',
