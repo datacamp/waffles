@@ -64,7 +64,7 @@ function SelectInternal(
         {children}
       </select>
       <div css={iconRightStyle({ size, inverted })}>
-        <ChevronDown />
+        <ChevronDown size={size === 'large' ? 'medium' : size} />
       </div>
     </div>
   );
