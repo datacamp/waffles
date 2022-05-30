@@ -14,7 +14,7 @@ type PanelStyleOptions = {
   placement: NonNullable<React.ComponentProps<typeof Drawer>['placement']>;
 };
 
-const PANEL_WIDTH_BELOW_SMALL_BREKPOINT = 300;
+const PANEL_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT = 356;
 const PANEL_WIDTH_ABOVE_SMALL_BREKPOINT = 600;
 
 function basePanelStyle({ isVisible, placement }: PanelStyleOptions) {
@@ -27,24 +27,28 @@ function basePanelStyle({ isVisible, placement }: PanelStyleOptions) {
     outline: 0;
     overflow: hidden;
     pointer-events: all;
-    width: ${PANEL_WIDTH_BELOW_SMALL_BREKPOINT}px;
+    width: calc(100vw - ${tokens.spacing.xxlarge});
+    max-width: ${PANEL_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT};
     // Animation
     transform: translateX(
-      ${horizontalDirection * PANEL_WIDTH_BELOW_SMALL_BREKPOINT}px
+      ${horizontalDirection * PANEL_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT}px
     );
     animation: ${isVisible
         ? panelEnter({
-            offset: PANEL_WIDTH_BELOW_SMALL_BREKPOINT,
+            offset: PANEL_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT,
             slideFrom: placement,
           })
         : panelExit({
-            offset: PANEL_WIDTH_BELOW_SMALL_BREKPOINT,
+            offset: PANEL_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT,
             slideFrom: placement,
           })}
       200ms cubic-bezier(0, 0, 0.6, 1) forwards;
 
     ${mediaQuery.aboveSmall} {
-      width: ${PANEL_WIDTH_ABOVE_SMALL_BREKPOINT}px;
+      width: min(
+        calc(100vw - ${tokens.spacing.xxlarge}),
+        ${PANEL_WIDTH_ABOVE_SMALL_BREKPOINT}px
+      );
       // Animation
       transform: translateX(
         ${horizontalDirection * PANEL_WIDTH_ABOVE_SMALL_BREKPOINT}px
