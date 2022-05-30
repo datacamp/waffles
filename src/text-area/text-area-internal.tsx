@@ -13,13 +13,15 @@ type TextAreaBaseProps = {
   inverted?: boolean;
   /* Allows height to expand as much as it needs to in order to contain the current value. */
   autoGrow?: boolean;
+  /* [skip docs] */
+  size?: 'small' | 'medium' | 'large';
 };
 
 type TextAreaNoCouter = {
   /* Indicates whether or not the character count should be displayed. In addition set a character limit with `maxLength`. */
   showCharacterCount?: boolean;
 } & TextAreaBaseProps &
-  Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'size'>;
+  React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 type TextAreaWithCounter = {
   showCharacterCount: true;
@@ -32,7 +34,7 @@ type TextAreaWithCounter = {
 } & TextAreaBaseProps &
   Omit<
     React.TextareaHTMLAttributes<HTMLTextAreaElement>,
-    'size' | 'value' | 'onChange' | 'maxLength'
+    'value' | 'onChange' | 'maxLength'
   >;
 
 type TextAreaProps = TextAreaNoCouter | TextAreaWithCounter;
@@ -45,6 +47,7 @@ function TextAreaInternal(
     error = false,
     showCharacterCount,
     maxLength,
+    size = 'medium',
     onFocus,
     onBlur,
     ...restProps
@@ -82,7 +85,7 @@ function TextAreaInternal(
           onFocus={handleFocus}
           onBlur={handleBlur}
           aria-invalid={error}
-          css={textAreaStyle({ hasError: !!error, inverted })}
+          css={textAreaStyle({ hasError: !!error, inverted, size })}
         />
         {showCharacterCount && maxLength && (
           <CharacterCount

@@ -11,16 +11,19 @@ type SelectSize = NonNullable<React.ComponentProps<typeof Select>['size']>;
 const sizeMap = {
   small: {
     sizing: tokens.sizing.small,
+    fontSize: tokens.fontSizes.small,
     spacing: '6px',
     spacingWithIcon: '26px',
   },
   medium: {
     sizing: tokens.sizing.medium,
+    fontSize: tokens.fontSizes.medium,
     spacing: '12px',
     spacingWithIcon: '36px',
   },
   large: {
     sizing: tokens.sizing.large,
+    fontSize: tokens.fontSizes.medium,
     spacing: '12px',
     spacingWithIcon: '36px',
   },
@@ -72,7 +75,6 @@ const selectBaseStyle = css`
   width: 100%;
   height: 100%;
   font-family: ${tokens.fontFamilies.sansSerif};
-  font-size: ${tokens.fontSizes.medium};
   font-weight: ${tokens.fontWeights.regular};
   line-height: ${tokens.lineHeights.relaxed};
   border: ${tokens.borderWidth.thin} solid ${tokens.colors.greyDark};
@@ -101,6 +103,7 @@ export function selectStyle({
 }: SelectStyleOptions) {
   return css`
     ${selectBaseStyle}
+    font-size: ${sizeMap[size].fontSize};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     background-color: ${inverted
       ? tokens.colors.navyLight

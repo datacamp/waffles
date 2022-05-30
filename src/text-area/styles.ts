@@ -2,6 +2,22 @@ import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
 
+import TextArea from './text-area';
+
+// Mapping between text-area sizes
+
+const sizeMap = {
+  small: {
+    fontSize: tokens.fontSizes.small,
+  },
+  medium: {
+    fontSize: tokens.fontSizes.medium,
+  },
+  large: {
+    fontSize: tokens.fontSizes.medium,
+  },
+} as const;
+
 type TextAreaWrapperStyleOptions = {
   isFocused: boolean;
   autoGrow: boolean;
@@ -53,7 +69,6 @@ const textAreaBaseStyle = css`
   color: ${tokens.colors.navy};
   background-color: ${tokens.colors.white};
   font-family: ${tokens.fontFamilies.sansSerif};
-  font-size: ${tokens.fontSizes.medium};
   font-weight: ${tokens.fontWeights.regular};
   line-height: ${tokens.lineHeights.relaxed};
   border: ${tokens.borderWidth.thin} solid ${tokens.colors.greyDark};
@@ -69,11 +84,19 @@ const textAreaBaseStyle = css`
 type TextAreaStyleOptions = {
   hasError: boolean;
   inverted: boolean;
+  size: NonNullable<React.ComponentProps<typeof TextArea>['size']>;
 };
 
-export function textAreaStyle({ hasError, inverted }: TextAreaStyleOptions) {
+export function textAreaStyle({
+  hasError,
+  inverted,
+  size,
+}: TextAreaStyleOptions) {
   return css`
     ${textAreaBaseStyle}
+    font-size: ${size === 'large'
+      ? sizeMap.medium.fontSize
+      : sizeMap[size].fontSize};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     background-color: ${inverted
       ? tokens.colors.navyLight

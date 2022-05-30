@@ -36,12 +36,12 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
   color: #05192D;
   background-color: #FFFFFF;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
 }
@@ -81,7 +81,6 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
   color: #05192D;
   background-color: #FFFFFF;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   border: 1px solid #848C92;
@@ -151,12 +150,12 @@ exports[`TextArea renders snapshot 1`] = `
   color: #05192D;
   background-color: #FFFFFF;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
 }
@@ -228,12 +227,12 @@ exports[`TextArea renders snapshot of disabled 1`] = `
   color: #05192D;
   background-color: #FFFFFF;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
 }
@@ -305,12 +304,12 @@ exports[`TextArea renders snapshot of inverted 1`] = `
   color: #05192D;
   background-color: #FFFFFF;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  font-size: 14px;
   color: #FFFFFF;
   background-color: #213147;
 }
@@ -381,12 +380,12 @@ exports[`TextArea renders snapshot of required with error 1`] = `
   color: #05192D;
   background-color: #FFFFFF;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
   border-color: #DD3400;
@@ -459,12 +458,12 @@ exports[`TextArea renders snapshot when character count is displayed 1`] = `
   color: #05192D;
   background-color: #FFFFFF;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
 }
