@@ -29,6 +29,7 @@ const wrapperStyle = css`
 
 const buttonContentStyle = css`
   text-align: center;
+  width: 70px;
 `;
 
 type ExampleProps = {
