@@ -63,6 +63,7 @@ export function requiredIndicatorStyle({
   size,
 }: RequiredStyleOptions) {
   return css`
+    display: flex;
     // Set required indicator to xsmall if the font size is small
     font-size: ${size === 'small'
       ? tokens.fontSizes.xsmall
@@ -72,6 +73,8 @@ export function requiredIndicatorStyle({
       : tokens.colors.navySubtleTextOnLight};
     flex-grow: 1;
     text-align: right;
+    justify-content: end;
+    align-items: center;
     user-select: none;
   `;
 }
