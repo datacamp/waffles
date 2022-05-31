@@ -66,9 +66,6 @@ exports[`Loader renders a loader 1`] = `
       class="emotion-2"
       viewBox="0 0 2640 3444"
     >
-      <title>
-        Loading
-      </title>
       <path
         d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
         fill="none"
@@ -147,9 +144,6 @@ exports[`Loader renders snapshot of inverted 1`] = `
       class="emotion-2"
       viewBox="0 0 2640 3444"
     >
-      <title>
-        Loading
-      </title>
       <path
         d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
         fill="none"
