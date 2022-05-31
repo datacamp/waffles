@@ -4,6 +4,7 @@ import { render } from '@testing-library/react';
 
 import { FormField } from '../index';
 
+const sizes = ['small', 'medium', 'large'] as const;
 const MOCKED_ID = '123abC';
 
 jest.mock('nanoid', () => {
@@ -291,5 +292,24 @@ describe('FormField', () => {
 
     const formField = container.firstChild;
     expect(formField).toMatchSnapshot();
+  });
+});
+
+describe('renders snapshot of', () => {
+  sizes.forEach((size) => {
+    it(`size ${size}`, () => {
+      const { container } = render(
+        <FormField
+          size={size}
+          label="Form field label"
+          description="Form field description"
+        >
+          <TestInput />
+        </FormField>,
+      );
+
+      const formfield = container.firstChild;
+      expect(formfield).toMatchSnapshot();
+    });
   });
 });

@@ -49,4 +49,9 @@ describe('FormField', () => {
     cy.get('main').find('textarea').should('have.length', 2);
     cy.get('main').find('select').should('have.length', 2);
   });
+
+  it('render all sizes, with inverted', () => {
+    cy.loadStory('form-field-sizes');
+    cy.get('main').find('input').should('have.length', 6);
+  });
 });
