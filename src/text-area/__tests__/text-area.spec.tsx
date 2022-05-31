@@ -5,6 +5,7 @@ import { render } from '@testing-library/react';
 
 import { TextArea } from '../index';
 
+const sizes = ['small', 'medium', 'large'] as const;
 const MOCKED_ID = '123abC';
 
 jest.mock('nanoid', () => {
@@ -172,5 +173,16 @@ describe('TextArea', () => {
 
     const textarea = container.firstChild;
     expect(textarea).toMatchSnapshot();
+  });
+});
+
+describe('renders snapshot of', () => {
+  sizes.forEach((size) => {
+    it(`size ${size}`, () => {
+      const { container } = render(<TextArea size={size} />);
+
+      const textarea = container.firstChild;
+      expect(textarea).toMatchSnapshot();
+    });
   });
 });
