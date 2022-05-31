@@ -115,6 +115,7 @@ Object {
     "small": "8px",
     "xlarge": "32px",
     "xsmall": "4px",
+    "xxlarge": "64px",
   },
   "zIndex": Object {
     "default": 1,

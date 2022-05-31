@@ -3,10 +3,10 @@
 exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
 @keyframes animation-0 {
   from {
-    -webkit-transform: translateX(-300px);
-    -moz-transform: translateX(-300px);
-    -ms-transform: translateX(-300px);
-    transform: translateX(-300px);
+    -webkit-transform: translateX(-356px);
+    -moz-transform: translateX(-356px);
+    -ms-transform: translateX(-356px);
+    transform: translateX(-356px);
   }
 
   to {
@@ -19,10 +19,10 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
 
 @keyframes animation-0 {
   from {
-    -webkit-transform: translateX(-300px);
-    -moz-transform: translateX(-300px);
-    -ms-transform: translateX(-300px);
-    transform: translateX(-300px);
+    -webkit-transform: translateX(-356px);
+    -moz-transform: translateX(-356px);
+    -ms-transform: translateX(-356px);
+    transform: translateX(-356px);
   }
 
   to {
@@ -72,18 +72,19 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   outline: 0;
   overflow: hidden;
   pointer-events: all;
-  width: 300px;
+  width: calc(100vw - 64px);
+  max-width: 356;
   -webkit-transform: translateX(
-        -300px
+        -356px
       );
   -moz-transform: translateX(
-        -300px
+        -356px
       );
   -ms-transform: translateX(
-        -300px
+        -356px
       );
   transform: translateX(
-        -300px
+        -356px
       );
   -webkit-animation: animation-0 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
   animation: animation-0 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
@@ -101,7 +102,10 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
 
 @media screen and (min-width: 480px) {
   .emotion-0 {
-    width: 600px;
+    width: min(
+            calc(100vw - 64px),
+            600px
+          );
     -webkit-transform: translateX(
             -600px
           );
@@ -475,10 +479,10 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
 exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
 @keyframes animation-0 {
   from {
-    -webkit-transform: translateX(300px);
-    -moz-transform: translateX(300px);
-    -ms-transform: translateX(300px);
-    transform: translateX(300px);
+    -webkit-transform: translateX(356px);
+    -moz-transform: translateX(356px);
+    -ms-transform: translateX(356px);
+    transform: translateX(356px);
   }
 
   to {
@@ -491,10 +495,10 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
 
 @keyframes animation-0 {
   from {
-    -webkit-transform: translateX(300px);
-    -moz-transform: translateX(300px);
-    -ms-transform: translateX(300px);
-    transform: translateX(300px);
+    -webkit-transform: translateX(356px);
+    -moz-transform: translateX(356px);
+    -ms-transform: translateX(356px);
+    transform: translateX(356px);
   }
 
   to {
@@ -544,18 +548,19 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   outline: 0;
   overflow: hidden;
   pointer-events: all;
-  width: 300px;
+  width: calc(100vw - 64px);
+  max-width: 356;
   -webkit-transform: translateX(
-        300px
+        356px
       );
   -moz-transform: translateX(
-        300px
+        356px
       );
   -ms-transform: translateX(
-        300px
+        356px
       );
   transform: translateX(
-        300px
+        356px
       );
   -webkit-animation: animation-0 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
   animation: animation-0 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
@@ -573,7 +578,10 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
 
 @media screen and (min-width: 480px) {
   .emotion-0 {
-    width: 600px;
+    width: min(
+            calc(100vw - 64px),
+            600px
+          );
     -webkit-transform: translateX(
             600px
           );
