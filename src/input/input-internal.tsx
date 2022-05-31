@@ -60,12 +60,12 @@ function InputInternal(
     // Check if the icon has a provided custom size prop already
     return originalIcon.props.size
       ? cloneElement(originalIcon, {
-          ...{ props },
+          ...props,
         })
       : cloneElement(originalIcon, {
           // Handle large buttons having medium sized icons by default, and small / medium as defined
           size: size === 'large' ? 'medium' : size,
-          ...{ ...props },
+          ...props,
         });
   }
 

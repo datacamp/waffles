@@ -26,6 +26,11 @@ describe('TextArea', () => {
     cy.get('main').findAllByText('9 / 100').should('have.length', 2);
   });
 
+  it('render all sizes, with inverted', () => {
+    cy.loadStory('text-area-sizes');
+    cy.get('main').find('textarea').should('have.length', 6);
+  });
+
   it('when typing text the value got updated', () => {
     cy.loadStory('text-area-basic');
     cy.get('main').find('textarea').type('Data Camp');
@@ -49,7 +54,7 @@ describe('TextArea', () => {
       .should('have.value', 'This sentence is exc');
   });
 
-  it('grows in height whith each new row, when autoGrow is set', () => {
+  it('grows in height with each new row, when autoGrow is set', () => {
     cy.loadStory('text-area-auto-grow');
     cy.get('main')
       .find('textarea')

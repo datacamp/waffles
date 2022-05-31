@@ -13,7 +13,7 @@ type TextAreaBaseProps = {
   inverted?: boolean;
   /* Allows height to expand as much as it needs to in order to contain the current value. */
   autoGrow?: boolean;
-  /* [skip docs] */
+  /* Defines the size of the textarea. In most cases default `medium` size should be used. */
   size?: 'small' | 'medium' | 'large';
 };
 
