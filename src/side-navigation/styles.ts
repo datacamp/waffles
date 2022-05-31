@@ -67,25 +67,46 @@ type AnimatedSidebarStyleOptions = {
 };
 
 // Mobile sidebar (displayed below medium breakpoint)
-export function animatedSidebarStyle({
-  isVisible,
-}: AnimatedSidebarStyleOptions) {
+
+function baseAnimatedSidebarStyle({ isVisible }: AnimatedSidebarStyleOptions) {
   return css`
     position: fixed;
-    display: flex;
-    flex-direction: column;
     width: calc(100vw - ${tokens.spacing.xxlarge});
     max-width: ${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT}px;
     top: 0;
     left: 0;
-    height: 100vh;
-    @supports (height: 100dvh) {
-      height: 100dvh;
-    }
+    // Animation
+    transform: translateX(-${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT}px);
+    animation: ${isVisible
+        ? sidebarEnter({ offset: SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT })
+        : sidebarExit({ offset: SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT })}
+      200ms ease-out forwards;
+  `;
+}
+
+export function animatedSidebarStyle({
+  isVisible,
+}: AnimatedSidebarStyleOptions) {
+  return css`
+    ${baseAnimatedSidebarStyle({ isVisible })}
     z-index: ${tokens.zIndex.modal};
+    height: 100vh;
     background-color: ${tokens.colors.navy};
     border-right: ${tokens.borderWidth.thin} solid
       ${hexToRgba(tokens.colors.white, 0.2)};
+    overflow: hidden;
+  `;
+}
+
+export function animatedSidebarContentStyle({
+  isVisible,
+}: AnimatedSidebarStyleOptions) {
+  return css`
+    ${baseAnimatedSidebarStyle({ isVisible })}
+    z-index: ${tokens.zIndex.modal + 10};
+    display: flex;
+    flex-direction: column;
+    bottom: 0; // Position bottom of sidebar just above browser bar on iOS
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none;
@@ -95,12 +116,6 @@ export function animatedSidebarStyle({
       width: 0;
       height: 0;
     }
-    // Animation
-    transform: translateX(-${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT}px);
-    animation: ${isVisible
-        ? sidebarEnter({ offset: SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT })
-        : sidebarExit({ offset: SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT })}
-      200ms ease-out forwards;
   `;
 }
 

@@ -24,7 +24,7 @@ function Panel({
     <>
       {/* Background panel which spans whole device heigh */}
       <div css={panelStyle({ isVisible, placement })} />
-      {/* Content only wrapper allows buttons to be fixed at the bottom and be always visible at once*/}
+      {/* Content only wrapper allows buttons to be fixed at the bottom and be always visible at once */}
       <section
         {...restProps}
         aria-modal
