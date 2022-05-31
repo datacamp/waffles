@@ -122,7 +122,7 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   line-height: 1.25;
   margin: 0;
   margin-right: 8px;
-  padding-top: 4px;
+  padding: 4px 0;
   line-height: 1.5;
 }
 
@@ -139,7 +139,7 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   color: #FFFFFF;
   font-size: 14px;
   margin: 0;
-  padding-top: 2px;
+  padding: 4px 0;
 }
 
 .emotion-10 {
@@ -513,7 +513,7 @@ exports[`Notification renders snapshot of regular notification with all optional
   line-height: 1.25;
   margin: 0;
   margin-right: 8px;
-  padding-top: 4px;
+  padding: 4px 0;
   line-height: 1.5;
 }
 
@@ -530,7 +530,7 @@ exports[`Notification renders snapshot of regular notification with all optional
   color: #05192D;
   font-size: 14px;
   margin: 0;
-  padding-top: 2px;
+  padding: 4px 0;
 }
 
 .emotion-10 {
