@@ -46,7 +46,7 @@ function transformedBoxShadows(baseBoxShadows) {
       // Regular CSS box-shadow value
       const regularBoxShadow = `${x} ${y} ${blur} ${spread} ${color}`;
 
-      return [key, regularBoxShadow];
+      return [key, { value: regularBoxShadow }];
     }),
   );
 }
@@ -55,7 +55,7 @@ function transformedFontWeights(baseFontWeights) {
   return Object.fromEntries(
     Object.entries(baseFontWeights).map((entry) => {
       const [key, baseFontWeight] = entry;
-      return [key, fontWeightsMap[baseFontWeight]];
+      return [key, { value: fontWeightsMap[baseFontWeight.value] }];
     }),
   );
 }
@@ -64,7 +64,7 @@ function transformedFontFamilies(baseFontFamilies) {
   return Object.fromEntries(
     Object.entries(baseFontFamilies).map((entry) => {
       const [key, baseFontFamily] = entry;
-      return [key, fontFamiliesMap[baseFontFamily]];
+      return [key, { value: fontFamiliesMap[baseFontFamily.value] }];
     }),
   );
 }
@@ -75,14 +75,35 @@ function transformedPercentages(basePercentages) {
       const [key, basePercantege] = entry;
       // Convert percentages to unitless
       // Useful for line heights and opacity
-      const unitless = parseFloat(basePercantege) / 100;
-      return [key, unitless];
+      const unitless = parseFloat(basePercantege.value) / 100;
+      return [key, { value: unitless }];
     }),
   );
 }
 
-// Apply trasformations and remove typography and paragraphSpacing sections
+// Leave only value for each token in each token group, and omit other properties used by Figma Tokens
+
+function extractTokenValues(tokens) {
+  // Simplify tokens in each group, leaving only value
+  return Object.fromEntries(
+    Object.entries(tokens).map(([groupName, groupTokens]) => {
+      return [
+        groupName,
+        Object.fromEntries(
+          Object.entries(groupTokens).map(([tokenName, definition]) => {
+            return [tokenName, definition.value];
+          }),
+        ),
+      ];
+    }),
+  );
+}
+
 function transformedBaseTokens(tokens) {
+  // Remove Figma utility token groups
+  delete tokens.typography;
+  delete tokens.paragraphSpacing;
+
   const transformedTokens = {
     ...tokens,
     boxShadow: {
@@ -105,10 +126,7 @@ function transformedBaseTokens(tokens) {
     },
   };
 
-  delete transformedTokens.typography;
-  delete transformedTokens.paragraphSpacing;
-
-  return transformedTokens;
+  return extractTokenValues(transformedTokens);
 }
 
 // Write transformed design tokens to file
@@ -116,7 +134,9 @@ async function generateDesignTokens() {
   const transformedTokens = util.inspect(transformedBaseTokens(baseTokens), {
     depth: null,
   });
-  const content = `const tokens = ${transformedTokens} as const\n\nexport default tokens`;
+  const content = `// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'generate:design-tokens' to update\n
+const tokens = ${transformedTokens} as const\n
+export default tokens`;
 
   fs.writeFileSync(transformedTokensPath, formatContentWithPrettier(content));
 }
