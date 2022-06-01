@@ -116,12 +116,8 @@ function Example() {
             </NavItem>
           </SideNav.Category>
           <SideNav.Category label="Learn">
-            <NavItem
-              href="#custom-tracks"
-              iconLeft={<Branch />}
-              iconRight={<Branch />}
-            >
-              Custom Tracks Custom Custom Tracks
+            <NavItem href="#custom-tracks" iconLeft={<Branch />}>
+              Custom Tracks With Very Long Content
             </NavItem>
             <NavItem href="#assignments" iconLeft={<Assignment />}>
               Assignments
