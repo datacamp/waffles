@@ -5,7 +5,7 @@ import { Button } from '@datacamp/waffles/button';
 
 const bookmarkStyle = css`
   margin-left: ${tokens.spacing.small};
-  vertical-align: middle;
+  vertical-align: baseline;
 `;
 
 type BookmarkProps = {
