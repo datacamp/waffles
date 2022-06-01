@@ -9,12 +9,15 @@ import TextArea from './text-area';
 const sizeMap = {
   small: {
     fontSize: tokens.fontSizes.small,
+    spacing: '6px',
   },
   medium: {
     fontSize: tokens.fontSizes.medium,
+    spacing: '12px',
   },
   large: {
     fontSize: tokens.fontSizes.medium,
+    spacing: '12px',
   },
 } as const;
 
@@ -65,7 +68,6 @@ const textAreaBaseStyle = css`
   height: 100%;
   resize: none;
   word-break: break-word;
-  padding: ${tokens.spacing.small} 12px;
   color: ${tokens.colors.navy};
   background-color: ${tokens.colors.white};
   font-family: ${tokens.fontFamilies.sansSerif};
@@ -101,6 +103,8 @@ export function textAreaStyle({
     background-color: ${inverted
       ? tokens.colors.navyLight
       : tokens.colors.white};
+
+    padding: ${tokens.spacing.small} ${sizeMap[size].spacing};
 
     &::placeholder {
       opacity: 1;
