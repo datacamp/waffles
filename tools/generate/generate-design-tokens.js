@@ -31,14 +31,14 @@ const fontFamiliesMap = {
 
 // Transformations for colors, boxShadow, fontWeights, fontFamilies, lineHeights, and opacity
 
-function transformedColors(baseColors) {
+function transformColors(baseColors) {
   return Object.entries(baseColors).reduce((flattenedColors, currentEntry) => {
     const groupedColors = currentEntry[1];
     return Object.assign(flattenedColors, { ...groupedColors });
   }, {});
 }
 
-function transformedBoxShadows(baseBoxShadows) {
+function transformBoxShadows(baseBoxShadows) {
   return Object.fromEntries(
     Object.entries(baseBoxShadows).map((entry) => {
       const [key, baseBoxShadow] = entry;
@@ -51,7 +51,7 @@ function transformedBoxShadows(baseBoxShadows) {
   );
 }
 
-function transformedFontWeights(baseFontWeights) {
+function transformFontWeights(baseFontWeights) {
   return Object.fromEntries(
     Object.entries(baseFontWeights).map((entry) => {
       const [key, baseFontWeight] = entry;
@@ -60,7 +60,7 @@ function transformedFontWeights(baseFontWeights) {
   );
 }
 
-function transformedFontFamilies(baseFontFamilies) {
+function transformFontFamilies(baseFontFamilies) {
   return Object.fromEntries(
     Object.entries(baseFontFamilies).map((entry) => {
       const [key, baseFontFamily] = entry;
@@ -69,7 +69,7 @@ function transformedFontFamilies(baseFontFamilies) {
   );
 }
 
-function transformedPercentages(basePercentages) {
+function transformPercentages(basePercentages) {
   return Object.fromEntries(
     Object.entries(basePercentages).map((entry) => {
       const [key, basePercantege] = entry;
@@ -107,22 +107,22 @@ function transformedBaseTokens(tokens) {
   const transformedTokens = {
     ...tokens,
     boxShadow: {
-      ...transformedBoxShadows(tokens.boxShadow),
+      ...transformBoxShadows(tokens.boxShadow),
     },
     colors: {
-      ...transformedColors(tokens.colors),
+      ...transformColors(tokens.colors),
     },
     fontFamilies: {
-      ...transformedFontFamilies(tokens.fontFamilies),
+      ...transformFontFamilies(tokens.fontFamilies),
     },
     fontWeights: {
-      ...transformedFontWeights(tokens.fontWeights),
+      ...transformFontWeights(tokens.fontWeights),
     },
     lineHeights: {
-      ...transformedPercentages(tokens.lineHeights),
+      ...transformPercentages(tokens.lineHeights),
     },
     opacity: {
-      ...transformedPercentages(tokens.opacity),
+      ...transformPercentages(tokens.opacity),
     },
   };
 
