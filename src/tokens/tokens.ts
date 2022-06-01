@@ -1,3 +1,5 @@
+// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'generate:design-tokens' to update
+
 const tokens = {
   sizing: { small: '28px', medium: '36px', large: '48px' },
   spacing: {
