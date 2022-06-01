@@ -12,22 +12,22 @@ function Example() {
       `}
     >
       <TextArea
-        size={'large'}
+        size="large"
         aria-label="Large text area"
         placeholder="Large Text Area"
         rows={3}
       />
       <TextArea
-        size={'medium'}
+        size="medium"
         aria-label="Medium text area"
         placeholder="Medium Text Area"
-        rows={2}
-      />{' '}
+        rows={3}
+      />
       <TextArea
-        size={'small'}
+        size="small"
         aria-label="Small text area"
         placeholder="Small Text Area"
-        rows={1}
+        rows={3}
       />
     </div>
   );
