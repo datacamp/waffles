@@ -47,14 +47,14 @@ export function listStyle() {
   `;
 }
 
-const SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT = 356;
-const SIDEBAR_WIDTH_ABOVE_MEDIUM_BREKPOINT = 230;
+const SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT = 356;
+const SIDEBAR_WIDTH_ABOVE_MEDIUM_BREAKPOINT = 230;
 
 // Regular sidebar (displayed above medium breakpoint)
 export function sidebarStyle() {
   return css`
-    width: ${SIDEBAR_WIDTH_ABOVE_MEDIUM_BREKPOINT}px;
-    min-width: ${SIDEBAR_WIDTH_ABOVE_MEDIUM_BREKPOINT}px;
+    width: ${SIDEBAR_WIDTH_ABOVE_MEDIUM_BREAKPOINT}px;
+    min-width: ${SIDEBAR_WIDTH_ABOVE_MEDIUM_BREAKPOINT}px;
     min-height: 100%;
     background-color: ${tokens.colors.navy};
     display: flex;
@@ -72,14 +72,14 @@ function baseAnimatedSidebarStyle({ isVisible }: AnimatedSidebarStyleOptions) {
   return css`
     position: fixed;
     width: calc(100vw - ${tokens.spacing.xxlarge});
-    max-width: ${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT}px;
+    max-width: ${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT}px;
     top: 0;
     left: 0;
     // Animation
-    transform: translateX(-${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT}px);
+    transform: translateX(-${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT}px);
     animation: ${isVisible
-        ? sidebarEnter({ offset: SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT })
-        : sidebarExit({ offset: SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT })}
+        ? sidebarEnter({ offset: SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT })
+        : sidebarExit({ offset: SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT })}
       200ms ease-out forwards;
   `;
 }
@@ -289,7 +289,7 @@ export function closeButtonStyle({ isVisible }: ButtonStyleOptions) {
     left: min(
       calc(100vw - ${tokens.spacing.xxlarge} + ${tokens.spacing.small}),
       calc(
-        ${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREKPOINT}px + ${tokens.spacing.small}
+        ${SIDEBAR_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT}px + ${tokens.spacing.small}
       )
     );
     z-index: ${tokens.zIndex.modal};
