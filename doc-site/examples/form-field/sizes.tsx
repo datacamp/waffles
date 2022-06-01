@@ -14,7 +14,7 @@ function Example() {
     <form css={formStyle}>
       <FormField
         size="large"
-        label="Large Size Select"
+        label="Large size select"
         description="Optional large size description."
         error="Please select an option"
         required
@@ -27,7 +27,7 @@ function Example() {
       </FormField>
       <FormField
         size="medium"
-        label="Medium Size Select"
+        label="Medium size select"
         description="Optional medium size description."
         error="Please select an option"
         required
@@ -41,7 +41,7 @@ function Example() {
 
       <FormField
         size="small"
-        label="Small Size Select"
+        label="Small size select"
         description="Optional small size description."
         error="Please select an option"
         required
