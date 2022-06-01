@@ -21,7 +21,7 @@ function AnimatedSidebar({ children, ...restProps }: AnimatedSidebarProps) {
         <>
           <Overlay />
           <CloseButton />
-          {/* Background sidebar which spans whole device heigh */}
+          {/* Background sidebar which spans whole device height */}
           <div
             {...restProps}
             css={animatedSidebarStyle({ isVisible: isOpen })}
