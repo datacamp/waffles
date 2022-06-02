@@ -1,4 +1,5 @@
 // Generate new design tokens .ts file based on JSON file with Figma Tokens definitions
+// Figma Tokens requires tokens to placed in a single group (global in this case), so internal aliasing works correcty
 
 // fontWeights, fontFamilies, and boxShadow have non-standard values which are required to work with Figma Tokens plugin
 // whole typography and paragraphSpacing are defined for convenience, because Figma doesn't support text components, and are removed
@@ -131,9 +132,13 @@ function transformedBaseTokens(tokens) {
 
 // Write transformed design tokens to file
 async function generateDesignTokens() {
-  const transformedTokens = util.inspect(transformedBaseTokens(baseTokens), {
-    depth: null,
-  });
+  // Grab tokens from global group
+  const transformedTokens = util.inspect(
+    transformedBaseTokens(baseTokens.global),
+    {
+      depth: null,
+    },
+  );
   const content = `// AUTO-GENERATED CONTENT - DO NOT MANUALLY EDIT - Run 'generate:design-tokens' to update\n
 const tokens = ${transformedTokens} as const\n
 export default tokens`;
