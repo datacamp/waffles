@@ -6,5 +6,6 @@
   "integrationFolder": "src",
   "testFiles": "**/*.e2e.ts",
   "projectId": "krsb2b",
-  "defaultCommandTimeout": 8000
+  "defaultCommandTimeout": 8000,
+  "retries": 1
 }
