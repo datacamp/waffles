@@ -20,8 +20,8 @@ const iconStyle = css`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: ${tokens.sizing.small};
-  height: ${tokens.sizing.small};
+  width: 24px;
+  height: 24px;
   margin-right: ${tokens.spacing.small};
   border-radius: ${tokens.borderRadius.circle};
 `;
