@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
+import { css } from '@emotion/react';
 
-import { avatarWrapperStyle } from './styles';
+import * as allIcons from '../icon';
+
+import { avatarContentWrapperStyle, avatarWrapperStyle } from './styles';
 
 type AvatarProps = {
   /* Defines the size of the avatar. In general use default `medium` size. */
   size?:
+    | 'xxsmall'
     | 'xsmall'
     | 'small'
     | 'medium'
@@ -25,9 +29,20 @@ type AvatarProps = {
     | 'pink'
     | 'grey'
     | 'greySubtle';
-  /* Inner content component of the avatar. In general pass Waffles [Asset](/components/asset), [Icon](/components/icon), native image element or a string containing at most two characters. Must be single element or string. */
-  content: React.ReactNode | string;
+  /* Inner content component of the avatar. In general pass Waffles [Asset](/components/asset), [Icon](/components/icon), native image element or a string containing only one character. Must be single element or string. */
+  content: JSX.Element | string;
 } & React.HTMLAttributes<HTMLDivElement>;
+
+const sizeMap = {
+  xxsmall: '10px',
+  xsmall: '14px',
+  small: '18px',
+  medium: '22px',
+  large: '36px',
+  xlarge: '56px',
+  xxlarge: '76px',
+  xxxlarge: '96px',
+};
 
 function Avatar({
   size = 'medium',
@@ -35,15 +50,26 @@ function Avatar({
   content,
   ...restProps
 }: AvatarProps) {
-  if (typeof content === 'string' && content.length > 2) {
+  if (typeof content === 'string' && content.length > 1) {
     throw new Error(
-      'The content string must not have a length of greater than 2.',
+      'The content string must not have a length of greater than 1.',
     );
   }
 
   return (
     <div css={avatarWrapperStyle({ size, variant })} {...restProps}>
-      {content}
+      <div css={avatarContentWrapperStyle}>
+        {/* TODO: Update allIcons keys to config reference? */}
+        {Object.keys(allIcons).includes((content as JSX.Element).type?.name)
+          ? cloneElement(content as JSX.Element, {
+              height: sizeMap[size],
+              width: sizeMap[size],
+              css: css`
+                margin: auto 0;
+              `,
+            })
+          : content}
+      </div>
     </div>
   );
 }
