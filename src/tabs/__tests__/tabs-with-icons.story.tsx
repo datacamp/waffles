@@ -1,32 +1,25 @@
-import React, { useState } from 'react';
 import { css } from '@emotion/react';
 
 import { Tabs } from '../index';
 import { tokens } from '../../tokens';
 import { Paragraph } from '../../paragraph';
+import { Bell, Clock, Heart } from '../../icon';
 
 const wrapperStyle = css`
-  padding-top: ${tokens.spacing.medium};
+  padding: ${tokens.spacing.medium};
 `;
 
 function Story() {
-  const [activeTabIndex, setActiveTabIndex] = useState<React.Key>(0);
-
   return (
     <div css={wrapperStyle}>
-      <Tabs
-        activeTab={activeTabIndex}
-        onChange={(activeTab) => {
-          setActiveTabIndex(activeTab);
-        }}
-      >
-        <Tabs.Tab label="First Tab" data-testid="first-tab">
+      <Tabs activeTab={0}>
+        <Tabs.Tab icon={<Heart size="xsmall" />} label="First">
           <Paragraph>First Tab Content</Paragraph>
         </Tabs.Tab>
-        <Tabs.Tab label="Second Tab" data-testid="second-tab">
+        <Tabs.Tab icon={<Clock size="xsmall" />} label="Second">
           <Paragraph>Second Tab Content</Paragraph>
         </Tabs.Tab>
-        <Tabs.Tab disabled label="Third Tab Disabled" data-testid="third-tab">
+        <Tabs.Tab icon={<Bell size="xsmall" />} label="Third">
           <Paragraph>Third Tab Content</Paragraph>
         </Tabs.Tab>
       </Tabs>
