@@ -7,32 +7,36 @@ import { tokens } from '../tokens';
 import Avatar from './avatar';
 
 const sizeMap = {
+  xxsmall: {
+    fontSize: '8px',
+    sizing: '14px',
+  },
   xsmall: {
-    fontSize: '10px',
+    fontSize: tokens.fontSizes.small,
     sizing: '24px',
   },
   small: {
-    fontSize: '10px',
+    fontSize: tokens.fontSizes.large,
     sizing: '32px',
   },
   medium: {
-    fontSize: tokens.fontSizes.small,
+    fontSize: tokens.fontSizes.xxlarge,
     sizing: '40px',
   },
   large: {
-    fontSize: tokens.fontSizes.medium,
+    fontSize: '36px',
     sizing: '64px',
   },
   xlarge: {
-    fontSize: tokens.fontSizes.medium,
+    fontSize: '64px',
     sizing: '96px',
   },
   xxlarge: {
-    fontSize: tokens.fontSizes.medium,
+    fontSize: '96px',
     sizing: '128px',
   },
   xxxlarge: {
-    fontSize: tokens.fontSizes.medium,
+    fontSize: '116px',
     sizing: '160px',
   },
 };
@@ -94,7 +98,18 @@ export function avatarWrapperStyle({ size, variant }: AvatarWrapperProps) {
     background-color: ${variantMap[variant].backgroundColor};
     color: ${variantMap[variant].color};
     border-radius: ${sizeMap[size].sizing};
+    font-size: ${sizeMap[size].fontSize};
+    line-height: ${sizeMap[size].sizing};
     width: ${sizeMap[size].sizing};
     height: ${sizeMap[size].sizing};
+    overflow: hidden;
+    font-family: ${tokens.fontFamilies.sansSerif};
   `;
 }
+
+export const avatarContentWrapperStyle = css`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+`;
