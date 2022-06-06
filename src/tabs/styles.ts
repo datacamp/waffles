@@ -112,7 +112,7 @@ export function tabStyle({
 
     ${isFocusVisible &&
     css`
-      box-shadow: 0 0 0 2px ${tokens.colors.blueDark};
+      box-shadow: inset 0 0 0 2px ${tokens.colors.blueDark};
     `}
   `;
 }
