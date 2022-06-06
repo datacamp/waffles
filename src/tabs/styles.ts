@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
-import { mediaQuery, hexToRgba } from '../helpers';
+import { hexToRgba } from '../helpers';
 
 type TabListStyleOptions = {
   isGradientMaskVisible: boolean;
@@ -12,9 +12,9 @@ export function tabListStyle({ isGradientMaskVisible }: TabListStyleOptions) {
     width: 100%;
     margin-bottom: ${tokens.spacing.medium};
 
-    /* Make tabs scrollable on mobile, while hiding scroll, and show gradient mask  */
+    /* Make tabs scrollable, while hiding scroll, and showing gradient mask  */
     mask-image: ${isGradientMaskVisible
-      ? 'linear-gradient(90deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0))'
+      ? `linear-gradient(90deg, rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0))`
       : 'none'};
     overflow-y: hidden;
     overflow-x: auto;
@@ -24,13 +24,6 @@ export function tabListStyle({ isGradientMaskVisible }: TabListStyleOptions) {
       display: none;
       width: 0;
       height: 0;
-    }
-
-    /* Turn off scrolling for bigger devices */
-    ${mediaQuery.aboveSmall} {
-      overflow-y: visible;
-      overflow-x: visible;
-      mask-image: none;
     }
   `;
 }
@@ -44,15 +37,9 @@ export function tabsWrapper({ inverted }: TabsWrapperStyleOptions) {
     display: inline-flex;
     min-width: 100%;
     padding-left: 0;
-    padding-right: 64px;
+    padding-right: ${tokens.spacing.xxlarge};
     border-bottom: ${tokens.borderWidth.medium} solid
       ${hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)};
-
-    ${mediaQuery.aboveSmall} {
-      display: flex;
-      padding-left: 0;
-      padding-right: 0;
-    }
   `;
 }
 
