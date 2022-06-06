@@ -1,13 +1,25 @@
+const screenSizes: Record<string, [number, number]> = {
+  small: [375, 800],
+  medium: [768, 1024],
+  large: [1920, 1080],
+};
+
 describe('Tabs', () => {
   it('render tabs with one of them disabled', () => {
     cy.loadStory('tabs-basic');
     cy.get('main').findAllByRole('tab').should('have.length', 3);
   });
 
-  it(`renders correctly on small screen device`, () => {
-    cy.viewport(375, 800);
-    cy.loadStory('tabs-basic');
-    cy.get('main').findAllByRole('tab').should('have.length', 3);
+  describe('renders correctly', () => {
+    Object.keys(screenSizes).forEach((size) => {
+      const [width, height] = screenSizes[size];
+
+      it(`on ${size} screen device`, () => {
+        cy.viewport(width, height);
+        cy.loadStory('tabs-long');
+        cy.get('main').findAllByRole('tab').should('have.length', 4);
+      });
+    });
   });
 
   it('render inverted tabs with one of them disabled', () => {
@@ -18,6 +30,11 @@ describe('Tabs', () => {
   it('render tabs as links', () => {
     cy.loadStory('tabs-as-links');
     cy.get('main').find('a').should('have.length', 3);
+  });
+
+  it('render icons next to tab labels', () => {
+    cy.loadStory('tabs-with-icons');
+    cy.get('main').findAllByRole('tab').should('have.length', 3);
   });
 
   it('after tab is clicked, appropriate panel is displayed', () => {
@@ -66,3 +83,5 @@ describe('Tabs', () => {
     cy.get('main').findByText('Fourth Tab Content').should('exist');
   });
 });
+
+export {};
