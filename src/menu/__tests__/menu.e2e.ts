@@ -32,6 +32,24 @@ describe('Menu', () => {
     cy.findByRole('menu').should('exist');
   });
 
+  it('when navigating with arrow keys, disabled items are skipped', () => {
+    cy.loadStory('menu-advanced');
+    cy.get('main').find('button').focus();
+    cy.get('body').type(
+      '{downarrow}{downarrow}{downarrow}{downarrow}{downarrow}',
+    );
+    cy.findByText('Remove').closest('button').should('have.focus');
+  });
+
+  it('when navigating with arrow keys, if the boundary of the list is reached restart from beginning', () => {
+    cy.loadStory('menu-advanced');
+    cy.get('main').find('button').focus();
+    cy.get('body').type(
+      '{downarrow}{downarrow}{downarrow}{downarrow}{downarrow}{downarrow}{downarrow}',
+    );
+    cy.findByText('Editor').closest('button').should('have.focus');
+  });
+
   it('render advanced menu with all features enabled', () => {
     cy.loadStory('menu-advanced');
     cy.get('main').findByText('Open Menu').click();
