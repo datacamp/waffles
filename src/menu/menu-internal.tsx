@@ -1,4 +1,10 @@
-import React, { useState, useRef, isValidElement, cloneElement } from 'react';
+import React, {
+  useState,
+  useRef,
+  isValidElement,
+  cloneElement,
+  Children,
+} from 'react';
 import {
   useFloating,
   offset as floatingOffset,
@@ -18,8 +24,7 @@ import { deepChildrenMap } from '../helpers';
 
 import { dropdownStyle } from './styles';
 import { MenuProvider } from './menu-context';
-import Item from './item';
-import Button from './button';
+import Category from './category';
 
 const placementMap = {
   bottom: 'bottom-end',
@@ -88,17 +93,29 @@ function MenuInternal({
     }),
   );
 
-  // Pass an index to each Item, so Menu could be navigated with arrows properly
+  // Pass an index to each child of Category, so Menu could be navigated with arrows properly
   function renderItems() {
     let itemIndex = 0;
 
     return deepChildrenMap(children, (child) => {
       if (isValidElement(child)) {
-        return cloneElement(child, {
-          ...((child.type === Item || child.type === Button) && {
-            index: itemIndex++,
-          }),
-        });
+        if (child.type === Category) {
+          // Category is expected to NOT have any nested children
+          const enhancedChildren = Children.map(
+            child.props.children,
+            (child) => {
+              return cloneElement(child, {
+                index: itemIndex++,
+              });
+            },
+          );
+
+          return cloneElement(child, {
+            children: enhancedChildren,
+          });
+        }
+
+        return child;
       }
 
       return null;
