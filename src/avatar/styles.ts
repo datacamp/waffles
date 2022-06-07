@@ -102,8 +102,8 @@ export function avatarWrapperStyle({ size, variant }: AvatarWrapperProps) {
     line-height: ${sizeMap[size].sizing};
     width: ${sizeMap[size].sizing};
     height: ${sizeMap[size].sizing};
-    overflow: hidden;
     font-family: ${tokens.fontFamilies.sansSerif};
+    overflow: hidden;
   `;
 }
 
@@ -112,4 +112,8 @@ export const avatarContentWrapperStyle = css`
   width: 100%;
   height: 100%;
   justify-content: center;
+`;
+
+export const avatarIconStyle = css`
+  margin: auto 0;
 `;

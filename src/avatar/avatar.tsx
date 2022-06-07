@@ -1,9 +1,12 @@
 import React, { cloneElement } from 'react';
-import { css } from '@emotion/react';
 
 import * as allIcons from '../icon';
 
-import { avatarContentWrapperStyle, avatarWrapperStyle } from './styles';
+import {
+  avatarContentWrapperStyle,
+  avatarIconStyle,
+  avatarWrapperStyle,
+} from './styles';
 
 type AvatarProps = {
   /* Defines the size of the avatar. In general use default `medium` size. */
@@ -17,7 +20,7 @@ type AvatarProps = {
     | 'xxlarge'
     | 'xxxlarge';
   /* Determines the variant of the avatar, based on the set of predefined background colors. */
-  variant:
+  variant?:
     | 'green'
     | 'navy'
     | 'white'
@@ -33,7 +36,8 @@ type AvatarProps = {
   content: JSX.Element | string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-const sizeMap = {
+// Size map for matching icon size to Avatar size
+const iconSizeMap = {
   xxsmall: '10px',
   xsmall: '14px',
   small: '18px',
@@ -62,11 +66,9 @@ function Avatar({
         {/* TODO: Update allIcons keys to config reference? */}
         {Object.keys(allIcons).includes((content as JSX.Element).type?.name)
           ? cloneElement(content as JSX.Element, {
-              height: sizeMap[size],
-              width: sizeMap[size],
-              css: css`
-                margin: auto 0;
-              `,
+              height: iconSizeMap[size],
+              width: iconSizeMap[size],
+              css: avatarIconStyle,
             })
           : content}
       </div>
