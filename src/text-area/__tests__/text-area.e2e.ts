@@ -43,6 +43,12 @@ describe('TextArea', () => {
     cy.get('main').findByText('9 / 20').should('exist');
   });
 
+  it('renders identical to regular input, when only 1 row is specified', () => {
+    cy.loadStory('text-area-single-row');
+    cy.get('main').find('textarea').should('have.length', 3);
+    cy.get('main').find('input').should('have.length', 3);
+  });
+
   it('if max lenght limit is specified, show only that many characters', () => {
     cy.loadStory('text-area-character-count');
     cy.get('main')
