@@ -9,15 +9,18 @@ import TextArea from './text-area';
 const sizeMap = {
   small: {
     fontSize: tokens.fontSizes.small,
-    spacing: '6px',
+    spacingVertical: '4px',
+    spacingHorizontal: '6px',
   },
   medium: {
     fontSize: tokens.fontSizes.medium,
-    spacing: '12px',
+    spacingVertical: '6px',
+    spacingHorizontal: '12px',
   },
   large: {
     fontSize: tokens.fontSizes.medium,
-    spacing: '12px',
+    spacingVertical: '6px',
+    spacingHorizontal: '12px',
   },
 } as const;
 
@@ -104,7 +107,7 @@ export function textAreaStyle({
       ? tokens.colors.navyLight
       : tokens.colors.white};
 
-    padding: ${tokens.spacing.small} ${sizeMap[size].spacing};
+    padding: ${sizeMap[size].spacingVertical} ${sizeMap[size].spacingHorizontal};
 
     &::placeholder {
       opacity: 1;
