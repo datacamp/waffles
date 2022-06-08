@@ -1,4 +1,4 @@
-# Waffles 2.0 Local Development Guide
+# Waffles Local Development Guide
 
 All **Waffles** components and their tests exist in the `src` directory with matching official documentation in the `doc-site` folder. All npm scripts are run from the root — there is no need to navigate to sub-directories.
 

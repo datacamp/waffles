@@ -1,4 +1,4 @@
-# Waffles 2.0 Project Organization
+# Waffles Project Organization
 
 ## 💻 Available Commands
 
