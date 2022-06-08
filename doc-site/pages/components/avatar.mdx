@@ -1,0 +1,47 @@
+import * as AvatarExports from '@datacamp/waffles/avatar';
+
+import Layout from '../../components/content-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/avatar/playground-config';
+import Variants from '../../examples/avatar/variants';
+import Sizes from '../../examples/avatar/sizes';
+
+export default Layout;
+
+# Avatar
+
+🚧 This page is **under construction**.
+
+## Examples
+
+<Example title="Variants" path="avatar/variants">
+  <Variants />
+</Example>
+
+<Example title="Sizes" path="avatar/sizes">
+  <Sizes />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### Avatar
+
+In addition to all custom props listed below, `Avatar` accepts all props regular `HTMLDiv` would, such as `aria-labelledby`, `aria-describedby`, `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/avatar/avatar')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={AvatarExports} path="@datacamp/waffles/avatar" />
