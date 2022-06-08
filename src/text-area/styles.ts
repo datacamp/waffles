@@ -8,18 +8,21 @@ import TextArea from './text-area';
 
 const sizeMap = {
   small: {
+    sizing: tokens.sizing.small,
     fontSize: tokens.fontSizes.small,
     spacingVertical: '4px',
     spacingHorizontal: '6px',
   },
   medium: {
+    sizing: tokens.sizing.medium,
     fontSize: tokens.fontSizes.medium,
     spacingVertical: '6px',
     spacingHorizontal: '12px',
   },
   large: {
+    sizing: tokens.sizing.large,
     fontSize: tokens.fontSizes.medium,
-    spacingVertical: '6px',
+    spacingVertical: '12px',
     spacingHorizontal: '12px',
   },
 } as const;
@@ -99,9 +102,8 @@ export function textAreaStyle({
 }: TextAreaStyleOptions) {
   return css`
     ${textAreaBaseStyle}
-    font-size: ${size === 'large'
-      ? sizeMap.medium.fontSize
-      : sizeMap[size].fontSize};
+    min-height: ${sizeMap[size].sizing};
+    font-size: ${sizeMap[size].fontSize};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     background-color: ${inverted
       ? tokens.colors.navyLight
@@ -137,9 +139,7 @@ type FauxGrowElementStyleOptions = {
 export function fauxGrowElementStyle({ size }: FauxGrowElementStyleOptions) {
   return css`
     ${textAreaBaseStyle}
-    font-size: ${size === 'large'
-      ? sizeMap.medium.fontSize
-      : sizeMap[size].fontSize};
+    font-size: ${sizeMap[size].fontSize};
     padding: ${sizeMap[size].spacingVertical} ${sizeMap[size].spacingHorizontal};
     grid-area: 1 / 1 / 2 / 2;
     visibility: hidden;
