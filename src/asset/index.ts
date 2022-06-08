@@ -46,7 +46,6 @@ export { default as ExcelLogo } from './generated/excel-logo';
 export { default as GitLogo } from './generated/git-logo';
 export { default as GoogleLogo } from './generated/google-logo';
 export { default as HsbcLogo } from './generated/hsbc-logo';
-export { default as IntelLogo } from './generated/intel-logo';
 export { default as MercedesBenzLogo } from './generated/mercedes-benz-logo';
 export { default as MicrosoftLogo } from './generated/microsoft-logo';
 export { default as OracleLogo } from './generated/oracle-logo';
