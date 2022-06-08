@@ -11,17 +11,17 @@ function Example() {
         flex-wrap: wrap;
       `}
     >
-      <Avatar variant="green" />
-      <Avatar variant="navy" />
-      <Avatar variant="white" />
-      <Avatar variant="red" />
-      <Avatar variant="orange" />
-      <Avatar variant="yellow" />
-      <Avatar variant="blue" />
-      <Avatar variant="purple" />
-      <Avatar variant="pink" />
-      <Avatar variant="grey" />
-      <Avatar variant="greySubtle" />
+      <Avatar variant="green" content="D" />
+      <Avatar variant="navy" content="D" />
+      <Avatar variant="white" content="D" />
+      <Avatar variant="red" content="D" />
+      <Avatar variant="orange" content="D" />
+      <Avatar variant="yellow" content="D" />
+      <Avatar variant="blue" content="D" />
+      <Avatar variant="purple" content="D" />
+      <Avatar variant="pink" content="D" />
+      <Avatar variant="grey" content="D" />
+      <Avatar variant="greySubtle" content="D" />
     </div>
   );
 }
