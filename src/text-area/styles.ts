@@ -130,9 +130,17 @@ export function growWrapperStyle() {
   `;
 }
 
-export function fauxGrowElementStyle() {
+type FauxGrowElementStyleOptions = {
+  size: NonNullable<React.ComponentProps<typeof TextArea>['size']>;
+};
+
+export function fauxGrowElementStyle({ size }: FauxGrowElementStyleOptions) {
   return css`
     ${textAreaBaseStyle}
+    font-size: ${size === 'large'
+      ? sizeMap.medium.fontSize
+      : sizeMap[size].fontSize};
+    padding: ${sizeMap[size].spacingVertical} ${sizeMap[size].spacingHorizontal};
     grid-area: 1 / 1 / 2 / 2;
     visibility: hidden;
     white-space: pre-wrap;
