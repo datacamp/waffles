@@ -40,6 +40,7 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  min-height: 36px;
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
@@ -155,6 +156,7 @@ exports[`TextArea renders snapshot 1`] = `
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  min-height: 36px;
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
@@ -232,6 +234,7 @@ exports[`TextArea renders snapshot of disabled 1`] = `
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  min-height: 36px;
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
@@ -309,6 +312,7 @@ exports[`TextArea renders snapshot of inverted 1`] = `
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  min-height: 36px;
   font-size: 14px;
   color: #FFFFFF;
   background-color: #213147;
@@ -385,6 +389,7 @@ exports[`TextArea renders snapshot of required with error 1`] = `
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  min-height: 36px;
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
@@ -463,6 +468,7 @@ exports[`TextArea renders snapshot when character count is displayed 1`] = `
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  min-height: 36px;
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
@@ -576,10 +582,11 @@ exports[`renders snapshot of size large 1`] = `
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  min-height: 48px;
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
-  padding: 6px 12px;
+  padding: 12px 12px;
 }
 
 .emotion-1:disabled {
@@ -652,6 +659,7 @@ exports[`renders snapshot of size medium 1`] = `
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  min-height: 36px;
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
@@ -728,6 +736,7 @@ exports[`renders snapshot of size small 1`] = `
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  min-height: 28px;
   font-size: 12px;
   color: #05192D;
   background-color: #FFFFFF;
