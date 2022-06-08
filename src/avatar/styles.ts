@@ -132,11 +132,15 @@ export function avatarContentWrapperStyle({
 
     & > * {
       margin: auto 0;
-      height: ${contentFillSpace ? '100%' : sizeMap[size].contentSizing};
+      min-height: ${contentFillSpace ? '100%' : sizeMap[size].contentSizing};
     }
 
     & > svg {
       width: ${contentFillSpace ? '100%' : sizeMap[size].contentSizing};
+    }
+
+    & > :not(svg) {
+      min-width: 100%;
     }
   `;
 }
