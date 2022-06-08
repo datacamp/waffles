@@ -6,7 +6,7 @@ import { avatarContentWrapperStyle, avatarWrapperStyle } from './styles';
 type AvatarProps = {
   /* Defines the size of the avatar. In general use default `medium` size. */
   size?:
-    | 'xxsmall' // TODO: Consider removing 'xxsmall' variant
+    | 'xxsmall'
     | 'xsmall'
     | 'small'
     | 'medium'
@@ -29,7 +29,7 @@ type AvatarProps = {
     | 'greySubtle';
   /* Inner content component of the avatar. In general pass Waffles [Asset](/components/asset), [Icon](/components/icon), native image element or a string containing only one character. Must be single element or string. */
   content: JSX.Element | string;
-  /* Whether the inner content should fill the whole avatar space or be restricted to the default sizing values.  */
+  /* Whether the inner content should fill the whole avatar space or be restricted to the default avatar sizing values.  */
   contentFillSpace?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
