@@ -72,7 +72,7 @@ function TextAreaInternal(
   }
 
   return (
-    <AutoGrow {...{ value, autoGrow }}>
+    <AutoGrow {...{ value, autoGrow, size }}>
       <div css={textAreaWrapper({ isFocused, autoGrow })}>
         <textarea
           {...restProps}
