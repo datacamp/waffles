@@ -9,7 +9,7 @@ import Avatar from './avatar';
 const sizeMap = {
   xxsmall: {
     fontSize: '8px',
-    sizing: '14px',
+    sizing: '16px',
     contentSizing: '10px',
   },
   xsmall: {
