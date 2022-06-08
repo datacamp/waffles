@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 
 import { Avatar } from '../index';
 import { tokens } from '../../tokens';
-import { Text } from '../../text';
 import { Camera } from '../../icon';
 import { TargetArrow3d } from '../../asset';
 
@@ -13,29 +12,35 @@ const wrapperStyle = css`
   gap: ${tokens.spacing.medium};
 `;
 
-const sizes = [
-  'huge',
-  'xxlarge',
-  'xlarge',
-  'large',
-  'medium',
-  'small',
-  'xsmall',
-  'xxsmall',
+const variants = [
+  'green',
+  'navy',
+  'white',
+  'red',
+  'orange',
+  'yellow',
+  'blue',
+  'purple',
+  'pink',
+  'grey',
+  'greySubtle',
 ] as const;
 
 function Story() {
   return (
     <div css={wrapperStyle}>
-      {sizes.map((size) => {
+      {variants.map((variant) => {
         return (
-          <div data-testid="avatar" key={`avatar-${size}`}>
-            <Text>{size}</Text>
-            <Avatar size={size} content="A" />
-            <Avatar size={size} content={<Camera />} />
-            <Avatar size={size} content={<TargetArrow3d />} />
+          <div data-testid="avatar" key={`avatar-${variant}`}>
+            <Avatar variant={variant} content="A" />
+            <Avatar variant={variant} content={<Camera />} />
             <Avatar
-              size={size}
+              variant={variant}
+              contentFillSpace
+              content={<TargetArrow3d />}
+            />
+            <Avatar
+              variant={variant}
               contentFillSpace
               content={
                 <img
