@@ -7,10 +7,10 @@ import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { Button } from '@datacamp/waffles/button';
+import { WafflesColoredLogo } from '@datacamp/waffles/asset';
 
 import metadata from '../../package.json';
 
-import Logo from './logo';
 import { HEADER_HEIGHT } from './constants';
 
 const headerStyle = css`
@@ -67,7 +67,7 @@ function PageHeader({ onNavOpen }: PageHeaderProps) {
           <Button
             as="a"
             variant="plain"
-            icon={<Logo />}
+            icon={<WafflesColoredLogo />}
             aria-label="Waffles, DataCamp Design System"
             css={logoLinkStyle}
           />
