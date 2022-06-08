@@ -10,34 +10,42 @@ const sizeMap = {
   xxsmall: {
     fontSize: '8px',
     sizing: '14px',
+    contentSizing: '10px',
   },
   xsmall: {
     fontSize: tokens.fontSizes.small,
     sizing: '24px',
+    contentSizing: '14px',
   },
   small: {
     fontSize: tokens.fontSizes.large,
     sizing: '32px',
+    contentSizing: '18px',
   },
   medium: {
     fontSize: tokens.fontSizes.xxlarge,
     sizing: '40px',
+    contentSizing: '22px',
   },
   large: {
     fontSize: '36px',
     sizing: '64px',
+    contentSizing: '36px',
   },
   xlarge: {
     fontSize: '64px',
     sizing: '96px',
+    contentSizing: '56px',
   },
   xxlarge: {
     fontSize: '96px',
     sizing: '128px',
+    contentSizing: '76px',
   },
-  xxxlarge: {
+  huge: {
     fontSize: '116px',
     sizing: '160px',
+    contentSizing: '96px',
   },
 };
 
@@ -107,13 +115,28 @@ export function avatarWrapperStyle({ size, variant }: AvatarWrapperProps) {
   `;
 }
 
-export const avatarContentWrapperStyle = css`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-`;
+type AvatarContentWrapperProps = {
+  size: NonNullable<React.ComponentProps<typeof Avatar>['size']>;
+  contentFillSpace: boolean;
+};
 
-export const avatarIconStyle = css`
-  margin: auto 0;
-`;
+export function avatarContentWrapperStyle({
+  size,
+  contentFillSpace,
+}: AvatarContentWrapperProps) {
+  return css`
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+
+    & > * {
+      margin: auto 0;
+      height: ${contentFillSpace ? '100%' : sizeMap[size].contentSizing};
+    }
+
+    & > svg {
+      width: ${contentFillSpace ? '100%' : sizeMap[size].contentSizing};
+    }
+  `;
+}
