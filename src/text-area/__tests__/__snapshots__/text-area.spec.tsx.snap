@@ -43,7 +43,7 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
-  padding: 8px 12px;
+  padding: 6px 12px;
 }
 
 .emotion-2:disabled {
@@ -85,6 +85,8 @@ exports[`TextArea renders all supporting elements to make auto-grow work 1`] = `
   border: 1px solid #848C92;
   border-radius: 4px;
   outline: 0;
+  font-size: 14px;
+  padding: 6px 12px;
   grid-area: 1/1/2/2;
   visibility: hidden;
   white-space: pre-wrap;
@@ -156,7 +158,7 @@ exports[`TextArea renders snapshot 1`] = `
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
-  padding: 8px 12px;
+  padding: 6px 12px;
 }
 
 .emotion-1:disabled {
@@ -233,7 +235,7 @@ exports[`TextArea renders snapshot of disabled 1`] = `
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
-  padding: 8px 12px;
+  padding: 6px 12px;
 }
 
 .emotion-1:disabled {
@@ -310,7 +312,7 @@ exports[`TextArea renders snapshot of inverted 1`] = `
   font-size: 14px;
   color: #FFFFFF;
   background-color: #213147;
-  padding: 8px 12px;
+  padding: 6px 12px;
 }
 
 .emotion-1:disabled {
@@ -386,7 +388,7 @@ exports[`TextArea renders snapshot of required with error 1`] = `
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-color: #DD3400;
   box-shadow: 0 0 0 1px #DD3400;
 }
@@ -464,7 +466,7 @@ exports[`TextArea renders snapshot when character count is displayed 1`] = `
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
-  padding: 8px 12px;
+  padding: 6px 12px;
 }
 
 .emotion-1:disabled {
@@ -577,7 +579,7 @@ exports[`renders snapshot of size large 1`] = `
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
-  padding: 8px 12px;
+  padding: 6px 12px;
 }
 
 .emotion-1:disabled {
@@ -653,7 +655,7 @@ exports[`renders snapshot of size medium 1`] = `
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
-  padding: 8px 12px;
+  padding: 6px 12px;
 }
 
 .emotion-1:disabled {
@@ -729,7 +731,7 @@ exports[`renders snapshot of size small 1`] = `
   font-size: 12px;
   color: #05192D;
   background-color: #FFFFFF;
-  padding: 8px 6px;
+  padding: 4px 6px;
 }
 
 .emotion-1:disabled {
