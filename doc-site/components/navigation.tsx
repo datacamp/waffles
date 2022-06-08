@@ -58,6 +58,9 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/asset" isNew>
                 Asset
               </Item>
+              <Item href="/components/avatar" isNew>
+                Avatar
+              </Item>
               <Item href="/components/badge">Badge</Item>
               <Item href="/components/brand" isNew>
                 Brand
