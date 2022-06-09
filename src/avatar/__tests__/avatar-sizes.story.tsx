@@ -37,12 +37,7 @@ function Story() {
             <Avatar
               size={size}
               contentFill
-              content={
-                <img
-                  src="https://res.cloudinary.com/dyd911kmh/f_auto,c_limit,w_128,q_auto/Marketing/Testimonials/martijn-theuwissen.jpg"
-                  alt="Martijn Theuwissen placeholder image"
-                />
-              }
+              content={<img src="" alt="Image" />}
             />
           </div>
         );
