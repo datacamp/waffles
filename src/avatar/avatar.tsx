@@ -27,9 +27,9 @@ type AvatarProps = {
     | 'pink'
     | 'grey'
     | 'greySubtle';
-  /* Inner content component of the avatar. In general pass Waffles [Asset](/components/asset), [Icon](/components/icon), native image element or a string containing only one character. Must be single element or string. */
+  /* Content of the avatar component. In general pass Waffles [Asset](/components/asset), [Icon](/components/icon), regular image or a string containing only one character. Must be single element or string. */
   content: JSX.Element | string;
-  /* Whether the inner content should fill the whole avatar space or be restricted to the default avatar sizing values.  */
+  /* Whether the content should fill the whole avatar space or be restricted to the default avatar sizing values.  */
   contentFill?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
