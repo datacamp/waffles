@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react';
 
-import { avatarContentWrapperStyle, avatarWrapperStyle } from './styles';
+import { avatarContentStyle, avatarStyle } from './styles';
 
 type AvatarProps = {
   /* Defines the size of the avatar. In general use default `medium` size. */
@@ -41,8 +41,8 @@ function Avatar({
   ...restProps
 }: AvatarProps) {
   return (
-    <div css={avatarWrapperStyle({ size, variant })} {...restProps}>
-      <div css={avatarContentWrapperStyle({ size, contentFill })}>
+    <div css={avatarStyle({ size, variant })} {...restProps}>
+      <div css={avatarContentStyle({ size, contentFill })}>
         {content && typeof content === 'string'
           ? (content as string).charAt(0).toUpperCase()
           : content}
