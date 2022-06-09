@@ -40,17 +40,12 @@ function Avatar({
   contentFill = false,
   ...restProps
 }: AvatarProps) {
-  if (typeof content === 'string' && content.length > 1) {
-    // eslint-disable-next-line no-console
-    console.warn(
-      'Waffles Warning: The avatar content string must not have a length of greater than 1.',
-    );
-  }
-
   return (
     <div css={avatarWrapperStyle({ size, variant })} {...restProps}>
       <div css={avatarContentWrapperStyle({ size, contentFill })}>
-        {content}
+        {content && typeof content === 'string'
+          ? (content as string).charAt(0).toUpperCase()
+          : content}
       </div>
     </div>
   );
