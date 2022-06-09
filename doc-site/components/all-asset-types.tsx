@@ -4,8 +4,9 @@ import * as allAssets from '@datacamp/waffles/asset';
 import AssetGrid from './asset-grid';
 
 const groupMaxColumnCount = {
-  'ALPA Loop': 2,
+  Assignment: 4,
   '3D': 4,
+  'ALPA Loop': 2,
   Logomark: 4,
   Logo: 3,
   Other: 4,

@@ -1,6 +1,7 @@
 enum groupNamePairs {
-  Alpa = 'ALPA Loop',
   '3d' = '3D',
+  Alpa = 'ALPA Loop',
+  Assignment = 'Assignment',
   Logomark = 'Logomark',
   Logo = 'Logo',
   Other = 'Other',
@@ -20,7 +21,6 @@ function groupAssets(assets: AssetModule): GroupedAssets {
   return Object.entries(assets).reduce((groupedAssets, entry) => {
     const [name, Asset] = entry;
 
-    // console.log(name);
     // Find the group the asset should fall under, otherwise fall back to 'Other'
     const assignedGroup =
       groups.find((group) => name.endsWith(group)) || 'Other';
