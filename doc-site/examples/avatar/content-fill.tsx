@@ -17,42 +17,42 @@ function Example() {
       >
         <Avatar
           size="xxsmall"
-          contentFillSpace
+          contentFill
           content={<AvatarPlaceholderColored />}
         />
         <Avatar
           size="xsmall"
-          contentFillSpace
+          contentFill
           content={<AvatarPlaceholderColored />}
         />
         <Avatar
           size="small"
-          contentFillSpace
+          contentFill
           content={<AvatarPlaceholderColored />}
         />
         <Avatar
           size="medium"
-          contentFillSpace
+          contentFill
           content={<AvatarPlaceholderColored />}
         />
         <Avatar
           size="large"
-          contentFillSpace
+          contentFill
           content={<AvatarPlaceholderColored />}
         />
         <Avatar
           size="xlarge"
-          contentFillSpace
+          contentFill
           content={<AvatarPlaceholderColored />}
         />
         <Avatar
           size="xxlarge"
-          contentFillSpace
+          contentFill
           content={<AvatarPlaceholderColored />}
         />
         <Avatar
           size="huge"
-          contentFillSpace
+          contentFill
           content={<AvatarPlaceholderColored />}
         />
       </div>
@@ -66,7 +66,7 @@ function Example() {
       >
         <Avatar
           size="xxsmall"
-          contentFillSpace
+          contentFill
           content={
             <img
               src="../../images/profile-portrait-placeholder.png"
@@ -76,7 +76,7 @@ function Example() {
         />
         <Avatar
           size="xsmall"
-          contentFillSpace
+          contentFill
           content={
             <img
               src="../../images/profile-portrait-placeholder.png"
@@ -86,7 +86,7 @@ function Example() {
         />
         <Avatar
           size="small"
-          contentFillSpace
+          contentFill
           content={
             <img
               src="../../images/profile-portrait-placeholder.png"
@@ -96,7 +96,7 @@ function Example() {
         />
         <Avatar
           size="medium"
-          contentFillSpace
+          contentFill
           content={
             <img
               src="../../images/profile-portrait-placeholder.png"
@@ -106,7 +106,7 @@ function Example() {
         />
         <Avatar
           size="large"
-          contentFillSpace
+          contentFill
           content={
             <img
               src="../../images/profile-portrait-placeholder.png"
@@ -116,7 +116,7 @@ function Example() {
         />
         <Avatar
           size="xlarge"
-          contentFillSpace
+          contentFill
           content={
             <img
               src="../../images/profile-portrait-placeholder.png"
@@ -126,7 +126,7 @@ function Example() {
         />
         <Avatar
           size="xxlarge"
-          contentFillSpace
+          contentFill
           content={
             <img
               src="../../images/profile-portrait-placeholder.png"
@@ -136,7 +136,7 @@ function Example() {
         />
         <Avatar
           size="huge"
-          contentFillSpace
+          contentFill
           content={
             <img
               src="../../images/profile-portrait-placeholder.png"

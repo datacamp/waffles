@@ -34,14 +34,10 @@ function Story() {
           <div data-testid="avatar" key={`avatar-${variant}`}>
             <Avatar variant={variant} content="A" />
             <Avatar variant={variant} content={<Camera />} />
+            <Avatar variant={variant} contentFill content={<TargetArrow3d />} />
             <Avatar
               variant={variant}
-              contentFillSpace
-              content={<TargetArrow3d />}
-            />
-            <Avatar
-              variant={variant}
-              contentFillSpace
+              contentFill
               content={
                 <img
                   src="https://res.cloudinary.com/dyd911kmh/f_auto,c_limit,w_128,q_auto/Marketing/Testimonials/martijn-theuwissen.jpg"

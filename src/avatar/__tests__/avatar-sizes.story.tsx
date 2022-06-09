@@ -36,7 +36,7 @@ function Story() {
             <Avatar size={size} content={<TargetArrow3d />} />
             <Avatar
               size={size}
-              contentFillSpace
+              contentFill
               content={
                 <img
                   src="https://res.cloudinary.com/dyd911kmh/f_auto,c_limit,w_128,q_auto/Marketing/Testimonials/martijn-theuwissen.jpg"
