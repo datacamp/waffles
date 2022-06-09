@@ -117,12 +117,12 @@ export function avatarWrapperStyle({ size, variant }: AvatarWrapperProps) {
 
 type AvatarContentWrapperProps = {
   size: NonNullable<React.ComponentProps<typeof Avatar>['size']>;
-  contentFillSpace: boolean;
+  contentFill: boolean;
 };
 
 export function avatarContentWrapperStyle({
   size,
-  contentFillSpace,
+  contentFill,
 }: AvatarContentWrapperProps) {
   return css`
     display: flex;
@@ -132,11 +132,11 @@ export function avatarContentWrapperStyle({
 
     & > * {
       margin: auto 0;
-      min-height: ${contentFillSpace ? '100%' : sizeMap[size].contentSizing};
+      min-height: ${contentFill ? '100%' : sizeMap[size].contentSizing};
     }
 
     & > svg {
-      width: ${contentFillSpace ? '100%' : sizeMap[size].contentSizing};
+      width: ${contentFill ? '100%' : sizeMap[size].contentSizing};
     }
 
     & > :not(svg) {

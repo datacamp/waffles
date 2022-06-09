@@ -30,14 +30,14 @@ type AvatarProps = {
   /* Inner content component of the avatar. In general pass Waffles [Asset](/components/asset), [Icon](/components/icon), native image element or a string containing only one character. Must be single element or string. */
   content: JSX.Element | string;
   /* Whether the inner content should fill the whole avatar space or be restricted to the default avatar sizing values.  */
-  contentFillSpace?: boolean;
+  contentFill?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 function Avatar({
   size = 'medium',
   variant = 'navy',
   content,
-  contentFillSpace = false,
+  contentFill = false,
   ...restProps
 }: AvatarProps) {
   if (typeof content === 'string' && content.length > 1) {
@@ -49,7 +49,7 @@ function Avatar({
 
   return (
     <div css={avatarWrapperStyle({ size, variant })} {...restProps}>
-      <div css={avatarContentWrapperStyle({ size, contentFillSpace })}>
+      <div css={avatarContentWrapperStyle({ size, contentFill })}>
         {content}
       </div>
     </div>
