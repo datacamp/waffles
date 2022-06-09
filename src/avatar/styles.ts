@@ -96,12 +96,12 @@ const variantMap = {
   },
 };
 
-type AvatarWrapperProps = {
+type AvatarStyleOptions = {
   size: NonNullable<React.ComponentProps<typeof Avatar>['size']>;
   variant: NonNullable<React.ComponentProps<typeof Avatar>['variant']>;
 };
 
-export function avatarWrapperStyle({ size, variant }: AvatarWrapperProps) {
+export function avatarStyle({ size, variant }: AvatarStyleOptions) {
   return css`
     background-color: ${variantMap[variant].backgroundColor};
     color: ${variantMap[variant].color};
@@ -115,15 +115,15 @@ export function avatarWrapperStyle({ size, variant }: AvatarWrapperProps) {
   `;
 }
 
-type AvatarContentWrapperProps = {
+type AvatarContentStyleOptions = {
   size: NonNullable<React.ComponentProps<typeof Avatar>['size']>;
   contentFill: boolean;
 };
 
-export function avatarContentWrapperStyle({
+export function avatarContentStyle({
   size,
   contentFill,
-}: AvatarContentWrapperProps) {
+}: AvatarContentStyleOptions) {
   return css`
     display: flex;
     width: 100%;
