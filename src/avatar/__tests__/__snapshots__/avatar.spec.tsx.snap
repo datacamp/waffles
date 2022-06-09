@@ -1,0 +1,5281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar renders snapshot of variant blue and size huge 1`] = `
+.emotion-0 {
+  background-color: #06BDFC;
+  color: #05192D;
+  border-radius: 160px;
+  font-size: 116px;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 96px;
+}
+
+.emotion-1>svg {
+  width: 96px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant blue and size large 1`] = `
+.emotion-0 {
+  background-color: #06BDFC;
+  color: #05192D;
+  border-radius: 64px;
+  font-size: 36px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 36px;
+}
+
+.emotion-1>svg {
+  width: 36px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant blue and size medium 1`] = `
+.emotion-0 {
+  background-color: #06BDFC;
+  color: #05192D;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 22px;
+}
+
+.emotion-1>svg {
+  width: 22px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant blue and size small 1`] = `
+.emotion-0 {
+  background-color: #06BDFC;
+  color: #05192D;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 18px;
+}
+
+.emotion-1>svg {
+  width: 18px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant blue and size xlarge 1`] = `
+.emotion-0 {
+  background-color: #06BDFC;
+  color: #05192D;
+  border-radius: 96px;
+  font-size: 64px;
+  line-height: 96px;
+  width: 96px;
+  height: 96px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 56px;
+}
+
+.emotion-1>svg {
+  width: 56px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant blue and size xsmall 1`] = `
+.emotion-0 {
+  background-color: #06BDFC;
+  color: #05192D;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 14px;
+}
+
+.emotion-1>svg {
+  width: 14px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant blue and size xxlarge 1`] = `
+.emotion-0 {
+  background-color: #06BDFC;
+  color: #05192D;
+  border-radius: 128px;
+  font-size: 96px;
+  line-height: 128px;
+  width: 128px;
+  height: 128px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 76px;
+}
+
+.emotion-1>svg {
+  width: 76px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant blue and size xxsmall 1`] = `
+.emotion-0 {
+  background-color: #06BDFC;
+  color: #05192D;
+  border-radius: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 10px;
+}
+
+.emotion-1>svg {
+  width: 10px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant green and size huge 1`] = `
+.emotion-0 {
+  background-color: #03EF62;
+  color: #05192D;
+  border-radius: 160px;
+  font-size: 116px;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 96px;
+}
+
+.emotion-1>svg {
+  width: 96px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant green and size large 1`] = `
+.emotion-0 {
+  background-color: #03EF62;
+  color: #05192D;
+  border-radius: 64px;
+  font-size: 36px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 36px;
+}
+
+.emotion-1>svg {
+  width: 36px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant green and size medium 1`] = `
+.emotion-0 {
+  background-color: #03EF62;
+  color: #05192D;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 22px;
+}
+
+.emotion-1>svg {
+  width: 22px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant green and size small 1`] = `
+.emotion-0 {
+  background-color: #03EF62;
+  color: #05192D;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 18px;
+}
+
+.emotion-1>svg {
+  width: 18px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant green and size xlarge 1`] = `
+.emotion-0 {
+  background-color: #03EF62;
+  color: #05192D;
+  border-radius: 96px;
+  font-size: 64px;
+  line-height: 96px;
+  width: 96px;
+  height: 96px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 56px;
+}
+
+.emotion-1>svg {
+  width: 56px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant green and size xsmall 1`] = `
+.emotion-0 {
+  background-color: #03EF62;
+  color: #05192D;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 14px;
+}
+
+.emotion-1>svg {
+  width: 14px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant green and size xxlarge 1`] = `
+.emotion-0 {
+  background-color: #03EF62;
+  color: #05192D;
+  border-radius: 128px;
+  font-size: 96px;
+  line-height: 128px;
+  width: 128px;
+  height: 128px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 76px;
+}
+
+.emotion-1>svg {
+  width: 76px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant green and size xxsmall 1`] = `
+.emotion-0 {
+  background-color: #03EF62;
+  color: #05192D;
+  border-radius: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 10px;
+}
+
+.emotion-1>svg {
+  width: 10px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant grey and size huge 1`] = `
+.emotion-0 {
+  background-color: #D9D9E2;
+  color: #05192D;
+  border-radius: 160px;
+  font-size: 116px;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 96px;
+}
+
+.emotion-1>svg {
+  width: 96px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant grey and size large 1`] = `
+.emotion-0 {
+  background-color: #D9D9E2;
+  color: #05192D;
+  border-radius: 64px;
+  font-size: 36px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 36px;
+}
+
+.emotion-1>svg {
+  width: 36px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant grey and size medium 1`] = `
+.emotion-0 {
+  background-color: #D9D9E2;
+  color: #05192D;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 22px;
+}
+
+.emotion-1>svg {
+  width: 22px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant grey and size small 1`] = `
+.emotion-0 {
+  background-color: #D9D9E2;
+  color: #05192D;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 18px;
+}
+
+.emotion-1>svg {
+  width: 18px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant grey and size xlarge 1`] = `
+.emotion-0 {
+  background-color: #D9D9E2;
+  color: #05192D;
+  border-radius: 96px;
+  font-size: 64px;
+  line-height: 96px;
+  width: 96px;
+  height: 96px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 56px;
+}
+
+.emotion-1>svg {
+  width: 56px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant grey and size xsmall 1`] = `
+.emotion-0 {
+  background-color: #D9D9E2;
+  color: #05192D;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 14px;
+}
+
+.emotion-1>svg {
+  width: 14px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant grey and size xxlarge 1`] = `
+.emotion-0 {
+  background-color: #D9D9E2;
+  color: #05192D;
+  border-radius: 128px;
+  font-size: 96px;
+  line-height: 128px;
+  width: 128px;
+  height: 128px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 76px;
+}
+
+.emotion-1>svg {
+  width: 76px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant grey and size xxsmall 1`] = `
+.emotion-0 {
+  background-color: #D9D9E2;
+  color: #05192D;
+  border-radius: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 10px;
+}
+
+.emotion-1>svg {
+  width: 10px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant greySubtle and size huge 1`] = `
+.emotion-0 {
+  background-color: #EFEFEF;
+  color: #626D79;
+  border-radius: 160px;
+  font-size: 116px;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 96px;
+}
+
+.emotion-1>svg {
+  width: 96px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant greySubtle and size large 1`] = `
+.emotion-0 {
+  background-color: #EFEFEF;
+  color: #626D79;
+  border-radius: 64px;
+  font-size: 36px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 36px;
+}
+
+.emotion-1>svg {
+  width: 36px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant greySubtle and size medium 1`] = `
+.emotion-0 {
+  background-color: #EFEFEF;
+  color: #626D79;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 22px;
+}
+
+.emotion-1>svg {
+  width: 22px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant greySubtle and size small 1`] = `
+.emotion-0 {
+  background-color: #EFEFEF;
+  color: #626D79;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 18px;
+}
+
+.emotion-1>svg {
+  width: 18px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant greySubtle and size xlarge 1`] = `
+.emotion-0 {
+  background-color: #EFEFEF;
+  color: #626D79;
+  border-radius: 96px;
+  font-size: 64px;
+  line-height: 96px;
+  width: 96px;
+  height: 96px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 56px;
+}
+
+.emotion-1>svg {
+  width: 56px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant greySubtle and size xsmall 1`] = `
+.emotion-0 {
+  background-color: #EFEFEF;
+  color: #626D79;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 14px;
+}
+
+.emotion-1>svg {
+  width: 14px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant greySubtle and size xxlarge 1`] = `
+.emotion-0 {
+  background-color: #EFEFEF;
+  color: #626D79;
+  border-radius: 128px;
+  font-size: 96px;
+  line-height: 128px;
+  width: 128px;
+  height: 128px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 76px;
+}
+
+.emotion-1>svg {
+  width: 76px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant greySubtle and size xxsmall 1`] = `
+.emotion-0 {
+  background-color: #EFEFEF;
+  color: #626D79;
+  border-radius: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 10px;
+}
+
+.emotion-1>svg {
+  width: 10px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant navy and size huge 1`] = `
+.emotion-0 {
+  background-color: #05192D;
+  color: #FFFFFF;
+  border-radius: 160px;
+  font-size: 116px;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 96px;
+}
+
+.emotion-1>svg {
+  width: 96px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant navy and size large 1`] = `
+.emotion-0 {
+  background-color: #05192D;
+  color: #FFFFFF;
+  border-radius: 64px;
+  font-size: 36px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 36px;
+}
+
+.emotion-1>svg {
+  width: 36px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant navy and size medium 1`] = `
+.emotion-0 {
+  background-color: #05192D;
+  color: #FFFFFF;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 22px;
+}
+
+.emotion-1>svg {
+  width: 22px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant navy and size small 1`] = `
+.emotion-0 {
+  background-color: #05192D;
+  color: #FFFFFF;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 18px;
+}
+
+.emotion-1>svg {
+  width: 18px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant navy and size xlarge 1`] = `
+.emotion-0 {
+  background-color: #05192D;
+  color: #FFFFFF;
+  border-radius: 96px;
+  font-size: 64px;
+  line-height: 96px;
+  width: 96px;
+  height: 96px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 56px;
+}
+
+.emotion-1>svg {
+  width: 56px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant navy and size xsmall 1`] = `
+.emotion-0 {
+  background-color: #05192D;
+  color: #FFFFFF;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 14px;
+}
+
+.emotion-1>svg {
+  width: 14px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant navy and size xxlarge 1`] = `
+.emotion-0 {
+  background-color: #05192D;
+  color: #FFFFFF;
+  border-radius: 128px;
+  font-size: 96px;
+  line-height: 128px;
+  width: 128px;
+  height: 128px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 76px;
+}
+
+.emotion-1>svg {
+  width: 76px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant navy and size xxsmall 1`] = `
+.emotion-0 {
+  background-color: #05192D;
+  color: #FFFFFF;
+  border-radius: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 10px;
+}
+
+.emotion-1>svg {
+  width: 10px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant orange and size huge 1`] = `
+.emotion-0 {
+  background-color: #FF931E;
+  color: #05192D;
+  border-radius: 160px;
+  font-size: 116px;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 96px;
+}
+
+.emotion-1>svg {
+  width: 96px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant orange and size large 1`] = `
+.emotion-0 {
+  background-color: #FF931E;
+  color: #05192D;
+  border-radius: 64px;
+  font-size: 36px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 36px;
+}
+
+.emotion-1>svg {
+  width: 36px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant orange and size medium 1`] = `
+.emotion-0 {
+  background-color: #FF931E;
+  color: #05192D;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 22px;
+}
+
+.emotion-1>svg {
+  width: 22px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant orange and size small 1`] = `
+.emotion-0 {
+  background-color: #FF931E;
+  color: #05192D;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 18px;
+}
+
+.emotion-1>svg {
+  width: 18px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant orange and size xlarge 1`] = `
+.emotion-0 {
+  background-color: #FF931E;
+  color: #05192D;
+  border-radius: 96px;
+  font-size: 64px;
+  line-height: 96px;
+  width: 96px;
+  height: 96px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 56px;
+}
+
+.emotion-1>svg {
+  width: 56px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant orange and size xsmall 1`] = `
+.emotion-0 {
+  background-color: #FF931E;
+  color: #05192D;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 14px;
+}
+
+.emotion-1>svg {
+  width: 14px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant orange and size xxlarge 1`] = `
+.emotion-0 {
+  background-color: #FF931E;
+  color: #05192D;
+  border-radius: 128px;
+  font-size: 96px;
+  line-height: 128px;
+  width: 128px;
+  height: 128px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 76px;
+}
+
+.emotion-1>svg {
+  width: 76px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant orange and size xxsmall 1`] = `
+.emotion-0 {
+  background-color: #FF931E;
+  color: #05192D;
+  border-radius: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 10px;
+}
+
+.emotion-1>svg {
+  width: 10px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant pink and size huge 1`] = `
+.emotion-0 {
+  background-color: #FF6EA9;
+  color: #05192D;
+  border-radius: 160px;
+  font-size: 116px;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 96px;
+}
+
+.emotion-1>svg {
+  width: 96px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant pink and size large 1`] = `
+.emotion-0 {
+  background-color: #FF6EA9;
+  color: #05192D;
+  border-radius: 64px;
+  font-size: 36px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 36px;
+}
+
+.emotion-1>svg {
+  width: 36px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant pink and size medium 1`] = `
+.emotion-0 {
+  background-color: #FF6EA9;
+  color: #05192D;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 22px;
+}
+
+.emotion-1>svg {
+  width: 22px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant pink and size small 1`] = `
+.emotion-0 {
+  background-color: #FF6EA9;
+  color: #05192D;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 18px;
+}
+
+.emotion-1>svg {
+  width: 18px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant pink and size xlarge 1`] = `
+.emotion-0 {
+  background-color: #FF6EA9;
+  color: #05192D;
+  border-radius: 96px;
+  font-size: 64px;
+  line-height: 96px;
+  width: 96px;
+  height: 96px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 56px;
+}
+
+.emotion-1>svg {
+  width: 56px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant pink and size xsmall 1`] = `
+.emotion-0 {
+  background-color: #FF6EA9;
+  color: #05192D;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 14px;
+}
+
+.emotion-1>svg {
+  width: 14px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant pink and size xxlarge 1`] = `
+.emotion-0 {
+  background-color: #FF6EA9;
+  color: #05192D;
+  border-radius: 128px;
+  font-size: 96px;
+  line-height: 128px;
+  width: 128px;
+  height: 128px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 76px;
+}
+
+.emotion-1>svg {
+  width: 76px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant pink and size xxsmall 1`] = `
+.emotion-0 {
+  background-color: #FF6EA9;
+  color: #05192D;
+  border-radius: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 10px;
+}
+
+.emotion-1>svg {
+  width: 10px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant purple and size huge 1`] = `
+.emotion-0 {
+  background-color: #7933FF;
+  color: #FFFFFF;
+  border-radius: 160px;
+  font-size: 116px;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 96px;
+}
+
+.emotion-1>svg {
+  width: 96px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant purple and size large 1`] = `
+.emotion-0 {
+  background-color: #7933FF;
+  color: #FFFFFF;
+  border-radius: 64px;
+  font-size: 36px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 36px;
+}
+
+.emotion-1>svg {
+  width: 36px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant purple and size medium 1`] = `
+.emotion-0 {
+  background-color: #7933FF;
+  color: #FFFFFF;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 22px;
+}
+
+.emotion-1>svg {
+  width: 22px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant purple and size small 1`] = `
+.emotion-0 {
+  background-color: #7933FF;
+  color: #FFFFFF;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 18px;
+}
+
+.emotion-1>svg {
+  width: 18px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant purple and size xlarge 1`] = `
+.emotion-0 {
+  background-color: #7933FF;
+  color: #FFFFFF;
+  border-radius: 96px;
+  font-size: 64px;
+  line-height: 96px;
+  width: 96px;
+  height: 96px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 56px;
+}
+
+.emotion-1>svg {
+  width: 56px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant purple and size xsmall 1`] = `
+.emotion-0 {
+  background-color: #7933FF;
+  color: #FFFFFF;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 14px;
+}
+
+.emotion-1>svg {
+  width: 14px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant purple and size xxlarge 1`] = `
+.emotion-0 {
+  background-color: #7933FF;
+  color: #FFFFFF;
+  border-radius: 128px;
+  font-size: 96px;
+  line-height: 128px;
+  width: 128px;
+  height: 128px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 76px;
+}
+
+.emotion-1>svg {
+  width: 76px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant purple and size xxsmall 1`] = `
+.emotion-0 {
+  background-color: #7933FF;
+  color: #FFFFFF;
+  border-radius: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 10px;
+}
+
+.emotion-1>svg {
+  width: 10px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant red and size huge 1`] = `
+.emotion-0 {
+  background-color: #FF5400;
+  color: #05192D;
+  border-radius: 160px;
+  font-size: 116px;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 96px;
+}
+
+.emotion-1>svg {
+  width: 96px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant red and size large 1`] = `
+.emotion-0 {
+  background-color: #FF5400;
+  color: #05192D;
+  border-radius: 64px;
+  font-size: 36px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 36px;
+}
+
+.emotion-1>svg {
+  width: 36px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant red and size medium 1`] = `
+.emotion-0 {
+  background-color: #FF5400;
+  color: #05192D;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 22px;
+}
+
+.emotion-1>svg {
+  width: 22px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant red and size small 1`] = `
+.emotion-0 {
+  background-color: #FF5400;
+  color: #05192D;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 18px;
+}
+
+.emotion-1>svg {
+  width: 18px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant red and size xlarge 1`] = `
+.emotion-0 {
+  background-color: #FF5400;
+  color: #05192D;
+  border-radius: 96px;
+  font-size: 64px;
+  line-height: 96px;
+  width: 96px;
+  height: 96px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 56px;
+}
+
+.emotion-1>svg {
+  width: 56px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant red and size xsmall 1`] = `
+.emotion-0 {
+  background-color: #FF5400;
+  color: #05192D;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 14px;
+}
+
+.emotion-1>svg {
+  width: 14px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant red and size xxlarge 1`] = `
+.emotion-0 {
+  background-color: #FF5400;
+  color: #05192D;
+  border-radius: 128px;
+  font-size: 96px;
+  line-height: 128px;
+  width: 128px;
+  height: 128px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 76px;
+}
+
+.emotion-1>svg {
+  width: 76px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant red and size xxsmall 1`] = `
+.emotion-0 {
+  background-color: #FF5400;
+  color: #05192D;
+  border-radius: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 10px;
+}
+
+.emotion-1>svg {
+  width: 10px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant white and size huge 1`] = `
+.emotion-0 {
+  background-color: #FFFFFF;
+  color: #05192D;
+  border-radius: 160px;
+  font-size: 116px;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 96px;
+}
+
+.emotion-1>svg {
+  width: 96px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant white and size large 1`] = `
+.emotion-0 {
+  background-color: #FFFFFF;
+  color: #05192D;
+  border-radius: 64px;
+  font-size: 36px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 36px;
+}
+
+.emotion-1>svg {
+  width: 36px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant white and size medium 1`] = `
+.emotion-0 {
+  background-color: #FFFFFF;
+  color: #05192D;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 22px;
+}
+
+.emotion-1>svg {
+  width: 22px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant white and size small 1`] = `
+.emotion-0 {
+  background-color: #FFFFFF;
+  color: #05192D;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 18px;
+}
+
+.emotion-1>svg {
+  width: 18px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant white and size xlarge 1`] = `
+.emotion-0 {
+  background-color: #FFFFFF;
+  color: #05192D;
+  border-radius: 96px;
+  font-size: 64px;
+  line-height: 96px;
+  width: 96px;
+  height: 96px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 56px;
+}
+
+.emotion-1>svg {
+  width: 56px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant white and size xsmall 1`] = `
+.emotion-0 {
+  background-color: #FFFFFF;
+  color: #05192D;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 14px;
+}
+
+.emotion-1>svg {
+  width: 14px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant white and size xxlarge 1`] = `
+.emotion-0 {
+  background-color: #FFFFFF;
+  color: #05192D;
+  border-radius: 128px;
+  font-size: 96px;
+  line-height: 128px;
+  width: 128px;
+  height: 128px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 76px;
+}
+
+.emotion-1>svg {
+  width: 76px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant white and size xxsmall 1`] = `
+.emotion-0 {
+  background-color: #FFFFFF;
+  color: #05192D;
+  border-radius: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 10px;
+}
+
+.emotion-1>svg {
+  width: 10px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant yellow and size huge 1`] = `
+.emotion-0 {
+  background-color: #FCCE0D;
+  color: #05192D;
+  border-radius: 160px;
+  font-size: 116px;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 96px;
+}
+
+.emotion-1>svg {
+  width: 96px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant yellow and size large 1`] = `
+.emotion-0 {
+  background-color: #FCCE0D;
+  color: #05192D;
+  border-radius: 64px;
+  font-size: 36px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 36px;
+}
+
+.emotion-1>svg {
+  width: 36px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant yellow and size medium 1`] = `
+.emotion-0 {
+  background-color: #FCCE0D;
+  color: #05192D;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 22px;
+}
+
+.emotion-1>svg {
+  width: 22px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant yellow and size small 1`] = `
+.emotion-0 {
+  background-color: #FCCE0D;
+  color: #05192D;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 18px;
+}
+
+.emotion-1>svg {
+  width: 18px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant yellow and size xlarge 1`] = `
+.emotion-0 {
+  background-color: #FCCE0D;
+  color: #05192D;
+  border-radius: 96px;
+  font-size: 64px;
+  line-height: 96px;
+  width: 96px;
+  height: 96px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 56px;
+}
+
+.emotion-1>svg {
+  width: 56px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant yellow and size xsmall 1`] = `
+.emotion-0 {
+  background-color: #FCCE0D;
+  color: #05192D;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 14px;
+}
+
+.emotion-1>svg {
+  width: 14px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant yellow and size xxlarge 1`] = `
+.emotion-0 {
+  background-color: #FCCE0D;
+  color: #05192D;
+  border-radius: 128px;
+  font-size: 96px;
+  line-height: 128px;
+  width: 128px;
+  height: 128px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 76px;
+}
+
+.emotion-1>svg {
+  width: 76px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders snapshot of variant yellow and size xxsmall 1`] = `
+.emotion-0 {
+  background-color: #FCCE0D;
+  color: #05192D;
+  border-radius: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1>* {
+  margin: auto 0;
+  min-height: 10px;
+}
+
+.emotion-1>svg {
+  width: 10px;
+}
+
+.emotion-1>:not(svg) {
+  min-width: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 18 18"
+      width="16"
+    >
+      <path
+        d="M8.122 4.454v4.36l-4.627 2.64V1.799l4.627 2.655Zm1.497 9.161v-3.93l6.195-3.535-1.507-.863L9.62 7.96V4.018a.754.754 0 0 0-.376-.65L3.599.133a1.08 1.08 0 0 0-1.6.95L2 12.168a1.082 1.082 0 0 0 1.555.976l.042-.022 4.522-2.581v3.516c0 .27.144.517.377.651L14.298 18l1.507-.864-6.186-3.52Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
