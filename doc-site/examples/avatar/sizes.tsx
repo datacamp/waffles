@@ -8,12 +8,15 @@ import { GitLogomark } from '@datacamp/waffles/asset';
 function Example() {
   return (
     <>
-      <Heading as="h4">String Content</Heading>
+      <Heading as="h4" size="medium">
+        Text Content
+      </Heading>
       <div
         css={css`
           display: flex;
           gap: ${tokens.spacing.small};
-          margin-bottom: ${tokens.spacing.small};
+          flex-wrap: wrap;
+          margin-bottom: ${tokens.spacing.medium};
         `}
       >
         <Avatar size="xxsmall" content="D" />
@@ -25,12 +28,15 @@ function Example() {
         <Avatar size="xxlarge" content="D" />
         <Avatar size="huge" content="D" />
       </div>
-      <Heading as="h4">Icon Content</Heading>
+      <Heading as="h4" size="medium">
+        Icon Content
+      </Heading>
       <div
         css={css`
           display: flex;
           gap: ${tokens.spacing.small};
-          margin-bottom: ${tokens.spacing.small};
+          flex-wrap: wrap;
+          margin-bottom: ${tokens.spacing.medium};
         `}
       >
         <Avatar size="xxsmall" content={<DataCampBrand />} />
@@ -42,12 +48,14 @@ function Example() {
         <Avatar size="xxlarge" content={<DataCampBrand />} />
         <Avatar size="huge" content={<DataCampBrand />} />
       </div>
-      <Heading as="h4">Asset Content</Heading>
+      <Heading as="h4" size="medium">
+        Asset Content
+      </Heading>
       <div
         css={css`
           display: flex;
           gap: ${tokens.spacing.small};
-          margin-bottom: ${tokens.spacing.small};
+          flex-wrap: wrap;
         `}
       >
         <Avatar size="xxsmall" content={<GitLogomark />} />

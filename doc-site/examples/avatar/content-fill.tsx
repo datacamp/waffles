@@ -7,12 +7,15 @@ import { AvatarPlaceholderColored } from '@datacamp/waffles/asset';
 function Example() {
   return (
     <>
-      <Heading as="h4">Asset Content</Heading>
+      <Heading as="h4" size="medium">
+        Asset Content
+      </Heading>
       <div
         css={css`
           display: flex;
           gap: ${tokens.spacing.small};
-          margin-bottom: ${tokens.spacing.small};
+          flex-wrap: wrap;
+          margin-bottom: ${tokens.spacing.medium};
         `}
       >
         <Avatar
@@ -56,92 +59,70 @@ function Example() {
           content={<AvatarPlaceholderColored />}
         />
       </div>
-      <Heading as="h4">Image Content</Heading>
+      <Heading as="h4" size="medium">
+        Image Content
+      </Heading>
       <div
         css={css`
           display: flex;
           gap: ${tokens.spacing.small};
-          margin-bottom: ${tokens.spacing.small};
+          flex-wrap: wrap;
         `}
       >
         <Avatar
           size="xxsmall"
           contentFill
           content={
-            <img
-              src="../../images/profile-portrait-placeholder.png"
-              alt="Example image placeholder"
-            />
+            <img src="/images/profile-pic-example.png" alt="Example image" />
           }
         />
         <Avatar
           size="xsmall"
           contentFill
           content={
-            <img
-              src="../../images/profile-portrait-placeholder.png"
-              alt="Example image placeholder"
-            />
+            <img src="/images/profile-pic-example.png" alt="Example image" />
           }
         />
         <Avatar
           size="small"
           contentFill
           content={
-            <img
-              src="../../images/profile-portrait-placeholder.png"
-              alt="Example image placeholder"
-            />
+            <img src="/images/profile-pic-example.png" alt="Example image" />
           }
         />
         <Avatar
           size="medium"
           contentFill
           content={
-            <img
-              src="../../images/profile-portrait-placeholder.png"
-              alt="Example image placeholder"
-            />
+            <img src="/images/profile-pic-example.png" alt="Example image" />
           }
         />
         <Avatar
           size="large"
           contentFill
           content={
-            <img
-              src="../../images/profile-portrait-placeholder.png"
-              alt="Example image placeholder"
-            />
+            <img src="/images/profile-pic-example.png" alt="Example image" />
           }
         />
         <Avatar
           size="xlarge"
           contentFill
           content={
-            <img
-              src="../../images/profile-portrait-placeholder.png"
-              alt="Example image placeholder"
-            />
+            <img src="/images/profile-pic-example.png" alt="Example image" />
           }
         />
         <Avatar
           size="xxlarge"
           contentFill
           content={
-            <img
-              src="../../images/profile-portrait-placeholder.png"
-              alt="Example image placeholder"
-            />
+            <img src="/images/profile-pic-example.png" alt="Example image" />
           }
         />
         <Avatar
           size="huge"
           contentFill
           content={
-            <img
-              src="../../images/profile-portrait-placeholder.png"
-              alt="Example image placeholder"
-            />
+            <img src="/images/profile-pic-example.png" alt="Example image" />
           }
         />
       </div>

@@ -19,13 +19,15 @@ import { Avatar } from '@datacamp/waffles/avatar';
 function Example() {
   return (
     <>
-      <Heading as="h4">String Content</Heading>
+      <Heading as="h4" size="medium">
+        Text Content
+      </Heading>
       <div
         css={css`
           display: flex;
           gap: ${tokens.spacing.small};
           flex-wrap: wrap;
-          margin-bottom: ${tokens.spacing.small};
+          margin-bottom: ${tokens.spacing.medium};
         `}
       >
         <Avatar variant="green" content="D" />
@@ -41,7 +43,9 @@ function Example() {
         <Avatar variant="greySubtle" content="D" />
       </div>
 
-      <Heading as="h4">Icon Content</Heading>
+      <Heading as="h4" size="medium">
+        Icon Content
+      </Heading>
       <div
         css={css`
           display: flex;
