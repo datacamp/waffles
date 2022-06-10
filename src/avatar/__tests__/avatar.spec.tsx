@@ -6,7 +6,13 @@ import { GitLogomark } from '../../asset';
 
 jest.mock('../../icon', () => {
   return {
-    DataCampBrand: () => 'DataCampBrandAsset',
+    DataCampBrand: () => 'DataCampBrandIcon',
+  };
+});
+
+jest.mock('../../asset', () => {
+  return {
+    GitLogomark: () => 'GitLogomarkAsset',
   };
 });
 
@@ -42,21 +48,29 @@ describe('Avatar', () => {
     expect(avatarText).toBeInTheDocument();
   });
 
+  it('renders an Avatar with only the first character if a long string is given', () => {
+    const { getByText } = render(
+      <Avatar content="ABCDEFGHIJKLMNOPQRSTUVWXYZ" />,
+    );
+    const avatarTextContent = getByText('A').textContent;
+    expect(avatarTextContent).toHaveLength(1);
+  });
+
   it('renders an Avatar with different content', () => {
-    const { getByText, getByAltText, getByTestId } = render(
+    const { getByText, getByAltText } = render(
       <>
         <Avatar content="A" />
         <Avatar content={<DataCampBrand />} />
-        <Avatar content={<GitLogomark data-testid="avatar-asset" />} />
+        <Avatar content={<GitLogomark />} />
         <Avatar content={<img src="image.png" alt="Avatar test image" />} />
       </>,
     );
 
     const avatarText = getByText('A');
     expect(avatarText).toBeInTheDocument();
-    const avatarIcon = getByText('DataCampBrandAsset');
+    const avatarIcon = getByText('DataCampBrandIcon');
     expect(avatarIcon).toBeInTheDocument();
-    const avatarAsset = getByTestId('avatar-asset');
+    const avatarAsset = getByText('GitLogomarkAsset');
     expect(avatarAsset).toBeInTheDocument();
     const avatarImage = getByAltText('Avatar test image');
     expect(avatarImage).toBeInTheDocument();
@@ -67,7 +81,7 @@ describe('Avatar', () => {
       sizes.forEach((size) => {
         it(`variant ${variant} and size ${size}`, () => {
           const { container } = render(
-            <>
+            <div>
               <Avatar variant={variant} size={size} content="A" />
               <Avatar
                 variant={variant}
@@ -80,7 +94,7 @@ describe('Avatar', () => {
                 size={size}
                 content={<img src="image.png" alt="Avatar test image" />}
               />
-            </>,
+            </div>,
           );
 
           const avatar = container.firstChild;
