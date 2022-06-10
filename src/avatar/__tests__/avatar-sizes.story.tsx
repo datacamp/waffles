@@ -13,6 +13,13 @@ const wrapperStyle = css`
   gap: ${tokens.spacing.medium};
 `;
 
+const sizeWrapperStyle = css`
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const sizes = [
   'huge',
   'xxlarge',
@@ -29,7 +36,11 @@ function Story() {
     <div css={wrapperStyle}>
       {sizes.map((size) => {
         return (
-          <div data-testid="avatar" key={`avatar-${size}`}>
+          <div
+            css={sizeWrapperStyle}
+            data-testid="avatar"
+            key={`avatar-${size}`}
+          >
             <Text>{size}</Text>
             <Avatar size={size} content="A" />
             <Avatar size={size} content={<Camera />} />
@@ -37,7 +48,12 @@ function Story() {
             <Avatar
               size={size}
               contentFill
-              content={<img src="" alt="Image" />}
+              content={
+                <img
+                  src="/images/profile-pic-example.png"
+                  alt="Image example"
+                />
+              }
             />
           </div>
         );
