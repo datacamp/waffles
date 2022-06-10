@@ -61,8 +61,8 @@ function useHashLocation() {
 type NavItemProps = {
   children: React.ReactNode;
   href: string;
-  iconLeft?: React.ReactNode;
-  iconRight?: React.ReactNode;
+  iconLeft?: JSX.Element;
+  iconRight?: JSX.Element;
   isNew?: boolean;
   isSubcategoryItem?: boolean;
   size?: React.ComponentProps<typeof SideNav.Item>['size'];
