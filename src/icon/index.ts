@@ -100,6 +100,7 @@ export { default as Expand } from './generated/expand';
 export { default as ExternalLink } from './generated/external-link';
 export { default as FacebookBrand } from './generated/facebook-brand';
 export { default as Feed } from './generated/feed';
+export { default as FigmaBrand } from './generated/figma-brand';
 export { default as Filter } from './generated/filter';
 export { default as Flag } from './generated/flag';
 export { default as Flash } from './generated/flash';
