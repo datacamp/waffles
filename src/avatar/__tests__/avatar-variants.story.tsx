@@ -12,6 +12,12 @@ const wrapperStyle = css`
   gap: ${tokens.spacing.medium};
 `;
 
+const variantWrapperStyle = css`
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+`;
+
 const variants = [
   'green',
   'navy',
@@ -31,14 +37,23 @@ function Story() {
     <div css={wrapperStyle}>
       {variants.map((variant) => {
         return (
-          <div data-testid="avatar" key={`avatar-${variant}`}>
+          <div
+            css={variantWrapperStyle}
+            data-testid="avatar"
+            key={`avatar-${variant}`}
+          >
             <Avatar variant={variant} content="A" />
             <Avatar variant={variant} content={<Camera />} />
             <Avatar variant={variant} contentFill content={<TargetArrow3d />} />
             <Avatar
               variant={variant}
               contentFill
-              content={<img src="" alt="Image" />}
+              content={
+                <img
+                  src="/images/profile-pic-example.png"
+                  alt="Image example"
+                />
+              }
             />
           </div>
         );

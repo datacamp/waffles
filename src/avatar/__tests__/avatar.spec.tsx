@@ -4,6 +4,12 @@ import { Avatar } from '../index';
 import { DataCampBrand } from '../../icon';
 import { GitLogomark } from '../../asset';
 
+jest.mock('../../icon', () => {
+  return {
+    DataCampBrand: () => 'DataCampBrandAsset',
+  };
+});
+
 const sizes = [
   'xxsmall',
   'xsmall',
@@ -40,15 +46,15 @@ describe('Avatar', () => {
     const { getByText, getByAltText, getByTestId } = render(
       <>
         <Avatar content="A" />
-        <Avatar content={<DataCampBrand data-testid="avatar-icon" />} />
+        <Avatar content={<DataCampBrand />} />
         <Avatar content={<GitLogomark data-testid="avatar-asset" />} />
-        <Avatar content={<img src="" alt="Avatar test image" />} />
+        <Avatar content={<img src="image.png" alt="Avatar test image" />} />
       </>,
     );
 
     const avatarText = getByText('A');
     expect(avatarText).toBeInTheDocument();
-    const avatarIcon = getByTestId('avatar-icon');
+    const avatarIcon = getByText('DataCampBrandAsset');
     expect(avatarIcon).toBeInTheDocument();
     const avatarAsset = getByTestId('avatar-asset');
     expect(avatarAsset).toBeInTheDocument();
@@ -62,6 +68,7 @@ describe('Avatar', () => {
         it(`variant ${variant} and size ${size}`, () => {
           const { container } = render(
             <>
+              <Avatar variant={variant} size={size} content="A" />
               <Avatar
                 variant={variant}
                 size={size}
@@ -71,9 +78,8 @@ describe('Avatar', () => {
               <Avatar
                 variant={variant}
                 size={size}
-                content={<img src="" alt="Avatar test image" />}
+                content={<img src="image.png" alt="Avatar test image" />}
               />
-              <Avatar variant={variant} size={size} content="A" />
             </>,
           );
 
