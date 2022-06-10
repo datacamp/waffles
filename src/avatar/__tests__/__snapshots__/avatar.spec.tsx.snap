@@ -39,13 +39,45 @@ exports[`Avatar renders snapshot of variant blue and size huge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -89,13 +121,45 @@ exports[`Avatar renders snapshot of variant blue and size large 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -139,13 +203,45 @@ exports[`Avatar renders snapshot of variant blue and size medium 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -189,13 +285,45 @@ exports[`Avatar renders snapshot of variant blue and size small 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -239,13 +367,45 @@ exports[`Avatar renders snapshot of variant blue and size xlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -289,13 +449,45 @@ exports[`Avatar renders snapshot of variant blue and size xsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -339,13 +531,45 @@ exports[`Avatar renders snapshot of variant blue and size xxlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -389,13 +613,45 @@ exports[`Avatar renders snapshot of variant blue and size xxsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -439,13 +695,45 @@ exports[`Avatar renders snapshot of variant green and size huge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -489,13 +777,45 @@ exports[`Avatar renders snapshot of variant green and size large 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -539,13 +859,45 @@ exports[`Avatar renders snapshot of variant green and size medium 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -589,13 +941,45 @@ exports[`Avatar renders snapshot of variant green and size small 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -639,13 +1023,45 @@ exports[`Avatar renders snapshot of variant green and size xlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -689,13 +1105,45 @@ exports[`Avatar renders snapshot of variant green and size xsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -739,13 +1187,45 @@ exports[`Avatar renders snapshot of variant green and size xxlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -789,13 +1269,45 @@ exports[`Avatar renders snapshot of variant green and size xxsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -839,13 +1351,45 @@ exports[`Avatar renders snapshot of variant grey and size huge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -889,13 +1433,45 @@ exports[`Avatar renders snapshot of variant grey and size large 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -939,13 +1515,45 @@ exports[`Avatar renders snapshot of variant grey and size medium 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -989,13 +1597,45 @@ exports[`Avatar renders snapshot of variant grey and size small 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1039,13 +1679,45 @@ exports[`Avatar renders snapshot of variant grey and size xlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1089,13 +1761,45 @@ exports[`Avatar renders snapshot of variant grey and size xsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1139,13 +1843,45 @@ exports[`Avatar renders snapshot of variant grey and size xxlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1189,13 +1925,45 @@ exports[`Avatar renders snapshot of variant grey and size xxsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1239,13 +2007,45 @@ exports[`Avatar renders snapshot of variant greySubtle and size huge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1289,13 +2089,45 @@ exports[`Avatar renders snapshot of variant greySubtle and size large 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1339,13 +2171,45 @@ exports[`Avatar renders snapshot of variant greySubtle and size medium 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1389,13 +2253,45 @@ exports[`Avatar renders snapshot of variant greySubtle and size small 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1439,13 +2335,45 @@ exports[`Avatar renders snapshot of variant greySubtle and size xlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1489,13 +2417,45 @@ exports[`Avatar renders snapshot of variant greySubtle and size xsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1539,13 +2499,45 @@ exports[`Avatar renders snapshot of variant greySubtle and size xxlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1589,13 +2581,45 @@ exports[`Avatar renders snapshot of variant greySubtle and size xxsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1639,13 +2663,45 @@ exports[`Avatar renders snapshot of variant navy and size huge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1689,13 +2745,45 @@ exports[`Avatar renders snapshot of variant navy and size large 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1739,13 +2827,45 @@ exports[`Avatar renders snapshot of variant navy and size medium 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1789,13 +2909,45 @@ exports[`Avatar renders snapshot of variant navy and size small 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1839,13 +2991,45 @@ exports[`Avatar renders snapshot of variant navy and size xlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1889,13 +3073,45 @@ exports[`Avatar renders snapshot of variant navy and size xsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1939,13 +3155,45 @@ exports[`Avatar renders snapshot of variant navy and size xxlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1989,13 +3237,45 @@ exports[`Avatar renders snapshot of variant navy and size xxsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2039,13 +3319,45 @@ exports[`Avatar renders snapshot of variant orange and size huge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2089,13 +3401,45 @@ exports[`Avatar renders snapshot of variant orange and size large 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2139,13 +3483,45 @@ exports[`Avatar renders snapshot of variant orange and size medium 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2189,13 +3565,45 @@ exports[`Avatar renders snapshot of variant orange and size small 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2239,13 +3647,45 @@ exports[`Avatar renders snapshot of variant orange and size xlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2289,13 +3729,45 @@ exports[`Avatar renders snapshot of variant orange and size xsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2339,13 +3811,45 @@ exports[`Avatar renders snapshot of variant orange and size xxlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2389,13 +3893,45 @@ exports[`Avatar renders snapshot of variant orange and size xxsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2439,13 +3975,45 @@ exports[`Avatar renders snapshot of variant pink and size huge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2489,13 +4057,45 @@ exports[`Avatar renders snapshot of variant pink and size large 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2539,13 +4139,45 @@ exports[`Avatar renders snapshot of variant pink and size medium 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2589,13 +4221,45 @@ exports[`Avatar renders snapshot of variant pink and size small 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2639,13 +4303,45 @@ exports[`Avatar renders snapshot of variant pink and size xlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2689,13 +4385,45 @@ exports[`Avatar renders snapshot of variant pink and size xsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2739,13 +4467,45 @@ exports[`Avatar renders snapshot of variant pink and size xxlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2789,13 +4549,45 @@ exports[`Avatar renders snapshot of variant pink and size xxsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2839,13 +4631,45 @@ exports[`Avatar renders snapshot of variant purple and size huge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2889,13 +4713,45 @@ exports[`Avatar renders snapshot of variant purple and size large 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2939,13 +4795,45 @@ exports[`Avatar renders snapshot of variant purple and size medium 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -2989,13 +4877,45 @@ exports[`Avatar renders snapshot of variant purple and size small 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3039,13 +4959,45 @@ exports[`Avatar renders snapshot of variant purple and size xlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3089,13 +5041,45 @@ exports[`Avatar renders snapshot of variant purple and size xsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3139,13 +5123,45 @@ exports[`Avatar renders snapshot of variant purple and size xxlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3189,13 +5205,45 @@ exports[`Avatar renders snapshot of variant purple and size xxsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3239,13 +5287,45 @@ exports[`Avatar renders snapshot of variant red and size huge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3289,13 +5369,45 @@ exports[`Avatar renders snapshot of variant red and size large 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3339,13 +5451,45 @@ exports[`Avatar renders snapshot of variant red and size medium 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3389,13 +5533,45 @@ exports[`Avatar renders snapshot of variant red and size small 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3439,13 +5615,45 @@ exports[`Avatar renders snapshot of variant red and size xlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3489,13 +5697,45 @@ exports[`Avatar renders snapshot of variant red and size xsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3539,13 +5779,45 @@ exports[`Avatar renders snapshot of variant red and size xxlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3589,13 +5861,45 @@ exports[`Avatar renders snapshot of variant red and size xxsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3639,13 +5943,45 @@ exports[`Avatar renders snapshot of variant white and size huge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3689,13 +6025,45 @@ exports[`Avatar renders snapshot of variant white and size large 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3739,13 +6107,45 @@ exports[`Avatar renders snapshot of variant white and size medium 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3789,13 +6189,45 @@ exports[`Avatar renders snapshot of variant white and size small 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3839,13 +6271,45 @@ exports[`Avatar renders snapshot of variant white and size xlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3889,13 +6353,45 @@ exports[`Avatar renders snapshot of variant white and size xsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3939,13 +6435,45 @@ exports[`Avatar renders snapshot of variant white and size xxlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -3989,13 +6517,45 @@ exports[`Avatar renders snapshot of variant white and size xxsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -4039,13 +6599,45 @@ exports[`Avatar renders snapshot of variant yellow and size huge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -4089,13 +6681,45 @@ exports[`Avatar renders snapshot of variant yellow and size large 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -4139,13 +6763,45 @@ exports[`Avatar renders snapshot of variant yellow and size medium 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -4189,13 +6845,45 @@ exports[`Avatar renders snapshot of variant yellow and size small 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -4239,13 +6927,45 @@ exports[`Avatar renders snapshot of variant yellow and size xlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -4289,13 +7009,45 @@ exports[`Avatar renders snapshot of variant yellow and size xsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -4339,13 +7091,45 @@ exports[`Avatar renders snapshot of variant yellow and size xxlarge 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -4389,13 +7173,45 @@ exports[`Avatar renders snapshot of variant yellow and size xxsmall 1`] = `
   min-width: 100%;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
+    class="emotion-0"
   >
-    A
+    <div
+      class="emotion-1"
+    >
+      A
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      DataCampBrandIcon
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      GitLogomarkAsset
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="Avatar test image"
+        src="image.png"
+      />
+    </div>
   </div>
 </div>
 `;
