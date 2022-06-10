@@ -16,20 +16,18 @@ import {
 import { Heading } from '@datacamp/waffles/heading';
 import { Avatar } from '@datacamp/waffles/avatar';
 
+const wrapperStyle = css`
+  display: flex;
+  gap: ${tokens.spacing.small};
+  flex-wrap: wrap;
+  margin-bottom: ${tokens.spacing.medium};
+`;
+
 function Example() {
   return (
     <>
-      <Heading as="h4" size="medium">
-        Text Content
-      </Heading>
-      <div
-        css={css`
-          display: flex;
-          gap: ${tokens.spacing.small};
-          flex-wrap: wrap;
-          margin-bottom: ${tokens.spacing.medium};
-        `}
-      >
+      <Heading size="medium">Text Content</Heading>
+      <div css={wrapperStyle}>
         <Avatar variant="green" content="D" />
         <Avatar variant="navy" content="D" />
         <Avatar variant="white" content="D" />
@@ -43,14 +41,11 @@ function Example() {
         <Avatar variant="greySubtle" content="D" />
       </div>
 
-      <Heading as="h4" size="medium">
-        Icon Content
-      </Heading>
+      <Heading size="medium">Icon Content</Heading>
       <div
         css={css`
-          display: flex;
-          gap: ${tokens.spacing.small};
-          flex-wrap: wrap;
+          ${wrapperStyle}
+          margin-bottom: 0;
         `}
       >
         <Avatar variant="green" content={<Learn />} />
