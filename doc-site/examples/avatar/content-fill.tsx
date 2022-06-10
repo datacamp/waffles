@@ -4,20 +4,18 @@ import { Heading } from '@datacamp/waffles/heading';
 import { Avatar } from '@datacamp/waffles/avatar';
 import { AvatarPlaceholderColored } from '@datacamp/waffles/asset';
 
+const wrapperStyle = css`
+  display: flex;
+  gap: ${tokens.spacing.small};
+  flex-wrap: wrap;
+  margin-bottom: ${tokens.spacing.medium};
+`;
+
 function Example() {
   return (
     <>
-      <Heading as="h4" size="medium">
-        Asset Content
-      </Heading>
-      <div
-        css={css`
-          display: flex;
-          gap: ${tokens.spacing.small};
-          flex-wrap: wrap;
-          margin-bottom: ${tokens.spacing.medium};
-        `}
-      >
+      <Heading size="medium">Asset Content</Heading>
+      <div css={wrapperStyle}>
         <Avatar
           size="xxsmall"
           contentFill
@@ -59,14 +57,11 @@ function Example() {
           content={<AvatarPlaceholderColored />}
         />
       </div>
-      <Heading as="h4" size="medium">
-        Image Content
-      </Heading>
+      <Heading size="medium">Image Content</Heading>
       <div
         css={css`
-          display: flex;
-          gap: ${tokens.spacing.small};
-          flex-wrap: wrap;
+          ${wrapperStyle}
+          margin-bottom: 0;
         `}
       >
         <Avatar
