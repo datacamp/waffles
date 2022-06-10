@@ -151,17 +151,17 @@ workflows:
     jobs:
       - build_and_test:
           context: org-global
-      - release:
-          requires:
-            - build_and_test
-          context: org-global
-          filters:
-            branches:
-              only:
-                - master
+      # - release:
+      #     requires:
+      #       - build_and_test
+      #     context: org-global
+      #     filters:
+      #       branches:
+      #         only:
+      #           - master
       - build_docs:
           requires:
-            - release
+            - build_and_test
           context: org-global
           filters:
             branches:
