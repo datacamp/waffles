@@ -18,6 +18,7 @@ const tableCellStyle = css`
 const textStyle = css`
   display: inline-flex;
   height: ${tokens.sizing.small};
+  font-size: ${tokens.fontSizes.small};
   align-items: center;
   padding-left: 10px;
   color: ${tokens.colors.navySubtleTextOnLight};
