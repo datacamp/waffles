@@ -20,5 +20,6 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true
   },
+  "include": ["test-setup/initial-setup.ts"],
   "exclude": ["node_modules", "build", "dist"]
 }
