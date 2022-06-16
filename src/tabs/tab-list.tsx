@@ -8,29 +8,38 @@ type TabListProps = {
 } & React.HTMLAttributes<HTMLDivElement>;
 
 function TabList({ inverted, children, ...restProps }: TabListProps) {
-  const [showGradientMask, setShowGradientMask] = useState(false);
+  const [showRightGradientMask, setShowRightGradientMask] = useState(false);
+  const [showLeftGradientMask, setShowLeftGradientMask] = useState(false);
 
   const tabListRef = useRef<HTMLDivElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Show gradient mask if the combined width of all tabs elements is bigger than width of the bar itself
-    function handleShowMask() {
-      if (tabListRef.current && wrapperRef.current) {
-        if (wrapperRef.current.offsetWidth > tabListRef.current.offsetWidth) {
-          setShowGradientMask(true);
-        } else {
-          setShowGradientMask(false);
-        }
+    const tabList = tabListRef.current;
+
+    // Show right gradient mask if the combined width of all tabs elements is bigger than width of the bar itself
+    function handleShowRightMask() {
+      if (tabList && wrapperRef.current) {
+        setShowRightGradientMask(
+          wrapperRef.current.offsetWidth > tabList.offsetWidth,
+        );
       }
     }
 
-    handleShowMask();
+    // Show left gradient mask if the tabList has been horizontally scrolled at all
+    function handleShowLeftMask() {
+      if (tabList && wrapperRef.current) {
+        setShowLeftGradientMask(tabList.scrollLeft > 0);
+      }
+    }
 
-    window.addEventListener('resize', handleShowMask);
+    handleShowRightMask();
+    tabList?.addEventListener('scroll', handleShowLeftMask);
+    window.addEventListener('resize', handleShowRightMask);
 
     return () => {
-      window.removeEventListener('resize', handleShowMask);
+      tabList?.addEventListener('scroll', handleShowLeftMask);
+      window.removeEventListener('resize', handleShowRightMask);
     };
   }, []);
 
@@ -39,7 +48,10 @@ function TabList({ inverted, children, ...restProps }: TabListProps) {
       role="tablist"
       aria-orientation="horizontal"
       ref={tabListRef}
-      css={tabListStyle({ isGradientMaskVisible: showGradientMask })}
+      css={tabListStyle({
+        isLeftGradientMaskVisible: showLeftGradientMask,
+        isRightGradientMaskVisible: showRightGradientMask,
+      })}
     >
       <div {...restProps} ref={wrapperRef} css={tabsWrapper({ inverted })}>
         {children}

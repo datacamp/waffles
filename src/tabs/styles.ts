@@ -4,22 +4,29 @@ import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
 type TabListStyleOptions = {
-  isGradientMaskVisible: boolean;
+  isLeftGradientMaskVisible: boolean;
+  isRightGradientMaskVisible: boolean;
 };
 
-export function tabListStyle({ isGradientMaskVisible }: TabListStyleOptions) {
+export function tabListStyle({
+  isLeftGradientMaskVisible,
+  isRightGradientMaskVisible,
+}: TabListStyleOptions) {
   return css`
     width: 100%;
     margin-bottom: ${tokens.spacing.medium};
 
-    /* Make tabs scrollable, while hiding scroll, and showing gradient mask  */
-    mask-image: ${isGradientMaskVisible
-      ? `linear-gradient(90deg, rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0))`
+    /* Make tabs scrollable, while hiding scroll, and showing appropriate gradient mask  */
+    mask-image: ${isRightGradientMaskVisible
+      ? isLeftGradientMaskVisible
+        ? `linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 64px, rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0))`
+        : `linear-gradient(90deg, rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0))`
       : 'none'};
     overflow-y: hidden;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
+
     &::-webkit-scrollbar {
       display: none;
       width: 0;
