@@ -55,16 +55,12 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/link">Link</Item>
             </SideNav.Subcategory>
             <SideNav.Subcategory label="Content">
-              <Item href="/components/asset" isNew>
-                Asset
-              </Item>
+              <Item href="/components/asset">Asset</Item>
               <Item href="/components/avatar" isNew>
                 Avatar
               </Item>
               <Item href="/components/badge">Badge</Item>
-              <Item href="/components/brand" isNew>
-                Brand
-              </Item>
+              <Item href="/components/brand">Brand</Item>
               <Item href="/components/content-container">
                 Content Container
               </Item>
@@ -88,9 +84,7 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/alert-dialog">Alert Dialog</Item>
               <Item href="/components/dialog">Dialog</Item>
               <Item href="/components/drawer">Drawer</Item>
-              <Item href="/components/menu" isNew>
-                Menu
-              </Item>
+              <Item href="/components/menu">Menu</Item>
               <Item href="/components/tooltip">Tooltip</Item>
               <Item href="/components/toast">Toast</Item>
             </SideNav.Subcategory>
@@ -107,9 +101,7 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/error-boundary">Error Boundary</Item>
               <Item href="/components/helpers">Helpers</Item>
               <Item href="/components/hooks">Hooks</Item>
-              <Item href="/components/loader" isNew>
-                Loader
-              </Item>
+              <Item href="/components/loader">Loader</Item>
               <Item href="/components/portal">Portal</Item>
               <Item href="/components/screen-reader-only">
                 Screen Reader Only
