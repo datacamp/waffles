@@ -99,7 +99,7 @@ function AssessColoredAlpa({ ...restProps }: AssessColoredAlpaProps) {
             fillRule="nonzero"
             d="m348.05 609.05 9.9 9.9L336.899 640l21.05 21.05-9.899 9.9L317.1 640z"
           />
-          <g opacity=".3" transform="translate(471 473)">
+          <g transform="translate(471 473)">
             <ellipse
               stroke="#05192D"
               strokeWidth="14"
