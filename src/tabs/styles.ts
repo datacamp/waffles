@@ -19,7 +19,7 @@ export function tabListStyle({
     /* Make tabs scrollable, while hiding scroll, and showing appropriate gradient mask  */
     mask-image: ${isRightGradientMaskVisible
       ? isLeftGradientMaskVisible
-        ? `linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 64px, rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0))`
+        ? `linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) ${tokens.spacing.xxlarge}, rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0))`
         : `linear-gradient(90deg, rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0))`
       : 'none'};
     overflow-y: hidden;
