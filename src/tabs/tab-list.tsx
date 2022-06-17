@@ -38,7 +38,7 @@ function TabList({ inverted, children, ...restProps }: TabListProps) {
     window.addEventListener('resize', handleShowRightMask);
 
     return () => {
-      tabList?.addEventListener('scroll', handleShowLeftMask);
+      tabList?.removeEventListener('scroll', handleShowLeftMask);
       window.removeEventListener('resize', handleShowRightMask);
     };
   }, []);
