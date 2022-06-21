@@ -2,12 +2,12 @@ import React from 'react';
 
 import { contentStyle } from './styles';
 
-type ContentBaseProps = {
-  /* The body content of the empty state component. */
+type ContentProps = {
+  /* The body content of the empty state component. Usually a mix of [text](/components/text) or [button](/components/button). */
   children: React.ReactNode;
 };
 
-function Content({ children, ...restProps }: ContentBaseProps) {
+function Content({ children, ...restProps }: ContentProps) {
   return (
     <div css={contentStyle} {...restProps}>
       {children}

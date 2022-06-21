@@ -1,8 +1,6 @@
-import { css } from '@emotion/react';
-
 import { Heading } from '../heading';
 
-import { contentWrapperStyle, emptyStateStyle } from './styles';
+import { contentWrapperStyle, emptyStateStyle, imageStyle } from './styles';
 
 type EmptyStateProps = {
   /* Image content element. In general pass Waffles [Asset](/components/asset). */
@@ -11,9 +9,9 @@ type EmptyStateProps = {
   children?: React.ReactNode;
   /* Title heading for the content */
   title?: string;
-  /* Specifies the flex-direction value of the content. Default is 'row'. Note: Smaller screen sizes will always be a column.  */
+  /* Specifies the flex-direction value of the content. Default is 'row'. Note: Small screen sizes will always show as a column.  */
   direction?: 'column' | 'row';
-  /* Whether the content should be center aligned. Note: Only applicable when `layout` is set to `column`. */
+  /* Whether the content should be center aligned. Note: Only applicable when `direction` is set to `column`. */
   isCentered?: boolean;
   /* Sets the style of all child elements to be suitable for dark backgrounds. */
   inverted?: boolean;
@@ -33,20 +31,13 @@ function EmptyStateInternal({
       css={emptyStateStyle({ direction, isCentered, inverted })}
       {...restProps}
     >
-      <div
-        css={css`
-          flex-shrink: 0;
-          width: 100px;
-          height: 100px;
-        `}
-      >
-        {image}
-      </div>
+      <div css={imageStyle}>{image}</div>
       <div css={contentWrapperStyle}>
-        <Heading as="h2" inverted={inverted}>
+        <Heading size={'xlarge'} inverted={inverted}>
           {title}
         </Heading>
         {children}
+        {/* TODO: Query whether we need an optional button component. (Probably not, as content can vary?) */}
       </div>
     </div>
   );
