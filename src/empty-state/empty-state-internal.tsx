@@ -25,10 +25,13 @@ type EmptyStateDirectionCenteredProps =
   | {
       /* Specifies the flex-direction value of the content. If no value is provided, 'row' will be used. Note: Small screen sizes will always show as a column.  */
       direction?: 'row' | undefined;
-      /* Whether the content should be center aligned. Note: Can only be true when `direction` is set to `column`. */
       isCentered?: never;
     }
-  | { direction: 'column'; isCentered?: boolean };
+  | {
+      direction: 'column';
+      /* Whether the content should be center aligned. Note: Can only be true when `direction` is set to `column`. */
+      isCentered?: boolean;
+    };
 
 function EmptyStateInternal({
   image,

@@ -64,6 +64,9 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/content-container">
                 Content Container
               </Item>
+              <Item href="/components/empty-state" isNew>
+                Empty State
+              </Item>
               <Item href="/components/icon">Icon</Item>
               <Item href="/components/notification">Notification</Item>
             </SideNav.Subcategory>
