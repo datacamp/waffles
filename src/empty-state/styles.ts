@@ -7,9 +7,13 @@ import { hexToRgba } from '../helpers';
 
 const emptyStateBaseStyle = css`
   display: flex;
+  font-family: ${tokens.fontFamilies.sansSerif};
+  font-size: ${tokens.fontSizes.medium};
+  border-style: dashed;
   border-radius: ${tokens.borderRadius.medium};
+  border-width: 1px;
   padding: ${tokens.spacing.large};
-  gap: ${tokens.spacing.large};
+  gap: ${tokens.spacing.medium};
   height: 100%;
   width: 100%;
 `;
@@ -28,7 +32,7 @@ export function emptyStateStyle({
   return css`
     ${emptyStateBaseStyle}
 
-    border: 2px dashed ${hexToRgba(
+    border-color: ${hexToRgba(
       inverted ? tokens.colors.white : tokens.colors.navy,
       tokens.opacity.low,
     )};
@@ -63,18 +67,18 @@ export const imageStyle = css`
 export const contentWrapperStyle = css`
   display: flex;
   flex-direction: column;
-  gap: ${tokens.spacing.large};
+  gap: ${tokens.spacing.medium};
   max-width: 650px;
 `;
 
-export const contentStyle = css`
-  font-family: ${tokens.fontFamilies.sansSerif};
+export const headingStyle = css`
+  line-height: ${tokens.lineHeights.relaxed};
+  margin: 0;
 `;
 
 export const listStyle = css`
   display: flex;
   flex-direction: column;
-  font-family: ${tokens.fontFamilies.sansSerif};
   margin: 0;
   padding: 0;
   list-style: none;
@@ -85,7 +89,7 @@ export const listItemStyle = css`
   display: flex;
   align-items: center;
   gap: ${tokens.spacing.medium};
-  line-height: normal;
+  line-height: ${tokens.lineHeights.default};
 
   svg {
     flex-shrink: 0;

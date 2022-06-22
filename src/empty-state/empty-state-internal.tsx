@@ -1,6 +1,11 @@
 import { Heading } from '../heading';
 
-import { contentWrapperStyle, emptyStateStyle, imageStyle } from './styles';
+import {
+  contentWrapperStyle,
+  emptyStateStyle,
+  headingStyle,
+  imageStyle,
+} from './styles';
 
 type EmptyStateProps = {
   /* Image content element. In general pass Waffles [Asset](/components/asset). */
@@ -31,13 +36,14 @@ function EmptyStateInternal({
       css={emptyStateStyle({ direction, isCentered, inverted })}
       {...restProps}
     >
-      <div css={imageStyle}>{image}</div>
+      {image && <div css={imageStyle}>{image}</div>}
       <div css={contentWrapperStyle}>
-        <Heading size={'xlarge'} inverted={inverted}>
-          {title}
-        </Heading>
+        {title && (
+          <Heading css={headingStyle} size={'xlarge'} inverted={inverted}>
+            {title}
+          </Heading>
+        )}
         {children}
-        {/* TODO: Query whether we need an optional button component. (Probably not, as content can vary?) */}
       </div>
     </div>
   );
