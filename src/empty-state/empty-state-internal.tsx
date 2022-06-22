@@ -10,41 +10,44 @@ import {
   imageStyle,
 } from './styles';
 
-type EmptyStateProps = {
+type EmptyStateBaseProps = {
   /* Image content element. In general pass Waffles [Asset](/components/asset). */
   image?: JSX.Element;
   /* Content of the body, made up of `EmptyState.List`, `EmptyState.Content` or both. */
   children?: React.ReactNode;
   /* Title heading for the content */
   title?: string;
-  /* Specifies the flex-direction value of the content. Default is 'row'. Note: Small screen sizes will always show as a column.  */
-  direction?: 'column' | 'row';
-  /* Whether the content should be center aligned. Note: Only applicable when `direction` is set to `column`. */
-  isCentered?: boolean;
   /* Sets the style of all child elements to be suitable for dark backgrounds. */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
+
+type EmptyStateDirectionCenteredProps =
+  | {
+      /* Specifies the flex-direction value of the content. If no value is provided, 'row' will be used. Note: Small screen sizes will always show as a column.  */
+      direction?: 'row' | undefined;
+      /* Whether the content should be center aligned. Note: Can only be true when `direction` is set to `column`. */
+      isCentered?: never;
+    }
+  | { direction: 'column'; isCentered?: boolean };
 
 function EmptyStateInternal({
   image,
   children,
   title,
-  direction = 'row',
-  isCentered = false,
+  direction,
+  isCentered,
   inverted = false,
   ...restProps
-}: EmptyStateProps) {
+}: EmptyStateDirectionCenteredProps & EmptyStateBaseProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const hasSmallColumn = useSmallColumn(wrapperRef);
-
-  // TODO: Remove ability to have direction ='row' and isCentered = true at the same time (ts) - @ixTec
 
   return (
     <div
       ref={wrapperRef}
       css={emptyStateStyle({
-        direction: hasSmallColumn ? 'column' : direction,
-        isCentered,
+        direction: hasSmallColumn ? 'column' : direction || 'row',
+        isCentered: !!isCentered,
         inverted,
       })}
       {...restProps}

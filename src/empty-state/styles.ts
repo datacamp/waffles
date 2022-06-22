@@ -42,7 +42,6 @@ export function emptyStateStyle({
     align-items: ${isCentered && direction === 'column'
       ? 'center'
       : 'flex-start'};
-    justify-content: ${isCentered && direction === 'row' ? 'center' : 'left'};
 
     ul {
       align-items: ${isCentered && direction === 'column'
