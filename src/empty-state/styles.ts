@@ -53,8 +53,6 @@ export function emptyStateStyle({
     li {
       justify-content: flex-start;
     }
-
-    // TODO: Handle forcing column layout for small sizes - @ixTec
   `;
 }
 

@@ -1,5 +1,8 @@
+import { useRef } from 'react';
+
 import { Heading } from '../heading';
 
+import useSmallColumn from './use-small-column';
 import {
   contentWrapperStyle,
   emptyStateStyle,
@@ -31,9 +34,19 @@ function EmptyStateInternal({
   inverted = false,
   ...restProps
 }: EmptyStateProps) {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const hasSmallColumn = useSmallColumn(wrapperRef);
+
+  // TODO: Remove ability to have direction ='row' and isCentered = true at the same time (ts) - @ixTec
+
   return (
     <div
-      css={emptyStateStyle({ direction, isCentered, inverted })}
+      ref={wrapperRef}
+      css={emptyStateStyle({
+        direction: hasSmallColumn ? 'column' : direction,
+        isCentered,
+        inverted,
+      })}
       {...restProps}
     >
       {image && <div css={imageStyle}>{image}</div>}
