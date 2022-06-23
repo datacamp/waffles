@@ -1,7 +1,7 @@
 import React from 'react';
 
 type ContentProps = {
-  /* The body content of the empty state component. Usually a mix of [text](/components/text) or [button](/components/button). */
+  /* The body content of the empty state component. Usually a mix of Waffles [text](/components/text) or [button](/components/button). */
   children: React.ReactNode;
 };
 

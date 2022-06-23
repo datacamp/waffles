@@ -15,7 +15,7 @@ type EmptyStateBaseProps = {
   image?: JSX.Element;
   /* Content of the body, made up of `EmptyState.List`, `EmptyState.Content` or both. */
   children?: React.ReactNode;
-  /* Title heading for the content */
+  /* Title heading for the content. */
   title?: string;
   /* Specifies the flex-direction value of the content. If no value is provided, `row` will be used. Note: Small screen sizes will always show as a column.  */
   direction?: 'row' | 'column';
@@ -25,6 +25,7 @@ type EmptyStateBaseProps = {
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
+// Additional type to handle restricting `isCentered` to only be usable when it the direction is column
 type EmptyStateDirectionCenteredProps =
   | {
       direction?: 'row' | undefined;
