@@ -87,7 +87,7 @@ exports[`Dialog renders snapshot 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 16px 0;
   list-style: none;
   gap: 8px;
 }
@@ -332,7 +332,7 @@ exports[`Dialog renders snapshot in column direction 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 16px 0;
   list-style: none;
   gap: 8px;
 }
@@ -577,7 +577,7 @@ exports[`Dialog renders snapshot in column direction and inverted 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 16px 0;
   list-style: none;
   gap: 8px;
 }
@@ -822,7 +822,7 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 16px 0;
   list-style: none;
   gap: 8px;
 }
