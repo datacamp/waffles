@@ -77,7 +77,7 @@ export const listStyle = css`
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: ${tokens.spacing.medium} 0;
   list-style: none;
   gap: ${tokens.spacing.small};
 `;
