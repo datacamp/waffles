@@ -17,19 +17,21 @@ type EmptyStateBaseProps = {
   children?: React.ReactNode;
   /* Title heading for the content */
   title?: string;
+  /* Specifies the flex-direction value of the content. If no value is provided, `row` will be used. Note: Small screen sizes will always show as a column.  */
+  direction?: 'row' | 'column';
+  /* Whether the content should be center aligned. Note: Can only be true when `direction` is set to `column`. */
+  isCentered?: boolean;
   /* Sets the style of all child elements to be suitable for dark backgrounds. */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 type EmptyStateDirectionCenteredProps =
   | {
-      /* Specifies the flex-direction value of the content. If no value is provided, `row` will be used. Note: Small screen sizes will always show as a column.  */
       direction?: 'row' | undefined;
       isCentered?: never;
     }
   | {
       direction: 'column';
-      /* Whether the content should be center aligned. Note: Can only be true when `direction` is set to `column`. */
       isCentered?: boolean;
     };
 
@@ -41,7 +43,7 @@ function EmptyStateInternal({
   isCentered,
   inverted = false,
   ...restProps
-}: EmptyStateDirectionCenteredProps & EmptyStateBaseProps) {
+}: EmptyStateBaseProps & EmptyStateDirectionCenteredProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const hasSmallColumn = useSmallColumn(wrapperRef);
 
