@@ -23,7 +23,7 @@ type EmptyStateBaseProps = {
 
 type EmptyStateDirectionCenteredProps =
   | {
-      /* Specifies the flex-direction value of the content. If no value is provided, 'row' will be used. Note: Small screen sizes will always show as a column.  */
+      /* Specifies the flex-direction value of the content. If no value is provided, `row` will be used. Note: Small screen sizes will always show as a column.  */
       direction?: 'row' | undefined;
       isCentered?: never;
     }
