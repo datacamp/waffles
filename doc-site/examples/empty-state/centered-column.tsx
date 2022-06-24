@@ -1,3 +1,4 @@
+import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Group, Branch, Matrix } from '@datacamp/waffles/icon';
 import { EmptyState } from '@datacamp/waffles/empty-state';
 import { Button } from '@datacamp/waffles/button';
@@ -11,7 +12,7 @@ function Example() {
       direction="column"
       isCentered
     >
-      <EmptyState.Content>Lorem ipsum dolor sit amet.</EmptyState.Content>
+      <Paragraph>Lorem ipsum dolor sit amet.</Paragraph>
       <EmptyState.List>
         <EmptyState.ListItem icon={<Group />}>
           Auctor eu augue
@@ -23,9 +24,7 @@ function Example() {
           Mus mauris vitae ultricies
         </EmptyState.ListItem>
       </EmptyState.List>
-      <EmptyState.Content>
-        <Button>Button</Button>
-      </EmptyState.Content>
+      <Button>Button</Button>
     </EmptyState>
   );
 }

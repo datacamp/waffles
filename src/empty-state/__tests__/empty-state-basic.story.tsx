@@ -1,4 +1,5 @@
 import { EmptyState } from '../index';
+import { Paragraph } from '../../paragraph';
 import { Group, Branch, Matrix } from '../../icon';
 import { Button } from '../../button';
 import { Rocket3d } from '../../asset';
@@ -10,7 +11,7 @@ function Story() {
       image={<Rocket3d />}
       data-testid="empty-state"
     >
-      <EmptyState.Content>Lorem ipsum dolor sit amet.</EmptyState.Content>
+      <Paragraph>Lorem ipsum dolor sit amet.</Paragraph>
       <EmptyState.List>
         <EmptyState.ListItem icon={<Group />}>
           Auctor eu augue
@@ -22,9 +23,7 @@ function Story() {
           Mus mauris vitae ultricies
         </EmptyState.ListItem>
       </EmptyState.List>
-      <EmptyState.Content>
-        <Button>Button</Button>
-      </EmptyState.Content>
+      <Button>Button</Button>
     </EmptyState>
   );
 }

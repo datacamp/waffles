@@ -57,7 +57,6 @@ exports[`Dialog renders snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 16px;
   max-width: 650px;
 }
 
@@ -76,9 +75,24 @@ exports[`Dialog renders snapshot 1`] = `
   line-height: 1.25;
   line-height: 1.5;
   margin: 0;
+  padding-bottom: 8px;
 }
 
 .emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #05192D;
+  font-size: 14px;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -87,12 +101,12 @@ exports[`Dialog renders snapshot 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0;
-  padding: 16px 0;
+  padding: 16px 0 24px;
   list-style: none;
   gap: 8px;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -105,13 +119,13 @@ exports[`Dialog renders snapshot 1`] = `
   line-height: 1.25;
 }
 
-.emotion-5 svg {
+.emotion-6 svg {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.emotion-8 {
+.emotion-9 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -158,7 +172,7 @@ exports[`Dialog renders snapshot 1`] = `
   border-color: transparent;
 }
 
-.emotion-8::after {
+.emotion-9::after {
   content: '';
   display: block;
   position: absolute;
@@ -174,15 +188,15 @@ exports[`Dialog renders snapshot 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-8:hover:not(:disabled) {
+.emotion-9:hover:not(:disabled) {
   background-color: #00D649;
 }
 
-.emotion-8:active:not(:disabled) {
+.emotion-9:active:not(:disabled) {
   background-color: #03EF62;
 }
 
-.emotion-8:disabled {
+.emotion-9:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -204,42 +218,42 @@ exports[`Dialog renders snapshot 1`] = `
       >
         Title Heading
       </h2>
-      <div>
-        Lorem ipsum dolor sit amet.
-      </div>
-      <ul
+      <p
         class="emotion-4"
       >
+        Lorem ipsum dolor sit amet.
+      </p>
+      <ul
+        class="emotion-5"
+      >
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Group
           Auctor eu augue
         </li>
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Branch
           Tristique senectus et netus
         </li>
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Matrix
           Mus mauris vitae ultricies
         </li>
       </ul>
-      <div>
-        <button
-          class="emotion-8"
+      <button
+        class="emotion-9"
+      >
+        <span
+          class="emotion-10"
         >
-          <span
-            class="emotion-9"
-          >
-            Button
-          </span>
-        </button>
-      </div>
+          Button
+        </span>
+      </button>
     </div>
   </div>
 </div>
@@ -302,7 +316,6 @@ exports[`Dialog renders snapshot in column direction 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 16px;
   max-width: 650px;
 }
 
@@ -321,9 +334,24 @@ exports[`Dialog renders snapshot in column direction 1`] = `
   line-height: 1.25;
   line-height: 1.5;
   margin: 0;
+  padding-bottom: 8px;
 }
 
 .emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #05192D;
+  font-size: 14px;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -332,12 +360,12 @@ exports[`Dialog renders snapshot in column direction 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0;
-  padding: 16px 0;
+  padding: 16px 0 24px;
   list-style: none;
   gap: 8px;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -350,13 +378,13 @@ exports[`Dialog renders snapshot in column direction 1`] = `
   line-height: 1.25;
 }
 
-.emotion-5 svg {
+.emotion-6 svg {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.emotion-8 {
+.emotion-9 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -403,7 +431,7 @@ exports[`Dialog renders snapshot in column direction 1`] = `
   border-color: transparent;
 }
 
-.emotion-8::after {
+.emotion-9::after {
   content: '';
   display: block;
   position: absolute;
@@ -419,15 +447,15 @@ exports[`Dialog renders snapshot in column direction 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-8:hover:not(:disabled) {
+.emotion-9:hover:not(:disabled) {
   background-color: #00D649;
 }
 
-.emotion-8:active:not(:disabled) {
+.emotion-9:active:not(:disabled) {
   background-color: #03EF62;
 }
 
-.emotion-8:disabled {
+.emotion-9:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -449,42 +477,42 @@ exports[`Dialog renders snapshot in column direction 1`] = `
       >
         Title Heading
       </h2>
-      <div>
-        Lorem ipsum dolor sit amet.
-      </div>
-      <ul
+      <p
         class="emotion-4"
       >
+        Lorem ipsum dolor sit amet.
+      </p>
+      <ul
+        class="emotion-5"
+      >
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Group
           Auctor eu augue
         </li>
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Branch
           Tristique senectus et netus
         </li>
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Matrix
           Mus mauris vitae ultricies
         </li>
       </ul>
-      <div>
-        <button
-          class="emotion-8"
+      <button
+        class="emotion-9"
+      >
+        <span
+          class="emotion-10"
         >
-          <span
-            class="emotion-9"
-          >
-            Button
-          </span>
-        </button>
-      </div>
+          Button
+        </span>
+      </button>
     </div>
   </div>
 </div>
@@ -547,7 +575,6 @@ exports[`Dialog renders snapshot in column direction and inverted 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 16px;
   max-width: 650px;
 }
 
@@ -566,9 +593,24 @@ exports[`Dialog renders snapshot in column direction and inverted 1`] = `
   line-height: 1.25;
   line-height: 1.5;
   margin: 0;
+  padding-bottom: 8px;
 }
 
 .emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -577,12 +619,12 @@ exports[`Dialog renders snapshot in column direction and inverted 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0;
-  padding: 16px 0;
+  padding: 16px 0 24px;
   list-style: none;
   gap: 8px;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -595,13 +637,13 @@ exports[`Dialog renders snapshot in column direction and inverted 1`] = `
   line-height: 1.25;
 }
 
-.emotion-5 svg {
+.emotion-6 svg {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.emotion-8 {
+.emotion-9 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -648,7 +690,7 @@ exports[`Dialog renders snapshot in column direction and inverted 1`] = `
   border-color: transparent;
 }
 
-.emotion-8::after {
+.emotion-9::after {
   content: '';
   display: block;
   position: absolute;
@@ -664,15 +706,15 @@ exports[`Dialog renders snapshot in column direction and inverted 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-8:hover:not(:disabled) {
+.emotion-9:hover:not(:disabled) {
   background-color: #00D649;
 }
 
-.emotion-8:active:not(:disabled) {
+.emotion-9:active:not(:disabled) {
   background-color: #03EF62;
 }
 
-.emotion-8:disabled {
+.emotion-9:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -694,42 +736,42 @@ exports[`Dialog renders snapshot in column direction and inverted 1`] = `
       >
         Title Heading
       </h2>
-      <div>
-        Lorem ipsum dolor sit amet.
-      </div>
-      <ul
+      <p
         class="emotion-4"
       >
+        Lorem ipsum dolor sit amet.
+      </p>
+      <ul
+        class="emotion-5"
+      >
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Group
           Auctor eu augue
         </li>
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Branch
           Tristique senectus et netus
         </li>
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Matrix
           Mus mauris vitae ultricies
         </li>
       </ul>
-      <div>
-        <button
-          class="emotion-8"
+      <button
+        class="emotion-9"
+      >
+        <span
+          class="emotion-10"
         >
-          <span
-            class="emotion-9"
-          >
-            Button
-          </span>
-        </button>
-      </div>
+          Button
+        </span>
+      </button>
     </div>
   </div>
 </div>
@@ -792,7 +834,6 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 16px;
   max-width: 650px;
 }
 
@@ -811,9 +852,24 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   line-height: 1.25;
   line-height: 1.5;
   margin: 0;
+  padding-bottom: 8px;
 }
 
 .emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -822,12 +878,12 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0;
-  padding: 16px 0;
+  padding: 16px 0 24px;
   list-style: none;
   gap: 8px;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -840,13 +896,13 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   line-height: 1.25;
 }
 
-.emotion-5 svg {
+.emotion-6 svg {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.emotion-8 {
+.emotion-9 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -893,7 +949,7 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   border-color: transparent;
 }
 
-.emotion-8::after {
+.emotion-9::after {
   content: '';
   display: block;
   position: absolute;
@@ -909,15 +965,15 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-8:hover:not(:disabled) {
+.emotion-9:hover:not(:disabled) {
   background-color: #00D649;
 }
 
-.emotion-8:active:not(:disabled) {
+.emotion-9:active:not(:disabled) {
   background-color: #03EF62;
 }
 
-.emotion-8:disabled {
+.emotion-9:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -939,42 +995,42 @@ exports[`Dialog renders snapshot in inverted 1`] = `
       >
         Title Heading
       </h2>
-      <div>
-        Lorem ipsum dolor sit amet.
-      </div>
-      <ul
+      <p
         class="emotion-4"
       >
+        Lorem ipsum dolor sit amet.
+      </p>
+      <ul
+        class="emotion-5"
+      >
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Group
           Auctor eu augue
         </li>
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Branch
           Tristique senectus et netus
         </li>
         <li
-          class="emotion-5"
+          class="emotion-6"
         >
           Matrix
           Mus mauris vitae ultricies
         </li>
       </ul>
-      <div>
-        <button
-          class="emotion-8"
+      <button
+        class="emotion-9"
+      >
+        <span
+          class="emotion-10"
         >
-          <span
-            class="emotion-9"
-          >
-            Button
-          </span>
-        </button>
-      </div>
+          Button
+        </span>
+      </button>
     </div>
   </div>
 </div>

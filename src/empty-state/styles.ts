@@ -64,20 +64,20 @@ export const imageStyle = css`
 export const contentWrapperStyle = css`
   display: flex;
   flex-direction: column;
-  gap: ${tokens.spacing.medium};
   max-width: 650px;
 `;
 
 export const headingStyle = css`
   line-height: ${tokens.lineHeights.relaxed};
   margin: 0;
+  padding-bottom: ${tokens.spacing.small};
 `;
 
 export const listStyle = css`
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: ${tokens.spacing.medium} 0;
+  padding: ${tokens.spacing.medium} 0 ${tokens.spacing.large};
   list-style: none;
   gap: ${tokens.spacing.small};
 `;
