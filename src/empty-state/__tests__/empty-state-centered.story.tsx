@@ -9,7 +9,7 @@ function Story() {
     <EmptyState
       title="Title Heading"
       image={<Rocket3d />}
-      direction="column"
+      orientation="vertical"
       isCentered
       data-testid="empty-state"
     >

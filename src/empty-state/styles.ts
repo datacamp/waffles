@@ -19,13 +19,15 @@ const emptyStateBaseStyle = css`
 `;
 
 type EmptyStateStyleOptions = {
-  direction: NonNullable<React.ComponentProps<typeof EmptyState>['direction']>;
+  orientation: NonNullable<
+    React.ComponentProps<typeof EmptyState>['orientation']
+  >;
   isCentered: boolean;
   inverted: boolean;
 };
 
 export function emptyStateStyle({
-  direction,
+  orientation,
   isCentered,
   inverted,
 }: EmptyStateStyleOptions) {
@@ -37,14 +39,14 @@ export function emptyStateStyle({
       tokens.opacity.low,
     )};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
-    flex-direction: ${direction};
-    text-align: ${isCentered && direction === 'column' ? 'center' : 'left'};
-    align-items: ${isCentered && direction === 'column'
+    flex-direction: ${orientation === 'horizontal' ? 'row' : 'column'};
+    text-align: ${isCentered && orientation === 'vertical' ? 'center' : 'left'};
+    align-items: ${isCentered && orientation === 'vertical'
       ? 'center'
       : 'flex-start'};
 
     ul {
-      align-items: ${isCentered && direction === 'column'
+      align-items: ${isCentered && orientation === 'vertical'
         ? 'center'
         : 'flex-start'};
     }

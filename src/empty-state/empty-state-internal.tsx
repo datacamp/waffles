@@ -2,7 +2,7 @@ import { useRef } from 'react';
 
 import { Heading } from '../heading';
 
-import useSmallColumn from './use-small-column';
+import useVertical from './use-vertical';
 import {
   contentWrapperStyle,
   emptyStateStyle,
@@ -17,22 +17,22 @@ type EmptyStateBaseProps = {
   children?: React.ReactNode;
   /* Title heading for the content. */
   title?: React.ReactNode;
-  /* Specifies the flex-direction value of the content. If no value is provided, `row` will be used. Note: Small screen sizes will always show as a column.  */
-  direction?: 'row' | 'column';
-  /* Whether the content should be center aligned. Note: Can only be true when `direction` is set to `column`. */
+  /* Specifies in which layout the component is organised. If no value is provided, `horizontal` will be used. Note: Small screen sizes will always show as vertical.  */
+  orientation?: 'horizontal' | 'vertical';
+  /* Whether the content should be center aligned. Note: Can only be true when `orientation` is set to `vertical`. */
   isCentered?: boolean;
   /* Sets the style of all child elements to be suitable for dark backgrounds. */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-// Additional type to handle restricting `isCentered` to only be usable when it the direction is column
+// Additional type to handle restricting `isCentered` to only be usable when it the orientation is vertical
 type EmptyStateDirectionCenteredProps =
   | {
-      direction?: 'row' | undefined;
+      orientation?: 'horizontal' | undefined;
       isCentered?: never;
     }
   | {
-      direction: 'column';
+      orientation: 'vertical';
       isCentered?: boolean;
     };
 
@@ -40,19 +40,21 @@ function EmptyStateInternal({
   image,
   children,
   title,
-  direction,
+  orientation,
   isCentered,
   inverted = false,
   ...restProps
 }: EmptyStateBaseProps & EmptyStateDirectionCenteredProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const hasSmallColumn = useSmallColumn(wrapperRef);
+  const useVerticalOrientation = useVertical(wrapperRef);
 
   return (
     <div
       ref={wrapperRef}
       css={emptyStateStyle({
-        direction: hasSmallColumn ? 'column' : direction || 'row',
+        orientation: useVerticalOrientation
+          ? 'vertical'
+          : orientation || 'horizontal',
         isCentered: !!isCentered,
         inverted,
       })}

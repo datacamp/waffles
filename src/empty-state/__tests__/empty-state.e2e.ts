@@ -4,13 +4,13 @@ describe('EmptyState', () => {
     cy.findByTestId('empty-state').should('exist');
   });
 
-  it('render a centered empty state with column direction', () => {
+  it('render a centered empty state with vertical orientation', () => {
     cy.loadStory('empty-state-centered');
     cy.findByTestId('empty-state').should('exist');
   });
 
-  it('render an empty state in each direction', () => {
-    cy.loadStory('empty-state-direction');
+  it('render an empty state in each orientation', () => {
+    cy.loadStory('empty-state-orientation');
     cy.findAllByTestId('empty-state').should('have.length', 2);
   });
 

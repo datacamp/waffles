@@ -15,7 +15,11 @@ function Example() {
         gap: ${tokens.spacing.medium};
       `}
     >
-      <EmptyState title="Direction: Row" image={<Rocket3d />} direction="row">
+      <EmptyState
+        title="Orientation: Horizontal"
+        image={<Rocket3d />}
+        orientation="horizontal"
+      >
         <Paragraph>Lorem ipsum dolor sit amet.</Paragraph>
         <EmptyState.List>
           <EmptyState.ListItem icon={<Group />}>
@@ -31,9 +35,9 @@ function Example() {
         <Button>Button</Button>
       </EmptyState>
       <EmptyState
-        title="Direction: Column"
+        title="Orientation: Vertical"
         image={<Rocket3d />}
-        direction="column"
+        orientation="vertical"
       >
         <Paragraph>Lorem ipsum dolor sit amet.</Paragraph>
         <EmptyState.List>
