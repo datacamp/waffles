@@ -13,10 +13,10 @@ import {
 type EmptyStateBaseProps = {
   /* Image content element. In general pass Waffles [Asset](/components/asset). */
   image?: JSX.Element;
-  /* Content of the body, made up of `EmptyState.List`, `EmptyState.Content` or both. */
+  /* Content of the body, can include `EmptyState.List` and any Waffles or custom component. */
   children?: React.ReactNode;
   /* Title heading for the content. */
-  title?: string;
+  title?: React.ReactNode;
   /* Specifies the flex-direction value of the content. If no value is provided, `row` will be used. Note: Small screen sizes will always show as a column.  */
   direction?: 'row' | 'column';
   /* Whether the content should be center aligned. Note: Can only be true when `direction` is set to `column`. */
