@@ -43,9 +43,13 @@ describe('Dialog', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('renders snapshot in column direction', async () => {
+  it('renders snapshot in vertical orientation', async () => {
     const { container } = render(
-      <EmptyState title="Title Heading" image={<Rocket3d />} direction="column">
+      <EmptyState
+        title="Title Heading"
+        image={<Rocket3d />}
+        orientation="vertical"
+      >
         <Paragraph>Lorem ipsum dolor sit amet.</Paragraph>
         <EmptyState.List>
           <EmptyState.ListItem icon={<Group />}>
@@ -87,12 +91,12 @@ describe('Dialog', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('renders snapshot in column direction and inverted', async () => {
+  it('renders snapshot in vertical orientation and inverted', async () => {
     const { container } = render(
       <EmptyState
         title="Title Heading"
         image={<Rocket3d />}
-        direction="column"
+        orientation="vertical"
         inverted
       >
         <Paragraph inverted>Lorem ipsum dolor sit amet.</Paragraph>

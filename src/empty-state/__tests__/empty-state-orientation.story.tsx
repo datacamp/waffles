@@ -19,7 +19,7 @@ function Story() {
       <EmptyState
         title="Direction: Row"
         image={<Rocket3d />}
-        direction="row"
+        orientation="horizontal"
         data-testid="empty-state"
       >
         <Paragraph>Lorem ipsum dolor sit amet.</Paragraph>
@@ -39,7 +39,7 @@ function Story() {
       <EmptyState
         title="Direction: Column"
         image={<Rocket3d />}
-        direction="column"
+        orientation="vertical"
         data-testid="empty-state"
       >
         <Paragraph>Lorem ipsum dolor sit amet.</Paragraph>

@@ -11,7 +11,6 @@ import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Group, Branch, Matrix } from '@datacamp/waffles/icon';
 import { EmptyState } from '@datacamp/waffles/empty-state';
 import { Button } from '@datacamp/waffles/button';
-import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Rocket3d } from '@datacamp/waffles/asset';
 
 function Playground() {

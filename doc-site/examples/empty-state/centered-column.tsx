@@ -9,7 +9,7 @@ function Example() {
     <EmptyState
       title="Title Heading"
       image={<Rocket3d />}
-      direction="column"
+      orientation="vertical"
       isCentered
     >
       <Paragraph>Lorem ipsum dolor sit amet.</Paragraph>

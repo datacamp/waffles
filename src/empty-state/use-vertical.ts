@@ -2,18 +2,16 @@ import { useState, useEffect } from 'react';
 
 import { tokens } from '../tokens';
 
-// Return true if the component has a small width (below `tokens.breakpoints.small), so that it can revert to column flex direction
-function useSmallColumn(targetRef: React.RefObject<HTMLElement>) {
-  const [isSmallColumn, setisSmallColumn] = useState(false);
+// Return true if the component has a small width (below `tokens.breakpoints.small), so that it can revert to displaying vertically
+function useVertical(targetRef: React.RefObject<HTMLElement>) {
+  const [isVertical, setisVertical] = useState(false);
 
   useEffect(() => {
     const element = targetRef.current;
 
     function elementResizeHandler() {
       if (element) {
-        setisSmallColumn(
-          element.clientWidth < parseInt(tokens.breakpoints.small),
-        );
+        setisVertical(element.clientWidth < parseInt(tokens.breakpoints.small));
       }
     }
 
@@ -26,7 +24,7 @@ function useSmallColumn(targetRef: React.RefObject<HTMLElement>) {
     };
   }, [targetRef]);
 
-  return isSmallColumn;
+  return isVertical;
 }
 
-export default useSmallColumn;
+export default useVertical;
