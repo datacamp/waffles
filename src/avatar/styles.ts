@@ -103,7 +103,13 @@ type AvatarStyleOptions = {
 
 export function avatarStyle({ size, variant }: AvatarStyleOptions) {
   return css`
-    background-color: ${variantMap[variant].backgroundColor};
+    // Fix for background-color and border-radius combo artifacts
+    background: radial-gradient(
+      farthest-side,
+      ${variantMap[variant].backgroundColor} calc(100% - 1px),
+      transparent
+    );
+
     color: ${variantMap[variant].color};
     border-radius: ${sizeMap[size].sizing};
     font-size: ${sizeMap[size].fontSize};
