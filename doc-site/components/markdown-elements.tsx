@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import useOnScreen from 'hooks/use-intersection';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
@@ -44,20 +45,28 @@ function H2({ children }: ContentProps) {
   const headingId = slugify(textContent);
   const addEntry = useAddTableOfContentsEntry();
 
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const isVisible = useOnScreen(headingRef);
+
   useEffect(() => {
-    addEntry(({ entries }) => {
-      // If entry aleary exists don't add it
-      return entries.includes(textContent)
-        ? { entries }
-        : { entries: entries.concat(textContent) };
+    addEntry(({ activeEntry, entries }) => {
+      // If entry already exists, don't add it
+      return {
+        activeEntry: isVisible ? headingId : activeEntry,
+        entries: entries.includes(textContent)
+          ? entries
+          : entries.concat(textContent),
+      };
     });
-  }, [addEntry, textContent]);
+  }, [addEntry, textContent, isVisible, headingId]);
 
   return (
-    <Heading size="xlarge" id={headingId} css={secondaryHeadingStyle}>
-      {children}
-      <Bookmark targetId={headingId} />
-    </Heading>
+    <div ref={headingRef}>
+      <Heading size="xlarge" id={headingId} css={secondaryHeadingStyle}>
+        {children}
+        <Bookmark targetId={headingId} />
+      </Heading>
+    </div>
   );
 }
 
