@@ -2,37 +2,59 @@ import Link from 'next/link';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Link as LinkBase } from '@datacamp/waffles/link';
+import { hexToRgba } from '@datacamp/waffles/helpers';
+import { Heading } from '@datacamp/waffles/heading';
 
 import slugify from '../helpers/slugify';
 import { useTableOfContentsEntries } from '../context/table-of-contents-context';
 
-const linkStyle = css`
-  color: ${tokens.colors.navySubtleTextOnLight};
-  font-size: ${tokens.fontSizes.medium};
-  font-weight: ${tokens.fontWeights.regular};
-  line-height: ${tokens.lineHeights.default};
-`;
-
-const listStyle = css`
+const contentsTableStyle = css`
+  position: sticky;
   margin: 0;
   padding-left: ${tokens.spacing.xlarge};
-  position: fixed;
   max-width: 240px;
 `;
 
-const listItemStyle = css`
-  display: flex;
-  list-style: none;
-  margin-bottom: ${tokens.spacing.small};
+const headingStyle = css`
+  font-size: ${tokens.fontSizes.xsmall};
+  letter-spacing: ${tokens.letterSpacing.relaxed};
+  line-height: ${tokens.lineHeights.default};
 `;
+
+const linkStyle = css`
+  color: ${tokens.colors.navySubtleTextOnLight};
+  font-size: ${tokens.fontSizes.small};
+  font-weight: ${tokens.fontWeights.regular};
+  line-height: ${tokens.lineHeights.relaxed};
+`;
+
+const listStyle = css`
+  padding: 0;
+`;
+
+type ListItemStyleOptions = {
+  isActive: boolean;
+};
+
+function listItemStyle({ isActive }: ListItemStyleOptions) {
+  return css`
+    display: flex;
+    list-style: none;
+    padding: ${tokens.spacing.xsmall} ${tokens.spacing.medium};
+    border-left: ${isActive
+      ? `2px solid ${tokens.colors.navy}`
+      : `2px solid ${hexToRgba(tokens.colors.navy, tokens.opacity.low)}`};
+  `;
+}
 
 type EntryProps = {
   name: string;
+  isActive: boolean;
 };
 
-function Entry({ name }: EntryProps) {
+function Entry({ name, isActive }: EntryProps) {
   return (
-    <li css={listItemStyle}>
+    <li css={listItemStyle({ isActive })}>
       <Link href={`#${slugify(name)}`} passHref>
         <LinkBase css={linkStyle}>{name}</LinkBase>
       </Link>
@@ -41,14 +63,21 @@ function Entry({ name }: EntryProps) {
 }
 
 function TableOfContents() {
-  const entries = useTableOfContentsEntries();
+  const content = useTableOfContentsEntries();
 
-  if (entries.length > 0) {
+  if (content.entries.length > 0) {
     return (
-      <aside>
+      <aside css={contentsTableStyle}>
+        <Heading as="h2" css={headingStyle}>
+          CONTENT
+        </Heading>
         <ul css={listStyle}>
-          {entries.map((entry, index) => (
-            <Entry key={`toc-entry-${index}`} name={entry} />
+          {content.entries.map((entry, index) => (
+            <Entry
+              key={`toc-entry-${index}`}
+              name={entry}
+              isActive={content.activeEntry === entry}
+            />
           ))}
         </ul>
       </aside>

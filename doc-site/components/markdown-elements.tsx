@@ -45,11 +45,11 @@ function H2({ children }: ContentProps) {
   const addEntry = useAddTableOfContentsEntry();
 
   useEffect(() => {
-    addEntry((entries) => {
+    addEntry(({ entries }) => {
       // If entry aleary exists don't add it
       return entries.includes(textContent)
-        ? entries
-        : entries.concat(textContent);
+        ? { entries }
+        : { entries: entries.concat(textContent) };
     });
   }, [addEntry, textContent]);
 
