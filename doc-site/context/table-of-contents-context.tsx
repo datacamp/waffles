@@ -1,17 +1,24 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React, { createContext, useContext, useState } from 'react';
 
-const EntriesContext = createContext<string[]>(undefined!);
+const EntriesContext = createContext<TableOfContentsEntries>(undefined!);
 const AddEntryContext = createContext<
-  React.Dispatch<React.SetStateAction<string[]>>
+  React.Dispatch<React.SetStateAction<TableOfContentsEntries>>
 >(undefined!);
 
 type TableOfContentsProviderProps = {
   children: React.ReactNode;
 };
 
+type TableOfContentsEntries = {
+  activeEntry?: string;
+  entries: string[];
+};
+
 function TableOfContentsProvider({ children }: TableOfContentsProviderProps) {
-  const [entries, setEntries] = useState<string[]>([]);
+  const [entries, setEntries] = useState<TableOfContentsEntries>({
+    entries: [],
+  });
 
   return (
     <EntriesContext.Provider value={entries}>
