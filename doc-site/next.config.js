@@ -2,11 +2,12 @@
 
 const { resolve } = require('path');
 const remarkGfm = require('remark-gfm');
+const remarkSectionize = require('remark-sectionize');
 
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, remarkSectionize],
   },
 });
 
