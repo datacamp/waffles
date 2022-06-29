@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import useOnScreen from 'hooks/use-intersection';
@@ -39,34 +39,19 @@ const secondaryHeadingStyle = css`
   margin-top: ${tokens.spacing.large};
 `;
 
-// Allow secondary heading to be bookmarked and add them to table of contents
+// Allow secondary heading to be bookmarked and add them to table of contents, along with setting active section
 function H2({ children }: ContentProps) {
   const textContent = textFromChildren(children);
-  const headingId = slugify(textContent);
-  const addEntry = useAddTableOfContentsEntry();
-
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  const isVisible = useOnScreen(headingRef);
-
-  useEffect(() => {
-    addEntry(({ activeEntry, entries }) => {
-      // If entry already exists, don't add it
-      return {
-        activeEntry: isVisible ? headingId : activeEntry,
-        entries: entries.includes(textContent)
-          ? entries
-          : entries.concat(textContent),
-      };
-    });
-  }, [addEntry, textContent, isVisible, headingId]);
 
   return (
-    <div ref={headingRef}>
-      <Heading size="xlarge" id={headingId} css={secondaryHeadingStyle}>
-        {children}
-        <Bookmark targetId={headingId} />
-      </Heading>
-    </div>
+    <Heading
+      size="xlarge"
+      id={slugify(textContent)}
+      css={secondaryHeadingStyle}
+    >
+      {children}
+      <Bookmark targetId={slugify(textContent)} />
+    </Heading>
   );
 }
 
@@ -146,6 +131,43 @@ function Table({ children }: ContentProps) {
   return <TableBase css={tableStyle}>{children}</TableBase>;
 }
 
+function Section({ children }: ContentProps) {
+  // Iterate over children to handle , find H2 element, if it exists
+  const mainSectionHeading = React.Children.map(children, (child) => {
+    if (child.type.name === 'H2') {
+      return child.props.children;
+    }
+  });
+
+  const addEntry = useAddTableOfContentsEntry();
+
+  const sectionRef = useRef<HTMLElement>(null);
+  const isVisible = useOnScreen(sectionRef);
+
+  useEffect(() => {
+    if (mainSectionHeading && mainSectionHeading[0]) {
+      const headingId = slugify(mainSectionHeading[0]);
+
+      addEntry(({ activeEntry, entries }) => {
+        const activeHeading = isVisible ? headingId : activeEntry;
+        // If entry already exists, don't add it
+        return {
+          activeEntry: activeHeading,
+          entries: entries.includes(mainSectionHeading[0])
+            ? entries
+            : entries.concat(mainSectionHeading[0]),
+        };
+      });
+    }
+  }, [addEntry, mainSectionHeading, isVisible]);
+
+  if (!mainSectionHeading) {
+    return <section>{children}</section>;
+  }
+
+  return <section ref={sectionRef}>{children}</section>;
+}
+
 const markdownElements = {
   h1: H1,
   h2: H2,
@@ -160,6 +182,7 @@ const markdownElements = {
   table: Table,
   th: TableBase.HeadCell,
   td: TableBase.Cell,
+  section: Section,
 };
 
 export default markdownElements;
