@@ -13,6 +13,7 @@ import { TableOfContentsProvider } from '../context/table-of-contents-context';
 
 import TableOfContents from './table-of-contents';
 import { ARTICLE_CONTENT_WIDTH } from './constants';
+import BackToTop from './back-to-top';
 
 const GITHUB_EDIT_URL =
   'https://github.com/datacamp/waffles/edit/master/doc-site/pages';
@@ -36,12 +37,15 @@ const footerStyle = css`
   margin-top: ${tokens.spacing.large};
 `;
 
+const asideStyle = css`
+  padding-left: ${tokens.spacing.xlarge};
+`;
+
 type ContentLayoutProps = {
   children: React.ReactNode;
 };
 
 // Set of additional wrappers for markdown documentation pages
-
 function ContentLayout({ children }: ContentLayoutProps) {
   const { pathname } = useRouter();
   const { isAboveLarge } = useMediaQuery();
@@ -64,7 +68,12 @@ function ContentLayout({ children }: ContentLayoutProps) {
               </Button>
             </footer>
           </article>
-          {isAboveLarge && <TableOfContents />}
+          {isAboveLarge && (
+            <aside css={asideStyle}>
+              <TableOfContents />
+              <BackToTop />
+            </aside>
+          )}
         </TableOfContentsProvider>
       </ContentContainer>
     </ErrorBoundary>
