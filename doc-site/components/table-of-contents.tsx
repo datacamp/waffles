@@ -11,7 +11,6 @@ import { useTableOfContentsEntries } from '../context/table-of-contents-context'
 const contentsTableStyle = css`
   position: fixed;
   margin: 0;
-  padding-left: ${tokens.spacing.xlarge};
   max-width: 240px;
 `;
 
@@ -67,22 +66,20 @@ function TableOfContents() {
 
   if (content.entries.length > 0) {
     return (
-      <aside>
-        <div css={contentsTableStyle}>
-          <Heading as="h2" css={headingStyle}>
-            CONTENT
-          </Heading>
-          <ul css={listStyle}>
-            {content.entries.map((entry, index) => (
-              <Entry
-                key={`toc-entry-${index}`}
-                name={entry}
-                isActive={content.activeEntry === slugify(entry)}
-              />
-            ))}
-          </ul>
-        </div>
-      </aside>
+      <div css={contentsTableStyle}>
+        <Heading as="h2" css={headingStyle}>
+          CONTENT
+        </Heading>
+        <ul css={listStyle}>
+          {content.entries.map((entry, index) => (
+            <Entry
+              key={`toc-entry-${index}`}
+              name={entry}
+              isActive={content.activeEntry === slugify(entry)}
+            />
+          ))}
+        </ul>
+      </div>
     );
   }
 
