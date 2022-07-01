@@ -75,7 +75,7 @@ function TableOfContents() {
             <Entry
               key={`toc-entry-${index}`}
               name={entry}
-              isActive={content.activeEntry === slugify(entry)}
+              isActive={content.activeSection === slugify(entry)}
             />
           ))}
         </ul>

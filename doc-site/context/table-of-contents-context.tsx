@@ -11,13 +11,13 @@ type TableOfContentsProviderProps = {
 };
 
 type TableOfContentsEntries = {
-  activeEntry: string;
+  activeSection: string;
   entries: string[];
 };
 
 function TableOfContentsProvider({ children }: TableOfContentsProviderProps) {
   const [entries, setEntries] = useState<TableOfContentsEntries>({
-    activeEntry: '',
+    activeSection: '',
     entries: [],
   });
 

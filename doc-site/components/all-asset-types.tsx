@@ -14,16 +14,20 @@ const groupMaxColumnCount = {
 
 function AllAssetTypes() {
   const groupedAssets = groupAssets(allAssets);
-  return Object.entries(groupedAssets).map(([groupName, assetGroup]) => (
-    <AssetGrid
-      key={groupName}
-      assetType={groupName}
-      assets={assetGroup}
-      maxColumns={
-        groupMaxColumnCount[groupName as keyof typeof groupMaxColumnCount]
-      }
-    />
-  ));
+  return (
+    <>
+      {Object.entries(groupedAssets).map(([groupName, assetGroup]) => (
+        <AssetGrid
+          key={groupName}
+          assetType={groupName}
+          assets={assetGroup}
+          maxColumns={
+            groupMaxColumnCount[groupName as keyof typeof groupMaxColumnCount]
+          }
+        />
+      ))}
+    </>
+  );
 }
 
 export default AllAssetTypes;

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import useOnScreen from 'hooks/use-intersection';
 import { AssetModule } from 'helpers/group-assets';
+import { useAddTableOfContentsEntry } from 'context/table-of-contents-context';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
@@ -7,6 +9,7 @@ import { Download } from '@datacamp/waffles/icon';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
 
+import slugify from '../helpers/slugify';
 import markdownElements from '../components/markdown-elements';
 
 import PreviewControls from './preview-controls';
@@ -82,25 +85,42 @@ type AssetGridProps = {
 function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
   const hasDarkBackground = assetType === 'ALPA Loop';
 
-  return (
-    <>
-      <Heading>{`${assetType} Assets`}</Heading>
-      <section>
-        <div css={assetPreviewStyle(maxColumns, hasDarkBackground)}>
-          {Object.entries(assets).map((assetData) => {
-            const [name, Asset] = assetData;
+  const sectionHeading = `${assetType} Assets`;
+  const addEntry = useAddTableOfContentsEntry();
+  const sectionRef = useRef<HTMLElement>(null);
+  const isVisible = useOnScreen(sectionRef);
 
-            return (
-              <AssetPreview
-                key={name}
-                name={name}
-                hasDarkBackground={hasDarkBackground}
-                asset={<Asset height={assetType === 'Logo' ? 30 : undefined} />}
-              />
-            );
-          })}
-        </div>
-      </section>
+  useEffect(() => {
+    const headingId = slugify(sectionHeading);
+
+    addEntry(({ activeSection, entries }) => {
+      // If entry already exists, don't add it
+      return {
+        activeSection: isVisible ? headingId : activeSection,
+        entries: entries.includes(sectionHeading)
+          ? entries
+          : entries.concat(sectionHeading),
+      };
+    });
+  }, [addEntry, sectionHeading, isVisible]);
+
+  return (
+    <section ref={sectionRef}>
+      <Heading>{sectionHeading}</Heading>
+      <div css={assetPreviewStyle(maxColumns, hasDarkBackground)}>
+        {Object.entries(assets).map((assetData) => {
+          const [name, Asset] = assetData;
+
+          return (
+            <AssetPreview
+              key={name}
+              name={name}
+              hasDarkBackground={hasDarkBackground}
+              asset={<Asset height={assetType === 'Logo' ? 30 : undefined} />}
+            />
+          );
+        })}
+      </div>
       <PreviewControls>
         <Button
           as="a"
@@ -112,10 +132,10 @@ function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
           download
           iconLeft={<Download />}
         >
-          Download {assetType} Assets
+          Download {sectionHeading}
         </Button>
       </PreviewControls>
-    </>
+    </section>
   );
 }
 

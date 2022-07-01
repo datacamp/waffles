@@ -131,16 +131,24 @@ function Table({ children }: ContentProps) {
   return <TableBase css={tableStyle}>{children}</TableBase>;
 }
 
+type SectionWithHeadingChild = {
+  props: {
+    children: string;
+  };
+  type: {
+    name: string;
+  };
+};
+
 function Section({ children }: ContentProps) {
   // Iterate over children to handle , find H2 element, if it exists
   const mainSectionHeading = React.Children.map(children, (child) => {
-    if (child.type.name === 'H2') {
-      return child.props.children;
-    }
+    return child && (child as SectionWithHeadingChild).type.name === 'H2'
+      ? (child as SectionWithHeadingChild).props.children
+      : undefined;
   });
 
   const addEntry = useAddTableOfContentsEntry();
-
   const sectionRef = useRef<HTMLElement>(null);
   const isVisible = useOnScreen(sectionRef);
 
@@ -148,11 +156,10 @@ function Section({ children }: ContentProps) {
     if (mainSectionHeading && mainSectionHeading[0]) {
       const headingId = slugify(mainSectionHeading[0]);
 
-      addEntry(({ activeEntry, entries }) => {
-        const activeHeading = isVisible ? headingId : activeEntry;
+      addEntry(({ activeSection, entries }) => {
         // If entry already exists, don't add it
         return {
-          activeEntry: activeHeading,
+          activeSection: isVisible ? headingId : activeSection,
           entries: entries.includes(mainSectionHeading[0])
             ? entries
             : entries.concat(mainSectionHeading[0]),
