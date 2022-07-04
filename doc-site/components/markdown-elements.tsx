@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import useOnScreen from 'hooks/use-intersection';
+import useOnScreen from 'hooks/use-on-screen';
+import useContentsTable from 'hooks/use-contents-table';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
@@ -12,7 +13,6 @@ import { Code as CodeBase } from '@datacamp/waffles/code';
 
 import textFromChildren from '../helpers/text-from-children';
 import slugify from '../helpers/slugify';
-import { useAddTableOfContentsEntry } from '../context/table-of-contents-context';
 
 import TableBase from './table';
 import List from './list';
@@ -141,32 +141,17 @@ type SectionWithHeadingChild = {
 };
 
 function Section({ children }: ContentProps) {
-  // Iterate over children to handle , find H2 element, if it exists
-  const mainSectionHeading = React.Children.map(children, (child) => {
-    return child && (child as SectionWithHeadingChild).type.name === 'H2'
-      ? (child as SectionWithHeadingChild).props.children
-      : undefined;
-  });
-
-  const addEntry = useAddTableOfContentsEntry();
   const sectionRef = useRef<HTMLElement>(null);
   const isVisible = useOnScreen(sectionRef);
 
-  useEffect(() => {
-    if (mainSectionHeading && mainSectionHeading[0]) {
-      const headingId = slugify(mainSectionHeading[0]);
+  // Iterate over children to handle , find H2 element, if it exists
+  const mainSectionHeading = React.Children.toArray(children).map((child) => {
+    return child && (child as SectionWithHeadingChild).type.name === 'H2'
+      ? (child as SectionWithHeadingChild).props.children
+      : '';
+  });
 
-      addEntry(({ activeSection, entries }) => {
-        // If entry already exists, don't add it
-        return {
-          activeSection: isVisible ? headingId : activeSection,
-          entries: entries.includes(mainSectionHeading[0])
-            ? entries
-            : entries.concat(mainSectionHeading[0]),
-        };
-      });
-    }
-  }, [addEntry, mainSectionHeading, isVisible]);
+  useContentsTable(isVisible, mainSectionHeading[0]);
 
   if (!mainSectionHeading) {
     return <section>{children}</section>;

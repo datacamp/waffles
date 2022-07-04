@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import useOnScreen from 'hooks/use-intersection';
+import React, { useRef } from 'react';
+import useOnScreen from 'hooks/use-on-screen';
+import useContentsTable from 'hooks/use-contents-table';
 import { AssetModule } from 'helpers/group-assets';
-import { useAddTableOfContentsEntry } from 'context/table-of-contents-context';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
@@ -9,7 +9,6 @@ import { Download } from '@datacamp/waffles/icon';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
 
-import slugify from '../helpers/slugify';
 import markdownElements from '../components/markdown-elements';
 
 import PreviewControls from './preview-controls';
@@ -84,25 +83,11 @@ type AssetGridProps = {
 };
 function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
   const hasDarkBackground = assetType === 'ALPA Loop';
-
   const sectionHeading = `${assetType} Assets`;
-  const addEntry = useAddTableOfContentsEntry();
   const sectionRef = useRef<HTMLElement>(null);
   const isVisible = useOnScreen(sectionRef);
 
-  useEffect(() => {
-    const headingId = slugify(sectionHeading);
-
-    addEntry(({ activeSection, entries }) => {
-      // If entry already exists, don't add it
-      return {
-        activeSection: isVisible ? headingId : activeSection,
-        entries: entries.includes(sectionHeading)
-          ? entries
-          : entries.concat(sectionHeading),
-      };
-    });
-  }, [addEntry, sectionHeading, isVisible]);
+  useContentsTable(isVisible, sectionHeading);
 
   return (
     <section ref={sectionRef}>
