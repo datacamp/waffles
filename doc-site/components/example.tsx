@@ -19,7 +19,7 @@ const sectionStyle = css`
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};
   padding-bottom: ${tokens.spacing.xlarge};
-  margin-top: ${tokens.spacing.small};
+  margin-top: ${tokens.spacing.medium};
   border-width: ${tokens.borderWidth.thin};
   border-style: solid;
   border-top-right-radius: ${tokens.borderRadius.medium};

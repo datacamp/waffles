@@ -7,6 +7,7 @@ const wrapperStyle = css`
   align-items: center;
   justify-content: flex-end;
   padding: ${tokens.spacing.small};
+  margin-bottom: ${tokens.spacing.xlarge};
   background-color: ${tokens.colors.white};
   border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
   border-top: 0;
