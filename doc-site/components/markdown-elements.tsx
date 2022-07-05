@@ -33,7 +33,7 @@ function H1({ children }: ContentProps) {
 }
 
 const secondaryHeadingStyle = css`
-  margin-top: ${tokens.spacing.large};
+  margin: ${tokens.spacing.large} 0 ${tokens.spacing.medium};
 `;
 
 // Allow secondary heading to be bookmarked and add them to table of contents, along with setting active section
