@@ -22,9 +22,12 @@ const containerStyle = css`
   display: block;
   padding-top: 0;
 
+  ${mediaQuery.aboveMedium} {
+    padding-top: 0;
+  }
+
   ${mediaQuery.aboveLarge} {
     display: flex;
-    padding-top: 0;
   }
 `;
 
