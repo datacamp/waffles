@@ -1,6 +1,7 @@
 import * as HooksExports from '@datacamp/waffles/hooks';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Imports from '../../components/imports';
 
@@ -8,11 +9,7 @@ import UseIdBasicUsage from '../../examples/hooks/use-id-basic-usage';
 import UseMediaQueryBasicUsage from '../../examples/hooks/use-media-query-basic-usage';
 import UseAnimateTransitionBasicUsage from '../../examples/hooks/use-animate-transition-basic-usage';
 
-export default Layout;
-
-# Hooks
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Hooks' underConstruction />}>
 
 ## useId
 
@@ -59,3 +56,5 @@ Merge two React refs into single one in a stable way.
 You can import following components or utilities from this module:
 
 <Imports module={HooksExports} path="@datacamp/waffles/hooks" />
+
+</Layout>

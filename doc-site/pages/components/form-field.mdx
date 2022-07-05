@@ -1,6 +1,7 @@
 import * as FormFieldExports from '@datacamp/waffles/form-field';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -13,11 +14,9 @@ import RequiredIndicator from '../../examples/form-field/required-indicator';
 import Sizes from '../../examples/form-field/sizes';
 import Inverted from '../../examples/form-field/inverted';
 
-export default Layout;
+<Layout header={<PageHeader title='Form Field' underConstruction />}>
 
-# Form Field
-
-🚧 This page is **under construction**.
+## Usage Guidance
 
 Use this utility component in conjunction with [Input](/components/input), [Text Area](/components/text-area) or [Select](/components/select) to enhance them with: an accessible **label**, an optional **desciription**, and an **error message**. It is also possible to configure which **required indicator** is shown next to the label. All other attributes should be passed to the input directly.
 
@@ -60,3 +59,5 @@ Use this utility component in conjunction with [Input](/components/input), [Text
 You can import following components or utilities from this module:
 
 <Imports module={FormFieldExports} path="@datacamp/waffles/form-field" />
+
+</Layout>

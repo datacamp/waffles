@@ -1,6 +1,7 @@
 import * as InputExports from '@datacamp/waffles/input';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -14,11 +15,9 @@ import States from '../../examples/input/states';
 import WithEnhancers from '../../examples/input/with-enhancers';
 import Inverted from '../../examples/input/inverted';
 
-export default Layout;
+<Layout header={<PageHeader title='Input' underConstruction />}>
 
-# Input
-
-🚧 This page is **under construction**.
+## Usage Guidance
 
 Use [Form Field](/components/form-field) utility component to enhance this component with: an accessible **label**, an optional **description**, an **error message** or to show **required indicator**.
 
@@ -79,3 +78,5 @@ In addition to `children` prop listed below, `Input.Enhancer` accepts all props 
 You can import following components or utilities from this module:
 
 <Imports module={InputExports} path="@datacamp/waffles/input" />
+
+</Layout>

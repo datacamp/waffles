@@ -1,6 +1,7 @@
 import * as DialogExports from '@datacamp/waffles/dialog';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -9,11 +10,7 @@ import Imports from '../../components/imports';
 import playgroundConfig from '../../examples/dialog/playground-config';
 import BasicUsage from '../../examples/dialog/basic-usage';
 
-export default Layout;
-
-# Dialog
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Dialog' underConstruction />}>
 
 ## Accessibility
 
@@ -85,3 +82,5 @@ In addition to all custom props listed below, `Dialog.Button` accepts all props 
 You can import following components or utilities from this module:
 
 <Imports module={DialogExports} path="@datacamp/waffles/dialog" />
+
+</Layout>

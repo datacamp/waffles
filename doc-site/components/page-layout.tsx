@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 
-import Header from './page-header';
+import TopNavigation from './top-navigation';
 import Navigation from './navigation';
 import { HEADER_HEIGHT } from './constants';
 
@@ -37,7 +37,7 @@ function PageLayout({ children }: PageLayoutProps) {
 
   return (
     <>
-      <Header onNavOpen={() => setNavOpen(true)} />
+      <TopNavigation onNavOpen={() => setNavOpen(true)} />
       <div css={layoutStyle}>
         <Navigation isOpen={isNavOpen} onClose={() => setNavOpen(false)} />
         <main css={mainStyle}>{children}</main>

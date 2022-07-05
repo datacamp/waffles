@@ -1,6 +1,7 @@
 import * as TokensExports from '@datacamp/waffles/tokens';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import DesignTokensTable from '../../components/design-tokens-table';
 import Example from '../../components/example';
 import Imports from '../../components/imports';
@@ -8,11 +9,7 @@ import Imports from '../../components/imports';
 import CustomButton from '../../examples/design-tokens/custom-button';
 import CustomCard from '../../examples/design-tokens/custom-card';
 
-export default Layout;
-
-# Design Tokens
-
-Design tokens are the smallest design system atoms. They are named entities that store visual design attributes, and are crucial to keeping designs consistent. They are used in place of hardcoded values, such as HEX color codes for color or pixel values for spacing.
+<Layout header={<PageHeader title='Design Tokens' description="Design tokens are the smallest design system atoms. They are named entities that store visual design attributes, and are crucial to keeping designs consistent. They are used in place of hardcoded values, such as HEX color codes for color or pixel values for spacing." />}>
 
 ## All Available Tokens
 
@@ -141,3 +138,5 @@ Breakpoints for various device sizes. For **media queries** use [mediaQuery](/co
 ## Imports
 
 <Imports module={TokensExports} path="@datacamp/waffles/tokens" />
+
+</Layout>

@@ -1,6 +1,7 @@
 import * as DisplayExports from '@datacamp/waffles/display';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -10,11 +11,7 @@ import playgroundConfig from '../../examples/display/playground-config';
 import BasicUsage from '../../examples/display/basic-usage';
 import Inverted from '../../examples/display/inverted';
 
-export default Layout;
-
-# Display
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Display' underConstruction />}>
 
 ## Examples
 
@@ -45,3 +42,5 @@ In addition to all custom props listed below, `Display` accepts all props regula
 You can import following components or utilities from this module:
 
 <Imports module={DisplayExports} path="@datacamp/waffles/display" />
+
+</Layout>

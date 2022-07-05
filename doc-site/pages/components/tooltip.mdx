@@ -1,6 +1,7 @@
 import * as TooltipExports from '@datacamp/waffles/tooltip';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -12,11 +13,7 @@ import WithComplexContent from '../../examples/tooltip/with-complex-content';
 import WithinInlineText from '../../examples/tooltip/within-inline-text';
 import Inverted from '../../examples/tooltip/inverted';
 
-export default Layout;
-
-# Tooltip
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Tooltip' underConstruction />}>
 
 ## Examples
 
@@ -59,3 +56,5 @@ In addition to all custom props listed below, `Tooltip` accepts all props regula
 You can import following components or utilities from this module:
 
 <Imports module={TooltipExports} path="@datacamp/waffles/tooltip" />
+
+</Layout>

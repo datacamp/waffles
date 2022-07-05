@@ -1,4 +1,5 @@
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import BestPractices from '../../components/best-practices';
 import AllIconsGrid from '../../components/all-icons-grid';
 import Example from '../../components/example';
@@ -9,11 +10,7 @@ import Sizes from '../../examples/icon/sizes';
 import InAButton from '../../examples/icon/in-a-button';
 import InALink from '../../examples/icon/in-a-link';
 
-export default Layout;
-
-# Icon
-
-An icon visually indicates available action or option. Icons help the user more easily understand common interaction patterns.
+<Layout header={<PageHeader title='Icon' description='An icon visually indicates available action or option. Icons help the user more easily understand common interaction patterns.' />}>
 
 ## Best Practices
 
@@ -103,3 +100,5 @@ In addition to `size` prop listed below, icons accept all props regular `SVGElem
 You can import any existing icon as a separate component. For example to import `AddCircle` icon use:
 
 <Imports module={['AddCircle']} path="@datacamp/waffles/icon" />
+
+</Layout>

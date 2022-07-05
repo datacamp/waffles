@@ -1,6 +1,7 @@
 import * as ChapeauExports from '@datacamp/waffles/chapeau';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -10,11 +11,7 @@ import playgroundConfig from '../../examples/chapeau/playground-config';
 import BasicUsage from '../../examples/chapeau/basic-usage';
 import Inverted from '../../examples/chapeau/inverted';
 
-export default Layout;
-
-# Chapeau
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Chapeau' underConstruction />}>
 
 ## Examples
 
@@ -45,3 +42,5 @@ In addition to all custom props listed below, `Chapeau` accepts all props regula
 You can import following components or utilities from this module:
 
 <Imports module={ChapeauExports} path="@datacamp/waffles/chapeau" />
+
+</Layout>

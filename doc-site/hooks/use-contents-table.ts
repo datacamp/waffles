@@ -7,6 +7,8 @@ export default function useContentsTable(isVisible: boolean, heading: string) {
   const addEntry = useAddTableOfContentsEntry();
   const headingId = slugify(heading);
 
+  // TODO: There's definitely some future improvement to be had here for recognising the priority of which section should be active if two appear at the same time - ixTec
+
   useEffect(() => {
     if (headingId) {
       addEntry(({ activeSection, previousActiveSection, entries }) => {

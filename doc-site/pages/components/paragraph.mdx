@@ -1,6 +1,7 @@
 import * as ParagraphExports from '@datacamp/waffles/paragraph';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -11,11 +12,9 @@ import Variants from '../../examples/paragraph/variants';
 import Sizes from '../../examples/paragraph/sizes';
 import Inverted from '../../examples/paragraph/inverted';
 
-export default Layout;
+<Layout header={<PageHeader title='Paragraph' underConstruction />}>
 
-# Paragraph
-
-🚧 This page is **under construction**.
+## Usage Guidance
 
 To highlight the content of importance, use regular `strong` or `em` elements.
 
@@ -52,3 +51,5 @@ In addition to all custom props listed below, `Paragraph` accepts all props regu
 You can import following components or utilities from this module:
 
 <Imports module={ParagraphExports} path="@datacamp/waffles/paragraph" />
+
+</Layout>

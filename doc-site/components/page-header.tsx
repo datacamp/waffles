@@ -1,93 +1,78 @@
-import Link from 'next/link';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
-import { Menu, GithubBrand } from '@datacamp/waffles/icon';
-import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { mediaQuery } from '@datacamp/waffles/helpers';
-import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
-import { Button } from '@datacamp/waffles/button';
-import { WafflesColoredLogo } from '@datacamp/waffles/asset';
-
-import metadata from '../../package.json';
-
-import { HEADER_HEIGHT } from './constants';
+import { Heading } from '@datacamp/waffles/heading';
+import { ContentContainer } from '@datacamp/waffles/content-container';
+import { Chapeau } from '@datacamp/waffles/chapeau';
 
 const headerStyle = css`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: ${HEADER_HEIGHT};
-  z-index: 7500; // Value between dropdown and modal
   background-color: ${tokens.colors.white};
-  box-shadow: ${tokens.boxShadow.thin}, ${tokens.boxShadow.medium};
-  padding-left: ${tokens.spacing.small};
-  padding-right: ${tokens.spacing.small};
+  border-bottom: 1px solid ${tokens.colors.greyMedium};
+  color: ${tokens.colors.navy};
+  font-family: ${tokens.fontFamilies.sansSerif};
+`;
 
-  ${mediaQuery.aboveMedium} {
-    justify-content: flex-start;
+const containerStyle = css`
+  display: block;
+
+  ${mediaQuery.aboveLarge} {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
-const logoLinkStyle = css`
-  width: 110px;
-  padding-left: ${tokens.spacing.xsmall};
-  padding-right: ${tokens.spacing.xsmall};
+const chapeauStyle = css`
+  color: ${tokens.colors.navySubtleTextOnLight};
 `;
 
-const responsiveLogoStyle = css`
-  width: 100%;
+const headingStyle = css`
+  font-size: 40px;
 `;
 
-const versionStyle = css`
-  margin-right: auto;
-  padding-left: ${tokens.spacing.small};
-  padding-top: 2px;
+const textStyle = css`
+  padding-top: ${tokens.spacing.small};
+  font-size: ${tokens.fontSizes.large};
+  line-height: ${tokens.lineHeights.relaxed};
+  max-width: 720px;
 `;
 
 type PageHeaderProps = {
-  onNavOpen: () => void;
+  title: string;
+  description?: string;
+  underConstruction?: boolean;
 };
 
-function PageHeader({ onNavOpen }: PageHeaderProps) {
-  const { isAboveMedium } = useMediaQuery();
+function PageHeader({
+  title,
+  description,
+  underConstruction,
+}: PageHeaderProps) {
+  // Obtain the category based on the current url path
+  const category = useRouter().pathname.split('/')[1];
 
   return (
-    <ErrorBoundary>
+    <>
+      <Head>
+        <title key="title">Waffles - {title}</title>
+      </Head>
       <header css={headerStyle}>
-        {isAboveMedium ? null : (
-          <Button
-            variant="plain"
-            icon={<Menu size="xlarge" />}
-            onClick={onNavOpen}
-            aria-label="Open Navigation"
-          />
-        )}
-        <Link href="/" passHref>
-          <Button
-            as="a"
-            variant="plain"
-            icon={<WafflesColoredLogo css={responsiveLogoStyle} />}
-            aria-label="Waffles, DataCamp Design System"
-            css={logoLinkStyle}
-          />
-        </Link>
-        {isAboveMedium && (
-          <Text css={versionStyle}>{`v${metadata.version}`}</Text>
-        )}
-        <Button
-          as="a"
-          variant="plain"
-          icon={<GithubBrand size="large" />}
-          aria-label="Visit Waffles GitHub Repository"
-          href="https://github.com/datacamp/waffles"
-        />
+        <ContentContainer css={containerStyle}>
+          <Chapeau css={chapeauStyle}>{category}</Chapeau>
+          <Heading css={headingStyle} size="xxlarge">
+            {title}
+          </Heading>
+          <Text css={textStyle}>{description}</Text>
+          {underConstruction && (
+            <Text css={textStyle}>
+              🚧 This page is <strong>under construction</strong>.
+            </Text>
+          )}
+        </ContentContainer>
       </header>
-    </ErrorBoundary>
+    </>
   );
 }
 

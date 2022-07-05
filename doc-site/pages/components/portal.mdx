@@ -1,17 +1,14 @@
 import * as PortalExports from '@datacamp/waffles/portal';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
 
 import BasicUsage from '../../examples/portal/basic-usage';
 
-export default Layout;
-
-# Portal
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Portal' underConstruction />}>
 
 ## Examples
 
@@ -32,3 +29,5 @@ export default Layout;
 You can import following components or utilities from this module:
 
 <Imports module={PortalExports} path="@datacamp/waffles/portal" />
+
+</Layout>

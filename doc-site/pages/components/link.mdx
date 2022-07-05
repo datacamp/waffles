@@ -1,6 +1,9 @@
 import * as LinkExports from '@datacamp/waffles/link';
+import Code from '@datacamp/waffles/code';
+import Text from '@datacamp/waffles/text';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -11,13 +14,11 @@ import BasicUsage from '../../examples/link/basic-usage';
 import Inverted from '../../examples/link/inverted';
 import WithIcons from '../../examples/link/with-icons';
 
-export default Layout;
+<Layout header={<PageHeader title='Link' description="Used for navigational actions that appear within or directly following a sentence" />}>
 
-# Link
+## Usage Guidance
 
-🚧 This page is **under construction**.
-
-Use this `Link` component for navigational actions that appear **within or directly following** a sentence. For standalone navigation actions use plain `Button` instead.
+For standalone navigation actions use plain `Button` instead.
 
 ## Examples
 
@@ -53,3 +54,5 @@ In addition to all custom props listed below, `Link` accepts all props regular `
 You can import following components or utilities from this module:
 
 <Imports module={LinkExports} path="@datacamp/waffles/link" />
+
+</Layout>

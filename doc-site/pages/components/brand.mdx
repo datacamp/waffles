@@ -1,4 +1,5 @@
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import BestPractices from '../../components/best-practices';
 import AllBrandGrid from '../../components/all-brand-grid';
 import Example from '../../components/example';
@@ -11,11 +12,7 @@ import InvertedMonochrome from '../../examples/brand/inverted-monochrome';
 import Inverted from '../../examples/brand/inverted';
 import Monochrome from '../../examples/brand/monochrome';
 
-export default Layout;
-
-# Brand
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Brand' underConstruction />}>
 
 ## Available DataCamp Logos
 
@@ -70,3 +67,5 @@ You can import the following components from this module:
   ]}
   path="@datacamp/waffles/brand"
 />
+
+</Layout>

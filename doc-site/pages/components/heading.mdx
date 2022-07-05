@@ -1,6 +1,7 @@
 import * as HeadingExports from '@datacamp/waffles/heading';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -10,11 +11,7 @@ import playgroundConfig from '../../examples/heading/playground-config';
 import Sizes from '../../examples/heading/sizes';
 import Inverted from '../../examples/heading/inverted';
 
-export default Layout;
-
-# Heading
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Heading' underConstruction />}>
 
 ## Examples
 
@@ -45,3 +42,5 @@ In addition to all custom props listed below, `Heading` accepts all props regula
 You can import following components or utilities from this module:
 
 <Imports module={HeadingExports} path="@datacamp/waffles/heading" />
+
+</Layout>

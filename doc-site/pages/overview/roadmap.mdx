@@ -1,14 +1,9 @@
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import ComponentStatusTable from '../../components/component-status-table';
 import ComponentStatus from '../../components/component-status';
 
-export default Layout;
-
-# Roadmap
-
-🚧 This page is **under construction**.
-
-_Last updated on 10 June 2022._
+<Layout header={<PageHeader title='Roadmap' description="Last updated on 10 June 2022." underConstruction />}>
 
 ## Next Up
 
@@ -202,3 +197,5 @@ Planned features are listed in priority order.
     figmaComponentUrl="https://www.figma.com/file/CCf4IlqeNxwVf3BtYO0WOP/%5BDC%5D-Components?node-id=1435%3A8912"
   />
 </ComponentStatusTable>
+
+</Layout>
