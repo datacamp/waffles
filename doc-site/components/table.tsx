@@ -18,10 +18,7 @@ const tableCellStyle = css`
   text-align: left;
   word-wrap: break-word;
   vertical-align: top;
-  padding-top: ${tokens.spacing.small};
-  padding-bottom: ${tokens.spacing.small};
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: ${tokens.spacing.medium};
   overflow: hidden;
 `;
 
