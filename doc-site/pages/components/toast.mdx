@@ -2,6 +2,7 @@ import * as ToastExports from '@datacamp/waffles/toast';
 import { Notification } from '@datacamp/waffles/notification';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -13,11 +14,9 @@ import Variants from '../../examples/toast/variants';
 import CustomDuration from '../../examples/toast/custom-duration';
 import Persistent from '../../examples/toast/persistent';
 
-export default Layout;
+<Layout header={<PageHeader title='Toast' underConstruction />}>
 
-# Toast
-
-🚧 This page is **under construction**.
+## Usage Guidance
 
 Toasts can be created easily with `toast` function exposed by `useToast` hook. It is also possible to alter default toasts behavior, such as duration after which they hide automatically, by configuring it via `ToastProvider`.
 
@@ -77,3 +76,5 @@ Options of the helper `toast` function exposed by the `useToast` hook, that trig
 You can import following components or utilities from this module:
 
 <Imports module={ToastExports} path="@datacamp/waffles/toast" />
+
+</Layout>

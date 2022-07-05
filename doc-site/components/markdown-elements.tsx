@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
 import useOnScreen from 'hooks/use-on-screen';
 import useContentsTable from 'hooks/use-contents-table';
 import { css } from '@emotion/react';
@@ -27,9 +26,6 @@ type ContentProps = {
 function H1({ children }: ContentProps) {
   return (
     <>
-      <Head>
-        <title key="title">Waffles - {children}</title>
-      </Head>
       <Heading size="xxlarge">{children}</Heading>
     </>
   );

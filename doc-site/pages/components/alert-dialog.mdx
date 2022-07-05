@@ -1,6 +1,7 @@
 import * as AlertDialogExports from '@datacamp/waffles/alert-dialog';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -9,11 +10,7 @@ import Imports from '../../components/imports';
 import playgroundConfig from '../../examples/alert-dialog/playground-config';
 import BasicUsage from '../../examples/alert-dialog/basic-usage';
 
-export default Layout;
-
-# Alert Dialog
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Alert Dialog' underConstruction />}>
 
 ## Accessibility
 
@@ -76,3 +73,5 @@ In addition to all custom props listed below, `AlertDialog.Button` accepts all p
 You can import following components or utilities from this module:
 
 <Imports module={AlertDialogExports} path="@datacamp/waffles/alert-dialog" />
+
+</Layout>

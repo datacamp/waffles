@@ -10,6 +10,7 @@ import { useTableOfContentsEntries } from '../context/table-of-contents-context'
 
 const contentsTableStyle = css`
   position: fixed;
+  padding-top: ${tokens.spacing.large};
   margin: 0;
   max-width: 240px;
 `;

@@ -1,6 +1,7 @@
 import * as SideNavigationExports from '@datacamp/waffles/side-navigation';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
@@ -8,11 +9,9 @@ import Imports from '../../components/imports';
 import BasicUsage from '../../examples/side-navigation/basic-usage';
 import AdvancedUsage from '../../examples/side-navigation/advanced-usage';
 
-export default Layout;
+<Layout header={<PageHeader title='Side Navigation' underConstruction />}>
 
-# Side Navigation
-
-🚧 This page is **under construction**.
+## Usage Guidance
 
 To keep the underlying side navigation structure _semantically correct_ and _accessible_, please follow these rules:
 
@@ -90,3 +89,5 @@ You can import following components or utilities from this module:
   module={SideNavigationExports}
   path="@datacamp/waffles/side-navigation"
 />
+
+</Layout>

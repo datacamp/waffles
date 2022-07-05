@@ -1,6 +1,7 @@
 import * as NotificationExports from '@datacamp/waffles/notification';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -13,11 +14,7 @@ import Closable from '../../examples/notification/closable';
 import WithAction from '../../examples/notification/with-action';
 import Inverted from '../../examples/notification/inverted';
 
-export default Layout;
-
-# Notification
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Notification' underConstruction />}>
 
 ## Examples
 
@@ -69,3 +66,5 @@ In addition to all custom props listed below, `Notification.ActionButton` accept
 You can import following components or utilities from this module:
 
 <Imports module={NotificationExports} path="@datacamp/waffles/notification" />
+
+</Layout>

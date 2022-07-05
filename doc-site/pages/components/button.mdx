@@ -1,6 +1,7 @@
 import * as ButtonExports from '@datacamp/waffles/button';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
@@ -17,11 +18,7 @@ import FullWidth from '../../examples/button/full-width';
 import AsALink from '../../examples/button/as-a-link';
 import Inverted from '../../examples/button/inverted';
 
-export default Layout;
-
-# Button
-
-A button triggers an event or action. It lets users know what will happen next. Use actionable copy, don’t be vague.
+<Layout header={<PageHeader title='Button' description='A button triggers an event or action. It lets users know what will happen next. Use actionable copy, don’t be vague.' />}>
 
 ## Best Practices
 
@@ -162,3 +159,5 @@ In addition to all custom props listed below, `Button` accepts all props regular
 You can import following components or utilities from this module:
 
 <Imports module={ButtonExports} path="@datacamp/waffles/button" />
+
+</Layout>

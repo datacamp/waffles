@@ -1,6 +1,7 @@
 import * as CodeExports from '@datacamp/waffles/code';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -10,11 +11,7 @@ import playgroundConfig from '../../examples/code/playground-config';
 import Sizes from '../../examples/code/sizes';
 import Inverted from '../../examples/code/inverted';
 
-export default Layout;
-
-# Code
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Code' underConstruction />}>
 
 ## Examples
 
@@ -45,3 +42,5 @@ In addition to all custom props listed below, `Code` accepts all props regular `
 You can import following components or utilities from this module:
 
 <Imports module={CodeExports} path="@datacamp/waffles/code" />
+
+</Layout>

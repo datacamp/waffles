@@ -1,6 +1,7 @@
 import * as CheckboxExports from '@datacamp/waffles/checkbox';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -11,11 +12,7 @@ import BasicUsage from '../../examples/checkbox/basic-usage';
 import States from '../../examples/checkbox/states';
 import Inverted from '../../examples/checkbox/inverted';
 
-export default Layout;
-
-# Checkbox
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Checkbox' underConstruction />}>
 
 ## Examples
 
@@ -50,3 +47,5 @@ In addition to all custom props listed below, `Checkbox` accepts all props regul
 You can import following components or utilities from this module:
 
 <Imports module={CheckboxExports} path="@datacamp/waffles/checkbox" />
+
+</Layout>

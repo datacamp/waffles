@@ -2,6 +2,7 @@ import * as MenuExports from '@datacamp/waffles/menu';
 import { Notification } from '@datacamp/waffles/notification';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -13,11 +14,9 @@ import AdvancedUsage from '../../examples/menu/advanced-usage';
 import Placement from '../../examples/menu/placement';
 import Inverted from '../../examples/menu/inverted';
 
-export default Layout;
+<Layout header={<PageHeader title='Menu' underConstruction />}>
 
-# Menu
-
-🚧 This page is **under construction**.
+## Usage Guidance
 
 To keep the underlying menu structure _semantically correct_ and _accessible_, please follow these rules:
 
@@ -103,3 +102,5 @@ A hook that exposes internal data for a given `Menu` component such as: `isOpen`
 You can import following components or utilities from this module:
 
 <Imports module={MenuExports} path="@datacamp/waffles/menu" />
+
+</Layout>

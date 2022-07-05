@@ -1,16 +1,15 @@
 import * as ContentContainerExports from '@datacamp/waffles/content-container';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
 
-export default Layout;
+<Layout header={<PageHeader title='Content Container' description="The content container positions the main content on the page depending on the viewport size." />}>
 
-# Content Container
+## Usage Guidance
 
-🚧 This page is **under construction**.
-
-The content container positions the main content on the page depending on the viewport size, based on `breakpoints` from [design tokens](/foundation/design-tokens):
+The positioning is based on `breakpoints` from [design tokens](/foundation/design-tokens):
 
 - content is always centered, even if there is side navigation
 - for all viewport sizes, maximum content width is `1200px`
@@ -37,3 +36,5 @@ You can import following components or utilities from this module:
   module={ContentContainerExports}
   path="@datacamp/waffles/content-container"
 />
+
+</Layout>

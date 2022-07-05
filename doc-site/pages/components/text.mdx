@@ -1,6 +1,7 @@
 import * as TextExports from '@datacamp/waffles/text';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -9,11 +10,9 @@ import Imports from '../../components/imports';
 import playgroundConfig from '../../examples/text/playground-config';
 import BasicUsage from '../../examples/text/basic-usage';
 
-export default Layout;
+<Layout header={<PageHeader title='Text' underConstruction />}>
 
-# Text
-
-🚧 This page is **under construction**.
+## Usage Guidance
 
 In general, when dealing with text, [Paragraph](/components/paragraph) component should be used. This `Text` component is meant to be used mainly as a building block for other components or for short single-line messages.
 
@@ -43,3 +42,5 @@ In addition to all custom props listed below, `Text` accepts all props regular `
 You can import following components or utilities from this module:
 
 <Imports module={TextExports} path="@datacamp/waffles/text" />
+
+</Layout>

@@ -1,6 +1,7 @@
 import * as TabsExports from '@datacamp/waffles/tabs';
 
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -14,11 +15,7 @@ import AsLinks from '../../examples/tabs/as-links';
 import AutoActivate from '../../examples/tabs/auto-activate';
 import Inverted from '../../examples/tabs/inverted';
 
-export default Layout;
-
-# Tabs
-
-🚧 This page is **under construction**.
+<Layout header={<PageHeader title='Tabs' underConstruction />}>
 
 ## Examples
 
@@ -74,3 +71,5 @@ In addition to all custom props listed below, `Tabs.Tab` accepts all props regul
 You can import following components or utilities from this module:
 
 <Imports module={TabsExports} path="@datacamp/waffles/tabs" />
+
+</Layout>

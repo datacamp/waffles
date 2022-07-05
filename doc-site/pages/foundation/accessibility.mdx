@@ -1,10 +1,7 @@
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 
-export default Layout;
-
-# Accessibility
-
-An accessible app gives everyone a great user experience, regardless of their capabilities or how they use their devices. Therefore it's important to provide support for assistive technologies, such as screen readers, which are essential to people with vision or motor impairments.
+<Layout header={<PageHeader title='Accessibility' description="An accessible app gives everyone a great user experience, regardless of their capabilities or how they use their devices. Therefore it's important to provide support for assistive technologies, such as screen readers, which are essential to people with vision or motor impairments." />}>
 
 ## Testing Accessibility
 
@@ -46,3 +43,5 @@ At this point probably a lot of accessibility issues got discovered and addresse
 For a more comprehensive list of VoiceOver keyboard shortcuts please check [detailed VoiceOver keyboard shortcuts guide](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts).
 
 It's best to use Chrome web browsers for accessibility testing because, unfortunately, other browsers often lack even basic accessibility features, or they are quite tricky to enable.
+
+</Layout>

@@ -20,9 +20,11 @@ const GITHUB_EDIT_URL =
 
 const containerStyle = css`
   display: block;
+  padding-top: 0;
 
   ${mediaQuery.aboveLarge} {
     display: flex;
+    padding-top: 0;
   }
 `;
 
@@ -42,16 +44,18 @@ const asideStyle = css`
 `;
 
 type ContentLayoutProps = {
+  header: React.ReactNode;
   children: React.ReactNode;
 };
 
 // Set of additional wrappers for markdown documentation pages
-function ContentLayout({ children }: ContentLayoutProps) {
+function ContentLayout({ header, children }: ContentLayoutProps) {
   const { pathname } = useRouter();
   const { isAboveLarge } = useMediaQuery();
 
   return (
     <ErrorBoundary>
+      {header}
       <ContentContainer css={containerStyle}>
         <TableOfContentsProvider>
           <article css={articleStyle}>

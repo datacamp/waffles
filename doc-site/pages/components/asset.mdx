@@ -1,4 +1,5 @@
 import Layout from '../../components/content-layout';
+import PageHeader from '../../components/page-header';
 import BestPractices from '../../components/best-practices';
 import AllAssetTypes from '../../components/all-asset-types';
 import Example from '../../components/example';
@@ -10,11 +11,9 @@ import CustomSizeColor from '../../examples/asset/custom-size-color';
 import { Notification } from '@datacamp/waffles/notification';
 import { Link } from '@datacamp/waffles/link';
 
-export default Layout;
+<Layout header={<PageHeader title='Asset' underConstruction />}>
 
-# Asset
-
-🚧 This page is **under construction**.
+## Usage Guidance
 
 Assets are **responsive** by default and will fit into their parent container if no `width` or `height` is provided (whilst still adhering to the `viewBox` aspect ratio).
 
@@ -53,3 +52,5 @@ Assets accept all props a regular `SVGElement` would, such as `width`, `height`,
 You can import any existing asset as a separate component. For example to import the `AvatarPlaceholderColored` asset use:
 
 <Imports module={['AvatarPlaceholderColored']} path="@datacamp/waffles/asset" />
+
+</Layout>
