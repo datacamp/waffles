@@ -6,6 +6,7 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
+import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { CodeBlock as CodeBlockBase } from '@datacamp/waffles/code-block';
 import { Code as CodeBase } from '@datacamp/waffles/code';
@@ -127,6 +128,12 @@ function Table({ children }: ContentProps) {
   return <TableBase css={tableStyle}>{children}</TableBase>;
 }
 
+const hrStyle = css`
+  border-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.low)};
+  border-width: 1px 0 0 0;
+  margin: ${tokens.spacing.xlarge} 0;
+`;
+
 type SectionWithHeadingChild = {
   props: {
     children: string;
@@ -149,11 +156,16 @@ function Section({ children }: ContentProps) {
 
   useContentsTable(isVisible, mainSectionHeading[0]);
 
-  if (!mainSectionHeading) {
+  if (!mainSectionHeading || !mainSectionHeading[0]) {
     return <section>{children}</section>;
   }
 
-  return <section ref={sectionRef}>{children}</section>;
+  return (
+    <>
+      <section ref={sectionRef}>{children}</section>
+      <hr css={hrStyle} />
+    </>
+  );
 }
 
 const markdownElements = {
