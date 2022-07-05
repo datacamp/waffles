@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
-import { Menu, GithubBrand } from '@datacamp/waffles/icon';
+import { Menu, GithubBrand, FigmaBrand } from '@datacamp/waffles/icon';
 import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
@@ -49,6 +49,11 @@ const versionStyle = css`
   padding-top: 2px;
 `;
 
+const buttonWrapperStyle = css`
+  display: flex;
+  gap: 8px;
+`;
+
 type TopNavigationProps = {
   onNavOpen: () => void;
 };
@@ -79,13 +84,22 @@ function TopNavigation({ onNavOpen }: TopNavigationProps) {
         {isAboveMedium && (
           <Text css={versionStyle}>{`v${metadata.version}`}</Text>
         )}
-        <Button
-          as="a"
-          variant="plain"
-          icon={<GithubBrand size="large" />}
-          aria-label="Visit Waffles GitHub Repository"
-          href="https://github.com/datacamp/waffles"
-        />
+        <div css={buttonWrapperStyle}>
+          <Button
+            as="a"
+            variant="plain"
+            icon={<FigmaBrand size="large" />}
+            aria-label="Visit Waffles Figma Components"
+            href="https://www.figma.com/file/CCf4IlqeNxwVf3BtYO0WOP/%5BDC%5D-Components?node-id=10%3A224"
+          />
+          <Button
+            as="a"
+            variant="plain"
+            icon={<GithubBrand size="large" />}
+            aria-label="Visit Waffles GitHub Repository"
+            href="https://github.com/datacamp/waffles"
+          />
+        </div>
       </header>
     </ErrorBoundary>
   );
