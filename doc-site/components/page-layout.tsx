@@ -20,7 +20,6 @@ const layoutStyle = css`
 
 const mainStyle = css`
   background-color: ${tokens.colors.beigeSubtle};
-  overflow: hidden;
   width: 100%;
 `;
 

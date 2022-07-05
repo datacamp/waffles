@@ -21,6 +21,7 @@ const GITHUB_EDIT_URL =
 const containerStyle = css`
   display: block;
   padding-top: 0;
+  overflow: unset;
 
   ${mediaQuery.aboveMedium} {
     padding-top: 0;
@@ -43,7 +44,10 @@ const footerStyle = css`
 `;
 
 const asideStyle = css`
+  position: sticky;
   padding-left: ${tokens.spacing.xlarge};
+  top: 54px;
+  align-self: flex-start;
 `;
 
 type ContentLayoutProps = {
