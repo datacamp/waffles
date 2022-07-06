@@ -7,19 +7,26 @@ import { Rocket3d } from '@datacamp/waffles/asset';
 function Example() {
   return (
     <EmptyState title="Title Heading" image={<Rocket3d />} inverted>
-      <Paragraph inverted>Lorem ipsum dolor sit amet.</Paragraph>
+      <Paragraph inverted>
+        Groups are most useful when you’re learning with your colleagues. Invite
+        members to your group here or share your unique invite link with them
+        directly.
+      </Paragraph>
+      <Paragraph>
+        Reach out to your admin to get relevant content assigned to you.
+      </Paragraph>
       <EmptyState.List>
         <EmptyState.ListItem icon={<Group />}>
-          Auctor eu augue
+          Meet new colleagues and learn from each other
         </EmptyState.ListItem>
         <EmptyState.ListItem icon={<Branch />}>
-          Tristique senectus et netus
+          Stay motivated by tracking each other’s progress
         </EmptyState.ListItem>
         <EmptyState.ListItem icon={<Matrix />}>
-          Mus mauris vitae ultricies
+          Ask for advice when you’re feeling stuck
         </EmptyState.ListItem>
       </EmptyState.List>
-      <Button>Button</Button>
+      <Button inverted>Create Group</Button>
     </EmptyState>
   );
 }

@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Paragraph } from '@datacamp/waffles/paragraph';
-import { Group, Branch, Matrix } from '@datacamp/waffles/icon';
 import { EmptyState } from '@datacamp/waffles/empty-state';
 import { Button } from '@datacamp/waffles/button';
 import { Rocket3d } from '@datacamp/waffles/asset';
@@ -20,38 +19,46 @@ function Example() {
         image={<Rocket3d />}
         orientation="horizontal"
       >
-        <Paragraph>Lorem ipsum dolor sit amet.</Paragraph>
+        <Paragraph>
+          Groups are most useful when you’re learning with your colleagues.
+          Invite members to your group here or share your unique invite link
+          with them directly.
+        </Paragraph>
         <EmptyState.List>
-          <EmptyState.ListItem icon={<Group />}>
-            Auctor eu augue
+          <EmptyState.ListItem>
+            Stay motivated by tracking each other’s progress
           </EmptyState.ListItem>
-          <EmptyState.ListItem icon={<Branch />}>
-            Tristique senectus et netus
+          <EmptyState.ListItem>
+            Ask for advice when you’re feeling stuck
           </EmptyState.ListItem>
-          <EmptyState.ListItem icon={<Matrix />}>
-            Mus mauris vitae ultricies
+          <EmptyState.ListItem>
+            Meet new colleagues and learn from each other
           </EmptyState.ListItem>
         </EmptyState.List>
-        <Button>Button</Button>
+        <Button>Create Group</Button>
       </EmptyState>
       <EmptyState
         title="Orientation: Vertical"
         image={<Rocket3d />}
         orientation="vertical"
       >
-        <Paragraph>Lorem ipsum dolor sit amet.</Paragraph>
+        <Paragraph>
+          Groups are most useful when you’re learning with your colleagues.
+          Invite members to your group here or share your unique invite link
+          with them directly.
+        </Paragraph>
         <EmptyState.List>
-          <EmptyState.ListItem icon={<Group />}>
-            Auctor eu augue
+          <EmptyState.ListItem>
+            Stay motivated by tracking each other’s progress
           </EmptyState.ListItem>
-          <EmptyState.ListItem icon={<Branch />}>
-            Tristique senectus et netus
+          <EmptyState.ListItem>
+            Ask for advice when you’re feeling stuck
           </EmptyState.ListItem>
-          <EmptyState.ListItem icon={<Matrix />}>
-            Mus mauris vitae ultricies
+          <EmptyState.ListItem>
+            Meet new colleagues and learn from each other
           </EmptyState.ListItem>
         </EmptyState.List>
-        <Button>Button</Button>
+        <Button>Create Group</Button>
       </EmptyState>
     </div>
   );
