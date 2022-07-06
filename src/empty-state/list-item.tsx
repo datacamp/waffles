@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Text } from '../text';
+
 import { listItemStyle } from './styles';
 
 type ListItemProps = {
@@ -7,14 +9,14 @@ type ListItemProps = {
   icon?: JSX.Element;
   /* The content of the list item. Most of the time should be plain text. */
   children: React.ReactNode;
-};
+} & React.LiHTMLAttributes<HTMLLIElement>;
 
 function ListItem({ icon, children, ...restProps }: ListItemProps) {
   return (
-    <li css={listItemStyle} {...restProps}>
+    <Text as="li" css={listItemStyle()} {...restProps}>
       {icon}
       {children}
-    </li>
+    </Text>
   );
 }
 
