@@ -99,16 +99,22 @@ const variantMap = {
 type AvatarStyleOptions = {
   size: NonNullable<React.ComponentProps<typeof Avatar>['size']>;
   variant: NonNullable<React.ComponentProps<typeof Avatar>['variant']>;
+  contentFill: NonNullable<React.ComponentProps<typeof Avatar>['contentFill']>;
 };
 
-export function avatarStyle({ size, variant }: AvatarStyleOptions) {
+export function avatarStyle({
+  size,
+  variant,
+  contentFill,
+}: AvatarStyleOptions) {
   return css`
     // Fix for background-color and border-radius combo artifacts
-    background: radial-gradient(
+    background: ${contentFill
+      ? `radial-gradient(
       farthest-side,
       ${variantMap[variant].backgroundColor} calc(100% - 1px),
-      transparent
-    );
+      transparent)`
+      : variantMap[variant].backgroundColor};
 
     color: ${variantMap[variant].color};
     border-radius: ${sizeMap[size].sizing};
@@ -123,7 +129,7 @@ export function avatarStyle({ size, variant }: AvatarStyleOptions) {
 
 type AvatarContentStyleOptions = {
   size: NonNullable<React.ComponentProps<typeof Avatar>['size']>;
-  contentFill: boolean;
+  contentFill: NonNullable<React.ComponentProps<typeof Avatar>['contentFill']>;
 };
 
 export function avatarContentStyle({

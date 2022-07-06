@@ -41,7 +41,7 @@ function Avatar({
   ...restProps
 }: AvatarProps) {
   return (
-    <div css={avatarStyle({ size, variant })} {...restProps}>
+    <div css={avatarStyle({ size, variant, contentFill })} {...restProps}>
       <div css={avatarContentStyle({ size, contentFill })}>
         {content && typeof content === 'string'
           ? content.charAt(0).toUpperCase()
