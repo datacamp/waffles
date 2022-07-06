@@ -11,15 +11,15 @@ import {
 } from './styles';
 
 type EmptyStateBaseProps = {
-  /* Image content element. In general pass Waffles [Asset](/components/asset). */
+  /* Image next to or above content, depending on `orientation`. In general pass Waffles [Asset](/components/asset). */
   image?: JSX.Element;
-  /* Content of the body, can include `EmptyState.List` and any Waffles or custom component. */
+  /* Content of the component, can include `EmptyState.List` and any Waffles or custom component. */
   children?: React.ReactNode;
-  /* Title heading for the content. */
+  /* Title for the content. */
   title?: React.ReactNode;
   /* Specifies in which layout the component is organised. If no value is provided, `horizontal` will be used. Note: Small screen sizes will always show as vertical.  */
   orientation?: 'horizontal' | 'vertical';
-  /* Whether the content should be center aligned. Note: Can only be true when `orientation` is set to `vertical`. */
+  /* Whether the content should be center aligned. **Note**: Can only be true when `orientation` is set to `vertical`. */
   isCentered?: boolean;
   /* Sets the style of all child elements to be suitable for dark backgrounds. */
   inverted?: boolean;
@@ -60,10 +60,10 @@ function EmptyStateInternal({
       })}
       {...restProps}
     >
-      {image && <div css={imageStyle}>{image}</div>}
-      <div css={contentWrapperStyle}>
+      {image && <div css={imageStyle()}>{image}</div>}
+      <div css={contentWrapperStyle()}>
         {title && (
-          <Heading css={headingStyle} size={'xlarge'} inverted={inverted}>
+          <Heading css={headingStyle()} size="xlarge" inverted={inverted}>
             {title}
           </Heading>
         )}

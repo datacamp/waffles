@@ -5,11 +5,11 @@ import { listStyle } from './styles';
 type ListProps = {
   /* The content of the list. Should be a list of `EmptyState.Item` components. */
   children: React.ReactNode;
-};
+} & React.HTMLAttributes<HTMLUListElement>;
 
 function List({ children, ...restProps }: ListProps) {
   return (
-    <ul css={listStyle} {...restProps}>
+    <ul css={listStyle()} {...restProps}>
       {children}
     </ul>
   );
