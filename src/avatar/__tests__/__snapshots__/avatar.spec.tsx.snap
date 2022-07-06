@@ -2,11 +2,7 @@
 
 exports[`Avatar renders snapshot of variant blue and size huge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #06BDFC calc(100% - 1px),
-        transparent
-      );
+  background: #06BDFC;
   color: #05192D;
   border-radius: 160px;
   font-size: 116px;
@@ -88,11 +84,7 @@ exports[`Avatar renders snapshot of variant blue and size huge 1`] = `
 
 exports[`Avatar renders snapshot of variant blue and size large 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #06BDFC calc(100% - 1px),
-        transparent
-      );
+  background: #06BDFC;
   color: #05192D;
   border-radius: 64px;
   font-size: 36px;
@@ -174,11 +166,7 @@ exports[`Avatar renders snapshot of variant blue and size large 1`] = `
 
 exports[`Avatar renders snapshot of variant blue and size medium 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #06BDFC calc(100% - 1px),
-        transparent
-      );
+  background: #06BDFC;
   color: #05192D;
   border-radius: 40px;
   font-size: 20px;
@@ -260,11 +248,7 @@ exports[`Avatar renders snapshot of variant blue and size medium 1`] = `
 
 exports[`Avatar renders snapshot of variant blue and size small 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #06BDFC calc(100% - 1px),
-        transparent
-      );
+  background: #06BDFC;
   color: #05192D;
   border-radius: 32px;
   font-size: 16px;
@@ -346,11 +330,7 @@ exports[`Avatar renders snapshot of variant blue and size small 1`] = `
 
 exports[`Avatar renders snapshot of variant blue and size xlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #06BDFC calc(100% - 1px),
-        transparent
-      );
+  background: #06BDFC;
   color: #05192D;
   border-radius: 96px;
   font-size: 64px;
@@ -432,11 +412,7 @@ exports[`Avatar renders snapshot of variant blue and size xlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant blue and size xsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #06BDFC calc(100% - 1px),
-        transparent
-      );
+  background: #06BDFC;
   color: #05192D;
   border-radius: 24px;
   font-size: 12px;
@@ -518,11 +494,7 @@ exports[`Avatar renders snapshot of variant blue and size xsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant blue and size xxlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #06BDFC calc(100% - 1px),
-        transparent
-      );
+  background: #06BDFC;
   color: #05192D;
   border-radius: 128px;
   font-size: 96px;
@@ -604,11 +576,7 @@ exports[`Avatar renders snapshot of variant blue and size xxlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant blue and size xxsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #06BDFC calc(100% - 1px),
-        transparent
-      );
+  background: #06BDFC;
   color: #05192D;
   border-radius: 16px;
   font-size: 8px;
@@ -690,11 +658,7 @@ exports[`Avatar renders snapshot of variant blue and size xxsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant green and size huge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #03EF62 calc(100% - 1px),
-        transparent
-      );
+  background: #03EF62;
   color: #05192D;
   border-radius: 160px;
   font-size: 116px;
@@ -776,11 +740,7 @@ exports[`Avatar renders snapshot of variant green and size huge 1`] = `
 
 exports[`Avatar renders snapshot of variant green and size large 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #03EF62 calc(100% - 1px),
-        transparent
-      );
+  background: #03EF62;
   color: #05192D;
   border-radius: 64px;
   font-size: 36px;
@@ -862,11 +822,7 @@ exports[`Avatar renders snapshot of variant green and size large 1`] = `
 
 exports[`Avatar renders snapshot of variant green and size medium 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #03EF62 calc(100% - 1px),
-        transparent
-      );
+  background: #03EF62;
   color: #05192D;
   border-radius: 40px;
   font-size: 20px;
@@ -948,11 +904,7 @@ exports[`Avatar renders snapshot of variant green and size medium 1`] = `
 
 exports[`Avatar renders snapshot of variant green and size small 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #03EF62 calc(100% - 1px),
-        transparent
-      );
+  background: #03EF62;
   color: #05192D;
   border-radius: 32px;
   font-size: 16px;
@@ -1034,11 +986,7 @@ exports[`Avatar renders snapshot of variant green and size small 1`] = `
 
 exports[`Avatar renders snapshot of variant green and size xlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #03EF62 calc(100% - 1px),
-        transparent
-      );
+  background: #03EF62;
   color: #05192D;
   border-radius: 96px;
   font-size: 64px;
@@ -1120,11 +1068,7 @@ exports[`Avatar renders snapshot of variant green and size xlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant green and size xsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #03EF62 calc(100% - 1px),
-        transparent
-      );
+  background: #03EF62;
   color: #05192D;
   border-radius: 24px;
   font-size: 12px;
@@ -1206,11 +1150,7 @@ exports[`Avatar renders snapshot of variant green and size xsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant green and size xxlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #03EF62 calc(100% - 1px),
-        transparent
-      );
+  background: #03EF62;
   color: #05192D;
   border-radius: 128px;
   font-size: 96px;
@@ -1292,11 +1232,7 @@ exports[`Avatar renders snapshot of variant green and size xxlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant green and size xxsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #03EF62 calc(100% - 1px),
-        transparent
-      );
+  background: #03EF62;
   color: #05192D;
   border-radius: 16px;
   font-size: 8px;
@@ -1378,11 +1314,7 @@ exports[`Avatar renders snapshot of variant green and size xxsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant grey and size huge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #D9D9E2 calc(100% - 1px),
-        transparent
-      );
+  background: #D9D9E2;
   color: #05192D;
   border-radius: 160px;
   font-size: 116px;
@@ -1464,11 +1396,7 @@ exports[`Avatar renders snapshot of variant grey and size huge 1`] = `
 
 exports[`Avatar renders snapshot of variant grey and size large 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #D9D9E2 calc(100% - 1px),
-        transparent
-      );
+  background: #D9D9E2;
   color: #05192D;
   border-radius: 64px;
   font-size: 36px;
@@ -1550,11 +1478,7 @@ exports[`Avatar renders snapshot of variant grey and size large 1`] = `
 
 exports[`Avatar renders snapshot of variant grey and size medium 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #D9D9E2 calc(100% - 1px),
-        transparent
-      );
+  background: #D9D9E2;
   color: #05192D;
   border-radius: 40px;
   font-size: 20px;
@@ -1636,11 +1560,7 @@ exports[`Avatar renders snapshot of variant grey and size medium 1`] = `
 
 exports[`Avatar renders snapshot of variant grey and size small 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #D9D9E2 calc(100% - 1px),
-        transparent
-      );
+  background: #D9D9E2;
   color: #05192D;
   border-radius: 32px;
   font-size: 16px;
@@ -1722,11 +1642,7 @@ exports[`Avatar renders snapshot of variant grey and size small 1`] = `
 
 exports[`Avatar renders snapshot of variant grey and size xlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #D9D9E2 calc(100% - 1px),
-        transparent
-      );
+  background: #D9D9E2;
   color: #05192D;
   border-radius: 96px;
   font-size: 64px;
@@ -1808,11 +1724,7 @@ exports[`Avatar renders snapshot of variant grey and size xlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant grey and size xsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #D9D9E2 calc(100% - 1px),
-        transparent
-      );
+  background: #D9D9E2;
   color: #05192D;
   border-radius: 24px;
   font-size: 12px;
@@ -1894,11 +1806,7 @@ exports[`Avatar renders snapshot of variant grey and size xsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant grey and size xxlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #D9D9E2 calc(100% - 1px),
-        transparent
-      );
+  background: #D9D9E2;
   color: #05192D;
   border-radius: 128px;
   font-size: 96px;
@@ -1980,11 +1888,7 @@ exports[`Avatar renders snapshot of variant grey and size xxlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant grey and size xxsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #D9D9E2 calc(100% - 1px),
-        transparent
-      );
+  background: #D9D9E2;
   color: #05192D;
   border-radius: 16px;
   font-size: 8px;
@@ -2066,11 +1970,7 @@ exports[`Avatar renders snapshot of variant grey and size xxsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant greySubtle and size huge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #EFEFEF calc(100% - 1px),
-        transparent
-      );
+  background: #EFEFEF;
   color: #626D79;
   border-radius: 160px;
   font-size: 116px;
@@ -2152,11 +2052,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size huge 1`] = `
 
 exports[`Avatar renders snapshot of variant greySubtle and size large 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #EFEFEF calc(100% - 1px),
-        transparent
-      );
+  background: #EFEFEF;
   color: #626D79;
   border-radius: 64px;
   font-size: 36px;
@@ -2238,11 +2134,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size large 1`] = `
 
 exports[`Avatar renders snapshot of variant greySubtle and size medium 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #EFEFEF calc(100% - 1px),
-        transparent
-      );
+  background: #EFEFEF;
   color: #626D79;
   border-radius: 40px;
   font-size: 20px;
@@ -2324,11 +2216,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size medium 1`] = `
 
 exports[`Avatar renders snapshot of variant greySubtle and size small 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #EFEFEF calc(100% - 1px),
-        transparent
-      );
+  background: #EFEFEF;
   color: #626D79;
   border-radius: 32px;
   font-size: 16px;
@@ -2410,11 +2298,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size small 1`] = `
 
 exports[`Avatar renders snapshot of variant greySubtle and size xlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #EFEFEF calc(100% - 1px),
-        transparent
-      );
+  background: #EFEFEF;
   color: #626D79;
   border-radius: 96px;
   font-size: 64px;
@@ -2496,11 +2380,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size xlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant greySubtle and size xsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #EFEFEF calc(100% - 1px),
-        transparent
-      );
+  background: #EFEFEF;
   color: #626D79;
   border-radius: 24px;
   font-size: 12px;
@@ -2582,11 +2462,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size xsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant greySubtle and size xxlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #EFEFEF calc(100% - 1px),
-        transparent
-      );
+  background: #EFEFEF;
   color: #626D79;
   border-radius: 128px;
   font-size: 96px;
@@ -2668,11 +2544,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size xxlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant greySubtle and size xxsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #EFEFEF calc(100% - 1px),
-        transparent
-      );
+  background: #EFEFEF;
   color: #626D79;
   border-radius: 16px;
   font-size: 8px;
@@ -2754,11 +2626,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size xxsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant navy and size huge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #05192D calc(100% - 1px),
-        transparent
-      );
+  background: #05192D;
   color: #FFFFFF;
   border-radius: 160px;
   font-size: 116px;
@@ -2840,11 +2708,7 @@ exports[`Avatar renders snapshot of variant navy and size huge 1`] = `
 
 exports[`Avatar renders snapshot of variant navy and size large 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #05192D calc(100% - 1px),
-        transparent
-      );
+  background: #05192D;
   color: #FFFFFF;
   border-radius: 64px;
   font-size: 36px;
@@ -2926,11 +2790,7 @@ exports[`Avatar renders snapshot of variant navy and size large 1`] = `
 
 exports[`Avatar renders snapshot of variant navy and size medium 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #05192D calc(100% - 1px),
-        transparent
-      );
+  background: #05192D;
   color: #FFFFFF;
   border-radius: 40px;
   font-size: 20px;
@@ -3012,11 +2872,7 @@ exports[`Avatar renders snapshot of variant navy and size medium 1`] = `
 
 exports[`Avatar renders snapshot of variant navy and size small 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #05192D calc(100% - 1px),
-        transparent
-      );
+  background: #05192D;
   color: #FFFFFF;
   border-radius: 32px;
   font-size: 16px;
@@ -3098,11 +2954,7 @@ exports[`Avatar renders snapshot of variant navy and size small 1`] = `
 
 exports[`Avatar renders snapshot of variant navy and size xlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #05192D calc(100% - 1px),
-        transparent
-      );
+  background: #05192D;
   color: #FFFFFF;
   border-radius: 96px;
   font-size: 64px;
@@ -3184,11 +3036,7 @@ exports[`Avatar renders snapshot of variant navy and size xlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant navy and size xsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #05192D calc(100% - 1px),
-        transparent
-      );
+  background: #05192D;
   color: #FFFFFF;
   border-radius: 24px;
   font-size: 12px;
@@ -3270,11 +3118,7 @@ exports[`Avatar renders snapshot of variant navy and size xsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant navy and size xxlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #05192D calc(100% - 1px),
-        transparent
-      );
+  background: #05192D;
   color: #FFFFFF;
   border-radius: 128px;
   font-size: 96px;
@@ -3356,11 +3200,7 @@ exports[`Avatar renders snapshot of variant navy and size xxlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant navy and size xxsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #05192D calc(100% - 1px),
-        transparent
-      );
+  background: #05192D;
   color: #FFFFFF;
   border-radius: 16px;
   font-size: 8px;
@@ -3442,11 +3282,7 @@ exports[`Avatar renders snapshot of variant navy and size xxsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant orange and size huge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF931E calc(100% - 1px),
-        transparent
-      );
+  background: #FF931E;
   color: #05192D;
   border-radius: 160px;
   font-size: 116px;
@@ -3528,11 +3364,7 @@ exports[`Avatar renders snapshot of variant orange and size huge 1`] = `
 
 exports[`Avatar renders snapshot of variant orange and size large 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF931E calc(100% - 1px),
-        transparent
-      );
+  background: #FF931E;
   color: #05192D;
   border-radius: 64px;
   font-size: 36px;
@@ -3614,11 +3446,7 @@ exports[`Avatar renders snapshot of variant orange and size large 1`] = `
 
 exports[`Avatar renders snapshot of variant orange and size medium 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF931E calc(100% - 1px),
-        transparent
-      );
+  background: #FF931E;
   color: #05192D;
   border-radius: 40px;
   font-size: 20px;
@@ -3700,11 +3528,7 @@ exports[`Avatar renders snapshot of variant orange and size medium 1`] = `
 
 exports[`Avatar renders snapshot of variant orange and size small 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF931E calc(100% - 1px),
-        transparent
-      );
+  background: #FF931E;
   color: #05192D;
   border-radius: 32px;
   font-size: 16px;
@@ -3786,11 +3610,7 @@ exports[`Avatar renders snapshot of variant orange and size small 1`] = `
 
 exports[`Avatar renders snapshot of variant orange and size xlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF931E calc(100% - 1px),
-        transparent
-      );
+  background: #FF931E;
   color: #05192D;
   border-radius: 96px;
   font-size: 64px;
@@ -3872,11 +3692,7 @@ exports[`Avatar renders snapshot of variant orange and size xlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant orange and size xsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF931E calc(100% - 1px),
-        transparent
-      );
+  background: #FF931E;
   color: #05192D;
   border-radius: 24px;
   font-size: 12px;
@@ -3958,11 +3774,7 @@ exports[`Avatar renders snapshot of variant orange and size xsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant orange and size xxlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF931E calc(100% - 1px),
-        transparent
-      );
+  background: #FF931E;
   color: #05192D;
   border-radius: 128px;
   font-size: 96px;
@@ -4044,11 +3856,7 @@ exports[`Avatar renders snapshot of variant orange and size xxlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant orange and size xxsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF931E calc(100% - 1px),
-        transparent
-      );
+  background: #FF931E;
   color: #05192D;
   border-radius: 16px;
   font-size: 8px;
@@ -4130,11 +3938,7 @@ exports[`Avatar renders snapshot of variant orange and size xxsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant pink and size huge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF6EA9 calc(100% - 1px),
-        transparent
-      );
+  background: #FF6EA9;
   color: #05192D;
   border-radius: 160px;
   font-size: 116px;
@@ -4216,11 +4020,7 @@ exports[`Avatar renders snapshot of variant pink and size huge 1`] = `
 
 exports[`Avatar renders snapshot of variant pink and size large 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF6EA9 calc(100% - 1px),
-        transparent
-      );
+  background: #FF6EA9;
   color: #05192D;
   border-radius: 64px;
   font-size: 36px;
@@ -4302,11 +4102,7 @@ exports[`Avatar renders snapshot of variant pink and size large 1`] = `
 
 exports[`Avatar renders snapshot of variant pink and size medium 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF6EA9 calc(100% - 1px),
-        transparent
-      );
+  background: #FF6EA9;
   color: #05192D;
   border-radius: 40px;
   font-size: 20px;
@@ -4388,11 +4184,7 @@ exports[`Avatar renders snapshot of variant pink and size medium 1`] = `
 
 exports[`Avatar renders snapshot of variant pink and size small 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF6EA9 calc(100% - 1px),
-        transparent
-      );
+  background: #FF6EA9;
   color: #05192D;
   border-radius: 32px;
   font-size: 16px;
@@ -4474,11 +4266,7 @@ exports[`Avatar renders snapshot of variant pink and size small 1`] = `
 
 exports[`Avatar renders snapshot of variant pink and size xlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF6EA9 calc(100% - 1px),
-        transparent
-      );
+  background: #FF6EA9;
   color: #05192D;
   border-radius: 96px;
   font-size: 64px;
@@ -4560,11 +4348,7 @@ exports[`Avatar renders snapshot of variant pink and size xlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant pink and size xsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF6EA9 calc(100% - 1px),
-        transparent
-      );
+  background: #FF6EA9;
   color: #05192D;
   border-radius: 24px;
   font-size: 12px;
@@ -4646,11 +4430,7 @@ exports[`Avatar renders snapshot of variant pink and size xsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant pink and size xxlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF6EA9 calc(100% - 1px),
-        transparent
-      );
+  background: #FF6EA9;
   color: #05192D;
   border-radius: 128px;
   font-size: 96px;
@@ -4732,11 +4512,7 @@ exports[`Avatar renders snapshot of variant pink and size xxlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant pink and size xxsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF6EA9 calc(100% - 1px),
-        transparent
-      );
+  background: #FF6EA9;
   color: #05192D;
   border-radius: 16px;
   font-size: 8px;
@@ -4818,11 +4594,7 @@ exports[`Avatar renders snapshot of variant pink and size xxsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant purple and size huge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #7933FF calc(100% - 1px),
-        transparent
-      );
+  background: #7933FF;
   color: #FFFFFF;
   border-radius: 160px;
   font-size: 116px;
@@ -4904,11 +4676,7 @@ exports[`Avatar renders snapshot of variant purple and size huge 1`] = `
 
 exports[`Avatar renders snapshot of variant purple and size large 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #7933FF calc(100% - 1px),
-        transparent
-      );
+  background: #7933FF;
   color: #FFFFFF;
   border-radius: 64px;
   font-size: 36px;
@@ -4990,11 +4758,7 @@ exports[`Avatar renders snapshot of variant purple and size large 1`] = `
 
 exports[`Avatar renders snapshot of variant purple and size medium 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #7933FF calc(100% - 1px),
-        transparent
-      );
+  background: #7933FF;
   color: #FFFFFF;
   border-radius: 40px;
   font-size: 20px;
@@ -5076,11 +4840,7 @@ exports[`Avatar renders snapshot of variant purple and size medium 1`] = `
 
 exports[`Avatar renders snapshot of variant purple and size small 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #7933FF calc(100% - 1px),
-        transparent
-      );
+  background: #7933FF;
   color: #FFFFFF;
   border-radius: 32px;
   font-size: 16px;
@@ -5162,11 +4922,7 @@ exports[`Avatar renders snapshot of variant purple and size small 1`] = `
 
 exports[`Avatar renders snapshot of variant purple and size xlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #7933FF calc(100% - 1px),
-        transparent
-      );
+  background: #7933FF;
   color: #FFFFFF;
   border-radius: 96px;
   font-size: 64px;
@@ -5248,11 +5004,7 @@ exports[`Avatar renders snapshot of variant purple and size xlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant purple and size xsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #7933FF calc(100% - 1px),
-        transparent
-      );
+  background: #7933FF;
   color: #FFFFFF;
   border-radius: 24px;
   font-size: 12px;
@@ -5334,11 +5086,7 @@ exports[`Avatar renders snapshot of variant purple and size xsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant purple and size xxlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #7933FF calc(100% - 1px),
-        transparent
-      );
+  background: #7933FF;
   color: #FFFFFF;
   border-radius: 128px;
   font-size: 96px;
@@ -5420,11 +5168,7 @@ exports[`Avatar renders snapshot of variant purple and size xxlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant purple and size xxsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #7933FF calc(100% - 1px),
-        transparent
-      );
+  background: #7933FF;
   color: #FFFFFF;
   border-radius: 16px;
   font-size: 8px;
@@ -5506,11 +5250,7 @@ exports[`Avatar renders snapshot of variant purple and size xxsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant red and size huge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF5400 calc(100% - 1px),
-        transparent
-      );
+  background: #FF5400;
   color: #05192D;
   border-radius: 160px;
   font-size: 116px;
@@ -5592,11 +5332,7 @@ exports[`Avatar renders snapshot of variant red and size huge 1`] = `
 
 exports[`Avatar renders snapshot of variant red and size large 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF5400 calc(100% - 1px),
-        transparent
-      );
+  background: #FF5400;
   color: #05192D;
   border-radius: 64px;
   font-size: 36px;
@@ -5678,11 +5414,7 @@ exports[`Avatar renders snapshot of variant red and size large 1`] = `
 
 exports[`Avatar renders snapshot of variant red and size medium 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF5400 calc(100% - 1px),
-        transparent
-      );
+  background: #FF5400;
   color: #05192D;
   border-radius: 40px;
   font-size: 20px;
@@ -5764,11 +5496,7 @@ exports[`Avatar renders snapshot of variant red and size medium 1`] = `
 
 exports[`Avatar renders snapshot of variant red and size small 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF5400 calc(100% - 1px),
-        transparent
-      );
+  background: #FF5400;
   color: #05192D;
   border-radius: 32px;
   font-size: 16px;
@@ -5850,11 +5578,7 @@ exports[`Avatar renders snapshot of variant red and size small 1`] = `
 
 exports[`Avatar renders snapshot of variant red and size xlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF5400 calc(100% - 1px),
-        transparent
-      );
+  background: #FF5400;
   color: #05192D;
   border-radius: 96px;
   font-size: 64px;
@@ -5936,11 +5660,7 @@ exports[`Avatar renders snapshot of variant red and size xlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant red and size xsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF5400 calc(100% - 1px),
-        transparent
-      );
+  background: #FF5400;
   color: #05192D;
   border-radius: 24px;
   font-size: 12px;
@@ -6022,11 +5742,7 @@ exports[`Avatar renders snapshot of variant red and size xsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant red and size xxlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF5400 calc(100% - 1px),
-        transparent
-      );
+  background: #FF5400;
   color: #05192D;
   border-radius: 128px;
   font-size: 96px;
@@ -6108,11 +5824,7 @@ exports[`Avatar renders snapshot of variant red and size xxlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant red and size xxsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FF5400 calc(100% - 1px),
-        transparent
-      );
+  background: #FF5400;
   color: #05192D;
   border-radius: 16px;
   font-size: 8px;
@@ -6194,11 +5906,7 @@ exports[`Avatar renders snapshot of variant red and size xxsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant white and size huge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FFFFFF calc(100% - 1px),
-        transparent
-      );
+  background: #FFFFFF;
   color: #05192D;
   border-radius: 160px;
   font-size: 116px;
@@ -6280,11 +5988,7 @@ exports[`Avatar renders snapshot of variant white and size huge 1`] = `
 
 exports[`Avatar renders snapshot of variant white and size large 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FFFFFF calc(100% - 1px),
-        transparent
-      );
+  background: #FFFFFF;
   color: #05192D;
   border-radius: 64px;
   font-size: 36px;
@@ -6366,11 +6070,7 @@ exports[`Avatar renders snapshot of variant white and size large 1`] = `
 
 exports[`Avatar renders snapshot of variant white and size medium 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FFFFFF calc(100% - 1px),
-        transparent
-      );
+  background: #FFFFFF;
   color: #05192D;
   border-radius: 40px;
   font-size: 20px;
@@ -6452,11 +6152,7 @@ exports[`Avatar renders snapshot of variant white and size medium 1`] = `
 
 exports[`Avatar renders snapshot of variant white and size small 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FFFFFF calc(100% - 1px),
-        transparent
-      );
+  background: #FFFFFF;
   color: #05192D;
   border-radius: 32px;
   font-size: 16px;
@@ -6538,11 +6234,7 @@ exports[`Avatar renders snapshot of variant white and size small 1`] = `
 
 exports[`Avatar renders snapshot of variant white and size xlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FFFFFF calc(100% - 1px),
-        transparent
-      );
+  background: #FFFFFF;
   color: #05192D;
   border-radius: 96px;
   font-size: 64px;
@@ -6624,11 +6316,7 @@ exports[`Avatar renders snapshot of variant white and size xlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant white and size xsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FFFFFF calc(100% - 1px),
-        transparent
-      );
+  background: #FFFFFF;
   color: #05192D;
   border-radius: 24px;
   font-size: 12px;
@@ -6710,11 +6398,7 @@ exports[`Avatar renders snapshot of variant white and size xsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant white and size xxlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FFFFFF calc(100% - 1px),
-        transparent
-      );
+  background: #FFFFFF;
   color: #05192D;
   border-radius: 128px;
   font-size: 96px;
@@ -6796,11 +6480,7 @@ exports[`Avatar renders snapshot of variant white and size xxlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant white and size xxsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FFFFFF calc(100% - 1px),
-        transparent
-      );
+  background: #FFFFFF;
   color: #05192D;
   border-radius: 16px;
   font-size: 8px;
@@ -6882,11 +6562,7 @@ exports[`Avatar renders snapshot of variant white and size xxsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant yellow and size huge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FCCE0D calc(100% - 1px),
-        transparent
-      );
+  background: #FCCE0D;
   color: #05192D;
   border-radius: 160px;
   font-size: 116px;
@@ -6968,11 +6644,7 @@ exports[`Avatar renders snapshot of variant yellow and size huge 1`] = `
 
 exports[`Avatar renders snapshot of variant yellow and size large 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FCCE0D calc(100% - 1px),
-        transparent
-      );
+  background: #FCCE0D;
   color: #05192D;
   border-radius: 64px;
   font-size: 36px;
@@ -7054,11 +6726,7 @@ exports[`Avatar renders snapshot of variant yellow and size large 1`] = `
 
 exports[`Avatar renders snapshot of variant yellow and size medium 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FCCE0D calc(100% - 1px),
-        transparent
-      );
+  background: #FCCE0D;
   color: #05192D;
   border-radius: 40px;
   font-size: 20px;
@@ -7140,11 +6808,7 @@ exports[`Avatar renders snapshot of variant yellow and size medium 1`] = `
 
 exports[`Avatar renders snapshot of variant yellow and size small 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FCCE0D calc(100% - 1px),
-        transparent
-      );
+  background: #FCCE0D;
   color: #05192D;
   border-radius: 32px;
   font-size: 16px;
@@ -7226,11 +6890,7 @@ exports[`Avatar renders snapshot of variant yellow and size small 1`] = `
 
 exports[`Avatar renders snapshot of variant yellow and size xlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FCCE0D calc(100% - 1px),
-        transparent
-      );
+  background: #FCCE0D;
   color: #05192D;
   border-radius: 96px;
   font-size: 64px;
@@ -7312,11 +6972,7 @@ exports[`Avatar renders snapshot of variant yellow and size xlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant yellow and size xsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FCCE0D calc(100% - 1px),
-        transparent
-      );
+  background: #FCCE0D;
   color: #05192D;
   border-radius: 24px;
   font-size: 12px;
@@ -7398,11 +7054,7 @@ exports[`Avatar renders snapshot of variant yellow and size xsmall 1`] = `
 
 exports[`Avatar renders snapshot of variant yellow and size xxlarge 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FCCE0D calc(100% - 1px),
-        transparent
-      );
+  background: #FCCE0D;
   color: #05192D;
   border-radius: 128px;
   font-size: 96px;
@@ -7484,11 +7136,7 @@ exports[`Avatar renders snapshot of variant yellow and size xxlarge 1`] = `
 
 exports[`Avatar renders snapshot of variant yellow and size xxsmall 1`] = `
 .emotion-0 {
-  background: radial-gradient(
-        farthest-side,
-        #FCCE0D calc(100% - 1px),
-        transparent
-      );
+  background: #FCCE0D;
   color: #05192D;
   border-radius: 16px;
   font-size: 8px;
