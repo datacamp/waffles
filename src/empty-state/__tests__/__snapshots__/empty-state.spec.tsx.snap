@@ -120,6 +120,7 @@ exports[`Dialog renders snapshot 1`] = `
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   gap: 16px;
+  color: inherit;
   line-height: 1.25;
 }
 
@@ -383,6 +384,7 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   gap: 16px;
+  color: inherit;
   line-height: 1.25;
 }
 
@@ -646,6 +648,7 @@ exports[`Dialog renders snapshot in vertical orientation 1`] = `
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   gap: 16px;
+  color: inherit;
   line-height: 1.25;
 }
 
@@ -909,6 +912,7 @@ exports[`Dialog renders snapshot in vertical orientation and inverted 1`] = `
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   gap: 16px;
+  color: inherit;
   line-height: 1.25;
 }
 
