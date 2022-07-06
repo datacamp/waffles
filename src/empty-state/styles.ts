@@ -96,6 +96,7 @@ export function listItemStyle() {
     align-items: center;
     justify-content: flex-start;
     gap: ${tokens.spacing.medium};
+    color: inherit;
     line-height: ${tokens.lineHeights.default};
 
     svg {

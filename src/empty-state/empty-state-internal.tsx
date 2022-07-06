@@ -21,7 +21,7 @@ type EmptyStateBaseProps = {
   orientation?: 'horizontal' | 'vertical';
   /* Whether the content should be center aligned. **Note**: Can only be true when `orientation` is set to `vertical`. */
   isCentered?: boolean;
-  /* Sets the style of all child elements to be suitable for dark backgrounds. */
+  /* Sets the color of all internal child elements to be suitable for dark backgrounds. */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
