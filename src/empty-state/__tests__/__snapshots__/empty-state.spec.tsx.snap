@@ -6,16 +6,12 @@ exports[`Dialog renders snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  border-style: dashed;
   border-radius: 4px;
-  border-width: 1px;
   padding: 24px;
   gap: 16px;
   height: 100%;
   width: 100%;
-  border-color: rgba(5, 25, 45, 0.1);
+  border: 1px dashed rgba(5, 25, 45, 0.1);
   color: #05192D;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -43,13 +39,6 @@ exports[`Dialog renders snapshot 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   max-width: 650px;
 }
 
@@ -95,7 +84,6 @@ exports[`Dialog renders snapshot 1`] = `
   flex-direction: column;
   margin: 0;
   padding: 16px 0 24px;
-  list-style: none;
   gap: 8px;
 }
 
@@ -111,6 +99,7 @@ exports[`Dialog renders snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  list-style: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -270,16 +259,12 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  border-style: dashed;
   border-radius: 4px;
-  border-width: 1px;
   padding: 24px;
   gap: 16px;
   height: 100%;
   width: 100%;
-  border-color: rgba(255, 255, 255, 0.1);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
   color: #FFFFFF;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -307,13 +292,6 @@ exports[`Dialog renders snapshot in inverted 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   max-width: 650px;
 }
 
@@ -359,7 +337,6 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   flex-direction: column;
   margin: 0;
   padding: 16px 0 24px;
-  list-style: none;
   gap: 8px;
 }
 
@@ -375,6 +352,7 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  list-style: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -534,16 +512,12 @@ exports[`Dialog renders snapshot in vertical orientation 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  border-style: dashed;
   border-radius: 4px;
-  border-width: 1px;
   padding: 24px;
   gap: 16px;
   height: 100%;
   width: 100%;
-  border-color: rgba(5, 25, 45, 0.1);
+  border: 1px dashed rgba(5, 25, 45, 0.1);
   color: #05192D;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -571,13 +545,6 @@ exports[`Dialog renders snapshot in vertical orientation 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   max-width: 650px;
 }
 
@@ -623,7 +590,6 @@ exports[`Dialog renders snapshot in vertical orientation 1`] = `
   flex-direction: column;
   margin: 0;
   padding: 16px 0 24px;
-  list-style: none;
   gap: 8px;
 }
 
@@ -639,6 +605,7 @@ exports[`Dialog renders snapshot in vertical orientation 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  list-style: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -798,16 +765,12 @@ exports[`Dialog renders snapshot in vertical orientation and inverted 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  border-style: dashed;
   border-radius: 4px;
-  border-width: 1px;
   padding: 24px;
   gap: 16px;
   height: 100%;
   width: 100%;
-  border-color: rgba(255, 255, 255, 0.1);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
   color: #FFFFFF;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -835,13 +798,6 @@ exports[`Dialog renders snapshot in vertical orientation and inverted 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   max-width: 650px;
 }
 
@@ -887,7 +843,6 @@ exports[`Dialog renders snapshot in vertical orientation and inverted 1`] = `
   flex-direction: column;
   margin: 0;
   padding: 16px 0 24px;
-  list-style: none;
   gap: 8px;
 }
 
@@ -903,6 +858,7 @@ exports[`Dialog renders snapshot in vertical orientation and inverted 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  list-style: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
