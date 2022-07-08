@@ -5,20 +5,14 @@ import { EmptyState } from '.';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
-function emptyStateBaseStyle() {
-  return css`
-    display: flex;
-    font-family: ${tokens.fontFamilies.sansSerif};
-    font-size: ${tokens.fontSizes.medium};
-    border-style: dashed;
-    border-radius: ${tokens.borderRadius.medium};
-    border-width: 1px;
-    padding: ${tokens.spacing.large};
-    gap: ${tokens.spacing.medium};
-    height: 100%;
-    width: 100%;
-  `;
-}
+const emptyStateBaseStyle = css`
+  display: flex;
+  border-radius: ${tokens.borderRadius.medium};
+  padding: ${tokens.spacing.large};
+  gap: ${tokens.spacing.medium};
+  height: 100%;
+  width: 100%;
+`;
 
 type EmptyStateStyleOptions = {
   orientation: NonNullable<
@@ -34,9 +28,9 @@ export function emptyStateStyle({
   inverted,
 }: EmptyStateStyleOptions) {
   return css`
-    ${emptyStateBaseStyle()}
+    ${emptyStateBaseStyle}
 
-    border-color: ${hexToRgba(
+    border: ${tokens.borderWidth.thin} dashed ${hexToRgba(
       inverted ? tokens.colors.white : tokens.colors.navy,
       tokens.opacity.low,
     )};
@@ -65,8 +59,6 @@ export function imageStyle() {
 
 export function contentWrapperStyle() {
   return css`
-    display: flex;
-    flex-direction: column;
     max-width: 650px;
   `;
 }
@@ -85,14 +77,18 @@ export function listStyle() {
     flex-direction: column;
     margin: 0;
     padding: ${tokens.spacing.medium} 0 ${tokens.spacing.large};
-    list-style: none;
     gap: ${tokens.spacing.small};
   `;
 }
 
-export function listItemStyle() {
+type ListItemStyleOptions = {
+  hasIcon: boolean;
+};
+
+export function listItemStyle({ hasIcon }: ListItemStyleOptions) {
   return css`
-    display: flex;
+    display: ${hasIcon ? 'flex' : 'list-item'};
+    list-style: ${hasIcon ? 'none' : 'inside'};
     align-items: center;
     justify-content: flex-start;
     gap: ${tokens.spacing.medium};
