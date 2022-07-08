@@ -4,7 +4,7 @@ import useOnScreen from 'hooks/use-on-screen';
 import useContentsTable from 'hooks/use-contents-table';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
-import { Paragraph as ParagraphBase } from '@datacamp/waffles/paragraph';
+import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
 import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
@@ -75,16 +75,6 @@ function H4({ children }: ContentProps) {
       {children}
     </Heading>
   );
-}
-
-const paragraphStyle = css`
-  h1 + & {
-    font-size: ${tokens.fontSizes.large};
-  }
-`;
-
-function Paragraph({ children }: ContentProps) {
-  return <ParagraphBase css={paragraphStyle}>{children}</ParagraphBase>;
 }
 
 type RegularLinkProps = {

@@ -5,6 +5,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
+import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { ContentContainer } from '@datacamp/waffles/content-container';
 import { Chapeau } from '@datacamp/waffles/chapeau';
 
@@ -41,7 +42,7 @@ const textStyle = css`
 
 type PageHeaderProps = {
   title: string;
-  description?: string;
+  description?: React.ReactNode;
   underConstruction?: boolean;
 };
 
@@ -54,7 +55,7 @@ function PageHeader({
   const category = useRouter().pathname.split('/')[1];
 
   return (
-    <>
+    <ErrorBoundary>
       <Head>
         <title key="title">Waffles - {title}</title>
       </Head>
@@ -72,7 +73,7 @@ function PageHeader({
           )}
         </ContentContainer>
       </header>
-    </>
+    </ErrorBoundary>
   );
 }
 

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
-import { Link as LinkBase } from '@datacamp/waffles/link';
 import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
+import { Button } from '@datacamp/waffles/button';
 
 import slugify from '../helpers/slugify';
 import { useTableOfContentsEntries } from '../context/table-of-contents-context';
@@ -39,7 +39,7 @@ function listItemStyle({ isActive }: ListItemStyleOptions) {
   return css`
     display: flex;
     list-style: none;
-    padding: ${tokens.spacing.xsmall} ${tokens.spacing.medium};
+    padding: 0 ${tokens.spacing.medium};
     border-left: ${isActive
       ? `2px solid ${tokens.colors.navy}`
       : `2px solid ${hexToRgba(tokens.colors.navy, tokens.opacity.low)}`};
@@ -55,7 +55,9 @@ function Entry({ name, isActive }: EntryProps) {
   return (
     <li css={listItemStyle({ isActive })}>
       <Link href={`#${slugify(name)}`} passHref>
-        <LinkBase css={linkStyle}>{name}</LinkBase>
+        <Button css={linkStyle} as="a" variant="plain" size="small">
+          {name}
+        </Button>
       </Link>
     </li>
   );
