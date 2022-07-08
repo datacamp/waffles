@@ -13,7 +13,7 @@ type ListItemProps = {
 
 function ListItem({ icon, children, ...restProps }: ListItemProps) {
   return (
-    <Text as="li" css={listItemStyle()} {...restProps}>
+    <Text as="li" css={listItemStyle({ hasIcon: !!icon })} {...restProps}>
       {icon}
       {children}
     </Text>
