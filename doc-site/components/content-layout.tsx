@@ -12,6 +12,7 @@ import { Button } from '@datacamp/waffles/button';
 import { TableOfContentsProvider } from '../context/table-of-contents-context';
 
 import TableOfContents from './table-of-contents';
+import PageHeader from './page-header';
 import { ARTICLE_CONTENT_WIDTH } from './constants';
 import BackToTop from './back-to-top';
 
@@ -51,18 +52,19 @@ const asideStyle = css`
 `;
 
 type ContentLayoutProps = {
-  header: React.ReactNode;
+  title: string;
+  description: React.ReactNode;
   children: React.ReactNode;
 };
 
 // Set of additional wrappers for markdown documentation pages
-function ContentLayout({ header, children }: ContentLayoutProps) {
+function ContentLayout({ title, description, children }: ContentLayoutProps) {
   const { pathname } = useRouter();
   const { isAboveLarge } = useMediaQuery();
 
   return (
     <ErrorBoundary>
-      {header}
+      <PageHeader title={title} description={description} />
       <ContentContainer css={containerStyle}>
         <TableOfContentsProvider>
           <article css={articleStyle}>
