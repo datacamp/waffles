@@ -22,15 +22,11 @@ const descriptionStyle = css`
   width: 50%;
 `;
 
-const typeStyle = css`
+const nameStyle = css`
   display: inline-block;
   white-space: normal;
   word-break: break-word;
   padding: 2px ${tokens.spacing.xsmall};
-`;
-
-const nameStyle = css`
-  ${typeStyle}
   background-color: ${hexToRgba(tokens.colors.blue, tokens.opacity.low)};
 `;
 
@@ -74,7 +70,9 @@ function PropsTable({ metadata, isPolymorphic = false }: PropsTableProps) {
                   )}
                 </Table.Cell>
                 <Table.Cell>
-                  <Code css={typeStyle}>{singleProp.type}</Code>
+                  {singleProp.type.split(' | ').map((type) => {
+                    return <Code key={type}>{type}</Code>;
+                  })}
                 </Table.Cell>
                 <Table.Cell>
                   {singleProp.description ? (
