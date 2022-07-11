@@ -87,6 +87,7 @@ function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const isVisible = useOnScreen(sectionRef);
 
+  // TODO: Explore if it's possible to add the asset grids headings in the correct place (at the end of the markdown parsing, not during), as they are currently done too early - ixTec
   useContentsTable(isVisible, sectionHeading);
 
   return (
