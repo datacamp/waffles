@@ -100,6 +100,8 @@ exports[`Dialog renders snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -353,6 +355,8 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -606,6 +610,8 @@ exports[`Dialog renders snapshot in vertical orientation 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -859,6 +865,8 @@ exports[`Dialog renders snapshot in vertical orientation and inverted 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
