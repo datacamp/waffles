@@ -6,14 +6,15 @@ import { Rocket3d } from '@datacamp/waffles/asset';
 
 function Example() {
   return (
-    <EmptyState title="Title Heading" image={<Rocket3d />} inverted>
+    <EmptyState
+      title="Benefit from collaborative learning"
+      image={<Rocket3d />}
+      inverted
+    >
       <Paragraph inverted>
         Groups are most useful when you’re learning with your colleagues. Invite
         members to your group here or share your unique invite link with them
         directly.
-      </Paragraph>
-      <Paragraph>
-        Reach out to your admin to get relevant content assigned to you.
       </Paragraph>
       <EmptyState.List>
         <EmptyState.ListItem icon={<Group />}>
