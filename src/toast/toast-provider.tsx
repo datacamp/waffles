@@ -1,5 +1,5 @@
 // Split context and provider to enable auto-generated props docs
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { nanoid } from 'nanoid';
 
 import ToastsList from './toasts-list';
@@ -35,22 +35,25 @@ function ToastProvider({
   const toastIds = Object.keys(toasts);
 
   // Create new toast, exposed by hook
-  function toast({ title, variant = 'default', description }: ToastOptions) {
-    const toastId = nanoid(6);
+  const toast = useCallback(
+    ({ title, variant = 'default', description }: ToastOptions) => {
+      const toastId = nanoid(6);
 
-    setToasts((toasts) => {
-      return {
-        ...toasts,
-        [toastId]: {
-          title,
-          variant,
-          description,
-          disableAutoHide,
-          autoHideDuration,
-        },
-      };
-    });
-  }
+      setToasts((toasts) => {
+        return {
+          ...toasts,
+          [toastId]: {
+            title,
+            variant,
+            description,
+            disableAutoHide,
+            autoHideDuration,
+          },
+        };
+      });
+    },
+    [],
+  );
 
   // Remove toast from hash map by ID
   // Handler is called by toast after exit animation is finished
