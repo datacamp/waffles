@@ -89,8 +89,7 @@ export function listItemStyle({ hasIcon }: ListItemStyleOptions) {
   return css`
     display: ${hasIcon ? 'flex' : 'list-item'};
     list-style: ${hasIcon ? 'none' : 'outside'};
-    margin-left: ${hasIcon ? '0' : '16px'};
-    padding-left: ${hasIcon ? '0' : '16px'};
+    margin-left: ${hasIcon ? '0' : tokens.spacing.large};
     align-items: center;
     justify-content: flex-start;
     gap: ${tokens.spacing.medium};
