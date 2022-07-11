@@ -4,6 +4,12 @@ import { tokens } from '@datacamp/waffles/tokens';
 import Table from './table';
 import DesignTokenExample from './design-token-example';
 
+const tableStyle = css`
+  td {
+    padding: ${tokens.spacing.small};
+  }
+`;
+
 const nameStyle = css`
   width: 40%;
 `;
@@ -14,7 +20,7 @@ type DesignTokensTableProps = {
 
 function DesignTokensTable({ tokensGroup }: DesignTokensTableProps) {
   return (
-    <Table>
+    <Table css={tableStyle}>
       <thead>
         <tr>
           <Table.HeadCell css={nameStyle}>Name</Table.HeadCell>
