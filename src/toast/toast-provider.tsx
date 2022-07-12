@@ -52,7 +52,7 @@ function ToastProvider({
         };
       });
     },
-    [],
+    [autoHideDuration, disableAutoHide],
   );
 
   // Remove toast from hash map by ID
