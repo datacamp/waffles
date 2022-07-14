@@ -7,7 +7,9 @@ type MenuContextValue = {
   listRef: React.MutableRefObject<Array<HTMLButtonElement | null>>;
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
-  getItemProps: (userProps?: React.HTMLProps<HTMLElement>) => unknown;
+  getItemProps: (
+    userProps?: React.HTMLProps<HTMLElement> | undefined,
+  ) => Record<string, unknown>;
   triggerRef: React.MutableRefObject<ReferenceType | null>;
   inverted: boolean;
 };
