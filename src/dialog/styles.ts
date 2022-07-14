@@ -106,7 +106,7 @@ export function footerStyle() {
     border-top: ${tokens.borderWidth.thin} solid
       ${hexToRgba(tokens.colors.navy, 0.15)};
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
   `;
