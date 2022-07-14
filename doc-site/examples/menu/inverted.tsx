@@ -1,5 +1,5 @@
 import { Menu } from '@datacamp/waffles/menu';
-import { More, Code, Edit, Copy } from '@datacamp/waffles/icon';
+import { More, Code, Edit, Copy, Trash } from '@datacamp/waffles/icon';
 import { Button } from '@datacamp/waffles/button';
 
 function Example() {
@@ -15,6 +15,7 @@ function Example() {
         <Menu.Item label="Edit" iconLeft={<Code />} />
         <Menu.Item label="Rename" iconLeft={<Edit />} />
         <Menu.Item label="Duplicate" iconLeft={<Copy />} disabled />
+        <Menu.Item variant="destructive" label="Remove" iconLeft={<Trash />} />
       </Menu.Category>
     </Menu>
   );
