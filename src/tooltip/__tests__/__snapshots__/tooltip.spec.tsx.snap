@@ -15,7 +15,7 @@ exports[`Tooltip renders snapshot 1`] = `
   border-radius: 4px;
   line-height: 1.25;
   max-width: 300px;
-  top: 0px;
+  top: 8px;
   left: 0px;
   background-color: #05192D;
   color: #FFFFFF;
@@ -46,7 +46,7 @@ exports[`Tooltip renders snapshot of inverted variant 1`] = `
   border-radius: 4px;
   line-height: 1.25;
   max-width: 300px;
-  top: 0px;
+  top: 8px;
   left: 0px;
   background-color: #FFFFFF;
   color: #05192D;

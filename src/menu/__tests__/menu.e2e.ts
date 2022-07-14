@@ -62,6 +62,20 @@ describe('Menu', () => {
     cy.findByRole('menu').should('exist');
   });
 
+  describe('render disabled items', () => {
+    it('in regular menu', () => {
+      cy.loadStory('menu-disabled');
+      cy.get('main').findByText('Open Menu').click();
+      cy.findAllByRole('menuitem').should('have.length', 4);
+    });
+
+    it('in inverted menu', () => {
+      cy.loadStory('menu-disabled');
+      cy.get('main').findByText('Open Inverted Menu').click();
+      cy.findAllByRole('menuitem').should('have.length', 4);
+    });
+  });
+
   describe('render menu to the', () => {
     placement.forEach((placement) => {
       it(`${placement} of the trigger`, () => {

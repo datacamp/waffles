@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Menu renders snapshot with categories, active style, icons, alert dot, and custom offset of inverted menu 1`] = `
+exports[`Menu renders snapshot with categories, active style, icons, alert dot, disabled, destructive, and custom offset of inverted menu 1`] = `
 .emotion-0 {
   position: absolute;
   z-index: 7000;
@@ -86,8 +86,8 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   z-index: 1;
   top: 4px;
   left: 4px;
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   background-color: #FF5400;
   border-radius: 50%;
 }
@@ -211,7 +211,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   text-overflow: ellipsis;
 }
 
-.emotion-13 {
+.emotion-16 {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.15);
   margin-top: 8px;
@@ -220,7 +220,50 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   margin-left: 8px;
 }
 
-.emotion-14 {
+.emotion-17 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: calc(100% - 16px);
+  min-height: 36px;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-left: 8px;
+  margin-right: 8px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  color: #FF782D;
+  background: transparent;
+}
+
+.emotion-17 svg {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-17:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-17:hover:not(:disabled) {
+  background-color: rgba(255, 120, 45, 0.15);
+}
+
+.emotion-20 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -270,7 +313,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   margin-right: 8px;
 }
 
-.emotion-14::after {
+.emotion-20::after {
   content: '';
   display: block;
   position: absolute;
@@ -286,20 +329,20 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-14:hover:not(:disabled) {
+.emotion-20:hover:not(:disabled) {
   background-color: #1CFF7B;
 }
 
-.emotion-14:active:not(:disabled) {
+.emotion-20:active:not(:disabled) {
   background-color: #03EF62;
 }
 
-.emotion-14:disabled {
+.emotion-20:disabled {
   opacity: 0.6;
   cursor: default;
 }
 
-.emotion-14:not(:last-child) {
+.emotion-20:not(:last-child) {
   margin-bottom: 8px;
 }
 
@@ -393,19 +436,48 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
         </span>
       </span>
     </button>
+    <button
+      class="emotion-2"
+      disabled=""
+      role="menuitem"
+    >
+      <span
+        class="emotion-4"
+      >
+        <span
+          class="emotion-5"
+        >
+          Nicki Minaj
+        </span>
+      </span>
+    </button>
   </div>
   <div
     role="group"
   >
     <div
-      class="emotion-13"
+      class="emotion-16"
     />
     <button
-      class="emotion-14"
+      class="emotion-17"
       role="menuitem"
     >
       <span
-        class="emotion-15"
+        class="emotion-4"
+      >
+        <span
+          class="emotion-5"
+        >
+          Remove Singers
+        </span>
+      </span>
+    </button>
+    <button
+      class="emotion-20"
+      role="menuitem"
+    >
+      <span
+        class="emotion-21"
       >
         Log Out
       </span>
@@ -414,7 +486,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
 </div>
 `;
 
-exports[`Menu renders snapshot with categories, active style, icons, alert dot, and custom offset of regular menu 1`] = `
+exports[`Menu renders snapshot with categories, active style, icons, alert dot, disabled, destructive, and custom offset of regular menu 1`] = `
 .emotion-0 {
   position: absolute;
   z-index: 7000;
@@ -500,8 +572,8 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   z-index: 1;
   top: 4px;
   left: 4px;
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   background-color: #FF5400;
   border-radius: 50%;
 }
@@ -625,7 +697,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   text-overflow: ellipsis;
 }
 
-.emotion-13 {
+.emotion-16 {
   height: 1px;
   background-color: rgba(5, 25, 45, 0.2);
   margin-top: 8px;
@@ -634,7 +706,50 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   margin-left: 8px;
 }
 
-.emotion-14 {
+.emotion-17 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: calc(100% - 16px);
+  min-height: 36px;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-left: 8px;
+  margin-right: 8px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  color: #C01100;
+  background: transparent;
+}
+
+.emotion-17 svg {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-17:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-17:hover:not(:disabled) {
+  background-color: rgba(192, 17, 0, 0.1);
+}
+
+.emotion-20 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -684,7 +799,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   margin-right: 8px;
 }
 
-.emotion-14::after {
+.emotion-20::after {
   content: '';
   display: block;
   position: absolute;
@@ -700,20 +815,20 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-14:hover:not(:disabled) {
+.emotion-20:hover:not(:disabled) {
   background-color: #00D649;
 }
 
-.emotion-14:active:not(:disabled) {
+.emotion-20:active:not(:disabled) {
   background-color: #03EF62;
 }
 
-.emotion-14:disabled {
+.emotion-20:disabled {
   opacity: 0.6;
   cursor: default;
 }
 
-.emotion-14:not(:last-child) {
+.emotion-20:not(:last-child) {
   margin-bottom: 8px;
 }
 
@@ -807,19 +922,48 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
         </span>
       </span>
     </button>
+    <button
+      class="emotion-2"
+      disabled=""
+      role="menuitem"
+    >
+      <span
+        class="emotion-4"
+      >
+        <span
+          class="emotion-5"
+        >
+          Nicki Minaj
+        </span>
+      </span>
+    </button>
   </div>
   <div
     role="group"
   >
     <div
-      class="emotion-13"
+      class="emotion-16"
     />
     <button
-      class="emotion-14"
+      class="emotion-17"
       role="menuitem"
     >
       <span
-        class="emotion-15"
+        class="emotion-4"
+      >
+        <span
+          class="emotion-5"
+        >
+          Remove Singers
+        </span>
+      </span>
+    </button>
+    <button
+      class="emotion-20"
+      role="menuitem"
+    >
+      <span
+        class="emotion-21"
       >
         Log Out
       </span>
