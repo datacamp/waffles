@@ -35,13 +35,21 @@ function Playground() {
           <Dialog.Button variant="secondary" onClick={() => setIsOpen(false)}>
             Cancel
           </Dialog.Button>
-          <Dialog.Button
-            autoFocus
-            variant="primary"
-            onClick={() => setIsOpen(false)}
-          >
-            Confirm
-          </Dialog.Button>
+          <div>
+            <Dialog.Button
+              variant="secondary"
+              onClick={() => setIsOpen(false)}
+            >
+              Secondary Action
+            </Dialog.Button>
+            <Dialog.Button
+              autoFocus
+              variant="primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Confirm
+            </Dialog.Button>
+          </div>
         </Dialog.Footer>
       </Dialog>
     </>
