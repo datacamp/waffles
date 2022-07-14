@@ -15,7 +15,6 @@ function Playground() {
       trigger={
         <Button variant="secondary">Open Menu</Button>
       }
-      placement="right"
     >
       <Menu.Category noDivider>
         <Menu.Item label="Edit" iconLeft={<Code />} />

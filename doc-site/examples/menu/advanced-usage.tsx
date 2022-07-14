@@ -1,6 +1,4 @@
 import { forwardRef, useState } from 'react';
-import { css } from '@emotion/react';
-import { tokens } from '@datacamp/waffles/tokens';
 import { Menu, useMenu } from '@datacamp/waffles/menu';
 import {
   ChevronUp,
@@ -10,6 +8,7 @@ import {
   Cog,
   Trash,
 } from '@datacamp/waffles/icon';
+import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { Button } from '@datacamp/waffles/button';
 
 type MenuTriggerProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -37,11 +36,16 @@ const MenuTrigger = forwardRef(MenuTriggerInternal);
 
 // Always wrap each set of menu Items with Category
 function Example() {
+  const { isAboveSmall } = useMediaQuery();
   const [activeRole, setActiveRole] = useState<
     'editor' | 'commenter' | 'viewer'
   >('editor');
+
   return (
-    <Menu trigger={<MenuTrigger />} placement="right">
+    <Menu
+      trigger={<MenuTrigger />}
+      placement={isAboveSmall ? 'right' : 'bottom'}
+    >
       <Menu.Category noDivider>
         <Menu.Item
           label="Editor"
