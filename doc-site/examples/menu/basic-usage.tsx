@@ -6,13 +6,16 @@ import {
   Visible,
   ExternalLink,
 } from '@datacamp/waffles/icon';
+import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { Button } from '@datacamp/waffles/button';
 
 function Example() {
+  const { isAboveSmall } = useMediaQuery();
+
   return (
     <Menu
       trigger={<Button variant="secondary">Workspace</Button>}
-      placement="right"
+      placement={isAboveSmall ? 'right' : 'bottom'}
     >
       <Menu.Category noDivider>
         <Menu.Item label="Edit" iconLeft={<Code />} />

@@ -1,15 +1,18 @@
 import { Menu } from '@datacamp/waffles/menu';
 import { More, Code, Edit, Copy, Trash } from '@datacamp/waffles/icon';
+import { useMediaQuery } from '@datacamp/waffles/hooks';
 import { Button } from '@datacamp/waffles/button';
 
 function Example() {
+  const { isAboveSmall } = useMediaQuery();
+
   return (
     <Menu
       inverted
       trigger={
         <Button variant="secondary" icon={<More />} aria-label="More options" />
       }
-      placement="right"
+      placement={isAboveSmall ? 'right' : 'bottom'}
     >
       <Menu.Category noDivider>
         <Menu.Item label="Edit" iconLeft={<Code />} />

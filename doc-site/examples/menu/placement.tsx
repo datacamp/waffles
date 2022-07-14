@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Radio } from '@datacamp/waffles/radio';
 import { Menu } from '@datacamp/waffles/menu';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
 
 function Example() {
@@ -14,8 +15,14 @@ function Example() {
       <div
         css={css`
           display: flex;
+          flex-direction: column;
           gap: ${tokens.spacing.medium};
-          align-items: center;
+          align-items: flex-start;
+
+          ${mediaQuery.aboveSmall} {
+            flex-direction: row;
+            align-items: center;
+          }
         `}
       >
         <Menu
