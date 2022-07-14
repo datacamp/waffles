@@ -2,7 +2,7 @@
 
 ℹ️ Below are a handful of simple rules to adhere to when developing for **Waffles**, for those that ESLint / Prettier won't handle.
 
-🚧 Please note, these are still under construction and so may change as **Waffles** grows.
+🚧 Please note, these are still being adjusted and so may change as **Waffles** grows.
 
 ## Guidelines
 

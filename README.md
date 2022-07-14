@@ -41,3 +41,7 @@ Learn how to develop new **Waffles** components locally in the [Development](htt
 ## Project Organization
 
 Learn more about the project structure and available commands in the [Project Organization](https://github.com/datacamp/waffles/blob/master/docs/PROJECT_ORGANIZATION.md) overview.
+
+## Contributing
+
+Find out how to contribute in our [Contributing Guidelines](https://github.com/datacamp/waffles/blob/master/docs/CONTRIBUTING.md)
