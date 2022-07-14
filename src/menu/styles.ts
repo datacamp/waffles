@@ -3,6 +3,8 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
+import Item from './item';
+
 const dropdownBaseStyle = css`
   position: absolute; // Use absolute position, expected by float-ui default strategy
   z-index: ${tokens.zIndex.dropdown};
@@ -60,31 +62,56 @@ const itemBaseStyle = css`
   }
 `;
 
+// Mappings between item's variants, and design tokens
+
+const regularVariantMap = {
+  primary: {
+    color: tokens.colors.navy,
+    hoverColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
+    activeColor: tokens.colors.greySubtle,
+  },
+  destructive: {
+    color: tokens.colors.redDarkText,
+    hoverColor: hexToRgba(tokens.colors.redDarkText, tokens.opacity.low),
+    activeColor: tokens.colors.greySubtle,
+  },
+};
+
+const invertedVariantMap = {
+  primary: {
+    color: tokens.colors.white,
+    hoverColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
+    activeColor: hexToRgba(tokens.colors.white, 0.05),
+  },
+  destructive: {
+    color: tokens.colors.redLight,
+    hoverColor: hexToRgba(tokens.colors.redLight, 0.15),
+    activeColor: hexToRgba(tokens.colors.white, 0.05),
+  },
+};
+
 type ItemStyleOptions = {
+  variant: NonNullable<React.ComponentProps<typeof Item>['variant']>;
   isFocusVisible: boolean;
   isActive: boolean;
   inverted: boolean;
 };
 
 export function itemStyle({
+  variant,
   isFocusVisible,
   isActive,
   inverted,
 }: ItemStyleOptions) {
-  const invertedActiveColor = inverted
-    ? hexToRgba(tokens.colors.white, 0.05)
-    : tokens.colors.greySubtle;
+  const variantMap = inverted ? invertedVariantMap : regularVariantMap;
 
   return css`
     ${itemBaseStyle}
-    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
-    background: ${isActive ? invertedActiveColor : 'transparent'};
+    color: ${variantMap[variant].color};
+    background: ${isActive ? variantMap[variant].activeColor : 'transparent'};
 
     &:hover:not(:disabled) {
-      background-color: ${hexToRgba(
-        inverted ? tokens.colors.white : tokens.colors.navy,
-        tokens.opacity.low,
-      )};
+      background-color: ${variantMap[variant].hoverColor};
     }
 
     ${isFocusVisible &&
@@ -212,8 +239,8 @@ export function notificationDotStyle() {
     z-index: ${tokens.zIndex.default};
     top: ${tokens.spacing.xsmall};
     left: ${tokens.spacing.xsmall};
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
     background-color: ${tokens.colors.red};
     border-radius: ${tokens.borderRadius.circle};
   `;

@@ -17,6 +17,8 @@ import type { PolymorphicComponentProps } from '../helpers';
 type ItemBaseProps = {
   /* The content of the item. Most of the time should be a plain text. */
   label: React.ReactNode;
+  /* Defines the variant of the item. */
+  variant?: 'primary' | 'destructive';
   /* [skip docs] */
   index?: number;
   /* Optional description shown below the label. */
@@ -37,6 +39,7 @@ type ItemProps<T extends React.ElementType = 'button'> =
 function Item<T extends React.ElementType = 'button'>({
   as,
   label,
+  variant = 'primary',
   index = 0,
   description,
   iconLeft,
@@ -67,7 +70,7 @@ function Item<T extends React.ElementType = 'button'>({
       })}
       ref={(node) => (listRef.current[index] = node)}
       role="menuitem"
-      css={itemStyle({ isFocusVisible, isActive, inverted })}
+      css={itemStyle({ variant, isFocusVisible, isActive, inverted })}
     >
       {showNotificationDot && <NotificationDot />}
       {iconLeft}
