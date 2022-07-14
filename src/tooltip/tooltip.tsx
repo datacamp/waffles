@@ -30,7 +30,7 @@ const placementMap = {
   topRight: 'top-end',
 } as const;
 
-type Tooltip = {
+type TooltipProps = {
   /* The content that will trigger the tooltip. Must be single element. */
   children: JSX.Element;
   /* The content of the tooltip. */
@@ -49,7 +49,7 @@ type Tooltip = {
   offset?: string;
   /* Sets the style of the tooltip suitable for dark backgrounds. */
   inverted?: boolean;
-} & React.HTMLAttributes<HTMLDivElement>;
+} & Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;
 
 function Tooltip({
   children,
@@ -58,7 +58,7 @@ function Tooltip({
   offset = tokens.spacing.small,
   inverted = false,
   ...restProps
-}: Tooltip) {
+}: TooltipProps) {
   const [isOpen, setIsOpen] = useState(false);
   const id = useId('tooltip');
 
