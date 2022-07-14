@@ -324,7 +324,7 @@ describe('Menu', () => {
     expect(item).toHaveAttribute('href', 'http://polymorphic-taylor-swift.com');
   });
 
-  describe('renders snapshot with categories, active style, icons, alert dot, and custom offset of', () => {
+  describe('renders snapshot with categories, active style, icons, alert dot, disabled, destructive, and custom offset of', () => {
     it('regular menu', () => {
       const { getByRole, getByText } = render(
         <Menu trigger={<MenuTrigger />} offset={tokens.spacing.large}>
@@ -340,8 +340,10 @@ describe('Menu', () => {
               label="Ariana Grande"
             />
             <Menu.Item isActive label="Justin Bieber" />
+            <Menu.Item disabled label="Nicki Minaj" />
           </Menu.Category>
           <Menu.Category>
+            <Menu.Item label="Remove Singers" variant="destructive" />
             <Menu.Button>Log Out</Menu.Button>
           </Menu.Category>
         </Menu>,
@@ -369,8 +371,10 @@ describe('Menu', () => {
               label="Ariana Grande"
             />
             <Menu.Item isActive label="Justin Bieber" />
+            <Menu.Item disabled label="Nicki Minaj" />
           </Menu.Category>
           <Menu.Category>
+            <Menu.Item label="Remove Singers" variant="destructive" />
             <Menu.Button>Log Out</Menu.Button>
           </Menu.Category>
         </Menu>,

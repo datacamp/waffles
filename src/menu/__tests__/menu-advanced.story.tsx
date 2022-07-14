@@ -64,11 +64,9 @@ function Story() {
           />
           <Menu.Item label="Disable" disabled iconLeft={<Cross />} />
           <Menu.Item
+            variant="destructive"
             label="Remove"
             iconLeft={<Trash />}
-            css={css`
-              color: ${tokens.colors.redDarkText};
-            `}
           />
         </Menu.Category>
         <Menu.Category>

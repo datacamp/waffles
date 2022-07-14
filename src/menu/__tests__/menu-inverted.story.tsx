@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { Menu } from '../index';
 import { tokens } from '../../tokens';
-import { Checkmark, Cross, Verified } from '../../icon';
+import { Checkmark, Cross, Verified, Trash } from '../../icon';
 import { Button } from '../../button';
 
 const wrapperStyle = css`
@@ -35,6 +35,11 @@ function Story() {
             iconLeft={<Verified />}
           />
           <Menu.Item label="Disable" disabled iconLeft={<Cross />} />
+          <Menu.Item
+            variant="destructive"
+            label="Remove"
+            iconLeft={<Trash />}
+          />
         </Menu.Category>
         <Menu.Category>
           <Menu.Button>View Workspace</Menu.Button>
