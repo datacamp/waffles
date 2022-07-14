@@ -39,7 +39,7 @@ function listItemStyle({ isActive }: ListItemStyleOptions) {
   return css`
     display: flex;
     list-style: none;
-    padding: 0 ${tokens.spacing.medium};
+    padding: 0 ${tokens.spacing.small};
     border-left: ${isActive
       ? `2px solid ${tokens.colors.navy}`
       : `2px solid ${hexToRgba(tokens.colors.navy, tokens.opacity.low)}`};
