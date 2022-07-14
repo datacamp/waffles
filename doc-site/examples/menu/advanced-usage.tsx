@@ -35,10 +35,6 @@ function MenuTriggerInternal(
 // For menu trigger, it's important to forward ref
 const MenuTrigger = forwardRef(MenuTriggerInternal);
 
-const destructiveStyle = css`
-  color: ${tokens.colors.redDarkText};
-`;
-
 // Always wrap each set of menu Items with Category
 function Example() {
   const [activeRole, setActiveRole] = useState<
@@ -72,7 +68,7 @@ function Example() {
       <Menu.Category label="Access">
         <Menu.Item label="Settings" showNotificationDot iconLeft={<Cog />} />
         <Menu.Item label="Disable" disabled iconLeft={<Cross />} />
-        <Menu.Item label="Remove" iconLeft={<Trash />} css={destructiveStyle} />
+        <Menu.Item variant="destructive" label="Remove" iconLeft={<Trash />} />
       </Menu.Category>
       <Menu.Category>
         <Menu.Button variant="upgrade">Upgrade</Menu.Button>
