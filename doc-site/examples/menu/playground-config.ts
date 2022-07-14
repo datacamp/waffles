@@ -6,7 +6,7 @@ import type { PlaygroundConfig } from '../../types';
 
 const initialCode = `
 import { Menu } from '@datacamp/waffles/menu';
-import { More, Code, Edit, Copy } from '@datacamp/waffles/icon';
+import { Code, Edit, Copy, Trash } from '@datacamp/waffles/icon';
 import { Button } from '@datacamp/waffles/button';
 
 function Playground() {
