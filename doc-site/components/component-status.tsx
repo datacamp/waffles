@@ -8,11 +8,12 @@ import { Button } from '@datacamp/waffles/button';
 import Table from './table';
 
 const nameCellStyle = css`
+  padding: ${tokens.spacing.small} ${tokens.spacing.medium};
   vertical-align: middle;
 `;
 
 const tableCellStyle = css`
-  padding-left: 2px;
+  padding: ${tokens.spacing.small};
 `;
 
 const textStyle = css`
