@@ -30,6 +30,12 @@ const nameStyle = css`
   background-color: ${hexToRgba(tokens.colors.blue, tokens.opacity.low)};
 `;
 
+const propTypeStyle = css`
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: ${tokens.spacing.xsmall};
+`;
+
 const requiredMarkerStyle = css`
   color: ${tokens.colors.redDark};
   margin-left: ${tokens.spacing.xsmall};
@@ -70,9 +76,11 @@ function PropsTable({ metadata, isPolymorphic = false }: PropsTableProps) {
                   )}
                 </Table.Cell>
                 <Table.Cell>
-                  {singleProp.type.split(' | ').map((type) => {
-                    return <Code key={type}>{type}</Code>;
-                  })}
+                  <div css={propTypeStyle}>
+                    {singleProp.type.split(' | ').map((type) => {
+                      return <Code key={type}>{type}</Code>;
+                    })}
+                  </div>
                 </Table.Cell>
                 <Table.Cell>
                   {singleProp.description ? (
