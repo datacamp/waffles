@@ -107,15 +107,9 @@ export function footerStyle() {
       ${hexToRgba(tokens.colors.navy, 0.15)};
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
-    gap: ${tokens.spacing.small} 0;
-
-    & div {
-      display: flex;
-      gap: ${tokens.spacing.small} 0;
-    }
+    gap: ${tokens.spacing.small};
   `;
 }
 
@@ -123,8 +117,8 @@ export function buttonStyle() {
   return css`
     flex-shrink: 1;
 
-    &:not(:last-child) {
-      margin-right: ${tokens.spacing.small};
+    &:first-of-type {
+      margin-right: auto;
     }
   `;
 }

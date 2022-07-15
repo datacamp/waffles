@@ -39,5 +39,10 @@ export function footerStyle() {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: ${tokens.spacing.small};
+
+    & button:first-of-type {
+      margin-right: 0;
+    }
   `;
 }
