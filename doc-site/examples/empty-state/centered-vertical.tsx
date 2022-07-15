@@ -20,7 +20,7 @@ function Example() {
       <Paragraph css={descriptionStyle}>
         Reach out to your admin to get relevant content assigned to you.
       </Paragraph>
-      <Button>Contact admin</Button>
+      <Button>Contact Admin</Button>
     </EmptyState>
   );
 }
