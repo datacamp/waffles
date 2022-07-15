@@ -106,14 +106,23 @@ export function footerStyle() {
     border-top: ${tokens.borderWidth.thin} solid
       ${hexToRgba(tokens.colors.navy, 0.15)};
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
+    gap: ${tokens.spacing.small} 0;
+
+    & div {
+      display: flex;
+      gap: ${tokens.spacing.small} 0;
+    }
   `;
 }
 
 export function buttonStyle() {
   return css`
+    flex-shrink: 1;
+
     &:not(:last-child) {
       margin-right: ${tokens.spacing.small};
     }
