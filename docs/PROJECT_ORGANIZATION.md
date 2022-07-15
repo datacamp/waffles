@@ -9,7 +9,6 @@ For troubleshooting purposes, all scripts can be run locally as `yarn <script-na
 | Script                 | What it does?                                                                                                                                         | Runs on CI |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | workbench              | Start **Workbench**, an isolated component development environment (see [guide](https://github.com/datacamp/waffles/blob/master/docs/DEVELOPMENT.md)) |            |
-| doc:dev                | Start _NextJS_ documentation in dev mode                                                                                                              |            |
 | test:unit              | Run _Jest_ unit tests in watch mode                                                                                                                   |            |
 | test:stories           | Run _Cypress_ **Stories** aka components e2e tests and a11y checks                                                                                    |            |
 | lint                   | Check codebase for common errors with _ESLint_                                                                                                        | ✅         |
@@ -19,6 +18,8 @@ For troubleshooting purposes, all scripts can be run locally as `yarn <script-na
 | build:copy-files       | Copy package.json and readme to `/dist` to be a part of npm package<br >ℹ️ To start it locally run `build` first                                      | ✅         |
 | build:package-json     | Put package.json in each CommonJS component directory created during build step to support tree shaking<br >ℹ️ To start it locally run `build` first  | ✅         |
 | doc:build              | Build optimized production version of documentation into `/build` directory<br >ℹ️ To start it locally run `build` first                              | ✅         |
+| doc:dev                | Start _NextJS_ documentation in dev mode                                                                                                              |            |
+| doc:local-prod         | Build _NextJS_ documentation for production and start locally                                                                                         |            |
 | test:unit:ci           | Run unit tests and generate code coverage report                                                                                                      | ✅         |
 | test:stories:ci        | Run e2e tests in headless browser<br >ℹ️ To start it locally run `build` first                                                                        | ✅         |
 | format:check           | Check if the codebase is properly formatted with _Prettier_                                                                                           | ✅         |
