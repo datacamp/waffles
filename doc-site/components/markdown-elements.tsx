@@ -139,7 +139,8 @@ function Section({ children }: ContentProps) {
 
   // Iterate over children to handle , find H2 element, if it exists
   const mainSectionHeading = React.Children.toArray(children).map((child) => {
-    return child && (child as SectionWithHeadingChild).type.name === 'H2'
+    return child &&
+      (child as SectionWithHeadingChild).type.name.toLowerCase() === 'h2'
       ? (child as SectionWithHeadingChild).props.children
       : '';
   });
