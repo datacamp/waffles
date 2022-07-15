@@ -249,9 +249,6 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -259,15 +256,7 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  gap: 8px 0;
-}
-
-.emotion-4 div {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px 0;
+  gap: 8px;
 }
 
 .emotion-5 {
@@ -349,8 +338,8 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   cursor: default;
 }
 
-.emotion-5:not(:last-child) {
-  margin-right: 8px;
+.emotion-5:first-of-type {
+  margin-right: auto;
 }
 
 .emotion-7 {
@@ -440,8 +429,8 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   background-color: #00D649;
 }
 
-.emotion-7:not(:last-child) {
-  margin-right: 8px;
+.emotion-7:first-of-type {
+  margin-right: auto;
 }
 
 <section
@@ -743,9 +732,6 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -753,15 +739,7 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  gap: 8px 0;
-}
-
-.emotion-4 div {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px 0;
+  gap: 8px;
 }
 
 .emotion-5 {
@@ -843,8 +821,8 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   cursor: default;
 }
 
-.emotion-5:not(:last-child) {
-  margin-right: 8px;
+.emotion-5:first-of-type {
+  margin-right: auto;
 }
 
 .emotion-7 {
@@ -934,8 +912,8 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   background-color: #00D649;
 }
 
-.emotion-7:not(:last-child) {
-  margin-right: 8px;
+.emotion-7:first-of-type {
+  margin-right: auto;
 }
 
 <section
