@@ -67,26 +67,29 @@ const itemBaseStyle = css`
 const regularVariantMap = {
   primary: {
     color: tokens.colors.navy,
-    hoverColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
-    activeColor: tokens.colors.greySubtle,
+    hoverBackgroundColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
+    activeBackgroundColor: tokens.colors.greySubtle,
   },
   destructive: {
     color: tokens.colors.redDarkText,
-    hoverColor: hexToRgba(tokens.colors.redDarkText, tokens.opacity.low),
-    activeColor: tokens.colors.greySubtle,
+    hoverBackgroundColor: hexToRgba(
+      tokens.colors.redDarkText,
+      tokens.opacity.low,
+    ),
+    activeBackgroundColor: tokens.colors.greySubtle,
   },
 };
 
 const invertedVariantMap = {
   primary: {
     color: tokens.colors.white,
-    hoverColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
-    activeColor: hexToRgba(tokens.colors.white, 0.05),
+    hoverBackgroundColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
+    activeBackgroundColor: hexToRgba(tokens.colors.white, 0.05),
   },
   destructive: {
     color: tokens.colors.redLight,
-    hoverColor: hexToRgba(tokens.colors.redLight, 0.15),
-    activeColor: hexToRgba(tokens.colors.white, 0.05),
+    hoverBackgroundColor: hexToRgba(tokens.colors.redLight, 0.15),
+    activeBackgroundColor: hexToRgba(tokens.colors.white, 0.05),
   },
 };
 
@@ -108,10 +111,12 @@ export function itemStyle({
   return css`
     ${itemBaseStyle}
     color: ${variantMap[variant].color};
-    background: ${isActive ? variantMap[variant].activeColor : 'transparent'};
+    background: ${isActive
+      ? variantMap[variant].activeBackgroundColor
+      : 'transparent'};
 
     &:hover:not(:disabled) {
-      background-color: ${variantMap[variant].hoverColor};
+      background-color: ${variantMap[variant].hoverBackgroundColor};
     }
 
     ${isFocusVisible &&

@@ -30,31 +30,37 @@ const regularVariantMap = {
   primary: {
     color: tokens.colors.navy,
     backgroundColor: tokens.colors.green,
-    hoverColor: hexColorShade(tokens.colors.green, -tokens.opacity.low),
+    hoverBackgroundColor: hexColorShade(
+      tokens.colors.green,
+      -tokens.opacity.low,
+    ),
     borderColor: 'transparent',
   },
   secondary: {
     color: tokens.colors.navy,
     backgroundColor: 'transparent',
-    hoverColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
+    hoverBackgroundColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
     borderColor: hexToRgba(tokens.colors.navy, tokens.opacity.high),
   },
   plain: {
     color: tokens.colors.blueDarkText,
     backgroundColor: 'transparent',
-    hoverColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
+    hoverBackgroundColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
     borderColor: 'transparent',
   },
   destructive: {
     color: tokens.colors.navy,
     backgroundColor: tokens.colors.red,
-    hoverColor: hexColorShade(tokens.colors.red, -tokens.opacity.low),
+    hoverBackgroundColor: hexColorShade(tokens.colors.red, -tokens.opacity.low),
     borderColor: 'transparent',
   },
   upgrade: {
     color: tokens.colors.white,
     backgroundColor: tokens.colors.purple,
-    hoverColor: hexColorShade(tokens.colors.purple, -tokens.opacity.low),
+    hoverBackgroundColor: hexColorShade(
+      tokens.colors.purple,
+      -tokens.opacity.low,
+    ),
     borderColor: 'transparent',
   },
 };
@@ -62,27 +68,33 @@ const regularVariantMap = {
 const invertedVariantMap = {
   primary: {
     ...regularVariantMap.primary,
-    hoverColor: hexColorShade(tokens.colors.green, tokens.opacity.low),
+    hoverBackgroundColor: hexColorShade(
+      tokens.colors.green,
+      tokens.opacity.low,
+    ),
   },
   secondary: {
     color: tokens.colors.white,
     backgroundColor: 'transparent',
-    hoverColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
+    hoverBackgroundColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
     borderColor: hexToRgba(tokens.colors.white, tokens.opacity.high),
   },
   plain: {
     color: tokens.colors.blue,
     backgroundColor: 'transparent',
-    hoverColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
+    hoverBackgroundColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
     borderColor: 'transparent',
   },
   destructive: {
     ...regularVariantMap.destructive,
-    hoverColor: hexColorShade(tokens.colors.red, tokens.opacity.low),
+    hoverBackgroundColor: hexColorShade(tokens.colors.red, tokens.opacity.low),
   },
   upgrade: {
     ...regularVariantMap.upgrade,
-    hoverColor: hexColorShade(tokens.colors.purple, tokens.opacity.low),
+    hoverBackgroundColor: hexColorShade(
+      tokens.colors.purple,
+      tokens.opacity.low,
+    ),
   },
 };
 
@@ -159,7 +171,7 @@ export function buttonStyle({
     border-color: ${variantMap[variant].borderColor};
 
     &:hover:not(:disabled) {
-      background-color: ${variantMap[variant].hoverColor};
+      background-color: ${variantMap[variant].hoverBackgroundColor};
     }
 
     &:active:not(:disabled) {
@@ -178,7 +190,7 @@ export function buttonStyle({
       }
 
       &:active:focus {
-        background-color: ${variantMap[variant].hoverColor};
+        background-color: ${variantMap[variant].hoverBackgroundColor};
       }
     `}
   `;
