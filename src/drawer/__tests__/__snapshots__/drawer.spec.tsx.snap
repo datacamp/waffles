@@ -245,6 +245,10 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -255,6 +259,15 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  gap: 8px 0;
+}
+
+.emotion-4 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px 0;
 }
 
 .emotion-5 {
@@ -302,6 +315,9 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   color: #05192D;
   background-color: #03EF62;
   border-color: transparent;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 }
 
 .emotion-5::after {
@@ -382,6 +398,9 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   color: #05192D;
   background-color: #03EF62;
   border-color: transparent;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 }
 
 .emotion-7::after {
@@ -720,6 +739,10 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -730,6 +753,15 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  gap: 8px 0;
+}
+
+.emotion-4 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px 0;
 }
 
 .emotion-5 {
@@ -777,6 +809,9 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   color: #05192D;
   background-color: #03EF62;
   border-color: transparent;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 }
 
 .emotion-5::after {
@@ -857,6 +892,9 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   color: #05192D;
   background-color: #03EF62;
   border-color: transparent;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 }
 
 .emotion-7::after {

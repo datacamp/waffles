@@ -239,6 +239,9 @@ exports[`AlertDialogTest renders snapshot 1`] = `
   color: #05192D;
   background-color: #03EF62;
   border-color: transparent;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 }
 
 .emotion-5::after {
