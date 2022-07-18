@@ -1,8 +1,8 @@
 # Contributing
 
-🙌 _Thanks for wanting to contribute to the future of Waffles Design System, contributions are always welcome!_ 🙌
+🙌 **Thanks for wanting to contribute to the future of Waffles Design System, contributions are always welcome!** 🙌
 
-## I have a bug fix, minor change or enhancement
+## I have a _bug fix_ / _minor change_ / _enhancement_ contribution
 
 Great! Please take a look at the below points to help avoid any potential blockers or issues in having your PR merged:
 
@@ -14,10 +14,10 @@ Great! Please take a look at the below points to help avoid any potential blocke
 
 Consult our [Project Organization](https://github.com/datacamp/waffles/blob/master/docs/PROJECT_ORGANIZATION.md) and [Development Guidelines](https://github.com/datacamp/waffles/blob/master/docs/DEVELOPMENT.md) for more information about our project is structured and various aspects of it work.
 
-## I have a new component / style change / big feature
+## I have a _new component_ / _style change_ / _big feature_ contribution
 
-Whilst we would love for everyone to be able to contribute new components or styling updates etc, these major changes require design sign off and heavy consideration and so you are best off reaching out to us so we can discuss it first.
+Whilst we would love for everyone to be able to contribute new components or styling updates etc, these major changes require design sign off and heavy consideration and so you are best off reaching out over Slack so we can discuss it together.
 
-## I have a bug report / feature request / question
+## I have a _bug report_ / _feature request_ / _question_
 
-We are more than happy to help! The best way to report these bugs or create requests is to ping our team on slack or raise an issue through service desk.
+We are more than happy to help! The best way to report these bugs or create requests is to ping our team on Slack or raise an issue through [Service Desk](https://datacamp.atlassian.net/servicedesk/customer/portal/1).
