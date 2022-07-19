@@ -1,6 +1,6 @@
 import Layout from '../../components/content-layout';
 import BestPractices from '../../components/best-practices';
-import AllAssetTypes from '../../components/all-asset-types';
+import AssetGrid from '../../components/asset-grid';
 import Example from '../../components/example';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
@@ -28,7 +28,29 @@ They will also inherit the `color` of their container by default too.
   }
 />
 
-<AllAssetTypes />
+## Assignment Assets
+
+<AssetGrid assetType="Assignment" />
+
+## 3D Assets
+
+<AssetGrid assetType="3d" />
+
+## ALPA Loop Assets
+
+<AssetGrid assetType="Alpa" maxColumns="2" hasDarkBackground />
+
+## Logo Assets
+
+<AssetGrid assetType="Logo" maxColumns="3" />
+
+## Logomark Assets
+
+<AssetGrid assetType="Logomark" />
+
+## Other Assets
+
+<AssetGrid assetType="Other" />
 
 ## Examples
 
