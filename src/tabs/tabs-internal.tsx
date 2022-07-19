@@ -106,7 +106,7 @@ function TabsInternal({
   }
 
   function handleClick(tabKey: React.Key) {
-    onChange && onChange(tabKey);
+    onChange?.(tabKey);
   }
 
   // Manage navigation between tabs with arrow keys

@@ -35,7 +35,7 @@ function NotificationInternal({
   const isAnimating = useAnimateTransition(isOpen, 400);
 
   function handleClose() {
-    onClose && onClose();
+    onClose?.();
     setIsOpen(false);
   }
 

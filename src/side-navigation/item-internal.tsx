@@ -54,7 +54,7 @@ function Item<T extends React.ElementType = 'a'>(
     if (sidebarState) {
       sidebarState.onClose();
     }
-    onClick && onClick(event);
+    onClick?.(event);
   }
 
   return (
