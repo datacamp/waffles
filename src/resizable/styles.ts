@@ -13,7 +13,11 @@ export function wrapperStyle() {
   `;
 }
 
-export function dividerStyle() {
+type DividerStyleOptions = {
+  isFocusVisible: boolean;
+};
+
+export function dividerStyle({ isFocusVisible }: DividerStyleOptions) {
   return css`
     flex-shrink: 0;
     display: flex;
@@ -21,10 +25,17 @@ export function dividerStyle() {
     background-color: ${tokens.colors.red};
     cursor: col-resize;
     transition: background-color 150ms ease-in-out;
+    outline: 0;
 
     &:hover {
       background-color: ${tokens.colors.blueLight};
     }
+
+    ${isFocusVisible &&
+    css`
+      outline: 2px solid ${tokens.colors.blueDark};
+      outline-offset: -1px;
+    `}
   `;
 }
 

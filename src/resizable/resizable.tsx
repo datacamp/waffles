@@ -9,9 +9,9 @@ import React, {
 import Subsection from './subsection';
 import Divider from './divider';
 import Container from './container';
-import { DIVIDER_WIDTH } from './constants';
+import { DIVIDER_WIDTH, KEYBOARD_STEP } from './constants';
 
-// Calculate combined width of subsections up to provided divider index
+// Calculate combined width of subsections up to provided index
 function combineSubsectionsWidths(
   subsectionsWidths: number[],
   dividerIndex: number,
@@ -102,9 +102,9 @@ function Resizable({ children, minWidth = 100 }: ResizableProps) {
                 combineSubsectionsWidths(previousWidths, dividerIndex + 1) -
                 normalizedDividerPosition;
               // Update the widths of subsections adjacent to currently dragged divider
-              updatedWidths[currentDividerIndex.current] =
+              updatedWidths[dividerIndex] =
                 previousWidths[dividerIndex] - difference;
-              updatedWidths[currentDividerIndex.current + 1] =
+              updatedWidths[dividerIndex + 1] =
                 previousWidths[dividerIndex + 1] + difference;
 
               return [...updatedWidths];
@@ -140,6 +140,39 @@ function Resizable({ children, minWidth = 100 }: ResizableProps) {
     [handleDrag, handleStopDrag],
   );
 
+  const handleKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLDivElement>, dividerIndex: number) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') {
+        return;
+      }
+
+      setSubsectionsWidths((previousWidths) => {
+        const updatedWidths = previousWidths;
+        const direction = event.key === 'ArrowRight' ? -1 : 1;
+
+        // Calculate width of adjacent subsections before and after divider
+        const subsectionBeforeNewWidth =
+          previousWidths[dividerIndex] - KEYBOARD_STEP * direction;
+        const subsectionAfterNewWidth =
+          previousWidths[dividerIndex + 1] + KEYBOARD_STEP * direction;
+
+        // Don't allow subsections to be smaller than minWidth
+        if (
+          Math.min(subsectionBeforeNewWidth, subsectionAfterNewWidth) <=
+          minWidth
+        ) {
+          return previousWidths;
+        } else {
+          updatedWidths[dividerIndex] = subsectionBeforeNewWidth;
+          updatedWidths[dividerIndex + 1] = subsectionAfterNewWidth;
+
+          return [...updatedWidths];
+        }
+      });
+    },
+    [minWidth],
+  );
+
   return (
     <Container ref={wrapperRef}>
       {Children.map(children, (child, index) => {
@@ -147,7 +180,10 @@ function Resizable({ children, minWidth = 100 }: ResizableProps) {
           return (
             <>
               <Subsection width={subsectionsWidths[index]}>{child}</Subsection>
-              <Divider onStartDrag={(event) => handleStartDrag(event, index)} />
+              <Divider
+                onStartDrag={(event) => handleStartDrag(event, index)}
+                onKeyDown={(event) => handleKeyDown(event, index)}
+              />
             </>
           );
         }
