@@ -52,7 +52,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
     if (sidebarState) {
       sidebarState.onClose();
     }
-    onClick && onClick(event);
+    onClick?.(event);
   }
 
   // Inject isSubcategoryItem prop to every child
