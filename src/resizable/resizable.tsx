@@ -20,14 +20,18 @@ type ResizableProps = {
   children: JSX.Element[];
   minWidth?: number;
   initialProportions?: number[];
+  onResizeStart?: () => void;
+  onResizeEnd?: () => void;
 };
 
 function Resizable({
   children,
   minWidth = 100,
   initialProportions,
+  onResizeStart,
+  onResizeEnd,
 }: ResizableProps) {
-  const containerWidth = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   // Number of provided subsections, with empty ones filtered out
   const subsectionCount = React.Children.toArray(children).length;
   // Index of currently dragged splitter, starts with 0
@@ -50,18 +54,21 @@ function Resizable({
       );
     }
 
-    if (containerWidth.current) {
-      const wrapperWidth = containerWidth.current.getBoundingClientRect().width;
+    if (containerRef.current) {
+      const containerWidth = containerRef.current.getBoundingClientRect().width;
 
       if (initialProportions) {
         const updatedWidths = calculateProportianalWidths(
-          wrapperWidth,
+          containerWidth,
           initialProportions,
           minWidth,
         );
         setSubsectionsWidths(updatedWidths);
       } else {
-        const updatedWidths = splitWidthsEqually(wrapperWidth, subsectionCount);
+        const updatedWidths = splitWidthsEqually(
+          containerWidth,
+          subsectionCount,
+        );
         setSubsectionsWidths(updatedWidths);
       }
     }
@@ -73,16 +80,16 @@ function Resizable({
         return;
       }
 
-      if (containerWidth.current) {
+      if (containerRef.current) {
         event.stopPropagation();
         event.preventDefault(); // Prevents text from being selected
 
         setSubsectionsWidths((previousWidths) => {
-          if (containerWidth.current && currentDividerIndex.current !== null) {
+          if (containerRef.current && currentDividerIndex.current !== null) {
             const updatedWidths = previousWidths;
             const dividerIndex = currentDividerIndex.current;
             const wrapperBoundingBox =
-              containerWidth.current.getBoundingClientRect();
+              containerRef.current.getBoundingClientRect();
 
             // Set min and max divider positions, so it can't be dragged beyond container boundaries
             let minDividerPosition = 0;
@@ -140,8 +147,10 @@ function Resizable({
 
       document.removeEventListener('mousemove', handleDrag);
       document.removeEventListener('mouseup', handleStopDrag);
+
+      onResizeEnd?.();
     },
-    [handleDrag],
+    [handleDrag, onResizeEnd],
   );
 
   const handleStartDrag = useCallback(
@@ -151,8 +160,10 @@ function Resizable({
 
       document.addEventListener('mousemove', handleDrag);
       document.addEventListener('mouseup', handleStopDrag);
+
+      onResizeStart?.();
     },
-    [handleDrag, handleStopDrag],
+    [handleDrag, handleStopDrag, onResizeStart],
   );
 
   const handleKeyDown = useCallback(
@@ -160,6 +171,8 @@ function Resizable({
       if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') {
         return;
       }
+
+      onResizeStart?.();
 
       setSubsectionsWidths((previousWidths) => {
         const updatedWidths = previousWidths;
@@ -184,12 +197,16 @@ function Resizable({
           return [...updatedWidths];
         }
       });
+
+      onResizeEnd?.();
     },
-    [minWidth],
+    [minWidth, onResizeStart, onResizeEnd],
   );
 
+  // To eleminate all kinds of rounding errors last subsection always takes the remaining space
+  // Therefore width doesn't have to be passed explicitly
   return (
-    <Container ref={containerWidth}>
+    <Container ref={containerRef}>
       {Children.map(children, (child, index) => {
         if (index < subsectionCount - 1) {
           return (
