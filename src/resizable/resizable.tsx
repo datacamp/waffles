@@ -6,32 +6,30 @@ import React, {
   Children,
 } from 'react';
 
+import {
+  combineSubsectionsWidths,
+  calculateProportianalWidths,
+  splitWidthsEqually,
+} from './utils';
 import Subsection from './subsection';
 import Divider from './divider';
 import Container from './container';
-import { DIVIDER_WIDTH, KEYBOARD_STEP } from './constants';
-
-// Calculate combined width of subsections up to provided index
-function combineSubsectionsWidths(
-  subsectionsWidths: number[],
-  dividerIndex: number,
-) {
-  return subsectionsWidths
-    .slice(0, dividerIndex)
-    .reduce((combinedWidths, width) => {
-      return combinedWidths + width;
-    }, 0);
-}
+import { KEYBOARD_STEP } from './constants';
 
 type ResizableProps = {
   children: JSX.Element[];
   minWidth?: number;
+  initialProportions?: number[];
 };
 
-function Resizable({ children, minWidth = 100 }: ResizableProps) {
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  // Number of provided subsections
-  const subsectionCount = React.Children.count(children);
+function Resizable({
+  children,
+  minWidth = 100,
+  initialProportions,
+}: ResizableProps) {
+  const containerWidth = useRef<HTMLDivElement>(null);
+  // Number of provided subsections, with empty ones filtered out
+  const subsectionCount = React.Children.toArray(children).length;
   // Index of currently dragged splitter, starts with 0
   // No splitter is being dragged if it's null
   // Required to calculate widths of adjacent subsections, e.g. splitter with index 1 is between subsection 1 and 2
@@ -42,15 +40,32 @@ function Resizable({ children, minWidth = 100 }: ResizableProps) {
   );
 
   useEffect(() => {
-    if (wrapperRef.current) {
-      // Equally split widths of all subsections to fill width of the whole container
-      const wrapperWidth = wrapperRef.current.getBoundingClientRect().width;
-      const singleElementWidth =
-        (wrapperWidth - DIVIDER_WIDTH * (subsectionCount - 1)) /
-        subsectionCount;
-      setSubsectionsWidths(Array(subsectionCount).fill(singleElementWidth));
+    if (subsectionCount < 2) {
+      throw new Error('Resizable should contain at least 2 subsections.');
     }
-  }, [subsectionCount]);
+
+    if (initialProportions && initialProportions.length !== subsectionCount) {
+      throw new Error(
+        'The lenght of initialProportions array must be the same as the number of subsections.',
+      );
+    }
+
+    if (containerWidth.current) {
+      const wrapperWidth = containerWidth.current.getBoundingClientRect().width;
+
+      if (initialProportions) {
+        const updatedWidths = calculateProportianalWidths(
+          wrapperWidth,
+          initialProportions,
+          minWidth,
+        );
+        setSubsectionsWidths(updatedWidths);
+      } else {
+        const updatedWidths = splitWidthsEqually(wrapperWidth, subsectionCount);
+        setSubsectionsWidths(updatedWidths);
+      }
+    }
+  }, [initialProportions, subsectionCount, minWidth]);
 
   const handleDrag = useCallback(
     (event: MouseEvent) => {
@@ -58,16 +73,16 @@ function Resizable({ children, minWidth = 100 }: ResizableProps) {
         return;
       }
 
-      if (wrapperRef.current) {
+      if (containerWidth.current) {
         event.stopPropagation();
         event.preventDefault(); // Prevents text from being selected
 
         setSubsectionsWidths((previousWidths) => {
-          if (wrapperRef.current && currentDividerIndex.current !== null) {
+          if (containerWidth.current && currentDividerIndex.current !== null) {
             const updatedWidths = previousWidths;
             const dividerIndex = currentDividerIndex.current;
             const wrapperBoundingBox =
-              wrapperRef.current.getBoundingClientRect();
+              containerWidth.current.getBoundingClientRect();
 
             // Set min and max divider positions, so it can't be dragged beyond container boundaries
             let minDividerPosition = 0;
@@ -174,7 +189,7 @@ function Resizable({ children, minWidth = 100 }: ResizableProps) {
   );
 
   return (
-    <Container ref={wrapperRef}>
+    <Container ref={containerWidth}>
       {Children.map(children, (child, index) => {
         if (index < subsectionCount - 1) {
           return (
