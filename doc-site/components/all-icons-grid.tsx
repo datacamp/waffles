@@ -87,47 +87,45 @@ function AllIconsGrid() {
 
   return (
     <ErrorBoundary>
-      <section css={wrapperStyle}>
-        <div css={regularIconsPreview}>
-          {Object.entries(regular).map((iconData) => {
-            const [name, Icon] = iconData;
-            return (
-              <IconPreview
-                key={name}
-                name={name}
-                icon={<Icon />}
-                isLabelVisible={allLabelsVisible}
-              />
-            );
-          })}
-        </div>
-        <div css={invertedIconsPreview}>
-          {Object.entries(inverted).map((iconData) => {
-            const [name, Icon] = iconData;
-            return (
-              <IconPreview
-                key={name}
-                name={name}
-                icon={<Icon />}
-                isLabelVisible={allLabelsVisible}
-                inverted
-              />
-            );
-          })}
-        </div>
-        <PreviewControls>
-          <Button
-            variant="plain"
-            size="small"
-            iconLeft={allLabelsVisible ? <Hidden /> : <Visible />}
-            onClick={() => setLabelsVisiblity(!allLabelsVisible)}
-          >
-            <div css={buttonContentStyle}>
-              {allLabelsVisible ? 'Hide' : 'Show'} Names
-            </div>
-          </Button>
-        </PreviewControls>
-      </section>
+      <div css={regularIconsPreview}>
+        {Object.entries(regular).map((iconData) => {
+          const [name, Icon] = iconData;
+          return (
+            <IconPreview
+              key={name}
+              name={name}
+              icon={<Icon />}
+              isLabelVisible={allLabelsVisible}
+            />
+          );
+        })}
+      </div>
+      <div css={invertedIconsPreview}>
+        {Object.entries(inverted).map((iconData) => {
+          const [name, Icon] = iconData;
+          return (
+            <IconPreview
+              key={name}
+              name={name}
+              icon={<Icon />}
+              isLabelVisible={allLabelsVisible}
+              inverted
+            />
+          );
+        })}
+      </div>
+      <PreviewControls>
+        <Button
+          variant="plain"
+          size="small"
+          iconLeft={allLabelsVisible ? <Hidden /> : <Visible />}
+          onClick={() => setLabelsVisiblity(!allLabelsVisible)}
+        >
+          <div css={buttonContentStyle}>
+            {allLabelsVisible ? 'Hide' : 'Show'} Names
+          </div>
+        </Button>
+      </PreviewControls>
     </ErrorBoundary>
   );
 }
