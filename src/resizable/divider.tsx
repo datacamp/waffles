@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFocusRing } from '@react-aria/focus';
 
-import { dividerStyle } from './styles';
+import { dividerStyle, dividerLineStyle } from './styles';
 import Resizable from './resizable';
 
 type DividerProps = {
@@ -23,7 +23,9 @@ function Divider({ orientation, onStartDrag, onKeyDown }: DividerProps) {
       onMouseDown={onStartDrag}
       onKeyDown={onKeyDown}
       css={dividerStyle({ orientation, isFocusVisible })}
-    ></div>
+    >
+      <div css={dividerLineStyle({ orientation })} />
+    </div>
   );
 }
 

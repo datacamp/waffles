@@ -1,4 +1,4 @@
-import { DIVIDER_SIZE } from './constants';
+import { DIVIDER_HITBOX_SIZE } from './constants';
 
 // Calculate combined width or height of subsections up to provided index
 export function combineSubsectionsDimensions(
@@ -26,8 +26,8 @@ export function calculateProportianalDimensions(
     // For first and last subsection subtract only half of divider size
     const subtractedSize =
       index === 0 || index === initialProportions.length - 1
-        ? DIVIDER_SIZE / 2
-        : DIVIDER_SIZE;
+        ? DIVIDER_HITBOX_SIZE / 2
+        : DIVIDER_HITBOX_SIZE;
     // Don't allow size to be smaller than minSize
     return Math.max(
       proportion * singleProportionSize - subtractedSize,
@@ -42,7 +42,8 @@ export function splitDimensionEqually(
   subsectionCount: number,
 ) {
   const singleElementSize =
-    (containerSize - DIVIDER_SIZE * (subsectionCount - 1)) / subsectionCount;
+    (containerSize - DIVIDER_HITBOX_SIZE * (subsectionCount - 1)) /
+    subsectionCount;
   return Array(subsectionCount).fill(singleElementSize);
 }
 
@@ -54,11 +55,11 @@ export function calculateProportionsFromDimensions(
     subsectionsDimensions.reduce((total, size) => {
       return total + size;
     }, 0) +
-    DIVIDER_SIZE * (subsectionsDimensions.length - 1);
+    DIVIDER_HITBOX_SIZE * (subsectionsDimensions.length - 1);
 
   const proportions = subsectionsDimensions.map((size, index) => {
     const actualSize =
-      index === 0 ? size + DIVIDER_SIZE / 2 : size + DIVIDER_SIZE;
+      index === 0 ? size + DIVIDER_HITBOX_SIZE / 2 : size + DIVIDER_HITBOX_SIZE;
     const percentage = Math.round((actualSize / combinedSize) * 100);
     return percentage;
   });
