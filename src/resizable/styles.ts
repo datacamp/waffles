@@ -1,9 +1,10 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
+import { hexToRgba } from '../helpers';
 
 import Resizable from './resizable';
-import { DIVIDER_SIZE } from './constants';
+import { DIVIDER_HITBOX_SIZE, DIVIDER_LINE_SIZE } from './constants';
 
 type ContainerStyleOptions = {
   orientation: NonNullable<
@@ -21,6 +22,11 @@ export function containerStyle({ orientation }: ContainerStyleOptions) {
   `;
 }
 
+const selectedDividerStyle = css`
+  background-color: ${tokens.colors.blueDark};
+  box-shadow: 0 0 0 1px ${tokens.colors.blueDark};
+`;
+
 type DividerStyleOptions = {
   orientation: NonNullable<
     React.ComponentProps<typeof Resizable>['orientation']
@@ -34,26 +40,43 @@ export function dividerStyle({
 }: DividerStyleOptions) {
   const adjustedDimension = `${
     orientation === 'vertical' ? 'width' : 'height'
-  }: ${DIVIDER_SIZE}px`;
+  }: ${DIVIDER_HITBOX_SIZE}px`;
 
   return css`
     flex-shrink: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
     ${adjustedDimension};
-    background-color: ${tokens.colors.red};
     cursor: ${orientation === 'vertical' ? 'col-resize' : 'row-resize'};
-    transition: background-color 150ms ease-in-out;
     outline: 0;
-
-    &:hover {
-      background-color: ${tokens.colors.blueLight};
-    }
+    overflow: hidden;
 
     ${isFocusVisible &&
     css`
-      outline: 2px solid ${tokens.colors.blueDark};
-      outline-offset: -1px;
+      & div {
+        ${selectedDividerStyle}
+      }
     `}
+
+    &:hover div {
+      ${selectedDividerStyle}
+    }
+  `;
+}
+
+type DividerLineStyleOptions = {
+  orientation: NonNullable<
+    React.ComponentProps<typeof Resizable>['orientation']
+  >;
+};
+
+export function dividerLineStyle({ orientation }: DividerLineStyleOptions) {
+  return css`
+    ${orientation === 'vertical' ? 'width' : 'height'}: 2px;
+    ${orientation === 'vertical' ? 'height' : 'width'}: 100%;
+    background-color: ${hexToRgba(tokens.colors.navy, 0.15)};
+    transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
   `;
 }
 
@@ -73,12 +96,21 @@ export function subsectionStyle({
   const adjustedDimension = `${
     orientation === 'vertical' ? 'width' : 'height'
   }: ${dimension ? `${dimension}px` : 'auto'}`;
+  const marginHitboxCompensation =
+    (DIVIDER_HITBOX_SIZE - DIVIDER_LINE_SIZE) / 2;
 
   return css`
     ${isLast ? 'flex-grow: 1' : 'flex-shrink: 0'};
     ${adjustedDimension};
-    background-color: ${isLast
-      ? tokens.colors.beigeMedium
-      : tokens.colors.beigeLight};
+    margin-left: -${marginHitboxCompensation}px;
+    margin-right: -${marginHitboxCompensation}px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   `;
 }
