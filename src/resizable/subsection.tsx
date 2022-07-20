@@ -8,6 +8,7 @@ type SubsectionProps = {
   orientation: NonNullable<
     React.ComponentProps<typeof Resizable>['orientation']
   >;
+  isDragging: boolean;
   dimension?: number;
   isLast?: boolean;
 };
@@ -16,10 +17,11 @@ function Subsection({
   children,
   orientation,
   dimension,
+  isDragging,
   isLast = false,
 }: SubsectionProps) {
   return (
-    <div css={subsectionStyle({ orientation, dimension, isLast })}>
+    <div css={subsectionStyle({ orientation, dimension, isDragging, isLast })}>
       {children}
     </div>
   );

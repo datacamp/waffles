@@ -8,11 +8,17 @@ type DividerProps = {
   orientation: NonNullable<
     React.ComponentProps<typeof Resizable>['orientation']
   >;
+  isDragging: boolean;
   onStartDrag: React.MouseEventHandler<HTMLDivElement>;
   onKeyDown: React.KeyboardEventHandler<HTMLDivElement>;
 };
 
-function Divider({ orientation, onStartDrag, onKeyDown }: DividerProps) {
+function Divider({
+  orientation,
+  isDragging,
+  onStartDrag,
+  onKeyDown,
+}: DividerProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
 
   return (
@@ -22,7 +28,7 @@ function Divider({ orientation, onStartDrag, onKeyDown }: DividerProps) {
       {...focusProps}
       onMouseDown={onStartDrag}
       onKeyDown={onKeyDown}
-      css={dividerStyle({ orientation, isFocusVisible })}
+      css={dividerStyle({ orientation, isFocusVisible, isDragging })}
     >
       <div css={dividerLineStyle({ orientation })} />
     </div>

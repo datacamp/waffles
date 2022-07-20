@@ -32,11 +32,13 @@ type DividerStyleOptions = {
     React.ComponentProps<typeof Resizable>['orientation']
   >;
   isFocusVisible: boolean;
+  isDragging: boolean;
 };
 
 export function dividerStyle({
   orientation,
   isFocusVisible,
+  isDragging,
 }: DividerStyleOptions) {
   const adjustedDimension = `${
     orientation === 'vertical' ? 'width' : 'height'
@@ -51,6 +53,13 @@ export function dividerStyle({
     cursor: ${orientation === 'vertical' ? 'col-resize' : 'row-resize'};
     outline: 0;
     overflow: hidden;
+
+    ${isDragging &&
+    css`
+      & div {
+        ${selectedDividerStyle}
+      }
+    `}
 
     ${isFocusVisible &&
     css`
@@ -85,12 +94,14 @@ type SubsectionStyleOptions = {
     React.ComponentProps<typeof Resizable>['orientation']
   >;
   dimension?: number;
+  isDragging: boolean;
   isLast: boolean;
 };
 
 export function subsectionStyle({
   orientation,
   dimension,
+  isDragging,
   isLast,
 }: SubsectionStyleOptions) {
   const adjustedDimension = `${
@@ -101,6 +112,8 @@ export function subsectionStyle({
 
   return css`
     ${isLast ? 'flex-grow: 1' : 'flex-shrink: 0'};
+    ${isDragging &&
+    `cursor: ${orientation === 'vertical' ? 'col-resize' : 'row-resize'}`};
     ${adjustedDimension};
     margin-left: -${marginHitboxCompensation}px;
     margin-right: -${marginHitboxCompensation}px;

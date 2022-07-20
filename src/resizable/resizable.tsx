@@ -51,12 +51,22 @@ function Resizable({
   onResizeEnd,
 }: ResizableProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+
   // Number of provided subsections, with empty ones filtered out
   const subsectionCount = React.Children.toArray(children).length;
+
   // Index of currently dragged splitter, starts with 0
   // No splitter is being dragged if it's null
   // Required to calculate widths of adjacent subsections, e.g. splitter with index 1 is between subsection 1 and 2
+  // Preserved between re-renders, manually updated via event handlers
   const currentDividerIndex = useRef<number | null>(null);
+
+  // Used to improve visual behavior of cursor and divider higlighting
+  // So they are always visible when divider is being dragged
+  const [draggedDividerIndex, setDraggedDividerIndex] = useState<number | null>(
+    null,
+  );
+
   // Array of dimensions (in pixels) of all subsections
   // Depending on orientation they are eaither widths or heights
   const [subsectionsDimensions, setSubsectionsDimensions] = useState(
@@ -173,6 +183,7 @@ function Resizable({
     (event: MouseEvent) => {
       event.stopPropagation();
       currentDividerIndex.current = null;
+      setDraggedDividerIndex(null);
 
       document.removeEventListener('mousemove', handleDrag);
       document.removeEventListener('mouseup', handleStopDrag);
@@ -186,6 +197,7 @@ function Resizable({
     (event: React.MouseEvent<HTMLDivElement, MouseEvent>, index: number) => {
       event.stopPropagation();
       currentDividerIndex.current = index;
+      setDraggedDividerIndex(index);
 
       document.addEventListener('mousemove', handleDrag);
       document.addEventListener('mouseup', handleStopDrag);
@@ -246,6 +258,7 @@ function Resizable({
               <Subsection
                 orientation={orientation}
                 dimension={subsectionsDimensions[index]}
+                isDragging={draggedDividerIndex !== null}
               >
                 {child}
               </Subsection>
@@ -253,12 +266,17 @@ function Resizable({
                 orientation={orientation}
                 onStartDrag={(event) => handleStartDrag(event, index)}
                 onKeyDown={(event) => handleKeyDown(event, index)}
+                isDragging={draggedDividerIndex === index}
               />
             </>
           );
         }
         return (
-          <Subsection orientation={orientation} isLast>
+          <Subsection
+            orientation={orientation}
+            isDragging={draggedDividerIndex !== null}
+            isLast
+          >
             {child}
           </Subsection>
         );
