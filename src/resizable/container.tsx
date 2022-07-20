@@ -1,17 +1,21 @@
 import React, { forwardRef } from 'react';
 
-import { wrapperStyle } from './styles';
+import { containerStyle } from './styles';
+import Resizable from './resizable';
 
 type ContainerProps = {
   children: React.ReactNode;
+  orientation: NonNullable<
+    React.ComponentProps<typeof Resizable>['orientation']
+  >;
 };
 
 function ContainerInternal(
-  { children }: ContainerProps,
+  { children, orientation }: ContainerProps,
   ref: React.Ref<HTMLDivElement>,
 ) {
   return (
-    <div ref={ref} css={wrapperStyle()}>
+    <div ref={ref} css={containerStyle({ orientation })}>
       {children}
     </div>
   );

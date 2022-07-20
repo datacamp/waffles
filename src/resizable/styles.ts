@@ -2,11 +2,19 @@ import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
 
-import { DIVIDER_WIDTH } from './constants';
+import Resizable from './resizable';
+import { DIVIDER_SIZE } from './constants';
 
-export function wrapperStyle() {
+type ContainerStyleOptions = {
+  orientation: NonNullable<
+    React.ComponentProps<typeof Resizable>['orientation']
+  >;
+};
+
+export function containerStyle({ orientation }: ContainerStyleOptions) {
   return css`
     display: flex;
+    flex-direction: ${orientation === 'vertical' ? 'row' : 'column'};
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -14,16 +22,26 @@ export function wrapperStyle() {
 }
 
 type DividerStyleOptions = {
+  orientation: NonNullable<
+    React.ComponentProps<typeof Resizable>['orientation']
+  >;
   isFocusVisible: boolean;
 };
 
-export function dividerStyle({ isFocusVisible }: DividerStyleOptions) {
+export function dividerStyle({
+  orientation,
+  isFocusVisible,
+}: DividerStyleOptions) {
+  const adjustedDimension = `${
+    orientation === 'vertical' ? 'width' : 'height'
+  }: ${DIVIDER_SIZE}px`;
+
   return css`
     flex-shrink: 0;
     display: flex;
-    width: ${DIVIDER_WIDTH}px;
+    ${adjustedDimension};
     background-color: ${tokens.colors.red};
-    cursor: col-resize;
+    cursor: ${orientation === 'vertical' ? 'col-resize' : 'row-resize'};
     transition: background-color 150ms ease-in-out;
     outline: 0;
 
@@ -40,14 +58,25 @@ export function dividerStyle({ isFocusVisible }: DividerStyleOptions) {
 }
 
 type SubsectionStyleOptions = {
-  width?: number;
+  orientation: NonNullable<
+    React.ComponentProps<typeof Resizable>['orientation']
+  >;
+  dimension?: number;
   isLast: boolean;
 };
 
-export function subsectionStyle({ width, isLast }: SubsectionStyleOptions) {
+export function subsectionStyle({
+  orientation,
+  dimension,
+  isLast,
+}: SubsectionStyleOptions) {
+  const adjustedDimension = `${
+    orientation === 'vertical' ? 'width' : 'height'
+  }: ${dimension ? `${dimension}px` : 'auto'}`;
+
   return css`
     ${isLast ? 'flex-grow: 1' : 'flex-shrink: 0'};
-    width: ${width ? `${width}px` : 'auto'};
+    ${adjustedDimension};
     background-color: ${isLast
       ? tokens.colors.beigeMedium
       : tokens.colors.beigeLight};
