@@ -1,2 +1,2 @@
-export const DIVIDER_WIDTH = 6;
+export const DIVIDER_SIZE = 6;
 export const KEYBOARD_STEP = 10;

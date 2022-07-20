@@ -7,18 +7,36 @@ import React, {
 } from 'react';
 
 import {
-  combineSubsectionsWidths,
-  calculateProportianalWidths,
-  splitWidthsEqually,
+  combineSubsectionsDimensions,
+  calculateProportianalDimensions,
+  splitDimensionEqually,
 } from './utils';
 import Subsection from './subsection';
 import Divider from './divider';
 import Container from './container';
 import { KEYBOARD_STEP } from './constants';
 
+const orientationMap = {
+  vertical: {
+    dimension: 'width',
+    offset: 'x',
+    mousePosition: 'clientX',
+    keyPositive: 'ArrowRight',
+    keyNegative: 'ArrowLeft',
+  },
+  horizontal: {
+    dimension: 'height',
+    offset: 'y',
+    mousePosition: 'clientY',
+    keyPositive: 'ArrowDown',
+    keyNegative: 'ArrowUp',
+  },
+} as const;
+
 type ResizableProps = {
   children: JSX.Element[];
-  minWidth?: number;
+  orientation?: 'vertical' | 'horizontal';
+  minSize?: number;
   initialProportions?: number[];
   onResizeStart?: () => void;
   onResizeEnd?: () => void;
@@ -26,7 +44,8 @@ type ResizableProps = {
 
 function Resizable({
   children,
-  minWidth = 100,
+  orientation = 'vertical',
+  minSize = 100,
   initialProportions,
   onResizeStart,
   onResizeEnd,
@@ -38,8 +57,9 @@ function Resizable({
   // No splitter is being dragged if it's null
   // Required to calculate widths of adjacent subsections, e.g. splitter with index 1 is between subsection 1 and 2
   const currentDividerIndex = useRef<number | null>(null);
-  // Array of widths (in pixels) of all subsections
-  const [subsectionsWidths, setSubsectionsWidths] = useState(
+  // Array of dimensions (in pixels) of all subsections
+  // Depending on orientation they are eaither widths or heights
+  const [subsectionsDimensions, setSubsectionsDimensions] = useState(
     Array(subsectionCount).fill(0),
   );
 
@@ -55,24 +75,28 @@ function Resizable({
     }
 
     if (containerRef.current) {
-      const containerWidth = containerRef.current.getBoundingClientRect().width;
+      // Total container width or height based on orientation
+      const containerSize =
+        containerRef.current.getBoundingClientRect()[
+          orientationMap[orientation].dimension
+        ];
 
       if (initialProportions) {
-        const updatedWidths = calculateProportianalWidths(
-          containerWidth,
+        const updatedDimensions = calculateProportianalDimensions(
+          containerSize,
           initialProportions,
-          minWidth,
+          minSize,
         );
-        setSubsectionsWidths(updatedWidths);
+        setSubsectionsDimensions(updatedDimensions);
       } else {
-        const updatedWidths = splitWidthsEqually(
-          containerWidth,
+        const updatedDimensions = splitDimensionEqually(
+          containerSize,
           subsectionCount,
         );
-        setSubsectionsWidths(updatedWidths);
+        setSubsectionsDimensions(updatedDimensions);
       }
     }
-  }, [initialProportions, subsectionCount, minWidth]);
+  }, [orientation, initialProportions, subsectionCount, minSize]);
 
   const handleDrag = useCallback(
     (event: MouseEvent) => {
@@ -84,36 +108,39 @@ function Resizable({
         event.stopPropagation();
         event.preventDefault(); // Prevents text from being selected
 
-        setSubsectionsWidths((previousWidths) => {
+        setSubsectionsDimensions((previousDimensions) => {
           if (containerRef.current && currentDividerIndex.current !== null) {
-            const updatedWidths = previousWidths;
+            const updatedDimensions = previousDimensions;
             const dividerIndex = currentDividerIndex.current;
-            const wrapperBoundingBox =
+            const containerBoundingBox =
               containerRef.current.getBoundingClientRect();
 
             // Set min and max divider positions, so it can't be dragged beyond container boundaries
             let minDividerPosition = 0;
-            let maxDividerPostion = wrapperBoundingBox.width;
+            let maxDividerPostion = containerBoundingBox.width;
 
             if (dividerIndex === 0) {
-              minDividerPosition = 0 + minWidth;
+              minDividerPosition = 0 + minSize;
             } else {
               minDividerPosition =
-                combineSubsectionsWidths(previousWidths, dividerIndex) +
-                minWidth;
+                combineSubsectionsDimensions(updatedDimensions, dividerIndex) +
+                minSize;
             }
 
             if (dividerIndex === subsectionCount - 1) {
-              maxDividerPostion = wrapperBoundingBox.width - minWidth;
+              maxDividerPostion = containerBoundingBox.width - minSize;
             } else {
               maxDividerPostion =
-                combineSubsectionsWidths(previousWidths, dividerIndex + 2) -
-                minWidth;
+                combineSubsectionsDimensions(
+                  previousDimensions,
+                  dividerIndex + 2,
+                ) - minSize;
             }
 
             // Handles the scenario when container is not positioned exactly at the edge of the browser window
             const normalizedDividerPosition =
-              event.clientX - wrapperBoundingBox.x;
+              event[orientationMap[orientation].mousePosition] -
+              containerBoundingBox[orientationMap[orientation].offset];
 
             // Don't allow subsections to be smaller than minWidth
             if (
@@ -121,23 +148,25 @@ function Resizable({
               normalizedDividerPosition < maxDividerPostion
             ) {
               const difference =
-                combineSubsectionsWidths(previousWidths, dividerIndex + 1) -
-                normalizedDividerPosition;
+                combineSubsectionsDimensions(
+                  previousDimensions,
+                  dividerIndex + 1,
+                ) - normalizedDividerPosition;
               // Update the widths of subsections adjacent to currently dragged divider
-              updatedWidths[dividerIndex] =
-                previousWidths[dividerIndex] - difference;
-              updatedWidths[dividerIndex + 1] =
-                previousWidths[dividerIndex + 1] + difference;
+              updatedDimensions[dividerIndex] =
+                previousDimensions[dividerIndex] - difference;
+              updatedDimensions[dividerIndex + 1] =
+                previousDimensions[dividerIndex + 1] + difference;
 
-              return [...updatedWidths];
+              return [...updatedDimensions];
             }
           }
 
-          return previousWidths;
+          return previousDimensions;
         });
       }
     },
-    [subsectionCount, minWidth],
+    [orientation, subsectionCount, minSize],
   );
 
   const handleStopDrag = useCallback(
@@ -168,58 +197,71 @@ function Resizable({
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>, dividerIndex: number) => {
-      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') {
+      if (
+        event.key !== orientationMap[orientation].keyPositive &&
+        event.key !== orientationMap[orientation].keyNegative
+      ) {
         return;
       }
 
       onResizeStart?.();
 
-      setSubsectionsWidths((previousWidths) => {
-        const updatedWidths = previousWidths;
-        const direction = event.key === 'ArrowRight' ? -1 : 1;
+      setSubsectionsDimensions((previousDimensions) => {
+        const updatedDimensions = previousDimensions;
+        const direction =
+          event.key === orientationMap[orientation].keyPositive ? -1 : 1;
 
-        // Calculate width of adjacent subsections before and after divider
+        // Calculate size of adjacent subsections before and after divider
         const subsectionBeforeNewWidth =
-          previousWidths[dividerIndex] - KEYBOARD_STEP * direction;
+          previousDimensions[dividerIndex] - KEYBOARD_STEP * direction;
         const subsectionAfterNewWidth =
-          previousWidths[dividerIndex + 1] + KEYBOARD_STEP * direction;
+          previousDimensions[dividerIndex + 1] + KEYBOARD_STEP * direction;
 
         // Don't allow subsections to be smaller than minWidth
         if (
-          Math.min(subsectionBeforeNewWidth, subsectionAfterNewWidth) <=
-          minWidth
+          Math.min(subsectionBeforeNewWidth, subsectionAfterNewWidth) <= minSize
         ) {
-          return previousWidths;
+          return previousDimensions;
         } else {
-          updatedWidths[dividerIndex] = subsectionBeforeNewWidth;
-          updatedWidths[dividerIndex + 1] = subsectionAfterNewWidth;
+          updatedDimensions[dividerIndex] = subsectionBeforeNewWidth;
+          updatedDimensions[dividerIndex + 1] = subsectionAfterNewWidth;
 
-          return [...updatedWidths];
+          return [...updatedDimensions];
         }
       });
 
       onResizeEnd?.();
     },
-    [minWidth, onResizeStart, onResizeEnd],
+    [orientation, minSize, onResizeStart, onResizeEnd],
   );
 
   // To eleminate all kinds of rounding errors last subsection always takes the remaining space
   // Therefore width doesn't have to be passed explicitly
   return (
-    <Container ref={containerRef}>
+    <Container ref={containerRef} orientation={orientation}>
       {Children.map(children, (child, index) => {
         if (index < subsectionCount - 1) {
           return (
             <>
-              <Subsection width={subsectionsWidths[index]}>{child}</Subsection>
+              <Subsection
+                orientation={orientation}
+                dimension={subsectionsDimensions[index]}
+              >
+                {child}
+              </Subsection>
               <Divider
+                orientation={orientation}
                 onStartDrag={(event) => handleStartDrag(event, index)}
                 onKeyDown={(event) => handleKeyDown(event, index)}
               />
             </>
           );
         }
-        return <Subsection isLast>{child}</Subsection>;
+        return (
+          <Subsection orientation={orientation} isLast>
+            {child}
+          </Subsection>
+        );
       })}
     </Container>
   );
