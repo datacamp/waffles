@@ -4,7 +4,7 @@ import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
 import Resizable from './resizable';
-import { DIVIDER_HITBOX_SIZE, DIVIDER_LINE_SIZE } from './constants';
+import { DIVIDER_HITBOX_SIZE, DIVIDER_SEPARATOR_SIZE } from './constants';
 
 type ContainerStyleOptions = {
   orientation: NonNullable<
@@ -78,13 +78,23 @@ type DividerLineStyleOptions = {
   orientation: NonNullable<
     React.ComponentProps<typeof Resizable>['orientation']
   >;
+  showSeparator: boolean;
 };
 
-export function dividerLineStyle({ orientation }: DividerLineStyleOptions) {
+export function dividerSeparatorStyle({
+  orientation,
+  showSeparator,
+}: DividerLineStyleOptions) {
+  const separatorSize = `${
+    orientation === 'vertical' ? 'width' : 'height'
+  }: ${DIVIDER_SEPARATOR_SIZE}px`;
+
   return css`
-    ${orientation === 'vertical' ? 'width' : 'height'}: 2px;
+    ${separatorSize};
     ${orientation === 'vertical' ? 'height' : 'width'}: 100%;
-    background-color: ${hexToRgba(tokens.colors.navy, 0.15)};
+    background-color: ${showSeparator
+      ? hexToRgba(tokens.colors.navy, 0.15)
+      : 'transparent'};
     transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
   `;
 }
@@ -95,35 +105,47 @@ type SubsectionStyleOptions = {
   >;
   dimension?: number;
   isDragging: boolean;
-  isLast: boolean;
+  compensateForSeparator: boolean;
 };
 
 export function subsectionStyle({
   orientation,
   dimension,
   isDragging,
-  isLast,
+  compensateForSeparator,
 }: SubsectionStyleOptions) {
   const adjustedDimension = `${
     orientation === 'vertical' ? 'width' : 'height'
   }: ${dimension ? `${dimension}px` : 'auto'}`;
   const marginHitboxCompensation =
-    (DIVIDER_HITBOX_SIZE - DIVIDER_LINE_SIZE) / 2;
+    (DIVIDER_HITBOX_SIZE - DIVIDER_SEPARATOR_SIZE) / 2;
 
   return css`
-    ${isLast ? 'flex-grow: 1' : 'flex-shrink: 0'};
+    ${adjustedDimension};
+
     ${isDragging &&
     `cursor: ${orientation === 'vertical' ? 'col-resize' : 'row-resize'}`};
-    ${adjustedDimension};
-    margin-left: -${marginHitboxCompensation}px;
-    margin-right: -${marginHitboxCompensation}px;
-
-    &:first-of-type {
-      margin-left: 0;
-    }
 
     &:last-of-type {
-      margin-right: 0;
+      flex-grow: 1;
     }
+
+    &:not(:last-of-type) {
+      flex-shrink: 0;
+    }
+
+    ${compensateForSeparator &&
+    css`
+      margin-left: -${marginHitboxCompensation}px;
+      margin-right: -${marginHitboxCompensation}px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    `}
   `;
 }

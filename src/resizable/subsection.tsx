@@ -9,19 +9,26 @@ type SubsectionProps = {
     React.ComponentProps<typeof Resizable>['orientation']
   >;
   isDragging: boolean;
+  compensateForSeparator: boolean;
   dimension?: number;
-  isLast?: boolean;
 };
 
 function Subsection({
   children,
   orientation,
-  dimension,
   isDragging,
-  isLast = false,
+  compensateForSeparator,
+  dimension,
 }: SubsectionProps) {
   return (
-    <div css={subsectionStyle({ orientation, dimension, isDragging, isLast })}>
+    <div
+      css={subsectionStyle({
+        orientation,
+        isDragging,
+        compensateForSeparator,
+        dimension,
+      })}
+    >
       {children}
     </div>
   );

@@ -38,6 +38,7 @@ type ResizableProps = {
   orientation?: 'vertical' | 'horizontal';
   minSize?: number;
   initialProportions?: number[];
+  showSeparators?: boolean;
   onResizeStart?: () => void;
   onResizeEnd?: () => void;
 };
@@ -47,6 +48,7 @@ function Resizable({
   orientation = 'vertical',
   minSize = 100,
   initialProportions,
+  showSeparators = false,
   onResizeStart,
   onResizeEnd,
 }: ResizableProps) {
@@ -259,6 +261,7 @@ function Resizable({
                 orientation={orientation}
                 dimension={subsectionsDimensions[index]}
                 isDragging={draggedDividerIndex !== null}
+                compensateForSeparator={showSeparators}
               >
                 {child}
               </Subsection>
@@ -267,6 +270,7 @@ function Resizable({
                 onStartDrag={(event) => handleStartDrag(event, index)}
                 onKeyDown={(event) => handleKeyDown(event, index)}
                 isDragging={draggedDividerIndex === index}
+                showSeparator={showSeparators}
               />
             </>
           );
@@ -275,7 +279,7 @@ function Resizable({
           <Subsection
             orientation={orientation}
             isDragging={draggedDividerIndex !== null}
-            isLast
+            compensateForSeparator={showSeparators}
           >
             {child}
           </Subsection>
