@@ -39,6 +39,7 @@ type ResizableProps = {
   minSize?: number;
   initialProportions?: number[];
   showSeparators?: boolean;
+  inverted?: boolean;
   onResizeStart?: () => void;
   onResizeEnd?: () => void;
 };
@@ -49,6 +50,7 @@ function Resizable({
   minSize = 100,
   initialProportions,
   showSeparators = false,
+  inverted = false,
   onResizeStart,
   onResizeEnd,
 }: ResizableProps) {
@@ -271,6 +273,7 @@ function Resizable({
                 onKeyDown={(event) => handleKeyDown(event, index)}
                 isDragging={draggedDividerIndex === index}
                 showSeparator={showSeparators}
+                inverted={inverted}
               />
             </>
           );

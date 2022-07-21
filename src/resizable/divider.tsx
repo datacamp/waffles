@@ -10,6 +10,7 @@ type DividerProps = {
   >;
   isDragging: boolean;
   showSeparator: boolean;
+  inverted: boolean;
   onStartDrag: React.MouseEventHandler<HTMLDivElement>;
   onKeyDown: React.KeyboardEventHandler<HTMLDivElement>;
 };
@@ -18,6 +19,7 @@ function Divider({
   orientation,
   isDragging,
   showSeparator,
+  inverted,
   onStartDrag,
   onKeyDown,
 }: DividerProps) {
@@ -26,13 +28,16 @@ function Divider({
   return (
     <div
       role="separator"
+      aria-orientation={orientation}
       tabIndex={0}
       {...focusProps}
       onMouseDown={onStartDrag}
       onKeyDown={onKeyDown}
-      css={dividerStyle({ orientation, isFocusVisible, isDragging })}
+      css={dividerStyle({ orientation, isFocusVisible, isDragging, inverted })}
     >
-      <div css={dividerSeparatorStyle({ orientation, showSeparator })} />
+      <div
+        css={dividerSeparatorStyle({ orientation, showSeparator, inverted })}
+      />
     </div>
   );
 }
