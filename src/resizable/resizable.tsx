@@ -6,10 +6,13 @@ import React, {
   Children,
 } from 'react';
 
+import { useIsomorphicLayoutEffect } from '../hooks';
+
 import {
   combineSubsectionsDimensions,
   calculateProportianalDimensions,
   splitDimensionEqually,
+  calculateProportionsFromDimensions,
 } from './utils';
 import Subsection from './subsection';
 import Divider from './divider';
@@ -41,7 +44,7 @@ type ResizableProps = {
   showSeparators?: boolean;
   inverted?: boolean;
   onResizeStart?: () => void;
-  onResizeEnd?: () => void;
+  onResizeEnd?: (proportions?: number[]) => void;
 };
 
 function Resizable({
@@ -88,6 +91,8 @@ function Resizable({
       );
     }
 
+    // Set initial subsections dimensions, either based on provider proportions or equally
+
     if (containerRef.current) {
       // Total container width or height based on orientation
       const containerSize =
@@ -111,6 +116,13 @@ function Resizable({
       }
     }
   }, [orientation, initialProportions, subsectionCount, minSize]);
+
+  useIsomorphicLayoutEffect(() => {
+    // Call onResizeEnd when dragging has stopped
+    if (draggedDividerIndex === null) {
+      onResizeEnd?.(calculateProportionsFromDimensions(subsectionsDimensions));
+    }
+  }, [draggedDividerIndex, onResizeEnd, subsectionsDimensions]);
 
   const handleDrag = useCallback(
     (event: MouseEvent) => {
@@ -191,10 +203,8 @@ function Resizable({
 
       document.removeEventListener('mousemove', handleDrag);
       document.removeEventListener('mouseup', handleStopDrag);
-
-      onResizeEnd?.();
     },
-    [handleDrag, onResizeEnd],
+    [handleDrag],
   );
 
   const handleStartDrag = useCallback(
@@ -245,10 +255,8 @@ function Resizable({
           return [...updatedDimensions];
         }
       });
-
-      onResizeEnd?.();
     },
-    [orientation, minSize, onResizeStart, onResizeEnd],
+    [orientation, minSize, onResizeStart],
   );
 
   // To eleminate all kinds of rounding errors last subsection always takes the remaining space

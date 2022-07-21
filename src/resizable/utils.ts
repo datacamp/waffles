@@ -47,6 +47,11 @@ export function splitDimensionEqually(
   return Array(subsectionCount).fill(singleElementSize);
 }
 
+export function round(num: number) {
+  return Math.round(num * 10) / 10;
+}
+
+// Calculate percentage proportions from provided pixel dimensions
 export function calculateProportionsFromDimensions(
   subsectionsDimensions: number[],
 ) {
@@ -60,7 +65,7 @@ export function calculateProportionsFromDimensions(
   const proportions = subsectionsDimensions.map((size, index) => {
     const actualSize =
       index === 0 ? size + DIVIDER_HITBOX_SIZE / 2 : size + DIVIDER_HITBOX_SIZE;
-    const percentage = Math.round((actualSize / combinedSize) * 100);
+    const percentage = round((actualSize / combinedSize) * 100);
     return percentage;
   });
 
@@ -75,5 +80,5 @@ export function calculateProportionsFromDimensions(
     0,
   );
 
-  return [...proportions, 100 - sumOfPercentagesWithoutLast];
+  return [...proportions, round(100 - sumOfPercentagesWithoutLast)];
 }
