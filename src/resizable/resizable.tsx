@@ -39,8 +39,8 @@ const orientationMap = {
 type ResizableProps = {
   children: JSX.Element[];
   orientation?: 'vertical' | 'horizontal';
-  minSize?: number;
   initialProportions?: number[];
+  minSubsectionSize?: string;
   showSeparators?: boolean;
   inverted?: boolean;
   onResizeStart?: () => void;
@@ -50,14 +50,15 @@ type ResizableProps = {
 function Resizable({
   children,
   orientation = 'vertical',
-  minSize = 100,
   initialProportions,
+  minSubsectionSize = '100px',
   showSeparators = false,
   inverted = false,
   onResizeStart,
   onResizeEnd,
 }: ResizableProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const minSize = parseInt(minSubsectionSize, 10);
 
   // Number of provided subsections, with empty ones filtered out
   const subsectionCount = React.Children.toArray(children).length;
