@@ -131,7 +131,10 @@ export function subsectionStyle({
 
   return css`
     ${isDragging &&
-    `cursor: ${orientation === 'vertical' ? 'col-resize' : 'row-resize'}`};
+    css`
+      cursor: ${orientation === 'vertical' ? 'col-resize' : 'row-resize'};
+      user-select: none;
+    `};
 
     &:last-of-type {
       flex-grow: 1;
