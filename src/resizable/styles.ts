@@ -107,20 +107,15 @@ type SubsectionStyleOptions = {
   orientation: NonNullable<
     React.ComponentProps<typeof Resizable>['orientation']
   >;
-  dimension?: number;
   isDragging: boolean;
   compensateForSeparator: boolean;
 };
 
 export function subsectionStyle({
   orientation,
-  dimension,
   isDragging,
   compensateForSeparator,
 }: SubsectionStyleOptions) {
-  const adjustedDimension = `${
-    orientation === 'vertical' ? 'width' : 'height'
-  }: ${dimension ? `${dimension}px` : 'auto'}`;
   const marginHitboxCompensation =
     (DIVIDER_HITBOX_SIZE - DIVIDER_SEPARATOR_SIZE) / 2;
   const adjustedMargins =
@@ -135,8 +130,6 @@ export function subsectionStyle({
         `;
 
   return css`
-    ${adjustedDimension};
-
     ${isDragging &&
     `cursor: ${orientation === 'vertical' ? 'col-resize' : 'row-resize'}`};
 

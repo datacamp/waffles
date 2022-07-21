@@ -47,6 +47,7 @@ export function splitDimensionEqually(
   return Array(subsectionCount).fill(singleElementSize);
 }
 
+// Round value up to 1 decimal place
 export function round(num: number) {
   return Math.round(num * 10) / 10;
 }
