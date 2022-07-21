@@ -22,27 +22,29 @@ export function containerStyle({ orientation }: ContainerStyleOptions) {
   `;
 }
 
-const selectedDividerStyle = css`
-  background-color: ${tokens.colors.blueDark};
-  box-shadow: 0 0 0 1px ${tokens.colors.blueDark};
-`;
-
 type DividerStyleOptions = {
   orientation: NonNullable<
     React.ComponentProps<typeof Resizable>['orientation']
   >;
   isFocusVisible: boolean;
   isDragging: boolean;
+  inverted: boolean;
 };
 
 export function dividerStyle({
   orientation,
   isFocusVisible,
   isDragging,
+  inverted,
 }: DividerStyleOptions) {
   const adjustedDimension = `${
     orientation === 'vertical' ? 'width' : 'height'
   }: ${DIVIDER_HITBOX_SIZE}px`;
+  const selectedDividerHighlight = css`
+    background-color: ${inverted ? tokens.colors.blue : tokens.colors.blueDark};
+    box-shadow: 0 0 0 1px
+      ${inverted ? tokens.colors.blue : tokens.colors.blueDark};
+  `;
 
   return css`
     flex-shrink: 0;
@@ -57,19 +59,19 @@ export function dividerStyle({
     ${isDragging &&
     css`
       & div {
-        ${selectedDividerStyle}
+        ${selectedDividerHighlight}
       }
     `}
 
     ${isFocusVisible &&
     css`
       & div {
-        ${selectedDividerStyle}
+        ${selectedDividerHighlight}
       }
     `}
 
     &:hover div {
-      ${selectedDividerStyle}
+      ${selectedDividerHighlight}
     }
   `;
 }
@@ -79,11 +81,13 @@ type DividerLineStyleOptions = {
     React.ComponentProps<typeof Resizable>['orientation']
   >;
   showSeparator: boolean;
+  inverted: boolean;
 };
 
 export function dividerSeparatorStyle({
   orientation,
   showSeparator,
+  inverted,
 }: DividerLineStyleOptions) {
   const separatorSize = `${
     orientation === 'vertical' ? 'width' : 'height'
@@ -93,7 +97,7 @@ export function dividerSeparatorStyle({
     ${separatorSize};
     ${orientation === 'vertical' ? 'height' : 'width'}: 100%;
     background-color: ${showSeparator
-      ? hexToRgba(tokens.colors.navy, 0.15)
+      ? hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)
       : 'transparent'};
     transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
   `;
@@ -119,6 +123,16 @@ export function subsectionStyle({
   }: ${dimension ? `${dimension}px` : 'auto'}`;
   const marginHitboxCompensation =
     (DIVIDER_HITBOX_SIZE - DIVIDER_SEPARATOR_SIZE) / 2;
+  const adjustedMargins =
+    orientation === 'vertical'
+      ? css`
+          margin-left: -${marginHitboxCompensation}px;
+          margin-right: -${marginHitboxCompensation}px;
+        `
+      : css`
+          margin-top: -${marginHitboxCompensation}px;
+          margin-bottom: -${marginHitboxCompensation}px;
+        `;
 
   return css`
     ${adjustedDimension};
@@ -136,15 +150,14 @@ export function subsectionStyle({
 
     ${compensateForSeparator &&
     css`
-      margin-left: -${marginHitboxCompensation}px;
-      margin-right: -${marginHitboxCompensation}px;
+      ${adjustedMargins}
 
       &:first-of-type {
-        margin-left: 0;
+        ${orientation === 'vertical' ? 'margin-left' : 'margin-top'}: 0;
       }
 
       &:last-of-type {
-        margin-right: 0;
+        ${orientation === 'vertical' ? 'margin-right' : 'margin-bottom'}: 0;
       }
     `}
   `;
