@@ -1,0 +1,58 @@
+import * as ResizableExports from '@datacamp/waffles/resizable';
+
+import Layout from '../../components/content-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/resizable/playground-config';
+import BasicUsage from '../../examples/resizable/basic-usage';
+import VerticalOrientation from '../../examples/resizable/vertical-orientation';
+import HorizontalOrientation from '../../examples/resizable/horizontal-orientation';
+import Nested from '../../examples/resizable/nested';
+import Inverted from '../../examples/resizable/inverted';
+
+<Layout title="Resizable" description="🚧 This page is under construction">
+
+## Examples
+
+<Example title="Basic Usage" path="resizable/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Vertical Orientation" path="resizable/vertical-orientation">
+  <VerticalOrientation />
+</Example>
+
+<Example title="Horizontal Orientation" path="resizable/horizontal-orientation">
+  <HorizontalOrientation />
+</Example>
+
+<Example title="Nested" path="resizable/nested">
+  <Nested />
+</Example>
+
+<Example title="Inverted" path="resizable/inverted">
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### Resizable
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/resizable/resizable')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={ResizableExports} path="@datacamp/waffles/resizable" />
+
+</Layout>

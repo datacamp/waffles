@@ -56,9 +56,7 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             </SideNav.Subcategory>
             <SideNav.Subcategory label="Content">
               <Item href="/components/asset">Asset</Item>
-              <Item href="/components/avatar" isNew>
-                Avatar
-              </Item>
+              <Item href="/components/avatar">Avatar</Item>
               <Item href="/components/badge">Badge</Item>
               <Item href="/components/brand">Brand</Item>
               <Item href="/components/content-container">
@@ -106,6 +104,9 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/hooks">Hooks</Item>
               <Item href="/components/loader">Loader</Item>
               <Item href="/components/portal">Portal</Item>
+              <Item href="/components/resizable" isNew>
+                Resizable
+              </Item>
               <Item href="/components/screen-reader-only">
                 Screen Reader Only
               </Item>
