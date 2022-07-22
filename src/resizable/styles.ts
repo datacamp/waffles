@@ -130,6 +130,8 @@ export function subsectionStyle({
         `;
 
   return css`
+    overflow: hidden;
+
     ${isDragging &&
     css`
       cursor: ${orientation === 'vertical' ? 'col-resize' : 'row-resize'};

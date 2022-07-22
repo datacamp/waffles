@@ -1,6 +1,6 @@
 import { DIVIDER_HITBOX_SIZE } from './constants';
 
-// Calculate combined width or height of subsections up to provided index
+// Calculate combined width or height of subsections before provided index
 export function combineSubsectionsDimensions(
   subsectionsDimensions: number[],
   index: number,
@@ -47,12 +47,13 @@ export function splitDimensionEqually(
   return Array(subsectionCount).fill(singleElementSize);
 }
 
-// Round value up to 1 decimal place
+// Round value up to 2 decimal places
 export function round(num: number) {
-  return Math.round(num * 10) / 10;
+  return Math.round(num * 100) / 100;
 }
 
 // Calculate percentage proportions from provided pixel dimensions
+// Doesn't have to be super accurate
 export function calculateProportionsFromDimensions(
   subsectionsDimensions: number[],
 ) {
