@@ -81,50 +81,6 @@ function Resizable({
     Array(subsectionCount).fill(0),
   );
 
-  useEffect(() => {
-    if (subsectionCount < 2) {
-      throw new Error('Resizable should contain at least 2 subsections.');
-    }
-
-    if (initialProportions && initialProportions.length !== subsectionCount) {
-      throw new Error(
-        'The lenght of initialProportions array must be the same as the number of subsections.',
-      );
-    }
-
-    // Set initial subsections dimensions, either based on provider proportions or equally
-
-    if (containerRef.current) {
-      // Total container width or height based on orientation
-      const containerSize =
-        containerRef.current.getBoundingClientRect()[
-          orientationMap[orientation].dimension
-        ];
-
-      if (initialProportions) {
-        const updatedDimensions = calculateProportianalDimensions(
-          containerSize,
-          initialProportions,
-          minSize,
-        );
-        setSubsectionsDimensions(updatedDimensions);
-      } else {
-        const updatedDimensions = splitDimensionEqually(
-          containerSize,
-          subsectionCount,
-        );
-        setSubsectionsDimensions(updatedDimensions);
-      }
-    }
-  }, [orientation, initialProportions, subsectionCount, minSize]);
-
-  useIsomorphicLayoutEffect(() => {
-    // Call onResizeEnd when dragging has stopped
-    if (draggedDividerIndex === null) {
-      onResizeEnd?.(calculateProportionsFromDimensions(subsectionsDimensions));
-    }
-  }, [draggedDividerIndex, onResizeEnd, subsectionsDimensions]);
-
   const handleDrag = useCallback(
     (event: MouseEvent) => {
       if (currentDividerIndex.current === null) {
@@ -260,8 +216,59 @@ function Resizable({
     [orientation, minSize, onResizeStart],
   );
 
+  // Set initial subsections dimensions, either based on provider proportions or equally
+  useIsomorphicLayoutEffect(() => {
+    if (subsectionCount < 2) {
+      throw new Error('Resizable should contain at least 2 subsections.');
+    }
+
+    if (initialProportions && initialProportions.length !== subsectionCount) {
+      throw new Error(
+        'The lenght of initialProportions array must be the same as the number of subsections.',
+      );
+    }
+
+    if (containerRef.current) {
+      // Total container width or height based on orientation
+      const containerSize =
+        containerRef.current.getBoundingClientRect()[
+          orientationMap[orientation].dimension
+        ];
+
+      if (initialProportions) {
+        const updatedDimensions = calculateProportianalDimensions(
+          containerSize,
+          initialProportions,
+          minSize,
+        );
+        setSubsectionsDimensions(updatedDimensions);
+      } else {
+        const updatedDimensions = splitDimensionEqually(
+          containerSize,
+          subsectionCount,
+        );
+        setSubsectionsDimensions(updatedDimensions);
+      }
+    }
+  }, [orientation, initialProportions, subsectionCount, minSize]);
+
+  // Call onResizeEnd when dragging has stopped
+  useIsomorphicLayoutEffect(() => {
+    if (draggedDividerIndex === null) {
+      onResizeEnd?.(calculateProportionsFromDimensions(subsectionsDimensions));
+    }
+  }, [draggedDividerIndex, onResizeEnd, subsectionsDimensions]);
+
+  // Clean up all listeners when unmounting
+  useEffect(() => {
+    return () => {
+      document.removeEventListener('mousemove', handleDrag);
+      document.removeEventListener('mouseup', handleStopDrag);
+    };
+  }, [handleDrag, handleStopDrag]);
+
   // To eleminate all kinds of rounding errors last subsection always takes the remaining space
-  // Therefore width doesn't have to be passed explicitly
+  // Therefore its size doesn't have to be set explicitly
   return (
     <Container ref={containerRef} orientation={orientation}>
       {Children.map(children, (child, index) => {
