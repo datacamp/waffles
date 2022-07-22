@@ -37,13 +37,21 @@ const orientationMap = {
 } as const;
 
 type ResizableProps = {
+  /* The elements to render in subsections, divided by separator. At lest 2 must be provided. */
   children: JSX.Element[];
+  /* The layout of the subsections. */
   orientation?: 'vertical' | 'horizontal';
+  /* An array of proportions, e.g. `[2, 1, 1]`, which determine initial size of each subsection. Must have the same length as the number of provided elements. When not provided the subsections will default to equal sizes. */
   initialProportions?: number[];
+  /* The minimal size of the subsection. Default is `100px`. */
   minSubsectionSize?: string;
+  /* If enabled, separators between subsections are visible. */
   showSeparators?: boolean;
+  /* Sets the style of the separator suitable for dark backgrounds. */
   inverted?: boolean;
+  /* Handler called when separator just started to move. */
   onResizeStart?: () => void;
+  /* Handler called when separator just stopped moving. Useful for retreiving subsections proportions after resizing via `proportions` argument. For example could be used to persist proportions in local storage. */
   onResizeEnd?: (proportions?: number[]) => void;
 };
 
