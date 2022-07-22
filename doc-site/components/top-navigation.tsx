@@ -91,6 +91,7 @@ function TopNavigation({ onNavOpen }: TopNavigationProps) {
             icon={<FigmaBrand size="large" />}
             aria-label="Visit Waffles Figma Components"
             href="https://www.figma.com/file/CCf4IlqeNxwVf3BtYO0WOP/%5BDC%5D-Components?node-id=10%3A224"
+            target="_blank"
           />
           <Button
             as="a"
@@ -98,6 +99,7 @@ function TopNavigation({ onNavOpen }: TopNavigationProps) {
             icon={<GithubBrand size="large" />}
             aria-label="Visit Waffles GitHub Repository"
             href="https://github.com/datacamp/waffles"
+            target="_blank"
           />
         </div>
       </header>
