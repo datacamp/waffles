@@ -3,15 +3,17 @@ import { useState, useEffect } from 'react';
 import { tokens } from '../tokens';
 
 // Return true if the component has a small width
-function useVertical(targetRef: React.RefObject<HTMLElement>) {
-  const [isVertical, setIsVertical] = useState(false);
+function useSmallVariant(targetRef: React.RefObject<HTMLElement>) {
+  const [isSmallVariant, setIsSmallVariant] = useState(false);
 
   useEffect(() => {
     const element = targetRef.current;
 
     function elementResizeHandler() {
       if (element) {
-        setIsVertical(element.clientWidth < parseInt(tokens.breakpoints.small));
+        setIsSmallVariant(
+          element.clientWidth < parseInt(tokens.breakpoints.small),
+        );
       }
     }
 
@@ -24,7 +26,7 @@ function useVertical(targetRef: React.RefObject<HTMLElement>) {
     };
   }, [targetRef]);
 
-  return isVertical;
+  return isSmallVariant;
 }
 
-export default useVertical;
+export default useSmallVariant;
