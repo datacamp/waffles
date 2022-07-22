@@ -2,7 +2,7 @@ import { useRef } from 'react';
 
 import { Heading } from '../heading';
 
-import useVertical from './use-vertical';
+import useSmallVariant from './use-vertical';
 import {
   contentWrapperStyle,
   emptyStateStyle,
@@ -46,21 +46,19 @@ function EmptyStateInternal({
   ...restProps
 }: EmptyStateBaseProps & EmptyStateDirectionCenteredProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const useVerticalOrientation = useVertical(wrapperRef);
+  const hasSmallWidth = useSmallVariant(wrapperRef);
 
   return (
     <div
       ref={wrapperRef}
       css={emptyStateStyle({
-        orientation: useVerticalOrientation
-          ? 'vertical'
-          : orientation || 'horizontal',
+        orientation: hasSmallWidth ? 'vertical' : orientation || 'horizontal',
         isCentered: !!isCentered,
         inverted,
       })}
       {...restProps}
     >
-      {image && <div css={imageStyle()}>{image}</div>}
+      {image && <div css={imageStyle({ hasSmallWidth })}>{image}</div>}
       <div css={contentWrapperStyle()}>
         {title && (
           <Heading css={headingStyle()} size="xlarge" inverted={inverted}>

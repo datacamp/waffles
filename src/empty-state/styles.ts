@@ -49,11 +49,15 @@ export function emptyStateStyle({
   `;
 }
 
-export function imageStyle() {
+type WrapperStyleOptions = {
+  hasSmallWidth: boolean;
+};
+
+export function imageStyle({ hasSmallWidth }: WrapperStyleOptions) {
   return css`
     flex-shrink: 0;
-    width: 100px;
-    height: 100px;
+    width: ${hasSmallWidth ? '72px' : '100px'};
+    height: ${hasSmallWidth ? '72px' : '100px'};
   `;
 }
 
