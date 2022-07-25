@@ -17,7 +17,7 @@ const paragraphStyle = css`
 function Story() {
   return (
     <div css={wrapperStyle}>
-      <Resizable orientation="vertical" showSeparators inverted>
+      <Resizable layout="column" showDividers inverted>
         <Paragraph inverted css={paragraphStyle}>
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
