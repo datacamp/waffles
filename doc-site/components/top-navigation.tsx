@@ -89,7 +89,7 @@ function TopNavigation({ onNavOpen }: TopNavigationProps) {
             as="a"
             variant="plain"
             icon={<FigmaBrand size="large" />}
-            aria-label="Visit Waffles Figma Components"
+            aria-label="Visit Waffles Figma Components (external link)"
             href="https://www.figma.com/file/CCf4IlqeNxwVf3BtYO0WOP/%5BDC%5D-Components?node-id=10%3A224"
             target="_blank"
           />
@@ -97,7 +97,7 @@ function TopNavigation({ onNavOpen }: TopNavigationProps) {
             as="a"
             variant="plain"
             icon={<GithubBrand size="large" />}
-            aria-label="Visit Waffles GitHub Repository"
+            aria-label="Visit Waffles GitHub Repository (external link)"
             href="https://github.com/datacamp/waffles"
             target="_blank"
           />
