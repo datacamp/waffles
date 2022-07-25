@@ -47,6 +47,7 @@ describe('Resizable', () => {
     );
 
     const divider = getAllByRole('separator')[0];
+    fireEvent.mouseDown(divider);
     fireEvent.mouseUp(divider);
 
     expect(handleResizeEnd).toHaveBeenCalled();

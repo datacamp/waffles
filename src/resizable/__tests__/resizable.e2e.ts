@@ -1,17 +1,17 @@
 describe('Resizable', () => {
-  it('renders in vertical orientation', () => {
-    cy.loadStory('resizable-vertical');
+  it('renders in column layout', () => {
+    cy.loadStory('resizable-column');
     cy.get('main').find('p').should('have.length', 3);
     cy.get('main').findAllByRole('separator').should('have.length', 2);
   });
 
-  it('renders in horizontal orientation', () => {
-    cy.loadStory('resizable-horizontal');
+  it('renders in row layout', () => {
+    cy.loadStory('resizable-row');
     cy.get('main').find('p').should('have.length', 3);
     cy.get('main').findAllByRole('separator').should('have.length', 2);
   });
 
-  it('renders horizontal nested into vertical', () => {
+  it('renders rows nested into columns', () => {
     cy.loadStory('resizable-nested');
     cy.get('main').find('p').should('have.length', 4);
     cy.get('main').findAllByRole('separator').should('have.length', 3);
@@ -23,14 +23,14 @@ describe('Resizable', () => {
     cy.get('main').findAllByRole('separator').should('have.length', 2);
   });
 
-  it('renders with separators hidden', () => {
-    cy.loadStory('resizable-no-separators');
+  it('renders with dividers hidden', () => {
+    cy.loadStory('resizable-no-dividers');
     cy.get('main').find('p').should('have.length', 3);
     cy.get('main').findAllByRole('separator').should('have.length', 2);
   });
 
-  it('in vertical orientation could be resized by pressing left / right arrow key', () => {
-    cy.loadStory('resizable-vertical');
+  it('in column layout, could be resized by pressing left / right arrow key', () => {
+    cy.loadStory('resizable-column');
     cy.get('main').findAllByRole('separator').first().focus();
     cy.get('body').type(
       '{rightarrow}{rightarrow}{rightarrow}{leftarrow}{rightarrow}',
@@ -38,8 +38,8 @@ describe('Resizable', () => {
     cy.get('main').find('p').should('have.length', 3);
   });
 
-  it('in horizontal orientation could be resized by pressing down / up arrow key', () => {
-    cy.loadStory('resizable-horizontal');
+  it('in row layout, could be resized by pressing down / up arrow key', () => {
+    cy.loadStory('resizable-row');
     cy.get('main').findAllByRole('separator').first().focus();
     cy.get('body').type(
       '{downarrow}{downarrow}{downarrow}{uparrow}{downarrow}',
