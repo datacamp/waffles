@@ -3,7 +3,7 @@ import React from 'react';
 import { subsectionStyle } from './styles';
 import Resizable from './resizable';
 
-type SubsectionProps = {
+type PanelProps = {
   children: React.ReactNode;
   orientation: NonNullable<
     React.ComponentProps<typeof Resizable>['orientation']
@@ -13,13 +13,13 @@ type SubsectionProps = {
   dimension?: number;
 };
 
-function Subsection({
+function Panel({
   children,
   orientation,
   isDragging,
   compensateForSeparator,
   dimension,
-}: SubsectionProps) {
+}: PanelProps) {
   // Because of frequent updates, pass width / height as regular style
   // It prevents emotion from appling new class each time a new value is provided
   const adjustedSize = {
@@ -40,4 +40,4 @@ function Subsection({
   );
 }
 
-export default Subsection;
+export default Panel;
