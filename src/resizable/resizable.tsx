@@ -37,21 +37,21 @@ const layoutMap = {
 } as const;
 
 type ResizableProps = {
-  /* The elements to render in separate panels, divided by separator. At lest 2 must be provided. */
+  /* The elements to render in separate panels, divided by separator. Must provide at least **two** elements. */
   children: JSX.Element[];
   /* The layout of the panels. */
   layout?: 'column' | 'row';
-  /* An array of proportions, e.g. `[2, 1, 1]`, which determine initial size of each panel. Must have the same length as the number of provided elements. When not provided the panels will default to equal sizes. */
+  /* An array of proportions, e.g. `[2, 1, 1]`, which determine the default relative size of each panel. Must have the same length as the number of provided elements. When not provided the panels will default to equal sizes. */
   initialProportions?: number[];
-  /* The minimal size of the panel. When resizing panel can't be collapsed below this value. Default is `100px`. */
+  /* The minimum size of the panel. When resizing panel can't be collapsed below this value. Default is `100px`. */
   minSize?: string;
   /* If enabled, separators between panels are visible. */
   showSeparators?: boolean;
   /* Sets the style of the separator suitable for dark backgrounds. */
   inverted?: boolean;
-  /* Handler called when separator just started to move. */
+  /* Called when divider begins to move. */
   onResizeStart?: () => void;
-  /* Handler called when separator just stopped moving. Useful for retreiving panels proportions after resizing via `proportions` argument. For example could be used to persist proportions in local storage. */
+  /* Called when divider stops moving. Useful for retrieving the proportions of panels. */
   onResizeEnd?: (proportions?: number[]) => void;
 };
 
@@ -72,7 +72,7 @@ function Resizable({
   const panelCount = React.Children.toArray(children).length;
 
   // Index of currently dragged splitter, starts with 0
-  // No splitter is being dragged if it's null
+  // If it's null, it means splitter is not being dragged
   // Required to calculate widths of adjacent panels, e.g. splitter with index 1 is between panel 1 and 2
   // Preserved between re-renders, manually updated via event handlers
   const currentDividerIndex = useRef<number | null>(null);
