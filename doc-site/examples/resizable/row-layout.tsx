@@ -19,13 +19,13 @@ function Example() {
     <div css={wrapperStyle}>
       <Resizable
         initialProportions={[50, 25, 25]}
-        orientation="horizontal"
-        minSubsectionSize="80px"
-        showSeparators
+        layout="row"
+        minSize="80px"
+        showDividers
       >
-        <Paragraph css={paragraphStyle}>First Resizable Subsection</Paragraph>
-        <Paragraph css={paragraphStyle}>First Second Subsection</Paragraph>
-        <Paragraph css={paragraphStyle}>First Third Subsection</Paragraph>
+        <Paragraph css={paragraphStyle}>First Panel</Paragraph>
+        <Paragraph css={paragraphStyle}>Second Panel</Paragraph>
+        <Paragraph css={paragraphStyle}>Third Panel</Paragraph>
       </Resizable>
     </div>
   );

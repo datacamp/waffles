@@ -19,15 +19,15 @@ function Example() {
     <div css={wrapperStyle}>
       <Resizable
         initialProportions={[1, 1, 2]}
-        minSubsectionSize="80px"
-        orientation="vertical"
-        showSeparators
+        minSize="80px"
+        layout="column"
+        showDividers
       >
-        <Paragraph css={paragraphStyle}>First Resizable Subsection</Paragraph>
-        <Paragraph css={paragraphStyle}>First Resizable Subsection</Paragraph>
-        <Resizable orientation="horizontal" showSeparators>
-          <Paragraph css={paragraphStyle}>First Nested Subsection</Paragraph>
-          <Paragraph css={paragraphStyle}>Second Nested Subsection</Paragraph>
+        <Paragraph css={paragraphStyle}>First Panel</Paragraph>
+        <Paragraph css={paragraphStyle}>Second Panel</Paragraph>
+        <Resizable layout="row" showDividers>
+          <Paragraph css={paragraphStyle}>First Nested Panel</Paragraph>
+          <Paragraph css={paragraphStyle}>Second Nested Panel</Paragraph>
         </Resizable>
       </Resizable>
     </div>

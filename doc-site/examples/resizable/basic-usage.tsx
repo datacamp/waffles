@@ -19,8 +19,8 @@ function Example() {
   return (
     <div css={wrapperStyle}>
       <Resizable>
-        <Paragraph css={paragraphStyle}>First Resizable Subsection</Paragraph>
-        <Paragraph css={paragraphStyle}>Second Resizable Subsection</Paragraph>
+        <Paragraph css={paragraphStyle}>First Panel</Paragraph>
+        <Paragraph css={paragraphStyle}>Second Panel</Paragraph>
       </Resizable>
     </div>
   );
