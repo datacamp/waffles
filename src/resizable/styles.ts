@@ -7,15 +7,13 @@ import Resizable from './resizable';
 import { DIVIDER_HITBOX_SIZE, DIVIDER_SEPARATOR_SIZE } from './constants';
 
 type ContainerStyleOptions = {
-  orientation: NonNullable<
-    React.ComponentProps<typeof Resizable>['orientation']
-  >;
+  layout: NonNullable<React.ComponentProps<typeof Resizable>['layout']>;
 };
 
-export function containerStyle({ orientation }: ContainerStyleOptions) {
+export function containerStyle({ layout }: ContainerStyleOptions) {
   return css`
     display: flex;
-    flex-direction: ${orientation === 'vertical' ? 'row' : 'column'};
+    flex-direction: ${layout === 'column' ? 'row' : 'column'};
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -23,22 +21,20 @@ export function containerStyle({ orientation }: ContainerStyleOptions) {
 }
 
 type DividerStyleOptions = {
-  orientation: NonNullable<
-    React.ComponentProps<typeof Resizable>['orientation']
-  >;
+  layout: NonNullable<React.ComponentProps<typeof Resizable>['layout']>;
   isFocusVisible: boolean;
   isDragging: boolean;
   inverted: boolean;
 };
 
 export function dividerStyle({
-  orientation,
+  layout,
   isFocusVisible,
   isDragging,
   inverted,
 }: DividerStyleOptions) {
   const adjustedDimension = `${
-    orientation === 'vertical' ? 'width' : 'height'
+    layout === 'column' ? 'width' : 'height'
   }: ${DIVIDER_HITBOX_SIZE}px`;
   const selectedDividerHighlight = css`
     background-color: ${inverted ? tokens.colors.blue : tokens.colors.blueDark};
@@ -52,7 +48,7 @@ export function dividerStyle({
     align-items: center;
     justify-content: center;
     ${adjustedDimension};
-    cursor: ${orientation === 'vertical' ? 'col-resize' : 'row-resize'};
+    cursor: ${layout === 'column' ? 'col-resize' : 'row-resize'};
     outline: 0;
     overflow: hidden;
 
@@ -77,25 +73,23 @@ export function dividerStyle({
 }
 
 type DividerLineStyleOptions = {
-  orientation: NonNullable<
-    React.ComponentProps<typeof Resizable>['orientation']
-  >;
+  layout: NonNullable<React.ComponentProps<typeof Resizable>['layout']>;
   showSeparator: boolean;
   inverted: boolean;
 };
 
 export function dividerSeparatorStyle({
-  orientation,
+  layout,
   showSeparator,
   inverted,
 }: DividerLineStyleOptions) {
   const separatorSize = `${
-    orientation === 'vertical' ? 'width' : 'height'
+    layout === 'column' ? 'width' : 'height'
   }: ${DIVIDER_SEPARATOR_SIZE}px`;
 
   return css`
     ${separatorSize};
-    ${orientation === 'vertical' ? 'height' : 'width'}: 100%;
+    ${layout === 'column' ? 'height' : 'width'}: 100%;
     background-color: ${showSeparator
       ? hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)
       : 'transparent'};
@@ -103,23 +97,21 @@ export function dividerSeparatorStyle({
   `;
 }
 
-type SubsectionStyleOptions = {
-  orientation: NonNullable<
-    React.ComponentProps<typeof Resizable>['orientation']
-  >;
+type PanelStyleOptions = {
+  layout: NonNullable<React.ComponentProps<typeof Resizable>['layout']>;
   isDragging: boolean;
   compensateForSeparator: boolean;
 };
 
-export function subsectionStyle({
-  orientation,
+export function panelStyle({
+  layout,
   isDragging,
   compensateForSeparator,
-}: SubsectionStyleOptions) {
+}: PanelStyleOptions) {
   const marginHitboxCompensation =
     (DIVIDER_HITBOX_SIZE - DIVIDER_SEPARATOR_SIZE) / 2;
   const adjustedMargins =
-    orientation === 'vertical'
+    layout === 'column'
       ? css`
           margin-left: -${marginHitboxCompensation}px;
           margin-right: -${marginHitboxCompensation}px;
@@ -134,7 +126,7 @@ export function subsectionStyle({
 
     ${isDragging &&
     css`
-      cursor: ${orientation === 'vertical' ? 'col-resize' : 'row-resize'};
+      cursor: ${layout === 'column' ? 'col-resize' : 'row-resize'};
       user-select: none;
     `};
 
@@ -151,11 +143,11 @@ export function subsectionStyle({
       ${adjustedMargins}
 
       &:first-of-type {
-        ${orientation === 'vertical' ? 'margin-left' : 'margin-top'}: 0;
+        ${layout === 'column' ? 'margin-left' : 'margin-top'}: 0;
       }
 
       &:last-of-type {
-        ${orientation === 'vertical' ? 'margin-right' : 'margin-bottom'}: 0;
+        ${layout === 'column' ? 'margin-right' : 'margin-bottom'}: 0;
       }
     `}
   `;

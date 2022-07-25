@@ -5,9 +5,7 @@ import { dividerStyle, dividerSeparatorStyle } from './styles';
 import Resizable from './resizable';
 
 type DividerProps = {
-  orientation: NonNullable<
-    React.ComponentProps<typeof Resizable>['orientation']
-  >;
+  layout: NonNullable<React.ComponentProps<typeof Resizable>['layout']>;
   isDragging: boolean;
   showSeparator: boolean;
   inverted: boolean;
@@ -16,7 +14,7 @@ type DividerProps = {
 };
 
 function Divider({
-  orientation,
+  layout,
   isDragging,
   showSeparator,
   inverted,
@@ -28,16 +26,14 @@ function Divider({
   return (
     <div
       role="separator"
-      aria-orientation={orientation}
+      aria-orientation={layout === 'column' ? 'vertical' : 'horizontal'}
       tabIndex={0}
       {...focusProps}
       onMouseDown={onStartDrag}
       onKeyDown={onKeyDown}
-      css={dividerStyle({ orientation, isFocusVisible, isDragging, inverted })}
+      css={dividerStyle({ layout, isFocusVisible, isDragging, inverted })}
     >
-      <div
-        css={dividerSeparatorStyle({ orientation, showSeparator, inverted })}
-      />
+      <div css={dividerSeparatorStyle({ layout, showSeparator, inverted })} />
     </div>
   );
 }
