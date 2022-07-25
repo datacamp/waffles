@@ -6,7 +6,7 @@ import React, {
   Children,
 } from 'react';
 
-import { useIsomorphicLayoutEffect } from '../hooks';
+import { useCallbackRef, useIsomorphicLayoutEffect } from '../hooks';
 
 import {
   combineSubsectionsDimensions,
@@ -160,17 +160,16 @@ function Resizable({
     [orientation, subsectionCount, minSize],
   );
 
-  const handleStopDrag = useCallback(
-    (event: MouseEvent) => {
-      event.stopPropagation();
-      currentDividerIndex.current = null;
-      setDraggedDividerIndex(null);
+  const handleStopDrag = useCallbackRef((event: MouseEvent) => {
+    event.stopPropagation();
+    currentDividerIndex.current = null;
+    setDraggedDividerIndex(null);
 
-      document.removeEventListener('mousemove', handleDrag);
-      document.removeEventListener('mouseup', handleStopDrag);
-    },
-    [handleDrag],
-  );
+    document.removeEventListener('mousemove', handleDrag);
+    document.removeEventListener('mouseup', handleStopDrag);
+
+    onResizeEnd?.(calculateProportionsFromDimensions(subsectionsDimensions));
+  });
 
   const handleStartDrag = useCallback(
     (event: React.MouseEvent<HTMLDivElement, MouseEvent>, index: number) => {
@@ -220,8 +219,10 @@ function Resizable({
           return [...updatedDimensions];
         }
       });
+
+      onResizeEnd?.(calculateProportionsFromDimensions(subsectionsDimensions));
     },
-    [orientation, minSize, onResizeStart],
+    [orientation, minSize, onResizeStart, onResizeEnd, subsectionsDimensions],
   );
 
   // Set initial subsections dimensions, either based on provider proportions or equally
@@ -259,13 +260,6 @@ function Resizable({
       }
     }
   }, [orientation, initialProportions, subsectionCount, minSize]);
-
-  // Call onResizeEnd when dragging has stopped
-  useIsomorphicLayoutEffect(() => {
-    if (draggedDividerIndex === null) {
-      onResizeEnd?.(calculateProportionsFromDimensions(subsectionsDimensions));
-    }
-  }, [draggedDividerIndex, onResizeEnd, subsectionsDimensions]);
 
   // Clean up all listeners when unmounting
   useEffect(() => {
