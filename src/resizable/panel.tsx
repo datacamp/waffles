@@ -19,7 +19,7 @@ function Panel({
   dimension,
 }: PanelProps) {
   // Because of frequent updates, pass width / height as regular style
-  // It prevents emotion from appling new class each time a new value is provided
+  // It prevents emotion from applying new class each time a new value is provided
   const adjustedSize = {
     [layout === 'column' ? 'width' : 'height']: dimension,
   };
