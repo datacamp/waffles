@@ -5,17 +5,15 @@ import Resizable from './resizable';
 
 type ContainerProps = {
   children: React.ReactNode;
-  orientation: NonNullable<
-    React.ComponentProps<typeof Resizable>['orientation']
-  >;
+  layout: NonNullable<React.ComponentProps<typeof Resizable>['layout']>;
 };
 
 function ContainerInternal(
-  { children, orientation }: ContainerProps,
+  { children, layout }: ContainerProps,
   ref: React.Ref<HTMLDivElement>,
 ) {
   return (
-    <div ref={ref} css={containerStyle({ orientation })}>
+    <div ref={ref} css={containerStyle({ layout })}>
       {children}
     </div>
   );

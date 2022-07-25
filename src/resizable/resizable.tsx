@@ -19,15 +19,15 @@ import Divider from './divider';
 import Container from './container';
 import { KEYBOARD_STEP } from './constants';
 
-const orientationMap = {
-  vertical: {
+const layoutMap = {
+  column: {
     dimension: 'width',
     offset: 'x',
     mousePosition: 'clientX',
     keyPositive: 'ArrowRight',
     keyNegative: 'ArrowLeft',
   },
-  horizontal: {
+  row: {
     dimension: 'height',
     offset: 'y',
     mousePosition: 'clientY',
@@ -40,7 +40,7 @@ type ResizableProps = {
   /* The elements to render in separate panels, divided by separator. At lest 2 must be provided. */
   children: JSX.Element[];
   /* The layout of the panels. */
-  orientation?: 'vertical' | 'horizontal';
+  layout?: 'column' | 'row';
   /* An array of proportions, e.g. `[2, 1, 1]`, which determine initial size of each panel. Must have the same length as the number of provided elements. When not provided the panels will default to equal sizes. */
   initialProportions?: number[];
   /* The minimal size of the panel. When resizing panel can't be collapsed below this value. Default is `100px`. */
@@ -57,7 +57,7 @@ type ResizableProps = {
 
 function Resizable({
   children,
-  orientation = 'vertical',
+  layout = 'column',
   initialProportions,
   minSize = '100px',
   showSeparators = false,
@@ -128,8 +128,8 @@ function Resizable({
 
             // Handles the scenario when container is not positioned exactly at the edge of the browser window
             const normalizedDividerPosition =
-              event[orientationMap[orientation].mousePosition] -
-              containerBoundingBox[orientationMap[orientation].offset];
+              event[layoutMap[layout].mousePosition] -
+              containerBoundingBox[layoutMap[layout].offset];
 
             // Don't allow panel to be smaller than minWidth
             if (
@@ -153,7 +153,7 @@ function Resizable({
         });
       }
     },
-    [orientation, panelCount, minPanelSize],
+    [layout, panelCount, minPanelSize],
   );
 
   const handleStopDrag = useCallbackRef((event: MouseEvent) => {
@@ -184,8 +184,8 @@ function Resizable({
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>, dividerIndex: number) => {
       if (
-        event.key !== orientationMap[orientation].keyPositive &&
-        event.key !== orientationMap[orientation].keyNegative
+        event.key !== layoutMap[layout].keyPositive &&
+        event.key !== layoutMap[layout].keyNegative
       ) {
         return;
       }
@@ -194,8 +194,7 @@ function Resizable({
 
       setPanelsDimensions((previousDimensions) => {
         const updatedDimensions = previousDimensions;
-        const direction =
-          event.key === orientationMap[orientation].keyPositive ? -1 : 1;
+        const direction = event.key === layoutMap[layout].keyPositive ? -1 : 1;
 
         // Calculate size of adjacent panels (placed before and after divider)
         const panelBeforeNewWidth =
@@ -216,7 +215,7 @@ function Resizable({
 
       onResizeEnd?.(calculateProportionsFromDimensions(panelsDimensions));
     },
-    [orientation, minPanelSize, onResizeStart, onResizeEnd, panelsDimensions],
+    [layout, minPanelSize, onResizeStart, onResizeEnd, panelsDimensions],
   );
 
   // Set initial panels dimensions, either based on provided proportions or equally
@@ -232,10 +231,10 @@ function Resizable({
     }
 
     if (containerRef.current) {
-      // Total container width or height based on orientation
+      // Total container width or height based on layout
       const containerSize =
         containerRef.current.getBoundingClientRect()[
-          orientationMap[orientation].dimension
+          layoutMap[layout].dimension
         ];
 
       if (initialProportions) {
@@ -253,7 +252,7 @@ function Resizable({
         setPanelsDimensions(updatedDimensions);
       }
     }
-  }, [orientation, initialProportions, panelCount, minPanelSize]);
+  }, [layout, initialProportions, panelCount, minPanelSize]);
 
   // Clean up all listeners when unmounting
   useEffect(() => {
@@ -266,13 +265,13 @@ function Resizable({
   // To eleminate all kinds of rounding errors, last panel always takes the remaining space
   // Therefore its size doesn't have to be set explicitly
   return (
-    <Container ref={containerRef} orientation={orientation}>
+    <Container ref={containerRef} layout={layout}>
       {Children.map(children, (child, index) => {
         if (index < panelCount - 1) {
           return (
             <>
               <Panel
-                orientation={orientation}
+                layout={layout}
                 dimension={panelsDimensions[index]}
                 isDragging={draggedDividerIndex !== null}
                 compensateForSeparator={showSeparators}
@@ -280,7 +279,7 @@ function Resizable({
                 {child}
               </Panel>
               <Divider
-                orientation={orientation}
+                layout={layout}
                 onStartDrag={(event) => handleStartDrag(event, index)}
                 onKeyDown={(event) => handleKeyDown(event, index)}
                 isDragging={draggedDividerIndex === index}
@@ -292,7 +291,7 @@ function Resizable({
         }
         return (
           <Panel
-            orientation={orientation}
+            layout={layout}
             isDragging={draggedDividerIndex !== null}
             compensateForSeparator={showSeparators}
           >
