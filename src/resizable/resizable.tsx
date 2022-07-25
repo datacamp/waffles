@@ -37,7 +37,7 @@ const layoutMap = {
 } as const;
 
 type ResizableProps = {
-  /* The elements to render in separate panels, divided by separator. Must provide at least **two** elements. */
+  /* The elements to render in separate panels, divided by separator. Must provide at least _two_ elements. */
   children: JSX.Element[];
   /* The layout of the panels. */
   layout?: 'column' | 'row';
