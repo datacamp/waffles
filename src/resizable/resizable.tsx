@@ -45,9 +45,9 @@ type ResizableProps = {
   initialProportions?: number[];
   /* The minimum size of the panel. When resizing panel can't be collapsed below this value. Default is `100px`. */
   minSize?: string;
-  /* If enabled, separators between panels are visible. */
-  showSeparators?: boolean;
-  /* Sets the style of the separator suitable for dark backgrounds. */
+  /* If enabled, dividers between panels are visible. */
+  showDividers?: boolean;
+  /* Sets the style of dividers suitable for dark backgrounds. */
   inverted?: boolean;
   /* Called when divider begins to move. */
   onResizeStart?: () => void;
@@ -60,7 +60,7 @@ function Resizable({
   layout = 'column',
   initialProportions,
   minSize = '100px',
-  showSeparators = false,
+  showDividers = false,
   inverted = false,
   onResizeStart,
   onResizeEnd,
@@ -274,7 +274,7 @@ function Resizable({
                 layout={layout}
                 dimension={panelsDimensions[index]}
                 isDragging={draggedDividerIndex !== null}
-                compensateForSeparator={showSeparators}
+                compensateForSeparator={showDividers}
               >
                 {child}
               </Panel>
@@ -283,7 +283,7 @@ function Resizable({
                 onStartDrag={(event) => handleStartDrag(event, index)}
                 onKeyDown={(event) => handleKeyDown(event, index)}
                 isDragging={draggedDividerIndex === index}
-                showSeparator={showSeparators}
+                showSeparator={showDividers}
                 inverted={inverted}
               />
             </>
@@ -293,7 +293,7 @@ function Resizable({
           <Panel
             layout={layout}
             isDragging={draggedDividerIndex !== null}
-            compensateForSeparator={showSeparators}
+            compensateForSeparator={showDividers}
           >
             {child}
           </Panel>

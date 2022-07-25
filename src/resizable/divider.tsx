@@ -13,6 +13,7 @@ type DividerProps = {
   onKeyDown: React.KeyboardEventHandler<HTMLDivElement>;
 };
 
+// Internally we call draggable hitbox between sections a divider, and separator is a thin line inside divider
 function Divider({
   layout,
   isDragging,
