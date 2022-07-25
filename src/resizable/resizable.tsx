@@ -9,12 +9,12 @@ import React, {
 import { useCallbackRef, useIsomorphicLayoutEffect } from '../hooks';
 
 import {
-  combineSubsectionsDimensions,
+  combinePanelsDimensions,
   calculateProportianalDimensions,
   splitDimensionEqually,
   calculateProportionsFromDimensions,
 } from './utils';
-import Subsection from './subsection';
+import Panel from './panel';
 import Divider from './divider';
 import Container from './container';
 import { KEYBOARD_STEP } from './constants';
@@ -37,21 +37,21 @@ const orientationMap = {
 } as const;
 
 type ResizableProps = {
-  /* The elements to render in subsections, divided by separator. At lest 2 must be provided. */
+  /* The elements to render in separate panels, divided by separator. At lest 2 must be provided. */
   children: JSX.Element[];
-  /* The layout of the subsections. */
+  /* The layout of the panels. */
   orientation?: 'vertical' | 'horizontal';
-  /* An array of proportions, e.g. `[2, 1, 1]`, which determine initial size of each subsection. Must have the same length as the number of provided elements. When not provided the subsections will default to equal sizes. */
+  /* An array of proportions, e.g. `[2, 1, 1]`, which determine initial size of each panel. Must have the same length as the number of provided elements. When not provided the panels will default to equal sizes. */
   initialProportions?: number[];
-  /* The minimal size of the subsection. Default is `100px`. */
-  minSubsectionSize?: string;
-  /* If enabled, separators between subsections are visible. */
+  /* The minimal size of the panel. When resizing panel can't be collapsed below this value. Default is `100px`. */
+  minSize?: string;
+  /* If enabled, separators between panels are visible. */
   showSeparators?: boolean;
   /* Sets the style of the separator suitable for dark backgrounds. */
   inverted?: boolean;
   /* Handler called when separator just started to move. */
   onResizeStart?: () => void;
-  /* Handler called when separator just stopped moving. Useful for retreiving subsections proportions after resizing via `proportions` argument. For example could be used to persist proportions in local storage. */
+  /* Handler called when separator just stopped moving. Useful for retreiving panels proportions after resizing via `proportions` argument. For example could be used to persist proportions in local storage. */
   onResizeEnd?: (proportions?: number[]) => void;
 };
 
@@ -59,34 +59,34 @@ function Resizable({
   children,
   orientation = 'vertical',
   initialProportions,
-  minSubsectionSize = '100px',
+  minSize = '100px',
   showSeparators = false,
   inverted = false,
   onResizeStart,
   onResizeEnd,
 }: ResizableProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const minSize = parseInt(minSubsectionSize, 10);
+  const minPanelSize = parseInt(minSize, 10);
 
-  // Number of provided subsections, with empty ones filtered out
-  const subsectionCount = React.Children.toArray(children).length;
+  // Number of provided panels, with empty ones filtered out
+  const panelCount = React.Children.toArray(children).length;
 
   // Index of currently dragged splitter, starts with 0
   // No splitter is being dragged if it's null
-  // Required to calculate widths of adjacent subsections, e.g. splitter with index 1 is between subsection 1 and 2
+  // Required to calculate widths of adjacent panels, e.g. splitter with index 1 is between panel 1 and 2
   // Preserved between re-renders, manually updated via event handlers
   const currentDividerIndex = useRef<number | null>(null);
 
   // Used to improve visual behavior of cursor and divider higlighting
-  // So they are always visible when divider is being dragged
+  // Prevents jittering when they are being dragged
   const [draggedDividerIndex, setDraggedDividerIndex] = useState<number | null>(
     null,
   );
 
-  // Array of dimensions (in pixels) of all subsections
-  // Depending on orientation they are eaither widths or heights
-  const [subsectionsDimensions, setSubsectionsDimensions] = useState(
-    Array(subsectionCount).fill(0),
+  // Array of dimensions (in pixels) of all panels
+  // Depending on layout they are either widths or heights
+  const [panelsDimensions, setPanelsDimensions] = useState(
+    Array(panelCount).fill(0),
   );
 
   const handleDrag = useCallback(
@@ -99,7 +99,7 @@ function Resizable({
         event.stopPropagation();
         event.preventDefault(); // Prevents text from being selected
 
-        setSubsectionsDimensions((previousDimensions) => {
+        setPanelsDimensions((previousDimensions) => {
           if (containerRef.current && currentDividerIndex.current !== null) {
             const updatedDimensions = previousDimensions;
             const dividerIndex = currentDividerIndex.current;
@@ -111,21 +111,19 @@ function Resizable({
             let maxDividerPostion = containerBoundingBox.width;
 
             if (dividerIndex === 0) {
-              minDividerPosition = 0 + minSize;
+              minDividerPosition = 0 + minPanelSize;
             } else {
               minDividerPosition =
-                combineSubsectionsDimensions(updatedDimensions, dividerIndex) +
-                minSize;
+                combinePanelsDimensions(updatedDimensions, dividerIndex) +
+                minPanelSize;
             }
 
-            if (dividerIndex === subsectionCount - 1) {
-              maxDividerPostion = containerBoundingBox.width - minSize;
+            if (dividerIndex === panelCount - 1) {
+              maxDividerPostion = containerBoundingBox.width - minPanelSize;
             } else {
               maxDividerPostion =
-                combineSubsectionsDimensions(
-                  previousDimensions,
-                  dividerIndex + 2,
-                ) - minSize;
+                combinePanelsDimensions(previousDimensions, dividerIndex + 2) -
+                minPanelSize;
             }
 
             // Handles the scenario when container is not positioned exactly at the edge of the browser window
@@ -133,17 +131,15 @@ function Resizable({
               event[orientationMap[orientation].mousePosition] -
               containerBoundingBox[orientationMap[orientation].offset];
 
-            // Don't allow subsections to be smaller than minWidth
+            // Don't allow panel to be smaller than minWidth
             if (
               normalizedDividerPosition > minDividerPosition &&
               normalizedDividerPosition < maxDividerPostion
             ) {
               const difference =
-                combineSubsectionsDimensions(
-                  previousDimensions,
-                  dividerIndex + 1,
-                ) - normalizedDividerPosition;
-              // Update the widths of subsections adjacent to currently dragged divider
+                combinePanelsDimensions(previousDimensions, dividerIndex + 1) -
+                normalizedDividerPosition;
+              // Update the widths of panels adjacent to currently dragged divider
               updatedDimensions[dividerIndex] =
                 previousDimensions[dividerIndex] - difference;
               updatedDimensions[dividerIndex + 1] =
@@ -157,7 +153,7 @@ function Resizable({
         });
       }
     },
-    [orientation, subsectionCount, minSize],
+    [orientation, panelCount, minPanelSize],
   );
 
   const handleStopDrag = useCallbackRef((event: MouseEvent) => {
@@ -168,7 +164,7 @@ function Resizable({
     document.removeEventListener('mousemove', handleDrag);
     document.removeEventListener('mouseup', handleStopDrag);
 
-    onResizeEnd?.(calculateProportionsFromDimensions(subsectionsDimensions));
+    onResizeEnd?.(calculateProportionsFromDimensions(panelsDimensions));
   });
 
   const handleStartDrag = useCallback(
@@ -196,44 +192,42 @@ function Resizable({
 
       onResizeStart?.();
 
-      setSubsectionsDimensions((previousDimensions) => {
+      setPanelsDimensions((previousDimensions) => {
         const updatedDimensions = previousDimensions;
         const direction =
           event.key === orientationMap[orientation].keyPositive ? -1 : 1;
 
-        // Calculate size of adjacent subsections before and after divider
-        const subsectionBeforeNewWidth =
+        // Calculate size of adjacent panels (placed before and after divider)
+        const panelBeforeNewWidth =
           previousDimensions[dividerIndex] - KEYBOARD_STEP * direction;
-        const subsectionAfterNewWidth =
+        const panelAfterNewWidth =
           previousDimensions[dividerIndex + 1] + KEYBOARD_STEP * direction;
 
-        // Don't allow subsections to be smaller than minWidth
-        if (
-          Math.min(subsectionBeforeNewWidth, subsectionAfterNewWidth) <= minSize
-        ) {
+        // Don't allow panel to be smaller than minWidth
+        if (Math.min(panelBeforeNewWidth, panelAfterNewWidth) <= minPanelSize) {
           return previousDimensions;
         } else {
-          updatedDimensions[dividerIndex] = subsectionBeforeNewWidth;
-          updatedDimensions[dividerIndex + 1] = subsectionAfterNewWidth;
+          updatedDimensions[dividerIndex] = panelBeforeNewWidth;
+          updatedDimensions[dividerIndex + 1] = panelAfterNewWidth;
 
           return [...updatedDimensions];
         }
       });
 
-      onResizeEnd?.(calculateProportionsFromDimensions(subsectionsDimensions));
+      onResizeEnd?.(calculateProportionsFromDimensions(panelsDimensions));
     },
-    [orientation, minSize, onResizeStart, onResizeEnd, subsectionsDimensions],
+    [orientation, minPanelSize, onResizeStart, onResizeEnd, panelsDimensions],
   );
 
-  // Set initial subsections dimensions, either based on provider proportions or equally
+  // Set initial panels dimensions, either based on provided proportions or equally
   useIsomorphicLayoutEffect(() => {
-    if (subsectionCount < 2) {
-      throw new Error('Resizable should contain at least 2 subsections.');
+    if (panelCount < 2) {
+      throw new Error('Resizable should contain at least 2 panels.');
     }
 
-    if (initialProportions && initialProportions.length !== subsectionCount) {
+    if (initialProportions && initialProportions.length !== panelCount) {
       throw new Error(
-        'The lenght of initialProportions array must be the same as the number of subsections.',
+        'The lenght of initialProportions array must be the same as the number of panels.',
       );
     }
 
@@ -248,18 +242,18 @@ function Resizable({
         const updatedDimensions = calculateProportianalDimensions(
           containerSize,
           initialProportions,
-          minSize,
+          minPanelSize,
         );
-        setSubsectionsDimensions(updatedDimensions);
+        setPanelsDimensions(updatedDimensions);
       } else {
         const updatedDimensions = splitDimensionEqually(
           containerSize,
-          subsectionCount,
+          panelCount,
         );
-        setSubsectionsDimensions(updatedDimensions);
+        setPanelsDimensions(updatedDimensions);
       }
     }
-  }, [orientation, initialProportions, subsectionCount, minSize]);
+  }, [orientation, initialProportions, panelCount, minPanelSize]);
 
   // Clean up all listeners when unmounting
   useEffect(() => {
@@ -269,22 +263,22 @@ function Resizable({
     };
   }, [handleDrag, handleStopDrag]);
 
-  // To eleminate all kinds of rounding errors last subsection always takes the remaining space
+  // To eleminate all kinds of rounding errors, last panel always takes the remaining space
   // Therefore its size doesn't have to be set explicitly
   return (
     <Container ref={containerRef} orientation={orientation}>
       {Children.map(children, (child, index) => {
-        if (index < subsectionCount - 1) {
+        if (index < panelCount - 1) {
           return (
             <>
-              <Subsection
+              <Panel
                 orientation={orientation}
-                dimension={subsectionsDimensions[index]}
+                dimension={panelsDimensions[index]}
                 isDragging={draggedDividerIndex !== null}
                 compensateForSeparator={showSeparators}
               >
                 {child}
-              </Subsection>
+              </Panel>
               <Divider
                 orientation={orientation}
                 onStartDrag={(event) => handleStartDrag(event, index)}
@@ -297,13 +291,13 @@ function Resizable({
           );
         }
         return (
-          <Subsection
+          <Panel
             orientation={orientation}
             isDragging={draggedDividerIndex !== null}
             compensateForSeparator={showSeparators}
           >
             {child}
-          </Subsection>
+          </Panel>
         );
       })}
     </Container>

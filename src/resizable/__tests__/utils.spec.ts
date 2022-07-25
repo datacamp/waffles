@@ -1,29 +1,27 @@
 import {
-  combineSubsectionsDimensions,
+  combinePanelsDimensions,
   calculateProportianalDimensions,
   splitDimensionEqually,
   round,
   calculateProportionsFromDimensions,
 } from '../utils';
 
-describe('combineSubsectionsDimensions', () => {
+describe('combinePanelsDimensions', () => {
   const testSubsectionsDimensions = [103.45, 180, 255.43, 242];
 
   it('combine dimensions for given index', () => {
-    expect(combineSubsectionsDimensions(testSubsectionsDimensions, 2)).toEqual(
+    expect(combinePanelsDimensions(testSubsectionsDimensions, 2)).toEqual(
       283.45,
     );
   });
 
   it('return 0 for first index', () => {
-    expect(combineSubsectionsDimensions(testSubsectionsDimensions, 0)).toEqual(
-      0,
-    );
+    expect(combinePanelsDimensions(testSubsectionsDimensions, 0)).toEqual(0);
   });
 
   it('combine dimensions for the last index', () => {
     expect(
-      combineSubsectionsDimensions(
+      combinePanelsDimensions(
         testSubsectionsDimensions,
         testSubsectionsDimensions.length - 1,
       ),
