@@ -3,15 +3,15 @@ import { useState, useEffect } from 'react';
 import { tokens } from '../tokens';
 
 // Return true if the component has a small width
-function useSmallVariant(targetRef: React.RefObject<HTMLElement>) {
-  const [isSmallVariant, setIsSmallVariant] = useState(false);
+function useHasSmallWidth(targetRef: React.RefObject<HTMLElement>) {
+  const [hasSmallWidth, setHasSmallWidth] = useState(false);
 
   useEffect(() => {
     const element = targetRef.current;
 
     function elementResizeHandler() {
       if (element) {
-        setIsSmallVariant(
+        setHasSmallWidth(
           element.clientWidth < parseInt(tokens.breakpoints.small),
         );
       }
@@ -26,7 +26,7 @@ function useSmallVariant(targetRef: React.RefObject<HTMLElement>) {
     };
   }, [targetRef]);
 
-  return isSmallVariant;
+  return hasSmallWidth;
 }
 
-export default useSmallVariant;
+export default useHasSmallWidth;

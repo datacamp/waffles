@@ -2,7 +2,7 @@ import { useRef } from 'react';
 
 import { Heading } from '../heading';
 
-import useSmallVariant from './use-vertical';
+import useHasSmallWidth from './use-has-small-width';
 import {
   contentWrapperStyle,
   emptyStateStyle,
@@ -46,7 +46,7 @@ function EmptyStateInternal({
   ...restProps
 }: EmptyStateBaseProps & EmptyStateDirectionCenteredProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const hasSmallWidth = useSmallVariant(wrapperRef);
+  const hasSmallWidth = useHasSmallWidth(wrapperRef);
 
   return (
     <div
