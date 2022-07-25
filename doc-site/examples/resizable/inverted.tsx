@@ -17,15 +17,15 @@ const paragraphStyle = css`
 function Example() {
   return (
     <div css={wrapperStyle}>
-      <Resizable inverted orientation="vertical" showSeparators>
+      <Resizable inverted layout="column" showDividers>
         <Paragraph inverted css={paragraphStyle}>
-          First Resizable Subsection
+          First Panel
         </Paragraph>
         <Paragraph inverted css={paragraphStyle}>
-          First Second Subsection
+          Second Panel
         </Paragraph>
         <Paragraph inverted css={paragraphStyle}>
-          First Third Subsection
+          Third Panel
         </Paragraph>
       </Resizable>
     </div>

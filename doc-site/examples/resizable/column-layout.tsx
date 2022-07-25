@@ -17,14 +17,10 @@ const paragraphStyle = css`
 function Example() {
   return (
     <div css={wrapperStyle}>
-      <Resizable
-        initialProportions={[2, 1, 1]}
-        orientation="vertical"
-        showSeparators
-      >
-        <Paragraph css={paragraphStyle}>First Resizable Subsection</Paragraph>
-        <Paragraph css={paragraphStyle}>First Second Subsection</Paragraph>
-        <Paragraph css={paragraphStyle}>First Third Subsection</Paragraph>
+      <Resizable initialProportions={[2, 1, 1]} layout="column" showDividers>
+        <Paragraph css={paragraphStyle}>First Panel</Paragraph>
+        <Paragraph css={paragraphStyle}>Second Panel</Paragraph>
+        <Paragraph css={paragraphStyle}>Third Panel</Paragraph>
       </Resizable>
     </div>
   );
