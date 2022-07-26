@@ -73,7 +73,7 @@ export function round(num: number) {
 // Calculate percentage proportions from provided pixel dimensions
 // Doesn't have to be super accurate
 export function calculateProportionsFromDimensions(panelsDimensions: number[]) {
-  // Don't really care about last element, since it will be recalcualted anyway
+  // Don't really care about last element, since it will be recalculated anyway
   const combinedSize =
     panelsDimensions.reduce((total, size) => {
       return total + size;

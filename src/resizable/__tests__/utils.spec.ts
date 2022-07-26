@@ -9,23 +9,21 @@ import {
 } from '../utils';
 
 describe('combinePanelsDimensions', () => {
-  const testSubsectionsDimensions = [103.45, 180, 255.43, 242];
+  const testPanelsDimensions = [103.45, 180, 255.43, 242];
 
   it('combine dimensions for given index', () => {
-    expect(combinePanelsDimensions(testSubsectionsDimensions, 2)).toEqual(
-      283.45,
-    );
+    expect(combinePanelsDimensions(testPanelsDimensions, 2)).toEqual(283.45);
   });
 
   it('return 0 for first index', () => {
-    expect(combinePanelsDimensions(testSubsectionsDimensions, 0)).toEqual(0);
+    expect(combinePanelsDimensions(testPanelsDimensions, 0)).toEqual(0);
   });
 
   it('combine dimensions for the last index', () => {
     expect(
       combinePanelsDimensions(
-        testSubsectionsDimensions,
-        testSubsectionsDimensions.length - 1,
+        testPanelsDimensions,
+        testPanelsDimensions.length - 1,
       ),
     ).toEqual(538.88);
   });
@@ -38,7 +36,7 @@ describe('calculateProportianalDimensions', () => {
     ]);
   });
 
-  it('each subsection should have at least minimal width', () => {
+  it('each panel should have at least minimal width', () => {
     expect(calculateProportianalDimensions(388, [30, 30, 60], 100)).toEqual([
       100, 100, 190.5,
     ]);
