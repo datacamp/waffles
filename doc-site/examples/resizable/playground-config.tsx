@@ -5,6 +5,7 @@ import { Paragraph } from '@datacamp/waffles/paragraph';
 import type { PlaygroundConfig } from '../../types';
 
 const initialCode = `
+import { tokens } from '@datacamp/waffles/tokens';
 import { Resizable } from '@datacamp/waffles/resizable';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 

@@ -45,7 +45,7 @@ type ResizableProps = {
   layout?: 'column' | 'row';
   /* An array of proportions, e.g. `[2, 1, 1]`, which determine the default relative size of each panel. Must have the same length as the number of provided elements. When not provided the panels will default to equal sizes. */
   defaultProportions?: number[];
-  /* The minimum size of the panel. When resizing, panel can't be collapsed below this value. Default is `100px`. */
+  /* The minimum size of the panel in pixels. When resizing, panel can't be collapsed below this value. Default is `100px`. */
   minSize?: string;
   /* If enabled, dividers between panels are visible. */
   showDividers?: boolean;
