@@ -2,7 +2,7 @@ import {
   combinePanelsDimensions,
   calculateProportianalDimensions,
   splitDimensionEqually,
-  areInitialProportionsEqual,
+  areDefaultProportionsEqual,
   round,
   recalculateDimensionsProportinally,
   calculateProportionsFromDimensions,
@@ -49,11 +49,11 @@ describe('splitDimensionEqually', () => {
   });
 });
 
-describe('areInitialProportionsEqual', () => {
+describe('areDefaultProportionsEqual', () => {
   it('return true if two arrays contain exactly same values', () => {
-    expect(areInitialProportionsEqual([30, 40, 60], [30, 40, 60])).toBe(true);
+    expect(areDefaultProportionsEqual([30, 40, 60], [30, 40, 60])).toBe(true);
     expect(
-      areInitialProportionsEqual(
+      areDefaultProportionsEqual(
         [1.25, 0.452, 11, 67.43],
         [1.25, 0.452, 11, 67.43],
       ),
@@ -61,9 +61,9 @@ describe('areInitialProportionsEqual', () => {
   });
 
   it('return false if two arrays do not contain exactly same values', () => {
-    expect(areInitialProportionsEqual([30, 40, 60], [3, 4, 6])).toBe(false);
+    expect(areDefaultProportionsEqual([30, 40, 60], [3, 4, 6])).toBe(false);
     expect(
-      areInitialProportionsEqual(
+      areDefaultProportionsEqual(
         [1.25, 0.452, 11, 67.43],
         [1.25, 0.452, 11, 4.452],
       ),

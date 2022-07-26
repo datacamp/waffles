@@ -17,7 +17,7 @@ const paragraphStyle = css`
 function Story() {
   return (
     <div css={wrapperStyle}>
-      <Resizable initialProportions={[1, 1, 2]} layout="column" showDividers>
+      <Resizable defaultProportions={[1, 1, 2]} layout="column" showDividers>
         <Paragraph css={paragraphStyle}>
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
