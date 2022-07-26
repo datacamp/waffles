@@ -4,6 +4,7 @@ import {
   splitDimensionEqually,
   areInitialProportionsEqual,
   round,
+  recalculateDimensionsProportinally,
   calculateProportionsFromDimensions,
 } from '../utils';
 
@@ -79,6 +80,23 @@ describe('round', () => {
     expect(round(15.3)).toEqual(15.3);
     expect(round(42.42)).toEqual(42.42);
     expect(round(42.488)).toEqual(42.49);
+  });
+});
+
+describe('recalculateDimensionsProportinally', () => {
+  it('update each dimansion based on provided multiplier', () => {
+    expect(recalculateDimensionsProportinally([100, 200, 300], 1.2)).toEqual([
+      120, 240, 360,
+    ]);
+    expect(
+      recalculateDimensionsProportinally([120.6, 80, 600, 120.4], 2.5),
+    ).toEqual([301.5, 200, 1500, 301]);
+    expect(recalculateDimensionsProportinally([100, 200, 300], 0.8)).toEqual([
+      80, 160, 240,
+    ]);
+    expect(
+      recalculateDimensionsProportinally([120.6, 80, 600, 120.8], 0.4),
+    ).toEqual([48.24, 32, 240, 48.32]);
   });
 });
 
