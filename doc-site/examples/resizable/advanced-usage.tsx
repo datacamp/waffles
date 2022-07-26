@@ -21,10 +21,12 @@ function Example() {
   const [panelsProportions, setPanelsProportions] = useState<number[] | null>(
     null,
   );
+
   return (
     <>
       <div css={wrapperStyle}>
         <Resizable
+          initialProportions={[2, 1]}
           onResizeEnd={(proportions) => {
             proportions && setPanelsProportions(proportions);
           }}
