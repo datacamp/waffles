@@ -23,19 +23,19 @@ export function recalculateDimensionsProportinally(
 // Calculate size of each panel based on provided proportions
 export function calculateProportianalDimensions(
   containerSize: number,
-  initialProportions: number[],
+  defaultProportions: number[],
   minSize: number,
 ) {
-  const totalProportions = initialProportions.reduce((total, proportion) => {
+  const totalProportions = defaultProportions.reduce((total, proportion) => {
     return total + proportion;
   }, 0);
 
   const singleProportionSize = containerSize / totalProportions;
 
-  return initialProportions.map((proportion, index) => {
+  return defaultProportions.map((proportion, index) => {
     // For first and last panel subtract only half of divider size
     const subtractedSize =
-      index === 0 || index === initialProportions.length - 1
+      index === 0 || index === defaultProportions.length - 1
         ? DIVIDER_HITBOX_SIZE / 2
         : DIVIDER_HITBOX_SIZE;
     // Don't allow size to be smaller than minSize
@@ -46,7 +46,7 @@ export function calculateProportianalDimensions(
   });
 }
 
-// Set the same size for each panel when initialProportions are not provided
+// Set the same size for each panel when defaultProportions are not provided
 export function splitDimensionEqually(
   containerSize: number,
   panelCount: number,
@@ -58,7 +58,7 @@ export function splitDimensionEqually(
 
 // Check whether two proportions arrays are equal or not
 // It's safe to use JSON.stringify for primitive types
-export function areInitialProportionsEqual(
+export function areDefaultProportionsEqual(
   previousProportions: number[],
   nextProportions: number[],
 ) {
