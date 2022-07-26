@@ -1,7 +1,5 @@
-import React, { useRef } from 'react';
-import useOnScreen from 'hooks/use-on-screen';
-import useContentsTable from 'hooks/use-contents-table';
-import { AssetModule } from 'helpers/group-assets';
+import React from 'react';
+import getAssetGroup from 'helpers/asset-group';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
@@ -9,11 +7,7 @@ import { Download } from '@datacamp/waffles/icon';
 import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
 
-import markdownElements from '../components/markdown-elements';
-
 import PreviewControls from './preview-controls';
-
-const Heading = markdownElements.h2;
 
 function assetPreviewStyle(maxColumnCount: number, hasDarkBackground: boolean) {
   return css`
@@ -78,23 +72,19 @@ function AssetPreview({ name, hasDarkBackground, asset }: AssetPreviewProps) {
 
 type AssetGridProps = {
   assetType: string;
-  assets: AssetModule;
-  maxColumns: number;
+  maxColumns?: number;
+  hasDarkBackground?: boolean;
 };
-function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
-  const hasDarkBackground = assetType === 'ALPA Loop';
-  const sectionHeading = `${assetType} Assets`;
-  const sectionRef = useRef<HTMLElement>(null);
-  const isVisible = useOnScreen(sectionRef);
 
-  // TODO: Explore if it's possible to add the asset grids headings in the correct place (at the end of the markdown parsing, not during), as they are currently done too early - ixTec
-  useContentsTable(isVisible, sectionHeading);
-
+function AssetGrid({
+  assetType,
+  maxColumns = 4,
+  hasDarkBackground = false,
+}: AssetGridProps) {
   return (
-    <section ref={sectionRef}>
-      <Heading>{sectionHeading}</Heading>
+    <>
       <div css={assetPreviewStyle(maxColumns, hasDarkBackground)}>
-        {Object.entries(assets).map((assetData) => {
+        {Object.entries(getAssetGroup(assetType)).map((assetData) => {
           const [name, Asset] = assetData;
 
           return (
@@ -113,15 +103,15 @@ function AssetGrid({ assetType, assets, maxColumns }: AssetGridProps) {
           size="small"
           variant="plain"
           href={`../../downloads/waffles-${
-            assetType.toLowerCase().split(' ')[0]
+            assetType ? assetType.toLowerCase().split(' ')[0] : 'other'
           }-asset-bundle.zip`}
           download
           iconLeft={<Download />}
         >
-          Download {sectionHeading}
+          Download {assetType} Assets
         </Button>
       </PreviewControls>
-    </section>
+    </>
   );
 }
 

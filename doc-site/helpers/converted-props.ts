@@ -25,6 +25,12 @@ type PropRawMetadata = {
     kind: string;
     name?: string;
     value?: PropTypeValue;
+    type?: {
+      kind: string;
+      value: {
+        name: string;
+      };
+    };
     types?: Array<{
       kind: string;
       value: string | PropTypeValue;
@@ -151,6 +157,12 @@ function formattedType(metadata: PropRawMetadata): string {
 
   if (value.kind === 'generic' && value.value?.kind) {
     return value.value.kind;
+  }
+
+  if (value.kind === 'arrayType') {
+    const typeName =
+      value.type?.kind === 'generic' ? value.type.value.name : value.type?.kind;
+    return `${typeName}[]`;
   }
 
   return value.kind;

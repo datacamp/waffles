@@ -17,7 +17,7 @@ import { ARTICLE_CONTENT_WIDTH } from './constants';
 import BackToTop from './back-to-top';
 
 const GITHUB_EDIT_URL =
-  'https://github.com/datacamp/waffles/edit/master/doc-site/pages';
+  'https://github.com/datacamp/waffles/edit/rc-next/doc-site/pages';
 
 const containerStyle = css`
   display: block;

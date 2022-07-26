@@ -34,8 +34,8 @@ exports[`Dialog renders snapshot 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 100px;
-  height: 100px;
+  width: 72px;
+  height: 72px;
 }
 
 .emotion-2 {
@@ -288,8 +288,8 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 100px;
-  height: 100px;
+  width: 72px;
+  height: 72px;
 }
 
 .emotion-2 {
@@ -542,8 +542,8 @@ exports[`Dialog renders snapshot in vertical orientation 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 100px;
-  height: 100px;
+  width: 72px;
+  height: 72px;
 }
 
 .emotion-2 {
@@ -796,8 +796,8 @@ exports[`Dialog renders snapshot in vertical orientation and inverted 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 100px;
-  height: 100px;
+  width: 72px;
+  height: 72px;
 }
 
 .emotion-2 {
