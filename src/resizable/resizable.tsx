@@ -6,13 +6,14 @@ import React, {
   Children,
 } from 'react';
 
-import { useCallbackRef, useIsomorphicLayoutEffect } from '../hooks';
+import { useCallbackRef } from '../hooks';
 
 import {
   combinePanelsDimensions,
   calculateProportianalDimensions,
   splitDimensionEqually,
   calculateProportionsFromDimensions,
+  areInitialProportionsEqual,
 } from './utils';
 import Panel from './panel';
 import Divider from './divider';
@@ -77,17 +78,25 @@ function Resizable({
   // Preserved between re-renders, manually updated via event handlers
   const currentDividerIndex = useRef<number | null>(null);
 
+  // Array of dimensions (in pixels) of all panels
+  // Depending on layout they are either widths or heights
+  const [panelsDimensions, setPanelsDimensions] = useState(
+    Array(panelCount).fill(0),
+  );
+
+  // Utility states
+
   // Used to improve visual behavior of cursor and divider higlighting
   // Prevents jittering when they are being dragged
   const [draggedDividerIndex, setDraggedDividerIndex] = useState<number | null>(
     null,
   );
 
-  // Array of dimensions (in pixels) of all panels
-  // Depending on layout they are either widths or heights
-  const [panelsDimensions, setPanelsDimensions] = useState(
-    Array(panelCount).fill(0),
-  );
+  // Used to prevent wasteful rerender when onResizeEnd is called
+  // Based on https://reactjs.org/docs/hooks-faq.html#how-do-i-implement-getderivedstatefromprops
+  const [previousInitialProportions, setPreviousInitialProportions] = useState<
+    number[]
+  >(Array(panelCount).fill(0));
 
   const handleDrag = useCallback(
     (event: MouseEvent) => {
@@ -219,7 +228,7 @@ function Resizable({
   );
 
   // Set initial panels dimensions, either based on provided proportions or equally
-  useIsomorphicLayoutEffect(() => {
+  useEffect(() => {
     if (panelCount < 2) {
       throw new Error('Resizable should contain at least 2 panels.');
     }
@@ -238,12 +247,21 @@ function Resizable({
         ];
 
       if (initialProportions) {
-        const updatedDimensions = calculateProportianalDimensions(
-          containerSize,
-          initialProportions,
-          minPanelSize,
-        );
-        setPanelsDimensions(updatedDimensions);
+        // Don't retrigger when initialProportions hasn't changed
+        if (
+          !areInitialProportionsEqual(
+            previousInitialProportions,
+            initialProportions,
+          )
+        ) {
+          const updatedDimensions = calculateProportianalDimensions(
+            containerSize,
+            initialProportions,
+            minPanelSize,
+          );
+          setPreviousInitialProportions(initialProportions);
+          setPanelsDimensions(updatedDimensions);
+        }
       } else {
         const updatedDimensions = splitDimensionEqually(
           containerSize,
@@ -252,7 +270,13 @@ function Resizable({
         setPanelsDimensions(updatedDimensions);
       }
     }
-  }, [layout, initialProportions, panelCount, minPanelSize]);
+  }, [
+    layout,
+    initialProportions,
+    previousInitialProportions,
+    panelCount,
+    minPanelSize,
+  ]);
 
   // Clean up all listeners when unmounting
   useEffect(() => {

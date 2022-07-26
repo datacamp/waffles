@@ -46,6 +46,15 @@ export function splitDimensionEqually(
   return Array(panelCount).fill(singleElementSize);
 }
 
+// Check whether two proportions arrays are equal
+// It's safe to use JSON.stringify for primitive types
+export function areInitialProportionsEqual(
+  previousProportions: number[],
+  nextProportions: number[],
+) {
+  return JSON.stringify(previousProportions) == JSON.stringify(nextProportions);
+}
+
 // Round value up to 2 decimal places
 export function round(num: number) {
   return Math.round(num * 100) / 100;
