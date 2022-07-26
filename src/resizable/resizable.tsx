@@ -45,7 +45,7 @@ type ResizableProps = {
   layout?: 'column' | 'row';
   /* An array of proportions, e.g. `[2, 1, 1]`, which determine the default relative size of each panel. Must have the same length as the number of provided elements. When not provided the panels will default to equal sizes. */
   defaultProportions?: number[];
-  /* The minimum size of the panel. When resizing panel can't be collapsed below this value. Default is `100px`. */
+  /* The minimum size of the panel. When resizing, panel can't be collapsed below this value. Default is `100px`. */
   minSize?: string;
   /* If enabled, dividers between panels are visible. */
   showDividers?: boolean;
@@ -117,24 +117,18 @@ function Resizable({
               containerRef.current.getBoundingClientRect();
 
             // Set min and max divider positions, so it can't be dragged beyond container boundaries
-            let minDividerPosition = 0;
-            let maxDividerPostion = containerBoundingBox.width;
-
-            if (dividerIndex === 0) {
-              minDividerPosition = 0 + minPanelSize;
-            } else {
-              minDividerPosition =
-                combinePanelsDimensions(updatedDimensions, dividerIndex) +
-                minPanelSize;
-            }
-
-            if (dividerIndex === panelCount - 1) {
-              maxDividerPostion = containerBoundingBox.width - minPanelSize;
-            } else {
-              maxDividerPostion =
-                combinePanelsDimensions(previousDimensions, dividerIndex + 2) -
-                minPanelSize;
-            }
+            const minDividerPosition =
+              dividerIndex === 0
+                ? minPanelSize
+                : combinePanelsDimensions(updatedDimensions, dividerIndex) +
+                  minPanelSize;
+            const maxDividerPosition =
+              dividerIndex === panelCount - 1
+                ? containerBoundingBox.width - minPanelSize
+                : combinePanelsDimensions(
+                    previousDimensions,
+                    dividerIndex + 2,
+                  ) - minPanelSize;
 
             // Handles the scenario when container is not positioned exactly at the edge of the browser window
             const normalizedDividerPosition =
@@ -144,7 +138,7 @@ function Resizable({
             // Don't allow panel to be smaller than minWidth
             if (
               normalizedDividerPosition > minDividerPosition &&
-              normalizedDividerPosition < maxDividerPostion
+              normalizedDividerPosition < maxDividerPosition
             ) {
               const difference =
                 combinePanelsDimensions(previousDimensions, dividerIndex + 1) -
