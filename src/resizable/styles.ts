@@ -52,6 +52,10 @@ export function dividerStyle({
     outline: 0;
     overflow: hidden;
 
+    &:hover div {
+      ${selectedDividerHighlight}
+    }
+
     ${isDragging &&
     css`
       & div {
@@ -65,10 +69,6 @@ export function dividerStyle({
         ${selectedDividerHighlight}
       }
     `}
-
-    &:hover div {
-      ${selectedDividerHighlight}
-    }
   `;
 }
 

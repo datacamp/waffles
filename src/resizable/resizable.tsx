@@ -13,7 +13,7 @@ import {
   calculateProportianalDimensions,
   splitDimensionEqually,
   calculateProportionsFromDimensions,
-  areInitialProportionsEqual,
+  areDefaultProportionsEqual,
   recalculateDimensionsProportinally,
 } from './utils';
 import Panel from './panel';
@@ -44,7 +44,7 @@ type ResizableProps = {
   /* The layout of the panels. */
   layout?: 'column' | 'row';
   /* An array of proportions, e.g. `[2, 1, 1]`, which determine the default relative size of each panel. Must have the same length as the number of provided elements. When not provided the panels will default to equal sizes. */
-  initialProportions?: number[];
+  defaultProportions?: number[];
   /* The minimum size of the panel. When resizing panel can't be collapsed below this value. Default is `100px`. */
   minSize?: string;
   /* If enabled, dividers between panels are visible. */
@@ -60,7 +60,7 @@ type ResizableProps = {
 function Resizable({
   children,
   layout = 'column',
-  initialProportions,
+  defaultProportions,
   minSize = '100px',
   showDividers = false,
   inverted = false,
@@ -95,7 +95,7 @@ function Resizable({
 
   // Used to prevent wasteful rerender when onResizeEnd is called
   // Based on https://reactjs.org/docs/hooks-faq.html#how-do-i-implement-getderivedstatefromprops
-  const [previousInitialProportions, setPreviousInitialProportions] = useState<
+  const [previousDefaultProportions, setPreviousDefaultProportions] = useState<
     number[]
   >(Array(panelCount).fill(0));
 
@@ -234,9 +234,9 @@ function Resizable({
       throw new Error('Resizable should contain at least 2 panels.');
     }
 
-    if (initialProportions && initialProportions.length !== panelCount) {
+    if (defaultProportions && defaultProportions.length !== panelCount) {
       throw new Error(
-        'The lenght of initialProportions array must be the same as the number of panels.',
+        'The lenght of defaultProportions array must be the same as the number of panels.',
       );
     }
 
@@ -247,20 +247,20 @@ function Resizable({
           layoutMap[layout].dimension
         ];
 
-      if (initialProportions) {
+      if (defaultProportions) {
         // Don't retrigger when initialProportions hasn't changed
         if (
-          !areInitialProportionsEqual(
-            previousInitialProportions,
-            initialProportions,
+          !areDefaultProportionsEqual(
+            previousDefaultProportions,
+            defaultProportions,
           )
         ) {
           const updatedDimensions = calculateProportianalDimensions(
             containerSize,
-            initialProportions,
+            defaultProportions,
             minPanelSize,
           );
-          setPreviousInitialProportions(initialProportions);
+          setPreviousDefaultProportions(defaultProportions);
           setPanelsDimensions(updatedDimensions);
         }
       } else {
@@ -273,8 +273,8 @@ function Resizable({
     }
   }, [
     layout,
-    initialProportions,
-    previousInitialProportions,
+    defaultProportions,
+    previousDefaultProportions,
     panelCount,
     minPanelSize,
   ]);
