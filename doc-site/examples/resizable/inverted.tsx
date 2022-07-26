@@ -5,7 +5,7 @@ import { Paragraph } from '@datacamp/waffles/paragraph';
 
 const wrapperStyle = css`
   width: 100%;
-  height: 400px;
+  height: 200px;
   background-color: ${tokens.colors.navy};
   border-radius: ${tokens.borderRadius.medium};
 `;
