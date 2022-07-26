@@ -18,7 +18,7 @@ function Example() {
   return (
     <div css={wrapperStyle}>
       <Resizable
-        initialProportions={[50, 25, 25]}
+        defaultProportions={[50, 25, 25]}
         layout="row"
         minSize="80px"
         showDividers

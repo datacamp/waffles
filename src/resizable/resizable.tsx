@@ -248,7 +248,7 @@ function Resizable({
         ];
 
       if (defaultProportions) {
-        // Don't retrigger when initialProportions hasn't changed
+        // Don't retrigger when defaultProportions hasn't changed
         if (
           !areDefaultProportionsEqual(
             previousDefaultProportions,

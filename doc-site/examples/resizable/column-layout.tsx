@@ -17,7 +17,7 @@ const paragraphStyle = css`
 function Example() {
   return (
     <div css={wrapperStyle}>
-      <Resizable initialProportions={[2, 1, 1]} layout="column" showDividers>
+      <Resizable defaultProportions={[2, 1, 1]} layout="column" showDividers>
         <Paragraph css={paragraphStyle}>First Panel</Paragraph>
         <Paragraph css={paragraphStyle}>Second Panel</Paragraph>
         <Paragraph css={paragraphStyle}>Third Panel</Paragraph>

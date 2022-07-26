@@ -26,7 +26,7 @@ function Example() {
     <>
       <div css={wrapperStyle}>
         <Resizable
-          initialProportions={[2, 1]}
+          defaultProportions={[2, 1]}
           onResizeEnd={(proportions) => {
             proportions && setPanelsProportions(proportions);
           }}
