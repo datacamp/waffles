@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 import { Resizable } from '../index';
 
 describe('Resizable', () => {
-  it('renders correct number of subsections and dividers', () => {
+  it('renders correct number of panels and dividers', () => {
     const { getAllByText, getAllByRole } = render(
       <Resizable>
         <p>Taylor Swift Subsection</p>
