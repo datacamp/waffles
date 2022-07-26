@@ -18,7 +18,7 @@ function Playground() {
         backgroundColor: tokens.colors.beigeLight,
       }}
     >
-      <Resizable initialProportions={[60, 40]} showDividers>
+      <Resizable defaultProportions={[60, 40]} showDividers>
         <Paragraph style={{ padding: tokens.spacing.medium }}>
           First Panel
         </Paragraph>
