@@ -14,6 +14,7 @@ import {
   splitDimensionEqually,
   calculateProportionsFromDimensions,
   areInitialProportionsEqual,
+  recalculateDimensionsProportinally,
 } from './utils';
 import Panel from './panel';
 import Divider from './divider';
@@ -277,6 +278,48 @@ function Resizable({
     panelCount,
     minPanelSize,
   ]);
+
+  // Handle browser window resizing, recalculate each panel size proportinally
+  useEffect(() => {
+    let previousContainerSize = 0;
+
+    if (containerRef.current) {
+      previousContainerSize =
+        containerRef.current.getBoundingClientRect()[
+          layoutMap[layout].dimension
+        ];
+    }
+
+    function handleResize() {
+      if (containerRef.current) {
+        const containerSize =
+          containerRef.current.getBoundingClientRect()[
+            layoutMap[layout].dimension
+          ];
+
+        if (containerSize && previousContainerSize) {
+          const multiplier = containerSize / previousContainerSize;
+
+          setPanelsDimensions((previousDimensions) => {
+            return recalculateDimensionsProportinally(
+              previousDimensions,
+              multiplier,
+            );
+          });
+        }
+
+        previousContainerSize = containerSize;
+      }
+    }
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [layout]);
 
   // Clean up all listeners when unmounting
   useEffect(() => {

@@ -10,6 +10,16 @@ export function combinePanelsDimensions(
   }, 0);
 }
 
+// Update each panel size proportionally
+export function recalculateDimensionsProportinally(
+  panelsDimensions: number[],
+  multiplier: number,
+) {
+  return panelsDimensions.map((dimension) => {
+    return dimension * multiplier;
+  });
+}
+
 // Calculate size of each panel based on provided proportions
 export function calculateProportianalDimensions(
   containerSize: number,
@@ -46,7 +56,7 @@ export function splitDimensionEqually(
   return Array(panelCount).fill(singleElementSize);
 }
 
-// Check whether two proportions arrays are equal
+// Check whether two proportions arrays are equal or not
 // It's safe to use JSON.stringify for primitive types
 export function areInitialProportionsEqual(
   previousProportions: number[],
