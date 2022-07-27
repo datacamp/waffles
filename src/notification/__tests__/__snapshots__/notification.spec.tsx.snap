@@ -65,13 +65,13 @@ exports[`Notification renders snapshot of inverted notification with all optiona
 
 .emotion-4 {
   position: absolute;
+  z-index: 5;
   top: 7px;
   left: 7px;
   width: 14px;
   height: 14px;
-  z-index: 5;
-  background-color: #FFFFFF;
   border-radius: 50%;
+  background-color: #FFFFFF;
 }
 
 .emotion-5 {
@@ -456,13 +456,13 @@ exports[`Notification renders snapshot of regular notification with all optional
 
 .emotion-4 {
   position: absolute;
+  z-index: 5;
   top: 7px;
   left: 7px;
   width: 14px;
   height: 14px;
-  z-index: 5;
-  background-color: #FFFFFF;
   border-radius: 50%;
+  background-color: #FFFFFF;
 }
 
 .emotion-5 {
