@@ -9,6 +9,7 @@ exports[`Code renders snapshot of inverted size large 1`] = `
   margin: 0 2px;
   padding: 2px 4px;
   white-space: nowrap;
+  mix-blend-mode: regular;
   font-size: 14px;
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
@@ -30,6 +31,7 @@ exports[`Code renders snapshot of inverted size medium 1`] = `
   margin: 0 2px;
   padding: 2px 4px;
   white-space: nowrap;
+  mix-blend-mode: regular;
   font-size: 12px;
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
@@ -51,6 +53,7 @@ exports[`Code renders snapshot of size large 1`] = `
   margin: 0 2px;
   padding: 2px 4px;
   white-space: nowrap;
+  mix-blend-mode: multiply;
   font-size: 14px;
   color: #05192D;
   background-color: #EFEBE4;
@@ -72,6 +75,7 @@ exports[`Code renders snapshot of size medium 1`] = `
   margin: 0 2px;
   padding: 2px 4px;
   white-space: nowrap;
+  mix-blend-mode: multiply;
   font-size: 12px;
   color: #05192D;
   background-color: #EFEBE4;
