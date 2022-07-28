@@ -196,19 +196,31 @@ export function buttonStyle({
   `;
 }
 
+type LoaderStyleOptions = {
+  variant: NonNullable<React.ComponentProps<typeof Button>['variant']>;
+  inverted: boolean;
+};
+
+export function loaderStyle({ variant, inverted }: LoaderStyleOptions) {
+  const variantMap = inverted ? invertedVariantMap : regularVariantMap;
+  return css`
+    stroke: ${variantMap[variant].color};
+  `;
+}
+
 // Generate button inner wrapper style based on provided options
 
 type InnerContentStyleOptions = {
-  hasLeftIcon: boolean;
+  hasLeftIconOrLoader: boolean;
   hasRightIcon: boolean;
 };
 
 export function innerContentStyle({
-  hasLeftIcon,
+  hasLeftIconOrLoader,
   hasRightIcon,
 }: InnerContentStyleOptions) {
   return css`
-    ${hasLeftIcon && `padding-left: ${tokens.spacing.small};`}
+    ${hasLeftIconOrLoader && `padding-left: ${tokens.spacing.small};`}
     ${hasRightIcon && `padding-right: ${tokens.spacing.small};`}
   `;
 }
