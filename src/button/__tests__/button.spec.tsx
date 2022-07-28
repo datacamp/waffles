@@ -202,6 +202,19 @@ describe('Button', () => {
     expect(icons).toHaveLength(2);
   });
 
+  it('renders loader with isloading prop', () => {
+    const { getByText, getByTestId } = render(
+      <Button isLoading>Loading</Button>,
+    );
+
+    const button = getByText('Loading').closest('button');
+    const loader = getByTestId('loader-wrapper');
+
+    expect(button).toBeInTheDocument();
+    expect(button).toBeDisabled();
+    expect(loader).toBeInTheDocument();
+  });
+
   it('renders full width button', () => {
     const { getByText } = render(
       <Button fullWidth>Follow Taylor Swift</Button>,
@@ -266,6 +279,23 @@ describe('Button', () => {
         it(`variant ${variant} and size ${size}`, () => {
           const { container } = render(
             <Button inverted variant={variant} size={size}>
+              Test
+            </Button>,
+          );
+
+          const button = container.querySelector('button');
+          expect(button).toMatchSnapshot();
+        });
+      });
+    });
+  });
+
+  describe('renders snapshot of isLoading variants', () => {
+    variants.forEach((variant) => {
+      sizes.forEach((size) => {
+        it(`variant ${variant} and size ${size}`, () => {
+          const { container } = render(
+            <Button inverted variant={variant} size={size} isLoading>
               Test
             </Button>,
           );

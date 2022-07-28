@@ -1861,6 +1861,2796 @@ exports[`Button renders snapshot of inverted variant upgrade and size small 1`] 
 </button>
 `;
 
+exports[`Button renders snapshot of isLoading variants variant destructive and size large 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #05192D;
+  background-color: #FF5400;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FF6D19;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #FF5400;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 16px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #05192D;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="16px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant destructive and size medium 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #05192D;
+  background-color: #FF5400;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FF6D19;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #FF5400;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 16px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #05192D;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="16px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant destructive and size small 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 28px;
+  min-width: 28px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 12px;
+  color: #05192D;
+  background-color: #FF5400;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FF6D19;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #FF5400;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 12px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #05192D;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="12px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant plain and size large 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 16px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #06BDFC;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="16px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant plain and size medium 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 16px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #06BDFC;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="16px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant plain and size small 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 28px;
+  min-width: 28px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 12px;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 12px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #06BDFC;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="12px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant primary and size large 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #1CFF7B;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 16px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #05192D;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="16px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant primary and size medium 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #1CFF7B;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 16px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #05192D;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="16px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant primary and size small 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 28px;
+  min-width: 28px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 12px;
+  color: #05192D;
+  background-color: #03EF62;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #1CFF7B;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #03EF62;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 12px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #05192D;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="12px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant secondary and size large 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 16px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #FFFFFF;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="16px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant secondary and size medium 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 16px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #FFFFFF;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="16px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant secondary and size small 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 28px;
+  min-width: 28px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 12px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #FFFFFF;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="12px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant upgrade and size large 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: #7933FF;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #924CFF;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #7933FF;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 16px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #FFFFFF;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="16px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant upgrade and size medium 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: #7933FF;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #924CFF;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #7933FF;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 16px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #FFFFFF;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="16px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
+exports[`Button renders snapshot of isLoading variants variant upgrade and size small 1`] = `
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 65.5%, 169% 65.5%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 65.5%);
+  }
+}
+
+@keyframes animation-1 {
+  0%, 71% {
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -30%);
+  }
+
+  96%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -30%);
+  }
+}
+
+@keyframes animation-2 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 28px;
+  min-width: 28px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #7933FF;
+  border-color: transparent;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #924CFF;
+}
+
+.emotion-0:active:not(:disabled) {
+  background-color: #7933FF;
+}
+
+.emotion-0:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1 {
+  width: 12px;
+  -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
+  will-change: clip-path;
+}
+
+.emotion-3 {
+  display: block;
+  stroke: #000820;
+  stroke: #FFFFFF;
+}
+
+.emotion-4 {
+  -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
+  stroke-dasharray: 9800;
+  stroke-dashoffset: 9800;
+  will-change: stroke-dashoffset;
+}
+
+.emotion-5 {
+  padding-left: 8px;
+}
+
+<button
+  class="emotion-0"
+  disabled=""
+>
+  <div
+    class="emotion-1"
+    data-testid="loader-wrapper"
+  >
+    <div
+      class="emotion-2"
+    >
+      <svg
+        class="emotion-3"
+        viewBox="0 0 2640 3444"
+        width="12px"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Test
+  </span>
+</button>
+`;
+
 exports[`Button renders snapshot of variant destructive and size large 1`] = `
 .emotion-0 {
   position: relative;

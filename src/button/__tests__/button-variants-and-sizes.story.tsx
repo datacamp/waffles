@@ -63,6 +63,28 @@ function Story() {
           );
         })}
       </div>
+
+      {/* Regular isLoading */}
+      <div>
+        {variants.map((variant) => {
+          return (
+            <div css={wrapperStyle} key={variant}>
+              {sizes.map((size) => {
+                return (
+                  <Button
+                    isLoading
+                    key={`loading-${variant}-${size}`}
+                    variant={variant}
+                    size={size}
+                  >
+                    Loading
+                  </Button>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
       {/* Inverted */}
       <div
         css={css`
@@ -107,6 +129,32 @@ function Story() {
                     size={size}
                   >
                     Inverted Disabled
+                  </Button>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
+      {/* Inverted isLoading */}
+      <div
+        css={css`
+          background-color: ${tokens.colors.navy};
+        `}
+      >
+        {variants.map((variant) => {
+          return (
+            <div css={wrapperStyle} key={variant}>
+              {sizes.map((size) => {
+                return (
+                  <Button
+                    isLoading
+                    inverted
+                    key={`inverted-loading-${variant}-${size}`}
+                    variant={variant}
+                    size={size}
+                  >
+                    Inverted Loading
                   </Button>
                 );
               })}
