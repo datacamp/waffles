@@ -40,13 +40,12 @@ function MenuButton<T extends React.ElementType = 'button'>({
   }
 
   return (
-    // @ts-expect-error: spread props out of sync
     <Button
       {...getItemProps({
         onClick: handleClick,
         ...restProps,
       })}
-      ref={(node) => (listRef.current[index] = node)}
+      ref={(node: HTMLButtonElement) => (listRef.current[index] = node)}
       role="menuitem"
       inverted={inverted}
       css={buttonStyle()}
