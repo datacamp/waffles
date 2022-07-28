@@ -26,11 +26,11 @@ const sizeMap = {
 };
 
 type LabelStyleOptions = {
-  inverted: boolean;
   size: NonNullable<React.ComponentProps<typeof FormField>['size']>;
+  inverted: boolean;
 };
 
-export function labelStyle({ inverted, size }: LabelStyleOptions) {
+export function labelStyle({ size, inverted }: LabelStyleOptions) {
   return css`
     display: flex;
     line-height: ${tokens.lineHeights.default};
@@ -54,13 +54,13 @@ export function descriptionStyle({ size }: DescriptionStyleOptions) {
 }
 
 type RequiredStyleOptions = {
-  inverted: boolean;
   size: NonNullable<React.ComponentProps<typeof FormField>['size']>;
+  inverted: boolean;
 };
 
 export function requiredIndicatorStyle({
-  inverted,
   size,
+  inverted,
 }: RequiredStyleOptions) {
   return css`
     display: flex;
@@ -79,24 +79,29 @@ export function requiredIndicatorStyle({
   `;
 }
 
-type RequiredBulletStyleOptions = {
+type RequiredDotStyleOptions = {
+  size: NonNullable<React.ComponentProps<typeof FormField>['size']>;
   inverted: boolean;
 };
 
-export function requiredMarkerStyle({ inverted }: RequiredBulletStyleOptions) {
+export function requiredDotStyle({ size, inverted }: RequiredDotStyleOptions) {
   return css`
-    font-size: ${tokens.fontSizes.medium};
-    color: ${inverted ? tokens.colors.red : tokens.colors.redDark};
+    display: inline-block;
+    flex-shrink: 0;
+    width: ${size === 'small' ? 4 : 6}px;
+    height: ${size === 'small' ? 4 : 6}px;
+    border-radius: ${tokens.borderRadius.circle};
+    background-color: ${inverted ? tokens.colors.red : tokens.colors.redDark};
     margin-right: 4px;
   `;
 }
 
 type ErrorStyleOptions = {
-  inverted: boolean;
   size: NonNullable<React.ComponentProps<typeof FormField>['size']>;
+  inverted: boolean;
 };
 
-export function errorStyle({ inverted, size }: ErrorStyleOptions) {
+export function errorStyle({ size, inverted }: ErrorStyleOptions) {
   return css`
     margin-top: ${tokens.spacing.small};
     color: ${inverted ? tokens.colors.red : tokens.colors.redDarkText};
