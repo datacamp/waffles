@@ -1,6 +1,6 @@
 import { Text } from '../text';
 
-import { requiredIndicatorStyle, requiredMarkerStyle } from './styles';
+import { requiredIndicatorStyle, requiredDotStyle } from './styles';
 import FormField from './form-field';
 
 type RequiredIndicatorProps = {
@@ -24,7 +24,8 @@ function RequiredIndicator({
     } else if (indicator === 'showRequired' && isRequired) {
       return (
         <>
-          <span css={requiredMarkerStyle({ inverted })}>&bull;</span>Required
+          <span css={requiredDotStyle({ size, inverted })} />
+          Required
         </>
       );
     }

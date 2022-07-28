@@ -12,8 +12,8 @@ const sizeMap = {
   small: {
     sizing: tokens.sizing.small,
     fontSize: tokens.fontSizes.small,
-    spacing: '6px',
-    spacingWithEnhancer: '26px',
+    spacing: '12px',
+    spacingWithEnhancer: tokens.spacing.xlarge,
   },
   medium: {
     sizing: tokens.sizing.medium,
@@ -24,8 +24,8 @@ const sizeMap = {
   large: {
     sizing: tokens.sizing.large,
     fontSize: tokens.fontSizes.medium,
-    spacing: '12px',
-    spacingWithEnhancer: '36px',
+    spacing: tokens.spacing.medium,
+    spacingWithEnhancer: '40px',
   },
 } as const;
 

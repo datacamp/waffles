@@ -43,6 +43,7 @@ const requiredMarkerStyle = css`
   width: 6px;
   height: 6px;
   border-radius: ${tokens.borderRadius.circle};
+  flex-shrink: 0;
 `;
 
 type PropsTableProps = {

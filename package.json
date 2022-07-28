@@ -112,9 +112,9 @@
     "react-dom": ">= 17.0.0 < 18"
   },
   "dependencies": {
-    "@floating-ui/react-dom-interactions": "^0.6.6",
-    "@react-aria/focus": "^3.6.0",
-    "@react-aria/utils": "^3.13.0",
+    "@floating-ui/react-dom-interactions": "^0.8.1",
+    "@react-aria/focus": "^3.6.1",
+    "@react-aria/utils": "^3.13.1",
     "nanoid": "^3.3.4",
     "react-focus-on": "^3.6.0"
   }

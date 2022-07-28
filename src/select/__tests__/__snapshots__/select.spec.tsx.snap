@@ -487,8 +487,8 @@ exports[`Select renders snapshot of size large 1`] = `
   font-size: 14px;
   color: #05192D;
   background-color: #FFFFFF;
-  padding-left: 12px;
-  padding-right: 36px;
+  padding-left: 16px;
+  padding-right: 40px;
 }
 
 .emotion-1:disabled {
@@ -509,7 +509,7 @@ exports[`Select renders snapshot of size large 1`] = `
   align-items: center;
   pointer-events: none;
   top: 0;
-  right: 12px;
+  right: 16px;
   color: #05192D;
 }
 
@@ -701,8 +701,8 @@ exports[`Select renders snapshot of size small 1`] = `
   font-size: 12px;
   color: #05192D;
   background-color: #FFFFFF;
-  padding-left: 6px;
-  padding-right: 26px;
+  padding-left: 12px;
+  padding-right: 32px;
 }
 
 .emotion-1:disabled {
@@ -723,7 +723,7 @@ exports[`Select renders snapshot of size small 1`] = `
   align-items: center;
   pointer-events: none;
   top: 0;
-  right: 6px;
+  right: 12px;
   color: #05192D;
 }
 

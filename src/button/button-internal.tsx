@@ -93,6 +93,7 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
               css={innerContentStyle({
                 hasLeftIcon: !!iconLeft,
                 hasRightIcon: !!iconRight,
+                size,
               })}
             >
               {children}

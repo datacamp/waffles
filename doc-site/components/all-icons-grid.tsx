@@ -12,11 +12,6 @@ import PreviewControls from './preview-controls';
 
 const { Visible, Hidden } = allIcons;
 
-const wrapperStyle = css`
-  display: flex;
-  flex-direction: column;
-`;
-
 const regularIconsPreview = css`
   display: flex;
   flex-wrap: wrap;

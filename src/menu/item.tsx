@@ -78,9 +78,12 @@ function Item<T extends React.ElementType = 'button'>({
         css={itemInnerContentStyle({
           hasLeftIcon: !!iconLeft,
           hasRightIcon: !!iconRight,
+          hasDescription: !!description,
         })}
       >
-        <Text css={itemLabelStyle({ isActive })}>{label}</Text>
+        <Text css={itemLabelStyle({ isActive, hasDescription: !!description })}>
+          {label}
+        </Text>
         {description && (
           <Text css={itemDescriptionStyle({ inverted })}>{description}</Text>
         )}

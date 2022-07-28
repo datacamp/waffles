@@ -50,8 +50,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   align-items: center;
   width: calc(100% - 16px);
   min-height: 36px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 0 12px;
   margin-left: 8px;
   margin-right: 8px;
   -webkit-text-decoration: none;
@@ -93,7 +92,17 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
 }
 
 .emotion-4 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   overflow: hidden;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -113,9 +122,9 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   padding: 0;
   display: block;
   text-align: left;
-  line-height: 1.5;
   color: inherit;
   font-weight: 400;
+  line-height: 1.5;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -131,14 +140,24 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   padding: 0;
   display: block;
   text-align: left;
-  line-height: 1.5;
   color: #9BA3AB;
   font-size: 12px;
+  line-height: 1.5;
   margin-top: 2px;
 }
 
 .emotion-8 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow: hidden;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -148,6 +167,24 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   flex-grow: 1;
   padding-left: 8px;
   padding-right: 8px;
+}
+
+.emotion-9 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: left;
+  color: inherit;
+  font-weight: 400;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-10 {
@@ -162,8 +199,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   align-items: center;
   width: calc(100% - 16px);
   min-height: 36px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 0 12px;
   margin-left: 8px;
   margin-right: 8px;
   -webkit-text-decoration: none;
@@ -193,6 +229,27 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .emotion-12 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
@@ -203,9 +260,9 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   padding: 0;
   display: block;
   text-align: left;
-  line-height: 1.5;
   color: inherit;
   font-weight: 800;
+  line-height: 1.25;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -232,8 +289,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   align-items: center;
   width: calc(100% - 16px);
   min-height: 36px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 0 12px;
   margin-left: 8px;
   margin-right: 8px;
   -webkit-text-decoration: none;
@@ -405,7 +461,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
         class="emotion-8"
       >
         <span
-          class="emotion-5"
+          class="emotion-9"
         >
           Ariana Grande
         </span>
@@ -427,7 +483,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
       role="menuitem"
     >
       <span
-        class="emotion-4"
+        class="emotion-11"
       >
         <span
           class="emotion-12"
@@ -442,10 +498,10 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
       role="menuitem"
     >
       <span
-        class="emotion-4"
+        class="emotion-11"
       >
         <span
-          class="emotion-5"
+          class="emotion-9"
         >
           Nicki Minaj
         </span>
@@ -463,10 +519,10 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
       role="menuitem"
     >
       <span
-        class="emotion-4"
+        class="emotion-11"
       >
         <span
-          class="emotion-5"
+          class="emotion-9"
         >
           Remove Singers
         </span>
@@ -536,8 +592,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   align-items: center;
   width: calc(100% - 16px);
   min-height: 36px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 0 12px;
   margin-left: 8px;
   margin-right: 8px;
   -webkit-text-decoration: none;
@@ -579,7 +634,17 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
 }
 
 .emotion-4 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   overflow: hidden;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -599,9 +664,9 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   padding: 0;
   display: block;
   text-align: left;
-  line-height: 1.5;
   color: inherit;
   font-weight: 400;
+  line-height: 1.5;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -617,14 +682,24 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   padding: 0;
   display: block;
   text-align: left;
-  line-height: 1.5;
   color: #65707C;
   font-size: 12px;
+  line-height: 1.5;
   margin-top: 2px;
 }
 
 .emotion-8 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow: hidden;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -634,6 +709,24 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   flex-grow: 1;
   padding-left: 8px;
   padding-right: 8px;
+}
+
+.emotion-9 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: left;
+  color: inherit;
+  font-weight: 400;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-10 {
@@ -648,8 +741,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   align-items: center;
   width: calc(100% - 16px);
   min-height: 36px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 0 12px;
   margin-left: 8px;
   margin-right: 8px;
   -webkit-text-decoration: none;
@@ -679,6 +771,27 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   background-color: rgba(5, 25, 45, 0.1);
 }
 
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .emotion-12 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
@@ -689,9 +802,9 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   padding: 0;
   display: block;
   text-align: left;
-  line-height: 1.5;
   color: inherit;
   font-weight: 800;
+  line-height: 1.25;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -718,8 +831,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   align-items: center;
   width: calc(100% - 16px);
   min-height: 36px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 0 12px;
   margin-left: 8px;
   margin-right: 8px;
   -webkit-text-decoration: none;
@@ -891,7 +1003,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
         class="emotion-8"
       >
         <span
-          class="emotion-5"
+          class="emotion-9"
         >
           Ariana Grande
         </span>
@@ -913,7 +1025,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
       role="menuitem"
     >
       <span
-        class="emotion-4"
+        class="emotion-11"
       >
         <span
           class="emotion-12"
@@ -928,10 +1040,10 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
       role="menuitem"
     >
       <span
-        class="emotion-4"
+        class="emotion-11"
       >
         <span
-          class="emotion-5"
+          class="emotion-9"
         >
           Nicki Minaj
         </span>
@@ -949,10 +1061,10 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
       role="menuitem"
     >
       <span
-        class="emotion-4"
+        class="emotion-11"
       >
         <span
-          class="emotion-5"
+          class="emotion-9"
         >
           Remove Singers
         </span>

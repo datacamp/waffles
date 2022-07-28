@@ -32,6 +32,7 @@ type CodeStyleOptions = {
 export function codeStyle({ size, inverted }: CodeStyleOptions) {
   return css`
     ${baseCodeStyle}
+    mix-blend-mode: ${inverted ? 'regular' : 'multiply'};
     font-size: ${sizeMap[size].fontSize};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     background-color: ${inverted

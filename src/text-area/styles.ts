@@ -10,8 +10,8 @@ const sizeMap = {
   small: {
     sizing: tokens.sizing.small,
     fontSize: tokens.fontSizes.small,
-    spacingVertical: '4px',
-    spacingHorizontal: '6px',
+    spacingVertical: tokens.spacing.xsmall,
+    spacingHorizontal: '12px',
   },
   medium: {
     sizing: tokens.sizing.medium,
@@ -23,7 +23,7 @@ const sizeMap = {
     sizing: tokens.sizing.large,
     fontSize: tokens.fontSizes.medium,
     spacingVertical: '12px',
-    spacingHorizontal: '12px',
+    spacingHorizontal: tokens.spacing.medium,
   },
 } as const;
 

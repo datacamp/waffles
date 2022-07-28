@@ -84,6 +84,7 @@ function MenuInternal({
   const element = cloneElement(
     trigger,
     getReferenceProps({
+      key: trigger.key,
       ref: reference,
       ...trigger.props,
       id: triggerId,

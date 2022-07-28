@@ -82,6 +82,7 @@ function Tooltip({
   const element = cloneElement(
     children,
     getReferenceProps({
+      key: children.key,
       ref: triggerRef,
       ...children.props,
       ...(isOpen && { 'aria-describedby': id }),

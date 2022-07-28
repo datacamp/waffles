@@ -59,8 +59,14 @@ exports[`FormField renders snapshot of form field 1`] = `
 }
 
 .emotion-3 {
-  font-size: 14px;
-  color: #DD3400;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #DD3400;
   margin-right: 4px;
 }
 
@@ -109,9 +115,7 @@ exports[`FormField renders snapshot of form field 1`] = `
     >
       <span
         class="emotion-3"
-      >
-        •
-      </span>
+      />
       Required
     </span>
   </label>
@@ -195,8 +199,14 @@ exports[`FormField renders snapshot of inverted form field 1`] = `
 }
 
 .emotion-3 {
-  font-size: 14px;
-  color: #FF5400;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FF5400;
   margin-right: 4px;
 }
 
@@ -245,9 +255,7 @@ exports[`FormField renders snapshot of inverted form field 1`] = `
     >
       <span
         class="emotion-3"
-      >
-        •
-      </span>
+      />
       Required
     </span>
   </label>

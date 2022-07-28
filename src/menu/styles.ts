@@ -41,8 +41,7 @@ const itemBaseStyle = css`
   align-items: center;
   width: calc(100% - 16px);
   min-height: ${tokens.sizing.medium};
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 0 12px;
   margin-left: ${tokens.spacing.small};
   margin-right: ${tokens.spacing.small};
   text-decoration: none;
@@ -127,14 +126,18 @@ export function itemStyle({
 type ItemInnerContentStyleOptions = {
   hasLeftIcon: boolean;
   hasRightIcon: boolean;
+  hasDescription: boolean;
 };
 
 export function itemInnerContentStyle({
   hasLeftIcon,
   hasRightIcon,
+  hasDescription,
 }: ItemInnerContentStyleOptions) {
   return css`
-    display: block;
+    display: flex;
+    flex-direction: ${hasDescription ? 'column' : 'row'};
+    align-items: ${hasDescription ? 'flex-start' : 'center'};
     overflow: hidden;
     padding-top: ${tokens.spacing.small};
     padding-bottom: ${tokens.spacing.small};
@@ -147,21 +150,27 @@ export function itemInnerContentStyle({
 const textBaseStyle = css`
   display: block;
   text-align: left;
-  line-height: ${tokens.lineHeights.relaxed};
 `;
 
 type ItemLabelStyleOptions = {
   isActive: boolean;
+  hasDescription: boolean;
 };
 
 // Inherits text color to keep it in sync with icon color in case of custom style overrides
-export function itemLabelStyle({ isActive }: ItemLabelStyleOptions) {
+export function itemLabelStyle({
+  isActive,
+  hasDescription,
+}: ItemLabelStyleOptions) {
   return css`
     ${textBaseStyle}
     color: inherit;
     font-weight: ${isActive
       ? tokens.fontWeights.bold
       : tokens.fontWeights.regular};
+    line-height: ${hasDescription
+      ? tokens.lineHeights.relaxed
+      : tokens.lineHeights.default};
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -181,6 +190,7 @@ export function itemDescriptionStyle({
       ? tokens.colors.navySubtleTextOnDark
       : tokens.colors.navySubtleTextOnLight};
     font-size: ${tokens.fontSizes.small};
+    line-height: ${tokens.lineHeights.relaxed};
     margin-top: 2px;
   `;
 }
