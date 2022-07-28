@@ -201,14 +201,22 @@ export function buttonStyle({
 type InnerContentStyleOptions = {
   hasLeftIcon: boolean;
   hasRightIcon: boolean;
+  size: NonNullable<React.ComponentProps<typeof Button>['size']>;
 };
 
 export function innerContentStyle({
   hasLeftIcon,
   hasRightIcon,
+  size,
 }: InnerContentStyleOptions) {
   return css`
-    ${hasLeftIcon && `padding-left: ${tokens.spacing.small};`}
-    ${hasRightIcon && `padding-right: ${tokens.spacing.small};`}
+    ${hasLeftIcon &&
+    `padding-left: ${
+      size === 'small' ? tokens.spacing.xsmall : tokens.spacing.small
+    };`}
+    ${hasRightIcon &&
+    `padding-right: ${
+      size === 'small' ? tokens.spacing.xsmall : tokens.spacing.small
+    };`}
   `;
 }
