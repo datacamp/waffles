@@ -2,7 +2,9 @@ import React, { cloneElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
-import { buttonStyle, innerContentStyle } from './styles';
+import { Loader } from '../loader';
+
+import { buttonStyle, innerContentStyle, loaderStyle } from './styles';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
@@ -29,7 +31,7 @@ type ButtonIconOnlyProps = {
 type ButtonNoIconProps = {
   icon?: never;
   /* The content inside the button. Most of the time should be a plain text. */
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
   iconLeft?: JSX.Element;
   /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
@@ -38,14 +40,27 @@ type ButtonNoIconProps = {
   'aria-label'?: string;
 } & ButtonBaseProps;
 
+type ButtonIsLoadingProps = {
+  icon?: never;
+  children?: React.ReactNode;
+  iconLeft?: never;
+  /* Whether the button is in it's loading state. *Note* Cannot be provided alongside the `iconLeft` property. */
+  isLoading?: boolean;
+  'aria-label'?: string;
+} & ButtonBaseProps;
+
 export type ButtonProps<T extends React.ElementType = 'button'> =
-  PolymorphicComponentProps<T, ButtonNoIconProps | ButtonIconOnlyProps>;
+  PolymorphicComponentProps<
+    T,
+    ButtonIsLoadingProps | ButtonNoIconProps | ButtonIconOnlyProps
+  >;
 
 function ButtonInternal<T extends React.ElementType = 'button'>(
   {
     as,
     variant = 'primary',
     size = 'medium',
+    isLoading = false,
     inverted = false,
     fullWidth = false,
     icon,
@@ -73,6 +88,7 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
   return (
     <Element
       {...mergeProps(focusProps, restProps)}
+      {...(isLoading ? { disabled: true } : null)}
       ref={ref}
       css={buttonStyle({
         variant,
@@ -87,11 +103,17 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
         renderIcon(icon)
       ) : (
         <>
+          {isLoading && (
+            <Loader
+              css={loaderStyle({ variant, inverted })}
+              width={size === 'small' ? '12px' : '16px'}
+            />
+          )}
           {iconLeft && renderIcon(iconLeft)}
           {children && (
             <span
               css={innerContentStyle({
-                hasLeftIcon: !!iconLeft,
+                hasLeftIconOrLoader: isLoading || !!iconLeft,
                 hasRightIcon: !!iconRight,
               })}
             >

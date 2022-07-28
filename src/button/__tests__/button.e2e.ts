@@ -27,9 +27,9 @@ describe('Button', () => {
     cy.get('button').should('have.length', 10);
   });
 
-  it('render all variants and sizes, when disabled and inverted', () => {
+  it('render all variants and sizes, when disabled, inverted and isLoading', () => {
     cy.loadStory('button-variants-and-sizes');
-    cy.get('button').should('have.length', 60);
+    cy.get('button').should('have.length', 90);
   });
 
   it('render all variants and sizes with various icons', () => {
