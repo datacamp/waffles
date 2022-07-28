@@ -45,7 +45,7 @@ type ButtonIsLoadingProps = {
   children?: React.ReactNode;
   iconLeft?: never;
   /* Whether the button is in it's loading state. *Note* Cannot be provided alongside the `iconLeft` property. */
-  isLoading: boolean;
+  isLoading?: boolean;
   'aria-label'?: string;
 } & ButtonBaseProps;
 
